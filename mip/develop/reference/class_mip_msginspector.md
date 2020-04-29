@@ -1,26 +1,26 @@
 ---
-title: 'Classe MIP:: MsgInspector'
-description: 'Documenta la classe MIP:: msginspector di Microsoft Information Protection (MIP) SDK.'
+title: Classe MsgInspector
+description: 'Documenta la classe msginspector:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d2c4f85989e5d9d77ebb540b0b4adfd64b8334c1
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 79a044099c09d799d77f4af11eb0b80ecc21d6d6
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489895"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761489"
 ---
-# <a name="class-mipmsginspector"></a>Classe MIP:: MsgInspector 
+# <a name="class-msginspector"></a>Classe MsgInspector 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std:: Vector\<uint8_t\>& GetBody ()  |  Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
+public const std::\<vector\> uint8_t& GetBody ()  |  Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
 public BodyType GetBodyType () const  |  Ottiene il tipo di corpo.
-public const std:: Vector\<std:: unique_ptr\<MsgAttachmentData\>\>& GetAttributes () const  |  Ottenere un elenco di allegati come oggetti dati dell'allegato msg.
+public const std::\<vector std::\<shared_ptr\> \> MsgAttachmentData& GetAttributes () const  |  Ottenere un elenco di allegati come oggetti dati dell'allegato msg.
 public InspectorType GetInspectorType () const  |  Ottenere i tipi di file.
 public std:: shared_ptr\<Stream\> GetFileStream () const  |  Ottenere il flusso di file.
   

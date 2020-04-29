@@ -1,26 +1,26 @@
 ---
-title: Classe mip::RecommendLabelAction
-description: 'Documenta la classe MIP:: recommendlabelaction di Microsoft Information Protection (MIP) SDK.'
+title: Classe RecommendLabelAction
+description: 'Documenta la classe recommendlabelaction:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 2038c8eb1a6baa52dc696be998853ca6774edccf
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 3990d6de9d78002d9c240e621f96351cd337aabb
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489538"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764549"
 ---
-# <a name="class-miprecommendlabelaction"></a>Classe mip::RecommendLabelAction 
+# <a name="class-recommendlabelaction"></a>Classe RecommendLabelAction 
 Consigliare le azioni dell'etichetta serve a suggerire un'etichetta agli utenti. L'eliminazione di questa chiamata dopo che un utente ignora l'etichetta consigliata deve essere eseguita tramite le azioni supportate sullo stato di esecuzione.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std:: shared_ptr\<label\>& GetLabel () const  |  Ottiene l'etichetta suggerita.
-public const std:: Vector\<std:: String\>& GetClassificationIds () const  |  Ottiene gli ID di classificazione che corrispondono e ha causato la visualizzazione di questa etichetta.
+public const std::\<shared_ptr\> label& GetLabel () const  |  Ottiene l'etichetta suggerita.
+public const std::\<vector std::\> String& GetClassificationIds () const  |  Ottiene gli ID di classificazione che corrispondono e ha causato la visualizzazione di questa etichetta.
   
 ## <a name="members"></a>Members
   
@@ -34,4 +34,4 @@ Ottiene l'etichetta suggerita.
 Ottiene gli ID di classificazione che corrispondono e ha causato la visualizzazione di questa etichetta.
 
   
-**Restituisce**: const std:: Vector < std:: string > & un elenco di ID di classificazione che ha causato la visualizzazione di questa etichetta.
+**Restituisce**: const std:: Vector<std:: String>& un elenco di ID di classificazione che ha causato la visualizzazione di questa etichetta.

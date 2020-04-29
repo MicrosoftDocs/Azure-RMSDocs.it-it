@@ -1,29 +1,29 @@
 ---
-title: 'Classe MIP:: Identity'
-description: 'Documenta la classe MIP:: Identity di Microsoft Information Protection (MIP) SDK.'
+title: Identità della classe
+description: 'Documents the Identity:: undefined Class of the Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d50092be5277d5e88e6ec408280ca76bbc333a4c
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 1b1dbbe146832773613124917c1ea6d43f5cf13a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488025"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762372"
 ---
-# <a name="class-mipidentity"></a>Classe MIP:: Identity 
+# <a name="class-identity"></a>Identità della classe 
 Astrazione per Identity.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Identità pubblica ()  |  Costruttore di identità predefinito usato quando un indirizzo di posta elettronica dell'utente non è noto.
-Identità pubblica (const Identity & other)  |  Costruttore di copia Identity.
-Identità esplicita pubblica (const std:: String & email)  |  Costruttore di identità usato quando un indirizzo di posta elettronica dell'utente è noto.
-Identità esplicita pubblica (const std:: String & email, const std:: String & name)  |  Costruttore di identità utilizzato quando un indirizzo di posta elettronica utente e un nome utente sono noti.
-public const std:: String & getEmail () const  |  Ricevere il messaggio di posta elettronica.
+Identità pubblica (const Identity& other)  |  Costruttore di copia Identity.
+Identità esplicita pubblica (const std:: String& email)  |  Costruttore di identità usato quando un indirizzo di posta elettronica dell'utente è noto.
+Identità esplicita pubblica (const std:: String& email, const std:: String& Name)  |  Costruttore di identità utilizzato quando un indirizzo di posta elettronica utente e un nome utente sono noti.
+public const std:: String& getEmail () const  |  Ricevere il messaggio di posta elettronica.
 public const std::string& GetName() const  |  Ottenere il nome descrittivo dell'utente. utilizzato per contrassegnare il testo.
   
 ## <a name="members"></a>Members
@@ -34,7 +34,7 @@ Costruttore di identità predefinito usato quando un indirizzo di posta elettron
 ### <a name="identity-function"></a>Identity (funzione)
 Costruttore di copia Identity.
 
-Parametri:  
+Parametri  
 * **Identity**: usata per creare la copia.
 
 
@@ -42,7 +42,7 @@ Parametri:
 ### <a name="identity-function"></a>Identity (funzione)
 Costruttore di identità usato quando un indirizzo di posta elettronica dell'utente è noto.
 
-Parametri:  
+Parametri  
 * **email**: deve essere un indirizzo di posta elettronica valido.
 
 
@@ -50,7 +50,7 @@ Parametri:
 ### <a name="identity-function"></a>Identity (funzione)
 Costruttore di identità utilizzato quando un indirizzo di posta elettronica utente e un nome utente sono noti.
 
-Parametri:  
+Parametri  
 * **email**: deve essere un indirizzo di posta elettronica valido. 
 
 

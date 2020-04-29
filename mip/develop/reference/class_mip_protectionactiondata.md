@@ -1,32 +1,32 @@
 ---
-title: Classe MIP::P rotectionActionData
-description: Documenta la classe MIP::p rotectionactiondata dell'SDK Microsoft Information Protection (MIP).
+title: Classe ProtectionActionData
+description: 'Documenta la classe protectionactiondata:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6643efcd65996a251991dae2b359b361f6a8ad60
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 61489477c06e5781e0e013c7f59f263389398cc2
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489708"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763967"
 ---
-# <a name="class-mipprotectionactiondata"></a>Classe MIP::P rotectionActionData 
+# <a name="class-protectionactiondata"></a>Classe ProtectionActionData 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public ProtectionActionType GetProtectionType () const  | _Non ancora documentato._
 public const std::string& GetTemplateId() const  | _Non ancora documentato._
-public const std:: String & GetDoubleKeyEncryptionUrl () const  | _Non ancora documentato._
+public const std:: String& GetDoubleKeyEncryptionUrl () const  | _Non ancora documentato._
 public virtual ~ ProtectionActionData ()  | _Non ancora documentato._
 public ActionDataType GetType () const  | _Non ancora documentato._
-public const std:: Map\<std:: String, std:: String\>& GetProperties () const  | _Non ancora documentato._
-public std:: String GetArgumentValue (const std:: String & Key) const  | _Non ancora documentato._
+public const std::\<map std:: String, std::\> String& GetProperties () const  | _Non ancora documentato._
+public std:: String GetArgumentValue (const std:: String& Key) const  | _Non ancora documentato._
 public const std::string& GetName() const  | _Non ancora documentato._
-public std:: Vector\<std::p Air\<std:: String, std:: String\>\> GetArguments () const  | _Non ancora documentato._
+public std:: Vector\<std::p aria\<std:: String, std:: String\> \> GetArguments () const  | _Non ancora documentato._
   
 ## <a name="members"></a>Members
   

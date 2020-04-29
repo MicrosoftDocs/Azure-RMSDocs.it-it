@@ -1,10 +1,10 @@
 ---
 title: 'Altre app che supportano le API di RMS: installazione e configurazione - AIP'
 description: Informazioni su come il servizio Azure Rights Management di Azure Information Protection può supportare altre applicazioni per proteggere i dati dell'organizzazione.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a1a3f9f20c5f1dc7f43ccf5ee0dc6daa4c108af2
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 0eb26df168976fa028873551c8417bb1644d853a
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935215"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224632"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Altre applicazioni che supportano le API di Rights Management
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Usare le informazioni seguenti per comprendere come il servizio Azure Rights Management di Azure Information Protection può supportare altre applicazioni per proteggere i dati dell'organizzazione.
+Usare le informazioni seguenti per comprendere in che modo il servizio Rights Management di Azure Azure Information Protection può supportare altre applicazioni per proteggere i dati dell'organizzazione.
 
 Usando gli SDK di Azure Information Protection, gli sviluppatori interni di un'azienda possono scrivere applicazioni line-of-business per supportare il servizio Azure Rights Management in modalità nativa. Le modalità di integrazione della protezione delle informazioni con queste applicazioni dipende dal modo in cui queste ultime sono state scritte. L'integrazione potrebbe ad esempio essere applicata automaticamente con un intervento minimo dell'utente oppure, per un'esperienza più personalizzata, agli utenti potrebbe essere richiesto di configurare impostazioni specifiche per applicare la protezione delle informazioni ai file. Per altre informazioni, vedere la [guida per gli sviluppatori](./develop/developers-guide.md).
 

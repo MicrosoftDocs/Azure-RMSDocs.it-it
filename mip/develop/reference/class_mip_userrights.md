@@ -1,34 +1,34 @@
 ---
-title: Classe mip::UserRights
-description: 'Documenta la classe MIP:: userrights di Microsoft Information Protection (MIP) SDK.'
+title: Classe UserRights
+description: 'Documenta la classe userrights:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f44ff30c890a5a8ab3dbce2426a6c1898df1f0e5
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 1a3bf2c6c8f417d30fac24263f672f2603347960
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489300"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764256"
 ---
-# <a name="class-mipuserrights"></a>Classe mip::UserRights 
-Un gruppo di utenti e i diritti ad essi associati.
+# <a name="class-userrights"></a>Classe UserRights 
+Gruppo di utenti e diritti ad essi associati.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public UserRights (const std:: Vector\<std:: String\>& Users, const std:: Vector\<std:: String\>& Rights)  |  Costruttore UserRights.
-public const std:: Vector\<std:: String\>& Users () const  |  Ottiene gli utenti associati a un set di diritti.
-public const std:: Vector\<std:: String\>& Rights () const  |  Ottiene i diritti associati a un gruppo di utenti.
+public UserRights (const std::\<vector std::\> String& Users, const std\<:: Vector STD\> :: String& Rights)  |  Costruttore UserRights.
+public const std::\<vector std::\> String& Users () const  |  Ottiene gli utenti associati a un set di diritti.
+public const std::\<vector std::\> String& Rights () const  |  Ottiene i diritti associati a un gruppo di utenti.
   
 ## <a name="members"></a>Members
   
 ### <a name="userrights-function"></a>UserRights (funzione)
 Costruttore UserRights.
 
-Parametri:  
+Parametri  
 * **users**: gruppo di utenti che condividono gli stessi diritti 
 
 

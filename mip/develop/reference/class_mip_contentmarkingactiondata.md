@@ -1,19 +1,19 @@
 ---
-title: 'Classe MIP:: ContentMarkingActionData'
-description: 'Documenta la classe MIP:: contentmarkingactiondata di Microsoft Information Protection (MIP) SDK.'
+title: Classe ContentMarkingActionData
+description: 'Documenta la classe contentmarkingactiondata:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6652cf38163a461af49675c5009dba6461ffa544
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 31362a636498c0c12be9f1b24783d6a7bde166db
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488909"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763362"
 ---
-# <a name="class-mipcontentmarkingactiondata"></a>Classe MIP:: ContentMarkingActionData 
+# <a name="class-contentmarkingactiondata"></a>Classe ContentMarkingActionData 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                

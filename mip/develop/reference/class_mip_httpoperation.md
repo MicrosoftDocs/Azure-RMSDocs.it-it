@@ -1,19 +1,19 @@
 ---
-title: 'Classe MIP:: HttpOperation'
-description: 'Documenta la classe MIP:: httpoperation di Microsoft Information Protection (MIP) SDK.'
+title: Classe HttpOperation
+description: 'Documenta la classe httpoperation:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 4be7b54dd5df255c488043d84ebcfebbce7e6ac2
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 09fac96f16bf18e72d6217842728d48244b9c412
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489997"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762815"
 ---
-# <a name="class-miphttpoperation"></a>Classe MIP:: HttpOperation 
+# <a name="class-httpoperation"></a>Classe HttpOperation 
 Interfaccia che descrive una singola operazione HTTP, implementata dall'app client quando si esegue l'override di HttpDelegate.
   
 ## <a name="summary"></a>Riepilogo
@@ -29,7 +29,7 @@ public bool annullato ()  |  Ottenere lo stato di annullamento dell'operazione.
 Ottiene l'ID operazione.
 
   
-**Restituisce**: ID operazione i cui HttpRequest e HttpResponse corrispondenti avranno lo stesso ID
+**Restituisce**: ID operazione i cui [HttpRequest](class_mip_httprequest.md) e [HTTPRESPONSE](class_mip_httpresponse.md) corrispondenti avranno lo stesso ID
   
 ### <a name="getresponse-function"></a>GetResponse (funzione)
 Ottenere la risposta, se disponibile.

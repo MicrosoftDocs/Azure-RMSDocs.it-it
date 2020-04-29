@@ -1,37 +1,36 @@
 ---
-title: Classe mip::PolicyProfile::Settings
-description: Documenta la classe MIP::p olicyprofile dell'SDK Microsoft Information Protection (MIP).
+title: 'Classe PolicyProfile:: Settings'
+description: "Documenta la classe policyprofile:: Settings dell'SDK Microsoft Information Protection (MIP)."
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6c2d7f26e12f03bd886f2a3fedab8e0a3d976c45
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 317a6cfaaac7572ae320860a0d5a11fabce356e9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489759"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760640"
 ---
-# <a name="class-mippolicyprofilesettings"></a>Classe mip::PolicyProfile::Settings 
-Impostazioni utilizzate da PolicyProfile durante la sua creazione e per tutta la sua durata.
+# <a name="class-policyprofilesettings"></a>Classe PolicyProfile:: Settings 
+Oggetto Settings usato da PolicyProfile durante la creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std:: shared_ptr\<AuthDelegate\>& authDelegate, const std:: shared_ptr\<PolicyProfile:: Observer\>& Observer)  |  Interfaccia per la configurazione del profilo.
+Impostazioni pubbliche (const std::\<shared_ptr\> MipContext& MipContext, CacheStorageType CacheStorageType, const std:\<: shared_ptr PolicyProfile::\> Observer& Observer)  |  Interfaccia per la configurazione del profilo.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
-public const std:: shared_ptr\<AuthDelegate\>& GetAuthDelegate () const  |  Ottiene il delegato dell'autenticazione.
-public const std:: shared_ptr\<PolicyProfile:: Observer\>& getobserver () const  |  Ottiene l'observer di eventi.
+public const std::\<shared_ptr PolicyProfile:: Observer\>& getobserver () const  |  Ottiene l'observer di eventi.
 public std:: shared_ptr\<MipContext\> GetMipContext () const  |  Ottiene il contesto MIP che rappresenta lo stato condiviso in tutti i profili.
 public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
-public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
+public void SetHttpDelegate (const std::\<shared_ptr\> HttpDelegate& HttpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
 public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
-public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Esegue l'override della gestione predefinita dell'invio delle attività asincrone con il proprio client.
+public void SetTaskDispatcherDelegate (const std::\<shared_ptr\> TaskDispatcherDelegate& TaskDispatcherDelegate)  |  Esegue l'override della gestione predefinita dell'invio delle attività asincrone con il proprio client.
 public void SetSessionId(const std::string& sessionId)  | _Non ancora documentato._
 public const std::string& GetSessionId() const  | _Non ancora documentato._
-public void SetCustomSettings (const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
-public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
+public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\> \> String& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
+public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 public ~Settings()  | _Non ancora documentato._
   
 ## <a name="members"></a>Members
@@ -39,17 +38,14 @@ public ~Settings()  | _Non ancora documentato._
 ### <a name="settings-function"></a>Funzione Settings
 Interfaccia per la configurazione del profilo.
 
-Parametri:  
+Parametri  
 * **mipContext**: impostazioni di contesto globali 
 
 
 * **cacheStorageType**: archivia lo stato memorizzato nella cache in memoria o su disco 
 
 
-* **authDelegate**: delegato dell'autenticazione usato dall'SDK per acquisire i token di autenticazione. 
-
-
-* **Observer**: classe che implementa l'interfaccia PolicyProfile:: Observer. Può essere nullptr.
+* **observer**: classe che implementa l'interfaccia PolicyProfile::Observer. Può essere nullptr.
 
 
   
@@ -58,12 +54,6 @@ Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
 
   
 **Restituisce**: tipo di archiviazione usato
-  
-### <a name="getauthdelegate-function"></a>GetAuthDelegate (funzione)
-Ottiene il delegato dell'autenticazione.
-
-  
-**Restituisce**: delegato dell'autenticazione.
   
 ### <a name="getobserver-function"></a>Getobserver (funzione)
 Ottiene l'observer di eventi.
@@ -81,12 +71,12 @@ Ottiene il contesto MIP che rappresenta lo stato condiviso in tutti i profili.
 Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
 
   
-**Restituisce**: il delegato HTTP da usare per le operazioni HTTP
+**Restituisce**: delegato http da usare per le operazioni http
   
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate (funzione)
 Esegue l'override dello stack HTTP predefinito con quello del client.
 
-Parametri:  
+Parametri  
 * **httpDelegate**: interfaccia di callback HTTP implementata dall'applicazione client
 
 
@@ -100,7 +90,7 @@ Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (funzione)
 Esegue l'override della gestione predefinita dell'invio delle attività asincrone con il proprio client.
 
-Parametri:  
+Parametri  
 * **taskDispatcherDelegate**: interfaccia di callback di invio dell'attività implementata dall'applicazione client
 
 
@@ -117,7 +107,7 @@ _Non ancora documentato._
 ### <a name="setcustomsettings-function"></a>SetCustomSettings (funzione)
 Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 
-Parametri:  
+Parametri  
 * **customSettings**: elenco di coppie nome/valore.
 
 
@@ -126,7 +116,7 @@ Parametri:
 Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 
   
-**Restituisce:** : elenco di coppie nome/valore.
+**Restituisce:**: elenco di coppie nome/valore.
   
 ### <a name="settings-function"></a>~ Settings (funzione)
 _Non ancora documentato._

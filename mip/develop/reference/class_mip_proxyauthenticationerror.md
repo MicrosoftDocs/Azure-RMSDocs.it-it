@@ -1,19 +1,19 @@
 ---
-title: Classe MIP::P roxyAuthenticationError
-description: Documenta la classe MIP::p roxyauthenticationerror dell'SDK Microsoft Information Protection (MIP).
+title: Classe ProxyAuthenticationError
+description: 'Documenta la classe proxyauthenticationerror:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c0289f9b2f2a8a1163e62e6c6a96e3023f297194
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2787403c387bbe31b559e069104cb2af28dd0e6a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489623"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764568"
 ---
-# <a name="class-mipproxyauthenticationerror"></a>Classe MIP::P roxyAuthenticationError 
+# <a name="class-proxyauthenticationerror"></a>Classe ProxyAuthenticationError 
 Errore di autenticazione del proxy.
   
 ## <a name="summary"></a>Riepilogo
@@ -44,11 +44,11 @@ Sconosciuto            | Errore di rete sconosciuto
 FailureResponseCode            | Il codice di risposta HTTP indica un errore
 BadResponse            | Impossibile leggere la risposta HTTP
 UnexpectedResponse            | Risposta HTTP completata ma contenente dati imprevisti
-NoConnection            | Non è stato possibile stabilire una connessione
+NoConnection            | Impossibile stabilire una connessione
 Proxy            | Errore del proxy
 SSL            | Errore SSL
 Timeout            | Timeout della connessione
 Offline            | Per l'operazione è necessaria la connettività di rete
-Throttled            | Operazione HTTP non riuscita a causa della limitazione del traffico del server
-Annullato            | L'operazione HTTP è stata annullata dall'applicazione
+Sospensione causata dal servizio Microsoft FullText            | Operazione HTTP non riuscita a causa della limitazione del traffico del server
+Operazione annullata            | L'operazione HTTP è stata annullata dall'applicazione
 Categoria di errore di rete.

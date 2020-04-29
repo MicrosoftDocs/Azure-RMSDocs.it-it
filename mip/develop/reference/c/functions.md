@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/4/2019
-ms.openlocfilehash: cfc80ab9e4704c9efa5d3105f36c668bce26a6b9
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.date: 4/16/2020
+ms.openlocfilehash: c10c13212bf19ea27442626aa4bd900aa57a340d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404573"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764154"
 ---
 # <a name="functions"></a>Funzioni
 
@@ -25,7 +25,7 @@ Parametro | Descrizione
 |---|---|
 | identity | Indirizzo di posta elettronica per il quale verrà acquisito il token |
 | challenge | OAuth2 Challenge |
-| context | Contesto dell'applicazione opaco passato all'API MIP che ha generato questo callback di autenticazione |
+| contesto | Contesto dell'applicazione opaco passato all'API MIP che ha generato questo callback di autenticazione |
 | tokenBuffer | Output Buffer in cui verrà copiato il token. Se null,' actualTokenSize ' verrà popolato, ma |
 | tokenBufferSize | Dimensioni (in byte) del buffer di output |
 | actualTokenSize | Output Dimensioni effettive (in byte) del token |
@@ -71,7 +71,8 @@ Parametro | Descrizione
 |---|---|
 | entries | Matrice di coppie chiave/valore |
 | count | Numero di coppie chiave/valore |
-| dizionario | Output Dizionario appena creato |
+| dictionary | Output Dizionario appena creato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -81,7 +82,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_CreateDictionary(
     const mip_cc_kv_pair* entries,
     const int64_t count,
-    mip_cc_dictionary* dictionary);
+    mip_cc_dictionary* dictionary,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_dictionary_getentries"></a>MIP_CC_Dictionary_GetEntries
@@ -92,9 +94,10 @@ Ottenere le coppie chiave/valore che compongono un dizionario
 
 Parametro | Descrizione
 |---|---|
-| dizionario | Dizionario di origine |
+| dictionary | Dizionario di origine |
 | entries | Output Matrice di coppie chiave/valore, memoria di proprietà dell'oggetto mip_cc_dictionary |
 | count | Output Numero di coppie chiave/valore |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -104,7 +107,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_Dictionary_GetEntries(
     const mip_cc_dictionary dictionary,
     mip_cc_kv_pair** entries,
-    int64_t* count);
+    int64_t* count,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasedictionary"></a>MIP_CC_ReleaseDictionary
@@ -115,7 +119,7 @@ Rilasciare le risorse associate a un dizionario
 
 Parametro | Descrizione
 |---|---|
-| dizionario | Dizionario da rilasciare |
+| dictionary | Dizionario da rilasciare |
 
 ```c
 void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
@@ -130,7 +134,7 @@ Definizione della funzione di callback per l'emissione di una richiesta HTTP
 Parametro | Descrizione
 |---|---|
 | richiesta | Richiesta HTTP che deve essere eseguita dall'applicazione |
-| context | Lo stesso contesto opaco passato alla chiamata API MIP che ha generato questa richiesta HTTP |
+| contesto | Lo stesso contesto opaco passato alla chiamata API MIP che ha generato questa richiesta HTTP |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
@@ -147,7 +151,7 @@ Definizione della funzione di callback per l'annullamento di una richiesta HTTP
 
 Parametro | Descrizione
 |---|---|
-| IDRichiesta | ID della richiesta HTTP da annullare. |
+| requestId | ID della richiesta HTTP da annullare. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
@@ -166,6 +170,7 @@ Parametro | Descrizione
 | sendCallback | Puntatore a funzione per l'emissione di richieste HTTP |
 | cancelCallback | Puntatore a funzione per l'annullamento delle richieste HTTP |
 | httpDelegate | Output Handle per oggetto delegato HTTP |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -173,7 +178,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_CreateHttpDelegate(
     const mip_cc_http_send_callback_fn sendCallback,
     const mip_cc_http_cancel_callback_fn cancelCallback,
-    mip_cc_http_delegate* httpDelegate);
+    mip_cc_http_delegate* httpDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_notifyhttpdelegateresponse"></a>MIP_CC_NotifyHttpDelegateResponse
@@ -185,9 +191,9 @@ Notifica a un delegato HTTP che una risposta HTTP è pronta
 Parametro | Descrizione
 |---|---|
 | httpDelegate | Handle per oggetto delegato HTTP |
-| IDRichiesta | ID della richiesta HTTP associata a questa operazione |
+| requestId | ID della richiesta HTTP associata a questa operazione |
 | result | Stato operazione riuscita/non riuscita |
-| risposta | Risposta HTTP se l'operazione è riuscita, altrimenti nullptr |
+| Risposta | Risposta HTTP se l'operazione è riuscita, altrimenti nullptr |
 
 **Nota**: questa funzione deve essere chiamata dall'applicazione quando un'operazione HTTP è stata completata. L'ID della risposta HTTP deve corrispondere all'ID della richiesta HTTP per consentire a MIP di correlare una risposta alla richiesta 
 
@@ -239,9 +245,9 @@ Parametro | Descrizione
 |---|---|
 | level | livello di registrazione per l'istruzione log. |
 | message | messaggio per l'istruzione log. |
-| Funzione | nome della funzione per l'istruzione log. |
+| function | nome della funzione per l'istruzione log. |
 | file | nome del file in cui è stata generata l'istruzione log. |
-| riga | numero di riga in cui è stata generata l'istruzione log. |
+| line | numero di riga in cui è stata generata l'istruzione log. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
@@ -265,6 +271,7 @@ Parametro | Descrizione
 | flushCallback | Puntatore a funzione per lo scaricamento dei log |
 | writeCallback | Puntatore a funzione per la scrittura di un'istruzione log |
 | loggerDelegate | Output Handle per l'oggetto delegato del logger |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -273,7 +280,8 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
     const mip_cc_logger_init_callback_fn initCallback,
     const mip_cc_logger_flush_callback_fn flushCallback,
     const mip_cc_logger_write_callback_fn writeCallback,
-    mip_cc_logger_delegate* loggerDelegate);
+    mip_cc_logger_delegate* loggerDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releaseloggerdelegate"></a>MIP_CC_ReleaseLoggerDelegate
@@ -305,6 +313,7 @@ Parametro | Descrizione
 | loggerDelegateOverride | Opzionale Implementazione dell'override del logger |
 | telemetryOverride | Opzionale Impostazioni di telemetria sottoposte a override. Se NULL, verranno usate le impostazioni predefinite |
 | mipContext | Output Istanza del contesto MIP appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -316,7 +325,8 @@ mip_cc_result MIP_CC_CreateMipContext(
     const bool isOfflineOnly,
     const mip_cc_logger_delegate loggerDelegateOverride,
     const mip_cc_telemetry_configuration telemetryOverride,
-    mip_cc_mip_context* mipContext);
+    mip_cc_mip_context* mipContext,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_createmipcontextwithcustomfeaturesettings"></a>MIP_CC_CreateMipContextWithCustomFeatureSettings
@@ -336,6 +346,7 @@ Parametro | Descrizione
 | featureSettings | Opzionale Matrice di override di funzionalità personalizzate |
 | featureSettingsSize | Dimensioni delle sostituzioni di funzionalità personalizzate (in numero di sostituzioni) |
 | mipContext | Output Istanza del contesto MIP appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -349,7 +360,8 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
     const mip_cc_telemetry_configuration telemetryOverride,
     const mip_cc_feature_override* featureSettings,
     const int64_t featureSettingsSize,
-    mip_cc_mip_context* mipContext);
+    mip_cc_mip_context* mipContext,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasemipcontext"></a>MIP_CC_ReleaseMipContext
@@ -376,13 +388,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | protectionType | Output Tipo di protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_protection_type* protectionType);
+    mip_cc_protection_type* protectionType,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getownersize"></a>MIP_CC_ProtectionDescriptor_GetOwnerSize
@@ -395,13 +409,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | ownerSize | Output Dimensioni del buffer per il possesso del proprietario (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* ownerSize);
+    int64_t* ownerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getowner"></a>MIP_CC_ProtectionDescriptor_GetOwner
@@ -416,6 +432,7 @@ Parametro | Descrizione
 | ownerBuffer | Output Buffer in cui verrà copiato il proprietario. |
 | ownerBufferSize | Dimensioni (in numero di caratteri) di ownerBuffer. |
 | actualOwnerSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -426,7 +443,8 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
-    int64_t* actualOwnerSize);
+    int64_t* actualOwnerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getnamesize"></a>MIP_CC_ProtectionDescriptor_GetNameSize
@@ -439,13 +457,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getname"></a>MIP_CC_ProtectionDescriptor_GetName
@@ -460,6 +480,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -470,7 +491,8 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getdescriptionsize"></a>MIP_CC_ProtectionDescriptor_GetDescriptionSize
@@ -483,13 +505,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | descriptionSize | Output Dimensione del buffer in cui memorizzare la descrizione (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* descriptionSize);
+    int64_t* descriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getdescription"></a>MIP_CC_ProtectionDescriptor_GetDescription
@@ -504,6 +528,7 @@ Parametro | Descrizione
 | descriptionBuffer | Output Buffer in cui verrà copiata la descrizione. |
 | descriptionBufferSize | Dimensioni (in numero di caratteri) di descriptionBuffer. |
 | actualDescriptionSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -514,7 +539,8 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
-    int64_t* actualDescriptionSize);
+    int64_t* actualDescriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_gettemplateid"></a>MIP_CC_ProtectionDescriptor_GetTemplateId
@@ -527,13 +553,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | templateId | Output ID modello associato alla protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_guid* templateId);
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getlabelid"></a>MIP_CC_ProtectionDescriptor_GetLabelId
@@ -546,13 +574,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | labelId | Output ID etichetta associato alla protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_guid* labelId);
+    mip_cc_guid* labelId,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getcontentid"></a>MIP_CC_ProtectionDescriptor_GetContentId
@@ -565,13 +595,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | contentId | Output ID contenuto associato alla protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
     const mip_cc_protection_descriptor protectionDescriptor,
-    mip_cc_guid* contentId);
+    mip_cc_guid* contentId,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_doescontentexpire"></a>MIP_CC_ProtectionDescriptor_DoesContentExpire
@@ -584,13 +616,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | doesContentExpire | Output Indica se il contenuto scade |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
     const mip_cc_protection_descriptor protectionDescriptor,
-    bool* doesContentExpire);
+    bool* doesContentExpire,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getcontentvaliduntil"></a>MIP_CC_ProtectionDescriptor_GetContentValidUntil
@@ -603,13 +637,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | contentValidUntil | Output Data di scadenza del contenuto (in secondi da Epoch) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* contentValidUntil);
+    int64_t* contentValidUntil,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_doesallowofflineaccess"></a>MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess
@@ -622,13 +658,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | doesAllowOfflineAccess | Output Indica se è consentito o meno l'accesso offline |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
     const mip_cc_protection_descriptor protectionDescriptor,
-    bool* doesAllowOfflineAccess);
+    bool* doesAllowOfflineAccess,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getreferrersize"></a>MIP_CC_ProtectionDescriptor_GetReferrerSize
@@ -641,13 +679,15 @@ Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | referrerSize | Output Dimensione del buffer in cui memorizzare il referrer (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
     const mip_cc_protection_descriptor protectionDescriptor,
-    int64_t* referrerSize);
+    int64_t* referrerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectiondescriptor_getreferrer"></a>MIP_CC_ProtectionDescriptor_GetReferrer
@@ -662,6 +702,7 @@ Parametro | Descrizione
 | referrerBuffer | Output Buffer in cui verrà copiato il referrer. |
 | referrerBufferSize | Dimensioni (in numero di caratteri) di referrerBuffer. |
 | actualReferrerSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -672,7 +713,56 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
     const mip_cc_protection_descriptor protectionDescriptor,
     char* referrerBuffer,
     const int64_t referrerBufferSize,
-    int64_t* actualReferrerSize);
+    int64_t* actualReferrerSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectiondescriptor_getdoublekeyurlsize"></a>MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize
+
+Ottiene le dimensioni del buffer necessarie per archiviare l'URL della chiave doppia
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| protectionDescriptor | Descrittore associato al contenuto protetto |
+| url | Output Dimensione del buffer in cui memorizzare l'URL della chiave doppia (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize(
+    const mip_cc_protection_descriptor protectionDescriptor,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectiondescriptor_getdoublekeyurl"></a>MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl
+
+Ottiene l'URL della chiave doppia
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| protectionDescriptor | Descrittore associato al contenuto protetto |
+| urlBuffer | Output Buffer in cui verrà copiato l'URL. |
+| urlBufferSize | Dimensioni (in numero di caratteri) di urlBuffer. |
+| actualUrlSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se urlBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualUrlSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl(
+    const mip_cc_protection_descriptor protectionDescriptor,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releaseprotectiondescriptor"></a>MIP_CC_ReleaseProtectionDescriptor
@@ -700,6 +790,7 @@ Parametro | Descrizione
 | stringhe | Matrice di stringhe |
 | count | Numero di stringhe |
 | stringList | Output Elenco di stringhe appena creato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -709,7 +800,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_CreateStringList(
     const char** strings,
     const int64_t count,
-    mip_cc_string_list* stringList);
+    mip_cc_string_list* stringList,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_stringlist_getstrings"></a>MIP_CC_StringList_GetStrings
@@ -723,6 +815,7 @@ Parametro | Descrizione
 | stringList | Elenco di stringhe di origine |
 | stringhe | Output Matrice di stringhe, memoria di proprietà dell'oggetto mip_cc_string_list |
 | count | Output Numero di stringhe |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -732,7 +825,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_StringList_GetStrings(
     const mip_cc_string_list stringList,
     const char*** strings,
-    int64_t* count);
+    int64_t* count,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasestringlist"></a>MIP_CC_ReleaseStringList
@@ -795,6 +889,7 @@ Parametro | Descrizione
 | cancelTaskCallback | Puntatore a funzione per l'annullamento delle attività in background |
 | cancelAllTasksCallback | Puntatore a funzione per l'annullamento di tutte le attività in background |
 | taskDispatcher | Output Handle per l'oggetto delegato del dispatcher attività |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -803,7 +898,8 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
     const mip_cc_dispatch_task_callback_fn dispatchTaskCallback,
     const mip_cc_cancel_task_callback_fn cancelTaskCallback,
     const mip_cc_cancel_all_tasks_callback_fn cancelAllTasksCallback,
-    mip_cc_task_dispatcher_delegate* taskDispatcher);
+    mip_cc_task_dispatcher_delegate* taskDispatcher,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_executedispatchedtask"></a>MIP_CC_ExecuteDispatchedTask
@@ -837,6 +933,25 @@ Parametro | Descrizione
 void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDispatcher);
 ```
 
+## <a name="mip_cc_createtelemetryconfiguration"></a>MIP_CC_CreateTelemetryConfiguration
+
+Creare un oggetto impostazioni utilizzato per creare un profilo di protezione
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| telemetryConfig | Output Istanza di configurazione di telemetria appena creata contenente le impostazioni predefinite |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_CreateTelemetryConfiguration(
+    mip_cc_telemetry_configuration* telemetryConfig,
+    mip_cc_error* errorInfo);
+```
+
 ## <a name="mip_cc_telemetryconfiguration_sethostname"></a>MIP_CC_TelemetryConfiguration_SetHostName
 
 Impostare un nome host di telemetria che sostituirà le impostazioni di telemetria interne
@@ -846,7 +961,8 @@ Impostare un nome host di telemetria che sostituirà le impostazioni di telemetr
 Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
-| Nome host | Nome dell'host |
+| hostName | Nome host |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -855,7 +971,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const char* hostName);
+    const char* hostName,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_telemetryconfiguration_setlibraryname"></a>MIP_CC_TelemetryConfiguration_SetLibraryName
@@ -868,6 +985,7 @@ Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | NomeLibreria | Nome della DLL che implementa l'API C di aria/1DS SDK |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -876,7 +994,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const char* libraryName);
+    const char* libraryName,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_telemetryconfiguration_sethttpdelegate"></a>MIP_CC_TelemetryConfiguration_SetHttpDelegate
@@ -889,6 +1008,7 @@ Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | httpDelegate | Istanza di callback HTTP implementata dall'applicazione client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -897,7 +1017,29 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const mip_cc_http_delegate httpDelegate);
+    const mip_cc_http_delegate httpDelegate,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_telemetryconfiguration_settaskdispatcherdelegate"></a>MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate
+
+Esegui override del dispatcher attività asincrono predefinito con il proprio client
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| telemetryConfig | Configurazione della telemetria |
+| taskDispatcherDelegate | Istanza di callback Dispatcher attività implementata dall'applicazione client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate(
+    const mip_cc_telemetry_configuration telemetryConfig,
+    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_telemetryconfiguration_setisnetworkdetectionenabled"></a>MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled
@@ -910,6 +1052,7 @@ Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isCachingEnabled | Indica se il componente di telemetria è autorizzato a eseguire il ping dello stato della rete in un thread in background |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -918,7 +1061,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isNetworkDetectionEnabled);
+    const bool isNetworkDetectionEnabled,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_telemetryconfiguration_setislocalcachingenabled"></a>MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled
@@ -931,6 +1075,7 @@ Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isCachingEnabled | Indica se il componente di telemetria può scrivere cache sul disco |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -939,7 +1084,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isCachingEnabled);
+    const bool isCachingEnabled,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_telemetryconfiguration_setistraceloggingenabled"></a>MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled
@@ -952,6 +1098,7 @@ Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isTraceLoggingEnabled | Indica se il componente di telemetria è autorizzato a scrivere log su disco |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -960,7 +1107,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isTraceLoggingEnabled);
+    const bool isTraceLoggingEnabled,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_telemetryconfiguration_setistelemetryoptedout"></a>MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut
@@ -973,6 +1121,7 @@ Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isTelemetryOptedOut | Se un'applicazione o un utente non ha rifiutato la telemetria facoltativa |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -981,7 +1130,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const bool isTelemetryOptedOut);
+    const bool isTelemetryOptedOut,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_telemetryconfiguration_setcustomsettings"></a>MIP_CC_TelemetryConfiguration_SetCustomSettings
@@ -994,13 +1144,38 @@ Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | customSettings | Impostazioni di telemetria personalizzate |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
     const mip_cc_telemetry_configuration telemetryConfig,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_telemetryconfiguration_addmaskedproperty"></a>MIP_CC_TelemetryConfiguration_AddMaskedProperty
+
+Imposta una proprietà di telemetria su maschera
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| telemetryConfig | Configurazione della telemetria |
+| eventName | Nome evento |
+| propertyName | Nome proprietà |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_TelemetryConfiguration_AddMaskedProperty(
+    const mip_cc_telemetry_configuration telemetryConfig,
+    const char* eventName,
+    const char* propertyName,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasetelemetryconfiguration"></a>MIP_CC_ReleaseTelemetryConfiguration
@@ -1040,9 +1215,10 @@ Crea un gestore protezione per la pubblicazione di nuovo contenuto
 Parametro | Descrizione
 |---|---|
 | motore | Motore in cui verrà creato un gestore |
-| impostazioni | Impostazioni del gestore protezione |
-| context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
-| handler | Output Istanza del gestore protezione appena creata |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
+| contesto | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
+| gestore | Output Istanza del gestore protezione appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1051,7 +1227,8 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
     const mip_cc_protection_engine engine,
     const mip_cc_protection_handler_publishing_settings settings,
     const void* context,
-    mip_cc_protection_handler* handler);
+    mip_cc_protection_handler* handler,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_createprotectionhandlerforconsumption"></a>MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption
@@ -1063,9 +1240,10 @@ Crea un gestore protezione per l'utilizzo del contenuto esistente
 Parametro | Descrizione
 |---|---|
 | motore | Motore in cui verrà creato un gestore |
-| impostazioni | Impostazioni del gestore protezione |
-| context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
-| handler | Output Istanza del gestore protezione appena creata |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
+| contesto | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
+| gestore | Output Istanza del gestore protezione appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1074,7 +1252,8 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
   const mip_cc_protection_engine engine,
   const mip_cc_protection_handler_consumption_settings settings,
   const void* context,
-  mip_cc_protection_handler* handler);
+  mip_cc_protection_handler* handler,
+  mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_getengineidsize"></a>MIP_CC_ProtectionEngine_GetEngineIdSize
@@ -1087,13 +1266,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | idSize | Output Dimensione del buffer in cui memorizzare l'ID del motore (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
     const mip_cc_protection_engine engine,
-    int64_t* idSize);
+    int64_t* idSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_getengineid"></a>MIP_CC_ProtectionEngine_GetEngineId
@@ -1108,6 +1289,7 @@ Parametro | Descrizione
 | idBuffer | Output Buffer in cui verrà copiato l'ID. |
 | idBufferSize | Dimensioni (in numero di caratteri) di idBuffer. |
 | actualIdSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1118,7 +1300,8 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
     const mip_cc_protection_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
-    int64_t* actualIdSize);
+    int64_t* actualIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_gettemplatessize"></a>MIP_CC_ProtectionEngine_GetTemplatesSize
@@ -1130,8 +1313,9 @@ Ottiene il numero di modelli RMS associati a un motore di protezione
 Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
-| context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
+| contesto | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
 | templatesSize | Output Numero di modelli |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1141,7 +1325,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
     const mip_cc_protection_engine engine,
     const void* context,
-    int64_t* templatesSize);
+    int64_t* templatesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_gettemplates"></a>MIP_CC_ProtectionEngine_GetTemplates
@@ -1153,22 +1338,24 @@ Ottenere la raccolta di modelli disponibili per un utente
 Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
-| context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
-| templateBuffer | Output Buffer in cui verranno copiati i modelli. |
+| contesto | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
+| mip_cc_template_descriptor | [Output] buffer per la creazione di gestori di modelli. |
 | templateBufferSize | Dimensioni (in numero di elementi) di templateBuffer. |
 | actualTemplatesSize | Output Numero di ID modello scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
-**Nota**: se templateBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualTemplateSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+**Nota**: se templateBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualTemplateSize verrà impostato sulle dimensioni minime del buffer richiesto. Ogni mip_cc_template_descriptor deve essere rilasciata dal chiamante chiamando MIP_CC_ReleaseTemplateDescriptor (). 
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
     const mip_cc_protection_engine engine,
     const void* context,
-    mip_cc_guid* templateBuffer,
+    mip_cc_template_descriptor* templateDescriptors,
     const int64_t templateBufferSize,
-    int64_t* actualTemplatesSize);
+    int64_t* actualTemplatesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_getrightsforlabelid"></a>MIP_CC_ProtectionEngine_GetRightsForLabelId
@@ -1180,12 +1367,13 @@ Ottiene l'elenco dei diritti concessi a un utente per un ID etichetta
 Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
-| context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
+| contesto | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
 | documentId | ID documento assegnato al documento |
 | labelId | ID etichetta applicato al documento |
 | ownerEmail | Proprietario del documento |
 | delagedUserEmail | Messaggio di posta elettronica dell'utente se l'utente o l'applicazione di autenticazione agisce per conto di un altro utente, vuoto se non è presente alcun valore |
 | diritti | Output Elenco dei diritti concessi a un utente, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1199,7 +1387,8 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
     const char* labelId,
     const char* ownerEmail,
     const char* delegatedUserEmail,
-    mip_cc_string_list* rights);
+    mip_cc_string_list* rights,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_getclientdatasize"></a>MIP_CC_ProtectionEngine_GetClientDataSize
@@ -1212,13 +1401,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | clientDataSize | Output Dimensioni dei dati client (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
     const mip_cc_protection_engine engine,
-    int64_t* clientDataSize);
+    int64_t* clientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionengine_getclientdata"></a>MIP_CC_ProtectionEngine_GetClientData
@@ -1233,6 +1424,7 @@ Parametro | Descrizione
 | clientDataBuffer | Output Buffer in cui verranno copiati i dati client |
 | clientDataBufferSize | Dimensioni (in numero di caratteri) di clientDataBuffer. |
 | actualClientDataSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1243,7 +1435,8 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
     const mip_cc_protection_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
-    int64_t* actualClientDataSize);
+    int64_t* actualClientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_createprotectionenginesettingswithidentity"></a>MIP_CC_CreateProtectionEngineSettingsWithIdentity
@@ -1258,6 +1451,7 @@ Parametro | Descrizione
 | clientData | Dati client personalizzabili archiviati insieme al motore |
 | locale | Impostazioni locali in cui vengono restituiti i risultati del testo |
 | engineSettings | Output Istanza di impostazioni appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1266,7 +1460,8 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
     const mip_cc_identity* identity,
     const char* clientData,
     const char* locale,
-    mip_cc_protection_engine_settings* engineSettings);
+    mip_cc_protection_engine_settings* engineSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionenginesettings_setclientdata"></a>MIP_CC_ProtectionEngineSettings_SetClientData
@@ -1277,15 +1472,17 @@ Imposta i dati client che verranno archiviati in maniera opaca insieme a questo 
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
+| Scheda Impostazioni | Impostazioni motore |
 | clientData | Dati client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
     const mip_cc_protection_engine_settings engineSettings,
-    const char* clientData);
+    const char* clientData,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionenginesettings_setcustomsettings"></a>MIP_CC_ProtectionEngineSettings_SetCustomSettings
@@ -1298,13 +1495,15 @@ Parametro | Descrizione
 |---|---|
 | engineSettings | Impostazioni motore |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
     const mip_cc_protection_engine_settings engineSettings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionenginesettings_setsessionid"></a>MIP_CC_ProtectionEngineSettings_SetSessionId
@@ -1315,15 +1514,40 @@ Imposta l'ID di sessione che può essere usato per correlare i log e i dati di t
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
-| sessionId | ID sessione che rappresenta la durata di un motore di protezione |
+| Scheda Impostazioni | Impostazioni motore |
+| sessionID | ID sessione che rappresenta la durata di un motore di protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
     const mip_cc_protection_engine_settings engineSettings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectionenginesettings_setcloud"></a>MIP_CC_ProtectionEngineSettings_SetCloud
+
+Imposta il cloud che influiscono sugli URL dell'endpoint per tutte le richieste di servizio
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| Scheda Impostazioni | Impostazioni motore |
+| cloud | Identificatore cloud (impostazione predefinita = sconosciuta) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se il cloud non è specificato, sarà determinato dalla ricerca DNS del dominio di identità del motore, se possibile, in caso contrario al cloud globale. 
+
+```c
+mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloud(
+    const mip_cc_protection_engine_settings engineSettings,
+    const mip_cc_cloud cloud,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionenginesettings_setcloudendpointbaseurl"></a>MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl
@@ -1334,15 +1558,19 @@ Imposta l'URL di base per tutte le richieste di servizio
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
-| cloudEndpointBaseUrl | URL di base (ad esempio 'https://api.aadrm.com') |
+| Scheda Impostazioni | Impostazioni motore |
+| cloudEndpointBaseUrl | URL di base (ad esempiohttps://api.aadrm.com'') |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: questo valore verrà letto e deve essere impostato solo per Cloud = MIP_CLOUD_CUSTOM 
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_protection_engine_settings engineSettings,
-    const char* cloudEndpointBaseUrl);
+    const char* cloudEndpointBaseUrl,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releaseprotectionenginesettings"></a>MIP_CC_ReleaseProtectionEngineSettings
@@ -1368,14 +1596,16 @@ Creare un oggetto impostazioni utilizzato per creare un gestore protezione per l
 Parametro | Descrizione
 |---|---|
 | descrittore | Dettagli sulla protezione |
-| impostazioni | Output Istanza di impostazioni appena creata |
+| Scheda Impostazioni | Output Istanza di impostazioni appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
     const mip_cc_protection_descriptor descriptor,
-    mip_cc_protection_handler_publishing_settings* settings);
+    mip_cc_protection_handler_publishing_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandlerpublishingsettings_setisdeprecatedalgorithmpreferred"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred
@@ -1386,15 +1616,17 @@ Imposta un valore che indica se è preferibile un algoritmo di crittografia depr
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore protezione |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
 | isDeprecatedAlgorithmPreferred | Indica se è preferibile l'algoritmo deprecato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred(
     const mip_cc_protection_handler_publishing_settings settings,
-    const bool isDeprecatedAlgorithmPreferred);
+    const bool isDeprecatedAlgorithmPreferred,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandlerpublishingsettings_setisauditedextractionallowed"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed
@@ -1405,15 +1637,17 @@ Imposta un valore che indica se le applicazioni non compatibili con MIP possono 
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore protezione |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
 | isAuditedExtractionAllowed | Indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed(
     const mip_cc_protection_handler_publishing_settings settings,
-    const bool isAuditedExtractionAllowed);
+    const bool isAuditedExtractionAllowed,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandlerpublishingsettings_setispublishingformatjson"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson
@@ -1424,15 +1658,17 @@ Imposta un valore che indica se PL è in formato JSON (il valore predefinito è 
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore protezione |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
 | isPublishingFormatJson | Indica se il PL risultante deve essere in formato JSON |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson(
     const mip_cc_protection_handler_publishing_settings settings,
-    const bool isPublishingFormatJson);
+    const bool isPublishingFormatJson,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandlerpublishingsettings_setdelegateduseremail"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail
@@ -1443,8 +1679,9 @@ Imposta l'utente delegato
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore protezione |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
 | delegatedUserEmail | Indirizzo di posta elettronica dell'utente delegato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1453,7 +1690,31 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_publishing_settings settings,
-    const char* delegatedUserEmail);
+    const char* delegatedUserEmail,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectionhandlerpublishingsettings_setprelicenseuseremail"></a>MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail
+
+Imposta un utente con licenza preliminare
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| Scheda Impostazioni | Impostazioni del gestore protezione |
+| preLicenseUserEmail | Indirizzo di posta elettronica dell'utente con licenza preliminare |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: quando si deve recuperare una licenza preliminare durante la pubblicazione, viene specificato un utente con licenza preliminare 
+
+```c
+mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail(
+    const mip_cc_protection_handler_publishing_settings settings,
+    const char* preLicenseUserEmail,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_createprotectionhandlerconsumptionsettings"></a>MIP_CC_CreateProtectionHandlerConsumptionSettings
@@ -1466,9 +1727,8 @@ Parametro | Descrizione
 |---|---|
 | publishingLicenseBuffer | Buffer contenente la licenza di pubblicazione non elaborata |
 | publishingLicenseBufferSize | Dimensioni del buffer delle licenze di pubblicazione |
-| isOfflineOnly | Se è consentito il recupero di una nuova licenza dal server RMS |
-| delegatedUserEmail | Opzionale Utente per conto del quale verranno eseguite le operazioni di protezione |
-| impostazioni | Output Istanza di impostazioni appena creata |
+| Scheda Impostazioni | Output Istanza di impostazioni appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1476,7 +1736,35 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
     const uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
-    mip_cc_protection_handler_consumption_settings* settings);
+    mip_cc_protection_handler_consumption_settings* settings,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_createprotectionhandlerconsumptionsettingswithprelicense"></a>MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense
+
+Creare un oggetto impostazioni utilizzato per creare un gestore protezione per l'utilizzo del contenuto esistente
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| preLicenseBuffer | Buffer contenente il buffer pre-licenza RAW |
+| preLicenseBufferSize | Dimensioni del buffer di pre-licenza |
+| publishingLicenseBuffer | Buffer contenente la licenza di pubblicazione non elaborata |
+| publishingLicenseBufferSize | Dimensioni del buffer delle licenze di pubblicazione |
+| Scheda Impostazioni | Output Istanza di impostazioni appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense(
+    const uint8_t* preLicenseBuffer,
+    const int64_t preLicenseBufferSize,
+    const uint8_t* publishingLicenseBuffer,
+    const int64_t publishingLicenseBufferSize,
+    mip_cc_protection_handler_consumption_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandlerconsumptionsettings_setisofflineonly"></a>MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly
@@ -1487,8 +1775,9 @@ Imposta un valore che indica se la creazione del gestore protezione consente ope
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore protezione |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
 | isOfflineOnly | True se le operazioni HTTP sono proibite, altrimenti false |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1497,7 +1786,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
     const mip_cc_protection_handler_consumption_settings settings,
-    const bool isOfflineOnly);
+    const bool isOfflineOnly,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandlerconsumptionsettings_setdelegateduseremail"></a>MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail
@@ -1508,8 +1798,9 @@ Imposta l'utente delegato
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore protezione |
+| Scheda Impostazioni | Impostazioni del gestore protezione |
 | delegatedUserEmail | Indirizzo di posta elettronica dell'utente delegato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1518,7 +1809,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
     const mip_cc_protection_handler_consumption_settings settings,
-    const char* delegatedUserEmail);
+    const char* delegatedUserEmail,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getserializedpublishinglicensesize"></a>MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize
@@ -1529,15 +1821,17 @@ Ottiene le dimensioni della licenza di pubblicazione (in byte)
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | publishingLicenseBufferSize | Output Dimensioni della licenza di pubblicazione (in byte) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
     const mip_cc_protection_handler handler,
-    int64_t* publishingLicenseBufferSize);
+    int64_t* publishingLicenseBufferSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getserializedpublishinglicense"></a>MIP_CC_ProtectionHandler_GetSerializedPublishingLicense
@@ -1548,10 +1842,11 @@ Ottiene la licenza di pubblicazione
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | publishingLicenseBuffer | Output Buffer in cui verrà scritta la licenza di pubblicazione |
 | publishingLicenseBufferSize | Dimensioni del buffer delle licenze di pubblicazione |
 | actualPublishingLicenseSize | Output Dimensioni effettive della licenza di pubblicazione (in byte) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1562,7 +1857,60 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
     const mip_cc_protection_handler handler,
     uint8_t* publishingLicenseBuffer,
     const int64_t publishingLicenseBufferSize,
-    int64_t* actualPublishingLicenseSize);
+    int64_t* actualPublishingLicenseSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectionhandler_getserializedprelicensesize"></a>MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize
+
+Ottiene le dimensioni della pre-licenza (in byte)
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| gestore | Gestore che rappresenta il contenuto protetto |
+| format | Formato di pre-licenza |
+| preLicenseBufferSize | Output Dimensioni della licenza preliminare (in byte) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize(
+    const mip_cc_protection_handler handler,
+    mip_cc_pre_license_format format,
+    int64_t* preLicenseBufferSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectionhandler_getserializedprelicense"></a>MIP_CC_ProtectionHandler_GetSerializedPreLicense
+
+Ottiene la pre-licenza
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| gestore | Gestore che rappresenta il contenuto protetto |
+| format | Formato di pre-licenza |
+| preLicenseBuffer | Output Buffer in cui verrà scritta la licenza preliminare |
+| preLicenseBufferSize | Dimensioni del buffer di pre-licenza |
+| actualPreLicenseSize | Output Dimensioni effettive della licenza preliminare (in byte) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se preLicenseBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualPreLicenseSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicense(
+    const mip_cc_protection_handler handler,
+    mip_cc_pre_license_format format,
+    uint8_t* preLicenseBuffer,
+    const int64_t preLicenseBufferSize,
+    int64_t* actualPreLicenseSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getprotectiondescriptor"></a>MIP_CC_ProtectionHandler_GetProtectionDescriptor
@@ -1573,15 +1921,17 @@ Ottiene il descrittore di protezione
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | descrittore | Output Descrittore di protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
     const mip_cc_protection_handler handler,
-    mip_cc_protection_descriptor* descriptor);
+    mip_cc_protection_descriptor* descriptor,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getrights"></a>MIP_CC_ProtectionHandler_GetRights
@@ -1592,8 +1942,9 @@ Ottiene l'elenco dei diritti concessi a un utente
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | diritti | Output Elenco dei diritti concessi a un utente, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1602,7 +1953,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetRights(
     const mip_cc_protection_handler handler,
-    mip_cc_string_list* rights);
+    mip_cc_string_list* rights,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getprotectedcontentsize"></a>MIP_CC_ProtectionHandler_GetProtectedContentSize
@@ -1613,10 +1965,11 @@ Calcola le dimensioni del contenuto protetto, il factoring nella spaziatura inte
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | unprotectedSize | Dimensioni del contenuto non protetto/non crittografato (in byte) |
 | includesFinalBlock | Descrive se il contenuto non protetto in questione include il blocco finale o meno. |
 | protectedSize | Output Dimensioni del contenuto protetto |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1625,7 +1978,8 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
     const mip_cc_protection_handler handler,
     const int64_t unprotectedSize,
     const bool includesFinalBlock,
-    int64_t* protectedSize);
+    int64_t* protectedSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getblocksize"></a>MIP_CC_ProtectionHandler_GetBlockSize
@@ -1636,15 +1990,17 @@ Ottiene la dimensione del blocco (in byte) per la modalità di crittografia util
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | blockSize | Output Dimensioni blocco (in byte) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
     const mip_cc_protection_handler handler,
-    int64_t* blockSize);
+    int64_t* blockSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getissuedusersize"></a>MIP_CC_ProtectionHandler_GetIssuedUserSize
@@ -1655,15 +2011,17 @@ Ottiene le dimensioni del buffer necessarie per archiviare l'utente a cui è sta
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | issuedUserSize | Output Dimensioni del buffer per l'utente rilasciato (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
     const mip_cc_protection_handler handler,
-    int64_t* issuedUserSize);
+    int64_t* issuedUserSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getissueduser"></a>MIP_CC_ProtectionHandler_GetIssuedUser
@@ -1674,10 +2032,11 @@ Ottiene l'utente a cui è stato concesso l'accesso al contenuto protetto
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | issuedUserBuffer | Output Buffer in cui verrà copiato l'utente emesso. |
 | issuedUserBufferSize | Dimensioni (in numero di caratteri) di issuedUserBuffer. |
 | actualIssuedUserSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1688,7 +2047,8 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
     const mip_cc_protection_handler handler,
     char* issuedUserBuffer,
     const int64_t issuedUserBufferSize,
-    int64_t* actualIssuedUserSize);
+    int64_t* actualIssuedUserSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getownersize"></a>MIP_CC_ProtectionHandler_GetOwnerSize
@@ -1699,15 +2059,17 @@ Ottiene le dimensioni del buffer necessarie per archiviare il proprietario del c
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | ownerSize | Output Dimensioni del buffer per l'utente rilasciato (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
     const mip_cc_protection_handler handler,
-    int64_t* ownerSize);
+    int64_t* ownerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getowner"></a>MIP_CC_ProtectionHandler_GetOwner
@@ -1718,10 +2080,11 @@ Ottiene il proprietario del contenuto protetto
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | ownerBuffer | Output Buffer in cui verrà copiato l'utente emesso. |
 | ownerBufferSize | Dimensioni (in numero di caratteri) di ownerBuffer. |
 | actualOwnerSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1732,7 +2095,8 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
     const mip_cc_protection_handler handler,
     char* ownerBuffer,
     const int64_t ownerBufferSize,
-    int64_t* actualOwnerSize);
+    int64_t* actualOwnerSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_getcontentid"></a>MIP_CC_ProtectionHandler_GetContentId
@@ -1743,15 +2107,17 @@ Ottiene il contenuto di IE del contenuto protetto
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | contentId | Output ID contenuto |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
     const mip_cc_protection_handler handler,
-    mip_cc_guid* contentId);
+    mip_cc_guid* contentId,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_doesusedeprecatedalgorithm"></a>MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm
@@ -1762,15 +2128,17 @@ Ottiene un valore che indica se il gestore della protezione utilizza un algoritm
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore che rappresenta il contenuto protetto |
+| gestore | Gestore che rappresenta il contenuto protetto |
 | doesUseDeprecatedAlgorithm | Output Indica se il gestore della protezione usa un algoritmo di crittografia deprecato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
     const mip_cc_protection_handler handler,
-    bool* doesUseDeprecatedAlgorithm);
+    bool* doesUseDeprecatedAlgorithm,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionhandler_decryptbuffer"></a>MIP_CC_ProtectionHandler_DecryptBuffer
@@ -1788,6 +2156,7 @@ Parametro | Descrizione
 | outputBufferSize | Dimensioni (in byte) del buffer di output |
 | documentoÈ | Se il buffer di input contiene i byte crittografati finali |
 | actualDecryptedSize | Output Dimensioni effettive del contenuto crittografato (in byte) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1800,7 +2169,8 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
     uint8_t* outputBuffer,
     const int64_t outputBufferSize,
     const bool isFinal,
-    int64_t *actualDecryptedSize);
+    int64_t *actualDecryptedSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releaseprotectionhandlerpublishingsettings"></a>MIP_CC_ReleaseProtectionHandlerPublishingSettings
@@ -1811,7 +2181,7 @@ Rilasciare le risorse associate a impostazioni del gestore protezione
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore di protezione da rilasciare |
+| Scheda Impostazioni | Impostazioni del gestore di protezione da rilasciare |
 
 ```c
 void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler_publishing_settings settings);
@@ -1825,7 +2195,7 @@ Rilasciare le risorse associate a impostazioni del gestore protezione
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del gestore di protezione da rilasciare |
+| Scheda Impostazioni | Impostazioni del gestore di protezione da rilasciare |
 
 ```c
 void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handler_consumption_settings settings);
@@ -1839,7 +2209,7 @@ Rilasciare le risorse associate a un gestore protezione
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore di protezione da rilasciare |
+| gestore | Gestore di protezione da rilasciare |
 
 ```c
 void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
@@ -1853,15 +2223,17 @@ Carica un profilo
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni profilo |
-| profilo | Output Istanza del profilo di protezione appena creata |
+| Scheda Impostazioni | Impostazioni del profilo |
+| profile | Output Istanza del profilo di protezione appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_LoadProtectionProfile(
     const mip_cc_protection_profile_settings settings,
-    mip_cc_protection_profile* profile);
+    mip_cc_protection_profile* profile,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releaseprotectionprofile"></a>MIP_CC_ReleaseProtectionProfile
@@ -1872,10 +2244,37 @@ Rilascia le risorse associate a un profilo di protezione
 
 Parametro | Descrizione
 |---|---|
-| profilo | Profilo di protezione da rilasciare |
+| profile | Profilo di protezione da rilasciare |
 
 ```c
 void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
+```
+
+## <a name="mip_cc_createprotectionprofilesettings"></a>MIP_CC_CreateProtectionProfileSettings
+
+Creare un oggetto impostazioni utilizzato per creare un profilo di protezione
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| mipContext | Contesto globale condiviso tra tutti i profili |
+| cacheStorageType | Configurazione della cache di archiviazione |
+| authCallback | Oggetto callback da usare per l'autenticazione, implementato dall'applicazione client |
+| Dell'consentcallback | Oggetto callback da usare per il consenso, implementato dall'applicazione client |
+| Scheda Impostazioni | Output Istanza di impostazioni appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_CreateProtectionProfileSettings(
+    const mip_cc_mip_context mipContext,
+    const mip_cc_cache_storage_type cacheStorageType,
+    const mip_cc_auth_callback authCallback,
+    const mip_cc_consent_callback consentCallback,
+    mip_cc_protection_profile_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionprofilesettings_setsessionid"></a>MIP_CC_ProtectionProfileSettings_SetSessionId
@@ -1886,15 +2285,17 @@ Imposta l'ID di sessione che può essere usato per correlare i log e i dati di t
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni profilo |
-| sessionId | ID sessione che rappresenta la durata di un profilo di protezione |
+| Scheda Impostazioni | Impostazioni del profilo |
+| sessionID | ID sessione che rappresenta la durata di un profilo di protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
     const mip_cc_protection_profile_settings settings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionprofilesettings_setcancachelicenses"></a>MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses
@@ -1905,15 +2306,17 @@ Configura se le licenze dell'utente finale (contratti) verranno memorizzate nell
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni profilo |
+| Scheda Impostazioni | Impostazioni del profilo |
 | canCacheLicenses | Indica se il motore deve memorizzare nella cache una licenza quando apre il contenuto protetto |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
     const mip_cc_protection_profile_settings settings,
-    const bool canCacheLicenses);
+    const bool canCacheLicenses,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionprofilesettings_sethttpdelegate"></a>MIP_CC_ProtectionProfileSettings_SetHttpDelegate
@@ -1924,15 +2327,17 @@ Esegui override dello stack HTTP predefinito con il proprio client
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato HTTP |
+| Scheda Impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato HTTP |
 | httpDelegate | Istanza di callback HTTP implementata dall'applicazione client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
     const mip_cc_protection_profile_settings settings,
-    const mip_cc_http_delegate httpDelegate);
+    const mip_cc_http_delegate httpDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionprofilesettings_settaskdispatcherdelegate"></a>MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate
@@ -1943,15 +2348,17 @@ Esegui override del dispatcher attività asincrono predefinito con il proprio cl
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato del dispatcher attività |
+| Scheda Impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato del dispatcher attività |
 | taskDispatcherDelegate | Istanza di callback Dispatcher attività implementata dall'applicazione client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_protection_profile_settings settings,
-    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
+    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectionprofilesettings_setcustomsettings"></a>MIP_CC_ProtectionProfileSettings_SetCustomSettings
@@ -1962,15 +2369,17 @@ Configura le impostazioni personalizzate, usate per il controllo e il controllo 
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni profilo |
+| Scheda Impostazioni | Impostazioni del profilo |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
     const mip_cc_protection_profile_settings settings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releaseprotectionprofilesettings"></a>MIP_CC_ReleaseProtectionProfileSettings
@@ -1981,10 +2390,141 @@ Rilascia le risorse associate a impostazioni del profilo di protezione
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo di protezione da rilasciare |
+| Scheda Impostazioni | Impostazioni del profilo di protezione da rilasciare |
 
 ```c
 void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings profilsettingseSettings);
+```
+
+## <a name="mip_cc_templatedescriptor_getid"></a>MIP_CC_TemplateDescriptor_GetId
+
+Ottiene l'ID modello
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| protectionDescriptor | Descrittore associato al contenuto protetto |
+| templateId | Output ID modello associato alla protezione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetId(
+    const mip_cc_template_descriptor protectionDescriptor,
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_templatedescriptor_getnamesize"></a>MIP_CC_TemplateDescriptor_GetNameSize
+
+Ottiene le dimensioni del buffer necessarie per archiviare il nome
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| templateDescriptor | Descrittore associato al modello |
+| nameSize | Output Dimensione del buffer in cui memorizzare il nome (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetNameSize(
+    const mip_cc_template_descriptor templateDescriptor,
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_templatedescriptor_getname"></a>MIP_CC_TemplateDescriptor_GetName
+
+Ottiene il nome del modello
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| templateDescriptor | Descrittore associato al modello |
+| nameBuffer | Output Buffer in cui verrà copiato il nome. |
+| nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
+| actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se NameBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualNameSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetName(
+    const mip_cc_template_descriptor templateDescriptor,
+    char* nameBuffer,
+    const int64_t nameBufferSize,
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_templatedescriptor_getdescriptionsize"></a>MIP_CC_TemplateDescriptor_GetDescriptionSize
+
+Ottiene la dimensione del buffer necessaria per archiviare la descrizione
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| templateDescriptor | Descrittore associato al modello |
+| descriptionSize | Output Dimensione del buffer in cui memorizzare la descrizione (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetDescriptionSize(
+    const mip_cc_template_descriptor templateDescriptor,
+    int64_t* descriptionSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_templatedescriptor_getdescription"></a>MIP_CC_TemplateDescriptor_GetDescription
+
+Ottiene la descrizione del modello
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| templateDescriptor | Descrittore associato al modello |
+| descriptionBuffer | Output Buffer in cui verrà copiata la descrizione. |
+| descriptionBufferSize | Dimensioni (in numero di caratteri) di descriptionBuffer. |
+| actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se descriptionBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualDescriptionSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_TemplateDescriptor_GetDescription(
+    const mip_cc_template_descriptor templateDescriptor,
+    char* nameBuffer,
+    const int64_t nameBufferSize,
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_releasetemplatedescriptor"></a>MIP_CC_ReleaseTemplateDescriptor
+
+Rilasciare le risorse associate a un descrittore di modello
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| templateDescriptor | Descrittore del modello da rilasciare |
+
+```c
+void MIP_CC_ReleaseTemplateDescriptor(mip_cc_template_descriptor templateDescriptor);
 ```
 
 ## <a name="mip_cc_action_gettype"></a>MIP_CC_Action_GetType
@@ -1995,15 +2535,17 @@ Ottiene il tipo di un'azione
 
 Parametro | Descrizione
 |---|---|
-| action | Azione |
+| action | Action |
 | actionType | Output Tipo di azione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Action_GetType(
     const mip_cc_action action,
-    mip_cc_action_type* actionType);
+    mip_cc_action_type* actionType,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_action_getid"></a>MIP_CC_Action_GetId
@@ -2014,15 +2556,17 @@ Ottiene l'ID di un'azione
 
 Parametro | Descrizione
 |---|---|
-| action | Azione |
+| action | Action |
 | id | Output ID azione univoco |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Action_GetId(
     const mip_cc_action action,
-    mip_cc_guid* id);
+    mip_cc_guid* id,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_actionresult_getactions"></a>MIP_CC_ActionResult_GetActions
@@ -2034,8 +2578,9 @@ Ottenere azioni che compongono il risultato di un'azione
 Parametro | Descrizione
 |---|---|
 | actionResult | Risultato dell'azione di origine |
-| azioni | Output Matrice di azioni, memoria di proprietà dell'oggetto mip_cc_action_result |
+| Azioni | Output Matrice di azioni, memoria di proprietà dell'oggetto mip_cc_action_result |
 | count | Output Numero di coppie chiave/valore |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2045,7 +2590,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_ActionResult_GetActions(
     const mip_cc_action_result actionResult,
     mip_cc_action** actions,
-    int64_t* count);
+    int64_t* count,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releaseactionresult"></a>MIP_CC_ReleaseActionResult
@@ -2072,13 +2618,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome dell'elemento dell'interfaccia utente (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getuielementname"></a>MIP_CC_AddContentFooterAction_GetUIElementName
@@ -2093,6 +2641,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome dell'elemento dell'interfaccia utente. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2103,7 +2652,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_gettextsize"></a>MIP_CC_AddContentFooterAction_GetTextSize
@@ -2116,13 +2666,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameSize | Output Dimensioni del buffer per il mantenimento del testo (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
     const mip_cc_action action,
-    int64_t* textSize);
+    int64_t* textSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_gettext"></a>MIP_CC_AddContentFooterAction_GetText
@@ -2137,6 +2689,7 @@ Parametro | Descrizione
 | textBuffer | Output Buffer in cui verrà copiato il testo. |
 | textBufferSize | Dimensioni (in numero di caratteri) di textBuffer. |
 | actualTextSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2147,7 +2700,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
-    int64_t* actualTextSize);
+    int64_t* actualTextSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getfontnamesize"></a>MIP_CC_AddContentFooterAction_GetFontNameSize
@@ -2160,13 +2714,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome del tipo di carattere (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getfontname"></a>MIP_CC_AddContentFooterAction_GetFontName
@@ -2181,6 +2737,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome del tipo di carattere. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2191,7 +2748,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getfontsize"></a>MIP_CC_AddContentFooterAction_GetFontSize
@@ -2204,13 +2762,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | fontSize | Output Dimensioni carattere |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
     const mip_cc_action action,
-    int32_t* fontSize);
+    int32_t* fontSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getfontcolorsize"></a>MIP_CC_AddContentFooterAction_GetFontColorSize
@@ -2223,13 +2783,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | colorSize | Output Dimensioni del buffer per mantenere il colore del carattere (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
     const mip_cc_action action,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getfontcolor"></a>MIP_CC_AddContentFooterAction_GetFontColor
@@ -2244,6 +2806,7 @@ Parametro | Descrizione
 | colorBuffer | Output Buffer in cui verrà copiato il colore del carattere. |
 | colorBufferSize | Dimensioni (in numero di caratteri) di colorBuffer. |
 | actualColorSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2254,7 +2817,8 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getalignment"></a>MIP_CC_AddContentFooterAction_GetAlignment
@@ -2267,13 +2831,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | allineamento | Output Allineamento |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
     const mip_cc_action action,
-    mip_cc_content_mark_alignment* alignment);
+    mip_cc_content_mark_alignment* alignment,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentfooteraction_getmargin"></a>MIP_CC_AddContentFooterAction_GetMargin
@@ -2286,13 +2852,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | marginSize | Output Dimensioni margine (in mm) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
     const mip_cc_action action,
-    int32_t* marginSize);
+    int32_t* marginSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getuielementnamesize"></a>MIP_CC_AddContentHeaderAction_GetUIElementNameSize
@@ -2305,13 +2873,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome dell'elemento dell'interfaccia utente (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getuielementname"></a>MIP_CC_AddContentHeaderAction_GetUIElementName
@@ -2326,6 +2896,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome dell'elemento dell'interfaccia utente. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2336,7 +2907,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_gettextsize"></a>MIP_CC_AddContentHeaderAction_GetTextSize
@@ -2349,13 +2921,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameSize | Output Dimensioni del buffer per il mantenimento del testo (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
     const mip_cc_action action,
-    int64_t* textSize);
+    int64_t* textSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_gettext"></a>MIP_CC_AddContentHeaderAction_GetText
@@ -2370,6 +2944,7 @@ Parametro | Descrizione
 | textBuffer | Output Buffer in cui verrà copiato il testo. |
 | textBufferSize | Dimensioni (in numero di caratteri) di textBuffer. |
 | actualTextSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2380,7 +2955,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
-    int64_t* actualTextSize);
+    int64_t* actualTextSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getfontnamesize"></a>MIP_CC_AddContentHeaderAction_GetFontNameSize
@@ -2393,13 +2969,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome del tipo di carattere (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getfontname"></a>MIP_CC_AddContentHeaderAction_GetFontName
@@ -2414,6 +2992,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome del tipo di carattere. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2424,7 +3003,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getfontsize"></a>MIP_CC_AddContentHeaderAction_GetFontSize
@@ -2437,13 +3017,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | fontSize | Output Dimensioni carattere |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
     const mip_cc_action action,
-    int32_t* fontSize);
+    int32_t* fontSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getfontcolorsize"></a>MIP_CC_AddContentHeaderAction_GetFontColorSize
@@ -2456,13 +3038,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | colorSize | Output Dimensioni del buffer per mantenere il colore del carattere (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
     const mip_cc_action action,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getfontcolor"></a>MIP_CC_AddContentHeaderAction_GetFontColor
@@ -2477,6 +3061,7 @@ Parametro | Descrizione
 | colorBuffer | Output Buffer in cui verrà copiato il colore del carattere. |
 | colorBufferSize | Dimensioni (in numero di caratteri) di colorBuffer. |
 | actualColorSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2487,7 +3072,8 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getalignment"></a>MIP_CC_AddContentHeaderAction_GetAlignment
@@ -2500,13 +3086,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | allineamento | Output Allineamento |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
     const mip_cc_action action,
-    mip_cc_content_mark_alignment* alignment);
+    mip_cc_content_mark_alignment* alignment,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addcontentheaderaction_getmargin"></a>MIP_CC_AddContentHeaderAction_GetMargin
@@ -2519,13 +3107,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | marginSize | Output Dimensioni margine (in mm) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
     const mip_cc_action action,
-    int32_t* marginSize);
+    int32_t* marginSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getuielementnamesize"></a>MIP_CC_AddWatermarkAction_GetUIElementNameSize
@@ -2538,13 +3128,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome dell'elemento dell'interfaccia utente (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getuielementname"></a>MIP_CC_AddWatermarkAction_GetUIElementName
@@ -2559,6 +3151,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome dell'elemento dell'interfaccia utente. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2569,7 +3162,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getlayout"></a>MIP_CC_AddWatermarkAction_GetLayout
@@ -2582,13 +3176,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | layout | Output Layout filigrana |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
     const mip_cc_action action,
-    mip_cc_watermark_layout* layout);
+    mip_cc_watermark_layout* layout,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_gettextsize"></a>MIP_CC_AddWatermarkAction_GetTextSize
@@ -2600,14 +3196,16 @@ Ottiene le dimensioni del buffer necessarie per archiviare il testo dell'azione 
 Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
-| nameSize | Output Dimensioni del buffer per il mantenimento del testo (in numero di caratteri) |
+| textSize | Output Dimensioni del buffer per il mantenimento del testo (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
     const mip_cc_action action,
-    int64_t* textSize);
+    int64_t* textSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_gettext"></a>MIP_CC_AddWatermarkAction_GetText
@@ -2622,6 +3220,7 @@ Parametro | Descrizione
 | textBuffer | Output Buffer in cui verrà copiato il testo. |
 | textBufferSize | Dimensioni (in numero di caratteri) di textBuffer. |
 | actualTextSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2632,7 +3231,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
     const mip_cc_action action,
     char* textBuffer,
     const int64_t textBufferSize,
-    int64_t* actualTextSize);
+    int64_t* actualTextSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getfontnamesize"></a>MIP_CC_AddWatermarkAction_GetFontNameSize
@@ -2645,13 +3245,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome del tipo di carattere (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getfontname"></a>MIP_CC_AddWatermarkAction_GetFontName
@@ -2666,6 +3268,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome del tipo di carattere. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2676,7 +3279,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getfontsize"></a>MIP_CC_AddWatermarkAction_GetFontSize
@@ -2689,13 +3293,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | fontSize | Output Dimensioni carattere |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
     const mip_cc_action action,
-    int32_t* fontSize);
+    int32_t* fontSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getfontcolorsize"></a>MIP_CC_AddWatermarkAction_GetFontColorSize
@@ -2708,13 +3314,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | colorSize | Output Dimensioni del buffer per mantenere il colore del carattere (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
     const mip_cc_action action,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_addwatermarkaction_getfontcolor"></a>MIP_CC_AddWatermarkAction_GetFontColor
@@ -2729,6 +3337,7 @@ Parametro | Descrizione
 | colorBuffer | Output Buffer in cui verrà copiato il colore del carattere. |
 | colorBufferSize | Dimensioni (in numero di caratteri) di colorBuffer. |
 | actualColorSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2739,7 +3348,8 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
     const mip_cc_action action,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasecontentlabel"></a>MIP_CC_ReleaseContentLabel
@@ -2764,15 +3374,17 @@ Ottiene l'ora in cui è stata applicata l'etichetta
 
 Parametro | Descrizione
 |---|---|
-| contentLabel | Etichetta |
+| contentLabel | Label |
 | creationTime | Output Ora di applicazione dell'etichetta al documento (in secondi da Epoch) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
     const mip_cc_content_label contentLabel,
-    int64_t* creationTime);
+    int64_t* creationTime,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_contentlabel_getassignmentmethod"></a>MIP_CC_ContentLabel_GetAssignmentMethod
@@ -2783,15 +3395,17 @@ Ottiene il metodo di assegnazione dell'etichetta
 
 Parametro | Descrizione
 |---|---|
-| contentLabel | Etichetta |
+| contentLabel | Label |
 | assignmentMethod | Output Metodo di assegnazione (ad esempio ' standard ' o ' privileged ') |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
     const mip_cc_content_label contentLabel,
-    mip_cc_label_assignment_method* assignmentMethod);
+    mip_cc_label_assignment_method* assignmentMethod,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_contentlabel_getextendedproperties"></a>MIP_CC_ContentLabel_GetExtendedProperties
@@ -2802,8 +3416,9 @@ Ottiene le proprietà estese
 
 Parametro | Descrizione
 |---|---|
-| contentLabel | Etichetta |
-| connessione | Output Dizionario di proprietà estese, memoria di proprietà del chiamante |
+| contentLabel | Label |
+| properties | Output Dizionario di proprietà estese, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2812,7 +3427,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
     const mip_cc_content_label contentLabel,
-    mip_cc_dictionary* properties);
+    mip_cc_metadata_dictionary* properties,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_contentlabel_isprotectionappliedfromlabel"></a>MIP_CC_ContentLabel_IsProtectionAppliedFromLabel
@@ -2823,15 +3439,17 @@ Ottiene un valore che indica se una protezione è stata applicata da un'etichett
 
 Parametro | Descrizione
 |---|---|
-| contentLabel | Etichetta |
+| contentLabel | Label |
 | isProtectionAppliedByLabel | Output Se il documento è protetto e la protezione è stata applicata in modo esplicito da questa etichetta. |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
     const mip_cc_content_label contentLabel,
-    bool* isProtectionAppliedByLabel);
+    bool* isProtectionAppliedByLabel,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_contentlabel_getlabel"></a>MIP_CC_ContentLabel_GetLabel
@@ -2842,8 +3460,9 @@ Ottiene le proprietà dell'etichetta generica da un'istanza dell'etichetta di co
 
 Parametro | Descrizione
 |---|---|
-| contentLabel | Etichetta |
+| contentLabel | Label |
 | label | Output Etichetta generica, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2852,7 +3471,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetLabel(
     const mip_cc_content_label contentLabel,
-    mip_cc_label* label);
+    mip_cc_label* label,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_customaction_getnamesize"></a>MIP_CC_CustomAction_GetNameSize
@@ -2865,13 +3485,15 @@ Parametro | Descrizione
 |---|---|
 | action | azione "personalizzata" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_CustomAction_GetNameSize(
     const mip_cc_action action,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_customaction_getname"></a>MIP_CC_CustomAction_GetName
@@ -2886,6 +3508,7 @@ Parametro | Descrizione
 | nameBuffer | Output Buffer in cui verrà copiato il nome. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2896,7 +3519,8 @@ mip_cc_result MIP_CC_CustomAction_GetName(
     const mip_cc_action action,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_customaction_getproperties"></a>MIP_CC_CustomAction_GetProperties
@@ -2908,7 +3532,8 @@ Ottiene le proprietà di un'azione "personalizzata".
 Parametro | Descrizione
 |---|---|
 | action | azione "personalizzata" |
-| connessione | Output Dizionario di proprietà, memoria di proprietà del chiamante |
+| properties | Output Dizionario di proprietà, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2917,7 +3542,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_CustomAction_GetProperties(
     const mip_cc_action action,
-    mip_cc_dictionary* properties);
+    mip_cc_dictionary* properties,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_metadata_callback"></a>mip_cc_metadata_callback
@@ -2932,7 +3558,7 @@ Parametro | Descrizione
 | namesSize | Numero di valori nella matrice ' names ' |
 | namePrefixes | Matrice di prefissi dei nomi di chiave dei metadati da includere nel risultato |
 | namePrefixesSize | Numero di valori nella matrice ' namesPrefixes ' |
-| context | Il contesto dell'applicazione è stato passato in modo opaco dalla chiamata API al callback |
+| contesto | Il contesto dell'applicazione è stato passato in modo opaco dalla chiamata API al callback |
 | metadata | Output Dizionario della chiave/valori dei metadati, creato dall'applicazione client. Questo dizionario verrà rilasciato da MIP. |
 
 ```c
@@ -2943,7 +3569,7 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
     const char**,
     const int64_t,
     const void*,
-    mip_cc_dictionary*);
+    mip_cc_metadata_dictionary*);
 ```
 
 ## <a name="mip_cc_releaselabel"></a>MIP_CC_ReleaseLabel
@@ -2968,15 +3594,17 @@ Ottiene l'ID etichetta
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | labelId | Output ID etichetta |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetId(
     const mip_cc_label label,
-    mip_cc_guid* labelId);
+    mip_cc_guid* labelId,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getnamesize"></a>MIP_CC_Label_GetNameSize
@@ -2987,15 +3615,17 @@ Ottiene le dimensioni del buffer necessarie per archiviare il nome
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetNameSize(
     const mip_cc_label label,
-    int64_t* nameSize);
+    int64_t* nameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getname"></a>MIP_CC_Label_GetName
@@ -3006,10 +3636,11 @@ Ottiene il nome dell'etichetta
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | nameBuffer | Output Buffer in cui verrà copiato il nome. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3020,7 +3651,8 @@ mip_cc_result MIP_CC_Label_GetName(
     const mip_cc_label label,
     char* nameBuffer,
     const int64_t nameBufferSize,
-    int64_t* actualNameSize);
+    int64_t* actualNameSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getdescriptionsize"></a>MIP_CC_Label_GetDescriptionSize
@@ -3031,15 +3663,17 @@ Ottiene la dimensione del buffer necessaria per archiviare la descrizione
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | descriptionSize | Output Dimensione del buffer in cui memorizzare la descrizione (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetDescriptionSize(
     const mip_cc_label label,
-    int64_t* descriptionSize);
+    int64_t* descriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getdescription"></a>MIP_CC_Label_GetDescription
@@ -3050,10 +3684,11 @@ Ottiene la descrizione dell'etichetta
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | descriptionBuffer | Output Buffer in cui verrà copiata la descrizione. |
 | descriptionBufferSize | Dimensioni (in numero di caratteri) di descriptionBuffer. |
 | actualDescriptionSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3064,7 +3699,8 @@ mip_cc_result MIP_CC_Label_GetDescription(
     const mip_cc_label label,
     char* descriptionBuffer,
     const int64_t descriptionBufferSize,
-    int64_t* actualDescriptionSize);
+    int64_t* actualDescriptionSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getcolorsize"></a>MIP_CC_Label_GetColorSize
@@ -3075,15 +3711,17 @@ Ottiene le dimensioni del buffer necessarie per archiviare il colore
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | colorSize | Output Dimensione del buffer in cui mantenere il colore (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetColorSize(
     const mip_cc_label label,
-    int64_t* colorSize);
+    int64_t* colorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getcolor"></a>MIP_CC_Label_GetColor
@@ -3094,10 +3732,11 @@ Ottiene il colore dell'etichetta
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | colorBuffer | Output Buffer in cui verrà copiato il colore (in #RRGGBB formato). |
 | colorBufferSize | Dimensioni (in numero di caratteri) di colorBuffer. |
 | actualColorSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3108,7 +3747,8 @@ mip_cc_result MIP_CC_Label_GetColor(
     const mip_cc_label label,
     char* colorBuffer,
     const int64_t colorBufferSize,
-    int64_t* actualColorSize);
+    int64_t* actualColorSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getsensitivity"></a>MIP_CC_Label_GetSensitivity
@@ -3119,15 +3759,17 @@ Ottiene il livello di sensibilità dell'etichetta. Un valore più alto significa
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | sensitivity | Output Livello di riservatezza |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetSensitivity(
     const mip_cc_label label,
-    int32_t* sensitivity);
+    int32_t* sensitivity,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_gettooltipsize"></a>MIP_CC_Label_GetTooltipSize
@@ -3138,15 +3780,17 @@ Ottiene le dimensioni del buffer necessarie per archiviare la descrizione comand
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | tooltipSize | Output Dimensione del buffer in cui memorizzare la descrizione comando (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetTooltipSize(
     const mip_cc_label label,
-    int64_t* tooltipSize);
+    int64_t* tooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_gettooltip"></a>MIP_CC_Label_GetTooltip
@@ -3157,10 +3801,11 @@ Ottiene la descrizione comando dell'etichetta
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | tooltipBuffer | Output Buffer in cui verrà copiata la descrizione comando. |
 | tooltipBufferSize | Dimensioni (in numero di caratteri) di tooltipBuffer. |
 | actualTooltipSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3171,7 +3816,8 @@ mip_cc_result MIP_CC_Label_GetTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
-    int64_t* actualTooltipSize);
+    int64_t* actualTooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getautotooltipsize"></a>MIP_CC_Label_GetAutoTooltipSize
@@ -3182,15 +3828,17 @@ Ottiene la dimensione del buffer necessaria per archiviare la descrizione comand
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | tooltipSize | Output Dimensione del buffer in cui memorizzare la descrizione comando (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
     const mip_cc_label label,
-    int64_t* tooltipSize);
+    int64_t* tooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getautotooltip"></a>MIP_CC_Label_GetAutoTooltip
@@ -3201,10 +3849,11 @@ Ottiene la descrizione comando per la classificazione automatica delle etichette
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | tooltipBuffer | Output Buffer in cui verrà copiata la descrizione comando. |
 | tooltipBufferSize | Dimensioni (in numero di caratteri) di tooltipBuffer. |
 | actualTooltipSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3215,7 +3864,8 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
     const mip_cc_label label,
     char* tooltipBuffer,
     const int64_t tooltipBufferSize,
-    int64_t* actualTooltipSize);
+    int64_t* actualTooltipSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_isactive"></a>MIP_CC_Label_IsActive
@@ -3226,8 +3876,9 @@ Ottiene un valore che indica se un'etichetta è attiva o meno.
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | isActive | Output Indica se un'etichetta è considerata attiva. |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3236,7 +3887,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_Label_IsActive(
     const mip_cc_label label,
-    bool* isActive);
+    bool* isActive,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getparent"></a>MIP_CC_Label_GetParent
@@ -3247,15 +3899,17 @@ Ottiene l'etichetta padre, se disponibile.
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | padre | Output Etichetta padre, se presente, else null |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetParent(
     const mip_cc_label label,
-    mip_cc_label* parent);
+    mip_cc_label* parent,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getchildrensize"></a>MIP_CC_Label_GetChildrenSize
@@ -3266,15 +3920,17 @@ Ottiene il numero di etichette figlio
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | bambiniDimensione | Output Numero di elementi figlio |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_Label_GetChildrenSize(
     const mip_cc_label label,
-    int64_t* childrenSize);
+    int64_t* childrenSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getchildren"></a>MIP_CC_Label_GetChildren
@@ -3285,10 +3941,11 @@ Ottiene le etichette figlio
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
+| label | Label |
 | childrenBuffer | Output Buffer in cui verranno copiate le etichette figlio. Etichette figlio |
 | childrenBufferSize | Dimensioni (in numero di etichette) di childrenBuffer. |
 | actualChildrenSize | Output Numero di etichette figlio scritte nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3299,7 +3956,8 @@ mip_cc_result MIP_CC_Label_GetChildren(
     const mip_cc_label label,
     mip_cc_label* childrenBuffer,
     const int64_t childrenBufferSize,
-    int64_t* actualChildrenSize);
+    int64_t* actualChildrenSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_label_getcustomsettings"></a>MIP_CC_Label_GetCustomSettings
@@ -3310,8 +3968,9 @@ Ottiene le impostazioni personalizzate definite dal criterio di un'etichetta
 
 Parametro | Descrizione
 |---|---|
-| label | Etichetta |
-| impostazioni | Output Dizionario di impostazioni, di proprietà del chiamante |
+| label | Label |
+| Scheda Impostazioni | Output Dizionario di impostazioni, di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3320,7 +3979,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_Label_GetCustomSettings(
     const mip_cc_label label,
-    mip_cc_dictionary* settings);
+    mip_cc_dictionary* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_metadataaction_getmetadatatoremove"></a>MIP_CC_MetadataAction_GetMetadataToRemove
@@ -3333,6 +3993,7 @@ Parametro | Descrizione
 |---|---|
 | action | azione "metadati" |
 | metadataNames | Output Nomi chiave dei metadati da rimuovere, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3341,7 +4002,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
     const mip_cc_action action,
-    mip_cc_string_list* metadataNames);
+    mip_cc_string_list* metadataNames,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_metadataaction_getmetadatatoadd"></a>MIP_CC_MetadataAction_GetMetadataToAdd
@@ -3353,7 +4015,8 @@ Ottiene i metadati dell'azione "Metadata" da aggiungere
 Parametro | Descrizione
 |---|---|
 | action | azione "metadati" |
-| metadata | Output Coppie chiave/valore di metadati da aggiungere, memoria di proprietà del chiamante |
+| metadata | [Output] elenco di voci di metadati da aggiungere, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3362,7 +4025,72 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
     const mip_cc_action action,
-    mip_cc_dictionary* metadata);
+    mip_cc_metadata_dictionary* metadata,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_createmetadatadictionary"></a>MIP_CC_CreateMetadataDictionary
+
+Creare un dizionario di chiavi/valori stringa
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| entries | Matrice di voci di metadati |
+| count | Numero di voci di metadati |
+| dictionary | Output Dizionario appena creato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: è necessario liberare un mip_cc_dictionary chiamando MIP_CC_ReleaseDictionary 
+
+```c
+mip_cc_result MIP_CC_CreateMetadataDictionary(
+    const mip_cc_metadata_entry* entries,
+    const int64_t count,
+    mip_cc_metadata_dictionary* dictionary,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_metadatadictionary_getentries"></a>MIP_CC_MetadataDictionary_GetEntries
+
+Ottenere le voci di metadati che compongono un dizionario
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| dictionary | Dizionario di origine |
+| entries | Output Matrice di voci di metadati, memoria di proprietà dell'oggetto mip_cc_dictionary |
+| count | Output Numero di voci di metadati |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: la memoria per ' voci ' è di proprietà dell'oggetto mip_cc_dictionary, quindi non deve essere liberata in modo indipendente 
+
+```c
+mip_cc_result MIP_CC_MetadataDictionary_GetEntries(
+    const mip_cc_metadata_dictionary dictionary,
+    mip_cc_metadata_entry** entries,
+    int64_t* count,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_releasemetadatadictionary"></a>MIP_CC_ReleaseMetadataDictionary
+
+Rilasciare le risorse associate a un dizionario
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| dictionary | Dizionario da rilasciare |
+
+```c
+void MIP_CC_ReleaseMetadataDictionary(mip_cc_metadata_dictionary dictionary);
 ```
 
 ## <a name="mip_cc_releasepolicyengine"></a>MIP_CC_ReleasePolicyEngine
@@ -3389,13 +4117,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | idSize | Output Dimensione del buffer in cui memorizzare l'ID del motore (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
     const mip_cc_policy_engine engine,
-    int64_t* idSize);
+    int64_t* idSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getengineid"></a>MIP_CC_PolicyEngine_GetEngineId
@@ -3410,6 +4140,7 @@ Parametro | Descrizione
 | idBuffer | Output Buffer in cui verrà copiato l'ID. |
 | idBufferSize | Dimensioni (in numero di caratteri) di idBuffer. |
 | actualIdSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3420,7 +4151,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
     const mip_cc_policy_engine engine,
     char* idBuffer,
     const int64_t idBufferSize,
-    int64_t* actualIdSize);
+    int64_t* actualIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getmoreinfourlsize"></a>MIP_CC_PolicyEngine_GetMoreInfoUrlSize
@@ -3433,13 +4165,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | moreInfoUrlSize | Output Dimensioni dei dati client (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
     const mip_cc_policy_engine engine,
-    int64_t* moreInfoUrlSize);
+    int64_t* moreInfoUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getmoreinfourl"></a>MIP_CC_PolicyEngine_GetMoreInfoUrl
@@ -3454,6 +4188,7 @@ Parametro | Descrizione
 | moreInfoUrlBuffer | Output Buffer in cui verranno copiati i dati client |
 | moreInfoUrlBufferSize | Dimensioni (in numero di caratteri) di moreInfoUrlBuffer. |
 | actualMoreInfoUrlSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3464,7 +4199,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
     const mip_cc_policy_engine engine,
     char* moreInfoUrlBuffer,
     const int64_t moreInfoUrlBufferSize,
-    int64_t* actualMoreInfoUrlSize);
+    int64_t* actualMoreInfoUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_islabelingrequired"></a>MIP_CC_PolicyEngine_IsLabelingRequired
@@ -3477,13 +4213,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | isLabelingRequired | Output Indica se i criteri stabiliscono che è necessario etichettare un documento |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
     const mip_cc_policy_engine engine,
-    bool* isLabelingRequired);
+    bool* isLabelingRequired,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getpolicyfileidsize"></a>MIP_CC_PolicyEngine_GetPolicyFileIdSize
@@ -3496,13 +4234,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | policyFileIdSize | Output Dimensioni dei dati client (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
     const mip_cc_policy_engine engine,
-    int64_t* policyFileIdSize);
+    int64_t* policyFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getpolicyfileid"></a>MIP_CC_PolicyEngine_GetPolicyFileId
@@ -3517,6 +4257,7 @@ Parametro | Descrizione
 | policyFileIdBuffer | Output Buffer in cui verranno copiati i dati client |
 | policyFileIdBufferSize | Dimensioni (in numero di caratteri) di policyFileIdBuffer. |
 | actualPolicyFileIdSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3527,7 +4268,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
     const mip_cc_policy_engine engine,
     char* policyFileIdBuffer,
     const int64_t policyFileIdBufferSize,
-    int64_t* actualPolicyFileIdSize);
+    int64_t* actualPolicyFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivityfileidsize"></a>MIP_CC_PolicyEngine_GetSensitivityFileIdSize
@@ -3540,13 +4282,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | sensitivityFileIdSize | Output Dimensioni dei dati client (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
     const mip_cc_policy_engine engine,
-    int64_t* sensitivityFileIdSize);
+    int64_t* sensitivityFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivityfileid"></a>MIP_CC_PolicyEngine_GetSensitivityFileId
@@ -3561,6 +4305,7 @@ Parametro | Descrizione
 | sensitivityFileIdBuffer | Output Buffer in cui verranno copiati i dati client |
 | sensitivityFileIdBufferSize | Dimensioni (in numero di caratteri) di sensitivityFileIdBuffer. |
 | actualSensitivityFileIdSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3571,7 +4316,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
     const mip_cc_policy_engine engine,
     char* sensitivityFileIdBuffer,
     const int64_t sensitivityFileIdBufferSize,
-    int64_t* actualSensitivityFileIdSize);
+    int64_t* actualSensitivityFileIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_hasclassificationrules"></a>MIP_CC_PolicyEngine_HasClassificationRules
@@ -3584,13 +4330,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | hasClassificationRules | Output Indica se i criteri hanno regole automatiche o di raccomandazione |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
     const mip_cc_policy_engine engine,
-    bool* hasClassificationRules);
+    bool* hasClassificationRules,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getlastpolicyfetchtime"></a>MIP_CC_PolicyEngine_GetLastPolicyFetchTime
@@ -3603,13 +4351,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | lastPolicyFetchTime | Output Ora dell'ultimo recupero dei criteri (in secondi da Epoch) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
     const mip_cc_policy_engine engine,
-    int64_t* lastPolicyFetchTime);
+    int64_t* lastPolicyFetchTime,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivitylabelssize"></a>MIP_CC_PolicyEngine_GetSensitivityLabelsSize
@@ -3622,13 +4372,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | labelsSize | Output Numero di etichette |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
     const mip_cc_policy_engine engine,
-    int64_t* labelsSize);
+    int64_t* labelsSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivitylabels"></a>MIP_CC_PolicyEngine_GetSensitivityLabels
@@ -3643,6 +4395,7 @@ Parametro | Descrizione
 | labelBuffer | Output Buffer in cui verranno copiate le etichette. Le etichette sono di proprietà del client |
 | labelBufferSize | Dimensioni (in numero di etichette) di labelBuffer. |
 | actualLabelsSize | Output Numero di etichette scritte nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3653,7 +4406,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
     const mip_cc_policy_engine engine,
     mip_cc_label* labelBuffer,
     const int64_t labelBufferSize,
-    int64_t* actualLabelsSize);
+    int64_t* actualLabelsSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getlabelbyid"></a>MIP_CC_PolicyEngine_GetLabelById
@@ -3667,6 +4421,7 @@ Parametro | Descrizione
 | motore | Motore dei criteri |
 | labelId | ID etichetta |
 | label | Output Etichetta di riservatezza. Questo valore è di proprietà del chiamante e deve essere rilasciato con MIP_CC_ReleaseLabel. |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3674,7 +4429,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
     const mip_cc_policy_engine engine,
     const char* labelId,
-    mip_cc_label* label);
+    mip_cc_label* label,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivitytypessize"></a>MIP_CC_PolicyEngine_GetSensitivityTypesSize
@@ -3687,13 +4443,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | sensitivityTypesSize | Output Numero di tipi di riservatezza |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
     const mip_cc_policy_engine engine,
-    int64_t* sensitivityTypesSize);
+    int64_t* sensitivityTypesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivitytypes"></a>MIP_CC_PolicyEngine_GetSensitivityTypes
@@ -3708,6 +4466,7 @@ Parametro | Descrizione
 | sensitivityTypeBuffer | Output Buffer in cui verranno copiati i tipi di riservatezza. Sensibilità |
 | sensitivityTypeBufferSize | Dimensioni (in numero di tipi di riservatezza) del sensitivityTypeBuffer. |
 | actualSensitivityTypesSize | Output Numero di tipi di riservatezza scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3718,7 +4477,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
     const mip_cc_policy_engine engine,
     mip_cc_sensitivity_type* sensitivityTypeBuffer,
     const int64_t sensitivityTypeBufferSize,
-    int64_t* actualSensitivityTypesSize);
+    int64_t* actualSensitivityTypesSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_createpolicyhandler"></a>MIP_CC_PolicyEngine_CreatePolicyHandler
@@ -3731,7 +4491,8 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | isAuditDiscoveryEnabled | Indica se l'individuazione del controllo è abilitata |
-| handler | Output Istanza del gestore criteri appena creata |
+| gestore | Output Istanza del gestore criteri appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3739,7 +4500,8 @@ Parametro | Descrizione
 mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
     const mip_cc_policy_engine engine,
     const bool isAuditDiscoveryEnabled,
-    mip_cc_policy_handler* handler);
+    mip_cc_policy_handler* handler,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_sendapplicationauditevent"></a>MIP_CC_PolicyEngine_SendApplicationAuditEvent
@@ -3753,6 +4515,7 @@ Parametro | Descrizione
 | level | Livello dell'evento: info/Error/Warning |
 | eventType | Descrizione del tipo di evento |
 | eventData | Dati associati all'evento. |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3761,7 +4524,56 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
     const mip_cc_policy_engine engine,
     const char* level,
     const char* eventType,
-    const char* eventData);
+    const char* eventData,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_policyengine_gettenantidsize"></a>MIP_CC_PolicyEngine_GetTenantIdSize
+
+Ottiene le dimensioni dell'ID tenant
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| motore | Motore dei criteri |
+| tenantIdSize | Output Dimensioni dell'ID tenant (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_PolicyEngine_GetTenantIdSize(
+    const mip_cc_policy_engine engine,
+    int64_t* tenantIdSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_policyengine_gettenantid"></a>MIP_CC_PolicyEngine_GetTenantId
+
+Ottiene l'ID tenant
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| motore | Motore dei criteri |
+| tenantIdBuffer | Output Buffer in cui verrà copiato l'ID tenant. |
+| tenantIdBufferSize | Dimensioni (in numero di caratteri) di tenantIdBuffer. |
+| actualTenantIdSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se tenantIdBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualTenantIdSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_PolicyEngine_GetTenantId(
+    const mip_cc_policy_engine engine,
+    char* tenantIdBuffer,
+    const int64_t tenantIdBufferSize,
+    int64_t* actualTenantIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getpolicydataxmlsize"></a>MIP_CC_PolicyEngine_GetPolicyDataXmlSize
@@ -3774,13 +4586,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | XmlSize | Output Dimensioni del codice XML dei dati dei criteri (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
     const mip_cc_policy_engine engine,
-    int64_t* xmlSize);
+    int64_t* xmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getpolicydataxml"></a>MIP_CC_PolicyEngine_GetPolicyDataXml
@@ -3795,6 +4609,7 @@ Parametro | Descrizione
 | XmlBuffer | Output Buffer in cui verrà copiato il codice XML. |
 | xmlBufferSize | Dimensioni (in numero di caratteri) di XmlBuffer. |
 | actualXmlSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3805,7 +4620,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
-    int64_t* actualXmlSize);
+    int64_t* actualXmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivitytypesdataxmlsize"></a>MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize
@@ -3818,13 +4634,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | XmlSize | Output Dimensioni del codice XML dei dati dei criteri (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
     const mip_cc_policy_engine engine,
-    int64_t* xmlSize);
+    int64_t* xmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getsensitivitytypesdataxml"></a>MIP_CC_PolicyEngine_GetSensitivityTypesDataXml
@@ -3839,6 +4657,7 @@ Parametro | Descrizione
 | XmlBuffer | Output Buffer in cui verrà copiato il codice XML. |
 | xmlBufferSize | Dimensioni (in numero di caratteri) di XmlBuffer. |
 | actualXmlSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3849,7 +4668,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
     const mip_cc_policy_engine engine,
     char* xmlBuffer,
     const int64_t xmlBufferSize,
-    int64_t* actualXmlSize);
+    int64_t* actualXmlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getclientdatasize"></a>MIP_CC_PolicyEngine_GetClientDataSize
@@ -3862,13 +4682,15 @@ Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | clientDataSize | Output Dimensioni dei dati client (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
     const mip_cc_policy_engine engine,
-    int64_t* clientDataSize);
+    int64_t* clientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyengine_getclientdata"></a>MIP_CC_PolicyEngine_GetClientData
@@ -3883,6 +4705,7 @@ Parametro | Descrizione
 | clientDataBuffer | Output Buffer in cui verranno copiati i dati client |
 | clientDataBufferSize | Dimensioni (in numero di caratteri) di clientDataBuffer. |
 | actualClientDataSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3893,7 +4716,8 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
     const mip_cc_policy_engine engine,
     char* clientDataBuffer,
     const int64_t clientDataBufferSize,
-    int64_t* actualClientDataSize);
+    int64_t* actualClientDataSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_createpolicyenginesettingswithidentity"></a>MIP_CC_CreatePolicyEngineSettingsWithIdentity
@@ -3908,7 +4732,8 @@ Parametro | Descrizione
 | clientData | Dati client personalizzabili archiviati insieme al motore |
 | locale | Impostazioni locali in cui vengono restituiti i risultati del testo |
 | loadSensitivityTypes | Se è necessario caricare anche i dati dei tipi di riservatezza (per la classificazione) |
-| impostazioni | Output Istanza di impostazioni appena creata |
+| Scheda Impostazioni | Output Istanza di impostazioni appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3920,7 +4745,8 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
     const char* clientData,
     const char* locale,
     bool loadSensitivityTypes,
-    mip_cc_policy_engine_settings* settings);
+    mip_cc_policy_engine_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyenginesettings_setclientdata"></a>MIP_CC_PolicyEngineSettings_SetClientData
@@ -3931,15 +4757,17 @@ Imposta i dati client che verranno archiviati in maniera opaca insieme a questo 
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
+| Scheda Impostazioni | Impostazioni motore |
 | clientData | Dati client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
     const mip_cc_policy_engine_settings settings,
-    const char* clientData);
+    const char* clientData,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyenginesettings_setcustomsettings"></a>MIP_CC_PolicyEngineSettings_SetCustomSettings
@@ -3950,15 +4778,17 @@ Configura le impostazioni personalizzate, usate per il controllo e il controllo 
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
+| Scheda Impostazioni | Impostazioni motore |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
     const mip_cc_policy_engine_settings settings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyenginesettings_setsessionid"></a>MIP_CC_PolicyEngineSettings_SetSessionId
@@ -3969,15 +4799,40 @@ Imposta l'ID di sessione che può essere usato per correlare i log e i dati di t
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
-| sessionId | ID di sessione che rappresenta la durata di un motore dei criteri |
+| Scheda Impostazioni | Impostazioni motore |
+| sessionID | ID di sessione che rappresenta la durata di un motore dei criteri |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
     const mip_cc_policy_engine_settings settings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_policyenginesettings_setcloud"></a>MIP_CC_PolicyEngineSettings_SetCloud
+
+Imposta il cloud che influiscono sugli URL dell'endpoint per tutte le richieste di servizio
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| Scheda Impostazioni | Impostazioni motore |
+| cloud | Identificatore cloud (impostazione predefinita = sconosciuta) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se il cloud non è specificato, l'impostazione predefinita sarà cloud globale. 
+
+```c
+mip_cc_result MIP_CC_PolicyEngineSettings_SetCloud(
+    const mip_cc_policy_engine_settings settings,
+    const mip_cc_cloud cloud,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyenginesettings_setcloudendpointbaseurl"></a>MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl
@@ -3988,15 +4843,19 @@ Imposta l'URL di base per tutte le richieste di servizio
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
-| cloudEndpointBaseUrl | URL di base (ad esempio 'https://api.aadrm.com') |
+| Scheda Impostazioni | Impostazioni motore |
+| cloudEndpointBaseUrl | URL di base (ad esempiohttps://dataservice.protection.outlook.com'') |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: questo valore verrà letto e deve essere impostato solo per Cloud = MIP_CLOUD_CUSTOM 
 
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
     const mip_cc_policy_engine_settings settings,
-    const char* cloudEndpointBaseUrl);
+    const char* cloudEndpointBaseUrl,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyenginesettings_setdelegateduseremail"></a>MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail
@@ -4007,8 +4866,9 @@ Imposta l'utente delegato
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni motore |
+| Scheda Impostazioni | Impostazioni motore |
 | delegatedUserEmail | Indirizzo di posta elettronica dell'utente delegato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4017,7 +4877,29 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
     const mip_cc_policy_engine_settings settings,
-    const char* delegatedUserEmail);
+    const char* delegatedUserEmail,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_policyenginesettings_setlabelfilter"></a>MIP_CC_PolicyEngineSettings_SetLabelFilter
+
+Imposta il filtro etichette
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| Scheda Impostazioni | Impostazioni motore |
+| labelFilter | enum che rappresenta il filtro etichette, se non è impostato il valore predefinito è Hyok, doublekeyencryption |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_PolicyEngineSettings_SetLabelFilter(
+    const mip_cc_policy_engine_settings settings,
+    const mip_cc_label_filter labelFilter,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasepolicyenginesettings"></a>MIP_CC_ReleasePolicyEngineSettings
@@ -4028,7 +4910,7 @@ Rilasciare le risorse associate a impostazioni del motore dei criteri
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del motore dei criteri da rilasciare |
+| Scheda Impostazioni | Impostazioni del motore dei criteri da rilasciare |
 
 ```c
 void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
@@ -4042,7 +4924,7 @@ Rilasciare le risorse associate a un gestore dei criteri
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore dei criteri da rilasciare |
+| gestore | Gestore dei criteri da rilasciare |
 
 ```c
 void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
@@ -4056,10 +4938,11 @@ Ottiene l'etichetta corrente di un documento
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore criteri |
+| gestore | Gestore criteri |
 | documentState | Stato del documento |
-| context | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
+| contesto | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
 | contentLabel | Etichetta attualmente applicata a un documento |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4068,7 +4951,8 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const void* context,
-    mip_cc_content_label* contentLabel);
+    mip_cc_content_label* contentLabel,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyhandler_computeactions"></a>MIP_CC_PolicyHandler_ComputeActions
@@ -4079,11 +4963,12 @@ Esegue le regole dei criteri in base allo stato fornito e determina le azioni co
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore criteri |
+| gestore | Gestore criteri |
 | documentState | Stato del documento |
 | applicationState | Stato azione applicazione |
-| context | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
+| contesto | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
 | actionResult | Output Azioni che devono essere eseguite dall'applicazione, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4095,7 +4980,8 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
     const void* context,
-    mip_cc_action_result* actionResult);
+    mip_cc_action_result* actionResult,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyhandler_notifycommittedactions"></a>MIP_CC_PolicyHandler_NotifyCommittedActions
@@ -4106,10 +4992,11 @@ Chiamata eseguita dall'applicazione dopo l'applicazione delle azioni calcolate e
 
 Parametro | Descrizione
 |---|---|
-| handler | Gestore criteri |
+| gestore | Gestore criteri |
 | documentState | Stato del documento |
 | applicationState | Stato azione applicazione |
-| context | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
+| contesto | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4120,7 +5007,33 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
     const mip_cc_policy_handler handler,
     const mip_cc_document_state* documentState,
     const mip_cc_application_action_state* applicationState,
-    const void* context);
+    const void* context,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_policyprofile_acquireauthtoken"></a>MIP_CC_PolicyProfile_AcquireAuthToken
+
+Attivare un callback di autenticazione
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| profile | Profilo |
+| cloud | Cloud di Azure |
+| authCallback | Callback di autenticazione che verrà richiamato |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: MIP non memorizza nella cache o non esegue altre operazioni con il valore restituito dal delegato di autenticazione. Questa funzione è consigliata per le applicazioni che non sono "connesse" fino a quando MIP richiede un token di autenticazione. Consente a un'applicazione di recuperare un token prima che MIP ne richieda effettivamente uno. 
+
+```c
+mip_cc_result MIP_CC_PolicyProfile_AcquireAuthToken(
+    const mip_cc_policy_profile profile,
+    const mip_cc_cloud cloud,
+    const mip_cc_auth_callback authCallback,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_loadpolicyprofile"></a>MIP_CC_LoadPolicyProfile
@@ -4131,15 +5044,17 @@ Carica un profilo
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni profilo |
-| profilo | Output Istanza del profilo criteri appena creata |
+| Scheda Impostazioni | Impostazioni del profilo |
+| profile | Output Istanza del profilo criteri appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_LoadPolicyProfile(
     const mip_cc_policy_profile_settings settings,
-    mip_cc_policy_profile* profile);
+    mip_cc_policy_profile* profile,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasepolicyprofile"></a>MIP_CC_ReleasePolicyProfile
@@ -4150,10 +5065,35 @@ Rilasciare le risorse associate a un profilo criteri
 
 Parametro | Descrizione
 |---|---|
-| profilo | Profilo criteri da rilasciare |
+| profile | Profilo criteri da rilasciare |
 
 ```c
 void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
+```
+
+## <a name="mip_cc_createpolicyprofilesettings"></a>MIP_CC_CreatePolicyProfileSettings
+
+Creare un oggetto impostazioni usato per creare un profilo criteri
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| mipContext | Contesto globale condiviso tra tutti i profili |
+| cacheStorageType | Configurazione della cache di archiviazione |
+| authCallback | Oggetto callback da usare per l'autenticazione, implementato dall'applicazione client |
+| Scheda Impostazioni | Output Istanza di impostazioni appena creata |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_CreatePolicyProfileSettings(
+    const mip_cc_mip_context mipContext,
+    const mip_cc_cache_storage_type cacheStorageType,
+    const mip_cc_auth_callback authCallback,
+    mip_cc_policy_profile_settings* settings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyprofilesettings_setsessionid"></a>MIP_CC_PolicyProfileSettings_SetSessionId
@@ -4164,15 +5104,17 @@ Imposta l'ID di sessione che può essere usato per correlare i log e i dati di t
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni profilo |
-| sessionId | ID di sessione che rappresenta la durata di un profilo di criteri |
+| Scheda Impostazioni | Impostazioni del profilo |
+| sessionID | ID di sessione che rappresenta la durata di un profilo di criteri |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
     const mip_cc_policy_profile_settings settings,
-    const char* sessionId);
+    const char* sessionId,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyprofilesettings_sethttpdelegate"></a>MIP_CC_PolicyProfileSettings_SetHttpDelegate
@@ -4183,15 +5125,17 @@ Esegui override dello stack HTTP predefinito con il proprio client
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato HTTP |
+| Scheda Impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato HTTP |
 | httpDelegate | Istanza di callback HTTP implementata dall'applicazione client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
     const mip_cc_policy_profile_settings settings,
-    const mip_cc_http_delegate httpDelegate);
+    const mip_cc_http_delegate httpDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyprofilesettings_settaskdispatcherdelegate"></a>MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate
@@ -4202,15 +5146,17 @@ Esegui override del dispatcher attività asincrono predefinito con il proprio cl
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato del dispatcher attività |
+| Scheda Impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato del dispatcher attività |
 | taskDispatcherDelegate | Istanza di callback Dispatcher attività implementata dall'applicazione client |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
     const mip_cc_policy_profile_settings settings,
-    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate);
+    const mip_cc_task_dispatcher_delegate taskDispatcherDelegate,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_policyprofilesettings_setcustomsettings"></a>MIP_CC_PolicyProfileSettings_SetCustomSettings
@@ -4221,15 +5167,17 @@ Configura le impostazioni personalizzate, usate per il controllo e il controllo 
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni profilo |
+| Scheda Impostazioni | Impostazioni del profilo |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
     const mip_cc_policy_profile_settings settings,
-    const mip_cc_dictionary customSettings);
+    const mip_cc_dictionary customSettings,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasepolicyprofilesettings"></a>MIP_CC_ReleasePolicyProfileSettings
@@ -4240,10 +5188,58 @@ Rilasciare le risorse associate a impostazioni del profilo criteri
 
 Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo dei criteri da rilasciare |
+| Scheda Impostazioni | Impostazioni del profilo dei criteri da rilasciare |
 
 ```c
-void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilsettingseSettings);
+void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profileSettings);
+```
+
+## <a name="mip_cc_protectadhocdkaction_getdoublekeyencryptionurlsize"></a>MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize
+
+Ottiene le dimensioni del buffer necessarie per archiviare l'URL di crittografia a chiave doppia.
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| action | azione "Proteggi per criteri ad hoc con doppia chiave" |
+| urlSize | Output Dimensione del buffer in cui memorizzare l'URL (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize(
+    const mip_cc_action action,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectadhocdkaction_getdoublekeyencryptionurl"></a>MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl
+
+Ottiene l'URL di crittografia a chiave doppia
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| action | azione "Proteggi per criteri ad hoc con doppia chiave" |
+| urlBuffer | Output Buffer in cui verrà copiato l'URL. |
+| urlBufferSize | Dimensioni (in numero di caratteri) di urlBuffer. |
+| actualUrlSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se urlBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualUrlSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl(
+    const mip_cc_action action,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_protectbytemplateaction_gettemplateid"></a>MIP_CC_ProtectByTemplateAction_GetTemplateId
@@ -4256,13 +5252,132 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Proteggi per modello" |
 | templateId | Output ID del modello che definisce le protezioni |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
     const mip_cc_action action,
-    mip_cc_guid* templateId);
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectbytemplatedkaction_gettemplateid"></a>MIP_CC_ProtectByTemplateDkAction_GetTemplateId
+
+Ottiene un ID modello dell'azione "Proteggi per modello con chiave doppia"
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| action | azione "Proteggi per modello" |
+| templateId | Output ID del modello che definisce le protezioni |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetTemplateId(
+    const mip_cc_action action,
+    mip_cc_guid* templateId,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurlsize"></a>MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize
+
+Ottiene le dimensioni del buffer necessarie per archiviare l'URL di crittografia a chiave doppia.
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| action | azione "Proteggi per modello con doppia chiave" |
+| urlSize | Output Dimensione del buffer in cui memorizzare l'URL (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize(
+    const mip_cc_action action,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurl"></a>MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl
+
+Ottiene l'URL di crittografia a chiave doppia
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| action | azione "Proteggi per modello con doppia chiave" |
+| urlBuffer | Output Buffer in cui verrà copiato l'URL. |
+| urlBufferSize | Dimensioni (in numero di caratteri) di urlBuffer. |
+| actualUrlSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se urlBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualUrlSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl(
+    const mip_cc_action action,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurlsize"></a>MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize
+
+Ottiene le dimensioni del buffer necessarie per archiviare l'URL di crittografia a chiave doppia.
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| action | azione "Proteggi da DP senza inoltri con chiave doppia" |
+| urlSize | Output Dimensione del buffer in cui memorizzare l'URL (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+```c
+mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize(
+    const mip_cc_action action,
+    int64_t* urlSize,
+    mip_cc_error* errorInfo);
+```
+
+## <a name="mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurl"></a>MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl
+
+Ottiene l'URL di crittografia a chiave doppia
+
+**Parametri**
+
+Parametro | Descrizione
+|---|---|
+| action | azione "Proteggi da DP senza inoltri con chiave doppia" |
+| urlBuffer | Output Buffer in cui verrà copiato l'URL. |
+| urlBufferSize | Dimensioni (in numero di caratteri) di urlBuffer. |
+| actualUrlSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
+
+**Return**: codice risultato che indica l'esito positivo o negativo
+
+**Nota**: se urlBuffer è null o insufficiente, verrà restituito MIP_RESULT_ERROR_INSUFFICIENT_BUFFER e actualUrlSize verrà impostato sulle dimensioni minime del buffer richiesto. 
+
+```c
+mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl(
+    const mip_cc_action action,
+    char* urlBuffer,
+    const int64_t urlBufferSize,
+    int64_t* actualUrlSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_removecontentfooteraction_getuielementnames"></a>MIP_CC_RemoveContentFooterAction_GetUIElementNames
@@ -4275,6 +5390,7 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Rimuovi piè di pagina contenuto" |
 | nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4283,7 +5399,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
     const mip_cc_action action,
-    mip_cc_string_list* names);
+    mip_cc_string_list* names,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_removecontentheaderaction_getuielementnames"></a>MIP_CC_RemoveContentHeaderAction_GetUIElementNames
@@ -4296,6 +5413,7 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Rimuovi intestazione contenuto" |
 | nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4304,7 +5422,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
     const mip_cc_action action,
-    mip_cc_string_list* names);
+    mip_cc_string_list* names,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_removewatermarkaction_getuielementnames"></a>MIP_CC_RemoveWatermarkAction_GetUIElementNames
@@ -4317,6 +5436,7 @@ Parametro | Descrizione
 |---|---|
 | action | azione "Rimuovi piè di pagina filigrana" |
 | nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4325,7 +5445,8 @@ Parametro | Descrizione
 ```c
 mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
     const mip_cc_action action,
-    mip_cc_string_list* names);
+    mip_cc_string_list* names,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_releasesensitivitytype"></a>MIP_CC_ReleaseSensitivityType
@@ -4352,13 +5473,15 @@ Parametro | Descrizione
 |---|---|
 | sensitivityType | Tipo di riservatezza |
 | idSize | Output Dimensioni del buffer per l'ID del pacchetto della regola (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
     const mip_cc_sensitivity_type sensitivityType,
-    int64_t* idSize);
+    int64_t* idSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_sensitivitytype_getrulepackageid"></a>MIP_CC_SensitivityType_GetRulePackageId
@@ -4373,6 +5496,7 @@ Parametro | Descrizione
 | idBuffer | Output Buffer in cui verrà copiato l'ID. |
 | idBufferSize | Dimensioni (in numero di caratteri) di idBuffer. |
 | actualIdSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4383,7 +5507,8 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
     const mip_cc_sensitivity_type sensitivityType,
     char* idBuffer,
     const int64_t idBufferSize,
-    int64_t* actualIdSize);
+    int64_t* actualIdSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_sensitivitytype_getrulepackagesize"></a>MIP_CC_SensitivityType_GetRulePackageSize
@@ -4396,13 +5521,15 @@ Parametro | Descrizione
 |---|---|
 | sensitivityType | Tipo di riservatezza |
 | rulePackageSize | Output Dimensioni del buffer per il mantenimento del pacchetto di regole (in numero di caratteri) |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
 ```c
 mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
     const mip_cc_sensitivity_type sensitivityType,
-    int64_t* rulePackageSize);
+    int64_t* rulePackageSize,
+    mip_cc_error* errorInfo);
 ```
 
 ## <a name="mip_cc_sensitivitytype_getrulepackage"></a>MIP_CC_SensitivityType_GetRulePackage
@@ -4417,6 +5544,7 @@ Parametro | Descrizione
 | rulePackageBuffer | Output Buffer in cui verrà copiato il pacchetto di regole. |
 | rulePackageBufferSize | Dimensioni (in numero di caratteri) di rulePackageBuffer. |
 | actualRulePackageSize | Output Numero di caratteri scritti nel buffer |
+| errorInfo | Output Opzionale Informazioni sull'errore se il risultato dell'operazione è errore |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4427,6 +5555,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackage(
     const mip_cc_sensitivity_type sensitivityType,
     char* rulePackageBuffer,
     const int64_t rulePackageBufferSize,
-    int64_t* actualRulePackageSize);
+    int64_t* actualRulePackageSize,
+    mip_cc_error* errorInfo);
 ```
 

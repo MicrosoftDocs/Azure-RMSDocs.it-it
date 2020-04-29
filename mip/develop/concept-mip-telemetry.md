@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: e2c8d8726edc483b35c7b9931bc83a3ddb3b5a2c
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 87c9884f497cd0020b7252b6ef5a466fe858a8c1
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556147"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764124"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configurazione della telemetria
 
@@ -21,7 +21,9 @@ Per impostazione predefinita, Microsoft Information Protection SDK invia i dati 
 
 ## <a name="telemetry-configuration"></a>Configurazione della telemetria
 
-Le opzioni di telemetria nell'SDK MIP possono essere controllate tramite [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Creare un'istanza di questa classe, quindi impostare **IsTelemetryOptedOut** su true. Fornire l'oggetto della classe **TelemetryConfiguration** alla funzione utilizzata per creare **MipContext**. Questa operazione non elimina completamente i dati di telemetria, ma si riduce a un set minimo con tutte le informazioni identificabili dall'utente finale rimosse.
+Le opzioni di telemetria nell'SDK MIP possono essere controllate tramite [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Creare un'istanza di questa classe, quindi impostare **IsTelemetryOptedOut** su true. Fornire l'oggetto della classe **TelemetryConfiguration** alla funzione utilizzata per creare **MipContext**. 
+
+A partire da MIP SDK versione 1,6, l'opzione di impostazione **Disabilita completamente** i dati di telemetria. In verisons 1,5 e versioni precedenti si invia un set di informazioni di telemetria minime.
 
 ### <a name="minimum-telemetry-events"></a>Eventi di telemetria minimi
 
@@ -31,7 +33,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 
 #### <a name="event-heartbeat"></a>Evento: heartbeat
 
-| Name                                 | Description                                                                            | Pulitura |
+| Name                                 | Descrizione                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | App. ApplicationId                    | Identificatore dell'applicazione fornito tramite MIP:: ApplicationInfo.                          | No       |
 | App. ApplicationName                  | Nome dell'applicazione fornito tramite MIP:: ApplicationInfo.                                | No       |
@@ -43,7 +45,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | Motore. TenantId                      | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Motore. UserObjectId                  | ID oggetto utente in Azure Active Directory.                                              | No       |
 | Event. CorrelationId                  | ID univoco generato associato all'oggetto che ha attivato l'evento.                   | No       |
-| Event. CorrelationIdDescription       | C++nome della classe dell'oggetto che ha attivato l'evento.                                     | No       |
+| Event. CorrelationIdDescription       | Nome della classe C++ dell'oggetto che ha attivato l'evento.                                     | No       |
 | Event. ParentCorrelationId            | ID di correlazione dell'evento padre.                                                           | No       |
 | Event. ParentCorrelationIdDescription | ID univoco generato associato al padre dell'oggetto che ha attivato l'evento. | No       |
 | Event. UniqueId                       | ID univoco generato assegnato all'evento.                                             | No       |
@@ -54,14 +56,14 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | Piattaforma                             | Versione del sistema operativo.                                                              | No       |
 | ProcessName                          | Nome del processo che utilizza l'SDK.                                                     | No       |
 | ProductVersion                       | Uguale a "app. ApplicationVersion".                                                      | No       |
-| SDKVersion                           | Uguale a MIP. Versione.                                                                   | No       |
+| VersioneSDK                           | Uguale a MIP. Versione.                                                                   | No       |
 | UserId                               | Indirizzo di posta elettronica dell'utente.                                                             | **Sì**  |
 | UserObjectId                         | Azure AD ID oggetto dell'utente.                                                        | No       |
-| Version                              | Schema della versione di controllo ("1,1").                                                          | No       |
+| Versione                              | Schema della versione di controllo ("1,1").                                                          | No       |
 
 #### <a name="event-discovery"></a>Evento: individuazione
 
-| Name                                 | Description                                                                            | Pulitura |
+| Name                                 | Descrizione                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | ID di azione univoco per questo evento, usato per la correlazione degli eventi.                           | No       |
 | App. ApplicationId                    | Identificatore dell'applicazione fornito tramite MIP:: ApplicationInfo.                          | No       |
@@ -75,7 +77,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | Motore. TenantId                      | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Motore. UserObjectId                  | Identificatore dell'oggetto utente in Azure Active Directory.                                      | No       |
 | Event. CorrelationId                  | ID univoco generato associato all'oggetto che ha attivato l'evento.                   | No       |
-| Event. CorrelationIdDescription       | C++nome della classe dell'oggetto che ha attivato l'evento.                                     | No       |
+| Event. CorrelationIdDescription       | Nome della classe C++ dell'oggetto che ha attivato l'evento.                                     | No       |
 | Event. ParentCorrelationId            | ID di correlazione dell'evento padre.                                                           | No       |
 | Event. ParentCorrelationIdDescription | ID univoco generato associato al padre dell'oggetto che ha attivato l'evento. | No       |
 | Event. UniqueId                       | ID univoco generato assegnato all'evento.                                             | No       |
@@ -87,17 +89,17 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | OrganizationId                       | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Piattaforma                             | Versione del sistema operativo.                                                              | No       |
 | ProcessName                          | Nome del processo che utilizza l'SDK.                                                     | No       |
-| Protetto                            | Bool che indica se il file è protetto o meno.                                       | No       |
-| Protection                           | Identificatore del modello di protezione.                                                    | **Sì**  |
+| Protetta                            | Bool che indica se il file è protetto o meno.                                       | No       |
+| Protezione                           | Identificatore del modello di protezione.                                                    | **Sì**  |
 | ProtectionOwner                      | Indirizzo di posta elettronica del proprietario della protezione.                                                 | **Sì**  |
-| SDKVersion                           | Uguale a MIP. Versione.                                                                   | No       |
+| VersioneSDK                           | Uguale a MIP. Versione.                                                                   | No       |
 | UserId                               | Indirizzo di posta elettronica dell'utente.                                                             | **Sì**  |
 | UserObjectId                         | Azure AD ID oggetto dell'utente.                                                        | No       |
-| Version                              | Schema della versione di controllo ("1,1").                                                          | No       |
+| Versione                              | Schema della versione di controllo ("1,1").                                                          | No       |
 
 #### <a name="event-label-change"></a>Evento: modifica dell'etichetta
 
-| Name                                 | Description                                                                            | Pulitura |
+| Name                                 | Descrizione                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | ID di azione univoco per questo evento, usato per la correlazione degli eventi.                           | No       |
 | ActionIdBefore                       | ID azione precedente. Utilizzato per concatenare al nuovo ID di azione.                                    | No       |
@@ -113,7 +115,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | Motore. TenantId                      | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Motore. UserObjectId                  | Identificatore dell'oggetto utente in Azure Active Directory.                                      | No       |
 | Event. CorrelationId                  | ID univoco generato associato all'oggetto che ha attivato l'evento.                   | No       |
-| Event. CorrelationIdDescription       | C++nome della classe dell'oggetto che ha attivato l'evento.                                     | No       |
+| Event. CorrelationIdDescription       | Nome della classe C++ dell'oggetto che ha attivato l'evento.                                     | No       |
 | Event. ParentCorrelationId            | ID di correlazione dell'evento padre.                                                           | No       |
 | Event. ParentCorrelationIdDescription | ID univoco generato associato al padre dell'oggetto che ha attivato l'evento. | No       |
 | Event. UniqueId                       | ID univoco generato assegnato all'evento.                                             | No       |
@@ -128,24 +130,24 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | OrganizationId                       | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Piattaforma                             | Versione del sistema operativo.                                                              | No       |
 | ProcessName                          | Nome del processo che utilizza l'SDK.                                                     | No       |
-| Versione del prodotto                      |                                                                                        | No       |
-| Protetto                            | Bool che indica se il file è protetto o meno.                                       | No       |
+| Versione prodotto                      |                                                                                        | No       |
+| Protetta                            | Bool che indica se il file è protetto o meno.                                       | No       |
 | Protetto prima                     | Bool che indica se il file è stato precedentemente protetto o meno.                           | No       |
-| Protection                           | Identificatore del modello di protezione.                                                    | No       |
+| Protezione                           | Identificatore del modello di protezione.                                                    | No       |
 | Protezione prima                    | Identificatore del modello di protezione precedente.                                           | No       |
 | ProtectionContentId                  | Nuovo identificatore di contenuto (GUID).                                                     | No       |
 | ProtectionContentIdBefore            | Identificatore del contenuto precedente (GUID).                                                | No       |
 | ProtectionOwner                      | Indirizzo di posta elettronica del proprietario della protezione.                                                 | **Sì**  |
 | ProtectionOwnerBefore                | Indirizzo di posta elettronica precedente del proprietario della protezione.                                        | **Sì**  |
-| SDKVersion                           | Uguale a MIP. Versione.                                                                   | No       |
+| VersioneSDK                           | Uguale a MIP. Versione.                                                                   | No       |
 | UserId                               | Indirizzo di posta elettronica dell'utente.                                                             | **Sì**  |
 | UserObjectId                         | Azure AD ID oggetto dell'utente.                                                        | No       |
-| Version                              | Schema della versione di controllo ("1,1").                                                          | No       |
+| Versione                              | Schema della versione di controllo ("1,1").                                                          | No       |
 
 
-### <a name="opting-out-in-c"></a>Opt-out inC++
+### <a name="opting-out-in-c"></a>Rifiuto esplicito in C++
 
-Per impostare la telemetria solo sul valore minimo, creare un puntatore condiviso di **MIP:: TelemetryConfiguration ()** e impostare **isTelemetryOptedOut** su true. Passare l'oggetto di configurazione in a **MipContent:: Create ()** .
+Per impostare la telemetria solo sul valore minimo, creare un puntatore condiviso di **MIP:: TelemetryConfiguration ()** e impostare **isTelemetryOptedOut** su true. Passare l'oggetto di configurazione in a **MipContent:: Create ()**.
 
 ```cpp
 auto telemetryConfig = std::make_shared<mip::TelemetryConfiguration>();                                     
@@ -164,7 +166,7 @@ mMipContext = mip::MipContext::Create(
 
 ### <a name="opting-out-in-net"></a>Rifiuto esplicito in .NET
 
-Per impostare la telemetria solo sul valore minimo, creare un oggetto **TelemetryConfiguration ()** e impostare **isTelemetryOptedOut** su true. Passare l'oggetto di configurazione in **MIP. CreateMipContext ()** .
+Per impostare la telemetria solo sul valore minimo, creare un oggetto **TelemetryConfiguration ()** e impostare **isTelemetryOptedOut** su true. Passare l'oggetto di configurazione in **MIP. CreateMipContext ()**.
 
 ```csharp
 TelemetryConfiguration telemetryConfiguration = new TelemetryConfiguration();

@@ -1,19 +1,19 @@
 ---
-title: Classe mip::BadInputError
-description: 'Documenta la classe MIP:: badinputerror di Microsoft Information Protection (MIP) SDK.'
+title: Classe BadInputError
+description: 'Documenta la classe badinputerror:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: b624328caf206d5a2f72efbad4da1059252ac632
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2ff9bf0dc34d20c4bf0df99db869ee31d4ee8a9d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489045"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763574"
 ---
-# <a name="class-mipbadinputerror"></a>Classe mip::BadInputError 
+# <a name="class-badinputerror"></a>Classe BadInputError 
 Errore di input non corretto, generato quando l'input per un'API SDK non è valido.
   
 ## <a name="summary"></a>Riepilogo

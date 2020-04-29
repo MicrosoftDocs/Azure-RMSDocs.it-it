@@ -1,19 +1,19 @@
 ---
-title: Classe mip::PrivilegedRequiredError
-description: Documenta la classe MIP::p rivilegedrequirederror dell'SDK Microsoft Information Protection (MIP).
+title: Classe PrivilegedRequiredError
+description: 'Documenta la classe privilegedrequirederror:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ccdd16472b2f5a3034de675bc4d873c4bed3e827
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2a82d8e0603c9f309b8a34e02a1dbb2a7faaccda
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486954"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760579"
 ---
-# <a name="class-mipprivilegedrequirederror"></a>Classe mip::PrivilegedRequiredError 
+# <a name="class-privilegedrequirederror"></a>Classe PrivilegedRequiredError 
 L'etichetta corrente è stata assegnata come operazione con privilegi (equivalente a un'operazione dell'amministratore), quindi non è possibile eseguirne l'override.
   
 ## <a name="summary"></a>Riepilogo

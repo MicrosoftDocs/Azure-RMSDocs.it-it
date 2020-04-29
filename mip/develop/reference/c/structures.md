@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/4/2019
-ms.openlocfilehash: aa544dfbd046ae8c3137cbc115d9af6ea219bc07
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.date: 4/16/2020
+ms.openlocfilehash: 0d24a2fedad93ecca3b4d5a48f5434746a7a7c4e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73591610"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763848"
 ---
 # <a name="structures"></a>Strutture
 
@@ -19,7 +19,7 @@ ms.locfileid: "73591610"
 
 Uno struct che include informazioni specifiche dell'applicazione 
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
 | applicationId | Identificatore dell'applicazione impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).  |
 | applicationName | Nome dell'applicazione, (deve contenere solo caratteri ASCII validi, escluso ';')  |
@@ -39,7 +39,7 @@ typedef struct {
 
 Informazioni fornite da un server per generare un token OAuth2
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
 | authority | Autorità OAuth2  |
 | risorse | Risorsa OAuth2  |
@@ -52,6 +52,24 @@ typedef struct {
   const char* resource;  
   const char* scope;     
 } mip_cc_oauth2_challenge;
+
+```
+
+## <a name="mip_cc_handle"></a>mip_cc_handle
+
+Handle opaco per l'oggetto MIP
+
+| Campo | Descrizione |
+|---|---|
+| typeId | Numero magico che identifica in modo univoco il tipo di handle specifico  |
+| data | Dati handle non elaborati  |
+
+
+```c
+typedef struct {
+  uint32_t typeId; 
+  void* data;      
+} mip_cc_handle;
 
 ```
 
@@ -70,10 +88,10 @@ typedef struct {
 
 Coppia chiave/valore
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| key | Codice  |
-| Valore | Value  |
+| Key | Chiave  |
+| value | Valore  |
 
 
 ```c
@@ -84,14 +102,37 @@ typedef struct {
 
 ```
 
+## <a name="mip_cc_error"></a>mip_cc_error
+
+Informazioni sugli errori
+
+```c
+typedef struct {
+  mip_cc_result result;
+  char description[ERROR_STRING_BUFFER_SIZE];
+
+  // MIP_RESULT_ERROR_NETWORK details
+  mip_cc_network_error_category networkError_Category;
+  int32_t networkError_ResponseCode;
+
+  // MIP_RESULT_ERROR_NO_PERMISSIONS details
+  char noPermissionsError_Owner[ERROR_STRING_BUFFER_SIZE];
+  char noPermissionsError_Referrer[ERROR_STRING_BUFFER_SIZE];
+
+  // MIP_RESULT_ERROR_SERVICE_DISABLED details
+  mip_cc_service_disabled_error_extent serviceDisabledError_Extent;
+} mip_cc_error;
+
+```
+
 ## <a name="mip_cc_http_header"></a>mip_cc_http_header
 
 Intestazione richiesta/risposta HTTP
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
 | name | Nome/chiave dell'intestazione  |
-| Valore | Valore intestazione  |
+| value | Valore intestazione  |
 
 
 ```c
@@ -106,15 +147,15 @@ typedef struct {
 
 Richiesta HTTP
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| ID | ID richiesta univoco: correlato con la stessa proprietà in mip_cc_http_response  |
-| tipo | Tipo di richiesta HTTP (ad esempio, GET e POST)  |
+| id | ID richiesta univoco: correlato con la stessa proprietà in mip_cc_http_response  |
+| type | Tipo di richiesta HTTP (ad esempio, GET e POST)  |
 | url | URL della richiesta HTTP  |
 | bodySize | Dimensioni del corpo della richiesta HTTP in byte  |
-| body | Corpo della richiesta HTTP con memorizzazione nel buffer  |
+| Corpo | Corpo della richiesta HTTP con memorizzazione nel buffer  |
 | headersCount | Numero di intestazioni di richiesta HTTP  |
-| intestazioni | Buffer contenente intestazioni di richiesta HTTP  |
+| headers | Buffer contenente intestazioni di richiesta HTTP  |
 
 
 ```c
@@ -134,14 +175,14 @@ typedef struct {
 
 Risposta HTTP
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| ID | ID richiesta univoco: correlato con la stessa proprietà in mip_cc_http_request  |
+| id | ID richiesta univoco: correlato con la stessa proprietà in mip_cc_http_request  |
 | statusCode | Codice di stato della risposta HTTP  |
 | bodySize | Dimensione del corpo della risposta HTTP in byte  |
-| body | Corpo della risposta HTTP del buffer  |
+| Corpo | Corpo della risposta HTTP del buffer  |
 | headersCount | Numero di intestazioni di risposta HTTP  |
-| intestazioni | Buffer contenente intestazioni di risposta HTTP  |
+| headers | Buffer contenente intestazioni di risposta HTTP  |
 
 
 ```c
@@ -158,16 +199,18 @@ typedef struct {
 
 ## <a name="mip_cc_identity"></a>mip_cc_identity
 
-Uno struct che include informazioni specifiche dell'applicazione 
+Uno struct che contiene le informazioni di identificazione dell'utente
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| Posta elettronica | Indirizzo di posta elettronica utente  |
+| email | Indirizzo di posta elettronica utente  |
+| name | Nome descrittivo dell'utente, usato per il contrassegno del contenuto.  |
 
 
 ```c
 typedef struct {
   const char* email;          
+  const char* name;           
 } mip_cc_identity;
 
 ```
@@ -176,10 +219,10 @@ typedef struct {
 
 Definisce lo stato abilitato/disabilitato di una singola funzionalità
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| Funzionalità di | Nome funzionalità  |
-| Valore | Stato abilitato/disabilitato  |
+| feature | Nome funzionalità  |
+| value | Stato abilitato/disabilitato  |
 
 
 ```c
@@ -194,9 +237,9 @@ typedef struct {
 
 Un gruppo di utenti e i diritti associati
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| utenti | Elenco di utenti  |
+| user | Elenco di utenti  |
 | usersCount | Numero di utenti  |
 | diritti | Elenco dei diritti  |
 | rightsCount | Numero di diritti  |
@@ -216,9 +259,9 @@ typedef struct {
 
 Un gruppo di utenti e i ruoli associati
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| utenti | Elenco di utenti  |
+| user | Elenco di utenti  |
 | usersCount | Numero di utenti  |
 | roles | Elenco dei ruoli  |
 | rolesCount | Numero di ruoli  |
@@ -238,9 +281,9 @@ typedef struct {
 
 Definisce una singola richiesta di invio di attività asincrona
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
-| ID | ID attività  |
+| id | ID attività  |
 | delayMs | Ritardo fino all'esecuzione dell'attività (in millisecondi)  |
 | executeOnIndependentThread | Indica se l'attività deve essere eseguita in un thread completamente indipendente o se può riutilizzare un thread condiviso  |
 
@@ -258,12 +301,12 @@ typedef struct {
 
 Rappresenta lo stato corrente dell'applicazione durante l'esecuzione di un'operazione correlata all'etichetta
 
-| Campo | Description |
+| Campo | Descrizione |
 |---|---|
 | actionState | Descrive se/in che modo un'applicazione tenta di modificare lo stato dell'etichetta.  |
 | newLabel | Se ' actionType ' è' UPDATE ': nuova etichetta.  |
 | newLabelExtendedProperties | Se ' actionType ' è' UPDATE ': proprietà aggiuntive da scrivere nei metadati.  |
-| newLabelAssignementMethod | Se ' actionType ' è' UPDATE ': il metodo di assegnazione della nuova etichetta.  |
+| newLabelAssignmentMethod | Se ' actionType ' è' UPDATE ': il metodo di assegnazione della nuova etichetta.  |
 | isDowngradeJustified | Se ' actionType ' è' UPDATE ': indica se il downgrade di un'etichetta è stato giustificato dall'utente.  |
 | downgradeJustification | Se ' actionType ' è' UPDATE ': testo per la giustificazione del downgrade dell'etichetta fornito dall'utente.  |
 | supportedActions | Maschera di enumerazione che descrive le azioni correlate all'etichetta che un'applicazione è in grado di eseguire.  |
@@ -274,7 +317,7 @@ typedef struct {
   mip_cc_label_action_state actionState;                    
   mip_cc_label newLabel;                                    
   mip_cc_dictionary newLabelExtendedProperties;             
-  mip_cc_label_assignment_method newLabelAssignementMethod; 
+  mip_cc_label_assignment_method newLabelAssignmentMethod;  
   bool isDowngradeJustified;                                
   const char* downgradeJustification;                       
   mip_cc_label_action_type supportedActions;                
@@ -284,23 +327,72 @@ typedef struct {
 
 ## <a name="mip_cc_document_state"></a>mip_cc_document_state
 
-Rappresenta lo stato corrente di un documento in grado di riconoscere le etichette.
-
-| Campo | Description |
-|---|---|
-| contentId | Descrizione del documento leggibile visibile nel portale di controllo dei tenant. Esempio per un file: [percorso\nomefile]; esempio per un messaggio di posta elettronica: [Subject: sender]. |
-| DataState | Stato dei dati del documento che interagisce con l'applicazione  |
-| contentMetadataCallback | Callback dei metadati del documento  |
-| protectionDescriptor | Descrittore di protezione se il documento è attualmente protetto; in caso contrario, null  |
-| contentFormat | Formato del documento (file e indirizzo di posta elettronica)  |
-| auditMetadata | Metadati facoltativi specifici dell'applicazione usati quando si inviano report di controllo. Valori riconosciuti:' sender ': indirizzo di posta elettronica del mittente; ' Recipients ': matrice JSON di destinatari di posta elettronica; ' LastModifiedBy ': indirizzo di posta elettronica dell'utente che ha apportato l'ultima modifica a un documento; ' LastModifiedDate ': data dell'Ultima modifica di un documento. |
+Definizione della funzione di callback per recuperare il documento metatdata, filtrato in base al nome e al prefisso
 
 ```c
 typedef struct {
+  /**
+   * Human-readable document description visible in tenant audit portal
+   *     Example for a file: [path\filename]
+   *     Example for an email: [Subject:Sender]
+   */
   const char* contentId;
+
+  /**
+   * State of document data as application interacts with it
+   */
   mip_cc_data_state dataState;
+
+  /**
+   * Document metadata callback
+   */
   mip_cc_metadata_callback contentMetadataCallback;
+
+  /**
+   * Protection descriptor if document is currently protected, else null
+   */
   mip_cc_protection_descriptor protectionDescriptor;
+
+  /**
+   * Format of document (file vs. email)
+   */
   mip_cc_content_format contentFormat;
+
+  /**
+   * Optional application-specific metadata that is used when sending audit reports
+   *     Recognized values:
+   *       'Sender': Sender email address
+   *       'Recipients': JSON array of email recipients
+   *       'LastModifiedBy': Email address of the user who last modified a document
+   *       'LastModifiedDate': Date a document was last modified
+   */
   mip_cc_dictionary auditMetadata;
+  
+  /**
+   * Document metadata version, default should be 0.
+   */
+  unsigned int contentMetadataVersion;
 } mip_cc_document_state;
+
+```
+
+## <a name="mip_cc_metadata_entry"></a>mip_cc_metadata_entry
+
+Immissione dei metadati
+
+| Campo | Descrizione |
+|---|---|
+| Key | Immissione chiave |
+| value | Immissione valore  |
+| Versione | La voce Version deve essere inizializzata su 0 se non diversamente noto |
+
+
+```c
+typedef struct {
+  const char* key;        
+  const char* value;      
+  uint32_t version;       
+} mip_cc_metadata_entry;
+
+```
+

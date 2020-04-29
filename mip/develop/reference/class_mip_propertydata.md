@@ -1,19 +1,19 @@
 ---
-title: Classe MIP::P ropertyData
-description: Documenta la classe MIP::p ropertydata dell'SDK Microsoft Information Protection (MIP).
+title: Classe PropertyData
+description: 'Documenta la classe PropertyData:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: fd345d41d2f8c80267dd420f351b3b2c5eb1cb57
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: c1eae1ea75d43f0192a71c2d55a6f5b7f100b3db
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489742"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760777"
 ---
-# <a name="class-mippropertydata"></a>Classe MIP::P ropertyData 
+# <a name="class-propertydata"></a>Classe PropertyData 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                

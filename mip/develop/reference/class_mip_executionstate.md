@@ -1,19 +1,19 @@
 ---
-title: Classe mip::ExecutionState
-description: 'Documenta la classe MIP:: ExecutionState di Microsoft Information Protection (MIP) SDK.'
+title: Classe ExecutionState
+description: 'Documenta la classe ExecutionState:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e0bf26124a7181dd8e6477a303868b51d6275c6e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ff22cebbcb4a83015248c8f6990f04dfad4538e0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490082"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763308"
 ---
-# <a name="class-mipexecutionstate"></a>Classe mip::ExecutionState 
+# <a name="class-executionstate"></a>Classe ExecutionState 
 Interfaccia per tutti gli stati necessari per eseguire il motore.
 I client dovrebbero chiamare i metodi solo per ottenere lo stato necessario. Di conseguenza, per motivi di efficienza, è consigliabile che i client implementino questa interfaccia in modo che lo stato corrispondente sia calcolato in modo dinamico anziché in anticipo.
   
@@ -23,14 +23,15 @@ I client dovrebbero chiamare i metodi solo per ottenere lo stato necessario. Di 
 public std:: shared_ptr\<label\> GetNewLabel () const  |  Ottiene l'ID dell'etichetta di riservatezza da applicare al documento.
 public std::string GetContentIdentifier() const  |  Ottiene la descrizione del contenuto che descrive il documento. esempio per un file: [percorso\nomefile] esempio per un messaggio di posta elettronica: [Subject: sender].
 public virtual DataState GetDataState () const  |  Ottiene lo stato del contenuto mentre l'applicazione interagisce con esso.
-public std::p Air\<bool, std:: String\> IsDowngradeJustified () const  |  L'implementazione dovrebbe restituire un valore che indica se è stata fornita una giustificazione per effettuare il downgrade di un'etichetta esistente.
+public std::p aria\<bool, std:: String\> IsDowngradeJustified () const  |  L'implementazione dovrebbe restituire un valore che indica se è stata fornita una giustificazione per effettuare il downgrade di un'etichetta esistente.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ottiene il metodo di assegnazione della nuova etichetta.
-public virtual std:: Vector\<std::p Air\<std:: String, std:: String\>\> GetNewLabelExtendedProperties () const  |  Restituisce le proprietà estese della nuova etichetta.
-public std:: Vector\<std::p Air\<std:: String, std:: String\>\> GetContentMetadata (const std:: Vector\<std:: String\>& Names, const std:: Vector\<std:: String\>& namePrefixes) const  |  Ottiene gli elementi dei metadati dal contenuto.
+public virtual std:: Vector\<std::p Air\<std:: String, std:: String\> \> GetNewLabelExtendedProperties () const  |  Restituisce le proprietà estese della nuova etichetta.
+public std:: Vector\<MetadataEntry\> GetContentMetadata (const std::\<vector std::\> String& names, const std\<:: Vector STD\> :: String& namePrefixes) const  |  Ottiene gli elementi dei metadati dal contenuto.
 public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  Ottiene il descrittore di protezione.
 public ContentFormat GetContentFormat() const  |  Ottiene il formato del contenuto.
+public virtual unsigned int GetContentMetadataVersion () const  |  Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.
 public ActionType GetSupportedActions() const  |  Ottiene un'enumerazione mascherata che descrive tutti i tipi di azioni supportati.
-public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: Vector\<std:: shared_ptr\<ClassificationRequest\>\> &) const  |  Restituisce una mappa dei risultati della classificazione.
+public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std::\<vector std::\<shared_ptr\> \> ClassificationRequest &) const  |  Restituisce una mappa dei risultati della classificazione.
 public virtual std:: Map\<std:: String, std:: String\> GetAuditMetadata () const  |  Restituisce una mappa delle coppie chiave-valore di controllo specifiche dell'applicazione.
   
 ## <a name="members"></a>Members
@@ -68,7 +69,7 @@ Ottiene il metodo di assegnazione della nuova etichetta.
   
 **Restituisce**: metodo di assegnazione STANDARD, PRIVILEGED, AUTO. 
   
-**Vedere anche**: [MIP:: AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**Vedere anche**: mip::AssignmentMethod
   
 ### <a name="getnewlabelextendedproperties-function"></a>GetNewLabelExtendedProperties (funzione)
 Restituisce le proprietà estese della nuova etichetta.
@@ -94,7 +95,13 @@ Ottiene il formato del contenuto.
   
 **Restituisce**: DEFAULT, EMAIL 
   
-**Vedere anche**: [MIP:: ContentFormat](mip-enums-and-structs.md#contentformat-enum)
+**Vedere anche**: mip::ContentFormat
+  
+### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion (funzione)
+Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.
+
+  
+**Restituisce**: versione dei metadati del contenuto. Se è 0, i metadati non vengono sottoposti a controllo delle versioni. Se un formato di file supporta più versioni di metadati, ciò consente a MIP di comprendere tutti i metadati e di segnalare le modifiche granulari ai metadati in base alla versione.
   
 ### <a name="getsupportedactions-function"></a>GetSupportedActions (funzione)
 Ottiene un'enumerazione mascherata che descrive tutti i tipi di azioni supportati.
@@ -106,7 +113,7 @@ ActionType::Justify deve essere supportato. Quando una modifica dei criteri e de
 ### <a name="getclassificationresults-function"></a>GetClassificationResults (funzione)
 Restituisce una mappa dei risultati della classificazione.
 
-Parametri:  
+Parametri  
 * **classificationIds**: elenco di ID di classificazione. 
 
 

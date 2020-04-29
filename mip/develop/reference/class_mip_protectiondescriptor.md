@@ -1,19 +1,19 @@
 ---
-title: Classe mip::ProtectionDescriptor
-description: Documenta la classe MIP::p rotectiondescriptor dell'SDK Microsoft Information Protection (MIP).
+title: Classe ProtectionDescriptor
+description: 'Documenta la classe protectiondescriptor:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b4257be5475b1225f79efe00c11df4b79ee67ee9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487039"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763954"
 ---
-# <a name="class-mipprotectiondescriptor"></a>Classe mip::ProtectionDescriptor 
+# <a name="class-protectiondescriptor"></a>Classe ProtectionDescriptor 
 Descrizione della protezione associata a una parte del contenuto.
   
 ## <a name="summary"></a>Riepilogo
@@ -28,12 +28,13 @@ public std::string GetLabelId() const  |  Ottiene l'ID etichetta, se presente.
 public std:: String GetContentId () const  |  Ottiene l'ID contenuto, se disponibile.
 public std:: Vector\<UserRights\> GetUserRights () const  |  Ottiene una raccolta di mapping dei diritti agli utenti.
 public std:: Vector\<UserRoles\> GetUserRoles () const  |  Ottiene una raccolta di mapping dei ruoli agli utenti.
-public bool DoesContentExpire() const  |  Verifica se il contenuto ha una data di scadenza.
+public bool DoesContentExpire () const  |  Verifica se il contenuto ha una data di scadenza.
 public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetContentValidUntil () const  |  Ottiene l'ora di scadenza della protezione.
 public bool DoesAllowOfflineAccess() const  |  Ottiene un valore che indica se la protezione consente o meno l'accesso al contenuto offline.
 public std::string GetReferrer() const  |  Ottiene l'indirizzo del referrer della protezione.
 public std:: Map\<std:: String, std:: String\> GetEncryptedAppData () const  |  Ottiene i dati specifici dell'app che sono stati crittografati.
 public std:: Map\<std:: String, std:: String\> GetSignedAppData () const  |  Ottiene i dati specifici dell'app che sono stati firmati.
+public std:: String GetDoubleKeyUrl () const  |  Ottiene l'URL della chiave doppia da utilizzare per la protezione personalizzata.
   
 ## <a name="members"></a>Members
   
@@ -83,7 +84,7 @@ Ottiene l'ID contenuto, se disponibile.
 Ottiene una raccolta di mapping dei diritti agli utenti.
 
   
-**Returns**: raccolta di mapping da utenti a diritti. il valore della proprietà UserRights sarà vuoto se l'utente corrente non ha accesso a queste informazioni (ovvero se l'utente non è il proprietario e non ha il diritto VIEWRIGHTSDATA).
+**Restituisce**: raccolta di mapping degli utenti ai diritti. Il valore della proprietà [UserRights](class_mip_userrights.md) sarà vuoto se l'utente corrente non ha accesso a queste informazioni, ovvero se l'utente non è il proprietario e non ha il diritto VIEWRIGHTSDATA.
   
 ### <a name="getuserroles-function"></a>GetUserRoles (funzione)
 Ottiene una raccolta di mapping dei ruoli agli utenti.
@@ -119,10 +120,16 @@ Ottiene l'indirizzo del referrer della protezione.
 Ottiene i dati specifici dell'app che sono stati crittografati.
 
   
-**Restituisce**: dati specifici dell'app. un ProtectionHandler può avere un dizionario di dati specifici dell'app che è stato crittografato dal servizio di protezione. Questi dati crittografati sono indipendenti dai dati firmati accessibili tramite ProtectionDescriptor:: GetSignedAppData
+**Restituisce**: dati specifici dell'app. Un oggetto ProtectionHandler può includere un dizionario di dati specifici dell'app che sono stati crittografati dal servizio di protezione. Questi dati crittografati sono indipendenti dai dati firmati accessibili tramite ProtectionDescriptor:: GetSignedAppData.
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData (funzione)
 Ottiene i dati specifici dell'app che sono stati firmati.
 
   
-**Restituisce**: dati specifici dell'app. un ProtectionHandler può avere un dizionario di dati specifici dell'app che è stato firmato dal servizio di protezione. Questi dati firmati sono indipendenti dai dati crittografati accessibili tramite ProtectionDescriptor:: GetEncryptedAppData
+**Restituisce**: dati specifici dell'app. Un oggetto ProtectionHandler può includere un dizionario di dati specifici dell'app che sono stati firmati dal servizio di protezione. Questi dati firmati sono indipendenti dai dati crittografati accessibili tramite ProtectionDescriptor:: GetEncryptedAppData.
+  
+### <a name="getdoublekeyurl-function"></a>GetDoubleKeyUrl (funzione)
+Ottiene l'URL della chiave doppia da utilizzare per la protezione personalizzata.
+
+  
+**Returns**: URL a doppia chiave che viene usato nelle richieste personalizzate per proteggere le informazioni con una seconda chiave

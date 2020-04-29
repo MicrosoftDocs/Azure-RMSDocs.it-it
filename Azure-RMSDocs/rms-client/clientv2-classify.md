@@ -4,19 +4,19 @@ description: Istruzioni su come classificare i documenti e i messaggi di posta e
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: bceeffc8c4c34d913cfd1f76f4f28d9f06d9169a
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 29731d98c27454daa30bdb43f2e01238d6808633
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422861"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224751"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guida dell'utente: classificare un file o un messaggio di posta elettronica usando il client di etichettatura unificato di Azure Information Protection per Windows
 
@@ -92,7 +92,7 @@ La guida dell'amministratore include l'elenco completo dei tipi di file che supp
 
 3. Se è stato selezionato un file non supporta la classificazione, fare clic su **Chiudi**. Non è possibile classificare il file senza proteggerlo.
     
-    Se è stata selezionata un'etichetta, fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. Fare clic su **Chiudi**.
+    Se è stata selezionata un'etichetta, fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
 
 Se si vuole cambiare selezionare un'altra etichetta, ripetere la procedura e scegliere un'etichetta diversa.
 

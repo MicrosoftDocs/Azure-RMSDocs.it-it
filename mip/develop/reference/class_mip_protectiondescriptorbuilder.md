@@ -1,38 +1,38 @@
 ---
-title: Classe mip::ProtectionDescriptorBuilder
-description: Documenta la classe MIP::p rotectiondescriptorbuilder dell'SDK Microsoft Information Protection (MIP).
+title: Classe ProtectionDescriptorBuilder
+description: 'Documenta la classe protectiondescriptorbuilder:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ed9d7085f7406e5c921843d32069f2f6af9f5807
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 11890665b02ade782edcff6c23296ab70c9368f8
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489691"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764466"
 ---
-# <a name="class-mipprotectiondescriptorbuilder"></a>Classe mip::ProtectionDescriptorBuilder 
-Costruisce un ProtectionDescriptor che descrive la protezione associata a una porzione di contenuto.
+# <a name="class-protectiondescriptorbuilder"></a>Classe ProtectionDescriptorBuilder 
+Costruisce un ProtectionDescriptor che descrive la protezione associata a una parte del contenuto.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public MIP_API std:: shared_ptr\<ProtectionDescriptor\> Build ()  |  Crea un ProtectionDescriptor le cui autorizzazioni di accesso sono definite da questa istanza di ProtectionDescriptorBuilder.
+public MIP_API std:: shared_ptr\<ProtectionDescriptor\> build ()  |  Crea una classe ProtectionDescriptor le cui autorizzazioni di accesso vengono definite da questa istanza di ProtectionDescriptorBuilder.
 public void SetName(const std::string& value)  |  Imposta il nome dei criteri di protezione.
 public void SetDescription(const std::string& value)  |  Imposta la descrizione dei criteri di protezione.
-public void SetContentValidUntil (const std:: Chrono:: time_point\<std:: Chrono:: system_clock\>& value)  |  Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
+public void SetContentValidUntil (const std:: Chrono::\<time_point std:: Chrono::\> system_clock& value)  |  Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
 public void SetAllowOfflineAccess(bool value)  |  Imposta un valore che indica se i criteri di protezione consentono l'accesso al contenuto offline.
 public void SetReferrer(const std::string& uri)  |  Imposta l'indirizzo del referrer dei criteri di protezione.
-public void SetEncryptedAppData (const std:: Map\<std:: String, std:: String\>& value)  |  Imposta i dati specifici dell'app da crittografare.
-public void SetSignedAppData (const std:: Map\<std:: String, std:: String\>& value)  |  Imposta i dati specifici dell'app da firmare.
-public virtual ~ProtectionDescriptorBuilder()  | _Non ancora documentato._
+public void SetEncryptedAppData (const std::\<map std:: String, std::\> String& valore)  |  Imposta i dati specifici dell'app da crittografare.
+public void SetSignedAppData (const std::\<map std:: String, std::\> String& valore)  |  Imposta i dati specifici dell'app da firmare.
+public void SetDoubleKeyUrl (const std:: String& doubleKeyUrl)  |  Imposta l'URL della chiave doppia da utilizzare per la protezione personalizzata.
   
 ## <a name="members"></a>Members
   
 ### <a name="build-function"></a>Funzione di compilazione
-Crea un ProtectionDescriptor le cui autorizzazioni di accesso sono definite da questa istanza di ProtectionDescriptorBuilder.
+Crea una classe ProtectionDescriptor le cui autorizzazioni di accesso vengono definite da questa istanza di ProtectionDescriptorBuilder.
 
   
 **Restituisce**: nuova istanza di ProtectionDescriptor
@@ -40,7 +40,7 @@ Crea un ProtectionDescriptor le cui autorizzazioni di accesso sono definite da q
 ### <a name="setname-function"></a>Funzione Sename
 Imposta il nome dei criteri di protezione.
 
-Parametri:  
+Parametri  
 * **value**: nome dei criteri di protezione
 
 
@@ -48,23 +48,23 @@ Parametri:
 ### <a name="setdescription-function"></a>Funzione sedescription
 Imposta la descrizione dei criteri di protezione.
 
-Parametri:  
-* **value**: descrizione del criterio
+Parametri  
+* **valore**: Descrizione del criterio
 
 
   
 ### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil (funzione)
 Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
 
-Parametri:  
-* **value**: scadenza del criterio
+Parametri  
+* **valore**: ora di scadenza dei criteri
 
 
   
 ### <a name="setallowofflineaccess-function"></a>SetAllowOfflineAccess (funzione)
 Imposta un valore che indica se i criteri di protezione consentono l'accesso al contenuto offline.
 
-Parametri:  
+Parametri  
 * **value**: valore che indica se i criteri consentono l'accesso al contenuto offline
 
 
@@ -72,7 +72,7 @@ Parametri:
 ### <a name="setreferrer-function"></a>SetReferrer (funzione)
 Imposta l'indirizzo del referrer dei criteri di protezione.
 
-Parametri:  
+Parametri  
 * **uri**: indirizzo del referrer del criterio
 
 
@@ -81,7 +81,7 @@ Il referrer è un URI che può essere visualizzato se l'acquisizione dei criteri
 ### <a name="setencryptedappdata-function"></a>SetEncryptedAppData (funzione)
 Imposta i dati specifici dell'app da crittografare.
 
-Parametri:  
+Parametri  
 * **value**: dati specifici dell'app
 
 
@@ -90,11 +90,15 @@ Un'applicazione può specificare un dizionario di dati specifici dell'app che sa
 ### <a name="setsignedappdata-function"></a>SetSignedAppData (funzione)
 Imposta i dati specifici dell'app da firmare.
 
-Parametri:  
+Parametri  
 * **value**: dati specifici dell'app
 
 
 Un'applicazione può specificare un dizionario di dati specifici dell'app che saranno firmati dal servizio di protezione. Questi dati firmati sono indipendenti dai dati crittografati impostati da SetEncryptedAppData.
   
-### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder (funzione)
-_Non ancora documentato._
+### <a name="setdoublekeyurl-function"></a>SetDoubleKeyUrl (funzione)
+Imposta l'URL della chiave doppia da utilizzare per la protezione personalizzata.
+
+Parametri  
+* **valore**: URL chiave doppia
+

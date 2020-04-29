@@ -1,19 +1,19 @@
 ---
-title: Classe mip::AddContentHeaderAction
-description: 'Documenta la classe MIP:: addcontentheaderaction di Microsoft Information Protection (MIP) SDK.'
+title: Classe AddContentHeaderAction
+description: 'Documenta la classe addcontentheaderaction:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f58fe47de4ee1f79f64415013fc1949ef53b2adf
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 341c8d22902d937068de3e9afb80aac9cb8305c4
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490728"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763751"
 ---
-# <a name="class-mipaddcontentheaderaction"></a>Classe mip::AddContentHeaderAction 
+# <a name="class-addcontentheaderaction"></a>Classe AddContentHeaderAction 
 Classe di azione che specifica l'aggiunta di un'intestazione contenuto.
   
 ## <a name="summary"></a>Riepilogo
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Ottiene il margine dell'intestazione a partire 
 API usata per contrassegnare l'elemento di intestazione contenuto.
 
   
-**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene l'intestazione contenuto. Lo stesso nome verrà restituito in RemoveContentHeaderAction nel caso in cui l'intestazione del contenuto debba essere rimossa.
+**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene l'intestazione contenuto. Lo stesso nome verrà restituito in [RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) nel caso in cui l'intestazione contenuto debba essere rimossa.
   
 ### <a name="gettext-function"></a>Funzione gettext
 Ottiene il testo destinato a essere inserito nell'intestazione contenuto.
@@ -57,15 +57,15 @@ Ottiene le dimensioni del carattere usato per visualizzare l'intestazione conten
 Ottiene il colore del carattere usato per visualizzare l'intestazione contenuto.
 
   
-**Restituisce**: colore del carattere in formato stringa (ad esempio "#000000").
+**Restituisce**il colore del carattere sotto forma di stringa, ad esempio #000000 ".
   
 ### <a name="getalignment-function"></a>Funzione getAlignment
 Ottiene l'allineamento dell'intestazione.
 
   
-**Restituisce**: enumeratore ContentMarkAlignment: LEFT|RIGHT|CENTER. 
+**Restituisce**: l'enumeratore CONTENTMARKALIGNMENT: Left | A destra | Center. 
   
-**Vedere anche**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Vedere anche**: ContentMarkAlignment
   
 ### <a name="getmargin-function"></a>Funzione GetMargin
 Ottiene il margine dell'intestazione a partire dal basso.

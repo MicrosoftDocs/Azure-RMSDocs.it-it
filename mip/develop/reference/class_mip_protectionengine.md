@@ -1,36 +1,40 @@
 ---
-title: Classe mip::ProtectionEngine
-description: Documenta la classe MIP::p rotectionengine dell'SDK Microsoft Information Protection (MIP).
+title: Classe ProtectionEngine
+description: 'Documenta la classe protectionengine:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 23f9f54a3f9701d0c9321b7ba643ed7dd3f47be1
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 61311ec2ac7c622099e9e7f56f22191e0287278c
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486835"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763911"
 ---
-# <a name="class-mipprotectionengine"></a>Classe mip::ProtectionEngine 
+# <a name="class-protectionengine"></a>Classe ProtectionEngine 
 Gestisce azioni correlate alla protezione relative a un'identità specifica.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ottiene le impostazioni del motore.
-public std:: shared_ptr\<AsyncControl\> GetTemplatesAsync (const std:: shared_ptr\<ProtectionEngine:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di modelli disponibili per un utente.
-public std:: Vector\<std:: shared_ptr\<TemplateDescriptor\>\> gettemplates (const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di modelli disponibili per un utente.
+public std:: shared_ptr\<AsyncControl\> GetTemplatesAsync (const std::\<shared_ptr ProtectionEngine:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di modelli disponibili per un utente.
+public std:: Vector\<std:: shared_ptr\<TemplateDescriptor\> \> gettemplates (const std::\<shared_ptr\> void& context)  |  Ottiene la raccolta di modelli disponibili per un utente.
 public bool IsFeatureSupported (FeatureId featureId)  |  Verificare che la funzionalità sia supportata.
-public std:: shared_ptr\<AsyncControl\> GetRightsForLabelIdAsync (const std:: String & documentId, const std:: String & labelId, const std:: String & ownerEmail, const std:: String & delegatedUserEmail, const std:: shared_ptr\<ProtectionEngine:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di diritti disponibili per un utente per un ID etichetta.
-public std:: Vector\<std:: String\> GetRightsForLabelId (const std:: String & documentId, const std:: String & labelId, const std:: String & ownerEmail, const std:: String & delegatedUserEmail, const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di diritti disponibili per un utente per un labelId.
-public std:: shared_ptr\<AsyncControl\> CreateProtectionHandlerForPublishingAsync (const ProtectionHandler::P ublishingSettings & Settings, const std:: shared_ptr\<ProtectionHandler:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
-public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForPublishing (const ProtectionHandler::P ublishingSettings & Settings, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
-public std:: shared_ptr\<AsyncControl\> CreateProtectionHandlerForConsumptionAsync (const ProtectionHandler:: ConsumptionSettings & Settings, const std:: shared_ptr\<ProtectionHandler:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
-public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForConsumption (const ProtectionHandler:: ConsumptionSettings & Settings, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
-public bool LoadUserCert (const std:: shared_ptr\<void\>& context)  |  pre-preventivamente: caricare il certificato concessore di licenze utente, utile quando il caricamento in background tramite prelicense potrebbe incorrere in una chiamata di rete aggiuntiva.
-public std:: shared_ptr\<AsyncControl\> LoadUserCertAsync (const std:: shared_ptr\<ProtectionEngine:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  pre-preventivamente: caricare il certificato concessore di licenze utente, utile quando il caricamento in background tramite prelicense potrebbe incorrere in una chiamata di rete aggiuntiva.
+public std:: shared_ptr\<AsyncControl\> GetRightsForLabelIdAsync (const std:: String& documentId, const std:: String& LabelId, const std:: String& owneremail, const std:: String& delegatedUserEmail, const std::\<shared_ptr\> ProtectionEngine:: Observer& Observer, const\<STD\> :: shared_ptr void& context)  |  Ottiene la raccolta di diritti disponibili per un utente per un ID etichetta.
+public std:: Vector\<std:: String\> GetRightsForLabelId (const std:: String& documentId, const std:: String& LabelId, const std:: String& owneremail, const std:: String& delegatedUserEmail, const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di diritti disponibili per un utente per un labelId.
+public std:: shared_ptr\<AsyncControl\> CreateProtectionHandlerForPublishingAsync (const ProtectionHandler::P ublishingsettings& Settings, const std:\<: shared_ptr ProtectionHandler::\> Observer& Observer, const std::\<shared_ptr\> void& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForPublishing (const ProtectionHandler::P ublishingsettings& Settings, const std:\<:\> shared_ptr void& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public std:: shared_ptr\<AsyncControl\> CreateProtectionHandlerForConsumptionAsync (const ProtectionHandler:: ConsumptionSettings& Settings, const std:\<: shared_ptr ProtectionHandler::\> Observer& Observer, const std::\<shared_ptr\> void& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForConsumption (const ProtectionHandler:: ConsumptionSettings& Settings, const std:\<:\> shared_ptr void& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public bool LoadUserCert (const std::\<shared_ptr\> void& context)  |  pre-preventivamente: caricare il certificato concessore di licenze utente, utile quando il caricamento in background tramite prelicense potrebbe incorrere in una chiamata di rete aggiuntiva.
+public std:: shared_ptr\<AsyncControl\> LoadUserCertAsync (const std::\<shared_ptr ProtectionEngine:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  pre-preventivamente: caricare il certificato concessore di licenze utente, utile quando il caricamento in background tramite prelicense potrebbe incorrere in una chiamata di rete aggiuntiva.
+public void RegisterContentForTrackingAndRevocation (const std::\<vector\> uint8_t& serializedPublishingLicense, const std:: String& ContentName, bool isOwnerNotificationEnabled, const std\<:\> : shared_ptr void& context)  |  Registrare la licenza di pubblicazione (PL) per il rilevamento dei documenti & revoca.
+public std:: shared_ptr\<AsyncControl\> RegisterContentForTrackingAndRevocationAsync (const std::\<vector\> uint8_t& serializedPublishingLicense, const std:: String& ContentName, bool isOwnerNotificationEnabled, const std\<:: shared_ptr ProtectionEngine:\> : Observer& Observer, const std:\<:\> shared_ptr void& context)  |  Registrare la licenza di pubblicazione (PL) per il rilevamento dei documenti & revoca.
+public void RevokeContent (const std::\<vector\> uint8_t& serializedPublishingLicense, const std:\<:\> shared_ptr void& context)  |  Eseguire la revoca per il contenuto.
+public std:: shared_ptr\<AsyncControl\> RevokeContentAsync (const std::\<vector\> uint8_t& serializedPublishingLicense, const std:\<: shared_ptr ProtectionEngine::\> Observer& Observer, const std::\<shared_ptr\> void& context)  |  Eseguire la revoca per il contenuto.
   
 ## <a name="members"></a>Members
   
@@ -43,11 +47,11 @@ Ottiene le impostazioni del motore.
 ### <a name="gettemplatesasync-function"></a>GetTemplatesAsync (funzione)
 Ottiene la raccolta di modelli disponibili per un utente.
 
-Parametri:  
-* **Observer**: una classe che implementa l'interfaccia ProtectionEngine:: Observer 
+Parametri  
+* **observer**: classe che implementa l'interfaccia [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) 
 
 
-* **contesto**: contesto client che verrà passato in modo opaco agli osservatori e HttpDelegate facoltativi
+* **context**: contesto client che verrà nuovamente passato in maniera opaca agli observer e all'oggetto HttpDelegate facoltativo
 
 
 
@@ -57,8 +61,8 @@ Parametri:
 ### <a name="gettemplates-function"></a>Funzione gettemplates
 Ottiene la raccolta di modelli disponibili per un utente.
 
-Parametri:  
-* **contesto**: contesto client che verrà passato in modo opaco a HttpDelegate facoltativo
+Parametri  
+* **context**: contesto client che verrà passato in maniera opaca all'oggetto HttpDelegate facoltativo
 
 
 
@@ -68,7 +72,7 @@ Parametri:
 ### <a name="isfeaturesupported-function"></a>IsFeatureSupported (funzione)
 Verificare che la funzionalità sia supportata.
 
-Parametri:  
+Parametri  
 * **FeatureId**: ID della funzionalità da controllare
 
 
@@ -79,23 +83,23 @@ Parametri:
 ### <a name="getrightsforlabelidasync-function"></a>GetRightsForLabelIdAsync (funzione)
 Ottiene la raccolta di diritti disponibili per un utente per un ID etichetta.
 
-Parametri:  
+Parametri  
 * **documentId**: ID documento associato ai metadati del documento 
 
 
 * **LabelId**: ID etichetta associato ai metadati del documento con cui è stato creato il documento 
 
 
-* **ownerEmail**: proprietario del documento 
+* **owneremail**: proprietario del documento 
 
 
 * **R**: l'utente delegato viene specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente, vuoto se non è presente alcun valore 
 
 
-* **Observer**: una classe che implementa l'interfaccia ProtectionEngine:: Observer 
+* **observer**: classe che implementa l'interfaccia ProtectionEngine::Observer 
 
 
-* **contesto**: lo stesso contesto verrà inviato a ProtectionEngine:: Observer:: OnGetRightsForLabelIdSuccess o ProtectionEngine:: Observer:: OnGetRightsForLabelIdFailure
+* **context**: questo stesso contesto verrà inoltrato a ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess o ProtectionEngine::Observer::OnGetRightsForLabelIdFailure
 
 
 
@@ -105,7 +109,7 @@ Parametri:
 ### <a name="getrightsforlabelid-function"></a>GetRightsForLabelId (funzione)
 Ottiene la raccolta di diritti disponibili per un utente per un labelId.
 
-Parametri:  
+Parametri  
 * **documentId**: ID documento associato ai metadati del documento 
 
 
@@ -118,7 +122,7 @@ Parametri:
 * **R**: l'utente delegato viene specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente, vuoto se non è presente alcun valore 
 
 
-* **contesto**: lo stesso contesto verrà inviato a HttpDelegate facoltativo
+* **context**: questo stesso contesto verrà inoltrato all'oggetto HttpDelegate facoltativo
 
 
 
@@ -128,11 +132,11 @@ Parametri:
 ### <a name="createprotectionhandlerforpublishingasync-function"></a>CreateProtectionHandlerForPublishingAsync (funzione)
 Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
-Parametri:  
+Parametri  
 * **Impostazioni**: impostazioni di protezione 
 
 
-* **Observer**: una classe che implementa l'interfaccia ProtectionHandler:: Observer 
+* **observer**: classe che implementa l'interfaccia [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) 
 
 
 * **contesto**: contesto client che verrà inviato in modo opaco agli osservatori e HttpDelegate facoltativi
@@ -145,7 +149,7 @@ Parametri:
 ### <a name="createprotectionhandlerforpublishing-function"></a>CreateProtectionHandlerForPublishing (funzione)
 Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
-Parametri:  
+Parametri  
 * **Impostazioni**: impostazioni di protezione 
 
 
@@ -159,11 +163,11 @@ Parametri:
 ### <a name="createprotectionhandlerforconsumptionasync-function"></a>CreateProtectionHandlerForConsumptionAsync (funzione)
 Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
-Parametri:  
+Parametri  
 * **Impostazioni**: impostazioni di protezione 
 
 
-* **Observer**: una classe che implementa l'interfaccia ProtectionHandler:: Observer 
+* **observer**: classe che implementa l'interfaccia ProtectionHandler::Observer 
 
 
 * **contesto**: contesto client che verrà inviato in modo opaco agli osservatori e HttpDelegate facoltativi
@@ -176,7 +180,7 @@ Parametri:
 ### <a name="createprotectionhandlerforconsumption-function"></a>CreateProtectionHandlerForConsumption (funzione)
 Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
-Parametri:  
+Parametri  
 * **Impostazioni**: impostazioni di protezione 
 
 
@@ -190,7 +194,7 @@ Parametri:
 ### <a name="loadusercert-function"></a>LoadUserCert (funzione)
 pre-preventivamente: caricare il certificato concessore di licenze utente, utile quando il caricamento in background tramite prelicense potrebbe incorrere in una chiamata di rete aggiuntiva.
 
-Parametri:  
+Parametri  
 * **contesto**: contesto client che verrà trasmesso in modo opaco a HttpDelegate facoltativo
 
 
@@ -201,8 +205,73 @@ Parametri:
 ### <a name="loadusercertasync-function"></a>LoadUserCertAsync (funzione)
 pre-preventivamente: caricare il certificato concessore di licenze utente, utile quando il caricamento in background tramite prelicense potrebbe incorrere in una chiamata di rete aggiuntiva.
 
-Parametri:  
-* **Observer**: una classe che implementa l'interfaccia ProtectionHandler:: Observer 
+Parametri  
+* **observer**: classe che implementa l'interfaccia ProtectionHandler::Observer 
+
+
+* **contesto**: contesto client che verrà inviato in modo opaco agli osservatori e HttpDelegate facoltativi
+
+
+
+  
+**Restituisce**: oggetto controllo asincrono.
+  
+### <a name="registercontentfortrackingandrevocation-function"></a>RegisterContentForTrackingAndRevocation (funzione)
+Registrare la licenza di pubblicazione (PL) per il rilevamento dei documenti & revoca.
+
+Parametri  
+* **ContentName**: nome associato al contenuto specificato da serializedPublishingLicense. Se serializedPublishingLicense specifica un nome di contenuto, tale valore avrà la precedenza. 
+
+
+* **isOwnerNotificationEnabled**: impostare su true per notificare al proprietario via posta elettronica ogni volta che il documento viene decrittografato oppure false per non inviare la notifica. 
+
+
+* **contesto**: contesto client che verrà trasmesso in modo opaco a HttpDelegate facoltativo
+
+
+  
+### <a name="registercontentfortrackingandrevocationasync-function"></a>RegisterContentForTrackingAndRevocationAsync (funzione)
+Registrare la licenza di pubblicazione (PL) per il rilevamento dei documenti & revoca.
+
+Parametri  
+* **serializedPublishingLicense**: licenza di pubblicazione serializzata dal contenuto protetto 
+
+
+* **ContentName**: nome associato al contenuto specificato da serializedPublishingLicense. Se serializedPublishingLicense specifica un nome di contenuto, tale valore avrà la precedenza 
+
+
+* **isOwnerNotificationEnabled**: impostare su true per notificare al proprietario via posta elettronica ogni volta che il documento viene decrittografato oppure false per non inviare la notifica. 
+
+
+* **observer**: classe che implementa l'interfaccia ProtectionHandler::Observer 
+
+
+* **contesto**: contesto client che verrà inviato in modo opaco agli osservatori e HttpDelegate facoltativi
+
+
+
+  
+**Restituisce**: oggetto controllo asincrono.
+  
+### <a name="revokecontent-function"></a>RevokeContent (funzione)
+Eseguire la revoca per il contenuto.
+
+Parametri  
+* **serializedPublishingLicense**: licenza di pubblicazione serializzata dal contenuto protetto 
+
+
+* **contesto**: contesto client che verrà trasmesso in modo opaco a HttpDelegate facoltativo
+
+
+  
+### <a name="revokecontentasync-function"></a>RevokeContentAsync (funzione)
+Eseguire la revoca per il contenuto.
+
+Parametri  
+* **serializedPublishingLicense**: licenza di pubblicazione serializzata dal contenuto protetto 
+
+
+* **observer**: classe che implementa l'interfaccia ProtectionHandler::Observer 
 
 
 * **contesto**: contesto client che verrà inviato in modo opaco agli osservatori e HttpDelegate facoltativi

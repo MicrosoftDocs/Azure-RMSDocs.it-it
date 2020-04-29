@@ -1,19 +1,19 @@
 ---
-title: 'Classe MIP:: ActionData'
-description: 'Documenta la classe MIP:: ActionData di Microsoft Information Protection (MIP) SDK.'
+title: Classe ActionData
+description: 'Documenta la classe ActionData:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: bb74866f0a4d7396265869b2039594a7dd22ee13
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: d72213c4ef6b8f10eddd3000562099fd6ce1a982
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489198"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763789"
 ---
-# <a name="class-mipactiondata"></a>Classe MIP:: ActionData 
+# <a name="class-actiondata"></a>Classe ActionData 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                

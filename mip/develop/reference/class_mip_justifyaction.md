@@ -1,20 +1,20 @@
 ---
-title: Classe mip::JustifyAction
-description: 'Documenta la classe MIP:: justifyaction di Microsoft Information Protection (MIP) SDK.'
+title: Classe JustifyAction
+description: 'Documenta la classe justifyaction:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: aaf842feb4d7c4f33b7af897378ae308e11b012f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ae2c1dd96c07febf374c50791c915597deea7c76
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489980"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762198"
 ---
-# <a name="class-mipjustifyaction"></a>Classe mip::JustifyAction 
-Per giustificare l'azione è necessario fornire una giustificazione al downgrade di un'etichetta e impostare la risposta nello stato di esecuzione.
+# <a name="class-justifyaction"></a>Classe JustifyAction 
+Justify Action richiede la giustificazione del downgrade di un'etichetta e l'impostazione della risposta nello stato di esecuzione.
   
 **Vedere anche**: MIP:: ExecutionState:: IsDowngradeJustified
   

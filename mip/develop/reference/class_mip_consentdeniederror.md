@@ -1,19 +1,19 @@
 ---
-title: Classe mip::ConsentDeniedError
-description: 'Documenta la classe MIP:: consentdeniederror di Microsoft Information Protection (MIP) SDK.'
+title: Classe ConsentDeniedError
+description: 'Documenta la classe consentdeniederror:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 07aa6d39bf14e6995d9dc60be88d02928105aa2f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 9ae93f60a878827cd0a56253c84386534d10ab0a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488960"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763446"
 ---
-# <a name="class-mipconsentdeniederror"></a>Classe mip::ConsentDeniedError 
+# <a name="class-consentdeniederror"></a>Classe ConsentDeniedError 
 Non è stato concesso il consenso per un'operazione che ha richiesto il consenso dell'utente.
   
 ## <a name="summary"></a>Riepilogo

@@ -1,36 +1,36 @@
 ---
-title: 'Classe MIP:: AuthDelegate:: OAuth2Challenge'
-description: 'Documenta la classe MIP:: authdelegate di Microsoft Information Protection (MIP) SDK.'
+title: 'Classe AuthDelegate:: OAuth2Challenge'
+description: 'Documenta la classe authdelegate:: oauth2challenge di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 8e3119e18d465c9ad66dd1cbbece003b96d1a3b7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: f8a350a8c9ddd68f484a98b0e63860d2965bd890
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489062"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763611"
 ---
-# <a name="class-mipauthdelegateoauth2challenge"></a>Classe MIP:: AuthDelegate:: OAuth2Challenge 
+# <a name="class-authdelegateoauth2challenge"></a>Classe AuthDelegate:: OAuth2Challenge 
 classe che contiene tutte le informazioni richieste dall'applicazione chiamante per generare un token OAuth2.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public OAuth2Challenge (const std:: String & Authority, const std:: String & Resource, const std:: String & scope, const std:: String & Claims)  |  Costruisce un nuovo oggetto OAuth2Challenge.
-public const std:: String & getauthority () const  |  Ottenere la stringa dell'autorità.
-public const std:: String & GetResource () const  |  Ottenere la stringa di risorsa.
-public const std:: String & GetScope () const  |  Ottenere la stringa dell'ambito.
-public const std:: String & getclaims () const  |  Ottenere la stringa delle attestazioni.
+public OAuth2Challenge (const std:: String& Authority, const std:: String& Resource, const std:: String& scope, const std:: String& Claims)  |  Costruisce un nuovo oggetto OAuth2Challenge.
+public const std:: String& getauthority () const  |  Ottenere la stringa dell'autorità.
+public const std:: String& GetResource () const  |  Ottenere la stringa di risorsa.
+public const std:: String& GetScope () const  |  Ottenere la stringa dell'ambito.
+public const std:: String& getclaims () const  |  Ottenere la stringa delle attestazioni.
   
 ## <a name="members"></a>Members
   
 ### <a name="oauth2challenge-function"></a>OAuth2Challenge (funzione)
 Costruisce un nuovo oggetto OAuth2Challenge.
 
-Parametri:  
+Parametri  
 * **autorità**: l'autorità con cui deve essere generato il token. 
 
 

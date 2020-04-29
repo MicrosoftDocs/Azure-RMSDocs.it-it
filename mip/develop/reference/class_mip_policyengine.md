@@ -1,45 +1,47 @@
 ---
-title: Classe mip::PolicyEngine
-description: Documenta la classe MIP::p olicyengine dell'SDK Microsoft Information Protection (MIP).
+title: classe PolicyEngine
+description: 'Documenta la classe PolicyEngine:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 114b8dedb46a0e86eb73ff1f6fa58de81927b60e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 40072d56fd5bd1c577759991f7b98236a58e5ed2
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489827"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761142"
 ---
-# <a name="class-mippolicyengine"></a>Classe mip::PolicyEngine 
+# <a name="class-policyengine"></a>classe PolicyEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Ottenere le impostazioni del motore dei criteri.
-public const std:: Vector\<std:: shared_ptr\<label\>\>& ListSensitivityLabels ()  |  Elenca le etichette di riservatezza associate al motore dei criteri.
-public const std:: Vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes () const  |  elencare i tipi di riservatezza associati al motore dei criteri.
+public const Settings& GetSettings() const  |  Ottiene [Settings](class_mip_policyengine_settings.md) del motore dei criteri.
+public const std::\<vector std::\<shared_ptr\> \> label& ListSensitivityLabels ()  |  Elenca le etichette di riservatezza associate al motore dei criteri.
+public const std::\<vector std::\<shared_ptr\> \> SensitivityTypesRulePackage& ListSensitivityTypes () const  |  elencare i tipi di riservatezza associati al motore dei criteri.
 public const std::string& GetMoreInfoUrl() const  |  Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
 public bool IsLabelingRequired() const  |  Controlla se il criterio determina che un documento deve essere o meno etichettato.
 public std:: shared_ptr\<label\> GetDefaultSensitivityLabel ()  |  Ottiene l'etichetta di riservatezza predefinita.
-public std:: shared_ptr\<label\> GetLabelById (const std:: String & ID) const  |  Ottiene l'etichetta in base all'ID fornito.
+public std:: shared_ptr\<label\> GetLabelById (const std:: String& ID) const  |  Ottiene l'etichetta in base all'ID fornito.
 public std:: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Registra un evento specifico dell'applicazione per la pipeline di controllo.
-public const std:: String & GetPolicyDataXml () const  |  Ottiene i dati XML dei criteri che descrivono le impostazioni, le etichette e le regole associate a questo criterio.
-public const std:: String & GetSensitivityTypesDataXml () const  |  Ottiene i dati XML dei tipi di riservatezza che descrivono i tipi di riservatezza associati a questi criteri.
-public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene un elenco di impostazioni personalizzate.
-public const std:: String & GetPolicyFileId () const  |  Ottiene l'ID del file di criteri.
-public const std:: String & GetSensitivityFileId () const  |  Ottiene l'ID del file di riservatezza.
+public const std:: String& GetTenantId () const  |  Ottiene l'ID tenant associato al motore.
+public const std:: String& GetPolicyDataXml () const  |  Ottiene i dati XML dei criteri che descrivono le impostazioni, le etichette e le regole associate a questo criterio.
+public const std:: String& GetSensitivityTypesDataXml () const  |  Ottiene i dati XML dei tipi di riservatezza che descrivono i tipi di riservatezza associati a questi criteri.
+public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene un elenco di impostazioni personalizzate.
+public const std:: String& GetPolicyFileId () const  |  Ottiene l'ID del file di criteri.
+public const std:: String& GetSensitivityFileId () const  |  Ottiene l'ID del file di riservatezza.
 public bool HasClassificationRules () const  |  Ottiene se il criterio ha regole automatiche o di raccomandazione.
 public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetLastPolicyFetchTime () const  |  Ottiene l'ora dell'ultimo recupero dei criteri.
+public unsigned int GetWxpMetadataVersion () const  |  Ottiene la versione dei metadati WXP (Windows, Excel, PowerPoint) consigliata attualmente 0 per versione precedente 1 per la versione abilitata per la creazione di co-creazione.
   
 ## <a name="members"></a>Members
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
-Ottenere le impostazioni del motore dei criteri.
+Ottiene Settings del motore dei criteri.
 
   
 **Restituisce**: impostazioni del motore dei criteri. 
@@ -84,7 +86,7 @@ Ottiene l'etichetta in base all'ID fornito.
 ### <a name="createpolicyhandler-function"></a>CreatePolicyHandler (funzione)
 Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
 
-Parametri:  
+Parametri  
 * **R**: bool che indica se l'individuazione del controllo è abilitata o meno.
 
 
@@ -96,7 +98,7 @@ Per la durata del documento, l'applicazione deve contenere l'oggetto gestore dei
 ### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent (funzione)
 Registra un evento specifico dell'applicazione per la pipeline di controllo.
 
-Parametri:  
+Parametri  
 * **livello**: del livello di registrazione: info/Error/Warning. 
 
 
@@ -106,6 +108,12 @@ Parametri:
 * **EventData**: i dati associati all'evento.
 
 
+  
+### <a name="gettenantid-function"></a>GetTenantId (funzione)
+Ottiene l'ID tenant associato al motore.
+
+  
+**Restituisce**: ID tenant
   
 ### <a name="getpolicydataxml-function"></a>GetPolicyDataXml (funzione)
 Ottiene i dati XML dei criteri che descrivono le impostazioni, le etichette e le regole associate a questo criterio.
@@ -148,3 +156,9 @@ Ottiene l'ora dell'ultimo recupero dei criteri.
 
   
 **Restituisce**: l'ora dell'ultimo recupero dei criteri
+  
+### <a name="getwxpmetadataversion-function"></a>GetWxpMetadataVersion (funzione)
+Ottiene la versione dei metadati WXP (Windows, Excel, PowerPoint) consigliata attualmente 0 per versione precedente 1 per la versione abilitata per la creazione di co-creazione.
+
+  
+**Restituisce**: unsigned int indecating la versione dei metadati supportata dal tenant per i file WXP.

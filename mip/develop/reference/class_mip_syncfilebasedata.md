@@ -1,19 +1,19 @@
 ---
-title: 'Classe MIP:: SyncFileBaseData'
-description: 'Documenta la classe MIP:: syncfilebasedata di Microsoft Information Protection (MIP) SDK.'
+title: Classe SyncFileBaseData
+description: 'Documenta la classe syncfilebasedata:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 60209df41436f5409d2bf50e0fd0071eed8d74d6
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 1431ce00006692a9fdfff660c707e0b90fb9f50e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489385"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760693"
 ---
-# <a name="class-mipsyncfilebasedata"></a>Classe MIP:: SyncFileBaseData 
+# <a name="class-syncfilebasedata"></a>Classe SyncFileBaseData 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                

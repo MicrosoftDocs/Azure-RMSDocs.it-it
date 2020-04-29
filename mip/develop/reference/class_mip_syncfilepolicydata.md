@@ -1,28 +1,28 @@
 ---
-title: 'Classe MIP:: SyncFilePolicyData'
-description: 'Documenta la classe MIP:: syncfilepolicydata di Microsoft Information Protection (MIP) SDK.'
+title: Classe SyncFilePolicyData
+description: 'Documenta la classe syncfilepolicydata:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a9e08fa2f734f40e4a99aae4a6e141cec4eff6c0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 516b6ea2e3282ac17e4a17da979285ea23d76d05
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489351"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764317"
 ---
-# <a name="class-mipsyncfilepolicydata"></a>Classe MIP:: SyncFilePolicyData 
+# <a name="class-syncfilepolicydata"></a>Classe SyncFilePolicyData 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Public Const LabelGroupData * GetLabelGroupData () const  | _Non ancora documentato._
-public const std:: Vector\<std:: unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData () const  | _Non ancora documentato._
-public const std:: String & GetUpn () const  | _Non ancora documentato._
-public const std:: unordered_map\<std:: String, std:: String\>& getclassification () const  | _Non ancora documentato._
-public const std:: String & GetUserObjectId () const  | _Non ancora documentato._
+public const std::\<vector std::\<unique_ptr\> \> PolicyPackageData& GetPoliciesPackageData () const  | _Non ancora documentato._
+public const std:: String& GetUpn () const  | _Non ancora documentato._
+public const std::\<unordered_map std:: String, std::\> String& getclassification () const  | _Non ancora documentato._
+public const std:: String& GetUserObjectId () const  | _Non ancora documentato._
 public virtual ~ SyncFilePolicyData ()  | _Non ancora documentato._
   
 ## <a name="members"></a>Members

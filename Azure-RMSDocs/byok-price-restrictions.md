@@ -1,10 +1,10 @@
 ---
 title: Dettagli BYOK-Azure Information Protection
 description: Comprendere i dettagli e le restrizioni quando si usano chiavi gestite dal cliente (note come "Bring your own key" o BYOK) con Azure Information Protection.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 11/22/2019
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a82afdeee9459b460b98a385102147c6c78ff28
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d94783b491dd9ff0b099a68e009809cd7ec965fb
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935181"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224564"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Dettagli di Bring your own key (BYOK) per Azure Information Protection
 
@@ -27,7 +27,7 @@ ms.locfileid: "74935181"
 
 Le organizzazioni che dispongono di una sottoscrizione che include Azure Information Protection possono configurare il tenant Azure Information Protection per utilizzare una chiave gestita dal cliente e [registrarne l'utilizzo](log-analyze-usage.md). La configurazione della chiave gestita dal cliente è spesso definita "Bring your own key" o BYOK.
 
-Questa chiave gestita dal cliente deve essere archiviata in Azure Key Vault, che richiede una sottoscrizione di Azure. Per usare una chiave protetta dal modulo di protezione hardware, è necessario che il livello di servizio di Azure Key Vault sia Premium. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la [pagina dei prezzi di Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
+Questa chiave gestita dal cliente deve essere archiviata in Azure Key Vault, che richiede una sottoscrizione di Azure. Per usare una chiave protetta dal modulo di protezione hardware, è necessario che il livello di servizio di Azure Key Vault sia Premium. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per ulteriori informazioni, vedere la [pagina relativa ai prezzi Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
 
 Quando si usa l'Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection, è consigliabile usare un insieme di credenziali delle chiavi dedicato per questa chiave per garantire che venga usata solo dal servizio Azure Rights Management. Questa configurazione assicura che le chiamate da altri servizi non comportino il superamento dei [limiti del servizio](/azure/key-vault/key-vault-service-limits) per l'insieme di credenziali delle chiavi che potrebbe limitare i tempi di risposta per il servizio di Azure Rights Management.  
 

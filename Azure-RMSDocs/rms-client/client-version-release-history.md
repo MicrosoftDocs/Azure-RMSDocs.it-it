@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 987e44dcd5d5c690f581fd47a4047b65260b71d9
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: f10f55393fe5b72d46897a8a894e5e9a44f2db46
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482839"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224700"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -31,12 +31,12 @@ ms.locfileid: "79482839"
 
 È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente (se disponibile) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
-Dopo un breve ritardo di genere in un paio di settimane, la versione di disponibilità generale più recente è inclusa anche nel catalogo di Microsoft Update con il nome di un prodotto **Microsoft Azure Information Protection** > **client Microsoft Azure Information Protection**e la classificazione degli **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
+Dopo un breve ritardo di genere in un paio di settimane, la versione di disponibilità generale più recente è inclusa anche nel catalogo di Microsoft Update con il nome del prodotto **Microsoft Azure Information Protection** > **client Microsoft Azure Information Protection**e la classificazione degli **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
 
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Si è interessati all'uso del client Azure Information Protection Unified Labeling perché le etichette vengono pubblicate dalla Centro sicurezza e conformità di Office 365, dal centro sicurezza Microsoft 365 o da Microsoft 365 Compliance Center? Quando si scarica e si installa il client di etichettatura unificata dall'area download Microsoft, è possibile aggiornare il client di Azure Information Protection al [client Unified Labeling](unifiedlabelingclient-version-release-history.md).
+> Si è interessati all'uso del client Azure Information Protection Unified Labeling, perché le etichette vengono pubblicate dal centro sicurezza & conformità di Office 365, dal centro sicurezza Microsoft 365 o da Microsoft 365 Compliance Center? Quando si scarica e si installa il client di etichettatura unificata dall'area download Microsoft, è possibile aggiornare il client di Azure Information Protection al [client Unified Labeling](unifiedlabelingclient-version-release-history.md).
 
 ### <a name="servicing-information-and-timelines"></a>Informazioni e tempistiche di manutenzione
 
@@ -46,8 +46,9 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versioni di disponibilità generale non più supportate:
 
-|Versione client|Data di rilascio|
+|Versione client |Data di rilascio|
 |--------------|-------------|
+|1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|27/11/2018|
 |1.37.19.0|17/09/2018|
@@ -56,9 +57,9 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 |1.26.6.0|04/17/2018|
 |1.10.56.0|09/18/2017|
 |1.7.210.0|06/06/2017|
-|1.4.21.0|03/15/2017|
+|1.4.21.0|15/03/2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0.0|10/27/2016|
+|1.2.4.0.0|27/10/2016|
 |1.1.23.0|10/01/2016|
 
 Il formato della data usato in questa pagina è *mese/giorno/anno*.
@@ -67,7 +68,7 @@ A partire da 6/2/2019, il servizio di assegnazione di etichette per Azure Inform
 
 Tutte le versioni client di 1.4.21.0 rilasciate 03/15/2017 supportano TLS 1,2. Le versioni client **1.3.155.2**, **1.2.4.0**e **1.1.23.0** non usano TLS 1,2 e pertanto non possono più scaricare i criteri di Azure Information Protection.
 
-### <a name="release-history"></a>Cronologia versioni
+### <a name="release-history"></a>Cronologia delle versioni
 
 Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima.
 
@@ -101,30 +102,6 @@ Supportato tramite 08/12/2020
 Questa versione include MSIPC versione 1.0.4008.0813 del client RMS.
 
 Questa versione include correzioni generali per la stabilità e le prestazioni.
-
-## <a name="version-153100"></a>Versione 1.53.10.0
-
-**Rilasciata**: 07/15/2019
-
-Supportato tramite 04/23/2020
-
-Questa versione include MSIPC versione 1.0.3889.0419 del client RMS.
-
-**Nuove funzionalità:**
-
-- Nuova impostazione client avanzata per esentare i messaggi di Outlook dall'impostazione dei criteri **tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**. [Altre informazioni](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-
-- Nuova impostazione client avanzata per personalizzare ulteriormente le impostazioni che implementano messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica. Con questa nuova impostazione avanzata, è possibile impostare un'azione diversa per i messaggi di posta elettronica senza allegati. [Altre informazioni](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
-
-**Correzioni**:
-
-- Quando si usa Esplora file, fare clic con il pulsante destro del mouse per etichettare un file con protezione applicata indipendentemente da un'etichetta. tale protezione viene mantenuta. Un utente, ad esempio, ha applicato autorizzazioni personalizzate a un file.
-
-- Quando si sostituisce l'opzione non eseguire l'invio in un thread di posta elettronica con un'etichetta configurata per le autorizzazioni definite dall'utente e non in avanti, i destinatari originali possono comunque aprire il messaggio di posta elettronica.
-
-- Nello scenario seguente un utente non vede più nella descrizione comando dell'etichetta che l'etichetta è stata impostata automaticamente: un utente riceve un messaggio di posta elettronica protetto con un documento collegato che non è etichettato, ma protetto automaticamente. Quando l'utente della stessa organizzazione del mittente apre il documento, al documento viene applicata l'etichetta corrispondente per le impostazioni di protezione.
-
-- Il [diritto di utilizzo](../configure-usage-rights.md#usage-rights-and-descriptions) minimo per eseguire il cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) è ora **Salva con nome, Esporta** (esportazione) anziché **copia** (estrazione).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -1,10 +1,10 @@
 ---
 title: Supporto di Azure Rights Management da parte delle app da AIP
 description: Informazioni sul modo in cui le applicazioni usate più di frequente, ad esempio le app di Office, e i servizi (ad esempio Exchange e SharePoint) possono usare il servizio Rights Management di Azure Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/02/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 795c260430305492b19aded923c01cf4d918b70f
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 9e14cd34dd31dda6942c028fa9a68778eaaaed3a
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935198"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224581"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Supporto del servizio Azure Rights Management da parte delle applicazioni
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Usare le informazioni seguenti per comprendere come le applicazioni e i servizi più comunemente usati dagli utenti sfruttano il servizio Azure Rights Management di Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione. Tali applicazioni includono Word, Excel, PowerPoint e Outlook. I servizi includono Exchange e SharePoint.
+Usare le informazioni seguenti per comprendere in che modo le applicazioni e i servizi dell'utente finale usati più di frequente possono usare il servizio Azure Rights Management da Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione. Tali applicazioni includono Word, Excel, PowerPoint e Outlook. I servizi includono Exchange e SharePoint.
 
 > [!NOTE]
 > Per verificare le applicazioni e le versioni supportate dal servizio Azure Rights Management, vedere [Requisiti per Azure RMS: applicazioni](./requirements-applications.md).
@@ -42,7 +42,7 @@ I servizi di ricerca si integrano con Rights Management in modi diversi. Ad esem
 
 - SharePoint Online e SharePoint Server applicano la protezione di Rights Management ai file solo durante il download. Questa implementazione significa che i risultati di indicizzazione e ricerca in SharePoint non sono interessati da questa soluzione di protezione del documento. Tuttavia, se si vuole archiviare un documento in SharePoint senza restituirlo nei risultati di ricerca, proteggerlo tramite RMS prima di caricarlo in SharePoint.
 
-- Poiché Windows Desktop Search usa un indice condiviso tra i diversi utenti del dispositivo, per garantire la sicurezza dei dati dei documenti protetti non esegue l'indicizzazione dei file protetti. Ciò significa che anche se i risultati di ricerca non includono i file che sono stati protetti, si ha la garanzia che i file contenenti dati sensibili non vengano visualizzati nei risultati di ricerca di altri utenti che possono accedere o connettersi al PC. 
+- Poiché Windows Desktop Search usa un indice condiviso tra i diversi utenti del dispositivo, per garantire la sicurezza dei dati dei documenti protetti non esegue l'indicizzazione dei file protetti. Ciò significa che anche se i risultati della ricerca non includono i file protetti, è possibile assicurarsi che i file che contengono dati sensibili non vengano visualizzati nei risultati della ricerca per altri utenti che possono accedere al PC o connettersi al PC. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -50,7 +50,7 @@ Altre informazioni sul supporto del servizio Azure Rights Management da parte de
 
 -   [Applicazioni e servizi Office](office-apps-services-support.md)
 
--   [File server che eseguono Windows Server e usano l'infrastruttura di classificazione file](file-server-support.md)
+-   [File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file](file-server-support.md)
 
 -   [Altre applicazioni che supportano le API RMS](api-support.md)
 

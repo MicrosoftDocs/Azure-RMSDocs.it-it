@@ -1,33 +1,33 @@
 ---
-title: 'Classe MIP:: AuthDelegate'
-description: 'Documenta la classe MIP:: authdelegate di Microsoft Information Protection (MIP) SDK.'
+title: Classe AuthDelegate
+description: 'Documenta la classe authdelegate:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 30907f3bf4a08f72305a59290c8cbd891def44c9
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: a7cbc6789fc6baa8fbb01ffb8c6d6ea7e9294d4f
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490609"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763616"
 ---
-# <a name="class-mipauthdelegate"></a>Classe MIP:: AuthDelegate 
+# <a name="class-authdelegate"></a>Classe AuthDelegate 
 Delegato per le operazioni correlate all'autenticazione.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual bool AcquireOAuth2Token (const MIP:: Identity & Identity, const OAuth2Challenge & Challenge, OAuth2Token & token)  |  Questo metodo viene chiamato quando è necessario un token di autenticazione per il motore dei criteri con l'identità specificata e la richiesta specificata. Il client deve restituire se l'acquisizione del token è stata completata correttamente. In caso di esito positivo, deve inizializzare l'oggetto token specificato.
-public virtual bool AcquireOAuth2Token (const MIP:: Identity & Identity, const OAuth2Challenge & Challenge, const std:: shared_ptr\<void\>& context, OAuth2Token & token)  |  Questo metodo viene chiamato quando è necessario un token di autenticazione per il motore dei criteri con l'identità specificata e la richiesta specificata. Il client deve restituire se l'acquisizione del token è stata completata correttamente. In caso di esito positivo, deve inizializzare l'oggetto token specificato.
+public virtual bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& Challenge, OAuth2Token& token)  |  Questo metodo viene chiamato quando è necessario un token di autenticazione per il motore dei criteri con l'identità specificata e la richiesta specificata. Il client deve restituire se l'acquisizione del token è stata completata correttamente. In caso di esito positivo, deve inizializzare l'oggetto token specificato.
+public virtual bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& Challenge, const std\<:\> : shared_ptr void& context, OAuth2Token& token)  |  Questo metodo viene chiamato quando è necessario un token di autenticazione per il motore dei criteri con l'identità specificata e la richiesta specificata. Il client deve restituire se l'acquisizione del token è stata completata correttamente. In caso di esito positivo, deve inizializzare l'oggetto token specificato.
   
 ## <a name="members"></a>Members
   
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token (funzione)
 Questo metodo viene chiamato quando è necessario un token di autenticazione per il motore dei criteri con l'identità specificata e la richiesta specificata. Il client deve restituire se l'acquisizione del token è stata completata correttamente. In caso di esito positivo, deve inizializzare l'oggetto token specificato.
 
-Parametri:  
+Parametri  
 * **Identity**: utente per cui è richiesto un token 
 
 
@@ -45,7 +45,7 @@ Parametri:
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token (funzione)
 Questo metodo viene chiamato quando è necessario un token di autenticazione per il motore dei criteri con l'identità specificata e la richiesta specificata. Il client deve restituire se l'acquisizione del token è stata completata correttamente. In caso di esito positivo, deve inizializzare l'oggetto token specificato.
 
-Parametri:  
+Parametri  
 * **Identity**: utente per cui è richiesto un token 
 
 

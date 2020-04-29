@@ -1,19 +1,19 @@
 ---
-title: Classe mip::Stream
-description: 'Documenta la classe MIP:: Stream di Microsoft Information Protection (MIP) SDK.'
+title: Flusso di classi
+description: 'Documenta la classe Stream:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 65e50fc9751b2ac38e2dae216e3e81cacba5c832
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b2c8be3d6997985b62933d40bf855e48a20ca928
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489402"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764330"
 ---
-# <a name="class-mipstream"></a>Classe mip::Stream 
+# <a name="class-stream"></a>Flusso di classi 
 Classe che definisce l'interfaccia tra Microsoft Information Protection SDK e il contenuto basato su flusso.
   
 ## <a name="summary"></a>Riepilogo
@@ -34,7 +34,7 @@ public void Size(int64_t value)  |  Imposta le dimensioni del flusso.
 ### <a name="read-function"></a>Read (funzione)
 Legge in un buffer dal flusso.
 
-Parametri:  
+Parametri  
 * **buffer**: puntatore a un buffer 
 
 
@@ -48,7 +48,7 @@ Parametri:
 ### <a name="write-function"></a>Write (funzione)
 Scrive nel flusso da un buffer.
 
-Parametri:  
+Parametri  
 * **buffer**: puntatore a un buffer 
 
 
@@ -68,8 +68,8 @@ Scarica il flusso.
 ### <a name="seek-function"></a>Seek (funzione)
 Cerca una posizione all'interno del flusso.
 
-Parametri:  
-* **position**: posizione da cercare nel flusso.
+Parametri  
+* **position**: per cercare nel flusso.
 
 
   
@@ -100,6 +100,6 @@ Ottiene le dimensioni del contenuto all'interno del flusso.
 ### <a name="size-function"></a>Size (funzione)
 Imposta le dimensioni del flusso.
 
-Parametri:  
-* **stream**: dimensioni.
+Parametri  
+* **flusso**: dimensioni.
 

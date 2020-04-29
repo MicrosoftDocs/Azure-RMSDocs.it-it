@@ -1,19 +1,19 @@
 ---
-title: Classe mip::LoggerDelegate
-description: 'Documenta la classe MIP:: loggerdelegate di Microsoft Information Protection (MIP) SDK.'
+title: Classe LoggerDelegate
+description: 'Documenta la classe loggerdelegate:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c9e4f4db31c12a84f888964694ffa4c88585c884
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: e213f243a0e46bb804b224c7a0752a0b9b270103
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487736"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761826"
 ---
-# <a name="class-miploggerdelegate"></a>Classe mip::LoggerDelegate 
+# <a name="class-loggerdelegate"></a>Classe LoggerDelegate 
 Classe che definisce l'interfaccia per il logger MIP SDK.
   
 ## <a name="summary"></a>Riepilogo
@@ -28,7 +28,7 @@ public void WriteToLog(const LogLevel level, const std::string& message, const s
 ### <a name="init-function"></a>Funzione init
 Inizializza il logger.
 
-Parametri:  
+Parametri  
 * **storagePath**: percorso della posizione in cui è possibile archiviare lo stato persistente, inclusi i log.
 
 
@@ -39,7 +39,7 @@ Scarica il logger.
 ### <a name="writetolog-function"></a>WriteToLog (funzione)
 Scrive un'istruzione log in file di log.
 
-Parametri:  
+Parametri  
 * **level**: livello di log per l'istruzione log. 
 
 

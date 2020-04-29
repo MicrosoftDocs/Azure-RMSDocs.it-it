@@ -1,41 +1,43 @@
 ---
-title: Classe MIP::P rotectionHandler::P ublishingSettings
-description: Documenta la classe MIP::p rotectionhandler dell'SDK Microsoft Information Protection (MIP).
+title: Classe ProtectionHandler::P ublishingSettings
+description: Documenta la classe protectionhandler::p ublishingsettings di Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e61eb300cbc787ecbb7fd14ec5dcb060d4f47d0a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: fc1de565e103b840c1190b397c247caca515d5bd
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490762"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764427"
 ---
-# <a name="class-mipprotectionhandlerpublishingsettings"></a>Classe MIP::P rotectionHandler::P ublishingSettings 
+# <a name="class-protectionhandlerpublishingsettings"></a>Classe ProtectionHandler::P ublishingSettings 
 Impostazioni usate per creare un ProtectionHandler per proteggere il nuovo contenuto.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public PublishingSettings (const std:: shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  Costruttore ProtectionHandler:: Settings per la creazione di un nuovo motore.
+public PublishingSettings (const std::\<shared_ptr\> ProtectionDescriptor& ProtectionDescriptor)  |  Costruttore ProtectionHandler:: Settings per la creazione di un nuovo motore.
 public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  | _Non ancora documentato._
 public bool GetIsAuditedExtractionAllowed () const  |  Ottiene un valore che indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto.
 public void SetIsAuditedExtractionAllowed (bool isAuditedExtractionAllowed)  |  Imposta un valore che indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto.
 public bool GetIsDeprecatedAlgorithmPreferred () const  |  Ottiene un valore che indica se per la compatibilità con le versioni precedenti è preferibile l'algoritmo di crittografia (BCE) deprecato.
 public void SetIsDeprecatedAlgorithmPreferred (bool isDeprecatedAlgorithmPreferred)  |  Imposta un valore che indica se è preferibile un algoritmo di crittografia (BCE) deprecato per la compatibilità con le versioni precedenti.
-public void SetDelegatedUserEmail (const std:: String & delegatedUserEmail)  |  Imposta l'utente delegato.
-public const std:: String & GetDelegatedUserEmail () const  |  Ottiene l'utente delegato.
+public void SetDelegatedUserEmail (const std:: String& delegatedUserEmail)  |  Imposta l'utente delegato.
+public const std:: String& GetDelegatedUserEmail () const  |  Ottiene l'utente delegato.
 public bool IsPublishingFormatJson () const  |  Ottiene un valore che indica se il valore pl restituito è in formato JSON (il formato XML è più ampiamente accettato ed è l'impostazione predefinita).
 public void SetPublishingFormatJson (bool isPublishingFormatJson)  |  indica se il pl restituito è in formato JSON (il formato XML è più ampiamente accettato ed è l'impostazione predefinita).
+public void SetPreLicenseUserEmail (const std:: String& preLicenseUserEmail)  |  Imposta un utente con licenza preliminare.
+public const std:: String& GetPreLicenseUserEmail () const  |  Ottiene l'utente con licenza preliminare.
   
 ## <a name="members"></a>Members
   
 ### <a name="publishingsettings-function"></a>PublishingSettings (funzione)
 Costruttore ProtectionHandler:: Settings per la creazione di un nuovo motore.
 
-Parametri:  
+Parametri  
 * **protectionDescriptor**: dettagli sulla protezione
 
 
@@ -53,7 +55,7 @@ Ottiene un valore che indica se le applicazioni non compatibili con MIP possono 
 ### <a name="setisauditedextractionallowed-function"></a>SetIsAuditedExtractionAllowed (funzione)
 Imposta un valore che indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto.
 
-Parametri:  
+Parametri  
 * **isAuditedExtractionAllowed**: se le applicazioni non compatibili con MIP possono aprire il contenuto protetto
 
 
@@ -67,7 +69,7 @@ Ottiene un valore che indica se per la compatibilità con le versioni precedenti
 ### <a name="setisdeprecatedalgorithmpreferred-function"></a>SetIsDeprecatedAlgorithmPreferred (funzione)
 Imposta un valore che indica se è preferibile un algoritmo di crittografia (BCE) deprecato per la compatibilità con le versioni precedenti.
 
-Parametri:  
+Parametri  
 * **Se**: è preferibile l'algoritmo di crittografia deprectated
 
 
@@ -75,7 +77,7 @@ Parametri:
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail (funzione)
 Imposta l'utente delegato.
 
-Parametri:  
+Parametri  
 * **delegatedUserEmail**: il messaggio di posta elettronica di delega.
 
 
@@ -96,6 +98,22 @@ Ottiene un valore che indica se il valore pl restituito è in formato JSON (il f
 ### <a name="setpublishingformatjson-function"></a>SetPublishingFormatJson (funzione)
 indica se il pl restituito è in formato JSON (il formato XML è più ampiamente accettato ed è l'impostazione predefinita).
 
-Parametri:  
+Parametri  
 * **isPublishingFormatJson**: se il formato JSON è abilitato.
 
+
+  
+### <a name="setprelicenseuseremail-function"></a>SetPreLicenseUserEmail (funzione)
+Imposta un utente con licenza preliminare.
+
+Parametri  
+* **preLicenseUserEmail**: utente con licenza preliminare
+
+
+Se non viene specificato alcun utente con licenza preliminare, non verrà ottenuta una licenza preliminare
+  
+### <a name="getprelicenseuseremail-function"></a>GetPreLicenseUserEmail (funzione)
+Ottiene l'utente con licenza preliminare.
+
+  
+**Restituzione**: utente con licenza preliminare

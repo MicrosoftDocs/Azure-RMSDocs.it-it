@@ -1,19 +1,19 @@
 ---
-title: 'Classe MIP:: TemplateNotFoundError'
-description: 'Documenta la classe MIP:: templatenotfounderror di Microsoft Information Protection (MIP) SDK.'
+title: Classe TemplateNotFoundError
+description: 'Documenta la classe templatenotfounderror:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: babcf77de224a75b2beec7e0b15c867698b49c15
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 9c8a1f1d89c581950bc1760a7bcb339e10114c2a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489317"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764235"
 ---
-# <a name="class-miptemplatenotfounderror"></a>Classe MIP:: TemplateNotFoundError 
+# <a name="class-templatenotfounderror"></a>Classe TemplateNotFoundError 
 ID modello non riconosciuto dal servizio RMS.
   
 ## <a name="summary"></a>Riepilogo
@@ -24,11 +24,11 @@ public std:: Map\<std:: String, std:: String\> mDebugInfo  | _Non ancora documen
 public char const* what() const  |  Ottiene il messaggio di errore.
 public std:: shared_ptr\<Error\> Clone () const  |  Clona l'errore.
 public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
-public const std:: String & geterrorname () const  |  Ottiene il nome dell'errore.
-public const std:: String & GetMessage () const  |  Ottiene il messaggio di errore.
-public void semessage (const std:: String & msg)  |  Imposta il messaggio di errore.
-public void AddDebugInfo (const std:: String & Key, const std:: String & value)  |  Aggiungere la voce di informazioni di debug.
-public const std:: Map\<std:: String, std:: String\>& GetDebugInfo () const  |  Ottenere le informazioni di debug.
+public const std:: String& geterrorname () const  |  Ottiene il nome dell'errore.
+public const std:: String& GetMessage () const  |  Ottiene il messaggio di errore.
+public void semessage (const std:: String& msg)  |  Imposta il messaggio di errore.
+public void AddDebugInfo (const std:: String& Key, const std:: String& value)  |  Aggiungere la voce di informazioni di debug.
+public const std::\<map std:: String, std::\> String& GetDebugInfo () const  |  Ottenere le informazioni di debug.
   
 ## <a name="members"></a>Members
   
@@ -44,9 +44,9 @@ _Non ancora documentato._
 Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore
+**Returns**: messaggio di errore
   
-### <a name="clone-function"></a>Funzione clone
+### <a name="clone-function"></a>Funzione Clone
 Clona l'errore.
 
   
@@ -68,12 +68,12 @@ Ottiene il nome dell'errore.
 Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore.
+**Restituisce**: il messaggio di errore.
   
 ### <a name="setmessage-function"></a>Funzione semessage
 Imposta il messaggio di errore.
 
-Parametri:  
+Parametri  
 * **msg**: messaggio di errore.
 
 
@@ -81,7 +81,7 @@ Parametri:
 ### <a name="adddebuginfo-function"></a>AddDebugInfo (funzione)
 Aggiungere la voce di informazioni di debug.
 
-Parametri:  
+Parametri  
 * **chiave**: chiave informazioni di debug 
 
 

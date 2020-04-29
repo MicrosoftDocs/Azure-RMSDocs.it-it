@@ -1,26 +1,26 @@
 ---
-title: Classe mip::ProtectionEngine::Settings
-description: Documenta la classe MIP::p rotectionengine dell'SDK Microsoft Information Protection (MIP).
+title: 'Classe ProtectionEngine:: Settings'
+description: "Documenta la classe protectionengine:: Settings dell'SDK Microsoft Information Protection (MIP)."
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 71f428667bf485d0abd4f953aa2d94181b1bd8f1
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 7c6b96a1ec78712cb256ab63efe869213fc71f8e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486886"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764586"
 ---
-# <a name="class-mipprotectionenginesettings"></a>Classe mip::ProtectionEngine::Settings 
-Impostazioni utilizzate da ProtectionEngine durante la sua creazione e per tutta la sua durata.
+# <a name="class-protectionenginesettings"></a>Classe ProtectionEngine:: Settings 
+Oggetto Settings usato da ProtectionEngine durante la creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  Costruttore ProtectionEngine:: Settings per la creazione di un nuovo motore.
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  Costruttore ProtectionEngine:: Settings per il caricamento di un motore esistente.
+Impostazioni pubbliche (const Identity& Identity, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale)  |  Costruttore ProtectionEngine::Settings per la creazione di un nuovo motore.
+Impostazioni pubbliche (const std:: String& engineId, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale)  |  Costruttore ProtectionEngine::Settings per il caricamento di un motore esistente.
 public const std::string& GetEngineId() const  |  Ottiene l'ID motore.
 public void SetEngineId(const std::string& engineId)  |  Imposta l'ID motore.
 public const Identity& GetIdentity() const  |  Ottiene l'identità utente associata al motore.
@@ -28,20 +28,27 @@ public void SetIdentity(const Identity& identity)  |  Imposta l'identità utente
 public const std::string& GetClientData() const  |  Ottiene i dati personalizzati specificati dal client.
 public void SetClientData(const std::string& clientData)  |  Imposta i dati personalizzati specificati dal client.
 public const std::string& GetLocale() const  |  Ottiene le impostazioni locali in cui verranno scritti i dati del motore.
-public void SetCustomSettings (const std:: Vector\<std::p Air\<std:: String, std:: String\>\>valore &)  |  Imposta coppie nome-valore usate a scopi di test e sperimentazione.
-public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
+public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\> \> String& value)  |  Imposta coppie nome-valore usate a scopi di test e sperimentazione.
+public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione del motore, usato per la correlazione di registrazione/telemetria.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione del motore.
-public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Facoltativamente, imposta l'URL di base dell'endpoint cloud.
+void public void (Cloud Cloud)  |  Imposta facoltativamente il cloud di destinazione.
+Cloud pubblico getcloud () const  |  Ottiene il cloud di destinazione utilizzato da tutte le richieste di servizio.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Imposta l'URL di base dell'endpoint cloud per il cloud personalizzato.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
+public void SetAuthDelegate (const std::\<shared_ptr\> AuthDelegate& AuthDelegate)  |  Impostare il delegato di autenticazione del motore.
+public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Ottiene il delegato di autenticazione del motore.
   
 ## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Funzione Settings
-Costruttore ProtectionEngine:: Settings per la creazione di un nuovo motore.
+Costruttore ProtectionEngine::Settings per la creazione di un nuovo motore.
 
-Parametri:  
-* **Identity**: identità che verrà associata a ProtectionEngine
+Parametri  
+* **identity**: identità che verrà associata a ProtectionEngine
+
+
+* **authDelegate**: il delegato di autenticazione usato dall'SDK per acquisire i token di autenticazione, eseguirà l'override di PolicyProfile:: Settings:: authDelegate se entrambi specificati 
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
@@ -52,10 +59,13 @@ Parametri:
 
   
 ### <a name="settings-function"></a>Funzione Settings
-Costruttore ProtectionEngine:: Settings per il caricamento di un motore esistente.
+Costruttore ProtectionEngine::Settings per il caricamento di un motore esistente.
 
-Parametri:  
+Parametri  
 * **engineId**: identificatore univoco del motore che verrà caricato 
+
+
+* **authDelegate**: il delegato di autenticazione usato dall'SDK per acquisire i token di autenticazione, eseguirà l'override di PolicyProfile:: Settings:: authDelegate se entrambi specificati 
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
@@ -74,8 +84,8 @@ Ottiene l'ID motore.
 ### <a name="setengineid-function"></a>SetEngineId (funzione)
 Imposta l'ID motore.
 
-Parametri:  
-* **engineId**: ID motore.
+Parametri  
+* **engineId**: ID del motore.
 
 
   
@@ -88,7 +98,7 @@ Ottiene l'identità utente associata al motore.
 ### <a name="setidentity-function"></a>Funzione seidentity
 Imposta l'identità utente associata al motore.
 
-Parametri:  
+Parametri  
 * **identity**: identità utente associata al motore
 
 
@@ -102,7 +112,7 @@ Ottiene i dati personalizzati specificati dal client.
 ### <a name="setclientdata-function"></a>SetClientData (funzione)
 Imposta i dati personalizzati specificati dal client.
 
-Parametri:  
+Parametri  
 * **Custom**: dati specificati dal client
 
 
@@ -116,7 +126,7 @@ Ottiene le impostazioni locali in cui verranno scritti i dati del motore.
 ### <a name="setcustomsettings-function"></a>SetCustomSettings (funzione)
 Imposta coppie nome-valore usate a scopi di test e sperimentazione.
 
-Parametri:  
+Parametri  
 * **customSettings**: coppie nome-valore usate a scopi di test e sperimentazione
 
 
@@ -130,8 +140,8 @@ Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
 ### <a name="setsessionid-function"></a>Funzione SessionId
 Imposta l'ID sessione del motore, usato per la correlazione di registrazione/telemetria.
 
-Parametri:  
-* **sessionId**: ID sessione del motore, usato per la correlazione di registrazione/telemetria
+Parametri  
+* **SessionID**: ID sessione del motore, usato per la correlazione di registrazione/telemetria
 
 
   
@@ -139,19 +149,48 @@ Parametri:
 Ottiene l'ID sessione del motore.
 
   
-**Restituisce**: ID sessione del motore
+**Restituisce**: ID sessione motore
+  
+### <a name="setcloud-function"></a>Funzione secloud
+Imposta facoltativamente il cloud di destinazione.
+
+Parametri  
+* **Cloud**: cloud
+
+
+Se il cloud non è specificato, sarà determinato dalla ricerca DNS del dominio di identità del motore, se possibile, in caso contrario, il fallback al cloud globale.
+  
+### <a name="getcloud-function"></a>Funzione getcloud
+Ottiene il cloud di destinazione utilizzato da tutte le richieste di servizio.
+
+  
+**Restituisce**: cloud
   
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl (funzione)
-Facoltativamente, imposta l'URL di base dell'endpoint cloud.
+Imposta l'URL di base dell'endpoint cloud per il cloud personalizzato.
 
-Parametri:  
+Parametri  
 * **cloudEndpointBaseUrl**: URL di base usato da tutte le richieste di servizio (ad esempio, "https://api.aadrm.com")
 
 
-Se l'URL di base non viene specificato, sarà determinato tramite una ricerca DNS del dominio dell'identità del motore.
+Questo valore verrà letto e deve essere impostato solo per cloud = Custom
   
 ### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl (funzione)
 Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
 
   
 **Restituisce**: URL di base
+  
+### <a name="setauthdelegate-function"></a>SetAuthDelegate (funzione)
+Impostare il delegato di autenticazione del motore.
+
+Parametri  
+* **authDelegate**: delegato di autenticazione
+
+
+  
+### <a name="getauthdelegate-function"></a>GetAuthDelegate (funzione)
+Ottiene il delegato di autenticazione del motore.
+
+  
+**Restituisce**: delegato di autenticazione del motore.

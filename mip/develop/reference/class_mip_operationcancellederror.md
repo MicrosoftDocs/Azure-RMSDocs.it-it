@@ -1,19 +1,19 @@
 ---
-title: 'Classe MIP:: OperationCancelledError'
-description: 'Documenta la classe MIP:: operationcancellederror di Microsoft Information Protection (MIP) SDK.'
+title: Classe OperationCancelledError
+description: 'Documenta la classe operationcancellederror:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 7142122d10c5e0b3807e70cf701aba8f7fef101f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: dc3fe1bfc73f42234f274b5882bd51bf164b86fe
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489810"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761205"
 ---
-# <a name="class-mipoperationcancellederror"></a>Classe MIP:: OperationCancelledError 
+# <a name="class-operationcancellederror"></a>Classe OperationCancelledError 
 Operazione annullata.
   
 ## <a name="summary"></a>Riepilogo

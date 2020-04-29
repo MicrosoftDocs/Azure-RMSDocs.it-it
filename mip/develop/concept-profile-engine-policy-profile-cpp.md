@@ -6,33 +6,32 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9412fae0f14d615ba6d81c5610597affbb596df8
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: bdc72bc3da8added696733cb271116764d0fd0c7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555195"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764041"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al profilo dell'API Criteri
 
 `mip::Profile` deve essere caricato prima di poter eseguire qualsiasi operazione dell'API Criteri.
 
-I due esempi seguenti mostrano come creare l'oggetto profileSettings usando l'archiviazione locale o solo in memoria per l'archiviazione degli stati. Entrambi gli esempi partono dal presupposto che l'oggetto `authDelegateImpl` sia già stato creato.
+I due esempi seguenti mostrano come creare l'oggetto profileSettings usando l'archiviazione locale o solo in memoria per l'archiviazione degli stati. 
 
 ## <a name="load-a-profile"></a>Caricare un profilo
 
-Ora che i `MipContext`, `ProfileObserver`e `AuthDelegateImpl` sono definiti, verranno usati per creare un'istanza `mip::PolicyProfile`. Per creare l'oggetto `mip::PolicyProfile` è necessario [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md) e `mip::MipContext`.
+Dopo aver definito `MipContext` e `ProfileObserver`, verranno usati per creare un'istanza di `mip::PolicyProfile`. Per creare `mip::PolicyProfile` l'oggetto [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md) sono `mip::MipContext`necessari e.
 
 ### <a name="profilesettings-parameters"></a>Parametri di Profile::Settings
 
-Il costruttore `PolicyProfile::Settings` accetta quattro parametri, elencati di seguito:
+Il `PolicyProfile::Settings` costruttore accetta quattro parametri, elencati di seguito:
 
-- `const std::shared_ptr<MipContext>`: oggetto `mip::MipContext` inizializzato per archiviare le informazioni sull'applicazione, il percorso di stato e così via.
-- `mip::CacheStorageType`: definisce come archiviare lo stato: in memoria, su disco o su disco e crittografato. Per informazioni dettagliate, vedere [concetti relativi all'archiviazione della cache](concept-cache-storage.md).
-- `std::shared_ptr<mip::AuthDelegate>`: puntatore condiviso della classe `mip::AuthDelegate`.
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: un puntatore condiviso all'implementazione del `Observer` del profilo (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)e [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `const std::shared_ptr<MipContext>`: Oggetto `mip::MipContext` inizializzato per archiviare le informazioni sull'applicazione, il percorso di stato e così via.
+- `mip::CacheStorageType`: Definisce come archiviare lo stato: in memoria, su disco o su disco e crittografato. Per informazioni dettagliate, vedere [concetti relativi all'archiviazione della cache](concept-cache-storage.md).
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Puntatore condiviso all'implementazione del profilo `Observer` (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)e [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
-I due esempi seguenti mostrano come creare l'oggetto profileSettings usando l'archiviazione locale o solo in memoria per l'archiviazione degli stati. Entrambi gli esempi partono dal presupposto che l'oggetto `authDelegateImpl` sia già stato creato.
+I due esempi seguenti mostrano come creare l'oggetto profileSettings usando l'archiviazione locale o solo in memoria per l'archiviazione degli stati. 
 
 #### <a name="store-state-in-memory-only"></a>Archiviare lo stato solo in memoria
 
@@ -48,7 +47,6 @@ mMipContext = mip::MipContext::Create(appInfo,
 PolicyProfile::Settings profileSettings(
     mipContext,                                   // mipContext object
     mip::CacheStorageType::InMemory,              // use in memory storage
-    authDelegateImpl,                             // auth delegate object
     std::make_shared<PolicyProfileObserverImpl>()); // new protection profile observer
 ```
 
@@ -66,7 +64,6 @@ mMipContext = mip::MipContext::Create(appInfo,
 PolicyProfile::Settings profileSettings(
     mipContext,                                    // mipContext object
     mip::CacheStorageType::OnDisk,                 // use on disk storage
-    authDelegateImpl,                              // auth delegate object
     std::make_shared<PolicyProfileObserverImpl>());  // new protection profile observer
 ```
 
@@ -99,9 +96,7 @@ int main()
     const string clientId = "MyClientId";
 
     mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
-
-    auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
-
+ 
     auto mipContext = mip::MipContext::Create(appInfo,
                         "mip_app_data",
                         mip::LogLevel::Trace,
@@ -111,7 +106,6 @@ int main()
     PolicyProfile::Settings profileSettings(
         mipContext,                                    // mipContext object
         mip::CacheStorageType::OnDisk,                 // use on disk storage
-        authDelegateImpl,                              // auth delegate object
         std::make_shared<PolicyProfileObserverImpl>());  // new protection profile observer
 
     auto profilePromise = std::make_shared<promise<shared_ptr<PolicyProfile>>>();

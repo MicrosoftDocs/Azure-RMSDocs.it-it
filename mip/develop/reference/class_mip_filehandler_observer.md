@@ -1,37 +1,37 @@
 ---
-title: Classe mip::FileHandler::Observer
-description: "Documenta la classe MIP:: FileHandler dell'SDK Microsoft Information Protection (MIP)."
+title: 'Classe FileHandler:: Observer'
+description: 'Documenta la classe FileHandler:: Observer di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 86043ab5fdcc22884ce3c483d43947d46e51ac9c
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 90bba9b5cfb27068447512152d14e20c7aa5a7e2
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490014"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763052"
 ---
-# <a name="class-mipfilehandlerobserver"></a>Classe mip::FileHandler::Observer 
-Interfaccia Observer che consente ai client di ottenere gli eventi di notifica correlati al gestore di file.
-Tutti gli errori ereditano da MIP:: Error. I client non devono eseguire il callback del motore sul thread che chiama l'observer.
+# <a name="class-filehandlerobserver"></a>Classe FileHandler:: Observer 
+Interfaccia Observer per il recupero di eventi di notifica correlati al gestore di file da parte dei client.
+Tutti gli errori ereditano da mip::Error. I client non devono eseguire il callback del motore sul thread che chiama l'observer.
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateFileHandlerSuccess (const std:: shared_ptr\<FileHandler\>& FileHandler, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il gestore è creato correttamente.
-public virtual void OnCreateFileHandlerFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando la creazione del gestore non è riuscita.
-public virtual void OnClassifySuccess (const std:: Vector\<std:: shared_ptr\<Action\>\>& azioni, const std:: shared_ptr\<void\>& context)  |  Chiamato quando classifica l'esito positivo.
-public virtual void OnClassifyFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando la classificazione non è riuscita.
-public virtual void OnGetDecryptedTemporaryFileSuccess (const std:: String & decryptedFilePath, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il file temporaneo decrittografato riesce.
-public virtual void OnGetDecryptedTemporaryFileFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il recupero del file temporaneo decrittografato non è riuscito.
-public virtual void OnGetDecryptedTemporaryStreamSuccess (const std:: shared_ptr\<Stream\>& decryptedStream, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il flusso temporaneo decrittografato riesce.
-public virtual void OnGetDecryptedTemporaryStreamFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il recupero del flusso temporaneo decrittografato non è riuscito.
-public virtual void OnCommitSuccess (bool committed, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il commit delle modifiche al file è riuscito correttamente.
-public virtual void OnCommitFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il commit delle modifiche al file non è riuscito.
-public virtual void OnInspectSuccess (const std:: shared_ptr\<fileinspector\>& fileinspector, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il controllo ha esito positivo.
-public virtual void OnInspectFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il controllo non è riuscito.
+public virtual void OnCreateFileHandlerSuccess (const std::\<Shared_ptr filehandler\>& FileHandler, const std::\<shared_ptr\> void& context)  |  Viene chiamato quando il gestore è creato correttamente.
+public virtual void OnCreateFileHandlerFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando la creazione del gestore non è riuscita.
+public virtual void OnClassifySuccess (const std::\<vector std::\<shared_ptr\> \> Action& actions, const std\<:\> : shared_ptr void& context)  |  Chiamato quando classifica l'esito positivo.
+public virtual void OnClassifyFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Chiamato quando la classificazione non è riuscita.
+public virtual void OnGetDecryptedTemporaryFileSuccess (const std:: String& decryptedFilePath, const std:\<:\> shared_ptr void& context)  |  Chiamato quando il file temporaneo decrittografato riesce.
+public virtual void OnGetDecryptedTemporaryFileFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Chiamato quando il recupero del file temporaneo decrittografato non è riuscito.
+public virtual void OnGetDecryptedTemporaryStreamSuccess (const std::\<shared_ptr\> Stream& decryptedStream, const std:\<:\> shared_ptr void& context)  |  Chiamato quando il flusso temporaneo decrittografato riesce.
+public virtual void OnGetDecryptedTemporaryStreamFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Chiamato quando il recupero del flusso temporaneo decrittografato non è riuscito.
+public virtual void OnCommitSuccess (bool committed, const std::\<shared_ptr\> void& context)  |  Viene chiamato quando il commit delle modifiche al file è riuscito correttamente.
+public virtual void OnCommitFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando il commit delle modifiche al file non è riuscito.
+public virtual void OnInspectSuccess (const std::\<Shared_ptr fileinspector\>& fileinspector, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando il controllo ha esito positivo.
+public virtual void OnInspectFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Chiamato quando il controllo non è riuscito.
   
 ## <a name="members"></a>Members
   
