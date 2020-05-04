@@ -4,7 +4,7 @@ description: Istruzioni per gli utenti per installare il client di Azure Informa
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 65ce454504be04d7f3e5881dbefad3053d8a082c
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 9dd4e4f461c5a3643e8e9cb250e9bc1430b5efad
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960780"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736746"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guida dell'utente: Scaricare e installare il client Azure Information Protection
 
@@ -33,7 +33,6 @@ Inoltre:
 
 - Il client Azure Information Protection richiede Microsoft .NET Framework 4.6.2 come versione minima. Se questo non è presente, il programma di installazione prova a scaricare e installare questo prerequisito. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer.
 
-- Se si usa Windows 7 SP1, il client di Azure Information Protection richiede un aggiornamento specifico, ovvero KB 2533623. Se il PC richiede l'aggiornamento ma questo non è installato, l'installazione viene completata, ma viene visualizzato un messaggio per indicare che il client di Azure Information Protection richiede l'aggiornamento. Fino a quando l'aggiornamento non è installato, non sarà possibile usare tutte le funzionalità del client di Azure Information Protection. 
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>Per scaricare e installare il client di Azure Information Protection    
 

@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/16/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60aa5e0dffd1c5c8e71534a4c4676b66963d9076
-ms.sourcegitcommit: e31562d4f8856782b332b238e8fef4932e3dfab8
+ms.openlocfilehash: e1920e66707135616fe1abb121ca709be452cb1c
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82161368"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736797"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -70,7 +70,7 @@ Si noti che lo scanner non individua e non applica etichette in tempo reale. Eff
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
 Prima di installare lo scanner di Azure Information Protection, verificare che i requisiti seguenti siano soddisfatti.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori core<br /><br />- 8 GB di RAM<br /><br />- 10 GB di spazio libero (media) per i file temporanei|Windows Server 2019, Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare.<br /><br /> Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB. <br /><br /> Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere la sezione [Deploying the scanner with alternative Configurations](#deploying-the-scanner-with-alternative-configurations) . In caso contrario, verificare che il computer disponga di connettività Internet che consenta gli URL seguenti tramite HTTPS (porta 443):<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*. protection.outlook.com (solo scanner dal client Unified Labeling)|
 |Account del servizio per eseguire il servizio scanner|Oltre a eseguire il servizio scanner nel computer Windows Server, questo account di Windows esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />Assegnazione dei diritti utente per l'- **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Assegnazione dei diritti utente per l'- **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: <br /><br /> Condivisioni file o file locali: è necessario concedere le autorizzazioni di **lettura** e **scrittura** e **modifica** per la scansione dei file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni nei criteri di Azure Information Protection. <br /><br /> SharePoint: è necessario concedere le autorizzazioni di **controllo completo** per la scansione dei file, quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni nei criteri di Azure Information Protection. <br /><br /> Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />-Per le etichette che riproteggono o rimuovono la protezione: per assicurarsi che lo scanner abbia sempre accesso ai file protetti, rendere questo account un [utente con privilegi avanzati](configure-super-users.md) per Azure Information Protection e assicurarsi che la funzionalità per utenti con privilegi avanzati sia abilitata. Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
@@ -290,13 +290,16 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     > [!TIP]
     > Se si aggiunge un percorso di SharePoint per "Documenti condivisi":
     >
-     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. ad esempio `http://sp2013/Shared Documents`
+     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. Ad esempio: `http://sp2013/Shared Documents`
      >
-     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. ad esempio `http://sp2013/Documents/Sales Reports`
+     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. Ad esempio: `http://sp2013/Documents/Sales Reports`
     
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del processo di analisi del contenuto**. Ciò significa che il repository dei dati eredita le impostazioni dal processo di analisi del contenuto. 
     
     Selezionare **Salva**.
+
+> [!IMPORTANT]
+> Sebbene sia possibile analizzare la file system locale, questa configurazione non è consigliata per le distribuzioni di produzione e può essere usata **solo** nei cluster a nodo singolo. L'analisi delle cartelle locali tramite cluster a più nodi non è supportata. Se è necessario eseguire la scansione di una cartella nella file system locale, è consigliabile creare una condivisione e analizzarla usando un URL di rete.
 
 10. Se si desidera aggiungere un altro repository di dati, ripetere i passaggi 8 e 9. 
 

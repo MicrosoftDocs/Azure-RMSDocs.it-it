@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/12/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: b7cc3bff14c5e16ca43fe8f204609e67b531e566
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403961"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736780"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -99,7 +99,7 @@ I client di Azure Information Protection hanno prerequisiti aggiuntivi elencati 
 
 - Client di Azure Information Protection: [prerequisiti](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>Applicazioni
+## <a name="applications"></a>APPLICAZIONI
 
 I client Azure Information Protection possono etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office **Word**, **Excel**, **PowerPoint**e **Outlook** delle edizioni di Office seguenti:
 
@@ -129,13 +129,13 @@ Per informazioni sulle edizioni di Office che supportano il servizio di protezio
 
 Se si ha un firewall o simili dispositivi di rete intermedi che devono essere configurati per consentire connessioni specifiche, i requisiti di connettività di rete sono inclusi nell'articolo di Office [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) (URL e intervalli di indirizzi IP per Office 365). Vedere la sezione **Microsoft 365 Common and Office Online** (Comuni per Microsoft 365 e Office Online).
 
-Oltre alle informazioni nell'articolo di Office, le istruzioni seguenti sono specifiche per Azure Information Protection:
+Oltre alle informazioni nell'articolo su Office, di seguito vengono fornite altre informazioni specifiche per Azure Information Protection:
 
-- Per il client di etichettatura unificata per scaricare etichette ed etichettare i criteri: consentire l'URL * **. Protection.Outlook.com** su HTTPS.
+- Per il client di etichettatura unificata per scaricare etichette ed etichettare i criteri: consentire l'URL ***. Protection.Outlook.com** su HTTPS.
 
-- Se si usa un proxy Web che richiede l'autenticazione, configurarlo per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
+- Se si usa un proxy Web che richiede l'autenticazione, è necessario configurarlo in modo che usi l'autenticazione integrata di Windows con le credenziali di accesso Active Directory dell'utente.
 
-- Non terminare la connessione TLS dal client al servizio, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com**. In questo modo viene interrotta l'associazione del certificato usata dai client RMS con le autorità di certificazione gestite da Microsoft per la protezione delle comunicazioni con il servizio Azure Rights Management.
+- Non terminare la connessione TLS dal client al servizio, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com**. Se si terminano le connessione, viene interrotta l'associazione dei certificati usati dai client RMS con le autorità di certificazione gestite da Microsoft per contribuire a proteggere le comunicazioni con il servizio Azure Rights Management.
     
     È possibile usare i comandi di PowerShell seguenti per determinare se la connessione client viene terminata prima che raggiunga il servizio Rights Management di Azure:
    
@@ -159,13 +159,15 @@ Per informazioni sui requisiti aggiuntivi per questo scenario, vedere [Server lo
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coesistenza di AD RMS con Azure RMS
 
-Lo scenario di distribuzione seguente non è supportato, a meno che non si usi AD RMS per la [protezione HYOK](configure-adrms-restrictions.md) con Azure Information Protection (configurazione "Hold Your Own Key"):
+L'uso di AD RMS e Azure RMS nello scenario seguente per proteggere il contenuto dallo stesso utente nella stessa organizzazione è supportato **solo** in ad RMS per la [protezione HYOK](configure-adrms-restrictions.md) con Azure Information Protection (la configurazione "Mantieni la propria chiave").
 
 - Esecuzione side-by-side di AD RMS e di Azure RMS nella stessa organizzazione tranne che durante la migrazione, come descritto in [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-È disponibile un percorso di migrazione supportato [da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e da [Azure Information Protection ad AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Se si distribuisce Azure Information Protection e poi si decide di interrompere l'uso del servizio cloud, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Information Protection](decommission-deactivate.md).
+È disponibile un percorso di migrazione supportato [da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e da [Azure Information Protection ad AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Se si distribuisce Azure Information Protection e poi si decide di interrompere l'uso del servizio cloud, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Information Protection](decommission-deactivate.md). 
 
-### <a name="service-tags"></a>Tag del servizio
+Per altri scenari in cui entrambi i servizi sono attivi nella stessa organizzazione, i servizi devono essere configurati in modo che solo uno di essi consente a qualsiasi utente di proteggere il contenuto. Questa configurazione può essere eseguita usando i reindirizzamenti nel caso di un [ad RMS per Azure RMS la migrazione](migrate-from-ad-rms-to-azure-rms.md) o, nel caso in cui entrambi i servizi devono essere attivi per utenti diversi contemporaneamente, usando le configurazioni lato servizio per applicare l'esclusività: Azure RMS i controlli di onboarding nel servizio cloud e un ACL nell'URL di pubblicazione per impostare la modalità di sola lettura per ad RMS.   
+
+### <a name="service-tags"></a>Tag di servizio
 
 Assicurarsi di consentire l'accesso a tutte le porte per i seguenti tag del servizio:
 
