@@ -4,19 +4,19 @@ description: Istruzioni per consentire agli utenti di installare il client di Az
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 535f7dde9f8dd0fd6fc709b4fe8bd0d2bc0f1fbf
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 95c0af617e88b4201243f4b12381799d8202a595
+ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960866"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852082"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: scaricare e installare il client di Azure Information Protection Unified Labeling
 
@@ -30,7 +30,6 @@ Inoltre:
 
 - Il client per l'etichettatura unificata di Azure Information Protection richiede Microsoft .NET Framework 4.6.2 come versione minima. Se non è disponibile, il programma di installazione prova a scaricare e installare questo prerequisito. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer.
 
-- Se si usa Windows 7 SP1, il client per l'etichettatura unificata di Azure Information Protection richiede un aggiornamento specifico, ovvero KB 2533623. Se il PC richiede l'aggiornamento ma questo non è installato, l'installazione viene completata, ma viene visualizzato un messaggio per indicare che il client per l'etichettatura unificata di Azure Information Protection richiede l'aggiornamento. Fino a quando l'aggiornamento non è installato, non sarà possibile usare tutte le funzionalità del client per l'etichettatura unificata di Azure Information Protection. 
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Per scaricare e installare il client per l'etichettatura unificata di Azure Information Protection
 

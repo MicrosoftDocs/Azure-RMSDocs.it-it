@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/20/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 97390bec6bb31b6445a2975953b996e57865c6f4
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: e77e2a39f1d75883de9bff8a446493ce0005cd2e
+ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82799096"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -61,6 +61,28 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## <a name="version-27930"></a>Versione 2.7.93.0
+Client con etichetta unificata (disponibilità generale) 
+
+Unified Labeling scanner (anteprima pubblica) versione 2.7.93.0
+
+**Rilasciato** 05/05/2020
+
+**Nuove funzionalità:**
+
+- Questa versione limitata è incentrata solo sulle versioni di anteprima pubblica di Unified Labeling scanner versione 2.7.93.0, come descritto di seguito: 
+
+- **Novità dello scanner**
+    - [Usare lo scanner per applicare etichette in base alle condizioni consigliate](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). Lo scanner AIP può ora considerare le regole di assegnazione automatica delle etichette con le azioni "etichetta consigliata" come regole automatiche. Questa modifica è stata implementata per consentire ai clienti AIP di scegliere di implementare l'etichettatura automatica solo sul lato del servizio, consentendo agli utenti finali di seguire sempre le raccomandazioni anziché l'opzione precedente, abilitando solo l'assegnazione automatica di etichette sul lato utente.
+    - [Informazioni sui file individuati in precedenza da scanner eliminati dal repository analizzato](https://docs.microsoft.com/azure/information-protection/reports-aip) Questi file eliminati non sono stati segnalati in precedenza in AIP Analytics e sono ora disponibili nel report di individuazione dello scanner.
+    - [Ottenere i report dallo scanner negli errori per applicare gli eventi di azione](https://docs.microsoft.com/azure/information-protection/reports-aip#friendly-schema-reference-for-event-functions). Usare i report per ottenere informazioni sugli eventi di azione non riusciti e individuare modi per evitare future occorrenze. 
+    - Introduzione dello strumento Analizzatore diagnostica di AIP scanner per il rilevamento e l'analisi degli errori comuni del scanner. Per iniziare a usare la diagnostica dello scanner AIP, [eseguire il nuovo cmdlet **Start-AIPScannerDiagnostics** ](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#troubleshooting-using-scanner-diagnostic-tool). 
+    - È ora possibile gestire e limitare l'utilizzo massimo della CPU nel computer dello scanner. Informazioni su come impedire il 100% di utilizzo della CPU e gestire l'utilizzo della CPU con [due nuove impostazioni avanzate **ScannerMaxCPU**e **ScannerMinCPU**](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+
+- **Correzioni e miglioramenti** 
+    - Miglioramenti delle prestazioni di SQL scanner
+    - Miglioramenti delle prestazioni di analisi di SharePoint
 
 ## <a name="version-261110"></a>Versione 2.6.111.0 
 

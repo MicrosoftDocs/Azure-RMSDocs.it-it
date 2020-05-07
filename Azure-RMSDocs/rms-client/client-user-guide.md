@@ -4,7 +4,7 @@ description: Il client di Azure Information Protection per Windows consente di p
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 99127a66ffc062308d915d701f6f1d8b8f521753
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 70560867707fd58dc5b4580ab67006ea6fb4ce13
+ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403842"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852065"
 ---
 # <a name="azure-information-protection-user-guide"></a>Guida per l'utente di Azure Information Protection
 
@@ -28,10 +28,10 @@ ms.locfileid: "79403842"
 
 Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso. È anche possibile usare questo client per aprire documenti protetti da altri utenti tramite la tecnologia di protezione Rights Management da Azure Information Protection.
 
-È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
+È sufficiente un computer che esegue almeno Windows 8. Quindi scaricare e installare questo client gratuito da Microsoft.
 
 
-## <a name="what-do-you-want-to-do"></a>Come procedere
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Scaricare e installare il client di Azure Information Protection](install-client-app.md)
 
@@ -39,7 +39,7 @@ Il client di Azure Information Protection per Windows consente di proteggere i d
 
 - [Classificare e proteggere un file o un messaggio di posta elettronica](client-classify-protect.md)
 
-- [Tenere traccia dei documenti e revocarli](client-track-revoke.md)
+- [Tenere traccia e revocare i documenti](client-track-revoke.md)
 
 - [Aprire i file che sono stati protetti](client-view-use-files.md)
 

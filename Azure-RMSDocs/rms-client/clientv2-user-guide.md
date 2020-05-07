@@ -4,7 +4,7 @@ description: Azure Information Protection client di assegnazione unificata per W
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 5e8cf81bc2f9f4de76bdc868603af0cf7e6a76a3
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 06c9f0b81cfca3118c6b83e4fc5e67f55724cbe8
+ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403519"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852049"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection 
 
@@ -27,10 +27,10 @@ ms.locfileid: "79403519"
 
 Il Azure Information Protection client Unified Labeling per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non dovrebbero visualizzarli, anche se l'indirizzo di posta elettronica viene inviato o il documento viene salvato in un altro percorso. È anche possibile usare questo client per aprire documenti protetti da altri utenti tramite la tecnologia di protezione Rights Management da Azure Information Protection.
 
-È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
+È sufficiente un computer che esegue almeno Windows 8. Quindi scaricare e installare questo client gratuito da Microsoft.
 
 
-## <a name="what-do-you-want-to-do"></a>Come procedere
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Scaricare e installare il client Azure Information Protection Unified Labeling](install-unifiedlabelingclient-app.md)
 

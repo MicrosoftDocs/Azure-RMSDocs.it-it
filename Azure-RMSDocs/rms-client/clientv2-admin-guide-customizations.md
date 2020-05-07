@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 760a4eddf40f344a47d335192e15d73d0d70dbaf
-ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
+ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
+ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "82736763"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82799130"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -675,7 +675,27 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
+## <a name="limit-cpu-consumption"></a>Limita utilizzo CPU
+
+A partire dalla versione di scanner 2.7. x. x, è consigliabile limitare l'utilizzo della CPU tramite il metodo di impostazioni avanzate **ScannerMaxCPU** e **ScannerMinCPU** . 
+
+> [!IMPORTANT]
+> Il metodo di impostazioni avanzate **ScannerMaxCPU** e **ScannerMinCPU** non può essere usato con i criteri di limitazione dei thread. Per usare il metodo per limitare l'utilizzo della CPU, è necessario sospendere l'uso dei [criteri che limitano il thread](#limit-the-number-of-threads-used-by-the-scanner) che potrebbero già esistere. 
+
+Per limitare l'utilizzo della CPU nel computer dello scanner, è possibile gestirlo creando due impostazioni avanzate: **ScannerMaxCPU** e **ScannerMinCPU**. 
+
+Per impostazione predefinita, **ScannerMaxCPU** è impostato su 100, il che significa che non esiste alcun limite di utilizzo massimo della CPU. In questo caso, il processo dello scanner tenterà di usare tutto il tempo disponibile per la CPU per ottimizzare le frequenze di analisi.
+
+Se si imposta **ScannerMaxCPU** su un valore inferiore a 100, lo scanner monitorerà il consumo di CPU negli ultimi 30 minuti e se la CPU max supera il limite impostato, inizierà a ridurre il numero di thread allocati per i nuovi file. Il limite per il numero di thread continuerà fino a quando l'utilizzo della CPU è superiore al limite impostato per **ScannerMaxCPU**.
+
+**ScannerMinCPU**, viene verificata solo se **ScannerMaxCPU** non è uguale a 100. **ScannerMinCPU** non può essere impostato su un numero maggiore del numero di **ScannerMaxCPU** . Si consiglia di mantenere **ScannerMinCPU** impostare almeno 15 punti più in basso rispetto al valore di **ScannerMaxCPU**.   
+
+Il valore predefinito di questa impostazione è 50, il che significa che se l'utilizzo della CPU negli ultimi 30 minuti è inferiore a questo valore, lo scanner avvierà l'aggiunta di nuovi thread per l'analisi di più file in parallelo, fino a quando l'utilizzo della CPU non raggiunge il livello impostato per **ScannerMaxCPU**-15. 
+
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitare il numero di thread usati dallo scanner
+
+> [!IMPORTANT]
+> Quando il criterio di limitazione dei thread seguente è in uso, le impostazioni avanzate di **ScannerMaxCPU** e **ScannerMinCPU** vengono ignorate. Per limitare l'utilizzo della CPU tramite le impostazioni avanzate **ScannerMaxCPU** e **ScannerMinCPU** , annullare l'utilizzo di criteri che limitano il numero di thread. 
 
 Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
 
