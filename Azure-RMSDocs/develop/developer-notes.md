@@ -13,13 +13,13 @@ ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 60cf2741ddec361e5913fe043ce6dec7ecf848c9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 620464886d40c3f152a32f07952a924eee72920f
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792486"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971813"
 ---
 # <a name="developer-guidance"></a>Istruzioni per sviluppatori
 
@@ -43,4 +43,4 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 
  
 ## <a name="related-topics"></a>Argomenti correlati
-* [Informazioni generali](ad-rms-overview.md)
+* [Panoramica](ad-rms-overview.md)

@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: ddc962f97e6e7d6b0e7ff091821fa83063e9f068
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.custom: has-adal-ref
+ms.openlocfilehash: c66199f7ae22f6b4dca4406e847f41b56317beae
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555858"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971660"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Acquisire un token di accesso (PowerShell)
 
@@ -21,7 +22,7 @@ Nell'esempio illustrato viene illustrato come chiamare uno script di PowerShell 
 
 - [Installazione e configurazione dell'SDK complete (MIP)](setup-configure-mip.md). Tra le altre attività, l'applicazione client verrà registrata nel tenant di Azure Active Directory (Azure AD). Azure AD fornirà un ID applicazione, noto anche come ID client, che viene usato nella logica di acquisizione dei token.
 
-Questo codice non è destinato all'uso in produzione. Può essere utilizzato solo per lo sviluppo e la comprensione dei concetti di autenticazione. 
+Questo codice non è destinato all'uso in produzione. Può essere utilizzato solo per lo sviluppo e la comprensione dei concetti di autenticazione.
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
@@ -61,9 +62,9 @@ namespace sample {
 
 ## <a name="mint-a-token"></a>Creare un token
 
-Infine, creare un token da inserire nella variabile mToken. L'esempio seguente illustra uno script di PowerShell che può essere usato per ottenere rapidamente il token OAuth2 tramite ADAL e PowerShell in Windows. Questo token viene concesso solo per l'endpoint del Centro sicurezza e conformità di Office 365. Di conseguenza, le azioni di protezione avranno esito negativo se l'URL della risorsa non viene aggiornato. 
+Infine, creare un token da inserire nella variabile mToken. L'esempio seguente illustra uno script di PowerShell che può essere usato per ottenere rapidamente il token OAuth2 tramite ADAL e PowerShell in Windows. Questo token viene concesso solo per l'endpoint del Centro sicurezza e conformità di Office 365. Di conseguenza, le azioni di protezione avranno esito negativo se l'URL della risorsa non viene aggiornato.
 
-### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>Installare [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) da PowerShell Gallery
+### <a name="install-adalps-from-ps-gallery"></a>Installare [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) da PowerShell Gallery
 
 È possibile ignorare questo passaggio se è stato completato in precedenza in [installazione e configurazione dell'SDK (MIP)](setup-configure-mip.md).
 
@@ -77,7 +78,7 @@ Install-Module -Name ADAL.PS
 #Install the ADAL.PS package if it's not installed.
 if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 
-$authority = "https://login.windows.net/common/oauth2/authorize" 
+$authority = "https://login.windows.net/common/oauth2/authorize"
 #this is the security and compliance center endpoint
 $resourceUrl = "https://syncservice.o365syncservice.com/"
 #replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
@@ -89,5 +90,3 @@ $response.AccessToken | clip
 ```
 
 Copiare il token dagli Appunti in auth.cpp come valore per `string mToken`, sostituendo "your token here" nel codice riportato in precedenza. Potrebbe essere necessario eseguire di nuovo lo script, a seconda del tempo richiesto per i passaggi seguenti.
-
-

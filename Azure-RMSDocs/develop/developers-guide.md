@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: has-adal-ref
+ms.openlocfilehash: 05036616c77d559dc82a0334b99b548da724df18
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60179164"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971796"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
 
@@ -35,7 +36,7 @@ Le applicazioni di servizio forniscono funzionalità per proteggere le informazi
 
 - [IpcDIp](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un'applicazione DLP abilitata per RMS di esempio che illustra i passaggi di base che devono essere eseguiti da un'applicazione DLP abilitata per RMS mediante l'API file di RMS per la protezione e l'utilizzo di contenuto con restrizioni.
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come usare RMS SDK nelle applicazioni Azure per proteggere i dati in un'archiviazione BLOB di Azure.
-- [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come creare un'applicazione Windows che controlla le directory nel file system e applica i criteri di protezione RMS a ogni modifica, ad esempio per i file modificati o aggiunti.
+- [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come creare un'applicazione Windows che controlla le directory nel file system e applica i criteri di protezione RMS a ogni modifica, ad esempio per i file modificati o i file aggiunti.
 - [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/ProtectFilesInDir) è un esempio di applicazione console semplice che accetta una directory come input e consente di proteggere tutti i file solo in tale directory, senza ricorsione.
 
 ## <a name="powershell-guides"></a>Guide di PowerShell
@@ -57,24 +58,24 @@ La versione 4.2 è basata su client REST con API specifiche del sistema operativ
 
 - [AzureIP Test](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) è un'applicazione console di esempio che consente di crittografare i documenti con un modello di Azure o un criterio ad hoc.
 - [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) è un'applicazione abilitata per RMS di esempio che illustra i passaggi di base che devono essere eseguiti da ogni applicazione abilitata per RMS per la protezione e l'utilizzo di contenuto con restrizioni.
-- [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) è uno strumento in grado di fornire informazioni su qualsiasi file protetto da RMS, ad esempio per quanto riguarda i diritti utente o l'ID contenuto.
+- [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) è uno strumento in grado di fornire informazioni su qualsiasi file RMS protetto, ad esempio i diritti utente o l'id contenuto.
 
 ## <a name="development-environment-setup"></a>Configurazione dell'ambiente di sviluppo
 
 Le guide seguenti illustrano i passaggi di configurazione specifici del sistema operativo per un ambiente di sviluppo di applicazioni usando strumenti comuni.
 
-[![Installazione per iOS e OS X](../media/develop/ios-icon.png)](ios-sdk.md)
-[![Installazione per Android](../media/develop/android-icon.png)](android-sdk.md)
-[![Installazione per Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
-[![Installazione del servizio di Windows](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
-[![Installazione per Linux](../media/develop/linux-icon.png)](linux-setup.md)
+[![installazione di iOS/OSX](../media/develop/ios-icon.png)](ios-sdk.md)
+installazione di[![Android](../media/develop/android-icon.png)](android-sdk.md)
+[![Windows Phone configurazione](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![del servizio](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+Windows configurazione di[![Linux](../media/develop/linux-icon.png)](linux-setup.md) installazione
 
 
 ## <a name="how-tos"></a>Procedure
 
 Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto dell'implementazione di un'applicazione. Le applicazioni di servizio vengono create mediante RMS SDK 2.x. Le applicazioni utente vengono create mediante RMS SDK 4.x. Il collegamento dell'articolo viene definito con tipo di applicazione, servizio e utente.
 
-### <a name="general"></a>Informazioni di carattere generale
+### <a name="general"></a>Generale
 
 - [Procedura: Abilitare la revoca e il rilevamento dei documenti (servizio)](tracking-content.md)
 - [Come distribuire il client](../rms-client/client-deployment-notes.md)
@@ -85,7 +86,7 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 
 ### <a name="security-and-authentication"></a>Sicurezza e autenticazione
 
-- [Come configurare un'applicazione del servizio app per usare l'account di accesso di Azure Active Directory](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Come configurare l'applicazione del servizio app per usare Azure Active Directory account di accesso](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md)
 - [Configurare Azure RMS per l'autenticazione ADAL (servizio)](adal-auth.md)
 - [Procedura: Impostare la modalità di sicurezza dell'API (servizio)](setting-the-api-security-mode-api-mode.md)
@@ -106,9 +107,9 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 ## <a name="other-resources"></a>Altre risorse
 
 - [Guida per le procedura di sicurezza consigliate](security-guidelines.md)
-- [Domande frequenti su Azure Information Protection](/azure/information-protection/faqs)
+- [Domande frequenti per Azure Information Protection](/azure/information-protection/faqs)
 
-### <a name="support-articles"></a>Articoli di supporto
+### <a name="support-articles"></a>Articoli del supporto tecnico
 
 - [Formati di file supportati](supported-file-formats.md)
 - [Piattaforme supportate](supported-platforms.md)
@@ -125,13 +126,13 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 - [Formato di file msg (parte 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
 - [Formato di file msg (parte 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
-### <a name="api-reference"></a>Riferimento API
+### <a name="api-reference"></a>API (riferimento)
 
 - [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Codici di errore di Windows SDK](https://msdn.microsoft.com/library/hh535248.aspx)
 - [Informazioni di riferimento sulle API per Windows Phone e Windows Store](https://msdn.microsoft.com/library/dn891914.aspx)
 - [Informazioni di riferimento sulle API di iOS/OSX](https://msdn.microsoft.com/library/dn758306.aspx)
-- [Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Informazioni di riferimento sulle API Android](https://msdn.microsoft.com/library/dn758245.aspx)
 - [Informazioni di riferimento sulle API di Linux](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### <a name="previous-versions"></a>Versioni precedenti
@@ -143,4 +144,3 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 
 - [Terminologia per sviluppatori](terms.md)
 - [Terminologia di Azure Information Protection - ITPro](../terminology.md)
-

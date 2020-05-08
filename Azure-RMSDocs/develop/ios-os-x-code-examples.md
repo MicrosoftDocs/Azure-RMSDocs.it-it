@@ -13,13 +13,13 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 34e7a531d117daaef54480c027effedb56c97137
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 7ed06af67d004845de7a5a55090da9fc3b40388c
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068391"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972000"
 ---
 # <a name="iosos-x-code-examples"></a>Esempi di codice iOS/OS X
 
@@ -27,11 +27,11 @@ ms.locfileid: "80068391"
 
 Questo argomento presenta importanti elementi di codice per la versione iOS/OS X di RMS SDK.
 
-**Nota** Nel codice di esempio e nelle descrizioni che seguono, viene usato il termine MSIPC (Microsoft Information Protection and Control) per fare riferimento al processo client.
+**Nota**: nel codice di esempio e nelle descrizioni che seguono, viene usato il termine MSIPC (Microsoft Information Protection and Control) per fare riferimento al processo client.
 
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Uso di Microsoft Rights Management SDK 4.2 - Scenari principali
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Uso di Microsoft Rights Management SDK 4.2: scenari principali
 
 
 Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicazione di esempio di dimensioni maggiori che rappresenta scenari di sviluppo importanti per l'orientamento in questo SDK. Questi esempi illustrano l'uso del formato Microsoft Protected File definito come file protetto, l'uso di formati di file protetti personalizzati e l'uso di controlli di interfaccia utente personalizzati.
@@ -57,7 +57,7 @@ Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicaz
             }];
         }
 
-- **Passaggio 2**: Configurare l'autenticazione usando Active Directory Authentication Library (ADAL).
+- **Passaggio 2**: Configurare l’autenticazione usando Active Directory Authentication Library (ADAL).
 
   **Descrizione**: in questo passaggio viene illustrato l'uso di ADAL per implementare [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) con parametri di autenticazione di esempio. Per altre informazioni sull'uso di ADAL, vedere Azure AD Authentication Library (ADAL).
 
@@ -112,7 +112,7 @@ Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicaz
           }
       }
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: creare un nuovo file protetto tramite un modello
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: creazione di un nuovo file protetto tramite un modello
 
 Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx), prosegue con la selezione del primo modello per creare un criterio e termina con la creazione e la scrittura nel nuovo file protetto.
 
@@ -157,7 +157,7 @@ Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescr
             }];
         }
 
-### <a name="scenario-open-a-custom-protected-file"></a>Scenario: apertura di un file protetto personalizzato
+### <a name="scenario-open-a-custom-protected-file"></a>Scenario: aprire di un file protetto personalizzato
 
 
 -   **Passaggio 1**: Creare una classe [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) da *serializedContentPolicy*.
@@ -215,10 +215,10 @@ Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescr
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Scenario: creare un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Scenario: creazione di un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
 
 
--   **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall’utente.
+-   **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall'utente.
 
     **Descrizione**: in pratica vengono creati gli oggetti [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) e [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) usando gli input dell'utente dall'interfaccia del dispositivo.
 

@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 7cb49e161b3718a54bcdb8601cc857a47b1e9f16
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.custom: has-adal-ref
+ms.openlocfilehash: 6a78bbfb94bd479feb7f2b8bebd203ed69eba9d0
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556249"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971711"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquisire un token di accesso (Python)
 
@@ -22,7 +23,7 @@ Questo esempio dimostra come chiamare uno script Python esterno per ottenere un 
 Per eseguire l'esempio seguente:
 
 - Installare Python 2,7 o versione successiva.
-- Implementare utils.h/cpp nel progetto. 
+- Implementare utils.h/cpp nel progetto.
 - Auth.py deve essere aggiunto al progetto e presente nella stessa directory dei file binari in fase di compilazione.
 - [Installazione e configurazione dell'SDK complete (MIP)](setup-configure-mip.md). Tra le altre attività, l'applicazione client verrà registrata nel tenant di Azure Active Directory (Azure AD). Azure AD fornirà un ID applicazione, noto anche come ID client, che viene usato nella logica di acquisizione dei token.
 
@@ -30,7 +31,7 @@ Questo codice non è destinato all'uso in produzione. Può essere utilizzato sol
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-Nell'esempio di autenticazione semplice è stata illustrata una semplice funzione `AcquireToken()` che non ha accettato parametri e ha restituito un valore di token hardcoded. In questo esempio, si eseguirà l'overload di AcquireToken() per accettare i parametri di autenticazione e chiamare uno script Python esterno per restituire il token.
+Nell'esempio di autenticazione semplice è stata illustrata una `AcquireToken()` semplice funzione che non ha accettato parametri e ha restituito un valore di token hardcoded. In questo esempio, si eseguirà l'overload di AcquireToken() per accettare i parametri di autenticazione e chiamare uno script Python esterno per restituire il token.
 
 ### <a name="authh"></a>auth.h
 
@@ -41,7 +42,7 @@ In auth.h, la funzione `AcquireToken()` viene sottoposta a overload e la funzion
 #include <string>
 
 namespace sample {
-  namespace auth {    
+  namespace auth {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
@@ -52,7 +53,7 @@ namespace sample {
 }
 ```
 
-I primi tre parametri verranno forniti dall'input dell'utente o saranno hardcoded nell'applicazione. Gli ultimi due parametri vengono forniti dall'SDK al delegato di autenticazione. 
+I primi tre parametri verranno forniti dall'input dell'utente o saranno hardcoded nell'applicazione. Gli ultimi due parametri vengono forniti dall'SDK al delegato di autenticazione.
 
 
 ### <a name="authcpp"></a>auth.cpp
@@ -118,7 +119,7 @@ namespace sample {
 
 Questo script acquisisce i token di autenticazione direttamente tramite [adal per Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). Questo codice è incluso solo come mezzo per acquisire i token di autenticazione per l'uso da parte delle app di esempio e non è destinato all'uso nell'ambiente di produzione. Lo script funziona solo su tenant che supportano l'autenticazione HTTP semplice tradizionale con nome utente/password. L'autenticazione MFA o basata sui certificati avrà esito negativo.
 
-> [!NOTE] 
+> [!NOTE]
 > Prima di eseguire questo esempio, è necessario installare ADAL per Python eseguendo uno dei comandi seguenti:
 
 ```shell
@@ -149,7 +150,7 @@ def main(argv):
   resource = ''
 
   clientId = ''
-    
+
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -180,13 +181,13 @@ def main(argv):
   token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
   print(token["accessToken"])
 
-if __name__ == '__main__':  
+if __name__ == '__main__':
   main(sys.argv[1:])
 ```
 
 ## <a name="update-acquireoauth2token"></a>Aggiornare AcquireOAuth2Token
 
-Infine, aggiornare la funzione `AcquireOAuth2Token` in `AuthDelegateImpl` per chiamare la funzione `AcquireToken` in overload. Gli URL delle risorse e dell'autorità vengono ottenuti leggendo `challenge.GetResource()` e `challenge.GetAuthority()`. `OAuth2Challenge` viene passato al delegato di autenticazione quando viene aggiunto il motore. Queste operazioni vengono eseguite dall'SDK e non sono richiesti ulteriori interventi da parte dello sviluppatore. 
+Infine, aggiornare la funzione `AcquireOAuth2Token` in `AuthDelegateImpl` per chiamare la funzione `AcquireToken` in overload. Gli URL delle risorse e dell'autorità vengono ottenuti leggendo `challenge.GetResource()` e `challenge.GetAuthority()`. `OAuth2Challenge` viene passato al delegato di autenticazione quando viene aggiunto il motore. Queste operazioni vengono eseguite dall'SDK e non sono richiesti ulteriori interventi da parte dello sviluppatore.
 
 ```cpp
 bool AuthDelegateImpl::AcquireOAuth2Token(
@@ -202,5 +203,3 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 ```
 
 Quando viene aggiunto l'`engine`, l'SDK chiamerà la funzione AcquireOAuth2Token, che passa la richiesta, esegue lo script Python, riceve un token e quindi presenta il token al servizio.
-
-

@@ -13,13 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 5319ff8ca9424d1c1273df1bdf347abf65881209
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791312"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971864"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
@@ -48,10 +48,10 @@ Una volta attivato il servizio saranno necessari i componenti di PowerShell per 
 - Assicurarsi che RMS sia abilitato: `enable-aipservice`
 - Ottenere l'ID tenant eseguendo: `Get-AipServiceConfiguration`
 
->Registrare il valore BPOSId (ID tenant). Sarà necessario nei passaggi successivi.
+>Registrare il valore BPOSId (ID tenant). Sarà necessaria nei passaggi successivi.
 
-*Output di esempio*
-![output del cmdlet](../media/develop/output-of-Get-AadrmConfiguration.png)
+*Example output*
+![Output del cmdlet di output di esempio](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Disconnettersi dal servizio: `Disconnect-AipServiceService`
 
@@ -66,13 +66,13 @@ Per creare un'entità servizio, seguire questi passaggi:
 - Specificare un nome per l'entità servizio
   > Registrare la chiave simmetrica e l'ID entità applicazione per un uso futuro.
 
-*Output di esempio*
-![output del cmdlet](../media/develop/output-of-NewMsolServicePrincipal.png)
+*Example output*
+![Output del cmdlet di output di esempio](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Aggiungere l'ID entità applicazione, la chiave simmetrica e l'ID tenant al file App.config dell'applicazione.
 
-*File App.config di esempio*
-![output del cmdlet](../media/develop/example-App.config-file.png)
+*Esempio*
+![di output del cmdlet del file app. config](../media/develop/example-App.config-file.png)
 
 - I valori *ClientID* e *RedirectUri* saranno disponibile all'utente dopo la registrazione dell'applicazione in Azure. Per altre informazioni su come registrare l'applicazione in Azure e acquisire un valore *ClientID* e *RedirectUri*, vedere [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md).
 
@@ -132,7 +132,7 @@ L'opzione per eseguire la protezione con il modello consente di ottenere l'elenc
 
      public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
      {
-       // Gets the available templates for this tenant             
+       // Gets the available templates for this tenant
        Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
            false, true, null, null, symmetricKeyCredential);
 
@@ -161,7 +161,7 @@ L'opzione per eseguire la protezione con il modello consente di ottenere l'elenc
          {
            templateSelection -= templateSelection;
 
-           // Encrypts the file using the selected template             
+           // Encrypts the file using the selected template
            TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
 
            string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
@@ -176,7 +176,7 @@ Se si selezionano i criteri ad hoc, l'utente dell'applicazione deve fornire gli 
 
     if (issuerDisplayName.Trim() != "")
     {
-      // Gets the available issuers of rights policy templates.              
+      // Gets the available issuers of rights policy templates.
       // The available issuers is a list of RMS servers that this user has already contacted.
       try
       {
@@ -186,7 +186,7 @@ Se si selezionano i criteri ad hoc, l'utente dell'applicazione deve fornire gli 
                                                         false,
                                                         false, true, null, symmetricKeyCredential);
 
-        // Creates the policy and associates the chosen user rights with it             
+        // Creates the policy and associates the chosen user rights with it
         SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
                                                             templateIssuers.ElementAt(0));
         SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
@@ -197,7 +197,7 @@ Se si selezionano i criteri ad hoc, l'utente dell'applicazione deve fornire gli 
                                                                 issuerDisplayName,
                                                                 false));
 
-        //Encrypts the file using the ad hoc policy             
+        //Encrypts the file using the ad hoc policy
         string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
                                        filePath,
                                        handle,
@@ -230,4 +230,3 @@ Dopo avere eseguito tutti i passaggi di creazione ed esecuzione, gli output dell
    ![output dell'app - passaggio 5](../media/develop/app-output-5.png)
 
 6. Immettere infine alcuni metadati dei criteri: nome dei criteri, descrizione e nome visualizzato dell'autorità di certificazione (tenant di Azure AD) ![output dell'app - passaggio 6](../media/develop/app-output-6.png)
-

@@ -13,13 +13,13 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: ef2e1755c6a86984227b09c95020a26a976a2c52
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791670"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971966"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Configurare un'app per l'autenticazione ADAL
 
@@ -27,13 +27,13 @@ Questo argomento illustra i passaggi per configurare un'app per l'autenticazione
 
 ## <a name="azure-authentication-setup"></a>Configurazione dell'autenticazione di Azure
 
-Sono necessari:
+È necessario quanto segue:
 
 - Una [sottoscrizione Microsoft Azure](https://azure.microsoft.com/) (è sufficiente una versione di prova gratuita). Per altre informazioni, vedere [How users sign up for RMS for individuals](../rms-for-individuals-user-sign-up.md) (Come eseguire l'iscrizione a RMS per utenti singoli).
 - Un abbonamento a Microsoft Azure Rights Management (è sufficiente un account [RMS per utenti singoli](https://technet.microsoft.com/library/dn592127.aspx) gratuito).
 
 > [!NOTE]
-> Chiedere all'amministratore IT se si dispone di un abbonamento a Microsoft Azure Rights Management e richiedere all'amministratore IT di eseguire i passaggi descritti di seguito. Se l'organizzazione non dispone di un abbonamento, è necessario che l'amministratore IT crei un nuovo abbonamento. Inoltre, è necessario che l'amministratore IT sottoscriva l'abbonamento con un *account aziendale o dell'istituto di istruzione* anziché un *account Microsoft*, ad esempio un account Hotmail.
+> Chiedere all'amministratore IT se si dispone di un abbonamento a Microsoft Azure Rights Management e richiedere all'amministratore IT di eseguire i passaggi descritti di seguito. Se l'organizzazione non dispone di un abbonamento, è necessario che l'amministratore IT crei un nuovo abbonamento. Inoltre, l'amministratore IT deve sottoscrivere un *account aziendale o dell'Istituto di istruzione*, anziché un *account Microsoft* (ad esempio, Hotmail).
 
 Dopo aver effettuato l'iscrizione a Microsoft Azure:
 
@@ -100,7 +100,6 @@ Dopo aver effettuato l'iscrizione a Microsoft Azure:
 
 ![Impostare le autorizzazioni](../media/AddDependency.png)
 
-- Salvare l'applicazione per rendere permanenti le modifiche scegliendo l'icona **Salva** nella parte inferiore centrale del portale.
+- Salvare l'applicazione per salvare in modo permanente le modifiche scegliendo l'icona **Salva** nella parte inferiore centrale del portale.
 
 ![Selezionare Salva](../media/SaveApplication.png)
-

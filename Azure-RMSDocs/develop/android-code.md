@@ -13,13 +13,13 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 5d8d1a6cf1950be8abc90180044126d0c984bfb2
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: be43f28a737b45926e247caf2bce932484641052
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068379"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971915"
 ---
 # <a name="android-code-examples"></a>Esempi di codice Android
 
@@ -30,7 +30,7 @@ Questo articolo mostra come scrivere il codice degli elementi per la versione An
 **Nota** In questo articolo il termine _MSIPC_ (Microsoft Information Protection and Control) si riferisce al processo client.
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Uso di Microsoft Rights Management SDK 4.2 - Scenari principali
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Uso di Microsoft Rights Management SDK 4.2: scenari principali
 
 Questi esempi di codice sono tratti da un'applicazione di esempio di dimensioni maggiori che rappresenta scenari di sviluppo importanti per orientarsi in questo SDK. Questi esempi illustrano come usare:
 
@@ -91,7 +91,7 @@ Questi esempi di codice sono tratti da un'applicazione di esempio di dimensioni 
                     catch (IOException e)
                     {
                       …
-                    }  
+                    }
               }
             };
             try
@@ -110,7 +110,7 @@ Questi esempi di codice sono tratti da un'applicazione di esempio di dimensioni 
 
 - **Passaggio 2**: Configurare l'autenticazione usando Active Directory Authentication Library (ADAL).
 
-    **Origine**: *MsipcAuthenticationCallback.java*.
+    **Origine**: *MsipcAuthenticationCallback. Java*.
 
     **Descrizione**: questo passaggio usa ADAL per implementare [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) con parametri di autenticazione di esempio. Per altre informazioni, vedere [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
@@ -205,7 +205,7 @@ Questi esempi di codice sono tratti da un'applicazione di esempio di dimensioni 
     ```
 
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: creare un nuovo file protetto tramite un modello
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: creazione di un nuovo file protetto tramite un modello
 
 Questo scenario inizia con il recupero di un elenco di modelli e la selezione del primo di essi per creare un criterio e procede quindi con la creazione e la scrittura di contenuto nel nuovo file protetto.
 
@@ -250,7 +250,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
               …
       }
     ```
-    
+
 
 - **Passaggio 2**: Creare una classe [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) usando il primo modello dell'elenco.
 
@@ -295,7 +295,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
               …
       }
     ```
-    
+
 
 -  **Passaggio 3**: Creare una classe [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) e scriverci il contenuto.
 
@@ -361,7 +361,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
     ```
 
 
-### <a name="scenario-open-a-custom-protected-file"></a>Scenario: apertura di un file protetto personalizzato
+### <a name="scenario-open-a-custom-protected-file"></a>Scenario: aprire di un file protetto personalizzato
 
 - **Passaggio 1**: Creare un oggetto[UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) da *serializedContentPolicy*.
 
@@ -491,7 +491,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
       ...
     }
     ```
-    
+
 
 - **Passaggio 3**: Leggere il contenuto da [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) in *mDecryptedContent* e chiudere.
 
@@ -504,7 +504,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
       mUserPolicy = customProtectedInputStream.getUserPolicy();
       ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 
-      int nRead;                      
+      int nRead;
       byte[] dataChunk = new byte[16384];
 
       try
@@ -527,11 +527,11 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
       }
     }
     ```
-    
+
 
 ### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>Scenario: creare un file protetto personalizzato usando un criterio personalizzato
 
-- **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall’utente.
+- **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall'utente.
 
     **Origine**: *MsipcTaskFragment.java*
 

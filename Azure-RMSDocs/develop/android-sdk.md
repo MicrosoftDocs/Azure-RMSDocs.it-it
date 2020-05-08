@@ -13,13 +13,13 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 9a876f2dee6f3dcaccbae364d9839ab082146f04
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: ef1306dbcbd4727f4e6c0207e328e7df3da8ed74
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068435"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971898"
 ---
 # <a name="android-setup"></a>Installazione per Android
 
@@ -30,36 +30,36 @@ Le applicazioni Android possono usare SDK 4.2 Microsoft Rights Management per ab
 Questo argomento illustra come impostare l'ambiente per la creazione di nuove applicazioni personalizzate.
 
 -   [Prerequisiti](#prerequisites)
--   [Facoltativa](#optional)
+-   [Facoltativo](#optional)
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Nel sistema di sviluppo si consiglia di disporre del software seguente:
+Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
 -   Sistema operativo Windows o OS X per l'esecuzione dell'ambiente di sviluppo [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
 -   Questa guida presuppone l'uso di SDK di Eclipse a partire da Eclipse Juno 4.2 e di un'installazione predefinita.
 -   Java a partire da Java 1.6.
 -   [Plug-in Android Developer Tools (ADT)](https://developer.android.com/studio/install). NOTA: per completare l'installazione potrebbe essere richiesto di riavviare Eclipse.
 
-     
 
--   Pacchetto MS RMS SDK 4.2 per Android. Per altre informazioni, vedere [Introduzione](get-started.md).
+
+-   Pacchetto MS RMS SDK 4.2 per Android. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 
     Questo SDK consente di sviluppare per Android 4.0.3 (API livello 15) e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Nota**  se l'applicazione non usa ADAL come libreria di autenticazione OAuth 2.0, è consigliabile consultare la guida di Android [Alcune idee su SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Si noti**  che se l'applicazione non usa la libreria adal come la libreria di autenticazione OAuth 2,0, è consigliabile consultare questo materiale sussidiario Android, [alcuni pensieri SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
 
-Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti delle API, note sulla versione e domande frequenti (FAQ).
 
-## <a name="optional"></a>Facoltativa
+Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, note sulla versione e domande frequenti (FAQ).
+
+## <a name="optional"></a>Facoltativo
 
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per le operazioni di uso e protezione per gli sviluppatori che non intendono creare la propria interfaccia utente personalizzata - [Libreria dell'interfaccia utente e app di esempio per Android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
@@ -67,7 +67,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 **Nota**  versione di anteprima di MS RMS SDK 4,2: in questa versione di anteprima, le schermate non sono state aggiornate per mostrare la modifica nel nome dei percorsi da com/Microsoft/Protection a com/Microsoft/RightsManagement. Il testo, tuttavia, è stato aggiornato.
 
- 
+
 -   Aprire l'ambiente di sviluppo Eclipse.
 -   Per creare un nuovo progetto di applicazione Android, nel menu **File**, fare clic su **Nuovo**, fare clic su **Progetto** e quindi selezionare **Progetto di applicazione Android**.
 
@@ -86,7 +86,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
     ![Creare l'attività](../media/Android-setup-04.png)
 
--   Fare clic su **Avanti** e fornire un nome per l'attività. È possibile lasciare *MainActivity* come nome predefinito con nome di layout *activity\_main*.
+-   Fare clic su **Avanti** e fornire un nome per l'attività. È possibile lasciare *MainActivity* come nome predefinito con un nome di layout *Activity\_Main*.
 
     ![Specificare un nome per l'attività](../media/Android-setup-05a.jpg)
 
@@ -96,16 +96,16 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 -   Il progetto è stato creato, insieme alla classe principale dell'attività *mainactivity. Java*.
 
-**Riferimento all'SDK**
+**Aggiunta del riferimento all'SDK.**
 
-- Passare alla cartella in cui è stato estratto il file *adrms\_android\_sdk.zip*. Nella cartella "SDK > com > microsoft > rightsmanagement", assicurarsi che i file *.classpath*, *.project* e *project.properties* non siano contrassegnati come di sola lettura.
+- Passare alla cartella in cui è stato estratto il *file\_ADRMS\_Android SDK. zip*. Nella cartella "SDK > com > microsoft > rightsmanagement", assicurarsi che i file *.classpath*, *.project* e *project.properties* non siano contrassegnati come di sola lettura.
 - Per fare riferimento all'SDK, è necessario importarlo nell'area di lavoro.
 
   In Eclipse, fare clic su **File**. Scegliere **Importa** dal menu **File**. Nella finestra di dialogo **Importa**, selezionare **Android / Codice Android esistente nell'area di lavoro**.
 
   ![Importare l'SDK nell'area di lavoro](../media/Android-setup-07.png)
 
-- Fare clic su **Avanti**. Passare alla cartella in cui è stato estratto il file *adrms\_android\_sdk.zip*. L'SDK dovrebbe essere visualizzato nell'elenco come **com.microsoft.rightsmanagement**.
+- Fare clic su **Avanti**. Passare a selezionare la cartella in cui è stato estratto *il\_file\_ADRMS Android SDK. zip*. L'SDK dovrebbe essere visualizzato nell'elenco come **com.microsoft.rightsmanagement**.
 
   ![Esplorare per selezionare la cartella](../media/Android-setup-08c.jpg)
 
@@ -121,11 +121,11 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 - Fare clic su **OK**.
 
-  Poiché MS RMS SDK 4.2 si connette con AAD RM, è necessario concedere all'applicazione le autorizzazioni **INTERNET** e **ACCESS\_NETWORK\_STATE**. A tale scopo, aprire il file *Androidmanifest* nella radice del progetto.
+  Poiché MS RMS SDK 4,2 si connette con AAD RM, l'applicazione deve essere concessa a **Internet** e **ad\_accedere\_allo stato della rete**. A tale scopo, aprire il file *Androidmanifest* nella radice del progetto.
 
   Per aggiungere le autorizzazioni, fare clic su **Aggiungi** e quindi selezionare **Usa autorizzazioni**.
 
-  ![aggiungere le autorizzazioni](../media/Android-setup-11d.jpg)
+  ![Aggiungere autorizzazioni](../media/Android-setup-11d.jpg)
 
 - È possibile verificare il passaggio manifesto visualizzando il manifesto nell'editor di testo. Assicurarsi che vengano visualizzate le righe seguenti:
 
@@ -138,18 +138,16 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
   <uses-permission/>
   ```
 
-**Nota**  L'SDK usa *android.support.v4*
+**Si noti**  che l'SDK USA *Android. support. v4*
 
 -   A questo punto si è pronti a creare le proprie nuove app Android.
 
 ### <a name="see-also"></a>Vedere anche
 
-[Introduzione](get-started.md)
+[Operazioni preliminari](get-started.md)
 
 [Novità](release-notes.md)
 
 [Concetti e termini per sviluppatori](core-concepts.md)
 
 [Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/library/dn758245.aspx)
-
-

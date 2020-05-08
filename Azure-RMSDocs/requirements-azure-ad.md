@@ -11,13 +11,13 @@ ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
-ms.custom: admin
-ms.openlocfilehash: 6a3ed3272eecd25bd403d6a45a82f937fe26a03a
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.custom: admin, has-adal-ref
+ms.openlocfilehash: 803980b071de64c053f1ad0bf3cac06488fc410b
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404641"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972102"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
 
@@ -25,15 +25,15 @@ ms.locfileid: "79404641"
 
 Per usare Azure Information Protection, è necessario avere una directory di Azure AD. L'account usato da questa directory consente di accedere al portale di Azure, in cui è possibile, ad esempio, configurare e gestire le etichette di Azure Information Protection e i modelli di Azure Rights Management.
 
-Se si ha una sottoscrizione che include Azure Information Protection o Azure Rights Management, la directory di Azure AD viene creata automaticamente se necessario.  
+Se si ha una sottoscrizione che include Azure Information Protection o Azure Rights Management, la directory di Azure AD viene creata automaticamente se necessario.
 
 Per altre informazioni su Azure AD, vedere [Che cos'è una directory di Azure AD?](/azure/active-directory/fundamentals/active-directory-whatis)
 
 Per integrare la directory di Azure AD con le foreste di AD locali, vedere [Integrare i domini Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
-### <a name="scenarios-that-have-specific-requirements"></a>Scenari che hanno requisiti specifici 
+### <a name="scenarios-that-have-specific-requirements"></a>Scenari che hanno requisiti specifici
 
-Computer che eseguono Office 2010: 
+Computer che eseguono Office 2010:
 
 - Questi computer richiedono che il [client Azure Information Protection Unified Labeling](./rms-client/aip-clientv2.md) o [Azure Information Protection client](./rms-client/aip-client.md) esegua l'autenticazione per Azure Information Protection e il relativo servizio di protezione dei dati, Azure Rights Management.
 
@@ -46,7 +46,7 @@ Supporto dell'autenticazione basata sui certificati:
 Il valore del nome UPN degli utenti non corrisponde al rispettivo indirizzo di posta elettronica:
 
 - Questa configurazione non è consigliata e non supporta Single Sign-On per Azure Information Protection. Se non è possibile cambiare il valore UPN, configurare un ID di accesso alternativo per gli utenti fornendo loro le istruzioni necessarie per l'accesso a Office con questo ID. Per altre informazioni, vedere [Configurazione di ID di accesso alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) e [Le applicazioni di Office richiedono periodicamente le credenziali per SharePoint Online, OneDrive e Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
-    
+
     Quando il nome di dominio presente nel nome UPN corrisponde a un dominio verificato per il tenant, aggiungere il nome UPN di ciascun utente all'attributo proxyAddresses di Azure AD come indirizzo di posta elettronica aggiuntivo. In questo modo, se il nome UPN è stato specificato nel periodo in cui usufruiva dei diritti di utilizzo, l'autorizzazione di ciascun utente per Azure Rights Management può avere esito positivo. Per altre informazioni su questo punto e sul modo in cui viene eseguita l'autorizzazione degli account utente, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 
 Dispositivi mobili o computer Mac che eseguono l'autenticazione locale tramite AD FS o un provider di autenticazione equivalente:
@@ -62,7 +62,7 @@ Per usare Multi-Factor Authentication (MFA) con Azure Information Protection, è
 
 - Client Azure Information Protection:
 
-    - I client Azure Information Protection per Windows e l'app visualizzatore per iOS e Android hanno sempre supportato l'autenticazione a più fattori. non è richiesta alcuna versione minima. 
+    - I client Azure Information Protection per Windows e l'app visualizzatore per iOS e Android hanno sempre supportato l'autenticazione a più fattori. non è richiesta alcuna versione minima.
 
 -   App di condivisione Microsoft Rights Management per computer Mac:
 
@@ -74,22 +74,21 @@ Quindi, configurare la soluzione MFA:
 
     - Configurare Azure MFA per forzare l'autenticazione a più fattori per gli utenti. Per istruzioni, vedere [Introduzione ad Azure Multi-Factor Authentication nel cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) nella documentazione di Multi-factor Authentication.
 
-        Per ulteriori informazioni su Azure MFA, vedere [Che cos'è Multi-Factor Authentication di Azure?](/multi-factor-authentication/multi-factor-authentication)
+        Per altre informazioni su Azure MFA, vedere [Informazioni su Azure Multi-Factor Authentication](/multi-factor-authentication/multi-factor-authentication).
 
 - Per i tenant federativi (si gestiscono i server in locale):
 
     - Configurare i server federativi per Azure Active Directory o Office 365. Se ad esempio si usa AD FS, vedere [configurare metodi di autenticazione aggiuntivi per ad FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
 
-        Per ulteriori informazioni su questo scenario, vedere [Lavorare con Office 365, programma identità ora semplificato](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sul blog di Office.
+        Per ulteriori informazioni su questo scenario, vedere [la pagina relativa al funzionamento di office 365 – Identity Program ora semplificata](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) nel Blog di Office.
 
 Il connettore Rights Management e lo scanner di Azure Information Protection non supportano l'autenticazione a più fattori. Se si distribuisce il connettore o lo scanner, gli account seguenti non richiedono l'autenticazione a più fattori:
 
 - L'account che installa e configura il connettore.
 
 - L'account dell'entità servizio in Azure AD **Aadrm_S-1-7-0**, creato dal connettore.
- 
+
 - L'account del servizio che esegue lo scanner.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements.md).
-

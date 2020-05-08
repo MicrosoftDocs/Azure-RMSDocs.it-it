@@ -13,13 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 8de5db2af71b16ed60f81a6ec432d0841d125475
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068559"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972051"
 ---
 # <a name="ios-and-os-x-setup"></a>Installazione per iOS e OS X
 
@@ -29,17 +29,17 @@ Le applicazioni iOS e OS X possono usare Microsoft Rights Management SDK 4.2 per
 
 Questo argomento illustra come impostare l'ambiente per la creazione di nuove applicazioni personalizzate.
 
-**Nota**  Questo SDK non supporta l'iPod Touch.
+**Si noti**  che questo SDK non supporta iPod touch.
 
 
 -   [Prerequisiti](#prerequisites)
--   [Facoltativa](#optional)
+-   [Facoltativo](#optional)
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Nel sistema di sviluppo si consiglia di disporre del software seguente:
+Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
 -   Per tutti i progetti di sviluppo iOS è necessario OS X.
 -   Xcode versione 6.0 e successive
@@ -50,13 +50,13 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
     Questo SDK consente di sviluppare per iOS 7.0 e OS X 10.8 e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) o [ADAL per OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
-Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti delle API, note sulla versione e domande frequenti (FAQ).
+Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, note sulla versione e domande frequenti (FAQ).
 
-## <a name="optional"></a>Facoltativa
+## <a name="optional"></a>Facoltativo
 
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabile per le operazioni di consumo e protezione per gli sviluppatori che non intendono creare un’interfaccia utente personalizzata - [Libreria dell'interfaccia utente e app di esempio per iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios).
 
@@ -65,7 +65,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 -   Per creare un nuovo progetto, scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 -   Selezionare **Single View Application**.
 
-    ![Creazione di un nuovo progetto](../media/iOS-Project.png)
+    ![Creare un nuovo progetto](../media/iOS-Project.png)
 
 -   Immettere un nome e un identificatore per il nuovo progetto.
 
@@ -76,7 +76,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
     ![Impostare il percorso](../media/ios-add-dependencies-01a.png)
 
--   Selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group's folder (if needed)** .
+-   Selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group's folder (if needed)**.
 
     In questo modo si mantiene il riferimento alla cartella di installazione dell’SDK, senza doverne creare una copia.
 
@@ -86,12 +86,12 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
     ![Aggiungere un'aggregazione di risorse](../media/iOS-add-resource-bundle-02a.png)
 
--   Come in precedenza per la copia del framework, selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group’s folder (if needed)** .
+-   Come in precedenza per la copia del framework, selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group’s folder (if needed)**.
 -   L’SDK si basa anche su altri framework, tra cui **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** e **Security**. Per aggiungere questi framework, passare alla sezione **Linked Frameworks and Libraries** del riquadro **Summary** di destinazione ed espandere tale sezione per aggiungerli.
 
     Sono necessari i framework **UIKit** e **Foundation**, in genere presenti per impostazione predefinita.
 
-    ![Aggiungere le risorse](../media/iOS-add-libraries.png)
+    ![Aggiungere risorse](../media/iOS-add-libraries.png)
 
 -   Aggiungere il flag **- ObjC** a **Other Linker Flags** in **Build Settings** di destinazione.
 
@@ -105,10 +105,10 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 ### <a name="see-also"></a>Vedere anche
 
-* [Introduzione](get-started.md)
+* [Operazioni preliminari](get-started.md)
 
 * [Novità](release-notes.md)
 
 * [Concetti e termini per sviluppatori](core-concepts.md)
 
-* [Informazioni di riferimento sulle API di iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
+* [informazioni di riferimento sulle API di iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
