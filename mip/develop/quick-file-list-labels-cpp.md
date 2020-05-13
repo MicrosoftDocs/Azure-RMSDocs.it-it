@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 330ceb37e0c8324a083bf5c5d7240035b9b86a0a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: 07782b754c63b4289bf5630eb41b6885b30c7c78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556045"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971609"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C++)
 
@@ -26,11 +27,11 @@ Se non è già stato fatto, completare i prerequisiti seguenti prima di continua
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Aggiungere la logica per elencare le etichette di riservatezza
 
-Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazione, usando l'oggetto motore dell'API File. 
+Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazione, usando l'oggetto motore dell'API File.
 
 1. Aprire la soluzione Visual Studio creata nell'articolo precedente "Avvio rapido: Inizializzazione dell'applicazione client (C++)".
 
-2. Usare **Esplora soluzioni** per aprire il file con estensione cpp nel progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
+2. Usare **Esplora soluzioni** per aprire il file con estensione cpp nel progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
 3. Aggiungere la direttiva `using` seguente dopo `using mip::FileEngine;`, vicino all'inizio del file:
 
@@ -54,23 +55,23 @@ Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazio
       }
    }
    system("pause");
-   ``` 
+   ```
 
 ## <a name="create-a-powershell-script-to-generate-access-tokens"></a>Creare uno script di PowerShell per generare i token di accesso
 
-Usare lo script PowerShell seguente per generare i token di accesso, richiesti dal SDK nell'implementazione `AuthDelegateImpl::AcquireOAuth2Token`. Lo script usa il cmdlet `Get-ADALToken` dal modulo ADAL.PS installato in precedenza, in "Installazione e configurazione di MIP SDK". 
+Usare lo script PowerShell seguente per generare i token di accesso, richiesti dal SDK nell'implementazione `AuthDelegateImpl::AcquireOAuth2Token`. Lo script usa il cmdlet `Get-ADALToken` dal modulo ADAL.PS installato in precedenza, in "Installazione e configurazione di MIP SDK".
 
 1. Creare un file di script di PowerShell (con estensione ps1) e copiare e incollare lo script seguente nel file:
 
    - I valori `$authority` e `$resourceUrl` vengono aggiornati più avanti, nella sezione seguente.
-   - Aggiornare `$appId` e `$redirectUri` in modo che corrispondano ai valori specificati nella registrazione dell'app in Azure AD. 
+   - Aggiornare `$appId` e `$redirectUri` in modo che corrispondano ai valori specificati nella registrazione dell'app in Azure AD.
 
    ```powershell
-   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token()
    $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
    $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
-   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession
    $response.AccessToken | clip                     # Copy the access token text to the clipboard
    ```
 
@@ -78,7 +79,7 @@ Usare lo script PowerShell seguente per generare i token di accesso, richiesti d
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 
-Infine, compilare e testare l'applicazione client. 
+Infine, compilare e testare l'applicazione client.
 
 1. Usare F6 (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
@@ -122,7 +123,7 @@ Infine, compilare e testare l'applicazione client.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-### <a name="problems-during-execution-of-powershell-script"></a>Problemi durante l'esecuzione dello script di PowerShell 
+### <a name="problems-during-execution-of-powershell-script"></a>Problemi durante l'esecuzione dello script di PowerShell
 
 | Riepilogo | Messaggio di errore | Soluzione |
 |---------|---------------|----------|

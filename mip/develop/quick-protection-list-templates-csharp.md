@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 0a71ac710aec82c7a5de16c7f603ccdfe4803f79
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: ec6439747b7a826a09851739a96ccdec3f5705f4
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766304"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972119"
 ---
 # <a name="quickstart-list-templates-c"></a>Guida introduttiva: Elencare i modelli (C#)
 
@@ -22,7 +23,7 @@ Questo Avvio rapido illustra come usare l'API Protezione SDK di MIP per elencare
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
 - In primo luogo completare [Avvio rapido: Inizializzazione delle applicazioni client - API Protezione (C#)](quick-protection-app-initialization-csharp.md) per compilare una soluzione Visual Studio iniziale. L'Avvio rapido "Elencare i modelli di protezione" si basa sull'Avvio rapido precedente per la creazione corretta della soluzione iniziale.
-- Facoltativamente: Esaminare i concetti in [Modelli RMS](https://docs.microsoft.com/azure/information-protection/configure-policy-templates). 
+- Facoltativamente: Esaminare i concetti in [Modelli RMS](https://docs.microsoft.com/azure/information-protection/configure-policy-templates).
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>Aggiungere la logica per elencare i modelli di protezione
 
@@ -35,15 +36,15 @@ Aggiungere la logica per elencare i modelli di protezione disponibili per un ute
 3. Verso la fine del corpo `Main()`, sopra la sezione dell'arresto dell'applicazione della funzione `Main()`, nel punto in cui è stata interrotta la procedura di Avvio rapido precedente, inserire il codice seguente:
 
   ```csharp
-  // List protection templates using protectionEngine and display the list  
-  
+  // List protection templates using protectionEngine and display the list
+
   var templates=protectionEngine.GetTemplates();
 
   for(int i = 0; i < templates.Count; i++)
   {
       Console.WriteLine("{0}: {1}", i.ToString(), templates[i].Name + " : " + templates[i].Id);
   }
-  
+
   Console.WriteLine("Press a key to continue...");
   ```
 
@@ -55,7 +56,7 @@ Infine, compilare e testare l'applicazione client.
 
 2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate, nella cache non verrà richiesto di eseguire l'accesso e visualizzare l'elenco delle etichette.
 
-     [![Accesso per l'acquisizione del token in Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox) 
+     [![Accesso per l'acquisizione del token in Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
    - Potrebbe anche essere necessario dare il consenso, per permettere all'applicazione di accedere alle API MIP mentre viene eseguita con l'account di accesso. Ciò si verifica quando non è già stato dato il consenso per la registrazione dell'applicazione in Azure AD (come descritto in "Installazione e configurazione di MIP SDK") o si accede con un account da un tenant diverso da quello in cui è registrata l'applicazione. È sufficiente fare clic su **Accetta** per registrare il consenso.
 

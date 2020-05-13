@@ -7,12 +7,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c081d20ba3cfffdc1db06ade5d918230f3b9eff8
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: dc26f9c1f75157d81b160790e53bc27fd2c2b059
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75554991"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972170"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C#)
 
@@ -27,9 +28,9 @@ Se non è già stato fatto, completare i prerequisiti seguenti prima di continua
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>Aggiungere codice per impostare e ottenere un'etichetta di riservatezza
 
-Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un file mediante l'oggetto file engine. 
+Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un file mediante l'oggetto file engine.
 
-1. Usare **Esplora soluzioni** per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
+1. Usare **Esplora soluzioni** per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
 2. Verso la fine del corpo `Main()`, dopo `Console.ReadKey()` e prima di `}` (il punto in cui è stato interrotto l'Avvio rapido precedente), inserire il codice seguente:
 
@@ -42,7 +43,7 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
      string actualOutputFilePath = outputFilePath;
 
      //Create a file handler for that file
-     //Note: the 2nd inputFilePath is used to provide a human-readable content identifier for admin auditing. 
+     //Note: the 2nd inputFilePath is used to provide a human-readable content identifier for admin auditing.
      var handler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
 
      //Set Labeling Options
@@ -88,13 +89,13 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 
-Compilare e testare l'applicazione client. 
+Compilare e testare l'applicazione client.
 
 1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
 2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache, non verrà richiesto di accedere e visualizzare l'elenco delle etichette e quindi le informazioni sull'etichetta applicata e sul file modificato.
 
-  ```console   
+  ```console
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
   Public : 73254501-3d5b-4426-979a-657881dfcb1e
   General : da480625-e536-430a-9a9e-028d16a29c59
@@ -110,10 +111,10 @@ Compilare e testare l'applicazione client.
 
    Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
    Committing changes
-   
+
    Label committed to file: c:\Test\Test_labeled.docx
    Press any key to continue . . .
-  
+
    Getting the label committed to file: c:\Test\Test_labeled.docx
    Name: Confidential
    Id: 074e457c-5848-4542-9a6f-34a182080e7z
@@ -123,4 +124,4 @@ Compilare e testare l'applicazione client.
 È possibile verificare l'applicazione dell'etichetta aprendo il file di output ed esaminando visivamente le impostazioni di protezione delle informazioni del documento.
 
 > [!NOTE]
-> Se si sta applicando l'etichetta a un documento di Office ma non è stato effettuato l'accesso tramite un account del tenant Azure Active Directory (AD) in cui è stato ottenuto il token di accesso (e vengono configurate le etichette di riservatezza), è possibile che venga richiesto di effettuare l'accesso per poter aprire il documento con etichetta. 
+> Se si sta applicando l'etichetta a un documento di Office ma non è stato effettuato l'accesso tramite un account del tenant Azure Active Directory (AD) in cui è stato ottenuto il token di accesso (e vengono configurate le etichette di riservatezza), è possibile che venga richiesto di effettuare l'accesso per poter aprire il documento con etichetta.

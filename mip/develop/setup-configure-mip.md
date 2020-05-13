@@ -6,14 +6,15 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a7159374ab736bc2f5df151ade82874b33875e56
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: e1c223744a8651a4318abbf0f532d76a771bde16
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79403485"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971677"
 ---
-# <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
+# <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK
 
 Gli articoli dedicati a guide introduttive ed esercitazioni sono incentrati sulla creazione di applicazioni che usano le librerie e le API di MIP SDK. Questo articolo illustra come installare e configurare l'abbonamento a Office 365 e una workstation client, in preparazione per l'uso dell'SDK.
 
@@ -44,7 +45,7 @@ Molti degli esempi dell'SDK richiedono l'accesso a un abbonamento a Office 365. 
 
 ## <a name="configure-sensitivity-labels"></a>Configurare le etichette di riservatezza
 
-Se si usa già Azure Information Protection, è necessario eseguire la migrazione delle etichette nel Centro sicurezza e conformità di Office 365. Per altre informazioni sul processo, vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels). 
+Se si usa già Azure Information Protection, è necessario eseguire la migrazione delle etichette nel Centro sicurezza e conformità di Office 365. Per altre informazioni sul processo, vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels).
 
 ## <a name="configure-your-client-workstation"></a>Configurare la workstation client
 
@@ -68,11 +69,11 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
      - **Supporto per la piattaforma UWP in C++**
      - **Windows 10 SDK 10.0.16299.0 SDK** o versione successiva, se non è incluso per impostazione predefinita
    - Carico di lavoro per Windows **Sviluppo di applicazioni desktop con C++** con i componenti facoltativi seguenti:
-     - **Windows 10 SDK 10.0.16299.0 SDK** o versione successiva, se non è incluso per impostazione predefinita 
+     - **Windows 10 SDK 10.0.16299.0 SDK** o versione successiva, se non è incluso per impostazione predefinita
 
      [![Installazione di Visual Studio](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Installare il [modulo PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
+3. Installare il [modulo PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2):
 
    - Poiché sono necessari diritti di amministratore per installare i moduli, è prima di tutto necessario:
 
@@ -95,7 +96,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
 4. Scaricare i file SDK:
 
-   MIP SDK è supportato nelle piattaforme seguenti con download separati per ogni piattaforma/linguaggio supportato:  
+   MIP SDK è supportato nelle piattaforme seguenti con download separati per ogni piattaforma/linguaggio supportato:
 
    [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
@@ -106,7 +107,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
    - **Bins:** file binari compilati per ogni architettura di piattaforma, dove applicabile.
    - **Include:** file di intestazione (C++).
    - **Samples:** codice sorgente per applicazioni di esempio.
-    
+
    **Pacchetti NuGet**
 
    Per lo sviluppo in Visual Studio, l'SDK può essere installato anche tramite la Console di Gestione pacchetti NuGet:
@@ -115,7 +116,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
-    ```  
+    ```
 
 5. Se non si usa il pacchetto NuGet, aggiungere i percorsi dei file binari dell'SDK alla variabile di ambiente PATH. La variabile PATH consente alle applicazioni client di trovare i file binari dipendenti (DLL) in fase di esecuzione (FACOLTATIVO):
 
@@ -129,7 +130,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
      - \<platform\> = `amd64` (x64), `x86` e così via.
-   
+
    - Dopo aver completato la modifica della variabile **Path** fare clic su **OK**. Fare quindi clic su **OK** quando si torna alla finestra di dialogo **Variabili di ambiente**.
 
 6. Scaricare gli esempi SDK da GitHub (FACOLTATIVO):
@@ -137,48 +138,48 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
    - Se non è già disponibile, creare prima di tutto un [profilo GitHub](https://github.com/join).
    - Installare quindi la versione più recente degli [strumenti client Git di Software Freedom Conservancy (Git Bash)](https://git-scm.com/download/)
    - Usare Git Bash per scaricare gli esempi di interesse:
-     - Usare la query seguente per visualizzare i repository: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk. 
+     - Usare la query seguente per visualizzare i repository: https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk.
      - Con Git Bash, usare `git clone https://github.com/azure-samples/<repo-name>` per scaricare ogni repository di esempi.
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registrare un'applicazione client in Azure Active Directory
 
 Come parte del processo di provisioning dell'abbonamento a Office 365 viene creato un tenant di Azure Active Directory (Azure AD) associato. Il tenant di Azure AD consente la gestione delle identità e dell'accesso per gli *account utente* e gli *account di applicazione* di Office 365. Per le applicazioni che richiedono l'accesso ad API protette (ad esempio le API MIP) è necessario un account di applicazione.
 
-Per il processo di autenticazione e autorizzazione in fase di esecuzione, gli account sono rappresentati da un'*entità di sicurezza*, derivata dalle informazioni di identità dell'account. Le entità di sicurezza che rappresentano un account di applicazione vengono definite [*entità servizio*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
+Per il processo di autenticazione e autorizzazione in fase di esecuzione, gli account sono rappresentati da un'*entità di sicurezza*, derivata dalle informazioni di identità dell'account. Le entità di sicurezza che rappresentano un account di applicazione vengono definite [*entità servizio*](/azure/active-directory/develop/developer-glossary#service-principal-object).
 
 Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e le guide introduttive di MIP SDK:
 
-  > [!IMPORTANT] 
+  > [!IMPORTANT]
   > Per accedere alla gestione del tenant Azure AD per la creazione dell'account, sarà necessario accedere al portale di Azure con un account utente membro del [ruolo "Proprietario" nella sottoscrizione](/azure/billing/billing-add-change-azure-subscription-administrator). A seconda della configurazione del tenant, potrebbe anche essere necessario essere membri del ruolo della directory "Amministratore globale" per [registrare un'applicazione](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > È consigliabile eseguire le operazioni di test con un account con restrizioni. Assicurarsi che l'account disponga solo dei diritti per accedere agli endpoint SCC necessari. Le password passate come testo non crittografato tramite riga di comando possono essere raccolte dai sistemi di registrazione.
 
-1. Seguire la procedura indicata in [Registrare un'app con Azure AD, sezione Registrare una nuova applicazione](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida: 
+1. Seguire la procedura indicata in [Registrare un'app con Azure AD, sezione Registrare una nuova applicazione](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida:
     - **Tipi di account supportati**: selezionare "Account solo in questa directory organizzativa".
     - **URI di reindirizzamento**: impostare il tipo di URI di reindirizzamento su "Client pubblico (per dispositivi mobili e desktop)". Dato che l'SDK usa applicazioni client console semplici, usare un URI nel formato `<app-name>://authorize`.
 
-2. Al termine, si tornerà alla pagina **App registrata** per la registrazione della nuova applicazione. Copiare e salvare il GUID nel campo **ID applicazione (client)** , perché sarà necessario per le guide introduttive. 
+2. Al termine, si tornerà alla pagina **App registrata** per la registrazione della nuova applicazione. Copiare e salvare il GUID nel campo **ID applicazione (client)** , perché sarà necessario per le guide introduttive.
 
 3. Fare quindi clic su **Autorizzazioni API** per aggiungere le API e le autorizzazioni a cui il client dovrà accedere. Fare clic su **Aggiungi un'autorizzazione** per aprire il pannello "Richiedi le autorizzazioni dell'API".
 
 4. A questo punto si aggiungeranno le API e le autorizzazioni MIP che verranno richieste dall'applicazione in fase di esecuzione:
    - Nella pagina **Selezionare un'API** fare clic su **Azure Rights Management Services**.
-   - Nella pagina dell'API **Azure Rights Management Services** fare clic su **Autorizzazioni delegate**.   
+   - Nella pagina dell'API **Azure Rights Management Services** fare clic su **Autorizzazioni delegate**.
    - Nella sezione **Selezionare le autorizzazioni** selezionare l'autorizzazione **user_impersonation**. Ciò consente all'applicazione di creare e accedere al contenuto protetto per conto di un utente.
    - Fare clic su **Aggiungi autorizzazioni** per salvare.
 
 5. Ripetere il passaggio 4, ma questa volta quando si raggiunge la pagina **Selezionare un'API** sarà necessario cercare l'API.
    - Nella pagina **Selezionare un'API** fare clic su **API usate dall'organizzazione**, quindi nella casella di ricerca digitare "**Microsoft Information Protection Sync Service**" e selezionarlo.
    - Nella pagina dell'API **Microsoft Information Protection Sync Service** fare clic su **Autorizzazioni delegate**.
-   - Espandere il nodo **UnifiedPolicy** e selezionare **UnifiedPolicy.User.Read** 
+   - Espandere il nodo **UnifiedPolicy** e selezionare **UnifiedPolicy.User.Read**
    - Fare clic su **Aggiungi autorizzazioni** per salvare.
 
-6. Quando si torna alla pagina **Autorizzazioni API** fare clic su **Concedi consenso amministratore per (nome del tenant)** , quindi su **Sì**. Questo passaggio concede il pre-consenso all'applicazione che usa questa registrazione per accedere alle API con le autorizzazioni specificate. Se è stato effettuato l'accesso come amministratore globale, il consenso viene registrato per tutti gli utenti nel tenant che eseguono l'applicazione. In caso contrario, si applica solo al proprio account utente. 
+6. Quando si torna alla pagina **Autorizzazioni API** fare clic su **Concedi consenso amministratore per (nome del tenant)** , quindi su **Sì**. Questo passaggio concede il pre-consenso all'applicazione che usa questa registrazione per accedere alle API con le autorizzazioni specificate. Se è stato effettuato l'accesso come amministratore globale, il consenso viene registrato per tutti gli utenti nel tenant che eseguono l'applicazione. In caso contrario, si applica solo al proprio account utente.
 
 Al termine, la registrazione dell'applicazione e le autorizzazioni per le API dovrebbero essere simili agli esempi seguenti:
 
    [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
-Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.  
+Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Richiedere un contratto per l'integrazione di Information Protection (IPIA, Information Protection Integration Agreement)
 
@@ -229,7 +230,7 @@ Le applicazioni compilate con MIP SDK richiedono l'installazione del runtime di 
 - [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
 - [Microsoft Visual C++ Redistributable per Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
 
-Questi funzioneranno solo se l'applicazione è stata compilata come Release. Se l'applicazione è compilata come Debug, le DLL di debug del runtime di Visual C++ devono essere incluse con l'applicazione o installate nel computer. 
+Questi funzioneranno solo se l'applicazione è stata compilata come Release. Se l'applicazione è compilata come Debug, le DLL di debug del runtime di Visual C++ devono essere incluse con l'applicazione o installate nel computer.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -237,5 +238,3 @@ Questi funzioneranno solo se l'applicazione è stata compilata come Release. Se 
   - Assicurarsi di leggere [Concetti relativi agli osservatori](concept-async-observers.md) prima di iniziare la sezione Avvio rapido, per ottenere informazioni sulla natura asincrona delle API C++.
   - Quando si è pronti ad acquisire familiarità con l'SDK, iniziare con [Avvio rapido: Inizializzazione dell'applicazione client (C++)](quick-app-initialization-cpp.md).
 - Gli sviluppatori C#, quando sono pronti ad acquisire familiarità con l'SDK, possono iniziare con [Avvio rapido: Inizializzazione dell'applicazione client (C#)](quick-app-initialization-csharp.md).
-
-

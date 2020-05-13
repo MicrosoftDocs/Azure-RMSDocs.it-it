@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9f12ff856e7d70c76e3c89700d05aeb653d030cd
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: a9e9a2d6534cc674f8bf697543e865a3596d457b
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75555280"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972187"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C#)
 
@@ -26,16 +27,16 @@ Se non è già stato fatto, completare i prerequisiti seguenti prima di continua
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Aggiungere la logica per elencare le etichette di riservatezza
 
-Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazione, usando l'oggetto motore dell'API File. 
+Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazione, usando l'oggetto motore dell'API File.
 
 1. Aprire la soluzione Visual Studio creata nell'articolo precedente "Avvio rapido: Inizializzazione dell'applicazione client (C#)".
 
-2. Usare **Esplora soluzioni** per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
+2. Usare **Esplora soluzioni** per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
 3. Verso la fine del corpo `Main()`, sopra la sezione dell'arresto dell'applicazione della funzione `Main()` (nel punto in cui è stata interrotta la procedura di Avvio rapido precedente), inserire il codice seguente:
 
   ```csharp
-  // List sensitivity labels from fileEngine and display name and id  
+  // List sensitivity labels from fileEngine and display name and id
   foreach(var label in fileEngine.SensitivityLabels)
   {
       Console.WriteLine(string.Format("{0} : {1}", label.Name, label.Id));
@@ -56,7 +57,7 @@ Infine, compilare e testare l'applicazione client.
 
 1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate, nella cache non verrà richiesto di eseguire l'accesso e visualizzare l'elenco delle etichette. 
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate, nella cache non verrà richiesto di eseguire l'accesso e visualizzare l'elenco delle etichette.
 
      [![Accesso per l'acquisizione del token in Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
