@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/08/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 51691ed4ae5e6a8cebdc372f4be21e25bf12db27
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 56194d242f6b079fc04765c8ceeeac5cddbf557d
+ms.sourcegitcommit: 93376be8c80776e572f1233812ef39fbabbbd0b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972068"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550855"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -28,7 +28,7 @@ ms.locfileid: "82972068"
 
 È possibile scaricare il Azure Information Protection Unified Labeling client dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Dopo un breve ritardo di genere in un paio di settimane, la versione di disponibilità generale più recente è inclusa anche nel catalogo di Microsoft Update con il nome di un prodotto **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection client unificato**per l'assegnazione di etichette e la classificazione degli **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
+Dopo un breve ritardo di genere in un paio di settimane, la versione di disponibilità generale più recente è inclusa anche nel catalogo di Microsoft Update con il nome di un prodotto **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection client unificato**per l'assegnazione di etichette e la classificazione degli **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
 
 Per altre informazioni, vedere [upgradeing and maintaining the Azure Information Protection Unified Labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -63,7 +63,6 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 ## <a name="version-27930"></a>Versione 2.7.93.0
-Client con etichetta unificata (disponibilità generale) 
 
 Unified Labeling scanner (anteprima pubblica) versione 2.7.93.0
 
@@ -134,7 +133,7 @@ Supportato tramite 09/09/2020
     
     - Più scanner possono condividere lo stesso database di SQL Server quando si configurano gli scanner per l'uso dello stesso profilo dello scanner. Questa configurazione facilita la gestione di più scanner e comporta tempi di analisi più rapidi. Quando si usa questa configurazione, è sempre necessario attendere il completamento dell'installazione di uno scanner prima di installare un altro scanner con lo stesso profilo.
     
-    - È necessario specificare un profilo quando si installa lo scanner e il database dello scanner è **denominato\<AIPScannerUL_ profile_name>**. Il parametro *profile* è obbligatorio anche per set-AIPScanner.
+    - È necessario specificare un profilo quando si installa lo scanner e il database dello scanner è denominato **AIPScannerUL_ \< profile_name>**. Il parametro *profile* è obbligatorio anche per set-AIPScanner.
     
     - È possibile impostare un'etichetta predefinita su tutti i documenti, anche se i documenti sono già etichettati. Nel profilo scanner o nelle impostazioni del repository, impostare l'opzione **rietichettare i file** **su on** con la nuova casella di controllo **Imponi etichetta predefinita** selezionata.
     
@@ -183,7 +182,7 @@ Supportato tramite 09/09/2020
 
 **Modifiche aggiuntive**
 
-- [Reimposta impostazioni](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) ora elimina le cartelle%LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName.\> exe* anziché la cartella%LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName\>* \mip.
+- [Reimposta impostazioni](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) ora elimina le cartelle%LocalAppData%\Microsoft\MSIP\mip \\ * \< ProcessName. \> exe* \\ * \< \> *anziché la cartella%LocalAppData%\Microsoft\MSIP\mip ProcessName \mip.
 
 - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) include ora l'ID contenuto per un documento protetto.
 
