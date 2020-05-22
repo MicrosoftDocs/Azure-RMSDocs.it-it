@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d94783b491dd9ff0b099a68e009809cd7ec965fb
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: dd07fe942f9f715dea6d6dc17d5c5d00e2da0d65
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224564"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746334"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Dettagli di Bring your own key (BYOK) per Azure Information Protection
 
@@ -59,7 +59,7 @@ Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [
 
 ## <a name="byok-support-for-services-and-clients"></a>Supporto di BYOK per servizi e client
 
-BYOK e la [registrazione dell'utilizzo](log-analyze-usage.md) interagiscono perfettamente con tutte le applicazioni che si integrano con il servizio Azure Rights Management usato da Azure Information Protection per proteggere i dati. ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che usano il servizio Azure Rights Management tramite il connettore RMS e applicazioni client come Office 2019, Office 2016 e Office 2013. 
+BYOK e la [registrazione dell'utilizzo](log-analyze-usage.md) interagiscono perfettamente con tutte le applicazioni che si integrano con il servizio Azure Rights Management usato da Azure Information Protection per proteggere i dati. Sono inclusi servizi cloud come Microsoft SharePoint, server locali che eseguono Exchange e SharePoint che usano il servizio Azure Rights Management usando il connettore RMS e applicazioni client come Office 2019, Office 2016 e Office 2013. 
 
 È possibile ottenere i log di utilizzo delle chiavi, indipendentemente dall'applicazione che esegue richieste al servizio Rights Management di Azure.
 

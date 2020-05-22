@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 81c95640f22e6234a3cc6d3487db6c12345a57b8
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 34484e732362adba288a9dfe8656df155b526b36
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404114"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746723"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -29,7 +29,7 @@ Usare le informazioni seguenti per identificare le applicazioni e le soluzioni c
 
 Per queste applicazioni e soluzioni, Rights Management supporto è strettamente integrato usando le API Rights Management per supportare le [restrizioni di utilizzo](configure-usage-rights.md). Queste applicazioni e soluzioni sono anche note come "abilitate per RMS".
 
-Se non diversamente indicato, le funzionalità supportate sono valide sia per Azure RMS che per AD RMS. Per il supporto di AD RMS in iOS, Android, macOS e Windows Phone 8.1 è inoltre richiesta l'[estensione per dispositivi mobili Active Directory Rights Management Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
+Se non diversamente indicato, le funzionalità supportate sono valide sia per Azure RMS che per AD RMS. Per il supporto di AD RMS in iOS, Android, macOS e Windows Phone 8.1 è inoltre richiesta l'[estensione per dispositivi mobili Active Directory Rights Management Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 ## <a name="rms-enlightened-applications"></a>Applicazioni abilitate per RMS
 
@@ -43,10 +43,10 @@ Informazioni sulle colonne della tabella:
     
     Suggerimento: per i client di posta elettronica che non supportano la protezione della posta elettronica, valutare la possibilità di usare [regole del flusso di posta elettronica di Exchange Online per applicare questa protezione](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8).
 
--   **Altri tipi di file**: file di testo e file immagine con estensioni come txt, xml, jpg e jpeg. L'estensione cambia dopo che i file vengono protetti in modo nativo da Rights Management e diventano di sola lettura. I file che non possono essere protetti in modo nativo, dopo essere stati protetti in modo generico da Rights Management hanno un'estensione di tipo pfile. Per altre informazioni, vedere [Tipi di file supportati](./rms-client/client-admin-guide-file-types.md) nella Guida dell'amministratore del client Azure Information Protection.
+-   **Altri tipi di file**: file di testo e di immagine includono file con estensione di file, ad esempio txt, XML, jpg e JPEG. L'estensione cambia dopo che i file vengono protetti in modo nativo da Rights Management e diventano di sola lettura. I file che non possono essere protetti in modo nativo, dopo essere stati protetti in modo generico da Rights Management hanno un'estensione di tipo pfile. Per altre informazioni, vedere [Tipi di file supportati](./rms-client/client-admin-guide-file-types.md) nella Guida dell'amministratore del client Azure Information Protection.
 
 
-|**Sistema operativo dispositivo**|Word, Excel, PowerPoint|Posta elettronica|Altri tipi di file|
+|**Sistema operativo dispositivo**|Word, Excel, PowerPoint|Email|Altri tipi di file|
 |---------------------------|-----------------------|-----------------|---------|
 |**Windows**|App di Office 365 [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office per il Web (visualizzazione di documenti protetti) [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook 2016 <br /><br />Outlook 2019 <br /><br />Outlook da Office 365 ProPlus<br /><br />Web browser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Visio dalle app di Office 365, Office 2019 e Office 2016:. vsdm,. vsdx,. vssm,. vstm,. vssx,. vstx <br /><br />Client Azure Information Protection per Windows: testo, immagini, pfile<br /><br />Plug-in SealPath RMS per AutoCAD: dwg|
 |**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office per il Web [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web browser [[3]](#footnote-3)|App Azure Information Protection (visualizzazione di posta elettronica protetta)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook per iPad e iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web browser [[4]](#footnote-4)|App Azure Information Protection (visualizzazione di testo e immagini di protezione)<br /><br />TITUS Docs: Pfile|
@@ -56,17 +56,17 @@ Informazioni sulle colonne della tabella:
 |**Blackberry 10**|Web browser [[3]](#footnote-3)|Posta elettronica Blackberry [[5]](#footnote-5) <br /><br />Web browser [[4]](#footnote-4)|Non supportato|
 
 ###### <a name="footnote-1"></a>Nota 1
-Componente: 
+Include: 
 - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365)
 - App di Office 365 ProPlus
 
 ###### <a name="footnote-2"></a>Nota 2
-Supportato solo con SharePoint Online e OneDrive for Business e i documenti devono essere non protetti prima di essere caricati in una libreria protetta.
+Supportato solo con Microsoft SharePoint e OneDrive e i documenti non sono protetti prima di essere caricati in una libreria protetta.
 
-###### <a name="footnote-3"></a>Nota 3
+###### <a name="footnote-3"></a>Nota a piè di pagina 3
 Per [allegati Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) protetti tramite [Office 365 Message Encryption con le nuove funzionalità](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
-###### <a name="footnote-4"></a>Nota 4
+###### <a name="footnote-4"></a>Nota a piè di pagina 4
 Se il mittente e il destinatario fanno parte della stessa organizzazione. In alternativa, in una delle condizioni seguenti:
 - Il mittente o il destinatario usa Exchange Online.
 - Il mittente usa Exchange locale in una configurazione ibrida. 
@@ -137,7 +137,7 @@ Per altre informazioni su come usare l'app, vedere [Domande frequenti sull'app A
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Altre informazioni sul client Azure Information Protection per Windows
 
-Per ulteriori informazioni, vedere le seguenti risorse:
+Per altre informazioni, vedere le seguenti risorse:
 
 - Azure Information Protection le guide di amministrazione client:
     - [Client di etichetta unificato](./rms-client/clientv2-admin-guide.md)
@@ -155,7 +155,7 @@ Per scaricare l'app desiderata, fare clic sul collegamento corrispondente nella 
 
 Per i computer Mac, l'app di condivisione Rights Management offre un visualizzatore per file PDF (con estensione ppdf) protetti, immagini con testo protetto e file protetti in modo generico. Consente anche di proteggere i file di immagine, ma non altri file. Per proteggere i file di Office in questi computer, usare Office per Mac oppure Office 365 ProPlus. 
 
-Per ulteriori informazioni, vedere le seguenti risorse:
+Per altre informazioni, vedere le seguenti risorse:
 
 -   [Domande frequenti sull'applicazione di condivisione Microsoft Rights Management per piattaforme mobili](https://technet.microsoft.com/dn451248)
 
@@ -176,7 +176,7 @@ Per altre informazioni, vedere la [Guida per gli sviluppatori di Azure Informati
 
 Le applicazioni chi non sono attualmente supportate da Azure RMS sono le seguenti:
 
-- Microsoft OneDrive for Business per SharePoint Server 2013
+- Microsoft OneDrive per SharePoint Server 2013
 
 - XPS Viewer
 

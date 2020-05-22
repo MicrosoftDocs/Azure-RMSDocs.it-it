@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 2adce92f9507a31feb3c2a8acd5f9d62979f187a
-ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
+ms.openlocfilehash: 2f192ffc2572bbec4f9292155d482534dbcc94d5
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80138247"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746291"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -37,7 +37,7 @@ Azure Information Protection offre una soluzione client-server che consente di p
 
 Tutti questi client si integrano con le applicazioni di Office, ma il client Unified Labeling e il client classico devono essere installati separatamente e supportare funzionalità e componenti aggiuntivi. Ad esempio, questi client includono il supporto per Esplora file, pertanto è possibile classificare e proteggere i file all'esterno di Office. I componenti aggiuntivi includono un visualizzatore per documenti PDF protetti e immagini protette e uno scanner per gli archivi dati locali.
 
-Il client RMS fornisce solo la protezione. Questo client viene installato automaticamente con alcune applicazioni, ad esempio le applicazioni di Office, i client di Azure Information Protection e le applicazioni abilitate per RMS dei fornitori di software. Tuttavia può essere anche [installato da solo](https://www.microsoft.com/en-us/download/details.aspx?id=38396), per supportare la [sincronizzazione dei file tra le librerie protette da IRM e OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668) e per gli sviluppatori che vogliono integrare la protezione di Rights Management nelle applicazioni line-of-business.
+Il client RMS fornisce solo la protezione. Questo client viene installato automaticamente con alcune applicazioni, ad esempio le applicazioni di Office, i client di Azure Information Protection e le applicazioni abilitate per RMS dei fornitori di software. Tuttavia, può anche essere [installato da solo](https://www.microsoft.com/en-us/download/details.aspx?id=38396), per supportare la [sincronizzazione dei file da librerie protette con IRM e OneDrive](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)e per gli sviluppatori che desiderano integrare la protezione di Rights Management in applicazioni line-of-business.
 
 ## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Scegliere il client di assegnazione di etichette da usare per i computer Windows
 
@@ -46,7 +46,7 @@ Laddove possibile, usare uno dei client di assegnazione di etichette perché le 
 La scelta di etichettare il client per i computer Windows potrebbe essere influenzata dal portale di gestione usato:
 
 - Il client di assegnazione di etichette predefinito di Office e le impostazioni dei criteri e delle etichette di Azure Information Protection per il download dei client con etichetta unificata dai centri di amministrazione seguenti: 
-    - Office 365 Centro sicurezza e conformità
+    - Centro sicurezza e conformità di Office 365
     - Centro sicurezza Microsoft 365
     - Centro conformità Microsoft 365
 
@@ -90,7 +90,7 @@ Usare la tabella seguente per confrontare le funzionalità supportate dai tre cl
 
 Per confrontare le funzionalità di riservatezza predefinite di Office in diverse piattaforme del sistema operativo (Windows, MacOS, iOS e Android) e per il Web, vedere la documentazione relativa alla conformità del Microsoft 365, [supporto per le funzionalità di etichetta di riservatezza nelle app](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Questa documentazione include anche i numeri di build di Office o le informazioni sul canale di aggiornamento di Office per le funzionalità supportate.
 
-|Caratteristica|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
+|Funzionalità|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Etichettatura manuale:| **Sì** | **Sì** |**Sì** |
 |Etichetta predefinita:| **Sì** | **Sì** | **Sì** |
@@ -102,7 +102,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Supporto multilingue per le etichette:| **Sì** | **Sì** |**Sì** |
 |Ereditarietà delle etichette dagli allegati di posta elettronica:| **Sì** | **Sì**  |No |
 |Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Messaggi popup in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| **Sì** <sup>1</sup> | **Sì** <sup>2</sup> | No |
-|Scanner per gli archivi dati locali:| **Sì** | **Sì <br />** | No |
+|Scanner per gli archivi dati locali:| **Sì** | **Sì<br />** | No |
 |Creazione di report centrale (analisi):| **Sì** | **Sì** | No |
 |Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta:| **Sì** | **Sì** <sup>3</sup>| No |
 |Barra di Information Protection nelle app Office:| **Sì** | **Sì**| No |
@@ -123,7 +123,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Modalità di sola protezione (nessuna etichetta):| **Sì** | No | No |
 |Supporto per il cambio di account:| No | No | **Sì** |
 |Supporto per Servizi Desktop remoto:| **Sì** | **Sì** | **Sì** |
-|Supporto per AD RMS:| **Sì** | N. <sup>7</sup> | No |
+|Supporto per AD RMS:| **Sì** | No <sup>7</sup> | No |
 |Rimuovi contrassegno contenuto esterno nell'app| **Sì**| No| **Sì**|
 
 
@@ -133,7 +133,7 @@ Note a piè di pagina:
 
 <sup>2</sup> queste impostazioni e molte altre sono supportate come [Impostazioni avanzate configurate con PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
-<sup>3</sup> supportato da Esplora file e PowerShell. Nelle app di Office gli utenti possono selezionare **informazioni sul File** > proteggere il **documento** > **limitare l'accesso**.
+<sup>3</sup> supportato da Esplora file e PowerShell. Nelle app di Office, gli utenti possono selezionare **file info**  >  **Proteggi documento**  >  **limita accesso**.
 
 <sup>4</sup> nessun supporto per rimuovere la protezione dai file contenitore (zip).
 
@@ -154,7 +154,7 @@ Quando il client di Azure Information Protection (classico) e il Azure Informati
 |Selezione e visualizzazione di etichette se applicate nelle app Office:|Dal pulsante **Proteggi** nella barra multifunzione <br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|Dal pulsante **Riservatezza** sulla barra multifunzione<br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|
 |Gestione della barra di Information Protection nelle app Office:|Per gli utenti: <br /><br />- Opzione per visualizzare o nascondere la barra dal pulsante **Proteggi** sulla barra multifunzione<br /><br />- Quando un utente seleziona l'opzione per nascondere la barra, per impostazione predefinita, la barra viene nascosta in tale app, ma continua a essere automaticamente visualizzata nelle app appena aperte <br /><br /> Per gli amministratori: <br /><br />- Impostazioni dei criteri per visualizzare o nascondere automaticamente la barra quando un'app viene aperta per la prima volta e per controllare se la barra rimane automaticamente nascosta per le app appena aperte dopo che un utente ha selezionato l'opzione per nascondere la barra|Per gli utenti: <br /><br />- Opzione per visualizzare o nascondere la barra dal pulsante **Riservatezza** sulla barra multifunzione<br /><br />- Quando un utente seleziona l'opzione per nascondere la barra, la barra viene nascosta in tale app e anche nelle app appena aperte <br /><br />Per gli amministratori: <br /><br />-Impostazione di PowerShell per gestire la barra |
 |Colore dell'etichetta: | Configurazione nel portale di Azure | Conservati dopo la migrazione delle etichette e configurabili con [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
-|Le etichette supportano lingue diverse:| Configurazione nel portale di Azure | Configurare usando [Office 365 sicurezza e conformità PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
+|Le etichette supportano lingue diverse:| Configurazione nel portale di Azure | Configurare tramite [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
 |Aggiornamento criteri: | Quando si apre un'app Office <br /><br /> Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br /><br />Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br /><br />Ogni 24 ore <br /><br />Per lo scanner: ogni ora e quando il servizio viene avviato e il criterio è più vecchio di un'ora| Quando si apre un'app Office <br /><br /> Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br /><br />Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br /><br />Ogni 4 ore <br /><br />Per lo scanner: ogni 4 ore|
 |Formati supportati per PDF:| Protezione: <br /><br /> - Standard ISO per la crittografia dei file PDF (impostazione predefinita) <br /><br /> - Estensione ppdf <br /><br /> Consumo: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br />- Estensione ppdf<br /><br />- Protezione IRM SharePoint| Protezione: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br /> <br /><br /> Consumo: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br />- Estensione ppdf<br /><br />- Protezione IRM SharePoint|
 |File protetti in modo generico (con estensione Pfile) aperti con il Visualizzatore:| Il file viene aperto nell'app originale, dove può essere visualizzato, modificato e salvato senza protezione | Il file viene aperto nell'app originale, dove può essere visualizzato e modificato, ma non salvato|
@@ -181,7 +181,7 @@ Anche se il Azure Information Protection client di assegnazione unificata di eti
 
 - Proteggi documento PDF come file con [estensione Ppdf (formato precedente)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)
 
-- Visualizzazione del pulsante Non inoltrare in Outlook
+- Visualizzare il pulsante Non inoltrare in Outlook
 
 - Criteri demo
 
@@ -200,8 +200,8 @@ Per motivi di parità, nemmeno il client per l'etichettatura unificata di Azure 
 
 Per installare e configurare i client di Azure Information Protection, utilizzare la seguente documentazione:
 
-- [Client di Azure Information Protection](AIP-client.md)
+- [Client Azure Information Protection](AIP-client.md)
 
-- [Client per l'etichettatura unificata Azure Information Protection](unifiedlabelingclient-version-release-history.md)
+- [Client per l'etichettatura unificata di Azure Information Protection](unifiedlabelingclient-version-release-history.md)
 
 Per altre informazioni sull'uso del client di assegnazione di etichette incorporato per le app di Office 365, vedere [etichette di riservatezza nelle app di Office](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).

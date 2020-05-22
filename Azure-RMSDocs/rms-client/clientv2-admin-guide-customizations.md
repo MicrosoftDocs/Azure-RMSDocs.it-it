@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: aff9e38a43779f9297d9371fa4bc034b36885875
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799130"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746302"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -86,7 +86,7 @@ Specificare il nome dei criteri di etichetta per il parametro *Identity* di Powe
 
 - **Nome visualizzato** è il nome dell'etichetta visualizzata dagli utenti e non è necessario che sia univoco in tutte le etichette. Ad esempio, gli utenti visualizzano una sottoetichetta **tutti i dipendenti** per l'etichetta **riservata** e un'altra sottoetichetta **tutti i dipendenti** per l'etichetta **riservatezza elevata** . Queste etichette secondarie visualizzano entrambi lo stesso nome, ma non hanno la stessa etichetta e hanno impostazioni diverse.
 
-Per configurare le impostazioni avanzate dell'etichetta, usare il valore **nome** . Ad esempio, per identificare l'etichetta nell'immagine seguente, è necessario specificare `-Identity "All Company"`:
+Per configurare le impostazioni avanzate dell'etichetta, usare il valore **nome** . Ad esempio, per identificare l'etichetta nell'immagine seguente, è necessario specificare `-Identity "All Company"` :
 
 ![Usare "Name" invece di "nome visualizzato" per identificare un'etichetta di riservatezza](../media/labelname_scc.png)
 
@@ -120,7 +120,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
-|AdditionalPPrefixExtensions|[Supporto per la \<modifica di EXT>. Da PFILE a\<P ext> tramite questa proprietà avanzata](#additionalpprefixextensions)
+|AdditionalPPrefixExtensions|[Supporto per la modifica di \< EXT>. Da PFILE a P \< EXT> tramite questa proprietà avanzata](#additionalpprefixextensions)
 |AttachmentAction|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling)
@@ -261,7 +261,7 @@ Per impostazione predefinita, il client Azure Information Protection Unified Lab
 
 - Chiave: **PFileSupportedExtensions**
 
-- Valore: ** \<valore stringa>** 
+- Valore: ** \< valore stringa>** 
 
 Usare la tabella seguente per identificare il valore stringa da specificare:
 
@@ -287,19 +287,19 @@ Con questa impostazione è possibile modificare i tipi di file protetti, ma non 
 
 ### <a name="additionalpprefixextensions"></a>AdditionalPPrefixExtensions
 
-Il client di etichettatura unificata supporta \<la modifica di EXT>. PFILE a P\<EXT> usando la proprietà Advanced, **AdditionalPPrefixExtensions**. Questa proprietà avanzata è supportata in fare clic con il pulsante destro del mouse, PowerShell e scanner. Tutte le app hanno un comportamento simile.   
+Il client di etichettatura unificata supporta la modifica di \< EXT>. PFILE a P \< EXT> usando la proprietà Advanced, **AdditionalPPrefixExtensions**. Questa proprietà avanzata è supportata in fare clic con il pulsante destro del mouse, PowerShell e scanner. Tutte le app hanno un comportamento simile.   
 
 - Chiave: **AdditionalPPrefixExtensions**
 
-- Valore: ** \<valore stringa>** 
+- Valore: ** \< valore stringa>** 
 
 Usare la tabella seguente per identificare il valore stringa da specificare:
 
 | Valore stringa| Client e scanner|
 |-------------|---------------|
-|\*|Tutte le estensioni PFile diventano\<P ext>|
+|\*|Tutte le estensioni PFile diventano P \< EXT>|
 |\<valore null>| Il valore predefinito si comporta come il valore di protezione predefinito.|
-|ConvertTo-JSON (". dwg", ". zip")|Oltre all'elenco precedente, ". dwg" e ". zip" diventano P\<EXT>| 
+|ConvertTo-JSON (". dwg", ". zip")|Oltre all'elenco precedente, ". dwg" e ". zip" diventano P \< EXT>| 
 
 Esempio 1: comando di PowerShell per comportarsi come il comportamento predefinito in cui Protect ". dwg" diventa ". dwg. Pfile":
 
@@ -313,7 +313,7 @@ Esempio 3: comando di PowerShell per impostare ". dwg" su ". pdwg" quando si usa
 
     Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 
-Con questa impostazione, le estensioni seguenti (". txt", ". xml", ". bmp", ". JT", ". jpg", ". jpeg", ". jpe", ". jif", ". JFIF", ". JFI", ". png", ". TIF", ". TIFF", ". gif") diventano sempre P\<EXT>. Un'esclusione rilevante è che "ptxt" non diventa "txt. Pfile". 
+Con questa impostazione, le estensioni seguenti (". txt", ". xml", ". bmp", ". JT", ". jpg", ". jpeg", ". jpe", ". jif", ". JFIF", ". JFI", ". png", ". TIF", ". TIFF", ". gif") diventano sempre P \< EXT>. Un'esclusione rilevante è che "ptxt" non diventa "txt. Pfile". 
 **AdditionalPPrefixExtensions** funziona solo se è abilitata la protezione di Pfile con la proprietà avanzata- [**PFileSupportedExtension**](#pfilesupportedextension) . 
 
 Ad esempio, nel caso in cui venga utilizzato il seguente comando:
@@ -386,7 +386,7 @@ Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-
 
 Questa impostazione è destinata al momento in cui gli utenti alleghino i documenti con etichetta a un messaggio di posta elettronica e non etichettano il messaggio. In questo scenario viene selezionata automaticamente un'etichetta, in base alle etichette di classificazione applicate agli allegati. Viene selezionata l'etichetta di classificazione più alta.
 
-L'allegato deve essere un file fisico e non un collegamento a un file, ad esempio in SharePoint o OneDrive for Business.
+L'allegato deve essere un file fisico e non può essere un collegamento a un file (ad esempio, un collegamento a un file in Microsoft SharePoint o OneDrive).
 
 È possibile configurare questa impostazione su **consigliato**, in modo che agli utenti venga richiesto di applicare l'etichetta selezionata al messaggio di posta elettronica con una descrizione comando personalizzabile. Gli utenti possono accettare il suggerimento o ignorarlo. In alternativa, è possibile configurare questa impostazione su **automatica**, in cui l'etichetta selezionata viene applicata automaticamente, ma gli utenti possono rimuovere l'etichetta o selezionare un'etichetta diversa prima di inviare il messaggio di posta elettronica.
 
@@ -403,7 +403,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Chiave 2: **AttachmentActionTip**
 
-- Valore chiave 2: "\<descrizione comando personalizzata">
+- Valore chiave 2: " \< Descrizione comando personalizzata">
 
 La descrizione comando personalizzata supporta solo un solo linguaggio.
 
@@ -421,7 +421,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Chiave: **ReportAnIssueLink**
 
-- Valore: ** \<stringa http>**
+- Valore: ** \< stringa http>**
 
 Valore di esempio per un sito Web: `https://support.contoso.com`
 
@@ -518,7 +518,7 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Valore: **\<** nomi di dominio, delimitati da virgole**>**
 
-Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta john@sales.contoso.com elettronica a quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
+Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
 Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
 
@@ -707,7 +707,7 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 - Chiave: **ScannerConcurrencyLevel**
 
-- Valore: ** \<numero di thread simultanei>**
+- Valore: ** \< numero di thread simultanei>**
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "scanner":
 
@@ -742,7 +742,7 @@ Si noti che questa impostazione non comporta la rimozione dell'etichetta origina
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -760,7 +760,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -778,7 +778,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confi
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
 
-Esempio:
+In questo esempio:
 
 - Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
@@ -786,7 +786,7 @@ L'impostazione client avanzata è la seguente:
 
 - Chiave: **labelByCustomProperties**
 
-- Valore: l' **etichetta Secure Islands contiene Internal, Classification\* ,. Interno. \***
+- Valore: l' **etichetta Secure Islands contiene Internal, Classification,. \* Interno. \* **
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale":
 
@@ -865,7 +865,7 @@ Per questa configurazione è necessario specificare un'impostazione avanzata den
 
 Requisito: i documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di riservatezza è denominata **Confidential** e crea una proprietà personalizzata denominata **classificazione** con il valore **Secret**.
 
@@ -923,7 +923,7 @@ Quando si aggiunge un'etichetta secondaria a un'etichetta, gli utenti non posson
 
 - Chiave: **DefaultSubLabelId**
 
-- Valore: \<GUID dell'etichetta secondaria>
+- Valore: \< GUID dell'etichetta secondaria>
 
 Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confidential" e l'etichetta secondaria "All Employees" ha un GUID di 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
@@ -938,7 +938,7 @@ Quando si configura questa impostazione, viene modificato il comportamento prede
 Per Word, Excel e PowerPoint, la classificazione automatica viene eseguita in modo continuo in background.
 
 Il comportamento rimane invariato per Outlook.
-Quando la Azure Information Protection client di assegnazione unificata dei documenti controlla periodicamente i documenti per le regole di condizione specificate, questo comportamento Abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in SharePoint Online. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite.
+Quando il client di assegnazione di etichette unificato di Azure Information Protection controlla periodicamente i documenti per le regole di condizione specificate, questo comportamento Abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in SharePoint. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite.
 
 Le regole di condizione non vengono eseguite in tempo reale durante la digitazione. Vengono eseguite periodicamente come attività in background se il documento viene modificato.
 
@@ -959,13 +959,13 @@ Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-
 
 Usare questa impostazione avanzata per impostare un colore per un'etichetta. Per specificare il colore, immettere un codice di tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, #40e0d0 è il valore esadecimale RGB per il turchese.
 
-Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina [ \<colore>](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina [ \< colore>](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 Per configurare l'impostazione avanzata per il colore di un'etichetta, immettere le stringhe seguenti per l'etichetta selezionata:
 
 - Chiave: **colore**
 
-- Valore: \<valore esadecimale RGB>
+- Valore: \< valore esadecimale RGB>
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 4ad532dd31e948da894ebe51bd6b198589afe8b5
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 7ca25b5e36afc9828b01d16c83ce133f3e521469
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482437"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746890"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -56,13 +56,13 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
 
 - La classificazione automatica si applica a Word, Excel e PowerPoint quando si salvano i documenti e si applica a Outlook quando si inviano messaggi di posta elettronica. 
     
-    Non è possibile usare la classificazione automatica per documenti e messaggi di posta elettronica che in precedenza sono stati etichettati manualmente o automaticamente con una classificazione superiore. 
+    Non è possibile usare la classificazione automatica per documenti e messaggi di posta elettronica etichettati in precedenza manualmente oppure automaticamente tramite una classificazione superiore. 
 
 - La classificazione consigliata si applica a Word, Excel e PowerPoint quando si salvano i documenti. È possibile usare la classificazione consigliata per Outlook solo se si configura un'[impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) attualmente in anteprima.
     
     Non è possibile usare la classificazione consigliata per documenti che sono stati etichettati in precedenza con una classificazione superiore. 
 
-È possibile modificare questo comportamento in modo che il client Azure Information Protection verifichi periodicamente nei documenti le regole di condizione specificate. Questo, ad esempio, sarebbe appropriato se si usa il [salvataggio](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) automatico con le app di Office salvate automaticamente in SharePoint Online, OneDrive o OneDrive for business. Per supportare questo scenario, è possibile configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) attualmente in anteprima. L'impostazione attiva la classificazione affinché venga eseguita in modo continuo in background.
+È possibile modificare questo comportamento in modo che il client Azure Information Protection verifichi periodicamente nei documenti le regole di condizione specificate. Questo, ad esempio, sarebbe appropriato se si usa il [salvataggio](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) automatico con le app di Office salvate automaticamente in Microsoft SharePoint, OneDrive for Work o School oppure OneDrive per Home. Per supportare questo scenario, è possibile configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) attualmente in anteprima. L'impostazione attiva la classificazione affinché venga eseguita in modo continuo in background.
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Come vengono valutate più condizioni quando si applicano a più di un'etichetta
 
@@ -75,11 +75,11 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Per configurare la classificazione consigliata o automatica per un'etichetta
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
+1. Aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal), se questa operazione non è già stata eseguita. Quindi passare al riquadro **Azure Information Protection**. 
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **classificazioni** > **etichette** : nel riquadro **etichette Azure Information Protection** selezionare l'etichetta da configurare.
+2. Dall'opzione di menu **classificazioni**  >  **etichette** : nel riquadro **etichette di Azure Information Protection** selezionare l'etichetta da configurare.
 
 3. Nel riquadro **etichetta** , nella sezione **configurare le condizioni per l'applicazione automatica di questa etichetta** , fare clic su **Aggiungi una nuova condizione**.
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f48a131588d2087a1cf37a65f4e7d3a1f32ee0cd
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 64f1d03931e346d7f27ce35a3837c336a4468e7a
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482335"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746836"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -62,23 +62,23 @@ Per i documenti, i contrassegni visivi vengono applicati come segue:
 
 - Quando a un documento viene applicata un'etichetta usando Esplora file, PowerShell o lo scanner di Azure Information Protection, i contrassegni visivi non vengono applicati subito, ma vengono applicati dal client di Azure Information Protection quando tale documento viene aperto in un'app di Office e salvato per la prima volta.
     
-    L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in SharePoint Online, OneDrive o OneDrive for business: quando il salvataggio automatico è acceso, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background. 
+    L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in Microsoft SharePoint, OneDrive for Work o School oppure OneDrive per Home: quando il salvataggio automatico è on, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
 
 Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etichetta.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
+1. Aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal), se questa operazione non è già stata eseguita. Quindi passare al riquadro **Azure Information Protection**. 
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **classificazioni** > **etichette** : nel riquadro **etichette Azure Information Protection** selezionare l'etichetta che contiene i contrassegni visivi che si desidera aggiungere o modificare.
+2. Dall'opzione di menu **classificazioni**  >  **etichette** : nel riquadro **Azure Information Protection etichette** selezionare l'etichetta che contiene i contrassegni visivi che si desidera aggiungere o modificare.
 
 3. Nel riquadro **etichetta** , nella sezione **Imposta contrassegno visivo (ad esempio intestazione o piè** di pagina), configurare le impostazioni per i contrassegni visivi desiderati e quindi fare clic su **Salva**:
     
-    - Per configurare un'intestazione: per **I documenti con questa etichetta includono un'intestazione** selezionare **Sì** se si vuole usare un'intestazione, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per l'intestazione.
+    - Per configurare un'intestazione: per **Documents with this label have a header** (I documenti con questa etichetta hanno un'intestazione) selezionare **Sì** se si vuole usare un'intestazione, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per l'intestazione.
     
-    - Per configurare un piè di pagina: per **I documenti con questa etichetta includono un piè di pagina** selezionare **Sì** se si vuole usare un piè di pagina, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per il piè di pagina.
+    - Per configurare un piè di pagina: per **Documents with this label have a footer** (I documenti con questa etichetta hanno un piè di pagina) selezionare **Sì** se si vuole usare un piè di pagina, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per il piè di pagina.
     
     - Per configurare una filigrana: per **Documents with this label have a watermark** (I documenti con questa etichetta hanno una filigrana) selezionare **Sì** se si vuole usare una filigrana, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per la filigrana.
     
@@ -109,7 +109,7 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 Esempio: se si specifica la stringa `Document: ${Item.Name}  Classification: ${Item.Label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
 
 > [!NOTE]
-> L'uso della variabile `${User.Name}` e/o di `${User.PrincipalName}` non è attualmente supportato dal client Azure Information Protection Unified labeling. 
+> L'uso della `${User.Name}` variabile e/o `${User.PrincipalName}` non è al momento supportato dal client di Azure Information Protection Unified labeling. 
 
 >[!TIP]
 > È anche possibile usare un [codice campo per inserire il nome dell'etichetta](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o in un modello.
@@ -118,7 +118,7 @@ Esempio: se si specifica la stringa `Document: ${Item.Name}  Classification: ${I
 
 Per impostazione predefinita, i contrassegni visivi specificati vengono applicati a Word, Excel, PowerPoint e Outlook. Tuttavia, è possibile specificare i contrassegni visivi per tipo di applicazione di Office quando si usa un'istruzione con variabile "If.App" nella stringa di testo e identificare il tipo di applicazione usando i valori **Word**, **Excel**, **PowerPoint**, o **Outlook**. È anche possibile abbreviare questi valori, operazione necessaria se si desidera specificarne più di uno nella stessa istruzione If.App.
 
-Utilizzare la seguente sintassi:
+Usare la sintassi seguente:
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
@@ -158,7 +158,7 @@ Se il tipo di carattere specificato non è disponibile, il client torna a usare 
 
 È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#40e0d0** è il valore esadecimale RGB per il turchese. 
 
-Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina di [> dei colori\<](https://developer.mozilla.org/docs/Web/CSS/color_value) da MSDN Web docs. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina [ \< colore>](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

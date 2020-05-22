@@ -1,5 +1,5 @@
 ---
-title: Configurare utenti con privilegi avanzati per Azure Rights Management - AIP
+title: Configurare i diritti di utilizzo per Azure Rights Management - Azure Information Protection
 description: Comprendere e implementare la funzionalità per utenti con privilegi avanzati del servizio Rights Management di Azure da Azure Information Protection, in modo che gli utenti e i servizi autorizzati possano sempre leggere e controllare ("motivo") i dati protetti dell'organizzazione.
 author: cabailey
 ms.author: cabailey
@@ -13,20 +13,20 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 4b8115ffc0b4af968f2dbfdcb7747f288876b271
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404607"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746037"
 ---
-# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configurazione di utenti con privilegi avanzati per servizi di Azure Information Protection e individuazione o per il ripristino dei dati
+# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 La funzionalità per utenti con privilegi avanzati del servizio Azure Rights Management di Azure Information Protection garantisce che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure Rights Management protegge per l'organizzazione. Se necessario, la protezione può essere quindi rimossa o modificata.
 
-Per i documenti e i messaggi di posta elettronica protetti dal tenant Azure Information Protection dell'organizzazione, un utente con privilegi avanzati dispone sempre dei [diritti di utilizzo](configure-usage-rights.md) di Rights Management corrispondenti al controllo completo. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza cruciale nel mantenimento del controllo sui dati dell'organizzazione. Ad esempio, utilizzare questa funzionalità per uno qualsiasi dei seguenti scenari:
+Per i documenti e i messaggi di posta elettronica protetti dal tenant Azure Information Protection dell'organizzazione, un utente con privilegi avanzati dispone sempre dei [diritti di utilizzo](configure-usage-rights.md) di Controllo completo di Rights Management. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza cruciale nel mantenimento del controllo sui dati dell'organizzazione. Ad esempio, utilizzare questa funzionalità per uno qualsiasi dei seguenti scenari:
 
 - Un dipendente lascia l'organizzazione ed è necessario leggere i file che ha protetto.
 
@@ -34,13 +34,13 @@ Per i documenti e i messaggi di posta elettronica protetti dal tenant Azure Info
 
 - Exchange Server deve indicizzare le caselle postali per le operazioni di ricerca.
 
-- Si dispone di servizi IT esistenti per le soluzioni di prevenzione della perdita dei dati, per il gateway di crittografia del contenuto (CEG) e per i prodotti anti-malware che richiedono l'analisi dei file che sono già protetti.
+- Si dispone di servizi IT esistenti per le soluzioni di prevenzione della perdita dei dati (DLP), per il gateway di crittografia del contenuto (CEG) e per i prodotti anti-malware che richiedono l'analisi dei file che sono già protetti.
 
-- È necessario decrittografare i file in gruppo per questioni di controllo, legali o altri motivi di conformità.
+- È necessario decrittografare i file per questioni di controllo, legali o per altri motivi di conformità.
 
 ## <a name="configuration-for-the-super-user-feature"></a>Configurazione per la funzionalità per utenti con privilegi avanzati
 
-Per impostazione predefinita, la funzionalità di utente con privilegi avanzati non è abilitata e non sono presenti utenti assegnati a questo ruolo. Viene abilitata automaticamente per l'utente se si configura il connettore Rights Management per Exchange, e non è necessaria per i servizi standard che eseguono Exchange Online, SharePoint Online o SharePoint Server.
+Per impostazione predefinita, questo ruolo non è abilitato e a esso non sono assegnati utenti. Viene abilitata automaticamente se si configura il connettore Rights Management per Exchange e non è necessario per i servizi standard che eseguono Exchange Online, Microsoft SharePoint Server o SharePoint in Microsoft 365.
 
 Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet di PowerShell [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)e quindi assegnare gli utenti (o gli account del servizio) in base alle esigenze usando il cmdlet [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) o il cmdlet [set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) e aggiungere utenti (o altri gruppi) in base alle esigenze del gruppo. 
 
@@ -74,11 +74,11 @@ In questo esempio, l'amministratore di Contoso Ltd verifica che la funzionalità
 `2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
 ## <a name="scripting-options-for-super-users"></a>Opzioni di scripting per gli utenti con privilegi avanzati
-L'utente a cui viene assegnato il ruolo di utente con privilegi avanzati per Azure Rights Management deve spesso rimuovere la protezione da più file, in più posizioni. Sebbene sia possibile effettuare questa operazione manualmente, è più efficiente (e spesso più affidabile) eseguire uno script. A tale scopo, è possibile usare i cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) come necessario. 
+L'utente a cui viene assegnato il ruolo di utente con privilegi avanzati per Azure Rights Management deve spesso rimuovere la protezione da più file, in più posizioni. Sebbene sia possibile effettuare questa operazione manualmente, è più efficiente (e spesso più affidabile) eseguire uno script. A tale scopo, è possibile usare i cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) a seconda delle necessità. 
 
-Se si usano la classificazione e la protezione, è anche possibile usare [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) per applicare una nuova etichetta che non applica la protezione oppure rimuovere l'etichetta che ha applicato la protezione. 
+Se si usano la classificazione e la protezione, è possibile usare anche [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) per applicare una nuova etichetta che non applica la protezione oppure rimuovere l'etichetta che ha applicato la protezione. 
 
-Per altre informazioni su questi cmdlet, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) nella Guida dell'amministratore del client Azure Information Protection.
+Per maggiori informazioni su questi cmdlet, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) nella guida dell'amministratore del client Azure Information Protection.
 
 > [!NOTE]
 > Il modulo AzureInformationProtection è diverso da e integra il [modulo AIPService PowerShell](administer-powershell.md) che gestisce il servizio Azure Rights Management per Azure Information Protection.

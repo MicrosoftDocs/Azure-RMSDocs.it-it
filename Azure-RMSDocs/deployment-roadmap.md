@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 58567d3a8d76da4f872558a7aeea102562c7c3cf
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 88ddfd13cdee34b20f8d1014a0d564654fa594e1
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77423161"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746927"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "77423161"
 
 Usare le indicazioni della procedura che segue per preparare l'ambiente e per implementare e gestire Azure Information Protection per l'organizzazione.
 
-In alternativa 
+In alternativa: 
 
 - Cerchi istruzioni basate sullo scenario per Azure Information Protection? Vedere le [guide alle procedure per scenari comuni che usano Azure Information Protection](how-to-guides.md).
 
@@ -86,7 +86,7 @@ Distribuire quindi il client di Azure Information Protection (versione classica)
 
 - [Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection](./rms-client/clientv2-admin-guide.md)
 
-Dopo un certo periodo di tempo, quando gli utenti sono in grado di assegnare etichette a documenti e messaggi di posta elettronica, introdurre configurazioni più avanzate, ad esempio:
+Dopo un certo periodo di tempo, quando gli utenti sono in grado di assegnare etichette a documenti e messaggi di posta elettronica, introdurre configurazioni più avanzate, Ecco alcuni esempi:
 
 - Applicare un'etichetta predefinita
 
@@ -104,7 +104,7 @@ In questa fase, non selezionare l'opzione per proteggere documenti e messaggi di
 
 Quando gli utenti sono in grado di assegnare etichette ai documenti e ai messaggi di posta elettronica, si è pronti per iniziare a introdurre la protezione dei dati più sensibili. Questa fase richiede la preparazione seguente:
 
-1. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
+1. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) (Pianificazione e implementazione della chiave del tenant Azure Information Protection).
 
 2. Installare il modulo PowerShell per AIPService in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](./install-powershell.md).
 
@@ -128,7 +128,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 2. Configurare le applicazioni e i servizi di Office
     
-    Configurare le applicazioni e i servizi di Office per le funzionalità di IRM (Information Rights Management) in SharePoint Online o Exchange Online. Per ulteriori informazioni, vedere [Configurazione delle applicazioni per Azure Rights Management](configure-applications.md).
+    Configurare le applicazioni e i servizi di Office per le funzionalità IRM (Information Rights Management) in Microsoft SharePoint o Exchange Online. Per altre informazioni, vedere [configurazione di applicazioni per Azure Rights Management](configure-applications.md).
 
 3. Configurare la funzionalità relativa agli utenti con privilegi avanzati per il ripristino dei dati
     
@@ -146,7 +146,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 6. Distribuire il connettore per le raccolte protette con IRM in SharePoint Server e i messaggi protetti con IRM per Exchange locale
     
-    Se si dispone di SharePoint ed Exchange locale e si vogliono usare le funzionalità di Information Rights Management (IRM), installare e configurare il connettore di Rights Management. Per altre informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
+    Se si dispone di SharePoint ed Exchange locale e si vogliono usare le funzionalità di Information Rights Management (IRM), installare e configurare il connettore di Rights Management. Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](./deploy-rms-connector.md).
 
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Passaggio 6: Usare e monitorare le soluzioni di protezione dei dati
 È ora possibile monitorare il modo in cui l'organizzazione usa le etichette configurate e verificare che le informazioni riservate siano effettivamente protette. Per altre informazioni a supporto di questa fase di distribuzione, vedere gli argomenti seguenti:
@@ -179,7 +179,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
 1. Verificare che il tenant di Office 365 contenga gli account utente e i gruppi che Azure Information Protection dovrà usare per autenticare gli utenti dell'organizzazione. Se necessario, creare questi account e gruppi o sincronizzarli dalla directory locale. Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 
-2. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
+2. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) (Pianificazione e implementazione della chiave del tenant Azure Information Protection).
 
 3. Installare il modulo PowerShell per AIPService in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](./install-powershell.md).
 
@@ -201,7 +201,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 2. Configurare le applicazioni e i servizi di Office
     
-    Configurare le applicazioni e i servizi di Office per le funzionalità di IRM (Information Rights Management) in SharePoint Online o Exchange Online. Per ulteriori informazioni, vedere [Configurazione delle applicazioni per Azure Rights Management](./configure-applications.md).
+    Configurare le applicazioni e i servizi di Office per le funzionalità IRM (Information Rights Management) in SharePoint o in Exchange Online. Per altre informazioni, vedere [configurazione di applicazioni per Azure Rights Management](./configure-applications.md).
 
 3. Configurare la funzionalità relativa agli utenti con privilegi avanzati per il ripristino dei dati
     
@@ -209,13 +209,13 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 4. Proteggere i file esistenti in blocco 
     
-    È possibile usare i cmdlet di PowerShell per proteggere o rimuovere la protezione per più tipi di file in blocco. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) nella guida dell'amministratore.
+    È possibile usare i cmdlet di PowerShell per proteggere o rimuovere la protezione per più tipi di file in blocco. Per altre informazioni, vedere [uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) dalla guida dell'amministratore.
     
     Per i file nei file server basati su Windows, è possibile usare questi cmdlet con uno script e Infrastruttura di classificazione file per Windows Server. Per altre informazioni, vedere [Protezione RMS con Infrastruttura di classificazione file per Windows Server](./rms-client/configure-fci.md).
 
 5. Distribuire il connettore per i server locali
     
-    Se si prevede di usare servizi locali con il servizio di protezione, installare e configurare il connettore di Rights Management. Per altre informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
+    Se si prevede di usare servizi locali con il servizio di protezione, installare e configurare il connettore di Rights Management. Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](./deploy-rms-connector.md).
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Passaggio 4: Usare e monitorare le soluzioni di protezione dei dati
 

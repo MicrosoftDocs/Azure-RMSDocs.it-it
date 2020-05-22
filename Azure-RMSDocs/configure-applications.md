@@ -13,14 +13,14 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f361c96b3b1143b59d431124988eca84f66d8ec9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 38853e038b708950228473e703e364e0a021ec6e
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933549"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746359"
 ---
-# <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Azure Rights Management
+# <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Rights Management di Windows Azure
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -29,7 +29,7 @@ ms.locfileid: "74933549"
 >
 > Ad esempio, per le applicazioni Office fare clic sull'icona della Guida e immettere i termini di ricerca, ad esempio **Rights Management** o **IRM**. Per il client Azure Information Protection per Windows, vedere la [Guida per l'utente del client Azure Information Protection](./rms-client/client-user-guide.md).
 
-Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare le applicazioni, il client Azure Information Protection e i servizi. Ad esempio, le applicazioni di Office come Word 2019, Word 2016 e Word 2013. e i servizi come Exchange Online (regole di trasporto, prevenzione della perdita dei dati, opzione Non inoltrare e Message Encryption) e SharePoint Online (librerie protette). Per informazioni su come questi servizi e applicazioni supportano il servizio di protezione dei dati di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
+Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare le applicazioni, il client Azure Information Protection e i servizi. Ad esempio, le applicazioni di Office come Word 2019, Word 2016 e Word 2013. Inoltre, servizi come Exchange Online (regole di trasporto, prevenzione della perdita dei dati, non inoltri e crittografia dei messaggi) e Microsoft SharePoint (librerie protette). Per informazioni su come questi servizi e applicazioni supportano il servizio di protezione dei dati di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 > [!IMPORTANT]
 > Per informazioni sulle versioni supportate e altri requisiti, vedere [requisiti per Azure Information Protection](requirements.md).
@@ -38,17 +38,17 @@ Dopo avere distribuito Azure Information Protection per l'organizzazione, usare 
 
     -   [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration)
 
-    -   [SharePoint Online e OneDrive for business: configurazione di IRM](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint in Microsoft 365 e OneDrive: configurazione di IRM](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration)
 
 - [Applicazioni di Office: configurazione dei client](configure-office-apps.md)
 
-    -   [App Office 365, Office 2019, Office 2016 e Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
+    -   [App di Office 365, Office 2019, Office 2016 e Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 
-    -   [Office 2010](configure-office-apps.md#office2010)
+    -   [Office 2010](configure-office-apps.md#office2010)
 
 -   [Client Azure Information Protection: installazione e configurazione dei client](configure-client.md)
 
-Per configurare server locali quali Exchange Server e SharePoint Server, vedere l'articolo relativo alla [distribuzione del connettore Azure Rights Management](deploy-rms-connector.md).
+Per configurare i server locali, ad esempio Exchange Server e SharePoint Server, vedere [Deploying the Azure Rights Management Connector](deploy-rms-connector.md).
 
 Oltre a queste applicazioni e a questi servizi, esistono altre applicazioni che supportano le API di Rights Management. Questa categoria include le applicazioni line-of-business scritte internamente mediante Rights Management SDK, nonché le applicazioni di fornitori di software scritte mediante Rights Management SDK. Per tali applicazioni, seguire le istruzioni fornite con esse.
 

@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29c41a53bef195a1a80d728fdf40cfc262533373
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799164"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747178"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -148,7 +148,7 @@ Per impostazione predefinita, i client di Azure Information Protection non invia
 ## <a name="prerequisites"></a>Prerequisiti
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
 |Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
@@ -223,7 +223,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
     
 2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
 
-3. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una delle operazioni seguenti:
+3. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una di queste operazioni:
     
     - Per creare una nuova area di lavoro Log Analytics: selezionare **Crea nuova area di lavoro**e nel riquadro **area di lavoro di log Analytics** fornire le informazioni richieste.
     
@@ -233,7 +233,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
 4. Se si dispone di Azure Information Protection client (versione classica), selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili** se si desidera archiviare i dati effettivi identificati come tipo di informazioni riservate. Per ulteriori informazioni su questa impostazione, vedere la sezione [corrispondenze di contenuto per l'analisi più approfondita](#content-matches-for-deeper-analysis) in questa pagina.
 
-5. Selezionare **OK**.
+5. Seleziona **OK**.
 
 A questo punto si è pronti per visualizzare i report.
 
@@ -309,8 +309,8 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 |ProtectedBefore|Se il contenuto è stato protetto prima della modifica: Sì/No |
 |ProtectionOwnerBefore|Proprietario Rights Management prima della modifica |
 |UserJustification|Giustificazione durante il downgrade o la rimozione dell'etichetta|
-|LastModifiedBy|Utente in formato UPN che ha eseguito l'ultima modifica al file. Disponibile solo per Office e SharePoint Online|
-|LastModifiedDate|UTC nel formato AAAA-MM-GGThh: MM: SS: disponibile solo per Office & SharePoint Online |
+|LastModifiedBy|Utente in formato UPN che ha eseguito l'ultima modifica al file. Disponibile solo per Office e SharePoint|
+|LastModifiedDate|UTC nel formato AAAA-MM-GGThh: MM: SS: disponibile solo per Office e SharePoint |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Esempi di utilizzo di InformationProtectionEvents

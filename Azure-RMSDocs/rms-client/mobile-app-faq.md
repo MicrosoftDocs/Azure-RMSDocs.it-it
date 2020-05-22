@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cd8cef4bae59fbffa66ce18737558888f101ef47
-ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
+ms.openlocfilehash: 0ccc3ae77d8113a6a3d1a1595a474bd39b1f3ede
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75913264"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747074"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
 
@@ -31,11 +31,11 @@ L'app consente di visualizzare i messaggi di posta elettronica protetti da dirit
 
 Dato che questa app è un visualizzatore, non può essere usata per creare nuovi messaggi di posta elettronica protetti, rispondere ai messaggi oppure creare o modificare i file protetti. Inoltre, l'app non consente di aprire allegati per i file visualizzati. Ad esempio, gli allegati in documenti PDF protetti o nei messaggi di posta elettronica protetti con RMS.
 
-## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>È possibile aprire file PDF che si trovano in librerie protette di SharePoint e OneDrive for Business?
+## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive"></a>È possibile aprire file PDF che si trovano in librerie protette da SharePoint e OneDrive?
 
-Sì, è possibile aprire file PDF protetti che altri utenti hanno condiviso tramite SharePoint e OneDrive for Business. Toccare il collegamento e scegliere l'app per aprire il file automaticamente. 
+Sì, è possibile aprire file PDF protetti che altri utenti hanno condiviso con l'utente tramite Microsoft SharePoint e OneDrive. Toccare il collegamento e scegliere l'app per aprire il file automaticamente. 
 
-Questa app può anche aprire i file PDF protetti all'esterno di SharePoint e OneDrive for Business (file PPDF e PDF protetti).
+Questa app può anche aprire i file PDF protetti al di fuori di SharePoint e OneDrive (file PDF protetti e Ppdf).
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>È possibile eseguire l'app Azure Information Protection in un dispositivo mobile?
 
@@ -73,7 +73,7 @@ Per l'elenco completo delle estensioni dei nomi di file di testo e immagine, ved
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>In che modo è possibile fornire feedback sull'app?
 
-Nell'app passare a **Settings (Impostazioni)**  > **Send feedback (Invia feedback)** .
+Nell'app passare a **Impostazioni**  >  **Invia feedback**.
 
 
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>La domanda non è stata soddisfatta. Come si deve procedere?

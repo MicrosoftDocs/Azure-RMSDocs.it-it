@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: acb737a89acfcf7626ae9f89949386f56a0d59ee
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 58053a5ee3dae935a3d160f14bc610d2487e03d2
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483355"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747048"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -37,9 +37,9 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 1. Se non è ancora stato fatto, in una nuova finestra del browser [accedere alla portale di Azure](../configure-policy.md#signing-in-to-the-azure-portal), quindi passare al riquadro **Azure Information Protection** .
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: selezionare **Criteri**.
+2. Dall'opzione di menu **classificazioni**  >  **etichette** : selezionare **criteri**.
 
-3. Nel riquadro **Azure Information Protection-criteri** selezionare il menu di scelta rapida ( **...** ) accanto al criterio per contenere le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
+3. Nel riquadro **Azure Information Protection-criteri** selezionare il menu di scelta rapida (**...**) accanto al criterio per contenere le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
     
     È possibile configurare le impostazioni avanzate per i criteri globali e per i criteri con ambito.
 
@@ -47,7 +47,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 5. Assicurarsi che gli utenti interessati da questi criteri riavviino le applicazioni di Office eventualmente aperte.
 
-6. Se l'impostazione non è più necessaria e si desidera ripristinare il comportamento predefinito: nel riquadro **Impostazioni avanzate** selezionare il menu di scelta rapida ( **...** ) accanto all'impostazione non più necessaria, quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
+6. Se l'impostazione non è più necessaria e si desidera ripristinare il comportamento predefinito: nel riquadro **Impostazioni avanzate** selezionare il menu di scelta rapida (**...**) accanto all'impostazione non più necessaria, quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
 
 #### <a name="available-advanced-client-settings"></a>Impostazioni client avanzate disponibili
 
@@ -97,7 +97,7 @@ Per impostazione predefinita, il client Azure Information Protection prova autom
 
 Indipendentemente da questa impostazione, il client Azure Information Protection segue comunque il [processo standard di individuazione del servizio RMS](client-deployment-notes.md#rms-service-discovery) per trovare il proprio cluster AD RMS.
 
-## <a name="sign-in-as-a-different-user"></a>Accedi con un altro nome utente
+## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
 
 In un ambiente di produzione, in genere gli utenti non hanno bisogno di accedere con un nome utente diverso quando usano il client Azure Information Protection. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
 
@@ -146,7 +146,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **ReportAnIssueLink**
 
-- Valore: **\<stringa HTTP>**
+- Valore: ** \< stringa http>**
 
 Valore di esempio per un sito Web: `https://support.contoso.com`
 
@@ -198,13 +198,13 @@ Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP 
     |Policy1.3.msip |versione 1.8 - 1.29|
     |Policy1.4.msip |versione 1.32 e successive|
     
-2. Rinominare il file identificato come **Policy.msip**, quindi copiarlo nella cartella **%LocalAppData%\Microsoft\MSIP** nei computer in cui è installato il client Azure Information Protection. 
+2. Rinominare il file identificato in **policy. MSIP**, quindi copiarlo nella cartella **%LocalAppData%\Microsoft\MSIP** in computer in cui è installato il client di Azure Information Protection. 
 
 Se il computer disconnesso esegue la versione corrente di GA dello scanner di Azure Information Protection, è necessario eseguire ulteriori operazioni di configurazione. Per altre informazioni, vedere [restrizione: il server dello scanner non può avere connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) dalle istruzioni per la distribuzione dello scanner.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
-Il metodo consigliato per configurare questa opzione è tramite l' [impostazione dei criteri](../configure-policy-settings.md) **Aggiungi il pulsante non inviare alla barra multifunzione di Outlook**. Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
 
 Quando è configurata, questa impostazione nasconde o visualizza il pulsante **Non inoltrare** sulla barra multifunzione in Outlook. Questa impostazione non influisce sull'opzione Non inoltrare nei menu di Office.
 
@@ -216,7 +216,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate
 
-Il metodo consigliato per configurare questa opzione è tramite l' [impostazione criterio](../configure-policy-settings.md) **rendere disponibile l'opzione autorizzazioni personalizzate per gli utenti**. Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Make the custom permissions option available for users** (Rendi disponibile l'opzione per le autorizzazioni personalizzate). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
 
 Quando si configura questa impostazione e si pubblicano i criteri per gli utenti, le opzioni per le autorizzazioni personalizzate diventano visibili per gli utenti in modo che possano selezionare impostazioni di protezione personali oppure sono nascoste e quindi gli utenti non possono selezionare impostazioni di protezione personali, se non richiesto.
 
@@ -230,7 +230,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
 
-Quando si configura l' [impostazione criterio](../configure-policy-settings.md) **rendere disponibile l'opzione autorizzazioni personalizzate per gli utenti** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non sono in grado di visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
+Quando si configura l'[impostazione di criteri](../configure-policy-settings.md) **Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non possono visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
 
 Quando si crea e configura questa impostazione client avanzata, gli utenti possono visualizzare e modificare le autorizzazioni personalizzate per un documento protetto quando usano Esplora file e fare clic con il pulsante destro del mouse sul file. L'opzione **Autorizzazioni personalizzate** del pulsante **Proteggi** sulla barra multifunzione di Office rimane nascosta.
 
@@ -238,11 +238,11 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **EnableCustomPermissionsForCustomProtectedFiles**
 
-- Valore: **True**
+- Valore: **true**
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Nascondere in modo permanente la barra di Azure Information Protection
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usare questa opzione solo quando l' [impostazione dei criteri](../configure-policy-settings.md) **visualizza la barra Information Protection nelle app di Office** è impostata **su on**.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
 
 Per impostazione predefinita, se un utente cancella l'opzione **Mostra barra** dalla scheda **Pagina iniziale**, il gruppo **Protezione**, il pulsante **Proteggi**, la barra di Information Protection non viene più visualizzata in quell'app Office. La barra viene tuttavia automaticamente visualizzata di nuovo alla successiva apertura di un'app Office.
 
@@ -254,7 +254,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **EnableBarHiding**
 
-- Valore: **True**
+- Valore: **true**
 
 ## <a name="enable-order-support-for-sublabels-on-attachments"></a>Abilitare il supporto dell'ordinamento delle etichette secondarie per gli allegati
 
@@ -268,7 +268,7 @@ Configurare le stringhe seguenti:
 
 - Chiave: **CompareSubLabelsInAttachmentAction**
 
-- Valore: **True**
+- Valore: **true**
 
 Senza questa impostazione, al messaggio di posta elettronica viene applicata la prima etichetta con la classificazione più alta individuata dall'etichetta padre. 
 
@@ -284,7 +284,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **DisableMandatoryInOutlook**
 
-- Valore: **True**
+- Valore: **true**
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
@@ -296,7 +296,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **OutlookRecommendationEnabled**
 
-- Valore: **True**
+- Valore: **true**
 
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
@@ -321,7 +321,7 @@ Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio p
 
 Quando i messaggi popup sono per un'etichetta specifica, è possibile configurare le eccezioni per i destinatari in base al nome di dominio.
 
-Le azioni risultanti dai messaggi popup vengono registrate nel registro eventi di Windows locale **registri applicazioni e servizi** > **Azure Information Protection**:
+Le azioni risultanti dai messaggi popup vengono registrate nel registro eventi di Windows locale **registri applicazioni e servizi**  >  **Azure Information Protection**:
 
 - Messaggi di avviso: ID informazioni 301
 
@@ -357,19 +357,19 @@ Valore di esempio per più ID etichetta sotto forma di stringa delimitata da vir
     
     - Chiave: **OutlookWarnUntrustedCollaborationLabel**
     
-    - Valore: \<**ID etichetta, delimitato da virgole**>
+    - Valore: \< **ID etichetta, delimitati da virgole**>
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Valore: \<**ID etichetta, delimitato da virgole**>
+    - Valore: \< **ID etichetta, delimitati da virgole**>
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockUntrustedCollaborationLabel**
     
-    - Valore: \<**ID etichetta, delimitato da virgole**>
+    - Valore: \< **ID etichetta, delimitati da virgole**>
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
 
@@ -385,19 +385,19 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Chiave: **OutlookWarnTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
 
 Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
@@ -433,14 +433,14 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 Per impostazione predefinita, i messaggi popup avvisa, giustifica o blocca si applicano a tutti i documenti di Office e PDF. È possibile affinare questo elenco specificando quali estensioni di file devono visualizzare i messaggi di avviso, di giustificazione o di blocco con una proprietà client avanzata aggiuntiva e un elenco delimitato da virgole di estensioni di file.
 
-Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole:`.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la giustificazione o il blocco dei messaggi popup.
 
 
 - Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore: **\<** estensioni di file per visualizzare i messaggi, delimitati da virgole **>**
+- Valore: **\<** estensioni di file per la visualizzazione dei messaggi, delimitati da virgole**>**
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Per specificare un'azione diversa per i messaggi di posta elettronica senza allegati
 
@@ -555,7 +555,7 @@ Quando si configura questa impostazione, cambia il [comportamento predefinito](.
 
 Il comportamento rimane invariato per Outlook.
 
-Quando il client di Azure Information Protection verifica periodicamente nei documenti le regole di condizione specificate, questo comportamento abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in SharePoint Online. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite. 
+Quando il client di Azure Information Protection controlla periodicamente i documenti per le regole di condizione specificate, questo comportamento Abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in Microsoft SharePoint. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite. 
 
 Le regole di condizione non vengono eseguite in tempo reale durante la digitazione. Vengono eseguite periodicamente come attività in background se il documento viene modificato.
 
@@ -563,7 +563,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **RunPolicyInBackground**
 
-- Valore: **True**
+- Valore: **true**
 
 ## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Non proteggere i file PDF usando lo standard ISO per la crittografia dei file PDF
 
@@ -595,7 +595,7 @@ Inoltre quando l'utente usa queste istruzioni per file protetti da altri utenti,
 
 Per usare i comandi di PowerShell per convertire file con estensione ppdf esistenti in file con estensione pdf protetti che usano lo standard ISO per la crittografia PDF:
 
-1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. Ad esempio,
+1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. Ad esempio:
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -607,11 +607,11 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
-3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio, 
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio,
+4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio:
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -682,7 +682,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Name|Valore|
+|Nome|valore|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "L'etichetta Secure Islands è Riservato",Classificazione,Riservato|
 
@@ -699,7 +699,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Name|Valore|
+|Nome|valore|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "L'etichetta Secure Islands è Sensibile",Classificazione,Sensibile|
 
@@ -717,7 +717,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Name|Valore|
+|Nome|valore|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"L'etichetta Secure Islands contiene Interno",Classificazione,.\*Interno.\*|
 
@@ -736,7 +736,7 @@ Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti
 
 - Chiave: **RemoveExternalContentMarkingInApp**
 
-- Valore: \<**tipi di applicazioni di Office WXP**> 
+- Valore: \< **tipi di applicazione di Office WXP**> 
 
 Esempi:
 
@@ -769,7 +769,7 @@ Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi divers
 
 - Chiave: **ExternalContentMarkingToRemove**
 
-- Valore: \<**stringa da confrontare, definita come espressione regolare**> 
+- Value: \< **stringa di cui trovare la corrispondenza, definita come espressione regolare**> 
 
 #### <a name="multiline-headers-or-footers"></a>Intestazioni o piè di pagina su più righe
 
@@ -783,11 +783,11 @@ Per rimuovere il piè di pagina su più righe, creare le due voci seguenti:
 
 - Chiave 1: **ExternalContentMarkingToRemove**
 
-- Valore chiave 1: **\*Confidential***
+- Valore chiave 1: ** \* riservato***
 
 - Chiave 2: **ExternalContentMarkingToRemove**
 
-- Valore chiave 2: **\*Label applied*** 
+- Valore chiave 2: ** \* etichetta applicata*** 
 
 #### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
 
@@ -807,7 +807,7 @@ Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, 
 
 - Chiave: **PowerPointShapeNameToRemove**
 
-- Valore: \<**nome delle forma di PowerPoint**> 
+- Valore: \< **nome della forma di PowerPoint**> 
 
 Quando si hanno più forme di PowerPoint da rimuovere, creare tante chiavi **PowerPointShapeNameToRemove** quante sono le forme da rimuovere. Per ogni voce specificare il nome della forma da rimuovere.
 
@@ -815,7 +815,7 @@ Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina v
 
 - Chiave: **RemoveExternalContentMarkingInAllSlides**
 
-- Valore: **True**
+- Valore: **true**
 
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etichettare un documento di Office usando una proprietà personalizzata esistente
 
@@ -834,7 +834,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave 1: **SyncPropertyName**
 
-- Valore chiave 1 : \<**nome proprietà**> 
+- Chiave 1 valore: \< **nome proprietà**> 
 
 - Chiave 2: **SyncPropertyState**
 
@@ -844,7 +844,7 @@ Usare queste chiavi e i valori corrispondenti per una sola proprietà personaliz
 
 Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classificazione** con i valori possibili **Pubblico**, **Generale** e **Riservatezza elevata\Tutti i dipendenti**. I documenti vengono archiviati in SharePoint, con i valori **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** impostati per la proprietà Classificazione.
 
-Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
+Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a ** OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
 
@@ -862,7 +862,7 @@ La configurazione che controlla se il client invia le informazioni di controllo 
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate all'attività di assegnazione di etichette.
 
-Ad esempio,
+Ad esempio:
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
@@ -893,7 +893,7 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 - Chiave: **ScannerConcurrencyLevel**
 
-- Valore: **\<numero massimo di utenti simultanei>**
+- Valore: ** \< numero di thread simultanei>**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Disabilitare il livello di integrità basso per lo scanner
 
@@ -921,7 +921,7 @@ Se si verifica questo problema di timeout a causa di file di grandi dimensioni, 
 
 - Chiave: **ContentExtractionTimeout**
 
-- Valore: **\<HH: min: sec >**
+- Valore: ** \< hh: min: sec>**
 
 Il tipo di file può influire sul tempo necessario per eseguire la scansione di un file. Tempi di analisi di esempio:
 
@@ -945,7 +945,7 @@ Per modificare il periodo di timeout per l'elaborazione dei file, configurare l'
 
 - Chiave: **FileProcessingTimeout**
 
-- Valore: **\<HH: min: sec >**
+- Valore: ** \< hh: min: sec>**
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
@@ -957,7 +957,7 @@ Per modificare il livello di registrazione per questi file, configurare l'impost
 
 - Chiave: **LogLevel**
 
-- Valore: **\<livello di registrazione>**
+- Valore: ** \<>livello di registrazione**
 
 Impostare il livello di registrazione su uno dei valori seguenti:
 
@@ -975,7 +975,7 @@ Questa impostazione client avanzata non modifica le informazioni inviate ad Azur
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integrazione con la classificazione dei messaggi di Exchange per una soluzione di etichettatura dei dispositivi mobili
 
-Outlook sul Web supporta ora l'assegnazione di etichette incorporata per Exchange Online, che è il metodo consigliato per etichettare i messaggi di posta elettronica in Outlook sul Web. Tuttavia, se non si usano ancora le etichette di riservatezza pubblicate dal Centro sicurezza e conformità di Office 365, il Centro sicurezza Microsoft 365 o Microsoft Compliance Center, è possibile usare la classificazione dei messaggi di Exchange per estendere le informazioni di Azure Etichette di protezione per gli utenti mobili quando usano Outlook sul Web. È inoltre possibile utilizzare questo metodo per Exchange Server. 
+Outlook sul Web supporta ora l'assegnazione di etichette incorporata per Exchange Online, che è il metodo consigliato per etichettare i messaggi di posta elettronica in Outlook sul Web. Tuttavia, se non si usano ancora le etichette di riservatezza pubblicate da Office 365 Security & Compliance Center, il Centro sicurezza Microsoft 365 o Microsoft Compliance Center, è possibile usare la classificazione dei messaggi di Exchange per estendere Azure Information Protection etichette agli utenti mobili quando usano Outlook sul Web. È inoltre possibile utilizzare questo metodo per Exchange Server. 
 
 Outlook Mobile non supporta la classificazione dei messaggi di Exchange.
 
@@ -985,11 +985,11 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare controllando le intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa che segue immediatamente, fino ed escludendo il punto e virgola. Ad esempio,
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare controllando le intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa che segue immediatamente, fino ed escludendo il punto e virgola. Ad esempio:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4FDB-8f01-93a3e71333b8_Enabled = true**
     
-    Quindi, per l'intestazione del messaggio nella regola, specificare **msip_labels** per l'intestazione e la parte rimanente della stringa per il valore dell'intestazione. Ad esempio,
+    Quindi, per l'intestazione del messaggio nella regola, specificare **msip_labels** per l'intestazione e la parte rimanente della stringa per il valore dell'intestazione. Ad esempio:
     
     ![Regola del flusso di posta di Exchange Online di esempio che imposta l'intestazione del messaggio per un'etichetta di Azure Information Protection specifica](../media/exchange-rule-for-message-header.png)
     

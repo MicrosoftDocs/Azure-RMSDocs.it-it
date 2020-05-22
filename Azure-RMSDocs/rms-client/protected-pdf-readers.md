@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 6d9dc21d2541ab9aeb6d6fc6772781e1c23c1f2e
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: c3501f151d8c894abc92408192a7ef86d28ad8df
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326376"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746959"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Lettori PDF che supportano Microsoft Information Protection
 
@@ -31,15 +31,15 @@ Un documento PDF protetto potrebbe contenere informazioni riservate. Per una mag
 
 Selezionare il dispositivo che si sta usando per installare un lettore PDF in grado di aprire documenti PDF protetti. Tutti questi lettori possono aprire documenti protetti che rispettano lo standard ISO per la crittografia PDF:
 
-- **Computer**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
+- **Computer**: [Windows](protected-pdf-readers-windows.md)  |  [MacOS](protected-pdf-readers-mac.md)
 
-- **Dispositivi mobili**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
+- **Dispositivi mobili**: [Android](protected-pdf-readers-android.md)  |  [iOS](protected-pdf-readers-ios.md)
 
 ### <a name="support-for-previous-formats"></a>Supporto per i formati precedenti
 
 I lettori PDF nella tabella seguente supportano i documenti PDF protetti con estensione Ppdf e i formati meno recenti con estensione. pdf. 
 
-Attualmente, SharePoint Online e SharePoint locale usano un formato più datato per i documenti PDF nelle librerie protette con IRM.
+Attualmente, in Microsoft SharePoint viene utilizzato un formato precedente per i documenti PDF nelle librerie protette con IRM.
 
 
 |Sistema operativo|Lettori supportati|
