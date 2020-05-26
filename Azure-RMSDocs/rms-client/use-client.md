@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 2f192ffc2572bbec4f9292155d482534dbcc94d5
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 51d5ea830335e86007a3caabbbf724d16c33f97b
+ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746291"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825444"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -188,6 +188,8 @@ Anche se il Azure Information Protection client di assegnazione unificata di eti
 - Richiesta **di conferma eliminare questa etichetta?** per gli utenti se non si usa l'impostazione dei criteri per la giustificazione
 
 - Separazione dei cmdlet PowerShell per la connessione a un servizio Rights Management
+
+- Visualizzazione dell'identità utente che ha applicato un'etichetta
 
 
 ### <a name="parent-labels-and-their-sublabels"></a>Etichette padre ed etichette secondarie 

@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/05/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aff9e38a43779f9297d9371fa4bc034b36885875
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: fdfbd6bded95a8fc2c156a34fb17f5241b65cf70
+ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746302"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825459"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -680,7 +680,9 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 A partire dalla versione di scanner 2.7. x. x, è consigliabile limitare l'utilizzo della CPU tramite il metodo di impostazioni avanzate **ScannerMaxCPU** e **ScannerMinCPU** . 
 
 > [!IMPORTANT]
-> Il metodo di impostazioni avanzate **ScannerMaxCPU** e **ScannerMinCPU** non può essere usato con i criteri di limitazione dei thread. Per usare il metodo per limitare l'utilizzo della CPU, è necessario sospendere l'uso dei [criteri che limitano il thread](#limit-the-number-of-threads-used-by-the-scanner) che potrebbero già esistere. 
+> Quando il criterio di limitazione dei thread seguente è in uso, le impostazioni avanzate di **ScannerMaxCPU** e **ScannerMinCPU** vengono ignorate. Per limitare l'utilizzo della CPU tramite le impostazioni avanzate **ScannerMaxCPU** e **ScannerMinCPU** , annullare l'utilizzo di criteri che limitano il numero di thread. 
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
 
 Per limitare l'utilizzo della CPU nel computer dello scanner, è possibile gestirlo creando due impostazioni avanzate: **ScannerMaxCPU** e **ScannerMinCPU**. 
 

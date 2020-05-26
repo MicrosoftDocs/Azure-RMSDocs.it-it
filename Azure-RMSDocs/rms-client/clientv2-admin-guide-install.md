@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/15/2020
+ms.date: 05/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca7b0b879af117bc198c1a4224a44639c39d5548
-ms.sourcegitcommit: 03c9f8d24c65bffc14b9701ea83a2ac05b681023
+ms.openlocfilehash: 6a47441ad344166c9723d7c9969681dd7c26c219
+ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416379"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825435"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -32,11 +32,9 @@ Verificare quindi i prerequisiti aggiuntivi che potrebbero essere necessari per 
 
 - Microsoft .NET Framework 4.6.2
     
-    Per impostazione predefinita, l'installazione completa del client Azure Information Protection Unified Labeling richiede una versione minima di Microsoft .NET Framework 4.6.2 e, se non è presente, l'installazione guidata dal programma di installazione eseguibile tenta di scaricare e installare questa Prerequisiti. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer. Anche se non è consigliabile, è possibile ignorare questo prerequisito quando si esegue la configurazione guidata usando un [parametro di installazione personalizzato](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
+    Per impostazione predefinita, l'installazione completa del client Azure Information Protection Unified Labeling richiede una versione minima di Microsoft .NET Framework 4.6.2 e, se non è presente, l'installazione guidata dal programma di installazione eseguibile tenta di scaricare e installare questo prerequisito. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer. Anche se non è consigliabile, è possibile ignorare questo prerequisito quando si esegue la configurazione guidata usando un [parametro di installazione personalizzato](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
     
-    Questo prerequisito non viene installato automaticamente quando si installa il client in modalità invisibile all'utente tramite il programma di installazione eseguibile, Windows Update o Windows Installer. Per questi scenari, è necessario installare questo prerequisito separatamente, se necessario, altrimenti l'installazione non riesce. È possibile scaricare Microsoft .NET Framework 4.6.2 (programma di installazione offline) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53344).
-
-- Microsoft .NET Framework 4.5.2
+    - Microsoft .NET Framework 4.5.2
     
     Se il visualizzatore Azure Information Protection viene installato separatamente, è necessario Microsoft .NET Framework 4.5.2 come versione minima. In caso contrario, il programma di installazione eseguibile non esegue il download o l'installazione.
 
@@ -51,7 +49,7 @@ Verificare quindi i prerequisiti aggiuntivi che potrebbero essere necessari per 
 
 - Assistente per l'accesso ai Microsoft Online Services 7.250.4303.0
     
-    I computer che eseguono Office 2010 richiedono l'Assistente per l'accesso ai Microsoft Online Services versione 7.250.4303.0. Questa versione è inclusa nell'installazione del client. Se si dispone di una versione più recente dell'assistente per l'accesso, disinstallarla prima di installare il client di Azure Information Protection Unified labeling. Ad esempio, per verificare la versione e disinstallare l'Assistente per l'accesso, usare **Pannello di controllo** > **Programmi e funzionalità** > **Disinstalla o modifica programma**.
+    I computer che eseguono Office 2010 richiedono l'Assistente per l'accesso ai Microsoft Online Services versione 7.250.4303.0. Questa versione è inclusa nell'installazione del client. Se si dispone di una versione più recente dell'assistente per l'accesso, disinstallarla prima di installare il client di Azure Information Protection Unified labeling. Controllare, ad esempio, la versione e disinstallare l'assistente per l'accesso tramite il **Pannello di controllo**  >  **programmi e funzionalità**  >  **Disinstalla o modifica programma**.
 
 - KB 4482887
     
@@ -110,7 +108,7 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
     
     Se è disponibile una versione di anteprima, mantenerla solo per i test. Le versioni di questo tipo non sono progettate per l'uso in un ambiente di produzione. 
 
-2. Per un'installazione predefinita, è sufficiente eseguire il file eseguibile, ad esempio **AzInfoProtection_UL. exe**. Al contrario, per visualizzare le opzioni di installazione, eseguire prima di tutto l'eseguibile con **/help**: `AzInfoProtection_UL.exe /help`
+2. Per un'installazione predefinita, è sufficiente eseguire il file eseguibile, ad esempio **AzInfoProtection_UL. exe**. Tuttavia, per visualizzare le opzioni di installazione, eseguire prima il file eseguibile con **/Help**:`AzInfoProtection_UL.exe /help`
 
     Esempio per installare automaticamente il client: `AzInfoProtection_UL.exe /quiet`
     
@@ -128,7 +126,7 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
 
     - Se nel computer viene eseguito Office 2010, riavviare il computer. 
         
-        Se il client non è stato installato con il parametro ServiceLocation, quando si apre per la prima volta una delle applicazioni di Office che usano il client unificato Azure Information Protection (ad esempio, Word), è necessario confermare le richieste di aggiornamento del registro di sistema per primo utilizzo. Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](client-deployment-notes.md#rms-service-discovery). 
+        Se il client non è stato installato con il parametro ServiceLocation, quando si apre per la prima volta una delle applicazioni di Office che usano il client unificato di Azure Information Protection (ad esempio, Word), è necessario confermare le richieste di aggiornamento del registro di sistema per il primo utilizzo. Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](client-deployment-notes.md#rms-service-discovery). 
     
     - Per le altre versioni di Office, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. 
         
@@ -164,7 +162,7 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
     Ad esempio: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
-3. In questo valore rimuovere **/_wmcs/licensing** dalla stringa. Ad esempio: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+3. In questo valore rimuovere **/_wmcs/licensing** dalla stringa. Per esempio:**https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
     La stringa rimanente è il valore da specificare per il parametro ServiceLocation.
 
@@ -179,7 +177,7 @@ Se l'installazione di questa versione più recente di Microsoft .NET Framework n
 
 Ad esempio: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
 
-Si consiglia di usare questo parametro con cautela e con la conoscenza della presenza di problemi segnalati con le applicazioni di Office sospese quando viene usato il client di Azure Information Protection Unified Labeling con questa versione precedente della Microsoft .NET Framework. Se si riscontrano problemi di blocco delle applicazioni, eseguire l'aggiornamento alla versione consigliata prima di provare altre soluzioni. 
+Si consiglia di usare questo parametro con cautela e con la conoscenza della presenza di problemi segnalati con le applicazioni di Office sospese quando viene usato il client per l'assegnazione di etichette unificata Azure Information Protection con questa versione precedente di Microsoft .NET Framework. Se si riscontrano problemi di blocco delle applicazioni, eseguire l'aggiornamento alla versione consigliata prima di provare altre soluzioni. 
 
 Tenere inoltre presente che se si utilizza Windows Update per tenere aggiornato il client di Azure Information Protection Unified Labeling, è necessario disporre di un altro meccanismo di distribuzione del software per aggiornare il client alle versioni successive.
 
@@ -197,16 +195,16 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     
     |Versione di Office|Sistema operativo|Software|Azione|
     |--------------------|--------------|----------------|---------------------|
-    |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installa|
-    |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installa|
-    |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installa|
-    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installa|
+    |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installazione|
+    |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installazione|
+    |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installazione|
+    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installazione|
     |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB2843630 o KB2919355|
-    |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installa|
+    |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installazione|
     
    
 
-3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/** , ad esempio, `AzInfoProtection_UL.msi /quiet`. Tuttavia, potrebbe essere necessario specificare parametri di installazione aggiuntivi che sono documentati nelle [istruzioni del programma di installazione eseguibile](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) con un'unica eccezione:
+3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection_UL.msi /quiet`. Tuttavia, potrebbe essere necessario specificare parametri di installazione aggiuntivi che sono documentati nelle [istruzioni del programma di installazione eseguibile](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) con un'unica eccezione:
     
     - Anziché **AllowTelemetry = 0** per disabilitare l'opzione di installazione **consente di migliorare Azure Information Protection inviando le statistiche di utilizzo a Microsoft**, specificare **ENABLETELEMETRY = 0**. 
 
