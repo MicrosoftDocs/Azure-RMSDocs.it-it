@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 51d5ea830335e86007a3caabbbf724d16c33f97b
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: 7361835c845e1d6ade369b0222c14425acbd8de6
+ms.sourcegitcommit: d746a5beaabb019599407d5a96380ec687858c79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825444"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84022949"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -111,7 +111,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Contrassegni visivi dinamici con variabili:| **Sì** | **Sì** | No |
 |Etichetta con Esplora file:| **Sì** | **Sì** | No |
 |Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| **Sì** | **Sì** | No|
-|Supporto di PPDF per l'applicazione di etichette:| **Sì** | No | No |
+|Supporto PDF per l'applicazione di etichette:| **Sì** | No | No |
 |Cmdlet per l'assegnazione di etichette di PowerShell:| **Sì** | **Sì** <sup>4</sup> | No |
 |Supporto offline per le azioni di protezione:| **Sì** | **Sì** <sup>5</sup> | **Sì** |
 |Gestione manuale dei file di criteri per i computer disconnessi:| **Sì** |**Sì**| No |
@@ -124,7 +124,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Supporto per il cambio di account:| No | No | **Sì** |
 |Supporto per Servizi Desktop remoto:| **Sì** | **Sì** | **Sì** |
 |Supporto per AD RMS:| **Sì** | No <sup>7</sup> | No |
-|Rimuovi contrassegno contenuto esterno nell'app| **Sì**| No| **Sì**|
+|Rimuovi contrassegno contenuto esterno nell'app| **Sì**| No| No|
 
 
 Note a piè di pagina:
