@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/19/2020
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef86511649f16740c4611766103b6985f350fdc9
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: f844fa7220a4d608e6757099992c967052367d00
+ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068369"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "84238761"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "80068369"
 
 Quando si installa il client di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio,
+I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -40,7 +40,7 @@ I cmdlet vengono installati con il modulo **AzureInformationProtection** di Powe
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
 
 > [!TIP]
-> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> **Criterio computer locale** > **configurazione computer** > **Modelli amministrativi** > **tutte le impostazioni** > **Abilita percorsi lunghi Win32** 
+> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> Criteri del computer **locale**  >  **Configurazione computer**  >  **Modelli amministrativi**  >  **Tutte le impostazioni**  >  **Abilita percorsi lunghi Win32** 
 > 
 > Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
 >
@@ -148,7 +148,7 @@ Eseguire il cmdlet Get-AipServiceConfiguration dal modulo Azure RMS Windows Powe
 
 1. Se questo modulo non è già installato nel computer, vedere [installazione del modulo PowerShell AIPService](../install-powershell.md).
 
-2. Avviare Windows PowerShell usando l'opzione **Esegui come amministratore**.
+2. Avviare Windows PowerShell con l'opzione **Esegui come amministratore** .
 
 3. Usare il cmdlet `Connect-AipService` per connettersi al servizio Azure Rights Management:
     
@@ -185,7 +185,7 @@ Creare una nuova entità servizio eseguendo il cmdlet `New-MsolServicePrincipal`
 
 1. Se il modulo MSOnline non è ancora installato nel computer in uso, eseguire `Install-Module MSOnline`.
 
-2. Avviare Windows PowerShell usando l'opzione **Esegui come amministratore**.
+2. Avviare Windows PowerShell con l'opzione **Esegui come amministratore** .
 
 3. Usare il cmdlet **Connect-MsolService** per connettersi ad Azure AD:
 
@@ -316,7 +316,7 @@ L'output potrebbe essere simile al seguente:
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio,
+Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio:
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -329,7 +329,7 @@ L'output potrebbe essere simile al seguente:
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. Ad esempio,
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. Ad esempio:
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -339,7 +339,7 @@ L'output potrebbe essere simile al seguente:
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per i cmdlet. Usare quindi il cmdlet Unprotect. Ad esempio,
+Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per i cmdlet. Usare quindi il cmdlet Unprotect. Ad esempio:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -432,7 +432,7 @@ L'output potrebbe essere simile al seguente:
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Per proteggere tutti i file in una cartella, usare il parametro -Folder con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio,
+Per proteggere tutti i file in una cartella, usare il parametro -Folder con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio:
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -445,7 +445,7 @@ L'output potrebbe essere simile al seguente:
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. Ad esempio, 
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. Ad esempio: 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -455,7 +455,7 @@ L'output potrebbe essere simile al seguente:
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di utilizzo di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. Ad esempio,
+Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di utilizzo di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. Ad esempio:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -476,7 +476,7 @@ Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di 
 
 La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome e la password dell'account utente creato per l'esecuzione senza intervento dell'utente. Questo account può quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione. 
 
-Per eseguire il primo accesso interattivo, l'account utente deve disporre del diritto di **accesso locale**. Questo diritto è standard per gli account utente, ma i criteri aziendali potrebbero non consentire questa configurazione per gli account del servizio. In questo caso è possibile eseguire Set-AIPAuthentication con il parametro *Token* per completare l'autenticazione senza che venga richiesto di eseguire l'accesso. È possibile eseguire questo comando come attività pianificata e concedere all'account il diritto di livello inferiore **Accesso come processo batch**. Per altre informazioni, vedere le sezioni seguenti: 
+Per eseguire il primo accesso interattivo, l'account utente deve disporre del diritto di **accesso locale**. Questo diritto è standard per gli account utente, ma i criteri aziendali potrebbero non consentire questa configurazione per gli account del servizio. In questo caso è possibile eseguire Set-AIPAuthentication con il parametro *Token* per completare l'autenticazione senza che venga richiesto di eseguire l'accesso. È possibile eseguire questo comando come attività pianificata e concedere all'account il diritto di livello inferiore **Accesso come processo batch**. Per altre informazioni, vedere le sezioni seguenti. 
 
 Quando il token scade, eseguire nuovamente il cmdlet per acquisire un nuovo token.
 
@@ -490,19 +490,19 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
 
-2. Per il tenant Azure AD usato con Azure Information Protection, passare a **Azure Active Directory** > **gestisci** > **registrazioni app**. 
+2. Per il tenant Azure ad usato con Azure Information Protection, passare a **Azure Active Directory**  >  **Gestisci**  >  **registrazioni app**. 
 
 3. Selezionare **+ nuova registrazione**per creare l'applicazione/API dell'app Web. Nel riquadro **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
 
-   - **Nome**: `AIPOnBehalfOf`
+   - **Nome**:`AIPOnBehalfOf`
         
         Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
     
     - **Tipi di account supportati**: **solo account in questa directory organizzativa**
     
-    - **URI di reindirizzamento (facoltativo)** : **Web** e `http://localhost`
+    - **URI di reindirizzamento (facoltativo)**: **Web** e`http://localhost`
 
-4. Nel riquadro **AIPOnBehalfOf** , copiare il valore per l' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro *webappid* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
+4. Nel riquadro **AIPOnBehalfOf** , copiare il valore per l' **ID applicazione (client)**. Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66` . Questo valore viene usato per il parametro *webappid* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
 5. Sempre nel riquadro **AIPOnBehalfOf** scegliere **autenticazione**dal menu **Gestisci** .
 
@@ -514,69 +514,65 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 9. Per **Aggiungi un segreto client**, specificare quanto segue e quindi selezionare **Aggiungi**:
     
-    - **Descrizione**: `Azure Information Protection client`
+    - **Descrizione**:`Azure Information Protection client`
     - **Scadenza**: specificare la scelta della durata (1 anno, 2 anni o nessuna scadenza)
 
-9. Tornare al riquadro **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
+9. Tornare al riquadro **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` . Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
     
     È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
 
 10. Sempre nel riquadro **AIPOnBehalfOf-certificates & Secrets** selezionare **expose an API**dal menu **Gestisci** .
 
-11. Nel riquadro **AIPOnBehalfOf-esporre un'API** selezionare **imposta** per l'opzione **URI ID applicazione** e nel valore **URI ID applicazione** , modificare **API** in **http**. Questa stringa ha un aspetto simile all'esempio seguente: `http://d244e75e-870b-4491-b70d-65534953099e`. 
+11. Nel riquadro **AIPOnBehalfOf-esporre un'API** selezionare **imposta** per l'opzione **URI ID applicazione** e nel valore **URI ID applicazione** , modificare **API** in **http**. Questa stringa ha un aspetto simile all'esempio seguente: `http://d244e75e-870b-4491-b70d-65534953099e` . 
     
     Selezionare **Salva**.
 
 12. Tornare al riquadro **AIPOnBehalfOf-esporre un'API** , selezionare **+ Aggiungi un ambito**.
 
 13. Nel riquadro **Aggiungi ambito** , specificare quanto segue, usando le stringhe suggerite come esempi, quindi selezionare **Aggiungi ambito**:
-    - **Nome ambito**: `user-impersonation`
-    - **Chi può acconsentire?** : **amministratori e utenti**
-    - **Nome visualizzato del consenso dell'amministratore**: `Access Azure Information Protection scanner`
-    - **Descrizione del consenso dell'amministratore**: `Allow the application to access the scanner for the signed-in user`
-    - **Nome visualizzato del consenso dell'utente**: `Access Azure Information Protection scanner`
-    - **Descrizione del consenso dell'utente**: `Allow the application to access the scanner for the signed-in user`
+    - **Nome ambito**:`user-impersonation`
+    - **Chi può acconsentire?**: **amministratori e utenti**
+    - **Nome visualizzato del consenso dell'amministratore**:`Access Azure Information Protection scanner`
+    - **Descrizione del consenso dell'amministratore**:`Allow the application to access the scanner for the signed-in user`
+    - **Nome visualizzato del consenso dell'utente**:`Access Azure Information Protection scanner`
+    - **Descrizione del consenso dell'utente**:`Allow the application to access the scanner for the signed-in user`
     - **Stato**: **abilitato** (impostazione predefinita)
 
 
 14. Tornare al riquadro **AIPOnBehalfOf-esporre un'API** , chiudere il riquadro.
 
-15. Selezionare **autorizzazioni API**.
+15. Selezionare **Autorizzazioni API**.
 
-16. Nel riquadro autorizzazioni dell' **API** | **AIPOnBehalfOf** selezionare **+ Aggiungi un'autorizzazione**.
+16. Nel riquadro **AIPOnBehalfOf**  |  **autorizzazioni API** AIPOnBehalfOf selezionare **+ Aggiungi un'autorizzazione**.
 
 17. Scegliere **gestione di Azure right**, selezionare **autorizzazioni delegate** e quindi selezionare **Crea e accedi a contenuto protetto per gli utenti**.
 
 18. Fare clic su **Aggiungi un'autorizzazione**.
 
-19. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** Selezionare Concedi il **consenso dell'amministratore per <your tenant name>** e selezionare **Sì** per la richiesta di conferma.
+19. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** , selezionare Concedi il **consenso dell'amministratore <your tenant name> per** e selezionare **Sì** per la richiesta di conferma.
 
 20. Nel riquadro **registrazioni app** selezionare **+ registrazione nuova applicazione** per creare ora l'applicazione nativa.
 
 21. Nel riquadro **registra un'applicazione** specificare le impostazioni seguenti e quindi selezionare **registra**:
-    - **Nome**: `AIPClient`
+    - **Nome**:`AIPClient`
     - **Tipi di account supportati**: **solo account in questa directory organizzativa**
-    - **URI di reindirizzamento (facoltativo)** : **client pubblico (Mobile & desktop)** e `http://localhost`
+    - **URI di reindirizzamento (facoltativo)**: **client pubblico (mobile & desktop)** e`http://localhost`
 
-22. Nel riquadro **AIPClient** , copiare il valore dell' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+22. Nel riquadro **AIPClient** , copiare il valore dell' **ID applicazione (client)**. Il valore è simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f` . 
     
     Questo valore viene usato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
 23. Sempre nel riquadro **AIPClient** scegliere **autenticazione**dal menu **Gestisci** .
 
-24. Nel riquadro **AIPClient-Authentication** specificare gli elementi seguenti e quindi selezionare Save ( **Salva**):
-    - Nella sezione **Impostazioni avanzate** selezionare **token ID**.
-    - Nella sezione **tipo di client predefinito** selezionare **Sì**.
+24. Nel riquadro **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu **Gestisci** .
 
-25. Sempre nel riquadro **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu **Gestisci** .
+25. Nel riquadro **AIPClient-autorizzazioni** selezionare **+ Aggiungi un'autorizzazione**.
 
-26. Nel riquadro **AIPClient-autorizzazioni** selezionare **+ Aggiungi un'autorizzazione**.
+26. Nel riquadro **autorizzazioni API richiesta** selezionare **API personali**.
 
-27. Nel riquadro **autorizzazioni API richiesta** selezionare **API personali**.
+27. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente**come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
 
-28. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente**come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
-
-29. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** , selezionare **concedi il consenso dell'amministratore per \<*il nome del tenant*>** e selezionare **Sì** per la richiesta di conferma.
+28. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** , selezionare Concedi il **consenso dell'amministratore \<*your tenant name*> per** e selezionare **Sì** per la richiesta di conferma.
 
 A questo punto è stata completata la configurazione delle due app e sono disponibili i valori necessari per eseguire [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *webappid*, *WebAppKey* e *NativeAppId*. Dagli esempi seguenti:
 
@@ -590,7 +586,7 @@ La prima volta che si esegue questo comando viene richiesto di eseguire l'access
 
 Per non eseguire l'accesso interattivo iniziale per un account che assegna etichette e protegge i file, seguire i passaggi e le istruzioni seguenti. In genere, questi passaggi aggiuntivi sono necessari solo se a questo account non è possibile concedere il diritto di **accesso locale**, ma è stato concesso il diritto **Accesso come processo batch**. Ad esempio, ciò potrebbe verificarsi con l'account del servizio personale che esegue lo scanner di Azure Information Protection.
 
-Procedura generale:
+Procedure generali:
 
 1. Creare uno script di PowerShell nel computer locale.
 
@@ -612,7 +608,7 @@ Procedura generale:
 
 3. Seguendo le istruzioni nella sezione precedente modificare questo comando specificando i valori personalizzati per i parametri **WebAppId**, **WebAppkey** e **NativeAppId**. In questo momento non è disponibile il valore per il parametro **Token** che si specificherà in seguito. 
 
-    Ad esempio: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    ad esempio `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
 
 #### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Passaggio 2: Eseguire Set-AIPAuthentication per ottenere un token di accesso e copiarlo negli Appunti
 
@@ -622,7 +618,7 @@ Procedura generale:
 
         (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
 
-    Ad esempio: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    ad esempio `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
 #### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Passaggio 3: Modificare lo script di PowerShell in modo da fornire il token
 
@@ -630,7 +626,7 @@ Procedura generale:
 
 2. Firmare lo script. Se non si firma lo script (condizione più sicura), è necessario configurare Windows PowerShell nel computer che eseguirà i comandi di assegnazione di etichette. Eseguire, ad esempio, la sessione di Windows PowerShell con l'opzione **Esegui come amministratore** e digitare: `Set-ExecutionPolicy RemoteSigned`. Questa configurazione, tuttavia, consente l'esecuzione di tutti gli script non firmati quando sono archiviati in questo computer (condizione meno sicura).
 
-    Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) nella raccolta di documentazione di PowerShell.
+    Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) nella raccolta documenti di PowerShell.
 
 3. Copiare questo script di PowerShell nel computer che assegnerà le etichette e proteggerà i file ed eliminerà l'originale nel computer in uso. Ad esempio, copiare lo script di PowerShell in C:\Scripts\Aipauthentication.ps1 in un computer Windows Server.
 
@@ -640,9 +636,9 @@ Procedura generale:
 
 2. Nel computer che assegnerà le etichette e proteggerà i file aprire l'Utilità di pianificazione e creare una nuova attività. Configurare questa attività per l'esecuzione come account del servizio per l'assegnazione di etichette e la protezione di file, quindi configurare i valori seguenti per **Azioni**:
 
-   - **Azione**: `Start a program`
-   - **Programma/script**: `Powershell.exe`
-   - **Aggiungere argomenti (facoltativo)** : `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **Azione**:`Start a program`
+   - **Programma/script**:`Powershell.exe`
+   - **Aggiungere argomenti (facoltativo)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      Per la riga dell'argomento specificare il percorso e il nome file, se sono diversi da quelli indicati nell'esempio.
 
@@ -657,7 +653,7 @@ Procedura generale:
     Facoltativamente, eliminare l'attività. Se il token scade, è necessario ripetere questa procedura; in questo caso, potrebbe essere più opportuno uscire dall'attività configurata in modo che sia pronta per una nuova esecuzione quando si copia il nuovo script di PowerShell con il nuovo valore del token.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio, 
+Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 
 
     Get-Help Get-RMSTemplate -online
 

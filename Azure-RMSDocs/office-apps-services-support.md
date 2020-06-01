@@ -4,7 +4,7 @@ description: Informazioni su come le applicazioni di Office, come Word e Outlook
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/04/2019
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 113a69605c1971047c7afef6a5f153ef5026d251
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 3dcb4d386e5a7c6fca1506f04b478f93da251f5a
+ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747191"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "84238727"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
@@ -81,10 +81,10 @@ Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM di
 > 
 > - La creazione condivisa, ovvero la modifica di un documento da parte di più utenti contemporaneamente, non è supportata. Per modificare un documento in una libreria protetta tramite IRM, è innanzitutto necessario estrarre il documento, scaricarlo e quindi modificarlo nell'applicazione Office. Di conseguenza, solo un utente alla volta può modificare il documento.
 
-Per le librerie che non sono protette con IRM, se si protegge un file che viene quindi caricato in SharePoint o OneDrive, le operazioni seguenti non funzionano con questo file: creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima, eDiscovery e prevenzione della perdita dei dati (DLP).
+Per le librerie che non sono protette con IRM, se si applica la protezione solo a un file che viene quindi caricato in SharePoint o OneDrive, le operazioni seguenti non funzionano con questo file: creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima, eDiscovery e prevenzione della perdita dei dati (DLP).
 
-> [!TIP]
-> Anziché usare IRM per SharePoint, provare a usare le etichette di riservatezza che applicano la crittografia e quindi [abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive (anteprima pubblica)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> [!IMPORTANT]
+> È possibile utilizzare IRM per SharePoint in combinazione con etichette di riservatezza che applicano la protezione. Quando si utilizzano entrambe le funzionalità insieme, il comportamento cambia per i file protetti. Per altre informazioni, vedere [abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Quando si usa la protezione IRM per SharePoint il servizio Azure Rights Management applica restrizioni d'uso e crittografia dei dati ai documenti quando questi vengono scaricati da SharePoint, e non quando il documento viene creato per la prima volta in SharePoint o caricato nella raccolta. Per informazioni sul modo in cui i documenti vengono protetti prima del download, vedere la pagina relativa alla [crittografia dei dati in OneDrive e SharePoint](https://technet.microsoft.com/library/dn905447.aspx) dalla documentazione di SharePoint.
 
