@@ -4,7 +4,7 @@ description: Identificare i prerequisiti necessari per distribuire Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/21/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 240dc9112d49ff2a3ad3c4e6f886062ca6529d97
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746261"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249845"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti di Azure Information Protection
 
@@ -128,7 +128,7 @@ I client Azure Information Protection possono etichettare e proteggere documenti
 
 - **App di Office versione minima 1805**, Build 9330,2078 da Office 365 Business o Microsoft 365 business. 
 
-Questa edizione è supportata solo quando all'utente viene assegnata una licenza per Azure Rights Management, nota anche come Azure Information Protection per Office 365.
+    Questa edizione è supportata solo quando all'utente viene assegnata una licenza per Azure Rights Management, nota anche come Azure Information Protection per Office 365.
 
 - **Office 365 ProPlus**
 
@@ -156,14 +156,15 @@ Per informazioni dettagliate, vedere [applicazioni che supportano la protezione 
 
 Se si dispone di un firewall o di dispositivi di rete simili che sono configurati per consentire connessioni specifiche, i requisiti di connettività di rete sono elencati in questo articolo di Office: [URL e intervalli di indirizzi IP di office 365 > Microsoft 365 comuni e Office Online](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
-Azure Information Protection presenta i requisiti di aggiunta seguenti:
+Azure Information Protection prevede i requisiti aggiuntivi seguenti:
 
 - **Client di etichetta unificata**. Per scaricare etichette ed etichettare i criteri, consentire l'URL seguente tramite HTTPS: ***. Protection.Outlook.com**
 
 - **Proxy Web**. Se si usa un proxy Web che richiede l'autenticazione, è necessario configurare il proxy per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso Active Directory dell'utente.
 
+    
 - **Connessioni da client a servizio TLS**. Non terminare le connessioni da client a servizio TLS, ad esempio per eseguire l'ispezione a livello di pacchetto, all'URL **AADRM.com** . Se si terminano le connessione, viene interrotta l'associazione dei certificati usati dai client RMS con le autorità di certificazione gestite da Microsoft per contribuire a proteggere le comunicazioni con il servizio Azure Rights Management.
-
+     
     Per determinare se la connessione client viene terminata prima che raggiunga il servizio Rights Management di Azure, usare i comandi di PowerShell seguenti:
     
         $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
@@ -174,6 +175,8 @@ Azure Information Protection presenta i requisiti di aggiunta seguenti:
     
     Se viene visualizzato un nome della CA emittente che non è di Microsoft, è molto probabile che la connessione protetta da client a servizio venga terminata e richieda la riconfigurazione nel firewall.
 
+- **TLS versione 1,2 o successiva** (solo client di etichetta unificata). Il client di etichettatura unificata richiede una versione di TLS 1,2 o successiva per garantire l'uso di protocolli crittograficamente sicuri e allinearsi alle linee guida per la sicurezza di Microsoft.
+    
 ### <a name="on-premises-servers"></a>Server locali
 
 I server locali seguenti sono supportati con il servizio Rights Management di Azure da Azure Information Protection:

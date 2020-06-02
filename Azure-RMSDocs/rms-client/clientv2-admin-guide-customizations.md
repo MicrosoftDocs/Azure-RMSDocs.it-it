@@ -1,10 +1,10 @@
 ---
 title: Configurazioni personalizzate-Azure Information Protection client per l'assegnazione di etichette unificata
 description: Informazioni sulla personalizzazione del client di Azure Information Protection Unified Labeling per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/25/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fdfbd6bded95a8fc2c156a34fb17f5241b65cf70
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: c1e662644bd84fd1ec6ba40d838ace505693fd68
+ms.sourcegitcommit: a4e367f8a51074a4cbde14943ca4d24918138ef6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825459"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256594"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -120,7 +120,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
-|AdditionalPPrefixExtensions|[Supporto per la modifica di \< EXT>. Da PFILE a P \< EXT> tramite questa proprietà avanzata](#additionalpprefixextensions)
+|AdditionalPPrefixExtensions|[Supporto per la modifica \<EXT> . PFILE a P \<EXT> utilizzando questa proprietà avanzata](#additionalpprefixextensions)
 |AttachmentAction|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling)
@@ -149,6 +149,8 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 |RunAuditInformationTypesDiscovery|[Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
+|ScannerFSAttributesToSkip | [Ignora o ignora i file durante le analisi a seconda degli attributi di file](#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)
+|UseCopyAndPreserveNTFSOwner | [Mantieni proprietari NTFS durante l'assegnazione di etichette](#preserve-ntfs-owners-during-labeling-public-preview)
 
 Esempio di comando di PowerShell per verificare le impostazioni dei criteri di etichetta attive per un criterio etichetta denominato "globale":
 
@@ -225,7 +227,7 @@ Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced
 
 Quando si configura questa impostazione, il cmdlet di [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **set-AIPFileLabel** è abilitato per consentire la rimozione della protezione da file PST, rar, 7zip e msg.
 
-- Chiave: **set-LabelPolicy**
+- Chiave: **EnableContainerSupport**
 
 - Valore: **true**
 
@@ -243,7 +245,7 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 - Chiave: **OutlookDefaultLabel**
 
-- Valore: \< **etichetta GUID**> o **None**
+- Valore: \<**label GUID**> o **None**
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
@@ -261,14 +263,14 @@ Per impostazione predefinita, il client Azure Information Protection Unified Lab
 
 - Chiave: **PFileSupportedExtensions**
 
-- Valore: ** \< valore stringa>** 
+- Valore**\<string value>** 
 
 Usare la tabella seguente per identificare il valore stringa da specificare:
 
 | Valore stringa| Client| Scanner|
 |-------------|-------|--------|
 |\*|Valore predefinito: applicare la protezione a tutti i tipi di file|Applicare la protezione a tutti i tipi di file|
-|\<valore null>| Applicare la protezione ai tipi di file di Office e ai file PDF| Valore predefinito: applicare la protezione ai tipi di file di Office e ai file PDF|
+|\<null value>| Applicare la protezione ai tipi di file di Office e ai file PDF| Valore predefinito: applicare la protezione ai tipi di file di Office e ai file PDF|
 |ConvertTo-JSON (". jpg", ". png")|Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate | Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate
 
 Esempio 1: comando di PowerShell per il client unificato per proteggere solo i tipi di file di Office e i file PDF, in cui il criterio dell'etichetta è denominato "client":
@@ -287,19 +289,19 @@ Con questa impostazione è possibile modificare i tipi di file protetti, ma non 
 
 ### <a name="additionalpprefixextensions"></a>AdditionalPPrefixExtensions
 
-Il client di etichettatura unificata supporta la modifica di \< EXT>. PFILE a P \< EXT> usando la proprietà Advanced, **AdditionalPPrefixExtensions**. Questa proprietà avanzata è supportata in fare clic con il pulsante destro del mouse, PowerShell e scanner. Tutte le app hanno un comportamento simile.   
+Il client di etichettatura unificata supporta la modifica \<EXT> . PFILE a P \<EXT> utilizzando la proprietà Advanced, **AdditionalPPrefixExtensions**. Questa proprietà avanzata è supportata in fare clic con il pulsante destro del mouse, PowerShell e scanner. Tutte le app hanno un comportamento simile.   
 
 - Chiave: **AdditionalPPrefixExtensions**
 
-- Valore: ** \< valore stringa>** 
+- Valore**\<string value>** 
 
 Usare la tabella seguente per identificare il valore stringa da specificare:
 
 | Valore stringa| Client e scanner|
 |-------------|---------------|
-|\*|Tutte le estensioni PFile diventano P \< EXT>|
-|\<valore null>| Il valore predefinito si comporta come il valore di protezione predefinito.|
-|ConvertTo-JSON (". dwg", ". zip")|Oltre all'elenco precedente, ". dwg" e ". zip" diventano P \< EXT>| 
+|\*|Tutte le estensioni PFile diventano P\<EXT>|
+|\<null value>| Il valore predefinito si comporta come il valore di protezione predefinito.|
+|ConvertTo-JSON (". dwg", ". zip")|Oltre all'elenco precedente, ". dwg" e ". zip" diventano P\<EXT>| 
 
 Esempio 1: comando di PowerShell per comportarsi come il comportamento predefinito in cui Protect ". dwg" diventa ". dwg. Pfile":
 
@@ -313,7 +315,7 @@ Esempio 3: comando di PowerShell per impostare ". dwg" su ". pdwg" quando si usa
 
     Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 
-Con questa impostazione, le estensioni seguenti (". txt", ". xml", ". bmp", ". JT", ". jpg", ". jpeg", ". jpe", ". jif", ". JFIF", ". JFI", ". png", ". TIF", ". TIFF", ". gif") diventano sempre P \< EXT>. Un'esclusione rilevante è che "ptxt" non diventa "txt. Pfile". 
+Con questa impostazione, le estensioni seguenti (". txt", ". xml", ". bmp", ". JT", ". jpg", ". jpeg", ". jpe", ". jif", ". JFIF", ". JFI", ". png", ". TIF", ". TIFF", ". gif") diventano sempre P \<EXT> . Un'esclusione rilevante è che "ptxt" non diventa "txt. Pfile". 
 **AdditionalPPrefixExtensions** funziona solo se è abilitata la protezione di Pfile con la proprietà avanzata- [**PFileSupportedExtension**](#pfilesupportedextension) . 
 
 Ad esempio, nel caso in cui venga utilizzato il seguente comando:
@@ -342,8 +344,155 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
-> [!NOTE]
-> Questa configurazione presenta attualmente un limite noto e verrà rilasciata in una versione futura. 
+Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
+
+Esistono due metodi che possono essere usati per rimuovere le classificazioni da altre soluzioni di assegnazione di etichette. Il primo metodo rimuove qualsiasi forma da documenti di Word in cui il nome della forma corrisponde al nome definito nella proprietà avanzata **WordShapeNameToRemove**, il secondo metodo consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti di Word, Excel e PowerPoint come definito nella proprietà avanzata **RemoveExternalContentMarkingInApp** . 
+
+### <a name="use-the-wordshapenametoremove-advanced-property"></a>Usare la proprietà avanzata WordShapeNameToRemove
+
+*La proprietà avanzata **WordShapeNameToRemove** è supportata dalla versione 2.6.101.0 e successive*
+
+Questa impostazione consente di rimuovere o sostituire etichette basate su forme da documenti di Word quando tali contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione di etichette. Ad esempio, la forma contiene il nome di un'etichetta precedente a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e la relativa forma.
+
+Per usare questa proprietà avanzata, è necessario trovare il nome della forma nel documento di Word e quindi definirli nell'elenco delle proprietà avanzate **WordShapeNameToRemove** di forme. Il servizio rimuoverà qualsiasi forma in Word che inizia con un nome definito nell'elenco di forme in questa proprietà avanzata.
+
+Evitare di rimuovere le forme che contengono il testo che si desidera ignorare, definendo il nome di tutte le forme da rimuovere ed evitando di controllare il testo in tutte le forme, ovvero un processo che richiede un utilizzo intensivo delle risorse.
+
+Se non si specificano le forme parola in questa impostazione aggiuntiva di proprietà avanzata e Word viene incluso nel valore della chiave **RemoveExternalContentMarkingInApp** , verranno controllate tutte le forme per il testo specificato nel valore **ExternalContentMarkingToRemove** . 
+
+Per trovare il nome della forma che si sta utilizzando e si desidera escludere:
+
+1. In Word visualizzare il riquadro di **selezione** : **scheda Home** > gruppo di **modifica** > **selezionare** l'opzione > riquadro di **selezione**.
+
+2. Selezionare la forma nella pagina che si desidera contrassegnare per la rimozione. Il nome della forma contrassegnata è ora evidenziato nel riquadro di **selezione** .
+
+Usare il nome della forma per specificare un valore stringa per la chiave * * * * WordShapeNameToRemove * * * *. 
+
+Esempio: il nome della forma è **DC**. Per rimuovere la forma con questo nome, specificare il valore: `dc`.
+
+- Chiave: **WordShapeNameToRemove**
+
+- Valore: \<**Word shape name**> 
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+Quando si dispone di più di una forma di parola da rimuovere, specificare tutti i valori disponibili per la rimozione delle forme.
+
+
+### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Usare la proprietà avanzata RemoveExternalContentMarkingInApp
+Questa impostazione consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti quando tali contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione di etichette. Il piè di pagina precedente, ad esempio, contiene il nome di una vecchia etichetta a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e il relativo piè di pagina.
+
+Quando il client di etichettatura unificata ottiene questa configurazione nel criterio, le intestazioni e i piè di pagina precedenti vengono rimossi o sostituiti quando il documento viene aperto nell'app di Office ed è applicata qualsiasi etichetta di riservatezza al documento.
+
+Questa configurazione non è supportata per Outlook e tenere presente che quando viene usata con Word, Excel e PowerPoint, può influire negativamente sulle prestazioni di queste app per gli utenti. La configurazione consente di definire le impostazioni per ogni applicazione, ad esempio la ricerca di testo nelle intestazioni e nei piè di pagina di documenti di Word, ma non nei fogli di calcolo di Excel o nelle presentazioni di PowerPoint.
+
+Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, E**X**cel, **P**owerPoint) solo a quelli che devono essere cercati.
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
+- Chiave: **RemoveExternalContentMarkingInApp**
+
+- Valore: \<**Office application types WXP**> 
+
+Esempi:
+
+- Per eseguire la ricerca solo in documenti di Word, specificare **W**.
+
+- Per eseguire la ricerca in documenti di Word e presentazioni di PowerPoint, specificare **WP**.
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+
+Sarà necessaria almeno un'altra impostazione client avanzata, **ExternalContentMarkingToRemove**, per specificare il contenuto dell'intestazione o del piè di pagina e il modo in cui rimuoverlo o sostituirlo.
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Come configurare ExternalContentMarkingToRemove
+
+Quando si specifica il valore stringa per la chiave **ExternalContentMarkingToRemove**, sono disponibili tre opzioni che usano le espressioni regolari:
+
+- Corrispondenza parziale per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
+
+    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere completamente le intestazioni o i piè di pagina, specificare il valore: `*TEXT*`.
+
+- Corrispondenza completa per rimuovere solo determinate parole nell'intestazione o nel piè di pagina.
+
+    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere solo la parola **TEXT**, lasciando la stringa **TO REMOVE** nell'intestazione o nel piè di pagina, specificare il valore: `TEXT `.
+
+- Corrispondenza completa per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
+
+    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere le intestazioni o i piè di pagina che contengono esattamente questa stringa, specificare il valore: `^TEXT TO REMOVE$`.
+
+
+I criteri di ricerca per la stringa specificata non fanno distinzione tra maiuscole e minuscole. La lunghezza massima della stringa è di 255 caratteri e non può contenere spazi vuoti. 
+
+Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi diversi di spazi o tabulazioni, la stringa specificata per una frase potrebbe non essere rilevata. Quando possibile, specificare una singola parola distintiva per il valore e assicurarsi di testare i risultati prima della distribuzione nell'ambiente di produzione.
+
+Per gli stessi criteri di etichetta specificare le stringhe seguenti:
+
+- Chiave: **ExternalContentMarkingToRemove**
+
+- Valore: \<**string to match, defined as regular expression**> 
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+
+#### <a name="multiline-headers-or-footers"></a>Intestazioni o piè di pagina su più righe
+
+Se il testo di un'intestazione o un piè di pagina è su più righe, creare una chiave e un valore per ogni riga. Si supponga, ad esempio, di avere il piè di pagina seguente con due righe:
+
+**The file is classified as Confidential**
+
+**Label applied manually**
+
+Per rimuovere il piè di pagina su più righe, creare le due voci seguenti per gli stessi criteri di etichetta:
+
+- Chiave: **ExternalContentMarkingToRemove**
+
+- Valore chiave 1: ** \* riservato***
+
+- Valore chiave 2: ** \* etichetta applicata*** 
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+
+
+#### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
+
+I piè di pagina in PowerPoint vengono implementati come forme. Per evitare la rimozione di forme che contengono il testo specificato ma non sono intestazioni o piè di pagina, usare un'impostazione client avanzata aggiuntiva denominata **PowerPointShapeNameToRemove**. È consigliabile usare questa impostazione anche per evitare di controllare il testo in tutte le forme, essendo un processo a elevato utilizzo di risorse.
+
+Se non si specifica questa impostazione client avanzata aggiuntiva e PowerPoint è incluso nel valore della chiave **RemoveExternalContentMarkingInApp**, il testo specificato nel valore **ExternalContentMarkingToRemove** verrà ricercato in tutte le forme. 
+
+Per trovare il nome della forma usata come intestazione o piè di pagina:
+
+1. In PowerPoint visualizzare il riquadro **Selezione**: scheda **Formato** > gruppo **Disponi** > **Riquadro di selezione**.
+
+2. Selezionare la forma sulla diapositiva contenente l'intestazione o il piè di pagina. Il nome della forma selezionata viene evidenziato nel riquadro **Selezione**.
+
+Usare il nome della forma per specificare un valore stringa per la chiave **PowerPointShapeNameToRemove**. 
+
+Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
+
+- Chiave: **PowerPointShapeNameToRemove**
+
+- Valore: \<**PowerPoint shape name**> 
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+
+Quando si dispone di più di una forma di PowerPoint da rimuovere, specificare tutti i valori disponibili per le forme da rimuovere.
+
+Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina viene cercato solo negli schemi diapositiva. Per estendere la ricerca a tutte le diapositive, che è un processo con un utilizzo maggiore di risorse, usare un'impostazione client avanzata aggiuntiva denominata **RemoveExternalContentMarkingInAllSlides**:
+
+- Chiave: **RemoveExternalContentMarkingInAllSlides**
+
+- Valore: **true**
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Disabilitare le autorizzazioni personalizzate in Esplora file
 
@@ -403,7 +552,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Chiave 2: **AttachmentActionTip**
 
-- Valore chiave 2: " \< Descrizione comando personalizzata">
+- Valore chiave 2: " \<customized tooltip> "
 
 La descrizione comando personalizzata supporta solo un solo linguaggio.
 
@@ -421,7 +570,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Chiave: **ReportAnIssueLink**
 
-- Valore: ** \< stringa http>**
+- Valore**\<HTTP string>**
 
 Valore di esempio per un sito Web: `https://support.contoso.com`
 
@@ -467,19 +616,19 @@ Valore di esempio per più GUID etichetta come stringa delimitata da virgole:`dc
     
     - Chiave: **OutlookWarnUntrustedCollaborationLabel**
     
-    - Valore: \< **GUID etichetta, delimitati da virgole**>
+    - Valore: \<**label GUIDs, comma-separated**>
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Valore: \< **GUID etichetta, delimitati da virgole**>
+    - Valore: \<**label GUIDs, comma-separated**>
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockUntrustedCollaborationLabel**
     
-    - Valore: \< **GUID etichetta, delimitati da virgole**>
+    - Valore: \<**label GUIDs, comma-separated**>
 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
@@ -504,19 +653,19 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Chiave: **OutlookWarnTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore**\<**domain names, comma separated**>**
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore**\<**domain names, comma separated**>**
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore**\<**domain names, comma separated**>**
 
 Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
@@ -573,7 +722,7 @@ Per gli stessi criteri di etichetta, immettere le stringhe seguenti:
 
 - Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore: **\<** estensioni di file per la visualizzazione dei messaggi, delimitati da virgole**>**
+- Valore**\<**file name extensions to display messages, comma separated**>**
 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
@@ -709,7 +858,7 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 - Chiave: **ScannerConcurrencyLevel**
 
-- Valore: ** \< numero di thread simultanei>**
+- Valore**\<number of concurrent threads>**
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "scanner":
 
@@ -925,7 +1074,7 @@ Quando si aggiunge un'etichetta secondaria a un'etichetta, gli utenti non posson
 
 - Chiave: **DefaultSubLabelId**
 
-- Valore: \< GUID dell'etichetta secondaria>
+- Valore: \<sublabel GUID>
 
 Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confidential" e l'etichetta secondaria "All Employees" ha un GUID di 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
@@ -961,13 +1110,13 @@ Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-
 
 Usare questa impostazione avanzata per impostare un colore per un'etichetta. Per specificare il colore, immettere un codice di tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, #40e0d0 è il valore esadecimale RGB per il turchese.
 
-Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina [ \< colore>](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) pagina della documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 Per configurare l'impostazione avanzata per il colore di un'etichetta, immettere le stringhe seguenti per l'etichetta selezionata:
 
 - Chiave: **colore**
 
-- Valore: \< valore esadecimale RGB>
+- Valore: \<RGB hex value>
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 
@@ -1054,6 +1203,56 @@ Impostare il livello di registrazione su uno dei valori seguenti:
 - **Trace**: registrazione dettagliata (impostazione predefinita per i client).
 
 Questa impostazione del registro di sistema non modifica le informazioni inviate a Azure Information Protection per la [creazione di report centrali](../reports-aip.md).
+
+## <a name="skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview"></a>Ignora o ignora i file durante le analisi a seconda degli attributi di file (anteprima pubblica)
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
+
+Per impostazione predefinita, il Azure Information Protection scanner Unified Labeling analizza tutti i file rilevanti. Tuttavia, è possibile definire file specifici da ignorare, ad esempio per i file archiviati o i file che sono stati spostati. 
+
+Consentire allo scanner di ignorare file specifici in base ai rispettivi attributi di file usando l'impostazione avanzata **ScannerFSAttributesToSkip** . Nel valore impostazione, elencare gli attributi di file che consentiranno di ignorare il file quando sono tutti impostati su **true**. Questo elenco di attributi di file usa la logica e.
+
+I comandi di PowerShell di esempio seguenti illustrano come usare questa impostazione avanzata con un'etichetta denominata "Global".
+
+**Ignorare i file di sola lettura e archiviati**
+
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+
+**Ignorare i file di sola lettura o archiviati**
+
+Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+
+> [!TIP]
+> Si consiglia di provare ad abilitare lo scanner per ignorare i file con gli attributi seguenti:
+> * FILE_ATTRIBUTE_SYSTEM
+> * FILE_ATTRIBUTE_HIDDEN
+> * FILE_ATTRIBUTE_DEVICE
+> * FILE_ATTRIBUTE_OFFLINE
+> * FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
+> * FILE_ATTRIBUTE_RECALL_ON_OPEN
+> * FILE_ATTRIBUTE_TEMPORARY
+
+Per un elenco di tutti gli attributi di file che possono essere definiti nell'impostazione avanzata **ScannerFSAttributesToSkip** , vedere [costanti degli attributi dei file Win32](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants) .
+
+## <a name="preserve-ntfs-owners-during-labeling-public-preview"></a>Mantieni i proprietari NTFS durante l'assegnazione di etichette (anteprima pubblica)
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
+
+Per impostazione predefinita, lo scanner, PowerShell e l'etichetta di estensione di Esplora file non conservano il proprietario NTFS definito prima dell'assegnazione di etichette. 
+
+Per assicurarsi che il valore del proprietario NTFS venga mantenuto, impostare l'impostazione avanzata **UseCopyAndPreserveNTFSOwner** su **true** per i criteri etichetta selezionati.
+
+> [!CAUTION]
+> Definire questa impostazione avanzata solo quando è possibile garantire una connessione di rete affidabile e a bassa latenza tra lo scanner e il repository sottoposto a scansione. Un errore di rete durante il processo di assegnazione automatica di etichette può causare la perdita del file.
+
+Comando di PowerShell di esempio, quando il criterio dell'etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 Ora che è stato personalizzato il client di etichettatura Azure Information Protection Unified, vedere le risorse seguenti per altre informazioni che potrebbero essere necessarie per supportare questo client:

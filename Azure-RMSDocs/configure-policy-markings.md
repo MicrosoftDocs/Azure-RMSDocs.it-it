@@ -1,32 +1,31 @@
 ---
 title: Configurare i contrassegni visivi per un'etichetta di Azure Information Protection - AIP
 description: Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 64f1d03931e346d7f27ce35a3837c336a4468e7a
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: a0a0f5e712c0313b281fc2bafa64719ed61d2e03
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746836"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249862"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-
->[!NOTE] 
+>[!NOTE]
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana. 
+Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana.
 
 Altre informazioni su questi contrassegni visivi:
 
@@ -35,15 +34,15 @@ Altre informazioni su questi contrassegni visivi:
 - Le filigrane si applicano a Word, Excel e PowerPoint:
 
     - Excel: le filigrane sono visibili solo nelle modalità Layout di pagina e Anteprima di stampa, oltre che sulla stampa.
-    
+
     - PowerPoint: le filigrane vengono applicate alla diapositiva master, come immagine di sfondo. Nella scheda **Visualizza**, **Schema diapositiva**, assicurarsi che la casella di controllo **Nascondi grafica di sfondo** non sia selezionata.
 
 - Sono supportate più righe per le filigrane e per le intestazioni e i piè di pagina in Word, Excel e PowerPoint. Se si specificano più righe per l'intestazione o il piè di pagina di un'etichetta applicata in Outlook, le righe vengono concatenate. In questo scenario, è consigliabile usare la configurazione per [impostare contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Lunghezze massime delle stringhe:
-    
+
     - La lunghezza massima della stringa che è possibile immettere per le intestazioni e i piè di pagina è 1024 caratteri. Excel ha tuttavia un limite totale di 255 caratteri per le intestazioni e i piè di pagina. Questo limite include I caratteri che non sono visibili in Excel, ad esempio I codici di formattazione. Se viene raggiunto questo limite, la stringa immessa non viene visualizzata in Excel.
-    
+
     - La lunghezza massima della stringa delle filigrane che è possibile immettere è di 255 caratteri.
 
 - È possibile specificare una stringa di testo o usare [variabili](#using-variables-in-the-text-string) per creare dinamicamente la stringa di testo quando viene applicata l'intestazione, il piè di pagina o la filigrana.
@@ -61,7 +60,7 @@ Per i documenti, i contrassegni visivi vengono applicati come segue:
 - In un'app di Office, i contrassegni visivi da un'etichetta vengono applicati insieme a quest'ultima. Vengono inoltre applicati quando un documento con etichetta viene aperto e quindi salvato per la prima volta.  
 
 - Quando a un documento viene applicata un'etichetta usando Esplora file, PowerShell o lo scanner di Azure Information Protection, i contrassegni visivi non vengono applicati subito, ma vengono applicati dal client di Azure Information Protection quando tale documento viene aperto in un'app di Office e salvato per la prima volta.
-    
+
     L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in Microsoft SharePoint, OneDrive for Work o School oppure OneDrive per Home: quando il salvataggio automatico è on, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
@@ -99,18 +98,16 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica, in base al nome utente connesso a Windows. Ad esempio: rsimone 
 
-- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). Ad esempio: rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). ad esempio rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
 > [!NOTE]
->Questa sintassi distingue tra maiuscole e minuscole.
+>Questa sintassi distingue tra maiuscole e minuscole. Se ad esempio si specifica la stringa `Document: ${Item.Name}  Classification: ${Item.Label}` per il piè di pagina dell'etichetta **generale** , il testo del piè di pagina applicato a un documento denominato Project. docx sarà **documento: Project. docx classificazione: generale**.
 
-Esempio: se si specifica la stringa `Document: ${Item.Name}  Classification: ${Item.Label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
-
-> [!NOTE]
-> L'uso della `${User.Name}` variabile e/o `${User.PrincipalName}` non è al momento supportato dal client di Azure Information Protection Unified labeling. 
-
+<!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
+> Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
+-->
 >[!TIP]
 > È anche possibile usare un [codice campo per inserire il nome dell'etichetta](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o in un modello.
 
@@ -158,7 +155,7 @@ Se il tipo di carattere specificato non è disponibile, il client torna a usare 
 
 È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#40e0d0** è il valore esadecimale RGB per il turchese. 
 
-Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina [ \< colore>](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) pagina della documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

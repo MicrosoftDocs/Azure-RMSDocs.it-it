@@ -1,10 +1,10 @@
 ---
 title: Il client per Azure Information Protection-AIP
 description: Microsoft Azure Information Protection offre una soluzione client-server che consente di proteggere i dati di un'organizzazione. Il client (di Azure Information Protection o di Rights Management) si integra con le applicazioni che vengono eseguite su computer e dispositivi mobili.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 7361835c845e1d6ade369b0222c14425acbd8de6
-ms.sourcegitcommit: d746a5beaabb019599407d5a96380ec687858c79
+ms.openlocfilehash: 13128b48be4dd4e64e767e121551c4c2e8692e78
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84022949"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250049"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -37,7 +37,7 @@ Azure Information Protection offre una soluzione client-server che consente di p
 
 Tutti questi client si integrano con le applicazioni di Office, ma il client Unified Labeling e il client classico devono essere installati separatamente e supportare funzionalità e componenti aggiuntivi. Ad esempio, questi client includono il supporto per Esplora file, pertanto è possibile classificare e proteggere i file all'esterno di Office. I componenti aggiuntivi includono un visualizzatore per documenti PDF protetti e immagini protette e uno scanner per gli archivi dati locali.
 
-Il client RMS fornisce solo la protezione. Questo client viene installato automaticamente con alcune applicazioni, ad esempio le applicazioni di Office, i client di Azure Information Protection e le applicazioni abilitate per RMS dei fornitori di software. Tuttavia, può anche essere [installato da solo](https://www.microsoft.com/en-us/download/details.aspx?id=38396), per supportare la [sincronizzazione dei file da librerie protette con IRM e OneDrive](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)e per gli sviluppatori che desiderano integrare la protezione di Rights Management in applicazioni line-of-business.
+Il client RMS fornisce solo la protezione. Questo client viene installato automaticamente con alcune applicazioni, ad esempio le applicazioni di Office, i client di Azure Information Protection e le applicazioni abilitate per RMS dei fornitori di software. Tuttavia, può anche essere [installato da solo](https://www.microsoft.com/download/details.aspx?id=38396), per supportare la [sincronizzazione dei file da librerie protette con IRM e OneDrive](https://docs.microsoft.com/onedrive/deploy-on-windows)e per gli sviluppatori che desiderano integrare la protezione di Rights Management in applicazioni line-of-business.
 
 ## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Scegliere il client di assegnazione di etichette da usare per i computer Windows
 
@@ -52,7 +52,7 @@ La scelta di etichettare il client per i computer Windows potrebbe essere influe
 
 - Il client di Azure Information Protection (versione classica) Scarica le impostazioni dell'etichetta e dei criteri dal portale di Azure.
 
-Poiché il client di etichettatura unificata e il client classico richiedono un'installazione separata in Office, è necessario scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+Poiché il client di etichettatura unificata e il client classico richiedono un'installazione separata in Office, è necessario scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
 
 Quale client utilizzare?
 

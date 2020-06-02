@@ -13,19 +13,16 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: ea0081e4f81a3ea123c3ff58e57334b46df00521
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747178"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249896"
 ---
-# <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
+# <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
-> [!NOTE]
-> Al momento questa funzionalità è disponibile in anteprima ed è soggetta a modifiche.
 
 Usare Azure Information Protection Analytics per la creazione di report centrali che consentono di tenere traccia dell'adozione delle etichette che classificano e proteggono i dati dell'organizzazione. Inoltre:
 
@@ -121,7 +118,13 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 
 - Versione del sistema operativo del client.
 
-Queste informazioni vengono archiviate in un'area di lavoro di Azure Log Analytics di proprietà dell'organizzazione e possono essere visualizzate, indipendentemente da Azure Information Protection, dagli utenti con i diritti di accesso all'area di lavoro. Per informazioni dettagliate, vedere la sezione [Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Per informazioni sulla gestione dell'accesso all'area di lavoro, vedere la sezione [Gestire l'accesso all'area di lavoro Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) nella documentazione di Azure.
+Queste informazioni vengono archiviate in un'area di lavoro di Azure Log Analytics di proprietà dell'organizzazione e possono essere visualizzate, indipendentemente da Azure Information Protection, dagli utenti con i diritti di accesso all'area di lavoro. 
+
+Per informazioni dettagliate, vedere:
+
+- [Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics)
+- [Gestire l'accesso all'area di lavoro Log Analytics usando le autorizzazioni di Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [Riferimento al log di controllo Azure Information Protection](audit-logs.md)
 
 Per impedire ai client di Azure Information Protection (versione classica) di inviare questi dati, impostare l' [impostazione dei criteri](configure-policy-settings.md) **Invia dati di controllo su Azure Information Protection Analytics** su **disattivato**:
 
@@ -223,7 +226,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
     
 2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
 
-3. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una di queste operazioni:
+3. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una delle operazioni seguenti:
     
     - Per creare una nuova area di lavoro Log Analytics: selezionare **Crea nuova area di lavoro**e nel riquadro **area di lavoro di log Analytics** fornire le informazioni richieste.
     
@@ -233,7 +236,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
 4. Se si dispone di Azure Information Protection client (versione classica), selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili** se si desidera archiviare i dati effettivi identificati come tipo di informazioni riservate. Per ulteriori informazioni su questa impostazione, vedere la sezione [corrispondenze di contenuto per l'analisi più approfondita](#content-matches-for-deeper-analysis) in questa pagina.
 
-5. Seleziona **OK**.
+5. Selezionare **OK**.
 
 A questo punto si è pronti per visualizzare i report.
 
@@ -276,7 +279,7 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 
 |Nome colonna|Descrizione|
 |-----------|-----------|
-|Tempo|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
+|Ora|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
 |Utente|Utente: Format UPN o dominio\utente|
 |ItemPath|Percorso dell'elemento completo o oggetto di posta elettronica|
 |ItemName|Nome file o oggetto posta elettronica |
