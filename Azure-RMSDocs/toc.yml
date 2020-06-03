@@ -473,5 +473,7 @@
       href: compliance.md
     - name: Informazioni di riferimento su PowerShell
       href: 'https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps'
+    - name: Informazioni di riferimento sui log di controllo
+      href: audit-logs.md
     - name: Terminologia
       href: terminology.md
