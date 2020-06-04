@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/05/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7d410c7cf697005750790fdb705c2a6e358aeec
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
+ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249913"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326319"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -239,7 +239,7 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     
     Facoltativamente, specificare una descrizione per scopi amministrativi che consenta di identificare il nome del cluster dello scanner.
 
-    Selezionare **Save** (Salva).
+    Selezionare **Salva**.
 5. Individuare le opzioni del menu **scanner** e selezionare **processi di analisi del contenuto**.
 6. Nel riquadro **processi di analisi del Azure Information Protection di contenuto** selezionare **Aggiungi**.
  
@@ -278,25 +278,21 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     I caratteri jolly e i percorsi WebDav non sono supportati.
     
     Esempi:
-    
-    - Per un percorso locale: `C:\Folder`
-    
+      
     - Per una condivisione di rete: `C:\Folder\Filename`
-    
-    - Per un percorso UNC: `\\Server\Folder`
     
     - Per una raccolta di SharePoint: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
     > [!TIP]
     > Se si aggiunge un percorso di SharePoint per "Documenti condivisi":
     >
-     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. ad esempio `http://sp2013/Shared Documents`
+     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. Ad esempio: `http://sp2013/Shared Documents`
      >
-     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. ad esempio `http://sp2013/Documents/Sales Reports`
+     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. Ad esempio: `http://sp2013/Documents/Sales Reports`
     
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del processo di analisi del contenuto**. Ciò significa che il repository dei dati eredita le impostazioni dal processo di analisi del contenuto. 
     
-    Selezionare **Save** (Salva).
+    Selezionare **Salva**.
 
 > [!IMPORTANT]
 > Sebbene sia possibile analizzare la file system locale, questa configurazione non è consigliata per le distribuzioni di produzione e può essere usata **solo** nei cluster a nodo singolo. L'analisi delle cartelle locali tramite cluster a più nodi non è supportata. Se è necessario eseguire la scansione di una cartella nella file system locale, è consigliabile creare una condivisione e analizzarla usando un URL di rete.
