@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c1e662644bd84fd1ec6ba40d838ace505693fd68
-ms.sourcegitcommit: a4e367f8a51074a4cbde14943ca4d24918138ef6
+ms.openlocfilehash: 8d9914a696355d376847a85a20b8918856aac5f5
+ms.sourcegitcommit: a44977027d3fbc33b580fd034700ea91d6a2548b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256594"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627675"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -346,7 +346,7 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
 
-Esistono due metodi che possono essere usati per rimuovere le classificazioni da altre soluzioni di assegnazione di etichette. Il primo metodo rimuove qualsiasi forma da documenti di Word in cui il nome della forma corrisponde al nome definito nella proprietà avanzata **WordShapeNameToRemove**, il secondo metodo consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti di Word, Excel e PowerPoint come definito nella proprietà avanzata **RemoveExternalContentMarkingInApp** . 
+Esistono due metodi per rimuovere le classificazioni da altre soluzioni di assegnazione di etichette. Il primo metodo rimuove qualsiasi forma da documenti di Word in cui il nome della forma corrisponde al nome definito nella proprietà avanzata **WordShapeNameToRemove**, il secondo metodo consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti di Word, Excel e PowerPoint come definito nella proprietà avanzata **RemoveExternalContentMarkingInApp** . 
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>Usare la proprietà avanzata WordShapeNameToRemove
 
@@ -893,7 +893,7 @@ Si noti che questa impostazione non comporta la rimozione dell'etichetta origina
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -911,7 +911,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -929,7 +929,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confi
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
 
-In questo esempio:
+Esempio:
 
 - Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
@@ -1016,7 +1016,7 @@ Per questa configurazione è necessario specificare un'impostazione avanzata den
 
 Requisito: i documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di riservatezza è denominata **Confidential** e crea una proprietà personalizzata denominata **classificazione** con il valore **Secret**.
 
