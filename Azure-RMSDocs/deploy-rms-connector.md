@@ -1,10 +1,10 @@
 ---
 title: Distribuire il connettore di Rights Management - AIP
 description: Istruzioni per distribuire il connettore RMS, che fornisce il servizio di protezione dei dati per le distribuzioni locali esistenti che usano Exchange Server, SharePoint Server o Windows Server e Infrastruttura di classificazione file.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 894f2cd0b2cfc2a8cf15278b46bf508314ebaf71
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 405989dae3fb7f37edc4fdd8b213ae5dae3ac592
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404352"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665912"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Distribuzione del connettore di Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows Server 2012 R2, windows Server 2012*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, windows Server 2012 R2, windows Server 2012*
 
-Usare queste informazioni per comprendere il funzionamento del connettore di Azure Rights Management e come distribuirlo correttamente per l'organizzazione. Questo connettore garantisce la protezione dei dati per le distribuzioni locali esistenti che usano Microsoft **Exchange Server**, **SharePoint Server** o file server che eseguono Windows Server e **Infrastruttura di classificazione file** (FCI, File Classification Infrastructure).
+Usare queste informazioni per comprendere il funzionamento del connettore di Azure Rights Management e come distribuirlo correttamente per l'organizzazione. Questo connettore garantisce la protezione dei dati per le distribuzioni locali esistenti che usano Microsoft **Exchange Server**, **SharePoint Server**o file server che eseguono Windows Server e **infrastruttura di classificazione file** (FCI).
 
 
 ## <a name="overview-of-the-microsoft-rights-management-connector"></a>Panoramica del connettore Microsoft Rights Management
@@ -61,7 +61,7 @@ Prima di installare il connettore RMS, accertarsi che i requisiti seguenti siano
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Il servizio di protezione è attivato|[Attivazione del servizio di protezione da Azure Information Protection](activate-service.md)|
-|Sincronizzazione delle directory tra le foreste locali di Active Directory e Azure Active Directory|Dopo l'attivazione di RMS, configurare Azure Active Directory per l'uso da parte di utenti e gruppi nel database di Active Directory.<br /><br />**Importante**: è necessario eseguire il passaggio di sincronizzazione della directory in modo che il connettore RMS possa funzionare, anche per una rete di test. Sebbene sia possibile usare Office 365 e Azure Active Directory con account creati manualmente in Azure Active Directory, per usare il connettore è necessario che gli account di Azure Active Directory siano sincronizzati con Servizi di dominio Active Directory. La sincronizzazione manuale della password non è sufficiente.<br /><br />Per ulteriori informazioni, vedere le seguenti risorse:<br /><br />- [Integrare i domini Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [Confronto degli strumenti di integrazione di directory di identità ibride](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
+|Sincronizzazione delle directory tra le foreste locali di Active Directory e Azure Active Directory|Dopo l'attivazione di RMS, configurare Azure Active Directory per l'uso da parte di utenti e gruppi nel database di Active Directory.<br /><br />**Importante**: è necessario eseguire il passaggio di sincronizzazione della directory in modo che il connettore RMS possa funzionare, anche per una rete di test. Sebbene sia possibile usare Office 365 e Azure Active Directory con account creati manualmente in Azure Active Directory, per usare il connettore è necessario che gli account di Azure Active Directory siano sincronizzati con Servizi di dominio Active Directory. La sincronizzazione manuale della password non è sufficiente.<br /><br />Per altre informazioni, vedere le seguenti risorse:<br /><br />- [Integrare domini di Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [Confronto degli strumenti di integrazione della directory di identità ibrida](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
 |Almeno due computer membri su cui installare il connettore RMS:<br /><br />-Un computer fisico o virtuale a 64 bit che esegue uno dei sistemi operativi seguenti: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.<br /><br />- Almeno 1 GB di RAM.<br /><br />- Almeno 64 GB di spazio su disco.<br /><br />- Almeno un'interfaccia di rete.<br /><br />-Accesso a Internet tramite un firewall o un proxy Web che non richiede l'autenticazione.<br /><br />- Ubicazione in una foresta o in un dominio che considera attendibile altre foreste dell'organizzazione contenenti installazioni di server di Exchange o di SharePoint da usare con il connettore RMS.|Per ottenere elevati livelli di tolleranza di errore e disponibilità, è necessario installare il connettore RMS in almeno due computer.<br /><br />**Suggerimento**: se si esegue Outlook Web Access o si usano dispositivi mobili con Exchange ActiveSync IRM ed è fondamentale mantenere l'accesso ai messaggi di posta elettronica e agli allegati protetti da Azure RMS, è consigliabile distribuire un gruppo con carico bilanciato di server del connettore per garantire una disponibilità elevata.<br /><br />Per l'esecuzione del connettore non sono necessari server dedicati. È invece necessario installare il connettore in un computer separato dai server che lo usano.<br /><br />**Importante**: non installare il connettore in un computer che esegue Exchange Server, SharePoint Server o un file server configurato per la funzionalità Infrastruttura di classificazione file, se si desidera usare tale funzionalità da questi servizi con Azure RMS. Inoltre, non installare il connettore in un controller di dominio.<br /><br />In presenza di carichi di lavoro server che si vuole usare con il connettore RMS, con server inclusi in domini non considerati attendibili dal dominio da cui si esegue il connettore, è possibile installare server del connettore RMS aggiuntivi in questi domini non attendibili o in altri domini nelle rispettive foreste. <br /><br />Non sono previsti limiti per il numero di server del connettore che è possibile eseguire per l'organizzazione e tutti i server del connettore installati in un'organizzazione condividono la stessa configurazione. Tuttavia, per configurare il connettore per autorizzare i server, è necessario essere in grado di visualizzare gli account del servizio o del server da autorizzare e questo significa dover eseguire lo strumento di amministrazione di RMS in una foresta da cui è possibile visualizzare tali account.|
 
 
@@ -69,13 +69,13 @@ Prima di installare il connettore RMS, accertarsi che i requisiti seguenti siano
 
 Il connettore non verifica automaticamente tutti i [prerequisiti](deploy-rms-connector.md#prerequisites-for-the-rms-connector) necessari per una corretta distribuzione, quindi assicurarsi che questi siano soddisfatti prima di iniziare. Per la distribuzione è necessario installare il connettore, configurarlo e quindi configurare i server che devono usare il connettore. 
 
--   **Passaggio 1:**  [installazione del connettore RMS](install-configure-rms-connector.md#installing-the-rms-connector)
+-   **Passaggio 1:**  [Installazione del connettore RMS](install-configure-rms-connector.md#installing-the-rms-connector)
 
--   **Passaggio 2:**  [immissione delle credenziali](install-configure-rms-connector.md#entering-credentials)
+-   **Passaggio 2:**  [Immissione delle credenziali](install-configure-rms-connector.md#entering-credentials)
 
--   **Passaggio 3:**  [autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
+-   **Passaggio 3:**  [Autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
 
--   **Passaggio 4:**  [configurazione del bilanciamento del carico e disponibilità elevata](install-configure-rms-connector.md#configuring-load-balancing-and-high-availability)
+-   **Passaggio 4:**  [Configurazione del bilanciamento del carico per elevati livelli di disponibilità](install-configure-rms-connector.md#configuring-load-balancing-and-high-availability)
 
 -   Facoltativo: [Configurazione del connettore RMS per l'uso di HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)
 
@@ -83,13 +83,13 @@ Il connettore non verifica automaticamente tutti i [prerequisiti](deploy-rms-con
 
 -   Facoltativo: [Installazione dello strumento di amministrazione di connettore RMS su computer amministrativi](install-configure-rms-connector.md#installing-the-rms-connector-administration-tool-on-administrative-computers)
 
--   **Passaggio 5:**  [configurazione dei server per l'uso del connettore RMS](configure-servers-rms-connector.md)
+-   **Passaggio 5:**  [Configurazione dei server per l'uso del connettore RMS](configure-servers-rms-connector.md)
 
     -   [Configurazione di un server di Exchange per l'uso del connettore](configure-servers-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
 
-    -   [Configurazione di un server di SharePoint per l'uso del connettore](configure-servers-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
+    -   [Configurazione di un server SharePoint per l'uso del connettore](configure-servers-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
 
-    -   [Configurazione di un file server per consentire l'uso del connettore alla funzionalità Infrastruttura di classificazione file](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
+    -   [Configurazione di un file server per l'infrastruttura di classificazione file per l'uso del connettore](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 
 ## <a name="next-steps"></a>Passaggi successivi

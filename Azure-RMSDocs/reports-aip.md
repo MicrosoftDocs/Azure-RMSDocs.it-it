@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ea0081e4f81a3ea123c3ff58e57334b46df00521
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 824e246a0e979a478dbd135e8497434b0c2b6762
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249896"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665657"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
@@ -151,10 +151,10 @@ Per impostazione predefinita, i client di Azure Information Protection non invia
 ## <a name="prerequisites"></a>Prerequisiti
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
 
-|Requisito|Ulteriori informazioni|
+|Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
+|Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).|
 |Per informazioni sulla creazione di report da archivi dati basati sul cloud: <br /><br />-Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Per informazioni sulla creazione di report da archivi dati locali: <br /><br />-Azure Information Protection scanner |Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). |
 |Per informazioni sulla creazione di report da computer Windows 10:  <br /><br />-Compilazione minima di 1809 con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|È necessario abilitare la funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center. Per altre informazioni, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
@@ -279,7 +279,7 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 
 |Nome colonna|Descrizione|
 |-----------|-----------|
-|Ora|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
+|Tempo|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
 |Utente|Utente: Format UPN o dominio\utente|
 |ItemPath|Percorso dell'elemento completo o oggetto di posta elettronica|
 |ItemName|Nome file o oggetto posta elettronica |

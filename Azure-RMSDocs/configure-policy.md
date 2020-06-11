@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 363fc709334ac3974ec657d72c44e88a2e9c828a
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: fc00f88734712c8ee9a60c334989d5ed5be8854c
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404386"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665895"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -32,7 +32,7 @@ ms.locfileid: "79404386"
 > 
 > Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
 
-Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=53018).
 
 I criteri contengono etichette e impostazioni:
 
@@ -70,15 +70,15 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
     
     - **Amministratore Azure Information Protection**
     
-  - **Amministratore di conformità**
+  - **Amministratore conformità**
     
   - **Amministratore dati di conformità**
     
   - **Amministratore della sicurezza**
     
-    **Reader** per la sicurezza - solo [Azure Information Protection Analytics](reports-aip.md)
+    **Lettore**  -  di sicurezza Solo [Azure Information Protection Analytics](reports-aip.md)
     
-    **Global reader** - solo [Azure Information Protection Analytics](reports-aip.md)
+    **Lettore globale**  -  Solo [Azure Information Protection Analytics](reports-aip.md)
     
   - **Amministratore globale**
     
@@ -102,7 +102,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 4. Quando ci si connette al servizio per la prima volta viene visualizzata automaticamente la pagina **Avvio rapido**. Consultare le risorse suggerite o usare le altre opzioni di menu. Usare la procedura seguente per configurare le etichette selezionabili dagli utenti.
 
-La volta successiva che si accede al riquadro **Azure Information Protection** , viene selezionata automaticamente l'opzione **etichette** in modo che sia possibile visualizzare e configurare le etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **Generale**.
+La volta successiva che si accede al riquadro **Azure Information Protection** , viene selezionata automaticamente l'opzione **etichette** in modo che sia possibile visualizzare e configurare le etichette per tutti gli utenti. È possibile tornare alla pagina **avvio rapido** selezionandolo dal menu **generale** .
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
@@ -169,9 +169,9 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 Quando viene applicata un'etichetta a un documento o un messaggio di posta elettronica, l'etichetta viene archiviata nei metadati in modo che le applicazioni e i servizi possano leggerla:
 
-- Nei messaggi di posta elettronica queste informazioni vengono archiviate nell'intestazione x: **msip_labels: MSIP_Label_\<GUID > _Enabled = true** 
+- Nei messaggi di posta elettronica queste informazioni vengono archiviate nell'intestazione x: **msip_labels: MSIP_Label_ \<GUID> _Enabled = true** 
 
-- Per i documenti di Word (doc e docx), i fogli di calcolo di Excel (xls e XLSX), le presentazioni di PowerPoint (con estensione ppt e pptx) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID > _Enabled = true**
+- Per i documenti di Word (doc e docx), i fogli di calcolo di Excel (con estensione xls e XLSX), le presentazioni di PowerPoint (con estensione ppt e pptx) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_ \<GUID> _Enabled = true**
 
 Per i messaggi di posta elettronica, le informazioni sull'etichetta vengono archiviate al momento dell'invio del messaggio. Per i documenti, le informazioni sull'etichetta vengono archiviate quando il file viene salvato. 
 

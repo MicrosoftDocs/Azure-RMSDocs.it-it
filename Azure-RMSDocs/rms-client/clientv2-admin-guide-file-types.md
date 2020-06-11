@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd9f9358ad9abaafc2fc67de8beb548173d9fee9
-ms.sourcegitcommit: e31562d4f8856782b332b238e8fef4932e3dfab8
+ms.openlocfilehash: 9bafeded86eeaedf588335932dead370831c3568
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82161351"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666099"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: tipi di file supportati dal client di Azure Information Protection Unified Labeling
 
@@ -70,15 +70,15 @@ Tipi di file aggiuntivi supportano la classificazione anche quando sono protetti
 
 Esempi:
 
-- Se l'etichetta di riservatezza **generale** applica la classificazione e non applica la protezione: è possibile applicare l'etichetta **generale** a un file denominato Sales. pdf, ma non è possibile applicare questa etichetta a un file denominato Sales. txt. 
+- Se l'etichetta di riservatezza **generale** applica la classificazione e non applica la protezione: è possibile applicare l'etichetta **generale** a un file denominato sales.pdf ma non è stato possibile applicare questa etichetta a un file denominato sales.txt. 
 
-- Se l'etichetta **riservata \ tutti i dipendenti** applica la classificazione e la protezione: è possibile applicare questa etichetta a un file denominato Sales. pdf e a un file denominato Sales. txt. È possibile applicare solo la protezione a questi file, senza applicare la classificazione.
+- Se l'etichetta **riservata \ tutti i dipendenti** applica la classificazione e la protezione: è possibile applicare questa etichetta a un file denominato sales.pdf e a un file denominato sales.txt. È possibile applicare solo la protezione a questi file, senza applicare la classificazione.
 
 ## <a name="file-types-supported-for-protection"></a>Tipi di file supportati per la protezione
 
 Il Azure Information Protection client di etichetta unificata supporta la protezione a due livelli diversi, come descritto nella tabella seguente.
 
-|Tipo di protezione|Nativo|Generico|
+|Tipo di protezione|Nativa|Generico|
 |----------------------|----------|-----------|
 |Descrizione|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per tutte le altre applicazioni e gli altri tipi di file, la protezione generica offre un livello di protezione che include funzionalità di incapsulamento dei file, usando il tipo di file pfile, e di autenticazione per verificare se un utente è autorizzato ad aprire il file.|
 |Protezione|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Vengono anche applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto al momento dell'applicazione della protezione ai file quando viene eseguito il rendering del contenuto nel visualizzatore Azure Information Protection (per i file di testo e immagine protetti) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione non riesce, il file non viene aperto.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Viene effettuata la registrazione di controllo dell'apertura di file e dell'accesso a questi da parte di utenti autorizzati. I diritti di utilizzo, tuttavia, non vengono applicati.|
@@ -195,7 +195,7 @@ Senza alcuna configurazione aggiuntiva, il client Azure Information Protection U
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |pdf|
-|Testo|.txt; .xml; .csv|
+|Text|.txt; .xml; .csv|
 
 Con impostazioni di configurazione aggiuntive è possibile esaminare anche altri tipi di file. Ad esempio, è possibile [registrare un'estensione di file personalizzata per usare il gestore di filtro di Windows esistente per i file di testo](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters), ed è anche possibile installare filtri aggiuntivi di produttori di software.
 
@@ -207,7 +207,7 @@ Le sezioni seguenti includono istruzioni di configurazione per il controllo dei 
 
 Lo scanner di Azure Information Protection e il comando di PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) consentono di esaminare i file con estensione zip se si seguono queste istruzioni:
 
-1. Per il computer che esegue lo scanner o la sessione di PowerShell, installare [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
+1. Per il computer che esegue lo scanner o la sessione di PowerShell, installare [Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2).
 
 2. Per lo scanner: dopo aver individuato le informazioni riservate, se il file zip deve essere classificato e protetto con un'etichetta, specificare l'estensione zip con l'impostazione avanzata di PowerShell, **PFileSupportedExtensions**, come descritto in [configurazione di PowerShell per modificare i tipi di file protetti](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) dalle istruzioni per la distribuzione dello scanner.
 
@@ -216,7 +216,7 @@ Scenario di esempio dopo avere eseguito questi passaggi:
 
 Un file denominato **accounts.zip** contiene fogli di calcolo di Excel con i numeri di carta di credito. Si dispone di un'etichetta di **riservatezza denominata Confidential \ Finance**, configurata per individuare i numeri di carta di credito e applicare automaticamente l'etichetta con la protezione che limita l'accesso al gruppo Finance. 
 
-Dopo aver esaminato il file, il client Unified Labeling dalla sessione di PowerShell classifica il file come **Confidential \ Finance**, applica la protezione generica al file in modo che solo i membri dei gruppi finance possano decomprimerlo e rinominare il file **accounts. zip. Pfile**.
+Dopo aver esaminato il file, il client Unified Labeling dalla sessione di PowerShell classifica il file come **Confidential \ Finance**, applica la protezione generica al file in modo che solo i membri dei gruppi finance possano decomprimerlo e rinominare il file **accounts.zip. Pfile**.
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>Per esaminare i file con estensione tiff tramite OCR
 

@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: de442c9ea7c28bba55e7dbeebfdf458254e98678
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 751add440b97259d6c897af385581f4b5efb9d2f
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483287"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665501"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -31,7 +31,7 @@ ms.locfileid: "79483287"
 
 Usare le informazioni di questa guida se si è responsabili del client Azure Information Protection in una rete aziendale o se sono necessarie maggiori informazioni rispetto a quelle disponibili nella [Guida per l'utente del client Azure Information Protection](client-user-guide.md). 
 
-Ad esempio,
+Ad esempio:
 
 - Comprendere i diversi componenti di questo client e se è necessario installarlo
 
@@ -72,7 +72,7 @@ Se si usa AD RMS e si vuole passare ad Azure Information Protection, vedere [Mig
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>È consigliabile distribuire il client Azure Information Protection?
 
-Distribuire il client di Azure Information Protection se non si usano [le etichette di riservatezza in Office 365 Centro sicurezza e conformità](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) ma usando le etichette Azure Information Protection scaricate da Azure e si applica una delle seguenti condizioni:
+Distribuire il client di Azure Information Protection se non si usano le [etichette di riservatezza nel centro sicurezza & conformità di Office 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) , ma si usano invece Azure Information Protection etichette scaricate da Azure e si verifica una delle condizioni seguenti:
 
 - Si vuole classificare (e, facoltativamente, proteggere) documenti e messaggi di posta elettronica selezionando etichette dalle applicazioni di Office (Word, Excel, PowerPoint, Outlook).
 
@@ -116,7 +116,7 @@ Il collegamento **Altre informazioni** reindirizza per impostazione predefinita 
 
 Il collegamento **Segnala un problema** viene visualizzato solo se si specifica un'[impostazione client avanzata](client-admin-guide-customizations.md#add-report-an-issue-for-users). Quando si configura questa impostazione, si specifica un collegamento HTTP, ad esempio l'indirizzo e-mail dell'help desk.
 
-L'opzione **Esporta log** consente di raccogliere e allegare automaticamente i file di log relativi al client Azure Information Protection se ne è stato chiesto l'invio al supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk.
+L'opzione **Esporta log** consente di raccogliere e allegare automaticamente i file di log relativi al client Azure Information Protection se ne è stato chiesto l'invio al supporto tecnico Microsoft. Gli utenti finali possono usare questa opzione anche per inviare i file di log all'help desk.
 
 L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eliminare i criteri di Azure Information Protection scaricati e ripristinare le impostazioni utente per il servizio Azure Rights Management.
 
@@ -141,13 +141,13 @@ L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eli
     
     Per le reti aziendali, queste impostazioni vengono in genere configurate tramite Criteri di gruppo e in questo caso vengono automaticamente riapplicate al momento dell'aggiornamento dei Criteri di gruppo nel computer. Potrebbero essere tuttavia presenti impostazioni configurate una sola volta tramite script o manualmente. In questi casi, è necessario intervenire per riconfigurare queste impostazioni. Ad esempio, è possibile che i computer eseguano un script una sola volta per configurare le impostazioni per il reindirizzamento ad Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio. Dopo aver reimpostato il client, il computer deve eseguire nuovamente lo script.
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
     - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
@@ -165,7 +165,7 @@ Se viene visualizzato il messaggio **Questo client non ha la licenza per Office 
 
 Usare le informazioni di **Versione** per verificare la versione del client installata. È possibile controllare se la versione installata è quella più recente e verificare le nuove funzionalità e le correzioni di tale versione facendo clic sul collegamento **Novità** che consente di accedere alla [cronologia delle versioni](client-version-release-history.md) del client.
 
-## <a name="support-for-multiple-languages"></a>Supporto di altre lingue
+## <a name="support-for-multiple-languages"></a>Supporto di più lingue
 
 Il client Azure Information Protection supporta le stesse lingue supportate da Office 365. Per un elenco di queste lingue, vedere la sezione **Office 365, Exchange Online Protection e Power BI** nella pagina [Disponibilità internazionale](https://products.office.com/business/international-availability) di Office.
 
@@ -173,13 +173,13 @@ Per queste lingue, le opzioni di menu, le finestre di dialogo e i messaggi del c
 
 Tuttavia, i nomi e le descrizioni delle etichette specificati non vengono automaticamente tradotti quando si configurano le etichette nei criteri di Azure Information Protection. A partire dal 30 agosto 2017 il [criterio predefinito](../configure-policy-default.md) corrente include il supporto per alcune lingue. Per fare in modo che gli utenti vedano le etichette nella lingua preferita, specificare le proprie traduzioni e configurare i criteri di Azure Information Protection per l'uso di tali traduzioni. Per altre informazioni, vedere [Come configurare etichette per lingue diverse in Azure Information Protection](../configure-policy-languages.md). I contrassegni visivi non vengono convertiti e non supportano più di una lingua.
 
-## <a name="post-installation-tasks"></a>Attività post-installazione
+## <a name="post-installation-tasks"></a>Attività successive all'installazione
 
-Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio,
+Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
 
 - Istruzioni per gli utenti online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 
-- Download di un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
+- Scaricare un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Aggiornamento e gestione del client Azure Information Protection
 
@@ -187,7 +187,7 @@ Il team di Azure Information Protection aggiorna regolarmente il client Azure In
 
 Se si usa Windows Update, il client Azure Information Protection aggiorna automaticamente la versione del client disponibile a livello generale, indipendentemente dal modo in cui è stato installato il client. Le nuove versioni del client vengono pubblicate nel catalogo alcune settimane dopo il rilascio.
 
-In alternativa, è possibile aggiornare manualmente il client scaricando la nuova versione dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Installare quindi la nuova versione per aggiornare il client. È necessario usare questo metodo per aggiornare le versioni di anteprima.
+In alternativa, è possibile aggiornare manualmente il client scaricando la nuova versione dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Installare quindi la nuova versione per aggiornare il client. È necessario usare questo metodo per aggiornare le versioni di anteprima.
 
 Quando si esegue l'aggiornamento manuale, disinstallare prima la versione precedente solo se si sta modificando il metodo di installazione, ad esempio se si passa dalla versione eseguibile (EXE) del client alla versione di Windows Installer (MSI) del client, oppure se è necessario installare una versione precedente del client, ad esempio se è stata installata la versione di anteprima corrente per i test e ora è necessario tornare alla versione disponibile a livello generale corrente.
 
@@ -204,9 +204,9 @@ Usare le istruzioni seguenti per aggiornare lo scanner da una versione di dispon
 
 A partire dalla versione 1.48.204.0, il processo di aggiornamento delle versioni precedenti modifica automaticamente lo scanner in modo da ottenere le impostazioni di configurazione dal portale di Azure. Viene inoltre aggiornato lo schema per il database di configurazione dello scanner e questo database viene anche rinominato da AzInfoProtection:
 
-- Se non si specifica il proprio nome di profilo, il database di configurazione viene rinominato **AIPScanner_\<nome_computer>** . 
+- Se non si specifica il nome del proprio profilo, il database di configurazione viene rinominato **AIPScanner_ \<computer_name> **. 
 
-- Se si specifica il proprio nome di profilo, il database di configurazione viene rinominato **AIPScanner_\<nome_profilo>** .
+- Se si specifica il nome del proprio profilo, il database di configurazione viene rinominato **AIPScanner_ \<profile_name> **.
 
 Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabile usare la procedura seguente:
 
@@ -216,7 +216,7 @@ Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabi
 
 2. Nel computer dello scanner arrestare il servizio dello scanner **Azure Information Protection Scanner**.
 
-3. Aggiornare il client di Azure Information Protection installando la versione di disponibilità generale corrente dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+3. Aggiornare il client di Azure Information Protection installando la versione di disponibilità generale corrente dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
 4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
 
@@ -257,7 +257,7 @@ Se si vuole spostare il database di configurazione dello scanner per la versione
 
 Per disinstallare il client è possibile usare una delle opzioni seguenti:
 
-- Per disinstallare un programma, usare il Pannello di controllo: fare clic su **Microsoft Azure Information Protection** > **Disinstalla**
+- Usare il pannello di controllo per disinstallare un programma: fare clic su **Microsoft Azure Information Protection**  >  **Disinstalla**
 
 - Rieseguire l'eseguibile, ad esempio **AzInfoProtection.exe**, e fare clic su **Disinstalla** nella pagina **Modifica installazione**. 
 

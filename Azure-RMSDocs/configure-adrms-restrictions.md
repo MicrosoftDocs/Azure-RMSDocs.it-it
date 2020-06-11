@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 83fc8228b664acc067c6a604f3d438f39669a49a
-ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
+ms.openlocfilehash: a2ebb835d4d71c24d8b7206cb44fde6a33ccbb6e
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80375639"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666031"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
@@ -71,15 +71,15 @@ Per applicare la protezione HYOK, usare le etichette di Azure Information Protec
 
 Nella tabella seguente sono riportati gli scenari supportati per la protezione del contenuto con le etichette configurate per HYOK e per l'apertura e l'uso del contenuto protetto da HYOK.
 
-|Platform|Applicazione|Supportato|
+|Piattaforma|Applicazione|Supportato|
 |----------------------|----------|-----------|
-|WINDOWS|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: sì<br /><br />Consumo: sì|
-|WINDOWS|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: sì<br /><br />Consumo: sì|
-|WINDOWS|Client di Azure Information Protection|Protezione: sì <br /><br />Consumo: sì|
-|WINDOWS|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
-|WINDOWS|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: sì<br /><br />Consumo: sì|
-|WINDOWS|Scanner di Azure Information Protection|Protezione: sì<br /><br />Consumo: sì|
-|WINDOWS|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Client di Azure Information Protection|Protezione: sì <br /><br />Consumo: sì|
+|Windows|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
+|Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Scanner di Azure Information Protection|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
 |MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
 |MacOS|Office per Mac<br /><br />- Outlook|Protezione: no<br /><br />Consumo: sì|
 |MacOS|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
@@ -89,9 +89,9 @@ Nella tabella seguente sono riportati gli scenari supportati per la protezione d
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
 |Android|Office Mobile <br /><br />- Outlook|Protezione: no<br /><br />Consumo: no|
 |Android|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
-|Web|Outlook sul Web|Protezione: no<br /><br />Consumo: no|
+|Web|Outlook sul web|Protezione: no<br /><br />Consumo: no|
 |Web|Office per il Web<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
-|Universal|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
+|Universale|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
 
 
 ## <a name="additional-limitations-when-using-hyok"></a>Limitazioni aggiuntive durante l'uso di HYOK
@@ -158,7 +158,7 @@ Una distribuzione di AD RMS deve soddisfare i requisiti seguenti per garantire l
 
 - Gli utenti hanno una versione di Office che supporta Information Rights Management (IRM) e almeno Office 2013 Professional Plus con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. Si noti che Office 2010 e Office 2007 non sono supportati per questo scenario.
     
-    - Per Office 2016, Microsoft Installer (MSI)-based Edition: è [stato installato l'aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
+    - Per l'edizione di Office 2016 basata su Microsoft Installer (MSI): è stato installato l'[aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
 > Per soddisfare la garanzia elevata offerta dalla protezione HYOK, è consigliabile che i server di AD RMS non si trovino nella rete perimetrale e che vengano usati solo dai dispositivi gestiti. 
@@ -174,7 +174,7 @@ Per informazioni sulla distribuzione e istruzioni per AD RMS, vedere [Active Dir
 
     `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
     
-    Specificare uno dei valori seguenti per \<string>:
+    Per \<string value> , specificare uno dei seguenti elementi:
     
     - Per i cluster AD RMS che usano SSL/TLS:
 

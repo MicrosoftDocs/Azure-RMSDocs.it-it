@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3ee5ab34b2e7a502157ea4f788b6d172c683506e
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 4f66b49a6f4ad5ee50efb26849b06492cad89715
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746872"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666014"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: configurazione per Servizi online usare il servizio Rights Management di Azure
 
@@ -80,7 +80,7 @@ Per informazioni sull'utilizzo di SharePoint IRM con il servizio Rights Manageme
 Per configurare SharePoint in Microsoft 365 e OneDrive per supportare il servizio Azure Rights Management, è necessario abilitare prima il servizio IRM (Information Rights Management) per SharePoint usando l'interfaccia di amministrazione di SharePoint. I proprietari del sito possono quindi proteggere con IRM i propri elenchi e le raccolte documenti di SharePoint e gli utenti possono proteggere con IRM la propria libreria OneDrive in modo che i documenti salvati in tale posizione e condivisi con altri utenti vengano protetti automaticamente dal servizio Azure Rights Management.
 
 > [!NOTE]
-> Le librerie protette con IRM per SharePoint in Microsoft 365 e OneDrive richiedono la versione più recente del nuovo client di sincronizzazione di OneDrive (OneDrive. exe) e la versione del [client RMS dall'area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=38396). Installare questa versione del client RMS anche se è stato installato il client Azure Information Protection. Per altre informazioni su questo scenario di distribuzione, vedere [Distribuire il nuovo client di sincronizzazione di OneDrive in un ambiente aziendale](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
+> Le librerie protette con IRM per SharePoint in Microsoft 365 e OneDrive richiedono la versione più recente del nuovo client di sincronizzazione di OneDrive (OneDrive.exe) e la versione del [client RMS dall'area download Microsoft](https://www.microsoft.com/download/details.aspx?id=38396). Installare questa versione del client RMS anche se è stato installato il client Azure Information Protection. Per altre informazioni su questo scenario di distribuzione, vedere [Distribuire il nuovo client di sincronizzazione di OneDrive in un ambiente aziendale](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
 
 Per abilitare il servizio IRM (Information Rights Management) per SharePoint, vedere le istruzioni seguenti dalla documentazione di Office:
 
@@ -123,9 +123,9 @@ Poiché questa configurazione si basa sugli utenti anziché su un amministratore
 #### <a name="configuration-for-administrators"></a>Configurazione per gli amministratori
 Sebbene non sia possibile configurare IRM per OneDrive degli utenti usando l'interfaccia di amministrazione di SharePoint, è possibile eseguire questa operazione usando Windows PowerShell. Per abilitare IRM per queste raccolte, attenersi alla procedura seguente:
 
-1. Scaricare e installare l' [SDK dei componenti client di SharePoint](https://www.microsoft.com/en-us/download/details.aspx?id=42038).
+1. Scaricare e installare l' [SDK dei componenti client di SharePoint](https://www.microsoft.com/download/details.aspx?id=42038).
 
-2. Scaricare e installare la [Shell di gestione di SharePoint](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
+2. Scaricare e installare la [Shell di gestione di SharePoint](https://www.microsoft.com/download/details.aspx?id=35588).
 
 3. Copiare il contenuto del seguente script e denominare il file Set-IRMOnOneDriveForBusiness.ps1 nel computer in uso.
 
@@ -142,10 +142,10 @@ Sebbene non sia possibile configurare IRM per OneDrive degli utenti usando l'int
     Script Installation Requirements:
 
       SharePoint Client Components SDK
-      https://www.microsoft.com/en-us/download/details.aspx?id=42038
+      https://www.microsoft.com/download/details.aspx?id=42038
 
       SharePoint Management Shell
-      https://www.microsoft.com/en-us/download/details.aspx?id=35588
+      https://www.microsoft.com/download/details.aspx?id=35588
 
    ======
    #>
@@ -212,7 +212,7 @@ Sebbene non sia possibile configurare IRM per OneDrive degli utenti usando l'int
            {
                if($_.Exception.Message -match "Could not load file or assembly")
                {
-                   Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=42038"
+                   Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/download/details.aspx?id=42038"
                }
                else
                {
@@ -246,7 +246,7 @@ Sebbene non sia possibile configurare IRM per OneDrive degli utenti usando l'int
                    {
                        if($_.Exception.Message -match "Could not load file or assembly")
                        {
-                           Write-Error -Message "Unable to load the SharePoint Online Management Shell.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=35588"
+                           Write-Error -Message "Unable to load the SharePoint Online Management Shell.`nDownload Location: https://www.microsoft.com/download/details.aspx?id=35588"
                        }
                        else
                        {
@@ -534,7 +534,7 @@ Se è necessario disabilitare IRM per le librerie OneDrive dell'utente, vedere l
 ##### <a name="additional-script-to-output-all-onedrive-urls-to-a-csv-file"></a>Script aggiuntivo per l'output di tutti gli URL di OneDrive in un. File CSV
 Per il passaggio 4c precedente, è possibile usare il seguente script di Windows PowerShell per estrarre gli URL per le librerie OneDrive di tutti gli utenti, che è quindi possibile controllare, modificare, se necessario, quindi importare nello script principale.
 
-Questo script richiede anche l' [SDK dei componenti client di SharePoint](https://www.microsoft.com/en-us/download/details.aspx?id=42038) e la [Shell di gestione di SharePoint](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Seguire le stesse istruzioni per copiarlo e incollarlo, quindi salvare il file in locale, ad esempio "Report-OneDriveForBusinessSiteInfo.ps1", modificare i valori `$sharepointAdminCenterUrl` e `$tenantAdmin` come in precedenza e quindi eseguire lo script.
+Questo script richiede anche l' [SDK dei componenti client di SharePoint](https://www.microsoft.com/download/details.aspx?id=42038) e la [Shell di gestione di SharePoint](https://www.microsoft.com/download/details.aspx?id=35588). Seguire le stesse istruzioni per copiarlo e incollarlo, quindi salvare il file in locale, ad esempio "Report-OneDriveForBusinessSiteInfo.ps1", modificare i valori `$sharepointAdminCenterUrl` e `$tenantAdmin` come in precedenza e quindi eseguire lo script.
 
 *&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;*: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in cui si trova" senza garanzia di alcun tipo.
 
@@ -550,10 +550,10 @@ Questo script richiede anche l' [SDK dei componenti client di SharePoint](https:
  Script Installation Requirements:
 
    SharePoint Client Components SDK
-   https://www.microsoft.com/en-us/download/details.aspx?id=42038
+   https://www.microsoft.com/download/details.aspx?id=42038
 
    SharePoint Management Shell
-   https://www.microsoft.com/en-us/download/details.aspx?id=35588
+   https://www.microsoft.com/download/details.aspx?id=35588
 
 ======
 #>
@@ -614,7 +614,7 @@ function Load-SharePointOnlineClientComponentAssemblies
         {
             if($_.Exception.Message -match "Could not load file or assembly")
             {
-                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=42038"
+                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/download/details.aspx?id=42038"
             }
             else
             {
@@ -648,7 +648,7 @@ function Load-SharePointOnlineModule
                 {
                     if($_.Exception.Message -match "Could not load file or assembly")
                     {
-                        Write-Error -Message "Unable to load the SharePoint Online Management Shell.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=35588"
+                        Write-Error -Message "Unable to load the SharePoint Online Management Shell.`nDownload Location: https://www.microsoft.com/download/details.aspx?id=35588"
                     }
                     else
                     {
@@ -759,7 +759,7 @@ $oneDriveForBusinessSiteUrls | Out-File -FilePath $reportName
 ##### <a name="script-to-disable-irm-for-onedrive"></a>Script per disabilitare IRM per OneDrive
 Usare lo script di esempio seguente se è necessario disabilitare IRM per OneDrive degli utenti.
 
-Questo script richiede anche l' [SDK dei componenti client di SharePoint](https://www.microsoft.com/en-us/download/details.aspx?id=42038) e la [Shell di gestione di SharePoint](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Copiare e incollare il contenuto, salvare il file in locale, ad esempio "Disable-IRMOnOneDriveForBusiness.ps1", e modificare i valori `$sharepointAdminCenterUrl` e `$tenantAdmin`. Specificare manualmente gli URL OneDrive o usare lo script nella sezione precedente per poterli importare, quindi eseguire lo script.
+Questo script richiede anche l' [SDK dei componenti client di SharePoint](https://www.microsoft.com/download/details.aspx?id=42038) e la [Shell di gestione di SharePoint](https://www.microsoft.com/download/details.aspx?id=35588). Copiare e incollare il contenuto, salvare il file in locale, ad esempio "Disable-IRMOnOneDriveForBusiness.ps1", e modificare i valori `$sharepointAdminCenterUrl` e `$tenantAdmin`. Specificare manualmente gli URL OneDrive o usare lo script nella sezione precedente per poterli importare, quindi eseguire lo script.
 
 *&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;*: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in cui si trova" senza garanzia di alcun tipo.
 
@@ -774,10 +774,10 @@ Questo script richiede anche l' [SDK dei componenti client di SharePoint](https:
  Script Installation Requirements:
 
    SharePoint Client Components SDK
-   https://www.microsoft.com/en-us/download/details.aspx?id=42038
+   https://www.microsoft.com/download/details.aspx?id=42038
 
    SharePoint Management Shell
-   https://www.microsoft.com/en-us/download/details.aspx?id=35588
+   https://www.microsoft.com/download/details.aspx?id=35588
 
 ======
 #>
@@ -843,7 +843,7 @@ function Load-SharePointOnlineClientComponentAssemblies
         {
             if($_.Exception.Message -match "Could not load file or assembly")
             {
-                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=42038"
+                Write-Error -Message "Unable to load the SharePoint Server 2013 Client Components.`nDownload Location: https://www.microsoft.com/download/details.aspx?id=42038"
             }
             else
             {
@@ -877,7 +877,7 @@ function Load-SharePointOnlineModule
                 {
                     if($_.Exception.Message -match "Could not load file or assembly")
                     {
-                        Write-Error -Message "Unable to load the SharePoint Online Management Shell.`nDownload Location: https://www.microsoft.com/en-us/download/details.aspx?id=35588"
+                        Write-Error -Message "Unable to load the SharePoint Online Management Shell.`nDownload Location: https://www.microsoft.com/download/details.aspx?id=35588"
                     }
                     else
                     {

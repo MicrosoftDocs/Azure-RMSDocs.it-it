@@ -1,10 +1,10 @@
 ---
 title: Guida di orientamento per la distribuzione di Azure Information Protection
 description: Per preparare l'ambiente e per implementare e gestire Azure Information Protection per l'organizzazione, eseguire questa procedura.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,19 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 88ddfd13cdee34b20f8d1014a0d564654fa594e1
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 9852c792e732a0d84326e7dfc6f8b291af56fcad
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746927"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665861"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare le indicazioni della procedura che segue per preparare l'ambiente e per implementare e gestire Azure Information Protection per l'organizzazione.
 
@@ -149,7 +152,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
     Se si dispone di SharePoint ed Exchange locale e si vogliono usare le funzionalità di Information Rights Management (IRM), installare e configurare il connettore di Rights Management. Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](./deploy-rms-connector.md).
 
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Passaggio 6: Usare e monitorare le soluzioni di protezione dei dati
-È ora possibile monitorare il modo in cui l'organizzazione usa le etichette configurate e verificare che le informazioni riservate siano effettivamente protette. Per altre informazioni a supporto di questa fase di distribuzione, vedere gli argomenti seguenti:
+A questo punto è possibile monitorare il modo in cui l'organizzazione usa le etichette configurate e confermare che si stanno proteggendo le informazioni riservate. Per altre informazioni a supporto di questa fase di distribuzione, vedere gli argomenti seguenti:
 
 - [Reporting centrale per Azure Information Protection](reports-aip.md) al momento in anteprima
 
@@ -219,7 +222,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Passaggio 4: Usare e monitorare le soluzioni di protezione dei dati
 
-È ora possibile proteggere i dati e registrare come viene usato il servizio di protezione all'interno della società. Per informazioni aggiuntive per il supporto di questa fase di distribuzione, vedere [consentire agli utenti di proteggere i file tramite il servizio Rights Management di Azure](./help-users.md) e [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).
+A questo punto è possibile proteggere i dati e registrare il modo in cui l'azienda usa il servizio di protezione. Per informazioni aggiuntive per il supporto di questa fase di distribuzione, vedere [consentire agli utenti di proteggere i file tramite il servizio Rights Management di Azure](./help-users.md) e [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).
 
 ### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Passaggio 5: Amministrare il servizio di protezione per l'account tenant in base alle esigenze
 

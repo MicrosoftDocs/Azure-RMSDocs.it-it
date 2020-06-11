@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25ad77fb68f6d26891eaae62318388ce21fe54b4
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 21a174d8daca5376cd4071d579a50628e1a4d91c
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746789"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665793"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dati in Azure Information Protection
 
@@ -147,7 +147,7 @@ Per un elenco delle estensioni di file supportate in modo nativo da Azure Rights
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Come si configura un computer Mac per proteggere e rilevare i documenti?
 
-Prima di tutto, assicurarsi di avere installato Office per Mac usando il collegamento di installazione software da https://admin.microsoft.com. Per le istruzioni complete, vedere [Scaricare e installare o reinstallare Office 365 o Office 2019 in un PC o Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Prima di tutto, assicurarsi di avere installato Office per Mac usando il collegamento di installazione software da https://admin.microsoft.com. Per le istruzioni complete, vedere [Scaricare e installare o reinstallare Office 365 o Office 2019 in un PC o Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Aprire Outlook e creare un profilo mediante l'account Office 365 aziendale o dell'istituto di istruzione. Creare un nuovo messaggio, quindi eseguire le operazioni seguenti per configurare Office in modo che possa proteggere documenti e messaggi di posta elettronica usando il servizio Azure Rights Management:
 
