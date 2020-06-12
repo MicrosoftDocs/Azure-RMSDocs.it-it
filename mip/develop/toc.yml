@@ -21,13 +21,19 @@
               href: quick-file-list-labels-cpp.md
             - name: Impostare/ottenere etichette di riservatezza (C++)
               href: quick-file-set-get-label-cpp.md
+            - name: Downgrade di un'etichetta di riservatezza in un file (C++)
+              href: quick-file-justify-actions-cpp.md
+            - name: Ripubblicazione dell'API File (C++)
+              href: quick-file-republishing-cpp.md
+            - name: Elaborare file con estensione msg di posta elettronica (C++)
+              href: quick-email-msg-cpp.md
         - name: API Protezione
           items:
             - name: Inizializzazione dell'applicazione (C++)
               href: quick-protection-app-initialization-cpp.md
-            - name: Modelli di elenco
+            - name: Elencare i modelli (C++)
               href: quick-protection-list-templates-cpp.md
-            - name: Crittografare e decrittografare testo
+            - name: Crittografare e decrittografare testo (C++)
               href: quick-protection-encrypt-decrypt-text-cpp.md
     - name: 'C#'
       items:
@@ -39,13 +45,19 @@
               href: quick-file-list-labels-csharp.md
             - name: 'Impostare/ottenere etichette di riservatezza (C#)'
               href: quick-file-set-get-label-csharp.md
+            - name: 'Downgrade di un''etichetta di riservatezza in un file (C#)'
+              href: quick-file-justify-actions-csharp.md
+            - name: 'Ripubblicazione dell''API File (C#)'
+              href: quick-file-republishing-csharp.md
+            - name: 'Elaborare file con estensione msg di posta elettronica (C#)'
+              href: quick-email-msg-csharp.md
         - name: API Protezione
           items:
             - name: 'Inizializzazione dell''applicazione (C#)'
               href: quick-protection-app-initialization-csharp.md
-            - name: Modelli di elenco
+            - name: 'Elencare i modelli (C#)'
               href: quick-protection-list-templates-csharp.md
-            - name: Crittografare e decrittografare testo
+            - name: 'Crittografare e decrittografare testo (C#)'
               href: quick-protection-encrypt-decrypt-text-csharp.md
 - name: Concetti
   items:
@@ -119,6 +131,14 @@
           href: concept-async-observers-protection-cpp.md
     - name: Telemetria di SDK
       href: concept-mip-telemetry.md
+    - name: Casi d'uso
+      items:
+        - name: API File - Giustificazione dell'azione per il downgrade di un'etichetta di riservatezza in un file (C++)
+          href: concept-justification-cpp.md
+        - name: API File - Ripubblicazione (C++)
+          href: concept-republishing-cpp.md
+        - name: API File - Elaborare file con estensione msg di posta elettronica (C++)
+          href: concept-email-cpp.md
 - name: Riferimento
   items:
     - name: Libreria C++
