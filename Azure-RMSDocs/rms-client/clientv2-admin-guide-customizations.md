@@ -1,10 +1,10 @@
 ---
 title: Configurazioni personalizzate-Azure Information Protection client per l'assegnazione di etichette unificata
 description: Informazioni sulla personalizzazione del client di Azure Information Protection Unified Labeling per Windows.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8d9914a696355d376847a85a20b8918856aac5f5
-ms.sourcegitcommit: a44977027d3fbc33b580fd034700ea91d6a2548b
+ms.openlocfilehash: 901b036a333e5d801888176a020a8f60932ec2c8
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627675"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802963"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>
+> **I clienti con supporto Microsoft esteso per Windows 7 e Office 2010 possono anche ottenere supporto Azure Information Protection per queste versioni. Per i dettagli completi, rivolgersi al contatto di supporto.*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -798,9 +800,9 @@ Se si imposta questa impostazione client avanzata, le informazioni di controllo 
 
 Ad esempio:
 
-- Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
+- Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso Financial.docx con etichetta **Confidential \ Sales**.
 
-- Senza questa impostazione, è possibile notare che Financial. docx contiene 6 numeri di carta di credito.
+- Senza questa impostazione, è possibile osservare che Financial.docx contiene 6 numeri di carta di credito.
     
     - Se si abilita anche [Corrispondenze di contenuto per un'analisi più approfondita](../reports-aip.md#content-matches-for-deeper-analysis), si potranno vedere anche i numeri di carta di credito stessi.
 
@@ -1224,7 +1226,7 @@ I comandi di PowerShell di esempio seguenti illustrano come usare questa imposta
 Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
 
 > [!TIP]
 > Si consiglia di provare ad abilitare lo scanner per ignorare i file con gli attributi seguenti:

@@ -4,23 +4,25 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/08/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2e2530c058ed9af08c33bddddc5c83cb9ea4adf9
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 76f87d66c2eacafc7883b905c3bc364f9b69f5a1
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84666133"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802849"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>
+> **I clienti con supporto Microsoft esteso per Windows 7 e Office 2010 possono anche ottenere supporto Azure Information Protection per queste versioni. Per i dettagli completi, rivolgersi al contatto di supporto.*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -197,7 +199,7 @@ Le istruzioni per l'aggiornamento dello scanner variano a seconda che si stia es
 
 2.    Aggiornare il client di Azure Information Protection Unified Labeling scaricando e installando la versione più recente del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. Ad esempio: `Update-AIPScanner –Profile Europe`
+3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. ad esempio `Update-AIPScanner –Profile Europe`
 
 4. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -244,7 +246,7 @@ A partire dalla versione 1.48.204.0, lo scanner ottiene le impostazioni di confi
 
 3. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando il client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
+4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
 
 5. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 

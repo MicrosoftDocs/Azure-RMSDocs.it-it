@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/03/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
-ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
+ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326319"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802944"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -169,7 +169,7 @@ In genere, si usa lo stesso account utente per installare e configurare lo scann
     
     Popolare il database utilizzando lo script seguente: 
 
-    Se non esiste (Select * from master. sys. server_principals in cui SID = SUSER_SID (' dominio\utente ')), BEGIN dichiarare @T nvarchar (500) set @T =' Create Login ' + QUOTENAME (' dominio\utente ') +' da Windows ' exec ( @T ) End 
+    Se non esiste (Select * from master.sys. server_principals where SID = SUSER_SID (' dominio\utente ')) BEGIN DECLARE @T nvarchar (500) set @T =' Create Login ' + QUOTENAME (' dominio\utente ') +' da Windows ' exec ( @T ) End 
 
 Per creare un utente e concedere diritti di db_owner per il database, rivolgersi al sysadmin per eseguire le operazioni seguenti:
 
@@ -279,16 +279,16 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     
     Esempi:
       
-    - Per una condivisione di rete: `C:\Folder\Filename`
+    - Per una condivisione di rete: `\\Server\Folder`
     
     - Per una raccolta di SharePoint: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
     > [!TIP]
     > Se si aggiunge un percorso di SharePoint per "Documenti condivisi":
     >
-     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. Ad esempio: `http://sp2013/Shared Documents`
+     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. ad esempio `http://sp2013/Shared Documents`
      >
-     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. Ad esempio: `http://sp2013/Documents/Sales Reports`
+     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. ad esempio `http://sp2013/Documents/Sales Reports`
     
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del processo di analisi del contenuto**. Ciò significa che il repository dei dati eredita le impostazioni dal processo di analisi del contenuto. 
     
@@ -602,7 +602,7 @@ Lo scanner aggiorna i criteri in base ai trigger seguenti:
 > [!TIP]
 > Se è necessario aggiornare i criteri prima dell'intervallo predefinito, ad esempio durante un periodo di testing: 
 >
-> - Scanner dal client classico: eliminare manualmente il file dei criteri, **policy. MSIP** da **%LocalAppData%\Microsoft\MSIP\Policy.MSIP**.
+> - Scanner dal client classico: eliminare manualmente il file dei criteri, **Policy.msip** da **% LocalAppData% \Microsoft\MSIP\Policy.msip**.
 >
 > - Scanner dal client Unified Labeling: eliminare manualmente il contenuto da **%LocalAppData%\Microsoft\MSIP\mip \\ < *ProcessName*> \mip**.
 >

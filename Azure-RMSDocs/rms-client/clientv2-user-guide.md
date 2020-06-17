@@ -4,7 +4,7 @@ description: Azure Information Protection client di assegnazione unificata per W
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/06/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,18 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 06c9f0b81cfca3118c6b83e4fc5e67f55724cbe8
-ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
+ms.openlocfilehash: 6af0a1208fc0f647470e57b10d7b73e64fb98573
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852049"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802810"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection 
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>
+> **I clienti con supporto Microsoft esteso per Windows 7 e Office 2010 possono anche ottenere supporto Azure Information Protection per queste versioni. Per i dettagli completi, rivolgersi al contatto di supporto.*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 

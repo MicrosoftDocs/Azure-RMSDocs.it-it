@@ -4,7 +4,7 @@ description: Risorse informative per il client Azure Information Protection Unif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,20 +13,22 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 19d9c71e547107eda82d71416ab1d899e0f9be4b
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 624d9e8a6f2a25388f3488c6f15be84fcf82bb4b
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117851"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802996"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client di etichetta unificata per Windows
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
+> **I clienti con supporto Microsoft esteso per Windows 7 e Office 2010 possono anche ottenere supporto Azure Information Protection per queste versioni. Per i dettagli completi, rivolgersi al contatto di supporto.*
+>
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Azure Information Protection Unified Labeling client per Windows è un client scaricabile per le organizzazioni che usano [etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) per classificare e proteggere documenti e messaggi di posta elettronica. Il client include anche un visualizzatore per le organizzazioni prive di un'infrastruttura di protezione propria, ma che vogliono usare contenuto protetto da altre organizzazioni che usano un servizio Rights Management di Microsoft.
+Azure Information Protection Unified Labeling client per Windows è un client scaricabile per le organizzazioni che usano [etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) per classificare e proteggere documenti e messaggi di posta elettronica. Questo client dispone anche di un visualizzatore per le organizzazioni che non dispongono di una propria infrastruttura di protezione delle informazioni, ma che desiderano utilizzare il contenuto protetto da altre organizzazioni che utilizzano un servizio di Rights Management Microsoft.
 
 > [!NOTE]
 > Questo client, noto anche come client per l'assegnazione di etichette unificata, sostituisce il client di Azure Information Protection (classico). Se non si è certi del client da usare, vedere [scegliere il client di assegnazione di etichette da usare per i computer Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
