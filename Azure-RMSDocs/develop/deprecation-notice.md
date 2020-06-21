@@ -12,12 +12,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 51af06c37e6ee23a762f35791b0796b93b52e83b
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 14ea411732b38883d278d4df22700b8503224be0
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665810"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126646"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>RMS SDK 4,2-avviso di deprecazione 
 
@@ -25,7 +25,7 @@ ms.locfileid: "84665810"
 
 Il 3 marzo 2020, un aggiornamento alla RMS SDK 4,2 per Android, iOS e OSX è stato rilasciato tramite l'area download Microsoft. Questo aggiornamento è obbligatorio per tutte le applicazioni che usano attualmente le piattaforme RMS SDK.  
 
-Il martedì, il 15 settembre 2020 le versioni del RMS SDK rilasciate prima del marzo 2020 non riusciranno a connettersi all'endpoint del servizio Rights Management di Azure. Le applicazioni che utilizzano RMS SDK 4,2 devono essere aggiornate prima di questa data. 
+Il martedì 15 settembre 2020 le versioni del RMS SDK rilasciate prima del marzo 2020 non riusciranno a connettersi all'endpoint del servizio Rights Management di Azure. Le applicazioni che utilizzano RMS SDK 4,2 devono essere aggiornate prima di questa data. 
 
 ## <a name="reason-for-change"></a>Motivo della modifica 
 
@@ -48,5 +48,5 @@ Risorse
 
 - Android: https://www.microsoft.com/download/details.aspx?id=43673
 - iOShttps://www.microsoft.com/download/details.aspx?id=43674 
-- MacOS: https://www.microsoft.com/download/details.aspx?id=43675 
+- macOS: https://www.microsoft.com/download/details.aspx?id=43675 
 - Linux: https://azuread.github.io/rms-sdk-for-cpp/annotated.html

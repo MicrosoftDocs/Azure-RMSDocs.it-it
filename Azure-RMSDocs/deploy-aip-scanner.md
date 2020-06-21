@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: c1efdbcf7d6738b5dd1d0cfb6b5d4495cec60f4b
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802944"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126714"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -286,9 +286,9 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     > [!TIP]
     > Se si aggiunge un percorso di SharePoint per "Documenti condivisi":
     >
-     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. ad esempio `http://sp2013/Shared Documents`
+     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. Ad esempio: `http://sp2013/Shared Documents`
      >
-     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. ad esempio `http://sp2013/Documents/Sales Reports`
+     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. Ad esempio: `http://sp2013/Documents/Sales Reports`
     
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del processo di analisi del contenuto**. Ciò significa che il repository dei dati eredita le impostazioni dal processo di analisi del contenuto. 
     
@@ -449,9 +449,11 @@ Poiché la pianificazione è stata configurata in modo da essere eseguita contin
 
 ## <a name="troubleshooting-using-scanner-diagnostic-tool"></a>Risoluzione dei problemi con lo strumento di diagnostica scanner
 
-Per risolvere i problemi relativi allo scanner, eseguire il comando seguente nella sessione di PowerShell:
+Per risolvere i problemi relativi allo scanner, eseguire i comandi seguenti nella sessione di PowerShell:
 
-        Start-AIPScannerDiagnostics
+        $scanner_account_creds= Get-Credential 
+        Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+
 
 1. Esegui solo il comando-onconto% scanner_account% 
 2. Tenere presente che questo comando non è uno strumento di controllo dei prerequisiti. Lo strumento controlla se la distribuzione corrente dello scanner è integro. Assicurarsi di eseguire questo comando solo dopo che la distribuzione dello scanner è stata completata e che la configurazione del profilo è stata completata. 
