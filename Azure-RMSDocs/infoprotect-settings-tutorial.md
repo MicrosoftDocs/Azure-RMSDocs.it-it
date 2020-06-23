@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 1412567cdc0b7d6dcb1365c7aad3fceaa9dc44ba
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 175657a4dffd1dfde76c4521576253aeadeced22
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483304"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665844"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -54,7 +54,7 @@ Per completare questa esercitazione, è necessario:
 
 3. Deve essere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
     
-    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
     
     Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione sulla conformità di Microsoft 365 per informazioni sulle impostazioni dei criteri per le etichette di riservatezza. Ad esempio, [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 

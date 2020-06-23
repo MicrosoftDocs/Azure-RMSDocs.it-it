@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 1d65cbbe95b13bd86cdefe7360cdd46cd80ef0bc
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: c3b2656ccb53a69a50871e431b0778ea3c18992e
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747130"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666150"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -131,7 +131,7 @@ Vedere le informazioni più recenti su come Azure Information Protection consent
 
 - Opzioni e prezzi per la sottoscrizione: [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
 
-- Scaricare il client: [Client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+- Scaricare il client: [Client di Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=53018)
 
 - Scaricare un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
 

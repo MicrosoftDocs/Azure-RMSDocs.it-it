@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 14dda765c2cf695d0da3ee23d4012103b346905a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: af90e644608c99d6b5d628ff0d57e8cc48b5e162
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483338"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665980"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
@@ -55,7 +55,7 @@ Per completare questa esercitazione, è necessario:
 
 4. Il client Azure Information Protection (versione classica) deve essere installato nel computer in uso con Windows.
     
-    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
     
     Se si usa il client di etichettatura unificato anziché la versione classica del client, vedere le istruzioni seguenti che illustrano come usare le impostazioni avanzate di PowerShell per le configurazioni equivalenti in questa esercitazione:
     

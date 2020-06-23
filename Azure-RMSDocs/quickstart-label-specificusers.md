@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5af1ddc73f536bf35f05ebe34ae9704a6edfea0a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 9c2459303d6d0f86866791f6cda01aaa28064b9a
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483066"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665606"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
@@ -50,7 +50,7 @@ Per completare questa guida introduttiva, è necessario:
 
 4. Per testare la nuova etichetta: Deve essere installato il client Azure Information Protection (versione classica) su un computer con Windows. 
     
-    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
      
     Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione sulla conformità di Microsoft 365 per istruzioni equivalenti a questa esercitazione. Ad esempio, [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
