@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 126ef492f090a578443a0bea0ee7c747554d6eb2
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: ea56aa73d4bd2e3cb6988a2df65022662562b0a4
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "78973183"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665708"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -40,13 +40,13 @@ Per completare questa guida introduttiva, è necessario:
 
 2. Nel computer è installato uno dei client di Azure Information Protection seguenti:
     
-    - Client classico: Per installare questo client, passare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    - Client classico: Per installare questo client, passare all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
     
-    - Client per l'etichettatura unificata: Per installare questo client, passare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection_UL.exe** dalla pagina di Azure Information Protection.
+    - Client per l'etichettatura unificata: Per installare questo client, passare all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricare **AzInfoProtection_UL.exe** dalla pagina di Azure Information Protection.
     
 3. Aver installato anche SQL Server Express nel computer in uso.
     
-    Se questa edizione di SQL Server non è già installata, è possibile scaricarla dall'[Area download Microsoft](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express) e selezionare un'installazione di base.
+    Se questa edizione di SQL Server non è già installata, è possibile scaricarla dall'[Area download Microsoft](https://www.microsoft.com/sql-server/sql-server-editions-express) e selezionare un'installazione di base.
 
 4. Aver sincronizzato l'account di dominio con Azure AD.
 
@@ -137,7 +137,7 @@ A questo punto si è pronti per installare lo scanner con il profilo di scanner 
     
         Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
     
-    Quando richiesto, fornire le proprie credenziali per lo scanner usando il formato \<dominio\nome utente> e quindi specificare la password. 
+    Quando richiesto, fornire le proprie credenziali per lo scanner usando il formato \<domain\user name> e quindi specificare la password. 
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Avviare l'analisi e confermarne il completamento
 
@@ -199,8 +199,8 @@ Riavviare quindi il computer.
 Questo comando non rimuove gli elementi seguenti, che è pertanto necessario rimuovere manualmente se non si vuole conservarli dopo questa guida introduttiva:
 
 - Il database di SQL Server creato eseguendo il cmdlet Install-AIPScanner durante l'installazione dello strumento di analisi di Azure Information Protection:
-    - Per il client classico: **AIPScanner_\<profilo>**
-    - Per il client per l'etichettatura unificata: **AIPScannerUL_\<nome_profilo>**
+    - Per il client classico: **AIPScanner_\<profile>**
+    - Per il client per l'etichettatura unificata: **AIPScannerUL_\<profile_name>**
 
 - I report dello scanner presenti in %*localappdata*%\Microsoft\MSIP\Scanner\Reports.
 

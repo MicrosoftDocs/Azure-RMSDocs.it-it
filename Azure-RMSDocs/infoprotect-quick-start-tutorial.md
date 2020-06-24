@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 904898a5832a2c178ca7e1a8308d95998e926ad7
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: e218d27a877263d450e965b3a8a6ec97d527dacb
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483321"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665997"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -52,7 +52,7 @@ Per completare questa esercitazione, è necessario:
 
 3. Deve essere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
     
-    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la [documentazione sulla conformità di Microsoft 365](/microsoft-365/compliance/sensitivity-labels) per istruzioni equivalenti a questa esercitazione.
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la [documentazione sulla conformità di Microsoft 365](/microsoft-365/compliance/sensitivity-labels) per istruzioni equivalenti a questa esercitazione.
 
 4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     
@@ -122,7 +122,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
 4. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata. Questa opzione usa il servizio Azure Rights Management per proteggere documenti e messaggi di posta elettronica. Assicurarsi anche che l'opzione **Imposta autorizzazioni** sia selezionata. Selezionare quindi **Aggiungi autorizzazioni**.
 
-5. Nel riquadro **Aggiungi autorizzazioni** selezionare **Aggiungi \<nome organizzazione > - Tutti i membri**. Se ad esempio il nome dell'organizzazione è VanArsdel Ltd, viene visualizzata la seguente opzione da selezionare:
+5. Nel riquadro **Aggiungi autorizzazioni** selezionare **Aggiungi \<organization name>- Tutti i membri**. Se ad esempio il nome dell'organizzazione è VanArsdel Ltd, viene visualizzata la seguente opzione da selezionare:
     
     ![Concessione delle autorizzazioni di protezione a tutti i membri per un'etichetta di Azure Information Protection](./media/info-protect-protection-all-members.png) 
     
