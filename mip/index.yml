@@ -1,21 +1,28 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Microsoft Information Protection
+### YamlMime:Landing
+title: Documentazione di Microsoft Information Protection
+summary: Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall'azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.
 metadata:
   title: Documentazione di Microsoft Information Protection
-  description: 'Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall''azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.'
-  author: msmbaldwin
-  manager: barbkess
-  ms.service: information-protection
+  description: Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall'azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.
   services: information-protection
+  ms.service: information-protection
   ms.topic: landing-page
-  ms.date: 09/26/2018
+  ms.collection: M365-security-compliance
+  author: msmbaldwin
   ms.author: mbaldwin
-  layout: LandingPage
-abstract:
-  description: 'Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall''azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.'
-sections:
-  - title: Microsoft Information Protection SDK
-    items:
-      - type: paragraph
-        text: Iniziare con la <a href="develop/">Panoramica di Microsoft Information Protection SDK</a>.
+  ms.date: 06/24/2020
+  ms.openlocfilehash: e009dd37014b10d9d48ea7fe72eabda31abc15c8
+  ms.sourcegitcommit: 6b5fd79603d55f67d47885595e704065dda2bda9
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 06/25/2020
+  ms.locfileid: "85372401"
+landingContent:
+- title: Microsoft Information Protection SDK
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Altre informazioni su MIP SDK
+      url: ./develop/overview.md
+    - text: Introduzione a MIP SDK
+      url: ./develop/setup-configure-mip.md
