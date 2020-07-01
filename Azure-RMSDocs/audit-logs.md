@@ -4,7 +4,7 @@ description: Informazioni sui log di controllo generati da Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/08/2020
+ms.date: 06/29/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 682b7e7c51c270257046e3817399d3eeedb23c93
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: cfcbc67d67375e1513373c26d935a5acdc041911
+ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84666065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716053"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection riferimento al log di controllo (anteprima pubblica)
 
@@ -89,7 +89,7 @@ I log di controllo delle **etichette di downgrade** vengono generati per le atti
 ## <a name="file-removed-audit-logs"></a>Log di controllo rimossi dal file
 
 > [!NOTE]
-> I log di controllo rimossi dal file sono supportati solo in Azure Information Protection scanner versione [2.7.95.0](rms-client/unifiedlabelingclient-version-release-history.md#version-27950-public-preview) e versioni successive.
+> I log di controllo rimossi dal file sono supportati solo in Azure Information Protection scanner versione [2.7.96.0](rms-client/unifiedlabelingclient-version-release-history.md#version-27960) e versioni successive.
 
 I log di controllo **rimossi dal file** vengono generati per le attività seguenti:
 
