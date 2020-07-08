@@ -173,8 +173,26 @@
           href: secure-collaboration-documents.md
         - name: Configurazione delle regole del flusso di posta per le etichette di Azure Information Protection
           href: configure-exo-rules.md
-        - name: Distribuzione dello scanner di Azure Information Protection
-          href: deploy-aip-scanner.md
+        - name: Scanner di etichettatura unificata di Azure Information Protection
+          items:
+            - name: Panoramica
+              href: deploy-aip-scanner.md
+            - name: Prerequisiti dello scanner di etichettatura unificata
+              href: deploy-aip-scanner-prereqs.md
+            - name: Configurare e installare lo scanner di etichettatura unificata
+              href: deploy-aip-scanner-configure-install.md
+            - name: Eseguire lo scanner di etichettatura unificata
+              href: deploy-aip-scanner-manage.md
+        - name: Scanner classico di Azure Information Protection
+          items:
+            - name: Panoramica
+              href: deploy-aip-scanner-classic.md
+            - name: Prerequisiti dello scanner classico
+              href: deploy-aip-scanner-prereqs-classic.md
+            - name: Configurare e installare lo scanner classico
+              href: deploy-aip-scanner-configure-install-classic.md
+            - name: Eseguire lo scanner classico
+              href: deploy-aip-scanner-manage-classic.md
         - name: Creazione di report per Azure Information Protection
           href: reports-aip.md
         - name: Distribuzione del connettore RMS
@@ -297,6 +315,12 @@
                       href: ./rms-client/client-protection-only-mode.md
                     - name: Attività eseguite in precedenza con l'applicazione RMS sharing
                       href: ./rms-client/upgrade-client-app.md
+        - name: App Azure Information Protection per iOS e Android
+          items:
+            - name: Panoramica
+              href: ./rms-client/mobile-app-faq.md
+            - name: Iniziare a usare le app per dispositivi mobili AIP
+              href: ./rms-client/mobile-app-get-started.md
         - name: Lettori PDF protetti
           items:
             - name: Panoramica
