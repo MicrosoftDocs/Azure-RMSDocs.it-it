@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: cf946837e928c976cb3c8bc18fb6063866d5087e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: b3da193b20e5c65d66fcba380ee55690165ce3b4
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971728"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049123"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -58,7 +58,9 @@ Reindirizzamento tramite il file hosts locale:
 
 - Aggiungere la riga seguente nel file hosts locale, sostituendo `<AD RMS URL FQDN>` con il valore per il cluster di ad RMS, senza prefissi o pagine Web:
 
-        127.0.0.1 <AD RMS URL FQDN>
+    ```sh
+    127.0.0.1 <AD RMS URL FQDN>
+    ```
 
 Reindirizzamento tramite DNS:
 
@@ -72,7 +74,7 @@ Quando queste modifiche DNS sono state propagate, questi client verranno automat
 
 Per forzare i computer Mac a eseguire immediatamente il processo di individuazione, cercare "adal" nel keychain ed eliminare tutte le voci ADAL. Eseguire poi i comandi seguenti in questi computer:
 
-````
+````sh
 
 rm -r ~/Library/Cache/MSRightsManagement
 
@@ -98,21 +100,26 @@ Per rimuovere i controlli di onboarding:
 
 1. In una sessione di PowerShell, connettersi al servizio Azure Rights Management e, quando richiesto, specificare le credenziali di amministratore globale:
 
-        Connect-AipService
+    ```ps
+    Connect-AipService
 
-2. Eseguire il comando seguente e immettere **Y** per confermare:
+2. Run the following command, and enter **Y** to confirm:
 
-        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```ps
+    Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```
 
     Si noti che questo comando rimuove qualsiasi applicazione della licenza per il servizio di protezione Azure Rights Management, in modo che tutti i computer possano proteggere documenti e messaggi di posta elettronica.
 
 3. Verificare che i controlli di selezione non siano più impostati:
 
-        Get-AipServiceOnboardingControlPolicy
+    ```ps    
+    Get-AipServiceOnboardingControlPolicy
+    ```
 
     Nell'output, **License** deve includere **False** e non c'è nessun GUID visualizzato in **SecurityGroupOjbectId**
 
-Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata) nella libreria dell'Utilità di pianificazione di Windows, disabilitare questa attività perché non viene usata dal client Azure Information Protection. Questa attività viene in genere abilitata tramite Criteri di gruppo e supporta una distribuzione AD RMS. È possibile trovare questa attività nel percorso seguente: **Microsoft** > **Windows** > **Active Directory Rights Management Services client**
+Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata) nella libreria dell'Utilità di pianificazione di Windows, disabilitare questa attività perché non viene usata dal client Azure Information Protection. Questa attività viene in genere abilitata tramite Criteri di gruppo e supporta una distribuzione AD RMS. È possibile trovare questa attività nel percorso seguente: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management Services client**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passaggio 12. Reimpostare la chiave del tenant di Azure Information Protection
 
@@ -130,7 +137,10 @@ Per reimpostare la chiave del tenant di Azure Information Protection:
 
 - **Se la chiave del tenant è gestita da Microsoft**: eseguire il cmdlet di PowerShell [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) e specificare l'identificatore di chiave per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
 
-        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+        
+    ```ps
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+    ```
 
 - **Se la chiave del tenant è gestita dall'utente (BYOK)**: in Azure Key Vault, ripetere il processo di creazione della chiave per il tenant di Azure Information Protection, quindi eseguire di nuovo il cmdlet [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) per specificare l'URI per la nuova chiave.
 

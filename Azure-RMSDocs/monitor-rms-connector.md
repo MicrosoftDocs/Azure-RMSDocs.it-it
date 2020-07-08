@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9fccaa7995b47dbabd9f0308eb206965cdaa7392
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: ba24185e8f8da86bc3801aa9307ae35f671a6c09
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117902"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049021"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
@@ -47,7 +47,7 @@ Se il connettore non è in grado di connettersi al servizio Azure Rights Managem
 
 Come per tutte le voci del log eventi, analizzare il messaggio per ottenere informazioni più dettagliate.
 
-Oltre a controllare il registro eventi quando si distribuisce il connettore per la prima volta, verificare regolarmente se sono presenti avvisi ed errori. È possibile che il connettore funzioni inizialmente come previsto, ma che altri amministratori modifichino le configurazioni dipendenti. Un altro amministratore, ad esempio, modifica la configurazione del server proxy Web in modo che i server del connettore RMS non possano più accedere a Internet (errore 3001) o rimuove un account computer da un gruppo specificato come autorizzato a usare il connettore (avviso 2001) .
+Oltre a controllare il registro eventi quando si distribuisce il connettore per la prima volta, verificare regolarmente se sono presenti avvisi ed errori. È possibile che il connettore funzioni inizialmente come previsto, ma che altri amministratori modifichino le configurazioni dipendenti. Un altro amministratore, ad esempio, modifica la configurazione del server proxy Web in modo che i server del connettore RMS non possano più accedere a Internet (errore 3001) o rimuove un account computer da un gruppo specificato come autorizzato a usare il connettore (avviso 2001).
 
 ### <a name="event-log-ids-and-descriptions"></a>ID registro eventi e descrizioni
 
@@ -161,7 +161,7 @@ Questo evento viene registrato se il connettore RMS non scarica l'elenco più re
 
 ----
 
-## <a name="performance-counters"></a>Contatori di prestazioni
+## <a name="performance-counters"></a>Contatori delle prestazioni
 
 Quando si installa il connettore RMS, vengono creati automaticamente i contatori delle prestazioni del **connettore Microsoft Rights Management**, che possono essere utili per monitorare e ottimizzare le prestazioni relative all'uso del servizio Azure Rights Management. 
 
@@ -183,13 +183,15 @@ Se occorre una registrazione più dettagliata per scopi di diagnosi, è possibil
 
 2. Individuare la riga seguente:
 
-        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 3. Sostituire la riga con il testo seguente:
-
-        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 4.  Arrestare e riavviare IIS per attivare la traccia. 
 
 5.  Una volta acquisite le tracce necessarie, ripristinare la riga nel passaggio 3, quindi arrestare e riavviare IIS.
-
