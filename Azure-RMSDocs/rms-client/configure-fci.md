@@ -13,18 +13,18 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3afd356ee64d337bf171488e8be6aa65049d7ee
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: d289db484d647bb909fcb7445138f156322f72be
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224734"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046539"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare questo articolo per ottenere istruzioni e uno script che consentono di usare il client Azure Information Protection e PowerShell per configurare Gestione risorse file server e Infrastruttura di classificazione file (FCI, File Classification Infrastructure).
 
@@ -54,7 +54,7 @@ Prerequisiti per queste istruzioni:
     
   - Se si vuole modificare il livello predefinito di protezione (nativa o generica) per estensioni di file specifiche, si deve modificare il Registro di sistema come descritto nella sezione relativa alla [modifica del livello di protezione predefinito dei file](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) della guida dell'amministratore.
     
-  - Si dispone di una connessione Internet e sono state configurate le impostazioni del computer se sono necessarie per un server proxy. ad esempio `netsh winhttp import proxy source=ie`
+  - Si dispone di una connessione Internet e sono state configurate le impostazioni del computer se sono necessarie per un server proxy. Ad esempio: `netsh winhttp import proxy source=ie`
     
 - L'utente ha sincronizzato gli account utente di Active Directory locali e i relativi indirizzi di posta elettronica con Azure Active Directory oppure con Office 365. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Per altre informazioni su questi requisiti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../prepare.md).
     
@@ -150,9 +150,9 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
         -   **Enabled**: Mantenere il valore predefinito,cioè quello selezionato in questa casella di controllo.
 
-        -   **Descrizione**: digitare **classifica tutti i file nella &lt;cartella nome&gt; cartella per Rights Management**.
+        -   **Descrizione**: digitare **classifica tutti i file nella &lt; cartella nome cartella &gt; per Rights Management**.
 
-            Sostituire * &lt;nome&gt; cartella* con il nome della cartella scelta. Ad esempio, **Classifica tutti i file nella cartella C:\FileShare per Rights Management**
+            Sostituire * &lt; nome &gt; cartella* con il nome della cartella scelta. Ad esempio, **Classifica tutti i file nella cartella C:\FileShare per Rights Management**
 
         -   **Ambito**: Aggiungere la cartella scelta. Ad esempio, **C:\FileShare**.
 
@@ -194,7 +194,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
         -   **Descrizione**: Digitare **Proteggi i file in &lt;nome cartella&gt; con Rights Management e un modello usando uno script di Windows PowerShell.**
 
-            Sostituire * &lt;nome&gt; cartella* con il nome della cartella scelta. Digitare, ad esempio, **Proteggi i file in C:\FileShare con Rights Management e un modello usando uno script di Windows PowerShell**
+            Sostituire * &lt; nome &gt; cartella* con il nome della cartella scelta. Digitare, ad esempio, **Proteggi i file in C:\FileShare con Rights Management e un modello usando uno script di Windows PowerShell**
 
         -   **Ambito**: Selezionare la cartella scelta. Ad esempio, **C:\FileShare**.
 

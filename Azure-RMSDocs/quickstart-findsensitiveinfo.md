@@ -1,32 +1,32 @@
 ---
 title: Avvio rapido - Trovare le informazioni riservate con lo scanner di Azure Information Protection
 description: Usare lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in locale.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 07/01/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: ea56aa73d4bd2e3cb6988a2df65022662562b0a4
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 82900a08a630987c52b2352725f3542e50b9c50a
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665708"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048409"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Questa guida di avvio rapido illustra come autorizzare SharePoint a consentire la scansione, quindi come installare e configurare lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server.
+Questa guida di avvio rapido illustra come autorizzare SharePoint a consentire la scansione, quindi come installare e configurare lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, come una condivisione di rete o un server SharePoint.
 
 > [!NOTE]
 > È possibile usare questa guida di avvio rapido con la versione disponibile a livello generale corrente del client Azure Information Protection (classico) o la versione disponibile a livello generale corrente del client di etichettatura unificata di Azure Information Protection che include lo scanner.
 >  
-> Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 
 È possibile completare questa configurazione in meno di 15 minuti.
 
@@ -58,7 +58,7 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 Per un test iniziale per confermare il funzionamento dello scanner:
 
-1. Creare una cartella locale nel computer, ad esempio **TestScanner** nell'unità C locale.
+1. Creare una nuova cartella in una condivisione di rete accessibile. Ad esempio, denominare questa cartella **TestScanner**.
 
 2. Creare e salvare un documento di Word in tale cartella, con il testo **Credit card: 4242-4242-4242-4242**.
 
@@ -107,7 +107,7 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
     
     Le impostazioni configurano lo scanner per eseguire un'individuazione una tantum di tutti i file nei repository di dati specificati. Questa analisi individua tutti i tipi noti di informazioni riservate e non richiede la configurazione preliminare delle etichette o delle impostazioni dei criteri di Azure Information Protection.
 
-6. Dopo aver creato e salvato il profilo, si è pronti per tornare all'opzione **Configura i repository** e specificare la cartella locale come archivio dati da analizzare.
+6. Dopo aver creato e salvato il profilo, si è pronti per tornare all'opzione **Configura i repository** e specificare la cartella di rete come archivio dati da analizzare.
     
     Sempre nel riquadro **Aggiungi un nuovo profilo** selezionare **Configura i repository** per aprire il riquadro **Repository**:
     
@@ -117,7 +117,7 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
     
     ![Aggiungere il repository di dati per lo scanner di Azure Information Protection](./media/scanner-repository-add.png)
 
-8. Nel riquadro **Repository** specificare la cartella locale creata nel primo passaggio, ad esempio `C:\TestScanner`
+8. Nel riquadro **Repository** specificare la cartella creata nel primo passaggio, ad esempio `\\server\TestScanner`
     
     Non modificare le altre impostazioni in questo riquadro, ma mantenere **Impostazione predefinita del profilo**. Questo significa che il repository dei dati eredita le impostazioni dal profilo dello scanner. 
     
@@ -133,10 +133,12 @@ A questo punto si è pronti per installare lo scanner con il profilo di scanner 
 
 1. Aprire una sessione di PowerShell con l'opzione **Esegui come amministratore**.
 
-2. Usare il comando seguente per installare lo scanner, specificando il nome del proprio computer e il nome del profilo che è stato salvato nel portale di Azure:
-    
-        Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
-    
+2. Usare il comando seguente per installare lo scanner, specificando il nome della condivisione di rete e il nome del profilo che è stato salvato nel portale di Azure:
+
+    ```ps
+    Install-AIPScanner -SqlServerInstance <your network share name>\SQLEXPRESS -Profile <profile name>
+    ```
+
     Quando richiesto, fornire le proprie credenziali per lo scanner usando il formato \<domain\user name> e quindi specificare la password. 
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Avviare l'analisi e confermarne il completamento
@@ -164,19 +166,16 @@ In Excel le prime due colonne visualizzano il repository dell'archivio dati e il
 ## <a name="scan-your-own-data"></a>Analizzare i dati personali
 
 1. Modificare il profilo dello scanner e aggiungere un nuovo repository di dati, questa volta specificando il proprio archivio dati locale da analizzare per trovare le informazioni riservate.     
-    È possibile specificare una cartella locale, una condivisione di rete (percorso UNC) o un URL di SharePoint Server per un sito o una raccolta di SharePoint. 
+    È possibile specificare una condivisione di rete (percorso UNC) o un URL di SharePoint Server per un sito o una raccolta di SharePoint. 
     
-    - Esempio per una cartella locale:
-        
-            D:\Data\Finance
-    
-    - Esempio per una condivisione di rete:
-        
-            \\NAS\HR
-    
-    - Esempio per una cartella di SharePoint:
-        
-            http://sp2016/Shared Documents
+    - **Esempio per una condivisione di rete**
+        ```sh        
+        \\NAS\HR
+        ```
+    - **Esempio per una cartella di SharePoint**
+        ```sh
+        http://sp2016/Shared Documents
+        ```
 
 2. Riavviare lo scanner: nel riquadro **Azure Information Protection - Profili** verificare che il profilo sia selezionato e quindi selezionare l'opzione **Avvia analisi**:
     
@@ -192,7 +191,9 @@ In un ambiente di produzione lo scanner viene eseguito in Windows Server, usando
 
 Per pulire le risorse, in preparazione alla distribuzione di produzione, nella sessione di PowerShell eseguire il comando seguente per disinstallare lo scanner:
 
-    Uninstall-AIPScanner
+```ps
+Uninstall-AIPScanner
+```
 
 Riavviare quindi il computer.
 

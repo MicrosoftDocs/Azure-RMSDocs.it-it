@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 12456200687cd907bb82a8b489414d3c9fa91bbe
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 6f37e0dc2132c85985135c512a6e369641a1bf01
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934926"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047049"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informazioni di riferimento su PowerShell per i modelli di protezione
 
@@ -49,8 +49,6 @@ I cmdlet che supportano la creazione e la gestione dei modelli di protezione son
 - [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)
 
 - [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
-
-
 
 ## <a name="see-also"></a>Vedere anche
 [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md)

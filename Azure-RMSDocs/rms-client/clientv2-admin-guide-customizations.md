@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9e77e09d19e19d2d062dc526927176c1645abbe0
-ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
+ms.openlocfilehash: 390f89d124d68591e8eaade67f6666d3f7c32ed4
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716146"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048868"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -26,7 +26,7 @@ ms.locfileid: "85716146"
 >
 > **I clienti con supporto Microsoft esteso per Windows 7 e Office 2010 possono anche ottenere supporto Azure Information Protection per queste versioni. Per i dettagli completi, rivolgersi al contatto di supporto.*
 >
-> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per le configurazioni avanzate che possono essere necessarie per scenari specifici o per un subset di utenti quando si gestisce il client di Azure Information Protection Unified labeling.
 
@@ -43,19 +43,27 @@ In entrambi i casi, dopo la [connessione a Office 365 Security & Compliance Cent
 
 Per un'impostazione dei criteri di etichetta, valore stringa singola:
 
-    Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
+```ps
+Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
+```
 
 Per le impostazioni dei criteri di etichetta, più valori stringa per la stessa chiave:
 
-    Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```ps
+Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```
 
 Per un'impostazione di etichetta, valore stringa singola:
 
-    Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
+```ps
+Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
+```
 
 Per le impostazioni delle etichette, più valori stringa per la stessa chiave:
 
-    Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```ps
+Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```
 
 Per rimuovere un'impostazione avanzata, utilizzare la stessa sintassi ma specificare un valore di stringa null.
 
@@ -66,19 +74,27 @@ Per rimuovere un'impostazione avanzata, utilizzare la stessa sintassi ma specifi
 
 Esempio 1: impostare un'impostazione avanzata dei criteri per le etichette per un singolo valore stringa:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```
 
 Esempio 2: impostare un'impostazione avanzata etichetta per un valore stringa singolo:
 
-    Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
+```ps
+Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
+```
 
 Esempio 3: impostare un'impostazione avanzata etichetta per più valori stringa:
 
-    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```ps
+Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```
 
 Esempio 4: rimuovere un'impostazione avanzata dei criteri di etichetta specificando un valore stringa null:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
+```
 
 #### <a name="specifying-the-identity-for-the-label-policy-or-label"></a>Specifica dell'identità per il criterio etichetta o l'etichetta
 
@@ -94,8 +110,9 @@ Per configurare le impostazioni avanzate dell'etichetta, usare il valore **nome*
 
 Se si preferisce specificare il GUID dell'etichetta, questo valore non viene visualizzato nell'interfaccia di amministrazione in cui si gestiscono le etichette. Per trovare questo valore, tuttavia, è possibile usare il comando seguente di Office 365 Security & Compliance Center di PowerShell:
 
-    Get-Label | Format-Table -Property DisplayName, Name, Guid
-
+```ps
+Get-Label | Format-Table -Property DisplayName, Name, Guid
+```
 
 #### <a name="order-of-precedence---how-conflicting-settings-are-resolved"></a>Ordine di precedenza-come vengono risolte le impostazioni in conflitto
 
@@ -156,7 +173,9 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 
 Esempio di comando di PowerShell per verificare le impostazioni dei criteri di etichetta attive per un criterio etichetta denominato "globale":
 
-    (Get-LabelPolicy -Identity Global).settings
+```ps
+(Get-LabelPolicy -Identity Global).settings
+```
 
 #### <a name="available-advanced-settings-for-labels"></a>Impostazioni avanzate disponibili per le etichette
 
@@ -173,7 +192,9 @@ Usare il parametro *AdvancedSettings* con [New-Label](https://docs.microsoft.com
 
 Esempio di comando di PowerShell per verificare le impostazioni dell'etichetta attive per un'etichetta denominata "public":
 
-    (Get-Label -Identity Public).settings
+```ps
+(Get-Label -Identity Public).settings
+```
 
 ## <a name="display-the-information-protection-bar-in-office-apps"></a>Visualizza la barra di Information Protection nelle app Office
 
@@ -189,7 +210,9 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+```
 
 ## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Esentare i messaggi di Outlook da un'etichetta obbligatoria
 
@@ -205,7 +228,9 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
+```
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
@@ -221,7 +246,9 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+```
 
 ## <a name="enable-removal-of-protection-from-compressed-files"></a>Abilitare la rimozione della protezione dai file compressi
 
@@ -235,7 +262,9 @@ Quando si configura questa impostazione, il cmdlet di [PowerShell](https://docs.
 
 Comando di PowerShell di esempio in cui è abilitato il criterio:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
+```
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Impostare un'etichetta predefinita diversa per Outlook
 
@@ -251,7 +280,9 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
+```
 
 ## <a name="change-which-file-types-to-protect"></a>Modificare i tipi di file da proteggere
 
@@ -277,15 +308,21 @@ Usare la tabella seguente per identificare il valore stringa da specificare:
 
 Esempio 1: comando di PowerShell per il client unificato per proteggere solo i tipi di file di Office e i file PDF, in cui il criterio dell'etichetta è denominato "client":
 
-    Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
+```ps
+Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
+```
 
 Esempio 2: comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
 
-    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+```ps
+Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+```
 
 Esempio 3: comando di PowerShell per lo scanner per proteggere i file con estensione txt e CSV, oltre ai file di Office e PDF, in cui il criterio dell'etichetta è denominato "scanner":
 
-    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+```ps
+Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+```
 
 Con questa impostazione è possibile modificare i tipi di file protetti, ma non è possibile modificare il livello di protezione predefinito da nativo a generico. Ad esempio, per gli utenti che eseguono il client di etichettatura unificata, è possibile modificare l'impostazione predefinita in modo che siano protetti solo i file di Office e i file PDF anziché tutti i tipi di file. Tuttavia, non è possibile modificare questi tipi di file in modo da essere protetti in modo generico con un'estensione di file. Pfile.
 
@@ -307,22 +344,30 @@ Usare la tabella seguente per identificare il valore stringa da specificare:
 
 Esempio 1: comando di PowerShell per comportarsi come il comportamento predefinito in cui Protect ". dwg" diventa ". dwg. Pfile":
 
-    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
+```ps
+Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
+```
 
 Esempio 2: comando di PowerShell per modificare tutte le estensioni PFile dalla protezione generica (DWG. Pfile) alla protezione nativa (. pdwg) quando i file sono protetti:
 
-    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
+```ps
+Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
+```
 
 Esempio 3: comando di PowerShell per impostare ". dwg" su ". pdwg" quando si usa questo servizio per proteggere questo file:
 
-    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
+```ps
+Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
+```
 
 Con questa impostazione, le estensioni seguenti (". txt", ". xml", ". bmp", ". JT", ". jpg", ". jpeg", ". jpe", ". jif", ". JFIF", ". JFI", ". png", ". TIF", ". TIFF", ". gif") diventano sempre P \<EXT> . Un'esclusione rilevante è che "ptxt" non diventa "txt. Pfile". 
 **AdditionalPPrefixExtensions** funziona solo se è abilitata la protezione di Pfile con la proprietà avanzata- [**PFileSupportedExtension**](#pfilesupportedextension) . 
 
 Ad esempio, nel caso in cui venga utilizzato il seguente comando:
 
-    Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
+```ps
+Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
+```
 
 La protezione PFile non è possibile e il valore in **AdditionalPPrefixExtensions** viene ignorato. 
 
@@ -342,7 +387,9 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
+```
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
@@ -378,12 +425,14 @@ Esempio: il nome della forma è **DC**. Per rimuovere la forma con questo nome, 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+```
 
 Quando si dispone di più di una forma di parola da rimuovere, specificare tutti i valori disponibili per la rimozione delle forme.
 
-
 ### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Usare la proprietà avanzata RemoveExternalContentMarkingInApp
+
 Questa impostazione consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti quando tali contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione di etichette. Il piè di pagina precedente, ad esempio, contiene il nome di una vecchia etichetta a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e il relativo piè di pagina.
 
 Quando il client di etichettatura unificata ottiene questa configurazione nel criterio, le intestazioni e i piè di pagina precedenti vengono rimossi o sostituiti quando il documento viene aperto nell'app di Office ed è applicata qualsiasi etichetta di riservatezza al documento.
@@ -404,7 +453,9 @@ Esempi:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+```
 
 Sarà necessaria almeno un'altra impostazione client avanzata, **ExternalContentMarkingToRemove**, per specificare il contenuto dell'intestazione o del piè di pagina e il modo in cui rimuoverlo o sostituirlo.
 
@@ -437,7 +488,9 @@ Per gli stessi criteri di etichetta specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+```
 
 #### <a name="multiline-headers-or-footers"></a>Intestazioni o piè di pagina su più righe
 
@@ -457,8 +510,9 @@ Per rimuovere il piè di pagina su più righe, creare le due voci seguenti per g
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+```
 
 #### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
 
@@ -482,7 +536,9 @@ Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```
 
 Quando si dispone di più di una forma di PowerPoint da rimuovere, specificare tutti i valori disponibili per le forme da rimuovere.
 
@@ -494,7 +550,9 @@ Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina v
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Disabilitare le autorizzazioni personalizzate in Esplora file
 
@@ -510,7 +568,9 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file
 
@@ -528,8 +588,9 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
+```
 
 ## <a name="for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments"></a>For email messages with attachments, apply a label that matches the highest classification of those attachments (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati)
 
@@ -541,10 +602,12 @@ L'allegato deve essere un file fisico e non può essere un collegamento a un fil
 
 È possibile configurare questa impostazione su **consigliato**, in modo che agli utenti venga richiesto di applicare l'etichetta selezionata al messaggio di posta elettronica con una descrizione comando personalizzabile. Gli utenti possono accettare il suggerimento o ignorarlo. In alternativa, è possibile configurare questa impostazione su **automatica**, in cui l'etichetta selezionata viene applicata automaticamente, ma gli utenti possono rimuovere l'etichetta o selezionare un'etichetta diversa prima di inviare il messaggio di posta elettronica.
 
-Nota: quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione delle autorizzazioni definite dall'utente:
-
-- Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inviare), tale etichetta è selezionata e non viene applicata la protezione in diretta al messaggio di posta elettronica.
-- Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file, tale etichetta non viene applicata al messaggio di posta elettronica e nessuna delle due è la protezione.
+> [!NOTE]
+> Quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione delle autorizzazioni definite dall'utente:
+> 
+> - Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inviare), tale etichetta è selezionata e non viene applicata la protezione in diretta al messaggio di posta elettronica.
+> - Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file, tale etichetta non viene applicata al messaggio di posta elettronica e nessuna delle due è la protezione.
+> 
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
@@ -560,7 +623,9 @@ La descrizione comando personalizzata supporta solo un solo linguaggio.
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
+```
 
 ## <a name="add-report-an-issue-for-users"></a>Aggiungere "Segnala un problema" per gli utenti
 
@@ -580,7 +645,9 @@ Valore di esempio per un indirizzo di posta elettronica: `mailto:helpdesk@contos
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
+```
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
 
@@ -611,8 +678,11 @@ Quando i messaggi popup sono per un'etichetta specifica, è possibile configurar
 
 Per i criteri selezionati, creare una o più delle seguenti impostazioni avanzate con le chiavi seguenti. Per i valori, specificare una o più etichette in base ai relativi GUID, separate da una virgola.
 
-Valore di esempio per più GUID etichetta come stringa delimitata da virgole:`dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+Valore di esempio per più GUID etichetta come stringa delimitata da virgole: 
 
+```sh
+dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f
+```
 
 - Messaggi di avviso:
     
@@ -635,11 +705,13 @@ Valore di esempio per più GUID etichetta come stringa delimitata da virgole:`dc
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
+```
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
 
@@ -673,9 +745,11 @@ Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollabora
 
 Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
+```
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per i messaggi di posta elettronica o gli allegati senza etichetta:
 
@@ -708,8 +782,9 @@ Per gli stessi criteri di etichetta, creare l'impostazione client avanzata segue
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
+```
 
 #### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>Per definire estensioni di file specifiche per i messaggi popup di avviso, giustificazione o blocco per gli allegati di posta elettronica che non hanno un'etichetta
 
@@ -729,7 +804,9 @@ Per gli stessi criteri di etichetta, immettere le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+```
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Per specificare un'azione diversa per i messaggi di posta elettronica senza allegati
 
@@ -765,7 +842,9 @@ Se non si specifica questa impostazione client, il valore specificato per Outloo
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```
 
 ## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Disabilitare l'invio di dati di controllo a Azure Information Protection Analytics
 
@@ -781,8 +860,9 @@ Per modificare questo comportamento in modo che queste informazioni non vengano 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+```
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics
 
@@ -808,7 +888,9 @@ Ad esempio:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
+```
 
 ## <a name="send-information-type-matches-to-azure-information-protection-analytics"></a>Invia corrispondenze del tipo di informazioni a Azure Information Protection Analytics
  
@@ -824,7 +906,9 @@ Per inviare le corrispondenze di contenuto quando si inviano tipi di informazion
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
+```
 
 ## <a name="limit-cpu-consumption"></a>Limita utilizzo CPU
 
@@ -864,8 +948,9 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "scanner":
 
-    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
-
+```ps
+Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
+```
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette
 
@@ -907,7 +992,9 @@ Impostazione avanzata:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
-    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
+```ps
+Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
+```
 
 #### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2: Mapping uno-a-uno per un altro nome di etichetta
 
@@ -925,7 +1012,9 @@ Impostazione avanzata:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confidential":
 
-    Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
+```ps
+Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
+```
 
 #### <a name="example-3-many-to-one-mapping-of-label-names"></a>Esempio 3: Mapping molti-a-uno di nomi di etichetta
 
@@ -943,7 +1032,9 @@ L'impostazione client avanzata è la seguente:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale":
 
-    Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
+```ps
+Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
+```
 
 #### <a name="example-4-multiple-rules-for-the-same-label"></a>Esempio 4: più regole per la stessa etichetta
 
@@ -951,7 +1042,9 @@ Quando sono necessarie più regole per la stessa etichetta, definire più valori
 
 In questo esempio, le etichette delle isole sicure denominate "Confidential" e "Secret" vengono archiviate nella proprietà personalizzata denominata **Classification**e si vuole che il client Azure Information Protection Unified Labeling applichi l'etichetta di riservatezza denominata "Confidential":
 
-    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```ps
+Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>Estendi le regole di migrazione delle etichette ai messaggi di posta elettronica
 
@@ -965,7 +1058,9 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
+```
 
 ### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Estendere le regole di migrazione delle etichette alle proprietà di SharePoint
 
@@ -981,7 +1076,9 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+```
 
 ## <a name="apply-a-custom-property-when-a-label-is-applied"></a>Applicare una proprietà personalizzata quando viene applicata un'etichetta
 
@@ -1009,7 +1106,9 @@ In seguito a questa opzione di configurazione, tutte le proprietà personalizzat
 
 Per questa configurazione è necessario specificare un'impostazione avanzata denominata **customPropertiesByLabel** per ogni etichetta di riservatezza a cui si desidera applicare le proprietà personalizzate aggiuntive. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
-`[custom property name],[custom property value]`
+```sh
+[custom property name],[custom property value]
+```
 
 > [!IMPORTANT]
 > L'uso di spazi vuoti nella stringa impedisce l'applicazione delle etichette.
@@ -1030,7 +1129,9 @@ Impostazione avanzata:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
+```ps
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
+```
 
 #### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Esempio 2: aggiungere più proprietà personalizzate per un'etichetta
 
@@ -1038,7 +1139,9 @@ Per aggiungere più di una proprietà personalizzata per la stessa etichetta, è
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale" e si vuole aggiungere una proprietà personalizzata denominata **classificazione** con il valore **generale** e una seconda proprietà personalizzata denominata **Sensitivity** con il valore **Internal**:
 
-    Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
+```ps
+Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
+```
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurare un'etichetta per applicare la protezione S/MIME in Outlook
 
@@ -1064,9 +1167,11 @@ Se si vuole che l'etichetta sia visibile solo in Outlook, configurare l'etichett
 
 Comandi di PowerShell di esempio, in cui l'etichetta è denominata "solo destinatari":
 
-    Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
+```ps
+Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 
-    Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
+Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
+```
 
 ## <a name="specify-a-default-sublabel-for-a-parent-label"></a>Specificare un'etichetta secondaria predefinita per un'etichetta padre
 
@@ -1080,7 +1185,9 @@ Quando si aggiunge un'etichetta secondaria a un'etichetta, gli utenti non posson
 
 Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confidential" e l'etichetta secondaria "All Employees" ha un GUID di 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
-    Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+```ps
+Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+```
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Attivare l'esecuzione continua della classificazione in background
 
@@ -1104,7 +1211,9 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Esempio di comando di PowerShell: 
 
-    Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
+```ps
+Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
+```
 
 ## <a name="specify-a-color-for-the-label"></a>Specificare un colore per l'etichetta
 
@@ -1122,7 +1231,9 @@ Per configurare l'impostazione avanzata per il colore di un'etichetta, immettere
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 
-    Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
+```ps
+Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
+```
 
 ## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
 
@@ -1180,7 +1291,7 @@ Istruzioni:
 
 Tenere presente che se un utente del computer seleziona l'opzione **Reimposta impostazioni** da [Guida e commenti e suggerimenti](clientv2-admin-guide.md#help-and-feedback-section), questa azione Elimina i file di criteri e rende il client inutilizzabile fino a quando non si sostituiscono manualmente i file o il client si connette a Internet e Scarica i file.
 
-Se il computer disconnesso esegue lo scanner Azure Information Protection, è necessario eseguire passaggi di configurazione aggiuntivi. Per altre informazioni, vedere [restrizione: il server dello scanner non può avere connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) dalle istruzioni per la distribuzione dello scanner.
+Se il computer disconnesso esegue lo scanner Azure Information Protection, è necessario eseguire passaggi di configurazione aggiuntivi. Per altre informazioni, vedere [restrizione: il server dello scanner non può avere connettività Internet](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) dalle istruzioni per la distribuzione dello scanner.
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
@@ -1218,15 +1329,18 @@ I comandi di PowerShell di esempio seguenti illustrano come usare questa imposta
 
 **Ignorare i file di sola lettura e archiviati**
 
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+```
 
 **Ignorare i file di sola lettura o archiviati**
 
 Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
+```
 
 > [!TIP]
 > Si consiglia di provare ad abilitare lo scanner per ignorare i file con gli attributi seguenti:
@@ -1253,10 +1367,12 @@ Per assicurarsi che il valore del proprietario NTFS venga mantenuto, impostare l
 
 Comando di PowerShell di esempio, quando il criterio dell'etichetta è denominato "globale":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
+```
 
 ## <a name="next-steps"></a>Passaggi successivi
+
 Ora che è stato personalizzato il client di etichettatura Azure Information Protection Unified, vedere le risorse seguenti per altre informazioni che potrebbero essere necessarie per supportare questo client:
 
 - [File del client e registrazione dell'utilizzo](client-admin-guide-files-and-logging.md)

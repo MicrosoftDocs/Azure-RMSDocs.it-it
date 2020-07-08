@@ -13,18 +13,18 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 797fcbbffd91882b2400fc1f5350d2782420a762
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: 6af7c9af0e954c6eb2cb2e4cb29a796d4cdfdb99
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825405"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048035"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -66,9 +66,9 @@ Se è stata attivata recentemente una sottoscrizione, i modelli predefiniti veng
 
 Se la sottoscrizione è stata ottenuta qualche tempo fa, è possibile creare i modelli predefiniti con i nomi seguenti:
 
-- **\<Nome organizzazione>-riservato**
+- **\<organization name>-Riservato**
 
-- **\<Nome organizzazione>-solo visualizzazione riservata** 
+- **\<organization name>-Solo visualizzazione riservata** 
 
 È possibile rinominare (e riconfigurare) questi modelli predefiniti quando si usa il portale di Azure.
 
@@ -105,7 +105,7 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
 
 1. Aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal), se questa operazione non è già stata eseguita. Passare quindi al riquadro **etichette Azure Information Protection** .
     
-    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
 
 2. Dall'opzione di menu **classificazioni**  >  **etichette** : nel riquadro **Azure Information Protection etichette** , espandere modelli di **protezione**, quindi individuare il modello che si desidera configurare.
     

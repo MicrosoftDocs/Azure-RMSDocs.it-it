@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cc1d3c3d64d6c8b51d355fd870c48138a6ed4d33
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: d8a9c0e81b7b5bedb1b8f41dc129f4370c827acf
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117528"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048596"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guida dell'utente: Attività eseguite in precedenza con l'applicazione RMS sharing
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Di recente è stato eseguito l'aggiornamento dall'applicazione di condivisione Microsoft Rights Management (nota anche come "app RMS sharing") al client Azure Information Protection? 
 
@@ -46,8 +46,8 @@ Per trovare un'opzione specifica dell'applicazione RMS sharing, controllare la t
 |Opzione nell'app RMS sharing|Informazioni
 |-----------|--------------------|
 |**Condividi file protetto**|Questa opzione non è più disponibile sulla barra multifunzione di Office. Invece di condividere il file direttamente dall'applicazione di Office, usare l'opzione di menu di scelta rapida **Classifica e proteggi** di Esplora file per proteggere una copia del documento con autorizzazioni personalizzate e quindi condividere il file usando il client di posta elettronica o il percorso di condivisione preferito. <br /><br /> È anche possibile allegare un documento di Office non protetto a un messaggio di posta elettronica protetto e il documento viene automaticamente protetto con le stesse restrizioni. Tuttavia, non è possibile monitorare e revocare il documento.
-|**Invia messaggio se qualcuno prova ad aprire i documenti**|Usare il sito di rilevamento dei documenti per configurare l'impostazione di notifica tramite posta elettronica preferita: individuare il documento protetto che è stato condiviso > **Impostazioni** > **Notifiche tramite posta elettronica**
-|**Consenti di revocare immediatamente l'accesso ai documenti**|Questa opzione non è più disponibile. Usare le impostazioni di protezione definite dall'amministratore che non consentono l'accesso offline. Inoltre, un amministratore può ridurre il periodo di validità della licenza d'uso per il tenant, eseguendo [set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
+|**Invia messaggio se qualcuno prova ad aprire i documenti**|Usare il sito di rilevamento dei documenti per configurare l'impostazione preferita per le notifiche di posta elettronica: individuare il documento protetto condiviso > **le impostazioni delle**  >  **notifiche di posta elettronica**
+|**Consenti di revocare immediatamente l'accesso a questi documenti**|Questa opzione non è più disponibile. Usare le impostazioni di protezione definite dall'amministratore che non consentono l'accesso offline. Inoltre, un amministratore può ridurre il periodo di validità della licenza d'uso per il tenant, eseguendo [set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
 |**Rileva utilizzo** in Outlook|Non è più possibile accedere al sito di rilevamento dei documenti da Outlook. Usare invece l'opzione **Rileva e revoca** da Word, PowerPoint, Excel o Esplora file oppure andare direttamente al [sito di rilevamento dei documenti](https://go.microsoft.com/fwlink/?LinkId=529562) usando un browser.
 
 ## <a name="next-steps"></a>Passaggi successivi

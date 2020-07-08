@@ -13,18 +13,18 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7eb260815def6727fcdbd393fd9453ac89cb8baf
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 956eccb942893d6d8850185449118f4027895a81
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960738"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047508"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guida dell'utente: Rilevare i documenti e revocarne l'accesso quando si usa Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Dopo avere protetto i documenti con Azure Information Protection, è possibile tenere traccia del modo in cui tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti se gli utenti non dovranno più essere in grado di leggerli. A tale scopo usare il **sito di rilevamento dei documenti**. È possibile accedere al sito da computer Windows, Mac e anche da tablet e telefoni.
 
@@ -32,13 +32,13 @@ Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento
 
 Azioni che è possibile eseguire nel sito di rilevamento dei documenti:
 
-- Se è necessario interrompere la condivisione di un documento: 
+- Se è necessario interrompere la condivisione di un documento, 
     
     - Fare clic su **Revoca l'accesso**. Rilevare il periodo di tempo per il quale documento continua a essere disponibile. Decidere se comunicare con un messaggio personalizzato che si revoca l'accesso al documento, in precedenza condiviso. Quando si revoca un documento condiviso il documento non viene eliminato, ma gli utenti autorizzati non possono più aprirlo:
         
         ![Icona per la revoca dell'accesso nel sito di rilevamento dei documenti](../media/tracking-site-revoke-access-icon.png)
         
-- Se si desidera esportare in Excel: 
+- Per esportare in Excel, 
     
     - Fare clic su **Esporta in CSV**, in modo da poter modificare i dati e creare visualizzazioni e grafici personalizzati:
          
@@ -73,7 +73,7 @@ Per le applicazioni di Office, Word, Excel e PowerPoint:
 
 1. Aprire il documento protetto di cui tenere traccia o da revocare.
 
-2. Nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Rileva e revoca**:
+2. Nella scheda **Home** , nel gruppo **protezione** dati, fare clic su **Proteggi**  >  **rilevamento e revoca**:
 
     ![Opzione Rileva utilizzo](../media/track-usage-callout.png)
     

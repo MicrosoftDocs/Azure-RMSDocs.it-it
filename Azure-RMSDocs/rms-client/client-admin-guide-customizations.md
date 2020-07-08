@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 58053a5ee3dae935a3d160f14bc610d2487e03d2
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: a038d70cfbeb75f4bcabbfab0391582cdb0b5e87
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747048"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047372"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -146,7 +146,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **ReportAnIssueLink**
 
-- Valore: ** \< stringa http>**
+- Valore**\<HTTP string>**
 
 Valore di esempio per un sito Web: `https://support.contoso.com`
 
@@ -198,9 +198,9 @@ Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP 
     |Policy1.3.msip |versione 1.8 - 1.29|
     |Policy1.4.msip |versione 1.32 e successive|
     
-2. Rinominare il file identificato in **policy. MSIP**, quindi copiarlo nella cartella **%LocalAppData%\Microsoft\MSIP** in computer in cui è installato il client di Azure Information Protection. 
+2. Rinominare il file identificato **Policy.msip**, quindi copiarlo nella cartella **%LocalAppData%\Microsoft\MSIP** nei computer in cui è installato il client di Azure Information Protection. 
 
-Se il computer disconnesso esegue la versione corrente di GA dello scanner di Azure Information Protection, è necessario eseguire ulteriori operazioni di configurazione. Per altre informazioni, vedere [restrizione: il server dello scanner non può avere connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) dalle istruzioni per la distribuzione dello scanner.
+Se il computer disconnesso esegue la versione corrente di GA dello scanner di Azure Information Protection, è necessario eseguire ulteriori operazioni di configurazione. Per altre informazioni, vedere [restrizione: il server dello scanner non può avere connettività Internet](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) nei prerequisiti per la distribuzione dello scanner.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
@@ -331,7 +331,7 @@ Le azioni risultanti dai messaggi popup vengono registrate nel registro eventi d
 
 Voce dell'evento di esempio di un messaggio di giustificazione:
 
-```
+```ps
 Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
@@ -342,6 +342,7 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
+
 Le sezioni seguenti contengono istruzioni di configurazione per ogni impostazione client avanzata, che possono essere visualizzate in modo autonomo con [esercitazione: configurare Azure Information Protection per controllare la sovracondivisione delle informazioni mediante Outlook](../infoprotect-oversharing-tutorial.md).
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
@@ -357,19 +358,19 @@ Valore di esempio per più ID etichetta sotto forma di stringa delimitata da vir
     
     - Chiave: **OutlookWarnUntrustedCollaborationLabel**
     
-    - Valore: \< **ID etichetta, delimitati da virgole**>
+    - Valore: \<**label IDs, comma-separated**>
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Valore: \< **ID etichetta, delimitati da virgole**>
+    - Valore: \<**label IDs, comma-separated**>
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockUntrustedCollaborationLabel**
     
-    - Valore: \< **ID etichetta, delimitati da virgole**>
+    - Valore: \<**label IDs, comma-separated**>
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
 
@@ -385,19 +386,19 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Chiave: **OutlookWarnTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore**\<**domain names, comma separated**>**
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore**\<**domain names, comma separated**>**
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore**\<**domain names, comma separated**>**
 
 Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
@@ -440,7 +441,7 @@ In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la 
 
 - Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore: **\<** estensioni di file per la visualizzazione dei messaggi, delimitati da virgole**>**
+- Valore**\<**file name extensions to display messages, comma separated**>**
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Per specificare un'azione diversa per i messaggi di posta elettronica senza allegati
 
@@ -489,7 +490,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **OutlookDefaultLabel**
 
-- Valore: \<**ID etichetta**> o **Nessuna**
+- Valore: \<**label ID**> o **None**
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurare un'etichetta per applicare la protezione S/MIME in Outlook
 
@@ -579,7 +580,7 @@ Se è necessario che il client ripristini il comportamento delle versioni preced
 
 Questa impostazione, ad esempio, può essere necessaria per tutti gli utenti se si usa un lettore di file PDF che non supporta lo standard ISO per la crittografia dei file PDF. Oppure può essere necessario configurare questa impostazione per alcuni utenti durante l'introduzione graduale di un lettore di file PDF che supporta il nuovo formato. Un altro possibile motivo per l'uso di questa impostazione è la necessità di aggiungere protezione a documenti PDF firmati. È possibile aggiungere ulteriore protezione ai documenti PDF con il formato con estensione ppdf, poiché questa protezione viene implementata come wrapper per i file. 
 
-Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner. Inoltre, lo scanner non proteggerà più i documenti PDF per impostazione predefinita. Se si vuole che i documenti PDF siano protetti dallo scanner quando EnablePDFv2Protection è impostata su False, è necessario [modificare il Registro di sistema](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected).
+Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner. Inoltre, lo scanner non proteggerà più i documenti PDF per impostazione predefinita. Se si desidera che i documenti PDF siano protetti dallo scanner quando **EnablePDFv2Protection** è impostato su **false,** è necessario [modificare il registro di sistema](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect).
 
 Per altre informazioni sulla nuova crittografia PDF, vedere il post del blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
 
@@ -597,7 +598,9 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
 
 1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. Ad esempio:
     
-        Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+    ```ps
+    Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+    ```
 
 2. Nell'output, prendere nota dei valori dei parametri seguenti:
     
@@ -608,12 +611,16 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
 3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
-    
-        Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+
+    ```ps    
+    Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    ```
 
 4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio:
     
-        Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+    ```ps    
+    Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+    ```
 
 Il file mantiene l'estensione pdf ma viene classificato come in precedenza ed è protetto tramite lo standard ISO per la crittografia PDF.
 
@@ -673,7 +680,7 @@ Specificare un nome di regola di migrazione a propria scelta. Usare un nome desc
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservato** e ha l'ID etichetta **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -690,7 +697,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservatezza elevata** e ha l'ID etichetta **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -708,7 +715,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "generale" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Generale** e ha l'ID etichetta **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -736,7 +743,7 @@ Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti
 
 - Chiave: **RemoveExternalContentMarkingInApp**
 
-- Valore: \< **tipi di applicazione di Office WXP**> 
+- Valore: \<**Office application types WXP**> 
 
 Esempi:
 
@@ -769,7 +776,7 @@ Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi divers
 
 - Chiave: **ExternalContentMarkingToRemove**
 
-- Value: \< **stringa di cui trovare la corrispondenza, definita come espressione regolare**> 
+- Valore: \<**string to match, defined as regular expression**> 
 
 #### <a name="multiline-headers-or-footers"></a>Intestazioni o piè di pagina su più righe
 
@@ -807,7 +814,7 @@ Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, 
 
 - Chiave: **PowerPointShapeNameToRemove**
 
-- Valore: \< **nome della forma di PowerPoint**> 
+- Valore: \<**PowerPoint shape name**> 
 
 Quando si hanno più forme di PowerPoint da rimuovere, creare tante chiavi **PowerPointShapeNameToRemove** quante sono le forme da rimuovere. Per ogni voce specificare il nome della forma da rimuovere.
 
@@ -834,7 +841,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave 1: **SyncPropertyName**
 
-- Chiave 1 valore: \< **nome proprietà**> 
+- Valore chiave 1:\<**property name**> 
 
 - Chiave 2: **SyncPropertyState**
 
@@ -864,9 +871,9 @@ Se si imposta questa impostazione client avanzata, le informazioni di controllo 
 
 Ad esempio:
 
-- Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
+- Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso Financial.docx con etichetta **Confidential \ Sales**.
 
-- Senza questa impostazione, è possibile notare che Financial. docx contiene 6 numeri di carta di credito.
+- Senza questa impostazione, è possibile osservare che Financial.docx contiene 6 numeri di carta di credito.
     
     - Se si abilita [l'analisi più approfondita nei dati sensibili](../reports-aip.md#content-matches-for-deeper-analysis), sarà possibile vedere anche quali sono i numeri di carta di credito.
 
@@ -893,7 +900,7 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 - Chiave: **ScannerConcurrencyLevel**
 
-- Valore: ** \< numero di thread simultanei>**
+- Valore**\<number of concurrent threads>**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Disabilitare il livello di integrità basso per lo scanner
 
@@ -901,7 +908,7 @@ Questa configurazione usa un'[impostazione avanzata del client](#how-to-configur
 
 Per impostazione predefinita, lo scanner di Azure Information Protection viene eseguito con un livello di integrità basso. Questa impostazione offre un maggiore isolamento di sicurezza, ma influisce negativamente sulle prestazioni. Il livello di integrità basso è appropriato se si esegue lo scanner con un account con privilegi (ad esempio un account amministratore locale) in quanto questa impostazione aiuta a proteggere il computer che esegue lo scanner.
 
-Quando, tuttavia, l'account del servizio che esegue lo scanner ha solo i diritti indicati nei [prerequisiti dello scanner](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), il livello di integrità basso non è necessario e non è consigliato perché influisce negativamente sulle prestazioni. 
+Tuttavia, quando l'account del servizio che esegue lo scanner dispone solo dei diritti documentati nei prerequisiti per la [distribuzione dello scanner](../deploy-aip-scanner-prereqs.md), il livello di integrità basso non è necessario e non è consigliato perché influisce negativamente sulle prestazioni. 
 
 Per altre informazioni sui livelli di integrità di Windows, vedere [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx) (Informazioni sul meccanismo di integrità di Windows)
 
@@ -921,7 +928,7 @@ Se si verifica questo problema di timeout a causa di file di grandi dimensioni, 
 
 - Chiave: **ContentExtractionTimeout**
 
-- Valore: ** \< hh: min: sec>**
+- Valore**\<hh:min:sec>**
 
 Il tipo di file può influire sul tempo necessario per eseguire la scansione di un file. Tempi di analisi di esempio:
 
@@ -945,7 +952,7 @@ Per modificare il periodo di timeout per l'elaborazione dei file, configurare l'
 
 - Chiave: **FileProcessingTimeout**
 
-- Valore: ** \< hh: min: sec>**
+- Valore**\<hh:min:sec>**
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
@@ -957,7 +964,7 @@ Per modificare il livello di registrazione per questi file, configurare l'impost
 
 - Chiave: **LogLevel**
 
-- Valore: ** \<>livello di registrazione**
+- Valore**\<logging level>**
 
 Impostare il livello di registrazione su uno dei valori seguenti:
 

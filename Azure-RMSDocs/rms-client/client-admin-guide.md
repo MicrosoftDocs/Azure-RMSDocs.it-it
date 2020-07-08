@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 751add440b97259d6c897af385581f4b5efb9d2f
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: a913dfbd6e9e992ee90179a59f7351345d1476e1
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665501"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048918"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -61,7 +61,7 @@ Il client Azure Information Protection include gli elementi seguenti:
 
 - Un modulo di PowerShell per applicare e rimuovere etichette di classificazione e la protezione dei file. 
     
-    Questo modulo include i cmdlet per installare e configurare lo [scanner Azure Information Protection](../deploy-aip-scanner.md) eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file in archivi dati come le condivisioni di rete e le raccolte di SharePoint Server.
+    Questo modulo include [i cmdlet per installare e configurare il Azure Information Protection scanner](../deploy-aip-scanner-configure-install.md#list-of-cmdlets-for-the-scanner), che viene eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file in archivi dati come le condivisioni di rete e le raccolte di SharePoint Server.
 
 - Il client Rights Management che comunica con Azure Rights Management (Azure RMS) o Active Directory Rights Management Services (AD RMS).
 
@@ -210,7 +210,7 @@ A partire dalla versione 1.48.204.0, il processo di aggiornamento delle versioni
 
 Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabile usare la procedura seguente:
 
-1. Usare il portale di Azure per creare un nuovo profilo di scanner che include le impostazioni per lo scanner e i repository di dati con le eventuali impostazioni necessarie. Per informazioni su questo passaggio, vedere la sezione [configurare lo scanner nella sezione portale di Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) dalle istruzioni per la distribuzione dello scanner.
+1. Usare il portale di Azure per creare un nuovo profilo di scanner che include le impostazioni per lo scanner e i repository di dati con le eventuali impostazioni necessarie. Per informazioni su questo passaggio, vedere [configurare lo scanner nella portale di Azure](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) dalle istruzioni per la distribuzione dello scanner.
     
     Se il computer che esegue lo scanner è disconnesso da Internet, è comunque necessario eseguire questo passaggio. Quindi, dal portale di Azure, usare l'opzione **Esporta** per esportare il profilo dello scanner in un file.
 

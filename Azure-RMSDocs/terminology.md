@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 4168a75bebb9fb34ce4ba36c0d10b4b78c67dac4
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 24bc2db20b7dc469a8c6fb3d39e2f399be12c0c6
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747114"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048562"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -41,7 +41,7 @@ AzureInformationProtection|Il nome del modulo di PowerShell per il client di Azu
 Client Azure Information Protection (classico)|Talvolta abbreviato in *client classico*.<br /><br />Lato client originale di Azure Information Protection che consente a utenti, amministratori e servizi di usare le etichette e le impostazioni dei criteri di Azure Information Protection. Ora viene sostituito con il client di Azure Information Protection Unified labeling.|
 |Etichetta per Azure Information Protection|Elemento che applica sempre un valore di classificazione a documenti e a messaggi di posta elettronica e può anche proteggerli. Quando viene applicata un'etichetta, le informazioni dell'etichetta vengono archiviate nei metadati per le applicazioni e i servizi in modo da consentire la lettura ed eventualmente l'uso.|
 |Criteri di Azure Information Protection|Configurazione definita dall'amministratore per i client e i servizi che usano le etichette e le impostazioni dei criteri di Azure Information Protection.|
-|Scanner di Azure Information Protection|Servizio eseguito in Windows Server che consente di individuare, classificare e proteggere i documenti in cartelle locali, condivisioni di rete e siti e raccolte di SharePoint Server.|
+|Scanner di Azure Information Protection|Un servizio che viene eseguito in Windows Server e consente di individuare, classificare e proteggere documenti in condivisioni di rete e siti e librerie di SharePoint Server.|
 |Client per l'etichettatura unificata di Azure Information Protection|Talvolta abbreviato in *client con etichetta unificata*.<br /><br />Il client per i computer Windows che consente a utenti, amministratori e servizi di usare le etichette di riservatezza e le impostazioni dei criteri di etichetta da Office 365 Security & Compliance Center, il Centro sicurezza Microsoft 365 e Microsoft 365 Compliance Center. Sostituisce il client di Azure Information Protection (classico).|
 |Azure RMS|Vedere *Rights Management di Microsoft Azure*.|
 |Visualizzatore di Azure Information Protection|App eseguita su computer Windows e dispositivi mobili, per visualizzare i file protetti.|

@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 00ddb823fca83f09d40ad30c8242b3a8e5ce71a8
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: f4bb3bcf13def75a90945757203a3b2cd5d05d5d
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483049"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047695"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -47,7 +47,7 @@ Quando le applicazioni client devono scaricare i modelli (inizialmente o aggiorn
 Modificando il Registro di sistema nei computer che eseguono app di Office 365, Office 2019, Office 2016 oppure Office 2013 è possibile modificare la pianificazione automatica in modo che i modelli modificati vengano aggiornati nei computer più frequentemente rispetto al relativo valore predefinito. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
 
 > [!WARNING]
-> L'uso inappropriato dell'editor del Registro di sistema può causare seri problemi che potrebbero richiedere la reinstallazione del sistema operativo. Microsoft non garantisce che sia possibile risolvere i problemi derivanti da un uso non corretto dell'editor del Registro di sistema. L'uso dell'editor del Registro di sistema è di sola responsabilità dell'utente.
+> L'errato utilizzo dell'editor del Registro di sistema può provocare gravi problemi che potrebbero richiedere la reinstallazione del sistema operativo. La risoluzione dei problemi derivanti dall'errato utilizzo dell'editor del Registro di sistema non è garantita. L'uso dell'editor del Registro di sistema è di sola responsabilità dell'utente.
 
 ### <a name="to-change-the-automatic-schedule"></a>Per modificare la pianificazione automatica
 
@@ -77,7 +77,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
 1. Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime**. Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per eliminare i dati con questo valore di registro.
 
-   **Percorso del Registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
+   **Percorso del registro di sistema:** HKEY_CURRENT_USER \software\classes\local Settings\Software\Microsoft\MSIPC \\ < *MicrosoftRMS_FQDN*> \Template \\ < *user_alias*>
 
    **Tipo:** REG_SZ
 
@@ -96,7 +96,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
    > 
    > **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-2. Eliminare la seguente cartella e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**
+2. Eliminare la cartella seguente e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**
 
 3. Riavviare le applicazioni di Office e le istanze di Esplora file.
 
@@ -106,7 +106,9 @@ In queste versioni di Office per Mac, i modelli vengono aggiornati quando si apr
 
 1. Aprire il terminale e immettere il comando seguente:
     
-        defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```sh
+    defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```
 
 2. Riavviare Outlook per Mac.
 

@@ -12,18 +12,18 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2219c1267d9c271106a7605f1947990bd1ea21a6
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: d3cdbbeb2b2cd81036c9d736d63fd467ea7770c2
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482675"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046217"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione per i client
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
->[!NOTE] 
+>[!NOTE]
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 I computer che eseguono Office 2010 richiedono il client di Azure Information Protection (classico) o il Azure Information Protection client di etichetta unificata per l'autenticazione al servizio di Azure Information Protection.
@@ -50,7 +50,7 @@ Tuttavia, se si vuole installare e testare rapidamente questi client per un sing
 
 ## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>App Azure Information Protection per iOS e Android: installazione e gestione
 
-Per installare il Visualizzatore app Azure Information Protection per iOS e Android, usare i collegamenti nella [pagina Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). Nessuna configurazione richiesta.
+Per installare il Visualizzatore app Azure Information Protection per iOS e Android, usare i collegamenti nella [pagina Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). Non è richiesta alcuna configurazione.
 
 > [!NOTE]
 > Per i computer Mac, i collegamenti contenuti in questa pagina consentono di scaricare l'app RMS sharing. Questi computer non supportano il client Azure Information Protection.
@@ -59,12 +59,12 @@ Per installare il Visualizzatore app Azure Information Protection per iOS e Andr
 
 Poiché l'app visualizzatore Azure Information Protection usa il Software Development Kit di Microsoft Intune app, quando i dispositivi iOS e Android sono registrati da Intune, è possibile distribuire e gestire l'app visualizzatore Azure Information Protection per questi dispositivi:
 
-1. [Aggiungere l'app Azure Information Protection a Intune](/intune/apps-add) 
+1. [Aggiungere l'app Azure Information Protection a Intune](/intune/apps-add)
 
 2. Eseguire una o entrambe le azioni seguenti:
-    
+
     - Distribuire l'app [assegnandola agli utenti](/intune/apps-deploy)
-    
+
     - Gestire l'app usando [criteri di protezione delle app](/intune/app-protection-policies)
 
 Informazioni aggiuntive per l'aggiunta dell'app Azure Information Protection a Intune:
@@ -72,8 +72,10 @@ Informazioni aggiuntive per l'aggiunta dell'app Azure Information Protection a I
 - Per iOS: cercare e aggiungere l'app da Intune.
 
 - Per Android: quando si aggiunge l'app, usare l' **URL AppStore**seguente:
-        
-        https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
+
+    ```md
+    https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
+    ```
 
 Quando l'app Azure Information Protection viene configurata per un criterio di protezione delle app per dispositivi Android, oltre ad aprire documenti di testo, immagini e PDF protetti, quest'app può anche aprire file audio e video. Per altre informazioni, vedere [Visualizzare file multimediali con l'app Azure Information Protection](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 

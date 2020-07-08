@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a0a0f5e712c0313b281fc2bafa64719ed61d2e03
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 8057d0599cdd1f01dc32adb6b7e20b359f9fea0e
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249862"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048256"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -61,28 +61,27 @@ Per i documenti, i contrassegni visivi vengono applicati come segue:
 
 - Quando a un documento viene applicata un'etichetta usando Esplora file, PowerShell o lo scanner di Azure Information Protection, i contrassegni visivi non vengono applicati subito, ma vengono applicati dal client di Azure Information Protection quando tale documento viene aperto in un'app di Office e salvato per la prima volta.
 
-    L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in Microsoft SharePoint, OneDrive for Work o School oppure OneDrive per Home: quando il salvataggio automatico è on, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background. 
+    L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in Microsoft SharePoint, OneDrive for Work o School oppure OneDrive per Home: quando il salvataggio automatico è on, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background.
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
 
 Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etichetta.
 
-1. Aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal), se questa operazione non è già stata eseguita. Quindi passare al riquadro **Azure Information Protection**. 
-    
-    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
+1. Aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal), se questa operazione non è già stata eseguita. Quindi passare al riquadro **Azure Information Protection**.
+
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
 
 2. Dall'opzione di menu **classificazioni**  >  **etichette** : nel riquadro **Azure Information Protection etichette** selezionare l'etichetta che contiene i contrassegni visivi che si desidera aggiungere o modificare.
 
 3. Nel riquadro **etichetta** , nella sezione **Imposta contrassegno visivo (ad esempio intestazione o piè** di pagina), configurare le impostazioni per i contrassegni visivi desiderati e quindi fare clic su **Salva**:
-    
-    - Per configurare un'intestazione: per **Documents with this label have a header** (I documenti con questa etichetta hanno un'intestazione) selezionare **Sì** se si vuole usare un'intestazione, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per l'intestazione.
-    
-    - Per configurare un piè di pagina: per **Documents with this label have a footer** (I documenti con questa etichetta hanno un piè di pagina) selezionare **Sì** se si vuole usare un piè di pagina, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per il piè di pagina.
-    
-    - Per configurare una filigrana: per **Documents with this label have a watermark** (I documenti con questa etichetta hanno una filigrana) selezionare **Sì** se si vuole usare una filigrana, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per la filigrana.
-    
-Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
+    - Per configurare un'intestazione: per **Documents with this label have a header** (I documenti con questa etichetta hanno un'intestazione) selezionare **Sì** se si vuole usare un'intestazione, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per l'intestazione.
+
+    - Per configurare un piè di pagina: per **Documents with this label have a footer** (I documenti con questa etichetta hanno un piè di pagina) selezionare **Sì** se si vuole usare un piè di pagina, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per il piè di pagina.
+
+    - Per configurare una filigrana: per **Documents with this label have a watermark** (I documenti con questa etichetta hanno una filigrana) selezionare **Sì** se si vuole usare una filigrana, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per la filigrana.
+
+Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
 ## <a name="using-variables-in-the-text-string"></a>Uso di variabili nella stringa di testo
 
@@ -96,14 +95,14 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${Item.Location}` per il percorso e il nome di file dei documenti e l'oggetto per i messaggi di posta elettronica. Ad esempio: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica, in base al nome utente connesso a Windows. Ad esempio: rsimone 
+- `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica, in base al nome utente connesso a Windows. Ad esempio: rsimone
 
-- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). ad esempio rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). Ad esempio: rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
 > [!NOTE]
->Questa sintassi distingue tra maiuscole e minuscole. Se ad esempio si specifica la stringa `Document: ${Item.Name}  Classification: ${Item.Label}` per il piè di pagina dell'etichetta **generale** , il testo del piè di pagina applicato a un documento denominato Project. docx sarà **documento: Project. docx classificazione: generale**.
+>Questa sintassi distingue tra maiuscole e minuscole. Se ad esempio si specifica la stringa `Document: ${Item.Name}  Classification: ${Item.Label}` per il piè di pagina dell'etichetta **generale** , il testo del piè di pagina applicato a un documento denominato project.docx sarà **documento: project.docx classificazione: generale**.
 
 <!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
@@ -117,7 +116,9 @@ Per impostazione predefinita, i contrassegni visivi specificati vengono applicat
 
 Usare la sintassi seguente:
 
-    ${If.App.<application type>}<your visual markings text> ${If.End}
+```ps
+${If.App.<application type>}<your visual markings text> ${If.End}
+```
 
 > [!NOTE]
 >La distinzione in questa istruzione supporta la distinzione tra maiuscole e minuscole.
@@ -125,21 +126,21 @@ Usare la sintassi seguente:
 Esempi:
 
 - **Impostare il testo dell'intestazione solo per i documenti di Word:**
-    
+
     `${If.App.Word}This Word document is sensitive ${If.End}`
-    
+
     Solo nelle intestazioni dei documenti di Word, l'etichetta applica il testo dell'intestazione "Questo documento di Word è sensibile". Non viene applicato alcun testo dell'intestazione ad altre applicazioni di Office.
 
 - **Impostare il testo a piè di pagina per Word, Excel e Outlook e testo a piè di pagina diverso per PowerPoint:**
-    
+
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
-    
+
     In Word, Excel e Outlook, l'etichetta applica il testo a piè di pagina "Questo contenuto è riservato". In PowerPoint,l'etichetta applica il testo a piè di pagina "Questa presentazione è riservata".
 
 - **Impostare il testo della filigrana specifico per Word e PowerPoint e quindi il testo della filigrana per Word, Excel e PowerPoint:**
-    
+
     `${If.App.WP}This content is ${If.End}Confidential`
-    
+
     In Word e PowerPoint l'etichetta applica il testo della filigrana "Questo contenuto è riservato". In Excel, l'etichetta applica il testo della filigrana "Riservato". In Outlook, l'etichetta non applica alcun testo della filigrana perché le filigrane come contrassegni visivi non sono supportate per Outlook.
 
 > [!NOTE]
@@ -147,17 +148,15 @@ Esempi:
 
 ### <a name="setting-the-font-name"></a>Impostazione del nome del tipo di carattere
 
-Il tipo di carattere predefinito per le intestazioni, i piè di pagina e il testo della filigrana è Calibri. Se si specifica il nome di un tipo di carattere alternativo, verificare che sia disponibile nei dispositivi client che applicheranno i contrassegni visivi. 
-
+Il tipo di carattere predefinito per le intestazioni, i piè di pagina e il testo della filigrana è Calibri. Se si specifica il nome di un tipo di carattere alternativo, verificare che sia disponibile nei dispositivi client che applicheranno i contrassegni visivi.
 Se il tipo di carattere specificato non è disponibile, il client torna a usare il tipo di carattere Calibri.
 
 ### <a name="setting-the-font-color"></a>Impostazione del colore del carattere
 
-È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#40e0d0** è il valore esadecimale RGB per il turchese. 
+È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#40e0d0** è il valore esadecimale RGB per il turchese.
 
 Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) pagina della documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
-

@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee94f0a4966ce16ae8b87f23bf4a9a734cc015a0
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 68eb4e9518ef43c314dd21d1c8713f7c0c0dee69
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403927"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048375"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
@@ -50,7 +50,9 @@ Se si esegue la migrazione da Active Directory Rights Management Services (AD RM
 
 Per selezionare una chiave diversa come chiave del tenant attiva per Azure Information Protection, usare il cmdlet [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) del modulo AIPService. Per facilitare l'identificazione della chiave da usare, usare il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . È possibile identificare la chiave predefinita creata automaticamente per il tenant di Azure Information Protection eseguendo il comando seguente:
 
-    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```ps
+(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```
 
 Per modificare la topologia di chiave in modo che venga gestita dal cliente (BYOK), vedere [Implementazione dello scenario BYOK per la chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
@@ -72,16 +74,18 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 - Il Servizio Supporto Tecnico Clienti Microsoft invia la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password. L'estensione del file è **tpd**. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
 
-    ```
+    ```ps
     AadrmTpd.exe -createkey
     ```
+
     In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Rispondere al messaggio di posta elettronica ricevuto dal Servizio Supporto Tecnico Clienti Microsoft allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio,
+    Rispondere al messaggio di posta elettronica ricevuto dal Servizio Supporto Tecnico Clienti Microsoft allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio:
 
-    ```
+    ```ps
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
+
     L'output del comando deve essere costituito da due file, ovvero il file con estensione tpd protetto da password e un file che ne contiene la password. I file hanno un nuovo GUID, ad esempio:
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
@@ -94,10 +98,10 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 Dopo aver ricevuto la chiave del tenant, tenerla in posizione sicura per evitare che utenti malintenzionati possano accedere e decrittografare tutti i documenti protetti dalla chiave.
 
-Se si esporta della chiave del tenant perché non si vuole più usare Azure Information Protection, come procedura consigliata disattivare subito il servizio Azure Rights Management dal tenant di Azure Information Protection. Non aspettare di effettuare questa operazione dopo aver ricevuto la chiave del tenant, in quanto questa precauzione consente di ridurre le conseguenze dovute all'accesso alla chiave del tenant da parte di utenti malintenzionati. Per istruzioni, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md).
+Se si esporta della chiave del tenant perché non si vuole più usare Azure Information Protection, come procedura consigliata disattivare subito il servizio Azure Rights Management dal tenant di Azure Information Protection. Non aspettare di effettuare questa operazione dopo aver ricevuto la chiave del tenant, in quanto questa precauzione consente di ridurre le conseguenze dovute all'accesso alla chiave del tenant da parte di utenti malintenzionati. Per istruzioni, vedere [rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="respond-to-a-breach"></a>Rispondere a una violazione di sicurezza
-Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nell'attuale tecnologia delle chiavi o nella lunghezza e negli algoritmi correlati alle chiavi attuali.
+Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nella tecnologia attuale della chiave o nella lunghezza e negli algoritmi correlati alle chiavi attuali.
 
 Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influiscono sulle risorse, Microsoft invierà una notifica tramite posta elettronica agli amministratori globali del tenant.
 
@@ -105,8 +109,7 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 |Descrizione evento imprevisto|Risposta probabile|
 |------------------------|-------------------|
-|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere la sezione [Reimpostare la chiave del tenant](#rekey-your-tenant-key) in questo articolo.|
+|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere la sezione [rekey your tenant Key](#rekey-your-tenant-key) in questo articolo.|
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La reimpostazione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a reimpostare la propria chiave del tenant.|
-
-
+| | |

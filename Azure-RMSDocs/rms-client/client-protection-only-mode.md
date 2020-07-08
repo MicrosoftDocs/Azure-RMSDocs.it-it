@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f2a33378a29e5dad9ef3ca3c848cd440d89d8147
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 94fc1ee1613151011fe574ff45bb867f7b6a2d91
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960424"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047338"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guida dell'utente: Modalità di sola protezione per il client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Quando il client Azure Information Protection non dispone di etichette per classificare i documenti e i messaggi di posta elettronica, viene eseguito in modalità di **sola protezione**. In questa modalità, ad esempio, potrebbe essere visualizzato quanto segue quando si usa Esplora file, si fa clic con il pulsante destro del mouse e si sceglie **Classifica e proteggi**:
 
@@ -53,13 +53,13 @@ La modalità di sola protezione viene eseguita negli scenari seguenti:
 
 ## <a name="limitations-for-protection-only-mode"></a>Limitazioni per la modalità di sola protezione
 
-- Nelle app di Office la barra di Azure Information Protection non viene visualizzata. Quando si fa clic su **Proteggi** > **Mostra barra**, questa opzione di menu non è disponibile.
+- Nelle app di Office la barra di Azure Information Protection non viene visualizzata. Quando si fa clic su **Proteggi**  >  **Mostra barra**, questa opzione di menu non è disponibile.
 
 - Quando si usa la finestra di dialogo **Classifica e proteggi - Azure Information Protection** con Esplora file, non vengono visualizzate le etichette per la classificazione. Al contrario, come illustrato nell'immagine precedente, viene visualizzata un'opzione per selezionare i modelli di Rights Management (RMS). 
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Attività supportate per la modalità di sola protezione
 
-- Proteggere documenti e messaggi di posta elettronica (e rimuovere la protezione) dalle app di Office usando la funzionalità Information Rights Management (IRM) di Office. Ad esempio: fare clic su **File** > **Info** > **Proteggi documento** > **Limita accesso**. Per altre informazioni, vedere [Uso della protezione delle informazioni con Office 365, Office 2019, Office 2016 o Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
+- Proteggere (e rimuovere la protezione) documenti e messaggi di posta elettronica dalle app di Office, usando la funzionalità Office Information Rights Management (IRM): ad esempio: fare clic su **file**  >  **informazioni**  >  **Proteggi documento**  >  **limita accesso**. Per altre informazioni, vedere [Uso della protezione delle informazioni con Office 365, Office 2019, Office 2016 o Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
 
 - Proteggere i file (e rimuovere la protezione) usando Esplora file di Windows: fare clic con il pulsante destro del mouse su uno o più file o su una cartella > **Classifica e proteggi**. Per applicare la protezione configurata dall'amministratore, nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Seleziona modello** e scegliere uno dei modelli disponibili.
 

@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b17f87f569b613a1583b82060b05bcbdeb943284
-ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
+ms.openlocfilehash: 5e1bdf52fd8d73231e9084d36d5d648a2e1ee88c
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2020
-ms.locfileid: "80670213"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048630"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -66,34 +66,36 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 > 
 > Eseguire tutti questi passaggi se tutti gli URL di gestione licenze di tutti i cluster di AD RMS non vengono visualizzati nel parametro *LicensingLocation* quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
 
-1. In ogni Exchange Server trovare la cartella seguente ed eliminare tutte le voci incluse: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
+1. In ogni Exchange Server individuare la cartella seguente ed eliminare tutte le voci nella cartella: **\programdata\microsoft\drm\server\s-1-5-18**
 
 2. Da uno dei server Exchange, eseguire i comandi di PowerShell seguenti per assicurarsi che gli utenti saranno in grado di leggere i messaggi di posta elettronica protetti con Azure Rights Management.
 
-    Prima di eseguire questi comandi, sostituire *\<URL tenant>* con l'URL del servizio Azure Rights Management della propria organizzazione.
+    Prima di eseguire questi comandi, sostituire con l'URL del servizio Rights Management di Azure *\<Your Tenant URL>* .
 
-        $irmConfig = Get-IRMConfiguration
-        $list = $irmConfig.LicensingLocation 
-        $list += "<Your Tenant URL>/_wmcs/licensing"
-        Set-IRMConfiguration -LicensingLocation $list
-    
+    ```ps
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation 
+    $list += "<Your Tenant URL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    ```
+
     A questo punto, quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), verranno visualizzati tutti gli URL di licenze del cluster ad RMS e l'URL del servizio Rights Management di Azure visualizzato per il parametro *LicensingLocation* .
 
 3.  Disattivare ora le funzionalità IRM per i messaggi inviati a destinatari interni:
 
-    ```
+    ```ps
     Set-IRMConfiguration -InternalLicensingEnabled $false
     ```
 
 4. Usare quindi lo stesso cmdlet per disabilitare IRM in Microsoft Office Outlook Web App e in Microsoft Exchange ActiveSync:
 
-    ```
+    ```ps
     Set-IRMConfiguration -ClientAccessServerEnabled $false
     ```
 
 5.  Infine, usare lo stesso cmdlet per cancellare tutti i certificati memorizzati nella cache:
 
-    ```
+    ```ps
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
@@ -103,13 +105,13 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 
 1.  Assicurarsi che non ci siano documenti estratti da librerie protetti da RMS. In tal caso, non saranno più accessibili alla fine di questa procedura.
 
-2.  Nella sezione **Avvio veloce** del sito Web Amministrazione centrale SharePoint fare clic su **Sicurezza**.
+2.  Nel sito Web di Amministrazione centrale SharePoint, nella sezione **Avvio veloce** fare clic su **Sicurezza**.
 
 3.  Nella pagina **Sicurezza**, nella sezione **Criteri informazioni** fare clic su **Configura Information Rights Management**.
 
-4.  Nella pagina **Information Rights Management**, nella sezione **Information Rights Management** selezionare **Non utilizzare IRM in questo server**, quindi fare clic su **OK**.
+4.  Nella sezione **Information Rights Management** della pagina **Information Rights Management** selezionare **Non utilizzare IRM in questo server**, quindi fare clic su **OK**.
 
-5.  In ogni computer che esegue SharePoint Server eliminare il contenuto della cartella \ProgramData\Microsoft\MSIPC\Server\\<*SID dell'account che esegue SharePoint Server>* .
+5.  In ognuno dei computer server SharePoint eliminare il contenuto della cartella \programdata\microsoft\msipc\server\ \\ < *SID dell'account che esegue SharePoint Server>*.
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>Configurare Exchange e SharePoint per l'uso del connettore
 
@@ -134,63 +136,63 @@ Per tutti i server di Exchange, aggiungere i valori del Registro di sistema segu
 Per Exchange 2013 ed Exchange 2016: modifica 1 del Registro di sistema:
 
 
-**Percorso del Registro di sistema:**
+**Percorso del registro di sistema:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Tipo:** Reg_SZ
 
-**Valore:** https://\<URL di gestione licenze Intranet AD RMS\>/_wmcs/licensing
+**Valore:** https:// \<AD RMS Intranet Licensing URL\> /_wmcs/licensing
 
-**Dati:**
+**Dati**
 
 Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
-- http://\<nome di dominio completo del connettore\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<nome di dominio completo del connettore\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 
 ---
 
 Exchange 2013 - modifica 2 del Registro di sistema:
 
-**Percorso del Registro di sistema:**
+**Percorso del registro di sistema:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
 
 **Tipo:** Reg_SZ
 
-**Valore:** https://\<URL di gestione licenze Extranet AD RMS\>/_wmcs/licensing
+**Valore:** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/licensing
 
-**Dati:**
+**Dati**
 
 Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
-- http://\<nome di dominio completo del connettore\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<nome di dominio completo del connettore\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 ---
 
 Per Exchange 2010 - modifica 1 del Registro di sistema:
 
 
-**Percorso del Registro di sistema:**
+**Percorso del registro di sistema:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **Tipo:** Reg_SZ
 
-**Valore:** https://\<URL di gestione licenze Intranet AD RMS\>/_wmcs/licensing
+**Valore:** https:// \<AD RMS Intranet Licensing URL\> /_wmcs/licensing
 
-**Dati:**
+**Dati**
 
 Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
-- http://\<nome di dominio completo del connettore\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<nome connettore\>/_wmcs/licensing
+- https://\<connector Name\>/_wmcs/licensing
 
 
 ---
@@ -198,21 +200,21 @@ Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazio
 Per Exchange 2010 - modifica 2 del Registro di sistema:
 
 
-**Percorso del Registro di sistema:**
+**Percorso del registro di sistema:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **Tipo:** Reg_SZ
 
-**Valore:** https://\<URL di gestione licenze Extranet AD RMS\>/_wmcs/licensing
+**Valore:** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/licensing
 
-**Dati:**
+**Dati**
 
 Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
-- http://\<nome di dominio completo del connettore\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<nome di dominio completo del connettore\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 ---
 

@@ -13,24 +13,24 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 73ba9a365b38804c8caf0d9e9b06e8b53be8560a
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: ee4a8cedd056da0baca75d3b475884618e081fbf
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326491"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046471"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script di Windows PowerShell per la protezione Azure RMS usando l'infrastruttura di classificazione file di Gestione risorse file server
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Questa pagina contiene lo script di esempio per copiare e modificare, come descritto nell'articolo [Protezione RMS con l'infrastruttura di classificazione file per Windows Server](configure-fci.md).
+Questa pagina contiene lo script di esempio per copiare e modificare, come descritto in [protezione RMS con l'infrastruttura di classificazione file di Windows Server](configure-fci.md).
 
 Per questo script è necessaria almeno la versione **1.3.155.2** del modulo AzureInformationProtection. Eseguire il comando seguente per controllare la versione: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Dichiarazione&#42;&#42;di non responsabilità: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito senza garanzia di alcun tipo.*
+*&#42;&#42;Disclaimer&#42;&#42;: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito senza garanzia di alcun tipo.*
 
 ```
 <#

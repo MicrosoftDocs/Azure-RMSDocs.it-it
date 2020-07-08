@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 70560867707fd58dc5b4580ab67006ea6fb4ce13
-ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
+ms.openlocfilehash: f53e43cedf64572aa4bc6afd20cc88f8e84f643c
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852065"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047320"
 ---
 # <a name="azure-information-protection-user-guide"></a>Guida per l'utente di Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso. È anche possibile usare questo client per aprire documenti protetti da altri utenti tramite la tecnologia di protezione Rights Management da Azure Information Protection.
 

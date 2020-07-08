@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: a2ebb835d4d71c24d8b7206cb44fde6a33ccbb6e
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 9a912db81e293575d74000d79ddc4f6592ab8046
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84666031"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046318"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -172,17 +172,23 @@ Per informazioni sulla distribuzione e istruzioni per AD RMS, vedere [Active Dir
 
 1. In ogni server AD RMS nel cluster, creare la voce del Registro di sistema seguente:
 
-    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
-    
+    ``` md
+    Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"
+    ```
+
     Per \<string value> , specificare uno dei seguenti elementi:
     
     - Per i cluster AD RMS che usano SSL/TLS:
-
-            https://<cluster_name>/_wmcs/certification/certification.asmx
     
+        ``` md
+        https://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
+
     - Per i cluster AD RMS che non usano SSL/TLS (solo reti di test):
         
-            http://<cluster_name>/_wmcs/certification/certification.asmx
+        ``` md
+        http://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
 
 2. Riavviare IIS.
 

@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: bcb3006bdd7575385d37be066b627ef49f770c70
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249845"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047712"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti di Azure Information Protection
 
@@ -91,7 +91,7 @@ I sistemi operativi seguenti supportano sia l'etichetta unificata Azure Informat
 
 - **Windows server 2012 R2** e **Windows Server 2012**
 
-[Entrambi i client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) consentono agli utenti di classificare ed etichettare documenti e messaggi di posta elettronica.
+[Entrambi i client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) consentono agli utenti di classificare ed etichettare documenti e messaggi di posta elettronica.
 
 Per informazioni dettagliate sul supporto nelle versioni precedenti di Windows, contattare il account Microsoft o il rappresentante del supporto tecnico.
 
@@ -104,7 +104,7 @@ Se si lavora con macchine virtuali, controllare se il fornitore del software per
 
 Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office, il Azure Information Protection client di etichetta unificata o il client di Azure Information Protection. 
 
-Queste applicazioni utilizzano rispettivamente i file seguenti: **Winword. exe**, **Excel. exe**, **Outlook. exe**, **Powerpnt. exe**, **MSIP. app. exe**, **MSIP. Viewer. exe**
+Queste applicazioni utilizzano rispettivamente i file seguenti: **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**msip.viewer.exe**msip.viewer.exe**
 
 ### <a name="server-support"></a>Supporto server
 
@@ -166,10 +166,12 @@ Azure Information Protection prevede i requisiti aggiuntivi seguenti:
 - **Connessioni da client a servizio TLS**. Non terminare le connessioni da client a servizio TLS, ad esempio per eseguire l'ispezione a livello di pacchetto, all'URL **AADRM.com** . Se si terminano le connessione, viene interrotta l'associazione dei certificati usati dai client RMS con le autorità di certificazione gestite da Microsoft per contribuire a proteggere le comunicazioni con il servizio Azure Rights Management.
      
     Per determinare se la connessione client viene terminata prima che raggiunga il servizio Rights Management di Azure, usare i comandi di PowerShell seguenti:
-    
-        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
-        $request.GetResponse()
-        $request.ServicePoint.Certificate.Issuer
+
+    ```ps
+    $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+    $request.GetResponse()
+    $request.ServicePoint.Certificate.Issuer
+    ```
 
     Il risultato dovrebbe indicare che la CA emittente è da una CA Microsoft, ad esempio: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US` . 
     
