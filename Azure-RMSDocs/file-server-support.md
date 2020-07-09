@@ -1,9 +1,9 @@
 ---
 title: Come i file server Windows che usano l'istanza FCI supportano Azure RMS-AIP
 description: Come usare l'infrastruttura di classificazione file di Windows Server con Azure RMS quando si distribuisce il connettore RMS per proteggere automaticamente i documenti di Office.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a51a51101cb372573155b070da304fcbfbf4cd01
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 7e0a586490b54c9fcb798f3d1a8776262ff6847c
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934756"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136335"
 ---
 # <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Come i file server Windows che usano l'istanza FCI supportano Azure Rights Management
 
@@ -31,13 +31,13 @@ Per proteggere tutti i tipi di file, non usare il connettore RMS, ma eseguire in
 
 I criteri di classificazione sono completamente configurabili ed estendibili e consentono in tal modo di impedire la perdita potenziale di dati da parte di utenti autorizzati o meno. Tali criteri consentono inoltre di ridurre il rischio di perdita di dati da parte di amministratori di rete perché è possibile configurarli in modo che agli amministratori non venga richiesto l'accesso ai file.
 
-Per istruzioni sulla distribuzione e configurazione del connettore RMS per i file di Office, vedere l'articolo relativo alla [distribuzione del connettore Azure Rights Management](deploy-rms-connector.md).
+Per istruzioni su come distribuire e configurare il connettore RMS per i file di Office, vedere [Deploying the Azure Rights Management Connector](deploy-rms-connector.md).
 
-Per istruzioni sull'uso dello script di Windows PowerShell per tutti i tipi di file, vedere l'articolo [Protezione RMS con Infrastruttura di classificazione file per Windows Server](./rms-client/configure-fci.md).
+Per istruzioni sull'uso dello script di Windows PowerShell per tutti i tipi di file, vedere [protezione RMS con l'infrastruttura di classificazione file di Windows Server &#40;FCI&#41;](./rms-client/configure-fci.md).
 
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Dopo aver compreso in che modo le applicazioni e i servizi supportano Azure RMS, si potrebbe essere interessati a un confronto tra Azure RMS e la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS). Per un confronto delle funzionalità, dei requisiti e dei controlli di sicurezza, vedere [Confronto tra Azure Rights Management e AD RMS](compare-on-premise.md).
+Dopo aver compreso in che modo le applicazioni e i servizi supportano Azure RMS, si potrebbe essere interessati a un confronto tra Azure RMS e la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS). Per un confronto delle funzionalità, dei requisiti e dei controlli di sicurezza, vedere [confronto tra Rights Management e ad RMS di Azure](compare-on-premise.md).
 
 

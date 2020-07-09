@@ -1,8 +1,8 @@
 ---
 title: Installare il modulo PowerShell AIPService per Azure Information Protection
 description: Istruzioni per l'installazione di PowerShell per il servizio di protezione da Azure Information Protection. Il nome di questo modulo è AIPService.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c37a9c2e09626406eac2060c76375177ba49f118
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 23c18236413aaa2056d3eaaa30a64430de1e608b
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048392"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136824"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installazione del modulo PowerShell AIPService
 
@@ -31,7 +31,7 @@ Usare le informazioni seguenti per installare il modulo di Windows PowerShell pe
 
 Questa tabella elenca i prerequisiti per installare e usare il modulo di PowerShell AIPService per il servizio di protezione da Azure Information Protection.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Versione minima di Windows PowerShell: 3.0|È possibile verificare quale versione di Windows PowerShell sia in esecuzione digitando `$PSVersionTable` in una sessione di PowerShell. <br /><br /> Se è necessario installare una versione successiva di Windows PowerShell, vedere [Aggiornamento di Windows PowerShell esistente](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
 |Versione minima di Microsoft .NET Framework: 4.5<br /><br />Nota: questa versione di Microsoft .NET Framework è inclusa nei sistemi operativi successivi. È pertanto necessario installarla manualmente solo se il sistema operativo client è inferiore a Windows 8.0 o se il sistema operativo server è inferiore a Windows Server 2012.|Se la versione minima di Microsoft .NET Framework non è già installata, è possibile scaricare [Microsoft .NET framework 4,5](https://www.microsoft.com/download/details.aspx?id=30653).<br /><br />Questa versione minima di Microsoft .NET Framework è obbligatoria per alcune delle classi utilizzate dal modulo AIPService.|

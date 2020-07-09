@@ -1,9 +1,9 @@
 ---
 title: Preparare l'ambiente per Azure RMS e AD RMS
 description: Linee guida per gli amministratori se Azure Rights Management con AD RMS distribuito.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5fba2e27abaf59e9b9b50322baa0d93b2af93aa9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: cbb72857b460dc223a9bb7504ecb52d21f1fb70f
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935385"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136955"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Preparare l'ambiente per Azure Rights Management quando si dispone di AD RMS
 
@@ -76,9 +76,9 @@ Verrà visualizzato il messaggio che indica che **Rights Management non è attiv
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Per disattivare Rights Management dal portale di Azure
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**.
+1. Aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal), se questa operazione non è già stata eseguita. Quindi passare al riquadro **Azure Information Protection**.
     
-    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
     Se non è stato eseguito l'accesso al riquadro Azure Information Protection prima, vedere i [passaggi aggiuntivi](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) monouso per aggiungere questo riquadro al portale.
 
@@ -88,7 +88,7 @@ Verrà visualizzato il messaggio che indica che **Rights Management non è attiv
 
 Sulla barra delle informazioni verrà visualizzato **Disattivazione completata** mentre **Disattiva** è stato sostituito da **Attiva**. 
 
-### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Avviare la pianificazione della migrazione
+### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Iniziare la pianificazione della migrazione
 
 Per informazioni, vedere la guida alla migrazione: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
@@ -105,22 +105,22 @@ Usare il comando di PowerShell per Exchange Online [Set-IRMConfiguration](/power
 
 [Altre informazioni](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
-### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Avviare la pianificazione della migrazione
+### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Iniziare la pianificazione della migrazione
 
 Per informazioni, vedere la guida alla migrazione: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
-## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Quando si configura Azure Information Protection viene visualizzata un'opzione per attivare la protezione
+## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Viene visualizzata un'opzione per attivare la protezione quando si configura Azure Information Protection
 
 Il riquadro **attivazione protezione Azure Information Protection** ha un'opzione per attivare il servizio Azure Rights Management.  
 
-Se si usa anche AD RMS, non selezionare l'opzione **Attiva**. Anche quando il servizio Azure Rights Management non è attivato, è possibile usare Azure Information Protection per le etichette che applicano solo la classificazione. Viene creato un criterio predefinito speciale che non include la protezione dei dati e le opzioni di configurazione corrispondenti restano disattivate fino all'attivazione del servizio Azure Rights Management.
+Se si usa anche AD RMS, non selezionare l'opzione **Attiva**. Quando il servizio Azure Rights Management non è attivato, è comunque possibile usare Azure Information Protection per etichette che applicano solo una classificazione. Vengono creati criteri predefiniti speciali che non includono la protezione dati e le opzioni di configurazione rimangono non disponibili fino a quando il servizio Azure Rights Management è attivato.
 
 ### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Passaggio 1: Configurare i criteri di Azure Information Protection per la classificazione e l'assegnazione di etichette, senza protezione
 
 Dal riquadro **Azure Information Protection-labels** visualizzare e configurare le etichette che non includono opzioni per la protezione dei dati. Per altre informazioni su come configurare le etichette e le impostazioni dei criteri, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
-### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Avviare la pianificazione della migrazione
+### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Iniziare la pianificazione della migrazione
 
 Per informazioni, vedere la guida alla migrazione: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 

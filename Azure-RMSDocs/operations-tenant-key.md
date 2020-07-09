@@ -1,9 +1,9 @@
 ---
 title: Operazioni relative alla chiave del tenant di Azure Information Protection
 description: Identificare i diversi livelli di controllo e responsabilità per la chiave del tenant di Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7de597c2ebe50aa2309e3c6cce1b4b7b8523a994
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: c8fc10aed7bcb0d42dab72afd4c1fc100a3962ba
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934637"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136361"
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Operazioni relative alla chiave del tenant di Azure Information Protection
 
@@ -32,11 +32,11 @@ Nella tabella seguente vengono indicate le operazioni che è possibile eseguire 
 
 |Operazione del ciclo di vita|Gestione di Microsoft (impostazione predefinita)|Gestione del cliente (scenario BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|Revocare la chiave del tenant|No (automatica)|Yes|
-|Reimpostare la chiave del tenant|Yes|Yes|
-|Eseguire il backup e il ripristino della chiave del tenant|No|Yes|
-|Esportare la chiave del tenant|Yes|No|
-|Rispondere a una violazione di sicurezza|Yes|Yes|
+|Revocare la chiave del tenant|No (automatica)|Sì|
+|Reimpostare la chiave del tenant|Sì|Sì|
+|Eseguire il backup e il ripristino della chiave del tenant|No|Sì|
+|Esportare la chiave del tenant|Sì|No|
+|Rispondere a una violazione di sicurezza|Sì|Sì|
 
 Dopo aver identificato la topologia implementata, selezionare uno dei collegamenti seguenti per ottenere altre informazioni su queste operazioni per la chiave del tenant di Azure Information Protection:
 

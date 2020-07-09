@@ -1,9 +1,9 @@
 ---
 title: Panoramica di Azure Rights Management Protection-AIP
 description: Informazioni su Azure Rights Management (Azure RMS), la tecnologia di protezione usata da Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a09ee41507dae2aa54cf8cde326d70be143d403c
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 9d292c4349160ac501bfb4249f7e7a91772fc17a
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403536"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136892"
 ---
 # <a name="what-is-azure-rights-management"></a>Informazioni su Microsoft Azure Rights Management
 
@@ -62,7 +62,7 @@ Usare la tabella seguente per identificare i requisiti o i problemi che può dov
 |Supporto esteso per applicazioni|√ Azure Rights Management offre una stretta integrazione con applicazioni e servizi di Microsoft Office ed estende il supporto ad altre applicazioni tramite il [client Azure Information Protection](./rms-client/aip-client.md ).<br /><br />√ Gli [SDK di Azure Information Protection](./develop/developers-guide.md) forniscono agli sviluppatori interni e ai fornitori di software le API necessarie per la creazione di applicazioni personalizzate con supporto per Azure Information Protection.<br /><br />Per altre informazioni, vedere [Altre applicazioni che supportano le API di Rights Management](api-support.md).|
 |Mantenimento del controllo dei dati da parte del reparto IT|√ Le organizzazioni possono scegliere di gestire la propria chiave del tenant e di usare una soluzione BYOK ("[Bring Your Own Key](plan-implement-tenant-key.md)") e archiviare la chiave del tenant in moduli di protezione hardware (HSM).<br /><br />√ Supporto per il controllo e la [registrazione dell'utilizzo](log-analyze-usage.md), per consentire agli utenti di eseguire analisi per ottenere informazioni aziendali dettagliate, monitorare i possibili abusi e, in caso di perdita di informazioni, eseguire analisi per scopi legali.<br /><br />√ L'accesso delegato mediante la [funzionalità per utenti con privilegi avanzati](configure-super-users.md) assicura agli addetti del reparto IT la possibilità di accedere sempre ai contenuti protetti, anche nel caso di documenti protetti da un utente che non fa più parte dell'organizzazione. Paragonate all'accesso delegato, le soluzioni di crittografia peer-to-peer rischiano la perdita dell'accesso ai dati aziendali.<br /><br />√ Sincronizzazione [solo degli attributi della directory richiesti da Azure RMS](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) per supportare un'identità comune per gli account Active Directory locali usando una [soluzione di identità ibrida](/azure/active-directory/hybrid/), come Azure AD Connect.<br /><br />√ Abilitazione dell'accesso Single-Sign On senza replicare le password nel cloud usando ADFS.<br /><br />√ Le organizzazioni possono sempre decidere di sospendere l'uso del servizio Azure Rights Management senza perdere l'accesso al contenuto protetto in precedenza da Azure Rights Management. Per informazioni sulle opzioni di rimozione delle autorizzazioni, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md). Le organizzazioni che hanno distribuito Active Directory Rights Management Services (AD RMS) possono anche [eseguire la migrazione al servizio Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) senza perdere l'accesso ai dati protetti in precedenza da AD RMS.|
 > [!TIP]
-> Gli utenti che hanno già acquisito familiarità con la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS), possono essere interessati alla tabella comparativa disponibile in [Confronto tra Azure Rights Management e AD RMS](compare-on-premise.md).
+> Se si ha familiarità con la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS), si potrebbe essere interessati alla tabella di confronto dal [confronto tra Rights Management e ad RMS di Azure](compare-on-premise.md).
 
 ## <a name="security-compliance-and-regulatory-requirements"></a>Requisiti di sicurezza, conformità e normativi
 Azure Rights Management supporta i requisiti di sicurezza, conformità e normativi seguenti:
@@ -85,7 +85,7 @@ Azure Rights Management supporta i requisiti di sicurezza, conformità e normati
 
 -   PCI DSS Livello 1
 
-Per altre informazioni su queste certificazioni esterne, vedere il [Centro protezione Azure](https://azure.microsoft.com/support/trust-center/compliance/).
+Per ulteriori informazioni su queste certificazioni esterne, vedere la [Centro protezione di Azure](https://azure.microsoft.com/support/trust-center/compliance/).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

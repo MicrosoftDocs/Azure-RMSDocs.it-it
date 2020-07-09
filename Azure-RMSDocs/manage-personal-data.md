@@ -1,9 +1,9 @@
 ---
 title: Gestire i dati personali per Azure Information Protection
 description: Informazioni sui dati personali usati da Azure Information Protection e su come visualizzarli, esportarli ed eliminarli.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b808fd6e3c1080d7c6d9f06384408bd196aadc45
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71966885"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136808"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -195,7 +195,7 @@ Quando vengono applicate etichette e protezione a documenti e messaggi di posta 
 
 - Per il client RMS: %localappdata%\Microsoft\MSIPC\msip\Logs
 
-Inoltre, il client Azure Information Protection registra questi dati personali nel registro eventi di Windows locale: **Registri applicazioni e servizi** > **Azure Information Protection**.
+Inoltre, il client Azure Information Protection registra questi dati personali nel registro eventi di Windows locale **registri applicazioni e servizi**  >  **Azure Information Protection**.
 
 Quando il client Azure Information Protection esegue lo scanner, i dati personali vengono salvati in %localappdata%\Microsoft\MSIP\Scanner\Reports nel computer Windows Server che esegue lo scanner.
 
@@ -207,22 +207,22 @@ Quando il client Azure Information Protection esegue lo scanner, i dati personal
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
-## <a name="securing-and-controlling-access-to-personal-information"></a>Protezione e controllo dell'accesso a informazioni personali
+## <a name="securing-and-controlling-access-to-personal-information"></a>Sicurezza e controllo dell'accesso alle informazioni personali
 I dati personali visualizzati e specificati nel portale di Azure sono accessibili solo agli utenti cui è stato assegnato uno dei [ruoli di amministratore di Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) seguenti:
     
-- **Amministratore Azure Information Protection**
+- **Amministratore di Azure Information Protection**
 
-- **Amministratore di conformità**
+- **Amministratore conformità**
 
 - **Amministratore dati di conformità**
 
 - **Amministratore della sicurezza**
 
-- **Ruolo con autorizzazioni di lettura per la sicurezza**
+- **Lettore di sicurezza**
 
 - **Amministratore globale**
 
-- **Lettore globale**
+- **Ruolo con autorizzazioni di lettura globali**
 
 I dati personali che è possibile visualizzare e specificare usando il modulo AIPService (o il modulo precedente, AADRM) sono accessibili solo agli utenti a cui sono stati assegnati i ruoli amministratore **Azure Information Protection**, **amministratore conformità**, **amministratore dati di conformità**o **amministratore globale** da Azure Active Directory o ruolo di amministratore globale per il servizio di protezione.
 
@@ -236,7 +236,7 @@ Non è possibile aggiornare gli indirizzi di posta elettronica per gli utenti co
 
 ### <a name="protection-templates"></a>Modelli di protezione
 
-Eseguire il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) per aggiornare il modello di protezione. Poiché i dati personali si trovano all'interno della proprietà `RightsDefinitions`, sarà necessario utilizzare anche il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare un oggetto delle definizioni dei diritti con le informazioni aggiornate e utilizzare l'oggetto delle definizioni dei diritti con il cmdlet `Set-AipServiceTemplateProperty`.
+Eseguire il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) per aggiornare il modello di protezione. Poiché i dati personali si trovano all'interno della `RightsDefinitions` proprietà, è necessario usare anche il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare un oggetto delle definizioni dei diritti con le informazioni aggiornate e usare l'oggetto delle definizioni dei diritti con il `Set-AipServiceTemplateProperty` cmdlet.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Utenti con privilegi avanzati e amministratori delegati per il servizio di protezione
 
@@ -267,8 +267,8 @@ Per eliminare dati personali nei file di log dei client e nei log dello scanner 
 
 Utilizzare i tre passaggi seguenti per richiedere che Microsoft elimini i dati personali nei log di rilevamento dei documenti, nei log di amministrazione o nei log di utilizzo per il servizio di protezione. 
 
-**Passaggio 1: Generare la richiesta di eliminazione**
-[Contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) per aprire un caso di supporto per Azure Information Protection con una richiesta di eliminazione dei dati dal tenant. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection e tenere presente che la conferma di questo processo richiede diversi giorni. Nell'inviare la richiesta, è necessario fornire informazioni aggiuntive, a seconda dei dati che devono essere eliminati.
+**Passaggio 1: avviare la richiesta** 
+ di eliminazione [Contattare supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) per aprire un caso di supporto Azure Information Protection con una richiesta di eliminazione dei dati dal tenant. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection e tenere presente che la conferma di questo processo richiede diversi giorni. Nell'inviare la richiesta, è necessario fornire informazioni aggiuntive, a seconda dei dati che devono essere eliminati.
 
 - Per eliminare il log di amministrazione, specificare la **data di fine**. Verranno eliminati tutti i log di amministrazione fino alla data di fine specificata.
 - Per eliminare i log sull'utilizzo, specificare la **data di fine**. Verranno eliminati tutti i log sull'utilizzo fino alla data di fine specificata.
@@ -283,10 +283,10 @@ L'eliminazione di questi dati è un'operazione permanente. Al termine dell'elabo
 ## <a name="exporting-personal-data"></a>Esportazione dei dati personali
 Quando si usano i cmdlet di PowerShell AIPService o AADRM, i dati personali vengono resi disponibili per la ricerca e l'esportazione come oggetto PowerShell. L'oggetto di PowerShell può essere convertito in JSON e salvato tramite il cmdlet `ConvertTo-Json`.
 
-## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>Limitazione dell'uso di dati personali per profilatura e marketing senza consenso
+## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>Limitazione dell'uso dei dati personali per la profilatura o il marketing senza consenso dell'utente
 Azure Information Protection segue l'[condizioni per la privacy](https://privacy.microsoft.com/privacystatement) Microsoft per la profilatura e il marketing basati su dati personali.
 
-## <a name="auditing-and-reporting"></a>Controllo e segnalazione
+## <a name="auditing-and-reporting"></a>Controllo e creazione di report
 Solo gli utenti a cui sono state assegnate [autorizzazioni di amministratore](#securing-and-controlling-access-to-personal-information) possono usare il modulo AIPSERVICE o addr per la ricerca e l'esportazione di dati personali. Queste operazioni vengono registrate nel log di amministrazione, che può essere scaricato.
 
 Per le azioni di eliminazione, la richiesta di supporto funge da audit trail e percorso di segnalazione per le azioni eseguite da Microsoft. Dopo l'eliminazione, i dati eliminati non saranno disponibili per la ricerca e l'esportazione e l'amministratore potrà verificarla usando i cmdlet Get del modulo AIPService.

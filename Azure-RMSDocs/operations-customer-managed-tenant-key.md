@@ -1,9 +1,9 @@
 ---
 title: Operazioni del ciclo di vita della chiave del tenant AIP gestite dal cliente
 description: Informazioni sulle operazioni del ciclo di vita necessarie per la gestione da parte dell'utente della chiave del tenant per Azure Information Protection (scenario "bring your own key" o BYOK).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0381e5d6368587a6e743caefd519fc4669c6183b
-ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
+ms.openlocfilehash: 14b3c9d4db202abb18555eb695fe7e3e0769af40
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898899"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136324"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
@@ -82,7 +82,7 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 |Descrizione evento imprevisto|Risposta probabile|
 |------------------------|-------------------|
-|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere [Reimpostare la chiave del tenant](#rekey-your-tenant-key).|
+|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere [rekey la chiave del tenant](#rekey-your-tenant-key).|
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La reimpostazione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nella tecnologia del moduli di protezione hardware di generazione corrente.|Microsoft deve aggiornare i moduli di protezione hardware. Se si ritiene che la vulnerabilità abbia provocato l'esposizione di chiavi, Microsoft inviterà tutti i clienti a reimpostare le proprie chiavi del tenant.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Key Vault o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a reimpostare la propria chiave del tenant.|

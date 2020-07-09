@@ -1,9 +1,9 @@
 ---
 title: Chiave del tenant di Azure Information Protection
 description: Anziché Microsoft gestire la chiave radice per Azure Information Protection, è possibile creare e gestire questa chiave (denominata "Bring your own key" o BYOK) per il tenant, per conformarsi a normative specifiche.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 27ede6b0721f57e2825f2c938eb01cf203552245
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: d704ca679ce7d36f3e3956443b3b2a013366382d
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048358"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137002"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -109,7 +109,7 @@ Usare le informazioni e le procedure descritte in questa sezione se si è deciso
 ### <a name="prerequisites-for-byok"></a>Prerequisiti per la modalità BYOK
 Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Il tenant di Azure Information Protection deve avere una sottoscrizione di Azure. Se non si ha una sottoscrizione, è possibile iscriversi per ottenere un [account gratuito](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Per usare una chiave protetta dal modulo di protezione hardware, è necessario avere un piano tariffario Premium di Azure Key Vault.|La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per confermare di avere una sottoscrizione di Azure che è possibile usare per BYOK, usare i cmdlet di [Azure PowerShell](/powershell/azure/overview) : <br /><br /> 1. avviare una sessione di Azure PowerShell con l'opzione **Esegui come amministratore** e accedere come amministratore globale per il tenant di Azure Information Protection usando, `Connect-AzAccount` quindi copiare e incollare la stringa del token risultante in `https://microsoft.com/devicelogin` usando un browser. <br /><br /> Per altre informazioni, vedere [accedere con Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. digitare quanto segue e verificare che vengano visualizzati i valori per il nome e l'ID della sottoscrizione, il Azure Information Protection ID tenant e che lo stato sia abilitato:`Get-AzSubscription`<br /><br />Se non viene visualizzato alcun valore e viene solo restituito il prompt, non si dispone di una sottoscrizione di Azure utilizzabile per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti di BYOK, se si esegue la migrazione da AD RMS a Azure Information Protection tramite la chiave software alla chiave hardware, è necessario avere una versione minima di 11,62 se si usa il firmware Thales per il modulo di protezione hardware.|
 |Per usare una chiave protetta dal modulo di protezione hardware creata in locale: <br /><br />- Tutti i prerequisiti elencati per la modalità BYOK in Key Vault. |Vedere [Prerequisiti per la modalità BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> **Nota**: oltre ai prerequisiti di BYOK, se si esegue la migrazione da AD RMS a Azure Information Protection tramite la chiave software alla chiave hardware, è necessario avere una versione minima di 11,62 se si usa il firmware Thales per il modulo di protezione hardware.|

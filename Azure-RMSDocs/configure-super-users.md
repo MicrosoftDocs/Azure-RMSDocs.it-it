@@ -1,9 +1,9 @@
 ---
 title: Configurare i diritti di utilizzo per Azure Rights Management - Azure Information Protection
 description: Comprendere e implementare la funzionalità per utenti con privilegi avanzati del servizio Rights Management di Azure da Azure Information Protection, in modo che gli utenti e i servizi autorizzati possano sempre leggere e controllare ("motivo") i dati protetti dell'organizzazione.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b8115ffc0b4af968f2dbfdcb7747f288876b271
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 4397be5c6206c74bcf8753e5452cd19b02b31316
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746037"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136751"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati
 

@@ -1,9 +1,9 @@
 ---
 title: Consentire agli utenti di proteggere i file con Azure RMS - AIP
 description: Informazioni per fornire istruzioni a utenti, amministratori e addetti del servizio help desk dopo aver distribuito e configurato il servizio Azure Rights Management di Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b24319f4759c36190cd880335c19899401495608
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 0c828903f4849dd63de95a401b88acdc4f92dd7e
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933362"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136589"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -26,7 +26,7 @@ ms.locfileid: "74933362"
 
 Dopo aver distribuito e configurato Azure Information Protection per l'organizzazione, è necessario fornire indicazioni e istruzioni agli utenti, agli amministratori e agli addetti del servizio help desk:
 
--   **Informazioni per l'utente finale**
+-   **Informazioni sull'utente finale**
     
     Gli utenti devono conoscere come e quando proteggere i documenti e i messaggi di posta elettronica che contengono informazioni riservate. Quando possibile, specificare queste informazioni per i flussi di lavoro esistenti per consentire agli utenti di incorporare i passaggi aggiuntivi in un processo già noto anziché introdurre nuovi processi. Assicurarsi di comunicare loro i vantaggi (e i rischi) specifici dell'azienda nonché di fornire le istruzioni per la protezione di file e di messaggi di posta elettronica. Se sono stati configurati dei [modelli](configure-policy-templates.md), specificare le istruzioni su come selezionarne uno qualora il nome e la descrizione del modello non siano sufficienti per scegliere quello corretto.
     
@@ -35,13 +35,13 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
     > -   [Revoca e rilevamento dei documenti di Azure RMS](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
--   **Informazioni per gli amministratori**
+-   **Informazioni amministratore**
     
     In alcune applicazioni la protezione delle informazioni viene automaticamente adottata tramite criteri e impostazioni configurati dagli amministratori. È necessario pertanto fornire istruzioni agli altri amministratori che gestiscono tali applicazioni e servizi. 
     
     Per altre informazioni, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md) e [Configurazione di applicazioni per il servizio Azure Rights Management](configure-applications.md).
     
--   **Informazioni per il supporto tecnico**
+-   **Informazioni sul supporto tecnico**
     
     Se gli utenti dispongono del client Azure Information Protection, gli operatori del supporto tecnico possono chiedere loro di usare l'opzione **Guida e commenti** per informazioni, ad esempio per sapere se l'edizione di Office in uso non è in grado di supportare la protezione e l'account utente attualmente connesso. Questa opzione può essere usata anche per raccogliere i file di log e reimpostare il client. Per altre informazioni, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) della guida dell'amministratore.
     
@@ -55,7 +55,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
         
         Fornire agli utenti e agli addetti del servizio help desk istruzioni sugli account da usare nel caso in cui gli utenti debbano immettere le proprie credenziali quando dispongono di applicazioni che usano il servizio Azure Rights Management.
         
-    - **Problemi di protezione o fruizione dei contenuti**
+    - **Problemi di protezione o utilizzo del contenuto**
         
         Verificare che gli utenti abbiano le istruzioni appropriate per le applicazioni usate e che stiano usando applicazioni e dispositivi supportati dal servizio Azure Rights Management. Per ulteriori informazioni sulle applicazioni e sui dispositivi supportati, vedere [requisiti per Azure Information Protection](requirements.md).
         
@@ -80,13 +80,13 @@ Per istruzioni sull'uso di questo client per computer Windows, vedere la [Guida 
 Se si sta usando il servizio Azure Rights Management e il client Azure Information Protection non è stato installato, gli utenti non vedono la barra di Azure Information Protection nelle app desktop di Office, il pulsante **Proteggi** sulla barra multifunzione o il comando **Classifica e proteggi** in Esplora file. Queste aggiunte semplificano l'applicazione della protezione a documenti e messaggi di posta elettronica. Tali utenti devono seguire istruzioni simili alle seguenti.
 
 > [!TIP]
-> Per trovare indicazioni e istruzioni specifiche dell'applicazione per l'uso della protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.
+> Per trovare indicazioni e istruzioni specifiche dell'applicazione per adottare la protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.
 
 #### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Per proteggere un documento in Word da Office 365 ProPlus
 
 1.  Creare un documento in Microsoft Word.
 
-2.  Dal menu **file** : **info** > **proteggere il documento** >  **limitare l'accesso**.
+2.  Dal menu **file** : **informazioni**  >  **Proteggi documento**  >   **limita accesso**.
 
 3. Scegliere un modello per applicare rapidamente i diritti di utilizzo appropriati oppure selezionare **Limitazione accesso** e selezionare i diritti manualmente.
 
@@ -95,7 +95,7 @@ Se si sta usando il servizio Azure Rights Management e il client Azure Informati
 
 3.  Salvare il documento.
 
-Quando altri utenti aprono il documento, vengono prima autenticati. Se non sono autorizzati, il documento non viene aperto. Se invece sono autorizzati, il documento viene aperto con i [diritti di utilizzo](configure-usage-rights.md) limitati indicati per l'utente specifico. 
+Quando altri utenti aprono il documento, vengono prima autenticati. Se non sono autorizzati, il documento non viene aperto. Se sono autorizzati ad aprire il documento, si apre con i diritti di [utilizzo](configure-usage-rights.md) limitati specificati per tale utente. 
 
 Un diritto d'uso di sola visualizzazione, ad esempio, non consente all'utente di modificare o di salvare il documento, anche se quest'ultimo viene prima copiato in un percorso diverso. 
 
@@ -105,11 +105,11 @@ I diritti d'uso vengono visualizzati nella parte superiore del documento in un b
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Dalla scheda **Opzioni** : **autorizzazione** > selezionare un'opzione. Ad esempio: **Non inoltrare** o **\<Nome società>- Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
+2.  Dalla scheda **Opzioni** : **autorizzazione** > selezionare un'opzione. Ad esempio: non **inviare**né ** \<Company Name> -Confidential**, né ** \<Company Name> -solo la visualizzazione riservata**.
 
 3.  Inviare il messaggio.
 
-In modo analogo alla visualizzazione di un documento protetto, quando i destinatari aprono il messaggio di posta elettronica protetto vengono prima autenticati. Se sono autorizzati a visualizzare il messaggio di posta elettronica, quest'ultimo viene aperto con i [diritti di utilizzo](configure-usage-rights.md) limitati indicati per l'utente specifico. 
+In modo analogo alla visualizzazione di un documento protetto, quando i destinatari aprono il messaggio di posta elettronica protetto vengono prima autenticati. Se sono autorizzati a visualizzare il messaggio di posta elettronica, viene aperto con i [diritti di utilizzo](configure-usage-rights.md) limitati specificati per tale utente. 
 
 Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzione **Non inoltrare**, il pulsante Inoltra sulla barra multifunzione non è disponibile.
 
@@ -117,10 +117,10 @@ Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzi
 
 1. In Outlook sul Web creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si desidera modificare il valore predefinito, selezionare **modifica autorizzazioni** e quindi selezionare un'opzione dall'elenco a discesa. Ad esempio, **crittografare** o **\<nome della società >-Confidential**.
+2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si desidera modificare il valore predefinito, selezionare **modifica autorizzazioni** e quindi selezionare un'opzione dall'elenco a discesa. Ad esempio: **Encrypt** o ** \<Company Name> -Confidential**.
 
 3. Inviare il messaggio.
 
-In modo analogo alla visualizzazione di un documento protetto, quando i destinatari aprono il messaggio di posta elettronica vengono prima autenticati. Se sono autorizzati a visualizzare il messaggio di posta elettronica, quest'ultimo viene aperto con i [diritti di utilizzo](configure-usage-rights.md) limitati indicati per l'utente specifico. 
+In modo analogo alla visualizzazione di un documento protetto, quando i destinatari aprono il messaggio di posta elettronica vengono prima autenticati. Se sono autorizzati a visualizzare il messaggio di posta elettronica, viene aperto con i [diritti di utilizzo](configure-usage-rights.md) limitati specificati per tale utente. 
 
 Ad esempio, con l'opzione predefinita **Non inoltrare**, l'opzione **Inoltra** nella finestra di messaggio non è disponibile.

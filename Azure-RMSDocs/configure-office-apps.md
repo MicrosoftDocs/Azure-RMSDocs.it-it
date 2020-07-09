@@ -1,9 +1,9 @@
 ---
 title: Configurazione dei client per usare le app di Office con Azure RMS da AIP
 description: Informazioni e istruzioni per gli amministratori per configurare le app di Office per l'uso con il servizio Azure Rights Management di Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc190e6a7433457e0126976a66dbf5b04a47d140
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 7746a412225248808e02731433133fc4182874a9
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935147"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136273"
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Applicazioni di Office: configurazione per i client da usare con il servizio Azure Rights Management
 
@@ -26,20 +26,20 @@ ms.locfileid: "74935147"
 
 Usare queste informazioni per determinare i requisiti necessari per l'esecuzione delle app di Office con il servizio Azure Rights Management di Azure Information Protection.
 
-## <a name="office365-apps-office-2019-office-2016-and-office-2013"></a>App Office 365, Office 2019, Office 2016 e Office 2013
+## <a name="office365-apps-office-2019-office-2016-and-office-2013"></a>App di Office 365, Office 2019, Office 2016 e Office 2013
 Dal momento che queste ultime versioni di Office supportano in modo nativo il servizio Azure Rights Management, non è necessario eseguire alcuna attività di configurazione dei computer client per supportare le funzionalità IRM (Information Rights Management) per applicazioni quali Word, Excel, PowerPoint, Outlook e Outlook sul Web. Tutti gli utenti devono eseguire queste app in Windows per accedere alle applicazioni di Office con le credenziali di Office 365. Potranno quindi proteggere file e messaggi di posta elettronica e usare file e messaggi di posta elettronica protetti da altri utenti.
 
 ### <a name="user-instructions-for-office-for-mac"></a>Istruzioni per gli utenti di Office per Mac
 
 Gli utenti che hanno Office per Mac devono prima verificare le proprie credenziali prima di poter proteggere il contenuto. Ad esempio:
 
-1. Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto di istruzione di Office 365. 
+1. Aprire Outlook e creare un profilo mediante l'account Office 365 aziendale o dell'istituto di istruzione. 
 
-2. Creare un nuovo messaggio e nella scheda **Opzioni** selezionare **autorizzazioni**, quindi selezionare **Verifica credenziali**. Quando richiesto, specificare nuovamente il proprio account aziendale o dell'istituto di istruzione di Office 365 e selezionare **Accedi**.
+2. Creare un nuovo messaggio e nella scheda **Opzioni** selezionare **autorizzazioni**, quindi selezionare **Verifica credenziali**. Quando richiesto, specificare nuovamente i dettagli dell'account Office 365 aziendale o dell'istituto di istruzione e selezionare **Accedi**.
     
     Questa azione Scarica i modelli di Rights Management di Azure e verifica che le **credenziali** vengano ora sostituite con le opzioni che **non includono restrizioni**, non **inoltri**e tutti i modelli di Rights Management di Azure pubblicati per il tenant. 
 
-3. È ora possibile annullare questo nuovo messaggio.
+3. Ora è possibile annullare questo nuovo messaggio.
 
 4. Per proteggere un messaggio di posta elettronica o un documento: nella scheda **Opzioni** selezionare **autorizzazioni** e scegliere un'opzione o un modello che protegga la posta elettronica o il documento.
 

@@ -1,9 +1,9 @@
 ---
 title: RMS per utenti singoli e Azure Information Protection
 description: Informazioni su RMS per utenti singoli, una sottoscrizione self-service gratuita per gli utenti ai quali sono stati inviati file protetti, ma che non possono essere autenticati perché il reparto IT non gestisce per loro un account di Azure.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 39452080b5c3696241f4257f87eb99a53e2e821c
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d02f0e3e848e4a4743f7e61344f12108cca8c714
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933107"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136905"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
@@ -43,7 +43,7 @@ Dopo aver creato l'account, viene visualizzata la pagina finale con collegamenti
 
 2. Digitare l'indirizzo di posta elettronica usato per proteggere il documento che è necessario aprire.
 
-3. Fare clic su **Accedi**.
+3. Fare clic su **Iscrizione**.
 
     Microsoft usa l'indirizzo di posta elettronica dell'utente per verificare se l'organizzazione dispone già di una [sottoscrizione di Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o un [abbonamento a Office 365 che include la protezione dei dati tramite Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se una di queste sottoscrizioni viene trovata, non è necessario RMS per utenti singoli. In questo caso si può accedere immediatamente e l'iscrizione self-service a RMS per utenti singoli viene annullata. Se non viene trovata nessuna di queste sottoscrizioni, si procederà al passaggio successivo.
 
@@ -51,7 +51,7 @@ Dopo aver creato l'account, viene visualizzata la pagina finale con collegamenti
 
 5. Quando si riceve il messaggio di posta elettronica, fare clic su **Sì, sono io** per confermare l'indirizzo di posta elettronica e completare il processo di iscrizione.
 
-6. A questo punto viene aperta la pagina **One last thing ...(Un'ultima operazione)** dove specificare i dettagli per l'account. Digitare il nome, il cognome, specificare e confermare una password a scelta e quindi fare clic su **Start (Avvia)** .
+6. A questo punto viene aperta la pagina **One last thing ...(Un'ultima operazione)** dove specificare i dettagli per l'account. Digitare il nome, il cognome, specificare e confermare una password a scelta e quindi fare clic su **Start (Avvia)**.
 
 7. Dopo aver creato l'account, verrà visualizzata una nuova pagina di Microsoft Azure Information Protection in cui è possibile scaricare e installare il client di Azure Information Protection oppure fare clic sul collegamento alla [Guida per l'utente](./rms-client/client-user-guide.md) per le procedure per i computer Windows.
 
