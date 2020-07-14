@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e069abcc246848a48dc0edb014bdea0e128d03b1
-ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
+ms.openlocfilehash: 56d58578527a6df64091ed4c1569999ddad4fd69
+ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2020
-ms.locfileid: "85126697"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281937"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -147,7 +147,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Contrassegni visivi dinamici con variabili:| **Sì** | **Sì** | No |
 |Etichetta con Esplora file:| **Sì** | **Sì** | No |
 |Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| **Sì** | **Sì** | No|
-|Supporto PDF per l'applicazione di etichette:| **Sì** | No | No |
+|Supporto di PPDF per l'applicazione di etichette:| **Sì** | No | No |
 |Cmdlet per l'assegnazione di etichette di PowerShell:| **Sì** | **Sì** <sup>4</sup> | No |
 |Supporto offline per le azioni di protezione:| **Sì** | **Sì** <sup>5</sup> | **Sì** |
 |Gestione manuale dei file di criteri per i computer disconnessi:| **Sì** |**Sì**| No |

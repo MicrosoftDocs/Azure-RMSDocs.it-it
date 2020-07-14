@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 65c3a37f68676616d7342879d9621a143842f4bf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
+ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049541"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281954"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Che cos'è il Azure Information Protection scanner classico?
 
@@ -115,15 +115,6 @@ Lo scanner AIP non può etichettare i file nelle circostanze seguenti:
 **Esempio:** Dopo aver ispezionato i file con estensione txt, lo scanner non può applicare un'etichetta configurata solo per la classificazione, perché il tipo di file con estensione txt non supporta solo la classificazione.
 
 Tuttavia, se l'etichetta è configurata per la classificazione e la protezione e il tipo di file txt è incluso per la protezione dello scanner, lo scanner può etichettare il file.
-
-## <a name="upgrading-your-scanner"></a>Aggiornamento dello scanner
-
-Se lo scanner è stato installato in precedenza e si vuole eseguire l'aggiornamento, vedere [aggiornamento dello scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
-
-Quindi, [configurare](deploy-aip-scanner-configure-install.md) e [usare lo scanner](deploy-aip-scanner-manage.md) come di consueto, ignorando i passaggi per installare lo scanner.
-
->[!NOTE]
-> Se si dispone di una versione dello scanner precedente a 1.48.204.0 e non si è pronti per aggiornarla, vedere [distribuzione di versioni precedenti dello scanner Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner-previousversions.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
