@@ -1,28 +1,28 @@
 ---
 title: "Procedura: eseguire il downgrade o la rimozione di un'etichetta che richiede una giustificazione (C#)"
-description: Questo articolo consente di comprendere lo scenario di come effettuare il downgrade o la rimozione di un'etichetta che necessita di giustificazione.
+description: Le informazioni in questo articolo sono utili per comprendere come effettuare il downgrade o la rimozione di un'etichetta che richiede una giustificazione.
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: cdf128d5d01db0362fac1b76c1e0d81a15e55432
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: 88c55d973dde25e1571750e51e36f5fa726770f5
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548344"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403222"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API file di Microsoft Information Protection SDK-giustificazione dell'azione per abbassare un'etichetta di riservatezza in un file (C#)
 
-Questa Guida introduttiva gestisce un'operazione di downgrade dell'etichetta quando il criterio dell'etichetta richiede una giustificazione. In questo caso, si userà `IFileHandler` Interface per modificare le etichette di un file. Per ulteriori informazioni, consultare le informazioni di [riferimento sulle API](/dotnet/api/?term=microsoft.informationprotection).
+Questa Guida introduttiva gestisce un'operazione di downgrade dell'etichetta quando il criterio dell'etichetta richiede una giustificazione. In questo caso, si userà `IFileHandler` Interface per modificare le etichette di un file. Per altri dettagli, vedere le [informazioni di riferimento sull'API](/dotnet/api/?term=microsoft.informationprotection).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- [Guida introduttiva completa: impostare/ottenere prima le etichette di riservatezza (C#)](quick-file-set-get-label-csharp.md) , che compila una soluzione Starter di Visual Studio, per elencare le etichette di riservatezza di un'organizzazione, per impostare e leggere le etichette di riservatezza in/da un file. Questa Guida introduttiva "come eseguire il downgrade o la rimozione di un'etichetta che necessita di una giustificazione C#" si basa su quella precedente.
-- Facoltativamente: esaminare i [concetti relativi ai gestori di file](concept-handler-file-cpp.md) nei concetti relativi a MIP SDK.
+- [Guida introduttiva completa: impostare/ottenere le etichette di riservatezza (C#)](quick-file-set-get-label-csharp.md) che compila una soluzione Starter di Visual Studio per elencare le etichette di riservatezza di un'organizzazione e per impostare e leggere le etichette di riservatezza in/da un file. Questa Guida introduttiva "come eseguire il downgrade o la rimozione di un'etichetta che necessita di una giustificazione C#" si basa su quella precedente.
+- Facoltativamente: rivedere i [concetti relativi ai gestori di file](concept-handler-file-cpp.md) in MIP SDK.
 
 ## <a name="add-logic-to-set-a-lower-label-to-a-protected-file"></a>Aggiungere la logica per impostare un'etichetta inferiore su un file protetto
 
@@ -30,9 +30,9 @@ Aggiungere la logica per impostare un'etichetta di riservatezza su un file, usan
 
 1. Aprire la soluzione di Visual Studio creata nella precedente sezione "Guida introduttiva: impostare/ottenere le etichette di riservatezza (C#).
 
-2. Utilizzando Esplora soluzioni, aprire il file con estensione cs nel progetto che contiene l'implementazione del `Main()` metodo. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
+2. Usare Esplora soluzioni per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
-3. Aggiornare il `<label-id>` valore dalla Guida introduttiva precedente a un'etichetta di riservatezza che richiede una giustificazione per la riduzione. Durante l'esecuzione di questa Guida introduttiva, si imposterà prima questa etichetta e quindi si tenterà di abbassarla tramite frammenti di codice in ulteriori passaggi.
+3. Aggiornare il valore `<label-id>` dalla guida di avvio rapido precedente impostando un'etichetta di riservatezza che richiede una giustificazione per l'abbassamento. Durante l'esecuzione di questa guida di avvio rapido, si imposterà prima questa etichetta e quindi si tenterà di abbassarla tramite frammenti di codice in ulteriori passaggi.
 
 4. `Main()`Inserire il codice seguente verso la fine del corpo, sotto `Console.ReadKey()` e sopra il blocco di arresto dell'applicazione (in cui è stato interrotto nella Guida introduttiva precedente).
 
@@ -92,15 +92,14 @@ Aggiungere la logica per impostare un'etichetta di riservatezza su un file, usan
     ````csharp
     downgradeHandler = null;
     commitHandler = null;
-
     ````
 
 6. Sostituire i valori segnaposto nel codice sorgente, usando i valori seguenti:
 
-   | Segnaposto | valore |
+   | Segnaposto | Valore |
    |:----------- |:----- |
-   | \<downgraded-labled-output\> | Percorso del file di output in cui si desidera salvare il file modificato. |
-   | \<new-label-id\> | ID modello, copiato dall'output della console nella Guida introduttiva precedente, ad esempio: `bb7ed207-046a-4caf-9826-647cff56b990` . Assicurarsi che abbia una sensibilità inferiore rispetto all'etichetta del file precedentemente protetto. |
+   | \<downgraded-labled-output\> | Percorso del file di output in cui si vuole salvare il file modificato. |
+   | \<new-label-id\> | ID modello, copiato dall'output della console nella Guida introduttiva precedente, ad esempio: `bb7ed207-046a-4caf-9826-647cff56b990` . Assicurarsi che abbia una riservatezza inferiore rispetto all'etichetta del file precedentemente protetto. |
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 

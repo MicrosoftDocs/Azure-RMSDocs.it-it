@@ -6,24 +6,24 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 602cc8c56d260e8399fa62367d585baae1976157
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: 929959135d4889ec65fcc5122837d6e8a09235e9
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548259"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403358"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>Guida introduttiva alla ripubblicazione dell'API file (C++)
 
 ## <a name="overview"></a>Panoramica
 
-Per una panoramica su questo scenario e su dove è possibile usarlo, vedere [ripubblicazione in MIP SDK](concept-republishing-cpp.md).
+Per una panoramica su questo scenario e su dove è possibile usarlo, vedere [ripubblicazione in MIP SDK](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- [Guida introduttiva completa: impostare/ottenere prima le etichette di riservatezza (C++)](quick-file-set-get-label-cpp.md) , che compila una soluzione Starter di Visual Studio, per elencare le etichette di riservatezza di un'organizzazione, per impostare e leggere le etichette di riservatezza in/da un file. Questa Guida introduttiva "come eseguire il downgrade o la rimozione di un'etichetta che necessita di una giustificazione C++" si basa su quella precedente.
+- In primo luogo completare [Avvio rapido: Impostare/ottenere le etichette di riservatezza (C++)](quick-file-set-get-label-cpp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione, per impostare e leggere le etichette di riservatezza in/da un file. Questa Guida introduttiva "come eseguire il downgrade o la rimozione di un'etichetta che necessita di una giustificazione C++" si basa su quella precedente.
 - Facoltativamente: esaminare i [gestori di file](concept-handler-file-cpp.md) nei concetti relativi a MIP SDK.
 - Facoltativamente: esaminare i [gestori della protezione](concept-handler-protection-cpp.md) nei concetti relativi a MIP SDK.
 
@@ -31,7 +31,7 @@ Se non è già stato fatto, completare i prerequisiti seguenti prima di continua
 
 Per poter usare decrittografare un file protetto usando `GetDecryptedTemporaryFileAsync()` il metodo esposto da `mip::FileHandler` , i callback per il metodo asincrono per esito positivo e negativo devono essere definiti come indicato di seguito.
 
-1. Aprire la soluzione di Visual Studio creata nella precedente sezione "Guida introduttiva: impostare/ottenere le etichette di riservatezza (C++).
+1. Aprire la soluzione Visual Studio creata nell'articolo precedente "Avvio rapido: Impostare/ottenere etichette di riservatezza (C++).
 
 2. Con Esplora soluzioni aprire il `filehandler_observer.h` file per nel progetto. Verso la fine della definizione FileHandler, prima di `};` aggiungere le righe seguenti per la dichiarazione del metodo.
 
@@ -57,63 +57,69 @@ Per poter usare decrittografare un file protetto usando `GetDecryptedTemporaryFi
 
 ## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Aggiungere la logica per modificare e ripubblicare un file protetto
 
-1. Utilizzando Esplora soluzioni, aprire il file con estensione cpp nel progetto che contiene l'implementazione del `main()` metodo. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
+1. Usare Esplora soluzioni per aprire il file con estensione cpp nel progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
 2. Verso la fine del corpo principale (), al di sotto del sistema ("pausa"); e versioni successive restituiscono 0; (dal punto in cui è stata abbandonata la Guida introduttiva precedente), inserire il codice seguente:
 
-    ```cpp
+```cpp
+//Originally protected file's path.
+std::string protectedFilePath = "<protected-file-path>";
 
-        //Originally protected file's path.
-        std::string protectedFilePath = "<protected-file-path>";
+// Create file handler for the file
+auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+auto handlerFuture = handlerPromise->get_future();
+engine->CreateFileHandlerAsync(protectedFilePath, 
+                                protectedFilePath, 
+                                true, 
+                                std::make_shared<FileHandlerObserver>(), 
+                                handlerPromise);
+auto protectedFileHandler = handlerFuture.get();
 
-        // Create file handler for the file
-        auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-        auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(protectedFilePath, protectedFilePath, true, std::make_shared<FileHandlerObserver>(), handlerPromise);
-        auto protectedFileHandler = handlerFuture.get();
+// retieve and store protection handler from file
+auto protectionHandler = protectedFileHandler->GetProtection();
 
-        // retieve and store protection handler from file
-        auto protectionHandler = protectedFileHandler->GetProtection();
+//Check if the user has the 'Edit' right to the file and if so decrypt the file.
+if (protectionHandler->AccessCheck("Edit")) {
 
-        //Check if the user has the 'Edit' right to the file and if so decrypt the file.
-        if (protectionHandler->AccessCheck("Edit")) {
+    // Decrypt file to temp path using the same file handler
+    auto tempPromise = std::make_shared<std::promise<string>>();
+    auto tempFuture = tempPromise->get_future();
+    protectedFileHandler->GetDecryptedTemporaryFileAsync(tempPromise);
+    auto tempPath = tempFuture.get();
 
-            // Decrypt file to temp path using the same file handler
-            auto tempPromise = std::make_shared<std::promise<string>>();
-            auto tempFuture = tempPromise->get_future();
-            protectedFileHandler->GetDecryptedTemporaryFileAsync(tempPromise);
-            auto tempPath = tempFuture.get();
+    /// Write code here to perform further operations for edit ///
 
-            /// Write code here to perform further operations for edit ///
+    /// Follow steps below for re-protecting the edited file ///
 
-            /// Follow steps below for re-protecting the edited file ///
+    // Create a new file handler using the temporary file path.
+    auto reprotectPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+    auto reprotectFuture = reprotectPromise->get_future();
+    engine->CreateFileHandlerAsync(tempPath, 
+                                    tempPath, 
+                                    true, 
+                                    std::make_shared<FileHandlerObserver>(), 
+                                    reprotectPromise);
+    auto republishHandler = reprotectFuture.get();
 
-            // Create a new file handler using the temporary file path.
-            auto reprotectPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-            auto reprotectFuture = reprotectPromise->get_future();
-            engine->CreateFileHandlerAsync(tempPath, tempPath, true, std::make_shared<FileHandlerObserver>(), reprotectPromise);
-            auto republishHandler = reprotectFuture.get();
+    // Set protection using the ProtectionHandler from the original consumption operation.
+    republishHandler->SetProtection(protectionHandler);
+    std::string reprotectedFilePath = "<protected-file-path>";
 
-            // Set protection using the ProtectionHandler from the original consumption operation.
-            republishHandler->SetProtection(protectionHandler);
-            std::string reprotectedFilePath = "<protected-file-path>";
+    // Commit changes
+    auto republishPromise = std::make_shared<std::promise<bool>>();
+    auto republishFuture = republishPromise->get_future();
+    republishHandler->CommitAsync(reprotectedFilePath, republishPromise);
 
-            // Commit changes
-            auto republishPromise = std::make_shared<std::promise<bool>>();
-            auto republishFuture = republishPromise->get_future();
-            republishHandler->CommitAsync(reprotectedFilePath, republishPromise);
+    // Validate republishing
+    cout << "Protected File: " + protectedFilePath<<endl;
+    cout << "Protected Label ID: " + protectedFileHandler->GetLabel()->GetLabel()->GetId() << endl;
+    cout << "Protection Owner: " + protectedFileHandler->GetProtection()->GetOwner() << endl<<endl;
 
-            // Validate republishing
-            cout << "Protected File: " + protectedFilePath<<endl;
-            cout << "Protected Label ID: " + protectedFileHandler->GetLabel()->GetLabel()->GetId() << endl;
-            cout << "Protection Owner: " + protectedFileHandler->GetProtection()->GetOwner() << endl<<endl;
-
-            cout << "Republished File: " + reprotectedFilePath<<endl;
-            cout << "Republished Label ID: " + republishHandler->GetLabel()->GetLabel()->GetId() << endl;
-            cout << "Republished Owner: " + republishHandler->GetProtection()->GetOwner() << endl;
-
-        }
-    ```
+    cout << "Republished File: " + reprotectedFilePath<<endl;
+    cout << "Republished Label ID: " + republishHandler->GetLabel()->GetLabel()->GetId() << endl;
+    cout << "Republished Owner: " + republishHandler->GetProtection()->GetOwner() << endl;
+}
+```
 
 3. Verso la fine di Main () individuare il blocco di arresto dell'applicazione creato nella Guida introduttiva precedente e aggiungere le righe del gestore per rilasciare le risorse.
 
@@ -125,7 +131,7 @@ Per poter usare decrittografare un file protetto usando `GetDecryptedTemporaryFi
 
 4. Sostituire i valori segnaposto nel codice sorgente, usando i valori seguenti:
 
-   | Segnaposto | valore |
+   | Segnaposto | Valore |
    |:----------- |:----- |
    | \<protected-file-path\> | File protetto dalla Guida introduttiva precedente. |
    | \<reprotected-file-path\> | Percorso del file di output per il file modificato da ripubblicare. |

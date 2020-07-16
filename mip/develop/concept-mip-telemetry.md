@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 87c9884f497cd0020b7252b6ef5a466fe858a8c1
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 22f98a6781dc0ff0b43d1da73c72c2029c960021
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764124"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403375"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configurazione della telemetria
 
@@ -21,11 +21,13 @@ Per impostazione predefinita, Microsoft Information Protection SDK invia i dati 
 
 ## <a name="telemetry-configuration"></a>Configurazione della telemetria
 
-Le opzioni di telemetria nell'SDK MIP possono essere controllate tramite [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Creare un'istanza di questa classe, quindi impostare **IsTelemetryOptedOut** su true. Fornire l'oggetto della classe **TelemetryConfiguration** alla funzione utilizzata per creare **MipContext**. 
+Le opzioni di telemetria nell'SDK MIP possono essere controllate tramite [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Creare un'istanza di questa classe, quindi impostare **IsTelemetryOptedOut** su true. Fornire l'oggetto della classe **TelemetryConfiguration** alla funzione utilizzata per creare **MipContext**.
 
 A partire da MIP SDK versione 1,6, l'opzione di impostazione **Disabilita completamente** i dati di telemetria. In verisons 1,5 e versioni precedenti si invia un set di informazioni di telemetria minime.
 
 ### <a name="minimum-telemetry-events"></a>Eventi di telemetria minimi
+
+In MIP SDK 1,6 e versioni successive, quando la telemetria è impostata su *opt-out*, **non viene inviato alcun evento di telemetria.** Le versioni precedenti alla 1,6 presentano il comportamento seguente.
 
 Quando la telemetria è impostata su *opt-out*, un set di dati minimo viene inviato a Microsoft. Tutte le informazioni personali vengono rimosse da queste informazioni. Questi dati includono informazioni sull'heartbeat per comprendere che l'SDK è in uso e i metadati di sistema. **Nessun contenuto utente o informazioni identificabili dall'utente finale è impostato sul servizio.**
 
@@ -33,7 +35,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 
 #### <a name="event-heartbeat"></a>Evento: heartbeat
 
-| Name                                 | Descrizione                                                                            | Pulitura |
+| Nome                                 | Descrizione                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | App. ApplicationId                    | Identificatore dell'applicazione fornito tramite MIP:: ApplicationInfo.                          | No       |
 | App. ApplicationName                  | Nome dell'applicazione fornito tramite MIP:: ApplicationInfo.                                | No       |
@@ -63,7 +65,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 
 #### <a name="event-discovery"></a>Evento: individuazione
 
-| Name                                 | Descrizione                                                                            | Pulitura |
+| Nome                                 | Descrizione                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | ID di azione univoco per questo evento, usato per la correlazione degli eventi.                           | No       |
 | App. ApplicationId                    | Identificatore dell'applicazione fornito tramite MIP:: ApplicationInfo.                          | No       |
@@ -99,7 +101,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 
 #### <a name="event-label-change"></a>Evento: modifica dell'etichetta
 
-| Name                                 | Descrizione                                                                            | Pulitura |
+| Nome                                 | Descrizione                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | ID di azione univoco per questo evento, usato per la correlazione degli eventi.                           | No       |
 | ActionIdBefore                       | ID azione precedente. Utilizzato per concatenare al nuovo ID di azione.                                    | No       |
