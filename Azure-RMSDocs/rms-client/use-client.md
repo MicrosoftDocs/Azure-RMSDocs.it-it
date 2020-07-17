@@ -1,10 +1,10 @@
 ---
 title: Il client per Azure Information Protection-AIP
 description: Microsoft Azure Information Protection offre una soluzione client-server che consente di proteggere i dati di un'organizzazione. Il client (di Azure Information Protection o di Rights Management) si integra con le applicazioni che vengono eseguite su computer e dispositivi mobili.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 07/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 08c5658ed0997da058e2542826d336581bba4bb7
-ms.sourcegitcommit: 76bb452442ed42f066ee23fb3bcd9fef92440b22
+ms.openlocfilehash: 53f9b0b11c89e66fccc10243d48bc2835884ea35
+ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308505"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437836"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -160,7 +160,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Supporto per il cambio di account:| No | No | **Sì** |
 |Supporto per Servizi Desktop remoto:| **Sì** | **Sì** | **Sì** |
 |Supporto per AD RMS:| **Sì** | No <sup>7</sup> | No |
-|Rimuovi contrassegno contenuto esterno nell'app| **Sì**| No| No|
+|Rimuovi contrassegno contenuto esterno nell'app:| **Sì**| **Sì**| No|
 
 
 Note a piè di pagina:
