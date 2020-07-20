@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection le etichette unificate client-cronologia delle versioni & criteri di supporto
 description: Vedere le informazioni sulla versione del client per l'etichettatura unificata di Azure Information Protection per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aca29a142c0735755c343535b3df43e175c59e80
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
+ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048613"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86471724"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -63,7 +63,17 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## <a name="version-27960"></a>Versione 2.7.96.0 
+## <a name="version-27990"></a>Versione 2.7.99.0
+
+Scanner unificato per l'assegnazione di etichette e versione client 2.7.99.0
+
+**Correzioni e miglioramenti:**
+
+Correzione dei problemi nelle azioni di assegnazione di etichette di file per i nuovi log di controllo delle **etichette** .
+
+Per ulteriori informazioni, vedere la pagina relativa alla [versione 2.7.96.0](#version-27960) e [Azure Information Protection riferimento al log di controllo (anteprima pubblica)](../audit-logs.md).
+
+## <a name="version-27960"></a>Versione 2.7.96.0
 
 Scanner unificato per l'assegnazione di etichette e versione client 2.7.96.0
 
@@ -98,6 +108,11 @@ I log di controllo vengono ora generati ogni volta che lo scanner rileva che un 
 Per altre informazioni, vedere:
 - [Log di controllo rimossi dal file](../audit-logs.md#file-removed-audit-logs)
 - [Reporting centralizzato per Azure Information Protection](../reports-aip.md)
+
+> [!IMPORTANT]
+> In questa versione le azioni di assegnazione di etichette di file non generano nuovi log di controllo **etichetta** .
+> Se si esegue lo scanner in **Imponi = in** modalità, è consigliabile eseguire l'aggiornamento alla [versione 2.7.99.0](#version-27990).
+> 
 
 **Imposizione di TLS 1.2**
 
