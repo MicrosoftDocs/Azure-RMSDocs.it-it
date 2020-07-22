@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: 44aabf8a6c822779100c3ca8c9c2eadf1831f549
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: ef6f8db6915242a830d252eec4509fa67eecbb8c
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548123"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403315"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>API File - Elaborare file con estensione msg di posta elettronica (C++)
 
@@ -26,7 +26,7 @@ Se non è già stato fatto, completare i prerequisiti seguenti prima di continua
 - In primo luogo completare [Avvio rapido: Inizializzazione dell'applicazione API File (C++)](quick-app-initialization-cpp.md) per creare una soluzione Visual Studio iniziale. Questa guida di avvio rapido "Procedura - Elaborazione dei file con estensione msg dei messaggi di posta elettronica (C++)" si basa su quella precedente.
 - Vedere [Avvio rapido: Elencare le etichette di riservatezza (C#)](quick-file-list-labels-cpp.md).
 - Vedere [Avvio rapido: Impostare/ottenere etichette di riservatezza (C#)](quick-file-set-get-label-cpp.md).
-- Vedere i concetti relativi ai [file di posta elettronica in MIP SDK](concept-email-cpp.md).
+- Vedere i concetti relativi ai [file di posta elettronica in MIP SDK](concept-email.md).
 - Facoltativamente: vedere i concetti relativi ai [motori di file in MIP SDK](concept-profile-engine-file-engine-cpp.md).
 - Facoltativamente: rivedere i concetti esposti in [Gestori di file in MIP SDK](concept-handler-file-cpp.md).
 
@@ -61,129 +61,148 @@ Aggiungere il codice di costruzione del motore di file seguente per impostare `e
 
 3. Rimuovere l'implementazione della funzione `main()` dalla guida di avvio rapido precedente. Inserire il codice seguente all'interno del corpo di `main()`. Nel blocco di codice seguente il flag `enable_msg_file_type` viene impostato durante la creazione del motore di file e un file con estensione msg può quindi essere elaborato dagli oggetti `mip::FileHandler` creati usando il motore di file.
 
-    ```cpp
-    int main()
+```cpp
+int main()
+{
+    // Construct/initialize objects required by the application's profile object
+    ApplicationInfo appInfo { "<application-id>",                    // ApplicationInfo object (App ID, name, version)
+                              "<application-name>", 
+                              "1.0" 
+    };
+
+    auto mipContext = mip::MipContext::Create(appInfo,
+                                                "file_sample",
+                                                mip::LogLevel::Trace,
+                                                false,
+                                                nullptr /*loggerDelegateOverride*/,
+                                                nullptr /*telemetryOverride*/);
+
+    auto profileObserver = make_shared<ProfileObserver>();                      // Observer object
+    auto authDelegateImpl = make_shared<AuthDelegateImpl>("<application-id>");  // Authentication delegate object (App ID)
+    auto consentDelegateImpl = make_shared<ConsentDelegateImpl>();              // Consent delegate object
+
+    // Construct/initialize profile object
+    FileProfile::Settings profileSettings(mipContext,mip::CacheStorageType::OnDisk,authDelegateImpl,
+        consentDelegateImpl,profileObserver);
+
+    // Set up promise/future connection for async profile operations; load profile asynchronously
+    auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
+    auto profileFuture = profilePromise->get_future();
+    try
     {
-        // Construct/initialize objects required by the application's profile object
-        ApplicationInfo appInfo{ "<application-id>",                    // ApplicationInfo object (App ID, name, version)
-                    "<application-name>", "1.0" };
-
-        auto mipContext = mip::MipContext::Create(appInfo,"file_sample",mip::LogLevel::Trace,false,
-                                                nullptr /*loggerDelegateOverride*/,nullptr /*telemetryOverride*/);
-
-        auto profileObserver = make_shared<ProfileObserver>();                      // Observer object
-        auto authDelegateImpl = make_shared<AuthDelegateImpl>("<application-id>");  // Authentication delegate object (App ID)
-        auto consentDelegateImpl = make_shared<ConsentDelegateImpl>();              // Consent delegate object
-
-        // Construct/initialize profile object
-        FileProfile::Settings profileSettings(mipContext,mip::CacheStorageType::OnDisk,authDelegateImpl,
-            consentDelegateImpl,profileObserver);
-
-        // Set up promise/future connection for async profile operations; load profile asynchronously
-        auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
-        auto profileFuture = profilePromise->get_future();
-        try
-        {
-            mip::FileProfile::LoadAsync(profileSettings, profilePromise);
-        }
-        catch (const std::exception& e)
-        {
-            std::cout << "An exception occurred... are the Settings and ApplicationInfo objects populated correctly?\n\n"<< e.what() << "'\n";
-            system("pause");
-            return 1;
-        }
-        auto profile = profileFuture.get();
-
-        // Construct/initialize engine object
-        FileEngine::Settings engineSettings(
-            mip::Identity("<engine-account>"),    // Engine identity (account used for authentication)
-            "<engine-state>",                                 // User-defined engine state
-            "en-US");                                       // Locale (default = en-US)
-
-        //Set enamble_msg_file_type flag as true
-        std::vector<std::pair<string, string>> customSettings;
-        customSettings.emplace_back(mip::GetCustomSettingEnableMsgFileType(), "true");
-        engineSettings.SetCustomSettings(customSettings);
-
-        // Set up promise/future connection for async engine operations; add engine to profile asynchronously
-        auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
-        auto engineFuture = enginePromise->get_future();
-        profile->AddEngineAsync(engineSettings, enginePromise);
-        std::shared_ptr<FileEngine> engine;
-
-        try
-        {
-            engine = engineFuture.get();
-        }
-        catch (const std::exception& e)
-        {
-            cout << "An exception occurred... is the access token incorrect/expired?\n\n"<< e.what() << "'\n";
-            system("pause");
-            return 1;
-        }
-
-
-        //Set file paths
-        string inputFilePath = "<input-file-path>"; //.msg file to be protected
-        string actualFilePath = inputFilePath;
-        string outputFilePath = "<output-file-path>"; //protected .msg file
-        string actualOutputFilePath = outputFilePath;
-
-        //Create a file handler for original file
-        auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-        auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(inputFilePath,actualFilePath,true,std::make_shared<FileHandlerObserver>(),handlerPromise);
-        auto fileHandler = handlerFuture.get();
-
-        //List templates available to the user and use one of them to protect the mail file.
-
-            ///Listing of protection templates has to be performed by creating protection engine as described in protection quick start
-
-        string templateId = "<template-id>"; //protection template retrieved using protection engine
-
-        //Create a protection descriptor using templateID and use it to set protection to the file
-        auto descriptorBuilder = mip::ProtectionDescriptorBuilder::CreateFromTemplate(templateId);
-        const std::shared_ptr<mip::ProtectionDescriptor>& descriptor = descriptorBuilder->Build();
-        fileHandler->SetProtection(descriptor, ProtectionSettings());
-
-        // Commit changes, save as outputFilePath
-        auto commitPromise = std::make_shared<std::promise<bool>>();
-        auto commitFuture = commitPromise->get_future();
-        fileHandler->CommitAsync(outputFilePath, commitPromise);
-        if (commitFuture.get()) {
-            cout << "\n Protection applied to file: " << outputFilePath << endl;
-        }
-        else {
-            cout << "Failed to protect: " + outputFilePath << endl;
-            return 1;
-        }
-
-        // Create a new handler to read the protected file metadata
-        auto protectedHandlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
-        auto protectedHandlerFuture = protectedHandlerPromise->get_future();
-        engine->CreateFileHandlerAsync(outputFilePath, actualOutputFilePath, true, std::make_shared<FileHandlerObserver>(), protectedHandlerPromise);
-        auto protectedFileHandler = protectedHandlerFuture.get();
-
-        cout << "Original file: " << inputFilePath << endl;
-        cout << "Protected file: " << outputFilePath << endl;
-        cout << "TemplateID applied to protected file : " << protectedFileHandler->GetProtection()->GetProtectionDescriptor()->GetTemplateId() << endl;
-        cout << "Protection Owner of protected file : " << protectedFileHandler->GetProtection()->GetProtectionDescriptor()->GetOwner() << endl;
-
-
-        // Application shutdown. Null out profile and engine, call ReleaseAllResources();
-        // Application may crash at shutdown if resources aren't properly released.
-        protectedFileHandler = nullptr;
-        fileHandler = nullptr;
-        engine = nullptr;
-        profile = nullptr;
-        mipContext = nullptr;
-
-        return 0;
+        mip::FileProfile::LoadAsync(profileSettings, profilePromise);
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "An exception occurred. Are the Settings and ApplicationInfo objects populated correctly?\n\n"<< e.what() << "'\n";
+        system("pause");
+        return 1;
     }
 
-    ```
+    auto profile = profileFuture.get();
 
-    Per altri dettagli sulle operazioni sui file, vedere i [concetti relativi al gestore di file](concept-handler-file-cpp.md).
+    // Construct/initialize engine object
+    FileEngine::Settings engineSettings(
+                            mip::Identity("<engine-account>"),      // Engine identity (account used for authentication)
+                            "<engine-state>",                       // User-defined engine state
+                            "en-US");                               // Locale (default = en-US)
+
+    //Set enamble_msg_file_type flag as true
+    std::vector<std::pair<string, string>> customSettings;
+    customSettings.emplace_back(mip::GetCustomSettingEnableMsgFileType(), "true");
+    engineSettings.SetCustomSettings(customSettings);
+
+    // Set up promise/future connection for async engine operations; add engine to profile asynchronously
+    auto enginePromise = make_shared<promise<shared_ptr<FileEngine>>>();
+    auto engineFuture = enginePromise->get_future();
+    profile->AddEngineAsync(engineSettings, enginePromise);
+    std::shared_ptr<FileEngine> engine;
+
+    try
+    {
+        engine = engineFuture.get();
+    }
+    catch (const std::exception& e)
+    {
+        cout << "An exception occurred... is the access token incorrect/expired?\n\n"<< e.what() << "'\n";
+        system("pause");
+        return 1;
+    }
+
+    //Set file paths
+    string inputFilePath = "<input-file-path>"; //.msg file to be protected
+    string actualFilePath = inputFilePath;
+    string outputFilePath = "<output-file-path>"; //protected .msg file
+    string actualOutputFilePath = outputFilePath;
+
+    //Create a file handler for original file
+    auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+    auto handlerFuture = handlerPromise->get_future();
+
+    engine->CreateFileHandlerAsync(inputFilePath,
+                                    actualFilePath,
+                                    true,
+                                    std::make_shared<FileHandlerObserver>(),
+                                    handlerPromise);
+
+    auto fileHandler = handlerFuture.get();
+
+    //List templates available to the user and use one of them to protect the mail file.
+
+    ///Listing of protection templates must be performed by creating protection engine as described in protection quick start
+
+    string templateId = "<template-id>"; //protection template retrieved using protection engine
+
+    //Create a protection descriptor using templateID and use it to set protection to the file
+    auto descriptorBuilder = mip::ProtectionDescriptorBuilder::CreateFromTemplate(templateId);
+    const std::shared_ptr<mip::ProtectionDescriptor>& descriptor = descriptorBuilder->Build();
+    fileHandler->SetProtection(descriptor, ProtectionSettings());
+
+    // Commit changes, save as outputFilePath
+    auto commitPromise = std::make_shared<std::promise<bool>>();
+    auto commitFuture = commitPromise->get_future();
+    fileHandler->CommitAsync(outputFilePath, commitPromise);
+    if (commitFuture.get()) {
+        cout << "\n Protection applied to file: " << outputFilePath << endl;
+    }
+    else {
+        cout << "Failed to protect: " + outputFilePath << endl;
+        return 1;
+    }
+
+    // Create a new handler to read the protected file metadata
+    auto protectedHandlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
+    auto protectedHandlerFuture = protectedHandlerPromise->get_future();
+    engine->CreateFileHandlerAsync(outputFilePath, 
+                                   actualOutputFilePath, 
+                                   true, 
+                                   std::make_shared<FileHandlerObserver>(), 
+                                   protectedHandlerPromise);
+
+    auto protectedFileHandler = protectedHandlerFuture.get();
+
+    cout << "Original file: " << inputFilePath << endl;
+    cout << "Protected file: " << outputFilePath << endl;
+    cout << "TemplateID applied to protected file : " 
+            << protectedFileHandler->GetProtection()->GetProtectionDescriptor()->GetTemplateId() 
+            << endl;
+    cout << "Protection Owner of protected file : " 
+            << protectedFileHandler->GetProtection()->GetProtectionDescriptor()->GetOwner() 
+            << endl;
+
+    // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+    // Application may crash at shutdown if resources aren't properly released.
+    protectedFileHandler = nullptr;
+    fileHandler = nullptr;
+    engine = nullptr;
+    profile = nullptr;
+    mipContext = nullptr;
+
+    return 0;
+}
+```
+
+Per altri dettagli sulle operazioni sui file, vedere i [concetti relativi al gestore di file](concept-handler-file-cpp.md).
 
 4. Sostituire i valori segnaposto nel codice sorgente, usando i valori seguenti:
 
