@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbb72857b460dc223a9bb7504ecb52d21f1fb70f
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 9196f02e63f7eb433237613fe44c43cf74ab3262
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136955"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869029"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Preparare l'ambiente per Azure Rights Management quando si dispone di AD RMS
 
@@ -41,7 +41,7 @@ Se il servizio Active Rights Management è attivato e si usa anche AD RMS, la co
 
 Se AD RMS viene distribuito per l'organizzazione, considerare se è possibile eseguire la migrazione ad Azure Information Protection. Azure Information Protection presenta numerosi vantaggi rispetto ad AD RMS, ad esempio un supporto migliore per i dispositivi mobili e l'integrazione con i servizi di Office 365, nonché con Exchange Server e SharePoint Server. Per altre informazioni, vedere [Confronto tra Azure Information Protection e AD RMS](compare-on-premise.md).
 
-Quando esegue la migrazione ad Azure Information Protection, non si perde l'accesso ai contenuti precedentemente protetti né è necessario rimuovere la protezione o riapplicarla ai contenuti. È possibile aprire i documenti e i messaggi di posta elettronica protetti in precedenza da AD RMS anche dopo il deprovisioning di AD RMS.
+Quando si esegue la migrazione a Azure Information Protection, non si perderà l'accesso al contenuto protetto in precedenza e non sarà necessario rimuovere o riproteggere il contenuto. I documenti e i messaggi di posta elettronica protetti da AD RMS possono comunque essere aperti anche dopo aver effettuato il deprovisioning AD RMS.
 
 Che si decida di eseguire la migrazione ad Azure Information Protection o di accettare le limitazioni nell'uso della distribuzione corrente di AD RMS, è prima di tutto necessario assicurarsi che il servizio Azure Rights Management sia disattivato. Per istruzioni, seguire i passaggi per lo scenario appropriato:
 

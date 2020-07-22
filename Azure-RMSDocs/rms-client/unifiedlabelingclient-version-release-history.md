@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
-ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
+ms.openlocfilehash: ad63ebcb4ab5be291d669ac6939279740be6efc1
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86471724"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868791"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -95,11 +95,17 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.96.0
 
 **Nuove funzionalità per il client Unified Labeling:**
 
-- Sono ora visualizzati [popup di giustificazione](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) per le modifiche apportate alle etichette predefinite nel client di etichettatura unificata.
+- Sono ora visualizzati [**popup di giustificazione**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) per le modifiche apportate alle etichette predefinite nel client di etichettatura unificata.
     
 - Integrazione più uniforme con i contrassegni di contenuto visivi applicati da Office. Per altre informazioni sulla configurazione dei contrassegni di contenuto nei documenti di Office, vedere [come configurare un'etichetta per i contrassegni visivi per Azure Information Protection](../configure-policy-markings.md).
 
 - La nuova proprietà avanzata **WordShapeNameToRemove** consente la rimozione del contrassegno di contenuto nei documenti di Word creati da applicazioni di terze parti. Altre informazioni su come [identificare i nomi delle forme esistenti e definirli per la rimozione usando **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions).
+
+- Supporto per la **crittografia a chiave doppia (DKE)** (anteprima pubblica). 
+
+    È ora possibile usare il client Unified Labeling per proteggere il contenuto altamente sensibile mantenendo il controllo completo della chiave. DKE richiede due chiavi per accedere al contenuto protetto: una chiave viene archiviata in Azure e l'altra chiave viene mantenuta dal cliente. 
+
+    Per altre informazioni sulle chiavi radice del tenant predefinite basate sul cloud, vedere [pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-implement-tenant-key.md). Per informazioni sull'implementazione della crittografia a chiave doppia, vedere [crittografia a chiave doppia](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) nella documentazione di Microsoft 365.
 
 **Nuovi log di controllo generati per i file rimossi**
 

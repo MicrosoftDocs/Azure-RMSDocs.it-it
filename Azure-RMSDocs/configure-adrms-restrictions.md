@@ -1,210 +1,249 @@
 ---
-title: Protezione HYOK per Azure Information Protection
+title: Protezione HYOK (Holding your own key) per Azure Information Protection
 description: Panoramica della protezione HYOK (AD RMS) con Azure Information Protection, degli scenari supportati e dei relativi prerequisiti, limitazioni e raccomandazioni.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 9a912db81e293575d74000d79ddc4f6592ab8046
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: cfd88d6356655e4f3ebe969935175302424a7a57
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046318"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868827"
 ---
-# <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
+# <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Details Your Own Key (HYOK) per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Istruzioni per: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Le informazioni che seguono consentono di capire che cos'è la protezione HYOK (hold your own key) per Azure Information Protection e in che cosa differisce rispetto alla protezione predefinita basata su cloud. Prima di usare la protezione HYOK, verificare di avere compreso quando deve essere usata e quali sono gli scenari supportati, i requisiti e le limitazioni. 
+Le configurazioni HYOK (Holding your own key) consentono ai clienti di AIP con il client classico di proteggere il contenuto altamente sensibile mantenendo al tempo stesso il controllo completo della chiave. HYOK usa una chiave aggiuntiva, inclusa nel cliente, archiviata in locale per contenuti estremamente sensibili, insieme alla protezione predefinita basata sul cloud usata per altro contenuto. 
+
+Per altre informazioni sulle chiavi radice del tenant predefinite basate sul cloud, vedere [pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
 ## <a name="cloud-based-protection-vs-hyok"></a>Protezione basata sul cloud rispetto a HYOK
 
-Per proteggere documenti e messaggi di posta elettronica contenenti informazioni riservate con Azure Information Protection, è in genere possibile applicare una chiave basata su cloud che usa la protezione di Azure Rights Management (Azure RMS) e sfruttare i vantaggi seguenti:
+In genere, la protezione di documenti e messaggi di posta elettronica riservati usando Azure Information Protection usa una chiave basata sul cloud [generata da Microsoft](plan-implement-tenant-key.md#tenant-root-keys-generated-by-microsoft) o [dal cliente, usando una configurazione BYOK](byok-price-restrictions.md). 
 
-- Infrastruttura server non necessaria. In questo modo, la soluzione è più veloce e conveniente da distribuire e gestire rispetto a una soluzione locale.
+Le chiavi basate sul cloud sono gestite in Azure Key Vault, che offre ai clienti i vantaggi seguenti:
 
-- Condivisione più agevole con partner e utenti di altre organizzazioni tramite l'autenticazione basata su cloud.
+- **Nessun requisito di infrastruttura server.** Le soluzioni cloud sono più veloci e convenienti da distribuire e gestire rispetto alle soluzioni locali.
 
-- Stretta integrazione con altri servizi di Azure e Office 365, ad esempio ricerca, visualizzatori Web, viste trasformate tramite Pivot, anti-malware, eDiscovery e Delve.
+- **L'autenticazione basata sul cloud** consente una condivisione più semplice con partner e utenti di altre organizzazioni. 
 
-- Monitoraggio di documenti, revoca e notifiche tramite posta elettronica per i documenti condivisi contenenti informazioni riservate.
+- **Stretta integrazione con altri servizi di Azure e Office 365**, ad esempio ricerca, visualizzatori Web, viste trasformate tramite pivot, anti-malware, eDiscovery e approfondimenti.
 
-Una chiave basata su cloud consente di proteggere i documenti e i messaggi di posta elettronica dell'organizzazione usando una chiave privata gestita da Microsoft (impostazione predefinita) o dall'utente (scenario BYOK o "bring your own key"). Per altre informazioni sulle opzioni della chiave del tenant, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
+- **Rilevamento dei documenti**, **revoca**e **notifiche tramite posta elettronica** per i documenti riservati che sono stati condivisi.
 
-I documenti e i messaggi di posta elettronica protetti possono essere archiviati nel cloud o in locale. Per altre informazioni sul funzionamento del processo di protezione per questa chiave basata su cloud, vedere [Informazioni su Azure Rights Management](what-is-azure-rms.md )
+Tuttavia, alcune organizzazioni possono avere requisiti normativi che richiedono la crittografia di contenuti specifici usando una chiave isolata dal cloud. Questo isolamento significa che il contenuto crittografato può essere letto solo da applicazioni locali e servizi locali.
 
-I servizi di Office 365 e le applicazioni basate su cloud per il tenant possono essere integrati con Azure Information Protection in modo che funzionalità aziendali importanti, ad esempio i servizi di ricerca, indicizzazione, archiviazione e antimalware, continuino a funzionare senza problemi per il contenuto protetto da Azure Information Protection. La possibilità di leggere il contenuto crittografato in questi scenari è noto anche come "ragionamento sui dati". Ad esempio, è questa funzionalità che consente a Exchange Online di decrittografare i messaggi di posta elettronica per l'analisi antimalware e di eseguire regole di prevenzione della perdita di dati per i messaggi crittografati.
-
-Tuttavia, per i requisiti normativi, per alcune organizzazioni può essere necessario crittografare il contenuto con una chiave isolata dal cloud. Questo isolamento significa che il contenuto crittografato può essere letto solo da applicazioni e servizi locali. Questa opzione di gestione delle chiavi è supportata da Azure Information Protection e viene definita "hold your own key" o HYOK. Quando si usa Azure Information Protection con HYOK, il tenant include sia una chiave basata su cloud che una chiave locale.
+Con le configurazioni di HYOK, i tenant dei clienti hanno una [chiave basata sul cloud](plan-implement-tenant-key.md) da usare con contenuto che può essere archiviato nel cloud e una chiave locale per il contenuto che deve essere protetto solo in locale.
 
 ## <a name="hyok-guidance-and-best-practices"></a>Materiale sussidiario e procedure consigliate per HYOK
 
-Usare la protezione HYOK solo per i documenti e i messaggi di posta elettronica che richiedono l'isolamento della chiave di crittografia dal cloud. La protezione HYOK non offre i vantaggi che si ottengono quando si usa la protezione con chiave basata su cloud e spesso implica una certa "opacità dei dati". Ciò significa che solo le applicazioni e i servizi locali saranno in grado di aprire i dati protetti con HYOK. I servizi e le applicazioni basati su cloud non sono in grado di "ragionare" sui dati protetti da HYOK.
+Quando si configura HYOK, tenere presenti le indicazioni seguenti:
 
-Anche per le organizzazioni che usano HYOK in genere la protezione è adatta per un numero ridotto di documenti che devono essere protetti. Come prassi consigliata, usarla solo per i documenti e quando sono soddisfatti tutti i criteri seguenti:
+- [Contenuto adatto per HYOK](#content-suitable-for-hyok)
+- [Definire gli utenti che possono visualizzare le etichette configurate con HYOK](#define-the-users-who-can-see-hyok-configured-labels)
+- [Supporto per HYOK e posta elettronica](#hyok-and-email-support)
 
-- Il contenuto è classificato come altamente riservato all'interno dell'organizzazione e l'accesso è limitato a poche persone
+> [!IMPORTANT]
+> Una configurazione HYOK per Azure Information Protection non sostituisce una distribuzione completamente AD RMS e Azure Information Protection oppure un'alternativa alla [migrazione ad RMS a Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
+>
+> HYOK è supportato solo applicando etichette, non offre parità di funzionalità con AD RMS e non supporta tutte le configurazioni di distribuzione di AD RMS.
 
-- Il contenuto non è condiviso all'esterno dell'organizzazione
+### <a name="content-suitable-for-hyok"></a>Contenuto adatto per HYOK
 
-- Il contenuto viene usato solo nella rete interna
+La protezione HYOK non offre i vantaggi della protezione basata sul cloud e spesso comporta il costo dell'opacità dei dati, perché è possibile accedere al contenuto solo da applicazioni e servizi locali. Anche per le organizzazioni che usano la protezione HYOK, è in genere adatto solo per un numero ridotto di documenti. 
 
-Poiché la protezione HYOK è un'opzione di configurazione dell'amministratore per un'etichetta, i flussi di lavoro utente restano invariati, indipendentemente dal fatto che la protezione usi una chiave basata su cloud o HYOK.
+Si consiglia di usare HYOK solo per il contenuto che soddisfa i criteri seguenti:
 
-I [criteri con ambito](configure-policy-scope.md) costituiscono un buon metodo per verificare che le etichette configurate per la protezione HYOK siano visibili solo agli utenti che devono applicare la protezione HYOK. 
+- Contenuto con la classificazione più alta all'interno dell'organizzazione ("Top Secret"), in cui l'accesso è limitato a poche persone
+- Contenuto non condiviso all'esterno dell'organizzazione
+- Contenuto che viene utilizzato solo nella rete interna.
 
-## <a name="supported-scenarios-for-hyok"></a>Scenari supportati per HYOK
+### <a name="define-the-users-who-can-see-hyok-configured-labels"></a>Definire gli utenti che possono visualizzare le etichette configurate con HYOK
 
-Per applicare la protezione HYOK, usare le etichette di Azure Information Protection. 
+Per assicurarsi che solo gli utenti che devono applicare la protezione HYOK vedano le etichette configurate da HYOK, configurare i criteri per gli utenti con [criteri con ambito](configure-policy-scope.md).
 
-Nella tabella seguente sono riportati gli scenari supportati per la protezione del contenuto con le etichette configurate per HYOK e per l'apertura e l'uso del contenuto protetto da HYOK.
+### <a name="hyok-and-email-support"></a>Supporto per HYOK e posta elettronica
 
-|Piattaforma|Applicazione|Supportato|
+I servizi di Office 365 e altri Servizi online non possono decrittografare il contenuto protetto con HYOK.
+
+Per i messaggi di posta elettronica, questa perdita di funzionalità include gli scanner di malware, le soluzioni di prevenzione della perdita dei dati, le regole di routing della posta elettronica, il journaling, eDiscovery, le soluzioni di archiviazione ed Exchange ActiveSync.
+
+Gli utenti potrebbero non comprendere il motivo per cui alcuni dispositivi non sono in grado di aprire messaggi di posta elettronica protetti da HYOK, ottenendo chiamate aggiuntive al help desk. Per evitare queste chiamate aggiuntive alla guida, non configurare la protezione HYOK per i messaggi di posta elettronica.
+
+## <a name="supported-applications-for-hyok"></a>Applicazioni supportate per HYOK
+
+Usare etichette Azure Information Protection per applicare HYOK a documenti e messaggi di posta elettronica specifici. HYOK è supportato per le versioni di Office 2013 e successive.
+
+HYOK è un'opzione di configurazione dell'amministratore per le etichette e i flussi di lavoro rimangono invariati, indipendentemente dal fatto che il contenuto usi come chiave basata sul cloud o HYOK.
+
+Le tabelle seguenti elencano gli scenari supportati per la protezione e l'utilizzo di contenuto con le etichette configurate in HYOK:
+
+- [Supporto delle applicazioni Windows per HYOK](#windows-application-support-for-hyok)
+- [supporto delle applicazioni macOS per HYOK](#macos-application-support-for-hyok)
+- [supporto delle applicazioni iOS per HYOK](#ios-application-support-for-hyok)
+- [Supporto delle applicazioni Android per HYOK](#android-application-support-for-hyok)
+- [Supporto dell'applicazione Web per HYOK](#web-application-support-for-hyok)
+- [Supporto dell'applicazione universale per HYOK](#universal-application-support-for-hyok)
+
+
+### <a name="windows-application-support-for-hyok"></a>Supporto delle applicazioni Windows per HYOK
+
+|Applicazione  |Protezione  |Consumo  |
+|---------|---------|---------|
+|Azure Information Protection client con app di Office 365, Office 2019, Office 2016 e Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![sì](media/yes-icon.png)        | ![Sì](media/yes-icon.png)        |
+|Client di Azure Information Protection     | ![sì](media/yes-icon.png)        | ![Sì](media/yes-icon.png) |
+|Visualizzatore di Azure Information Protection     |   Non applicabile      |  ![sì](media/yes-icon.png)       |
+|Client di Azure Information Protection con cmdlet per le etichette di PowerShell     | ![sì](media/yes-icon.png)        | ![Sì](media/yes-icon.png)        |
+|Scanner di Azure Information Protection     |![sì](media/yes-icon.png)       |   ![Sì](media/yes-icon.png)      |
+|Applicazione di condivisione Rights Management     |  ![no](media/no-icon.png)    |  ![sì](media/yes-icon.png)       |
+
+### <a name="macos-application-support-for-hyok"></a>supporto delle applicazioni macOS per HYOK
+
+|Applicazione|Protezione|Consumo|
 |----------------------|----------|-----------|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Client di Azure Information Protection|Protezione: sì <br /><br />Consumo: sì|
-|Windows|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
-|Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Scanner di Azure Information Protection|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
-|MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
-|MacOS|Office per Mac<br /><br />- Outlook|Protezione: no<br /><br />Consumo: sì|
-|MacOS|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
-|iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
-|iOS|Office Mobile <br /><br />-Outlook|Protezione: no<br /><br />Consumo: no|
-|iOS|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
-|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
-|Android|Office Mobile <br /><br />- Outlook|Protezione: no<br /><br />Consumo: no|
-|Android|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
-|Web|Outlook sul web|Protezione: no<br /><br />Consumo: no|
-|Web|Office per il Web<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
-|Universale|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
+|Office per Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![sì](media/yes-icon.png)|
+|Applicazione di condivisione Rights Management|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
 
+### <a name="ios-application-support-for-hyok"></a>supporto delle applicazioni iOS per HYOK
 
-## <a name="additional-limitations-when-using-hyok"></a>Limitazioni aggiuntive durante l'uso di HYOK
+|Applicazione|Protezione|Consumo|
+|----------------------|----------|-----------|
+|Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
+|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![no](media/no-icon.png)|
+|Visualizzatore di Azure Information Protection|Non applicabile|![sì](media/yes-icon.png)|
 
-Per l'uso della protezione HYOK con le etichette di Azure Information Protection sono inoltre previste le limitazioni seguenti:
+### <a name="android-application-support-for-hyok"></a>Supporto delle applicazioni Android per HYOK
 
-- Non supporta versioni di Office precedenti a Office 2013.
+|Applicazione|Protezione|Consumo|
+|----------------------|----------|-----------|
+|Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
+|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![no](media/no-icon.png)|
+|Visualizzatore di Azure Information Protection|Non applicabile| ![sì](media/yes-icon.png)|
 
-- I servizi di Office 365 e altri servizi online non saranno in grado di decrittografare i documenti e i messaggi di posta elettronica protetti da HYOK per verificarne il contenuto e agire di conseguenza. Questa limitazione si estende ai documenti e messaggi di posta elettronica con protezione HYOK che sono stati protetti con il connettore di Rights Management. 
-    
-    Questa perdita di funzionalità per i messaggi di posta elettronica protetti da HYOK include i programmi antimalware, le soluzioni di prevenzione della perdita di dati, le regole di routing della posta elettronica, l'inserimento nel journal, eDiscovery, le soluzioni di archiviazione ed Exchange ActiveSync. Inoltre, gli utenti non capiranno perché alcuni dispositivi non sono in grado di aprire i messaggi di posta elettronica protetti da HYOK e ciò può comportare l'aumento di chiamate all'help desk. Poiché le limitazioni sono molte, non è consigliabile usare la protezione HYOK per la posta elettronica.
+### <a name="web-application-support-for-hyok"></a>Supporto dell'applicazione Web per HYOK
+
+|Applicazione|Protezione|Consumo|
+|----------------------|----------|-----------|
+|Outlook sul web|![No](media/no-icon.png)|![no](media/no-icon.png)|
+|Office per il Web: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)|![no](media/no-icon.png)|
+
+### <a name="universal-application-support-for-hyok"></a>Supporto dell'applicazione universale per HYOK
+
+|Applicazione|Protezione|Consumo|
+|----------------------|----------|-----------|
+|App universali di Office: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)|![no](media/no-icon.png)|
 
 ## <a name="implementing-hyok"></a>Implementazione di HYOK
 
-La protezione HYOK è supportata da Azure Information Protection quando la distribuzione di Active Directory Rights Management Services (AD RMS) è attiva con i requisiti descritti nella sezione seguente. In questo scenario i criteri dei diritti di utilizzo e la chiave privata dell'organizzazione che protegge tali criteri sono gestiti e conservati in locale, mentre i criteri di Azure Information Protection per l'applicazione di etichette e la classificazione continuano a essere gestiti e archiviati in Azure. 
+Azure Information Protection supporta HYOK quando si dispone di un Active Directory Rights Management Services (AD RMS) conforme a tutti i [requisiti elencati di seguito](#requirements-for-ad-rms-to-support-hyok).
 
-Non confondere HYOK e Azure Information Protection con l'uso di una distribuzione completa di AD RMS e Azure Information Protection o con un'alternativa alla migrazione da AD RMS ad Azure Information Protection. HYOK è supportata solo se si applicano le etichette, non offre parità delle funzionalità con AD RMS e non supporta tutte le configurazioni di distribuzione di AD RMS:
+I criteri per i diritti di utilizzo e la chiave privata dell'organizzazione che proteggono questi criteri vengono gestiti e conservati in locale, mentre i criteri di Azure Information Protection per l'assegnazione di etichette e la classificazione rimangono gestiti e archiviati in Azure.
 
-- Per altre informazioni sugli scenari supportati da HYOK per la protezione del contenuto e l'uso di del protetto, vedere la sezione [Scenari supportati per HYOK](#supported-scenarios-for-hyok).
+Per implementare la protezione HYOK:
 
-- Per le istruzioni per la migrazione da AD RMS, vedere [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+1. [Verificare che il sistema sia conforme ai requisiti di AD RMS](#requirements-for-ad-rms-to-support-hyok)
+1. [Individuare le informazioni che si desidera proteggere](#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-- Per altre informazioni sui requisiti di distribuzione di AD RMS, vedere la sezione successiva.
+Quando si è pronti, continuare con [la configurazione di un'etichetta per la protezione Rights Management](configure-policy-protection.md).
 
 ### <a name="requirements-for-ad-rms-to-support-hyok"></a>Requisiti per AD RMS per il supporto di HYOK
 
-Una distribuzione di AD RMS deve soddisfare i requisiti seguenti per garantire la protezione HYOK per le etichette di Azure Information Protection.
+Una distribuzione AD RMS deve soddisfare i requisiti seguenti per fornire la protezione HYOK per le etichette Azure Information Protection:
 
-- Configurazione di AD RMS:
-    
-  - Versione minima di Windows Server 2012 R2: obbligatoria per gli ambienti di produzione, ma per scopi di testing o valutazione è possibile usare una versione minima di Windows Server 2008 R2 con Service Pack 1.
-    
-  - Una delle topologie seguenti:
-        
-    - Foresta singola con singolo cluster radice AD RMS. 
-        
-    - Più foreste con cluster radice AD RMS indipendenti e utenti che non dispongono di accesso ai contenuti protetti dagli utenti delle altre foreste.
-        
-    - Più foreste con cluster AD RMS in ognuna di esse. Ogni cluster AD RMS condivide un URL di gestione licenze che fa riferimento allo stesso cluster AD RMS. In questo cluster AD RMS è necessario importare tutti i certificati di dominio utente trusted (TUD) da tutti gli altri cluster AD RMS. Per altre informazioni su questa topologia, vedere [Dominio utente trusted](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx).
-        
-    Quando si hanno più cluster AD RMS in foreste diverse, eliminare le etichette presenti nei criteri globali che applicano la protezione HYOK (AD RMS) e configurare [criteri con ambito](configure-policy-scope.md) per ogni cluster. Quindi assegnare gli utenti di ogni cluster ai criteri con ambito corrispondenti, evitando di usare gruppi per i quali un utente viene assegnato a più criteri con ambito. In seguito a questa assegnazione ogni utente deve avere etichette per un solo cluster AD RMS. 
-    
-  - [Modalità crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la modalità controllando le proprietà del cluster AD RMS nella scheda **Generale**.
-    
-  - Ogni server AD RMS è configurato per l'URL di certificazione. [Istruzioni](#configuring-ad-rms-servers-to-locate-the-certification-url) 
-    
-  - In Active Directory non è registrato un punto di connessione del servizio (SCP): il punto SCP non viene usato quando si usa la protezione di AD RMS con Azure Information Protection. 
-    
-      - Se è stato registrato un punto di connessione del servizio per la distribuzione di AD RMS è necessario rimuoverlo, per garantire il corretto funzionamento dell'[individuazione dei servizi](./rms-client/client-deployment-notes.md#rms-service-discovery) della protezione di Azure Rights Management. 
-        
-      - Se si sta installando un nuovo cluster AD RMS per HYOK, ignorare il passaggio per la registrazione del punto SCP durante la configurazione del primo nodo. Per ogni nodo aggiuntivo, assicurarsi che il server sia configurato per l'URL di certificazione prima di aggiungere il ruolo AD RMS e aggiungere il cluster esistente.
-    
-  - I server AD RMS sono configurati per l'uso di SSL/TLS con un certificato x.509 valido considerato attendibile dai client di connessione: necessario per gli ambienti di produzione, ma non per scopi di testing o valutazione.
-    
-  - Modelli di diritti configurati.
-    
-  - Non configurato per IRM di Exchange.
-    
-  - Per i dispositivi mobili e i computer Mac: [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) viene installato e configurato.
-
-- La sincronizzazione delle directory è configurata tra l'istanza locale di Active Directory e Azure Active Directory e gli utenti che usano la protezione HYOK sono configurati per l'accesso Single Sign-On.
-
-- Se si condividono documenti o messaggi di posta elettronica protetti da HYOK con altri utenti esterni all'organizzazione: AD RMS è configurato per i trust definiti in modo esplicito in una relazione punto a punto diretta con altre organizzazioni usando domini utente trusted (TUD) o relazioni di trust federative create usando Active Directory Federation Services (AD FS).
-
-- Gli utenti hanno una versione di Office che supporta Information Rights Management (IRM) e almeno Office 2013 Professional Plus con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. Si noti che Office 2010 e Office 2007 non sono supportati per questo scenario.
-    
-    - Per l'edizione di Office 2016 basata su Microsoft Installer (MSI): è stato installato l'[aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
+|Requisito  |Descrizione  |
+|---------|---------|
+|**Configurazione di AD RMS**     |Il sistema di AD RMS deve essere configurato in modi specifici per supportare HYOK. Per ulteriori informazioni, vedere di [seguito](#ad-rms-configuration-requirements).          |
+|**Sincronizzazione delle directory**     |La sincronizzazione della directory deve essere configurata tra la Active Directory locale e la Azure Active Directory. </br></br>Gli utenti che utilizzeranno le etichette di protezione HYOK devono essere configurati per l'accesso Single Sign-on.         |
+|**Configurazione per i trust definiti in modo esplicito**     |Se si condivide il contenuto protetto con HYOK con altri utenti esterni all'organizzazione, è necessario configurare AD RMS per i trust definiti in modo esplicito in una relazione punto a punto diretta con altre organizzazioni. </br></br>A tale scopo, utilizzare domini utente trusted (TUD) o trust federativi creati utilizzando Active Directory Federation Services (AD FS).         |
+|**Microsoft Office versione supportata**     | Gli utenti che proteggono o utilizzano contenuti protetti da HYOK devono disporre di: </br></br>-Una versione di Office che supporta Information Rights Management (IRM) </br>-Microsoft Office Professional Plus versione 2013 o successiva con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. </br>-Per l'edizione basata su Office 2016 Microsoft Installer (MSI), è necessario disporre dell' [aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Nota:** Office 2010 e Office 2007 non sono supportati.        |
 
 > [!IMPORTANT]
-> Per soddisfare la garanzia elevata offerta dalla protezione HYOK, è consigliabile che i server di AD RMS non si trovino nella rete perimetrale e che vengano usati solo dai dispositivi gestiti. 
-> 
-> È inoltre consigliabile che il cluster AD RMS usi un modulo di protezione hardware (HSM), in modo che la chiave privata per il certificato concessore di licenze server (SLC) non possa essere esposta o rubata se la distribuzione di AD RMS viene violata o compromessa. 
+> Per soddisfare la garanzia elevata offerta dalla protezione HYOK, è consigliabile:
+> - Individuare i server AD RMS al di fuori della rete perimetrale e verificare che vengano usati solo da dispositivi gestiti.
+>
+> - Configurare il cluster di AD RMS con un modulo di protezione hardware (HSM). Ciò consente di garantire che la chiave privata del certificato concessore di licenze server (SLC) non possa essere esposta o rubata se la distribuzione di AD RMS deve essere violata o compromessa.
 
-Per informazioni sulla distribuzione e istruzioni per AD RMS, vedere [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) nella libreria di Windows Server. 
+> [!TIP]
+> Per informazioni sulla distribuzione e istruzioni per AD RMS, vedere [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) nella libreria di Windows Server. 
+
+#### <a name="ad-rms-configuration-requirements"></a>Requisiti di configurazione di AD RMS
+
+Per supportare HYOK, verificare che il sistema AD RMS disponga delle configurazioni seguenti:
+
+|Requisito  |Descrizione  |
+|---------|---------|
+|**Versione di Windows**     |Come minimo, una delle seguenti versioni di Windows: </br></br>**Ambienti di produzione:** Windows Server 2012 R2</br>**Ambienti di test/valutazione**: Windows Server 2008 R2 con Service Pack 1        |
+|**Topologia**     |HYOK richiede una delle seguenti topologie: </br>-Una singola foresta con un singolo cluster di AD RMS </br>-Più foreste, con AD RMS cluster in ognuno di essi. </br></br>**Gestione delle licenze per più foreste**</br> Se si dispone di più insiemi di strutture, ogni cluster AD RMS condivide un URL di licenza che punta allo stesso cluster AD RMS. </br>In questo AD RMS cluster importare tutti i certificati del dominio utente trusted (dominio utente trusted) da tutti gli altri cluster AD RMS. </br>Per altre informazioni su questa topologia, vedere [Dominio utente trusted](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx). </br></br>**Etichette dei criteri globali per più foreste**</br>Quando si hanno più cluster AD RMS in foreste diverse, eliminare le etichette presenti nei criteri globali che applicano la protezione HYOK (AD RMS) e configurare [criteri con ambito](configure-policy-scope.md) per ogni cluster. <br>Assegnare gli utenti per ogni cluster ai criteri con ambito, assicurandosi di non usare i gruppi che comporteranno l'assegnazione di un utente a più criteri con ambito.</br>In seguito a questa assegnazione ogni utente deve avere etichette per un solo cluster AD RMS.          |
+|**Modalità crittografia**     | Il AD RMS deve essere configurato con la [modalità crittografia 2](https://technet.microsoft.com/library/hh867439.aspx). </br>Verificare la modalità controllando la AD RMS proprietà cluster, scheda **generale** .        |
+|**Configurazione URL certificazione**     | Ogni server di AD RMS deve essere configurato per l'URL di certificazione. </br>Per ulteriori informazioni, vedere di [seguito](#configuring-ad-rms-servers-to-locate-the-certification-url).        |
+|**Punti di connessione del servizio**     | Un punto di connessione del servizio (SCP) non viene usato quando si usa la protezione AD RMS con Azure Information Protection. </br></br>**Se si dispone di un SCP registrato per la distribuzione di ad RMS**, rimuoverlo per assicurarsi che l' [individuazione dei servizi](./rms-client/client-deployment-notes.md#rms-service-discovery) abbia esito positivo per la protezione Rights Management di Azure. </br></br>**Se si sta installando un nuovo cluster ad RMS per HYOK**, non registrare SCP quando si configura il primo nodo. Per ogni nodo aggiuntivo, assicurarsi che il server sia configurato per l'URL di certificazione prima di aggiungere il ruolo AD RMS e aggiungere il cluster esistente.         |
+|**SSL/TLS**     |Negli ambienti di produzione, i server di AD RMS devono essere configurati per l'uso di SSL/TLS con un certificato x. 509 valido considerato attendibile dai client che si connettono. </br></br>Questa operazione non è necessaria a scopo di test o valutazione.         |
+|**Modelli di diritti**     |È necessario disporre di modelli di diritti configurati per il AD RMS.         |
+|**IRM di Exchange**    |Non è possibile configurare il AD RMS per Exchange IRM.         |
+|**Dispositivi mobili/computer Mac**     | È necessario che l' [estensione Active Directory Rights Management Services dispositivo mobile](https://technet.microsoft.com/library/dn673574.aspx) sia installata e configurata.        |
 
 
-### <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>Configurazione dei server AD RMS per individuare l'URL di certificazione
+#### <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>Configurazione dei server AD RMS per individuare l'URL di certificazione
 
 1. In ogni server AD RMS nel cluster, creare la voce del Registro di sistema seguente:
 
-    ``` md
-    Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"
+    ```sh
+    Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
     ```
 
-    Per \<string value> , specificare uno dei seguenti elementi:
-    
-    - Per i cluster AD RMS che usano SSL/TLS:
-    
-        ``` md
-        https://<cluster_name>/_wmcs/certification/certification.asmx
-        ```
+    Per \<string value> , specificare una delle stringhe seguenti:
 
-    - Per i cluster AD RMS che non usano SSL/TLS (solo reti di test):
-        
-        ``` md
-        http://<cluster_name>/_wmcs/certification/certification.asmx
-        ```
+    |Ambiente  |Valore stringa  |
+    |---------|---------|
+    |**Produzione** </br>(AD RMS cluster con SSL/TLS)     | `https://<cluster_name>/_wmcs/certification/certification.asmx`        |
+    |**Test/valutazione** </br>(nessun SSL/TLS)     |`http://<cluster_name>/_wmcs/certification/certification.asmx`         |
 
 2. Riavviare IIS.
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Individuazione delle informazioni per specificare la protezione di AD RMS con un'etichetta di Azure Information Protection
 
-Quando si configura un'etichetta per la protezione **HYOK (AD RMS)** è necessario specificare l'URL di licenza del cluster AD RMS. È anche necessario specificare un modello configurato per le autorizzazioni da concedere agli utenti oppure consentire agli utenti di definire le autorizzazioni e gli utenti. 
+Per configurare HYOK-Protection labels è necessario specificare l'URL di gestione licenze del cluster AD RMS. 
 
-I valori del GUID del modello e dell'URL sono disponibili nella console di Active Directory Rights Management Services:
+Inoltre, è necessario specificare un modello configurato con le autorizzazioni che si desidera concedere agli utenti o consentire agli utenti di definire autorizzazioni e utenti. 
 
-- Per individuare il GUID di un modello, espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Ad esempio: 82bf3474-6efe-4fa1-8827-d1bd93339119
+Eseguire le operazioni seguenti per individuare il GUID del modello e i valori dell'URL di gestione licenze dalla console di Active Directory Rights Management Services:
 
-- Per individuare l'URL di gestione licenze: fare clic sul nome del cluster. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. Ad esempio: `https://rmscluster.contoso.com` 
+#### <a name="locate-a-template-guid"></a>Individuare il GUID di un modello
+
+1. espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. 
+
+1. Dalle informazioni sui **modelli di criteri di diritti distribuiti** , copiare il GUID dal modello che si vuole usare. 
+
+Ad esempio: **82bf3474-6efe-4fa1-8827-d1bd93339119** 
+
+#### <a name="locate-the-licensing-url"></a>Individuare l'URL di gestione licenze
+
+1. Fare clic sul nome del cluster.
+ 
+1. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. 
+
+Per esempio:**https://rmscluster.contoso.com** 
     
-    Se sono presenti un valore di gestione licenze Extranet e un valore di gestione licenze Intranet diversi tra loro: specificare il valore Extranet solo se si condividono documenti o messaggi di posta elettronica protetti con partner definiti mediante relazioni di trust esplicite da punto a punto. In caso contrario, usare il valore Intranet e assicurarsi che tutti i computer client che usano la protezione di AD RMS con Azure Information Protection si connettano tramite una connessione Intranet (ad esempio, i computer remoti devono usare una connessione VPN).
-
+> [!NOTE]
+> Se si dispone di valori di licenze Extranet e Intranet diversi, specificare il valore Extranet solo se si condivide il contenuto protetto con i partner. I partner che condividono contenuti protetti devono essere definiti con trust Point-to-Point espliciti. 
+> 
+> Se non si condivide contenuto protetto, utilizzare il valore Intranet e verificare che tutti i computer client che utilizzano AD RMS protezione con Azure Information Protection connettersi tramite una connessione Intranet. Ad esempio, i computer remoti devono usare una connessione VPN.
+> 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per configurare un'etichetta per la protezione HYOK, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md). 
+Al termine della configurazione del sistema per il supporto di HYOK, continuare con la configurazione delle etichette per la protezione HYOK. Per ulteriori informazioni, vedere [come configurare un'etichetta per la protezione Rights Management](configure-policy-protection.md).

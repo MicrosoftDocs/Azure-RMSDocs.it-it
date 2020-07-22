@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b453bde76cfc8709d955e3fc6e0b25f35ce02c4f
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 4d935e797e4f08c2d8f82d4e797f9d60cc97a5d4
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136974"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869114"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
@@ -32,9 +32,12 @@ Ad esempio, gli utenti possono configurare un documento di Word in modo che poss
 
 Se si è pronti per configurare le app di Office [, vedere app di Office: configurazione dei client](configure-office-apps.md).
 
+Per i problemi noti pertinenti, vedere la pagina relativa ai [problemi noti di AIP nelle applicazioni di Office](known-issues.md#aip-known-issues-in-office-applications).
+
+<!-->
 > [!NOTE]
 > A causa di una limitazione negli aggiornamenti recenti di Windows, è possibile che i file collegati ai messaggi di posta elettronica siano attualmente bloccati dopo l'apertura del file.
-
+-->
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online ed Exchange Server
 Quando si usa Exchange Online o Exchange Server, è possibile configurare le opzioni per Azure Information Protection. Questa configurazione consente a Exchange di offrire le soluzioni di protezione seguenti:
 

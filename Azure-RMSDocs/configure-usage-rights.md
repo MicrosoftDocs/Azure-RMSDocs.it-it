@@ -1,10 +1,10 @@
 ---
 title: Configurare i diritti di utilizzo per Azure Information Protection
 description: Comprendere e identificare i diritti specifici usati quando si proteggono i file o i messaggi di posta elettronica usando Rights Management la protezione da Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 01/08/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 585f962f3da6fbb3cb2373a8ac3d355e1d97aef6
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 779d527df4b95b985ae72b41414f5c91d7775d01
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136753"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927319"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configurazione dei diritti di utilizzo per Azure Information Protection
 
@@ -43,7 +43,7 @@ In questa tabella:
 
 |Diritto di utilizzo|Descrizione|Implementazione|
 |-------------------------------|---------------------------|-----------------|
-|Nome comune: **Modifica contenuto, Modifica** <br /><br />Codifica nei criteri: **DOCEDIT**|Consente di modificare, riorganizzare, formattare o ordinare il contenuto all'interno dell'applicazione. Non concede il diritto per il salvataggio della copia modificata.<br /><br />In Word, a meno che non sia disponibile Office 365 ProPlus con la versione minima [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25), questo diritto non è sufficiente per attivare o disattivare **Rileva modifiche** o per usare tutte le funzionalità di rilevamento modifiche come revisore. Per usare tutte le opzioni di rilevamento modifiche, è invece necessario il diritto **Controllo completo**. |Diritti personalizzati di Office: come parte delle opzioni **Cambia** e **Controllo completo**. <br /><br />Nome nel portale di Azure classico: **Modifica contenuto**<br /><br />Nome nell'interfaccia di amministrazione di assegnazione delle etichette e portale di Azure: **modifica contenuto, modifica (DOCEDIT)**<br /><br />Nome nei modelli di AD RMS: **Modifica** <br /><br />Valore o costante API: non applicabile.|
+|Nome comune: **Modifica contenuto, Modifica** <br /><br />Codifica nei criteri: **DOCEDIT**|Consente di modificare, riorganizzare, formattare o ordinare il contenuto all'interno dell'applicazione. Non concede il diritto per il salvataggio della copia modificata.<br /><br />In Word, a meno che non si disponga di [Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) con una versione minima [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25), questo diritto non è sufficiente per attivare o disattivare il **rilevamento delle modifiche**o per usare tutte le funzionalità di rilevamento delle modifiche come revisore. Per usare tutte le opzioni di rilevamento modifiche, è invece necessario il diritto **Controllo completo**. |Diritti personalizzati di Office: come parte delle opzioni **Cambia** e **Controllo completo**. <br /><br />Nome nel portale di Azure classico: **Modifica contenuto**<br /><br />Nome nell'interfaccia di amministrazione di assegnazione delle etichette e portale di Azure: **modifica contenuto, modifica (DOCEDIT)**<br /><br />Nome nei modelli di AD RMS: **Modifica** <br /><br />Valore o costante API: non applicabile.|
 |Nome comune: **Salva** <br /><br />Codifica nei criteri: **EDIT**|Consente di salvare il documento nella posizione corrente.<br /><br />Nelle applicazioni di Office questo diritto consente inoltre all'utente di modificare il documento e salvarlo con un nuovo nome in un nuovo percorso se il formato di file selezionato in modalità nativa supporta la protezione di Rights Management. La restrizione prevista per il formato del file assicura che la protezione originale non possa essere rimossa dal file.|Diritti personalizzati di Office: come parte delle opzioni **Cambia** e **Controllo completo**. <br /><br />Nome nel portale di Azure classico: **Salva file**<br /><br />Nome nell'interfaccia di amministrazione di assegnazione delle etichette e portale di Azure: **Salva (modifica)**<br /><br />Nome nei modelli di AD RMS: **Salva** <br /><br />Valore o costante API: `IPC_GENERIC_WRITE L"EDIT"`|
 |Nome comune: **Commento** <br /><br />Codifica nei criteri: **COMMENT**|Abilita l'opzione per l'aggiunta di annotazioni o commenti al contenuto.<br /><br />Questo diritto è disponibile nell'SDK, è disponibile come criterio ad hoc nel modulo Azure Information Protection e protezione RMS per Windows PowerShell ed è stato implementato in alcune applicazioni di fornitori di software. Tuttavia, non è ampiamente utilizzato e non è supportato dalle applicazioni di Office.|Diritti personalizzati di Office: non implementato. <br /><br />Nome nel portale di Azure classico: non implementato.<br /><br />Nome nell'interfaccia di amministrazione di assegnazione delle etichette e portale di Azure: non implementato.<br /><br />Nome nei modelli di AD RMS: non implementato. <br /><br />Valore o costante API: `IPC_GENERIC_COMMENT L"COMMENT`|
 |Nome comune: **Salva con nome, Esporta** <br /><br />Codifica nei criteri: **EXPORT**|Abilita l'opzione per salvare il contenuto con un nome file diverso (Salva con nome). <br /><br />Per il client Azure Information Protection, il file può essere salvato senza protezione e anche riprotetto con nuove impostazioni e autorizzazioni. Queste azioni consentite significano che un utente con questo diritto può modificare o rimuovere un'etichetta di Azure Information Protection da un documento o un messaggio di posta elettronica protetto. <br /><br />Consente di eseguire anche altre opzioni di esportazione nelle applicazioni, ad esempio **Invia a OneNote**.|Diritti personalizzati di Office: come parte dell'opzione **Controllo completo**. <br /><br />Nome nel portale di Azure classico: **Esporta contenuto (Salva con nome)** <br /><br />Nome nell'interfaccia di amministrazione di assegnazione di etichette e portale di Azure: **Salva con nome, Esporta (Export)**<br /><br />Nome nei modelli di AD RMS: **Esporta (Salva con nome)** <br /><br />Valore o costante API: `IPC_GENERIC_EXPORT L"EXPORT"`|
@@ -94,8 +94,8 @@ Questi modelli predefiniti vengono creati al momento dell'acquisto della sottosc
 
 |Nome visualizzato del modello|Diritti di utilizzo, dal 6 ottobre 2017 alla data corrente|Diritti di utilizzo prima del 6 ottobre 2017|
 |----------------|--------------------|----------|
-|\<*organization name>-Solo visualizzazione riservata * <br /><br />o<br /><br /> *Riservatezza elevata \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Copia, Visualizza diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica|Visualizza, Apri, Leggi|
-|\<*organization name>Riservate <br /><br />o <br /><br />*Riservato \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva con nome, Esporta, Copia; Visualizza diritti; Modifica diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica; Controllo completo|Visualizza, Apri, Leggi; Salva con nome, Esporta; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
+|\<*organization name>-Solo visualizzazione riservata * <br /><br />oppure<br /><br /> *Riservatezza elevata \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Copia, Visualizza diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica|Visualizza, Apri, Leggi|
+|\<*organization name>Riservate <br /><br />oppure <br /><br />*Riservato \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva con nome, Esporta, Copia; Visualizza diritti; Modifica diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica; Controllo completo|Visualizza, Apri, Leggi; Salva con nome, Esporta; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
 
 ## <a name="do-not-forward-option-for-emails"></a>Opzione Non inoltrare per i messaggi di posta elettronica
 
@@ -124,7 +124,7 @@ Un utente vuole inviare un messaggio di posta elettronica a destinatari specific
 
 Quando Exchange Online usa le nuove funzionalità per Office 365 Message Encryption, diventa disponibile una nuova opzione di posta elettronica: **Encrypt-Only (Solo crittografia)**.
 
-Questa opzione è disponibile per i tenant che usano Exchange Online e può essere selezionata in Outlook sul Web, come opzione di protezione dei diritti aggiuntiva per una regola del flusso di posta elettronica, come azione DLP di Office 365 e in Outlook (versione minima [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) per Office 365 ProPlus e versione minima 1805 quando sono disponibili [app di Office 365 che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm)). Per ulteriori informazioni sull'opzione di sola crittografia, vedere il post di Blog seguente del team di Office: [crittografare solo il rollup in office 365 Message Encryption](https://aka.ms/omefeb2018).
+Questa opzione è disponibile per i tenant che usano Exchange Online e possono essere selezionati in Outlook sul Web, come un'altra opzione di protezione dei diritti per una regola di flusso di posta elettronica, come azione DLP di Office 365 e da Outlook (versione minima di [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) per [app Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)e versione minima 1805 quando sono disponibili [app di Office 365 che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). Per ulteriori informazioni sull'opzione di sola crittografia, vedere il post di Blog seguente del team di Office: [crittografare solo il rollup in office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari hanno tutti i diritti di utilizzo, a eccezione di **Salva con nome, Esporta** e **Controllo completo**. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare dal messaggio di posta elettronica, stamparlo e inoltrarlo. 
 

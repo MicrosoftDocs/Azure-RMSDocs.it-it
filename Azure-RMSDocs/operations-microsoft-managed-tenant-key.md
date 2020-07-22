@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 635732301320538d58e9b34011291bce0fe07ce4
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a10e0f8c1af8134de0665ce3255cf42be4900783
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136577"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869063"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
@@ -54,7 +54,7 @@ Per selezionare una chiave diversa come chiave del tenant attiva per Azure Infor
 (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 ```
 
-Per modificare la topologia di chiave in modo che venga gestita dal cliente (BYOK), vedere [Implementazione dello scenario BYOK per la chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+Per modificare la topologia della chiave in modo che sia gestita dal cliente (BYOK), vedere [pianificazione e implementazione della chiave del tenant Azure Information Protection](plan-implement-tenant-key.md).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 Microsoft è responsabile delle operazioni di backup della chiave del tenant e non è necessaria alcuna azione da parte dell'utente.

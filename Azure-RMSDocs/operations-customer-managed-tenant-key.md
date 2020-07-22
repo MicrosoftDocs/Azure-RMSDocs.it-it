@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 14b3c9d4db202abb18555eb695fe7e3e0769af40
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 5e6cffeb02cb22f65a5108e96ffa1b0cc8974142
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136324"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869097"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
@@ -57,7 +57,8 @@ Per reimpostare la chiave su un'altra chiave gestita, è possibile creare una nu
 
 Per altre informazioni su ognuna di queste fasi:
 
-- Per reimpostare la chiave su un'altra chiave gestita, vedere [Implementazione dello scenario BYOK per la chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+- Per rekey a un'altra chiave gestita, vedere [pianificazione e implementazione della chiave del tenant Azure Information Protection](plan-implement-tenant-key.md).
+
     
     Se si esegue la reimpostazione di una chiave protetta tramite HSM creata in locale e trasferita in Key Vault, è possibile usare lo stesso ambiente di sicurezza e accedere alle schede nello stesso modo usato per la chiave corrente.
 

@@ -1,10 +1,10 @@
 ---
 title: Chiave del tenant di Azure Information Protection
 description: Anziché Microsoft gestire la chiave radice per Azure Information Protection, è possibile creare e gestire questa chiave (denominata "Bring your own key" o BYOK) per il tenant, per conformarsi a normative specifiche.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/11/2019
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,219 +13,100 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d704ca679ce7d36f3e3956443b3b2a013366382d
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a2d2441914c7f3efa02f1989de35c930019d3250
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137002"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927795"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Usare le informazioni presenti in questo articolo per pianificare e gestire la chiave del tenant di Azure Information Protection. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare i criteri aziendali potrebbe essere necessario, ad esempio, gestire autonomamente la propria chiave del tenant La gestione della propria chiave tenant viene definita Bring Your Own Key o BYOK.
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Che cos'è la chiave del tenant di Azure Information Protection?
+La chiave del tenant di Azure Information Protection è una chiave radice per l'organizzazione. È possibile derivare altre chiavi da questa chiave radice, inclusi chiavi utente, chiavi computer o chiavi di crittografia del documento. Ogni volta che Azure Information Protection usa queste chiavi per l'organizzazione, vengono concatenate in modo crittografico alla chiave del tenant Azure Information Protection radice.
 
-- La chiave del tenant di Azure Information Protection è una chiave radice per l'organizzazione. Le altre chiavi possono essere derivate dalla chiave radice, ad esempio le chiavi utente, le chiavi computer e le chiavi di crittografia dei documenti. Ogni volta che Azure Information Protection usa queste chiavi per l'organizzazione, le chiavi vengono concatenate a livello di crittografia alla chiave del tenant di Azure Information Protection.
+Oltre alla chiave radice del tenant, è possibile che l'organizzazione richieda una sicurezza locale per documenti specifici. La protezione della chiave locale è in genere necessaria solo per una piccola quantità di contenuto e pertanto viene configurata insieme a una chiave radice del tenant.
 
-- La chiave del tenant di Azure Information Protection è l'equivalente online della chiave del certificato concessore di licenze server (SLC) di Active Directory Rights Management Services (AD RMS). 
+## <a name="azure-information-protection-key-types"></a>Tipi di chiavi di Azure Information Protection
 
-**Panoramica:** Usare la tabella seguente come guida rapida per la topologia consigliata delle chiavi del tenant. Per altre informazioni, vedere quindi la documentazione aggiuntiva.
+La chiave radice del tenant può essere:
 
-|Requisito aziendale|Topologia di chiave del tenant consigliata|
-|------------------------|-----------------------------------|
-|Distribuire Azure Information Protection in modo rapido e senza hardware speciali, software aggiuntivo o una sottoscrizione di Azure.<br /><br />Ad esempio: esecuzione del test degli ambienti e quando l'organizzazione non ha i requisiti normativi per la gestione delle chiavi.|Gestita da Microsoft|
-|Normative di conformità e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio: la chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
+- [Generato da Microsoft](#tenant-root-keys-generated-by-microsoft)
+- Generato dai clienti con la protezione [Bring your own key (BYOK)](#bring-your-own-key-byok-protection) .
 
+Le gestione delle chiavi locali sono diverse per ogni tipo di client AIP. Se si dispone di contenuto altamente sensibile che richiede una protezione aggiuntiva locale, usare uno dei metodi seguenti:
 
-Se necessario, è possibile modificare la topologia della chiave del tenant dopo la distribuzione, usando il cmdlet [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) .
+- [Mantieni una chiave personalizzata (HYOK)](#hold-your-own-key-hyok-aip-classic-client-only) (solo client classico)
+- [Crittografia a chiave doppia (DKE)](#double-key-encryption-dke-aip-unified-labeling-client-only) (solo client di etichetta unificata)
 
+Il contenuto può essere crittografato con la protezione HYOK solo se si dispone del client classico. Tuttavia, se si dispone di contenuto protetto da HYOK, può essere visualizzato sia nel client di etichettatura classico che in quello unificato. 
 
-## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Scegliere la topologia di chiave del tenant: gestione di Microsoft (impostazione predefinita) o BYOK
+> [!TIP]
+> Non si è certi della differenza tra il client classico e il client Unified Labeling? Per ulteriori informazioni, vedere le [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+>
 
-Individuare la topologia di chiave del tenant più adatta per l'organizzazione:
+## <a name="tenant-root-keys-generated-by-microsoft"></a>Chiavi radice del tenant generate da Microsoft
 
-- **Gestita da Microsoft**: Microsoft genera automaticamente una chiave del tenant per l'organizzazione e questa chiave viene usata esclusivamente per Microsoft Azure Information Protection. Per impostazione predefinita, Microsoft usa questa chiave per il tenant e gestisce la maggior parte degli aspetti del ciclo di vita della chiave del tenant. 
-    
-    Questa opzione è quella più semplice e prevede il sovraccarico amministrativo minore. Nella maggior parte dei casi non è nemmeno necessario disporre di una chiave del tenant, ma è sufficiente iscriversi ad Azure Information Protection e la parte rimanente del processo di gestione delle chiavi viene eseguita da Microsoft.
+La chiave predefinita, generata automaticamente da Microsoft, è la chiave predefinita usata esclusivamente per Azure Information Protection per gestire la maggior parte degli aspetti del ciclo di vita della chiave del tenant.
 
-- **Gestita dall'utente (BYOK)**: per il controllo completo sulla chiave del tenant, usare [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) con Azure Information Protection. Per questa topologia di chiave del tenant, la chiave viene creata direttamente in Key Vault o in locale. Se la chiave viene creata in locale, la chiave viene successivamente trasferita o importata in Key Vault. Viene quindi configurato Azure Information Protection per l'uso della chiave che viene gestita in Azure Key Vault.
-    
+Continuare a usare la chiave Microsoft predefinita quando si vuole distribuire Azure Information Protection rapidamente e senza hardware speciale, software o una sottoscrizione di Azure. Gli esempi includono ambienti di testing o organizzazioni senza requisiti normativi per la gestione delle chiavi.
 
-### <a name="more-information-about-byok"></a>Altre informazioni su BYOK
-Per creare la chiave, sono disponibili le opzioni seguenti:
-
-- **Una chiave creata in locale e trasferita o importata in Key Vault**:
-    
-    - Una chiave protetta dal modulo di protezione hardware creata in locale e trasferita in Key Vault come chiave protetta dal modulo di protezione hardware.
-    
-    - Una chiave protetta da software creata in locale, convertita e quindi trasferita in Key Vault come chiave protetta dal modulo di protezione hardware. Questa opzione è supportata solo quando si [esegue la migrazione da Active Directory Rights Management Services (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
-    
-    - Una chiave protetta da software creata in locale e importata in Key Vault come chiave protetta da software. Questa opzione richiede un file di certificato PFX.
-    
-- **Una chiave creata in Key Vault**:
-    
-    - Una chiave protetta dal modulo di protezione hardware creata in Key Vault.
-    
-    - Una chiave protetta da software creata in Key Vault.
-
-Tra queste opzioni BYOK, l'opzione usata più di frequente è rappresentata da una chiave protetta dal modulo di protezione hardware creata in locale e trasferita in Key Vault come chiave protetta dal modulo di protezione hardware. Sebbene preveda il maggior sovraccarico amministrativo, questa opzione potrebbe essere necessaria per consentire all'organizzazione di essere conforme a normative specifiche. I moduli di protezione hardware usati da Azure Key Vault hanno la convalida FIPS 140-2 Livello 2.
-
-e prevede lo schema seguente.
-
-1. Generazione della chiave del tenant in locale, in base ai criteri IT e ai criteri di sicurezza dell'organizzazione. Questa chiave è la copia master. Rimane in locale e l'utente è responsabile dell'esecuzione del backup.
-
-2. Creare una copia della chiave e trasferirla dal modulo di protezione hardware ad Azure Key Vault. Durante il processo, la copia master della chiave non oltrepassa mai la protezione hardware.
-
-3. La copia della chiave è protetta da Azure Key Vault.
+Per la chiave predefinita, non sono necessari altri passaggi ed è possibile passare direttamente a Introduzione alla [chiave radice del tenant](get-started-tenant-root-keys.md).
 
 > [!NOTE]
-> 
-> Come misura di protezione aggiuntiva, Azure Key Vault usa domini di sicurezza separati per i propri data center in aree quali America del Nord, EMEA (Europa, Medio Oriente e Africa) e Asia. Azure Key Vault usa anche istanze diverse di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. 
+> La chiave predefinita generata da Microsoft è l'opzione più semplice con il sovraccarico amministrativo più basso.
+>
+> Nella maggior parte dei casi, è possibile che non si disponga di una chiave del tenant, in quanto è possibile iscriversi a Azure Information Protection e il resto del processo di gestione delle chiavi è gestito da Microsoft.
 
-Anche se facoltativo, può essere utile usare i log di utilizzo di Azure Information Protection disponibili in tempo quasi reale per sapere esattamente come e quando viene usata la chiave del tenant.
+## <a name="bring-your-own-key-byok-protection"></a>Protezione Bring Your Own Key (BYOK)
 
-Quando si usa BYOK per la chiave del tenant Azure Information Protection, non è possibile esportare il dominio di pubblicazione trusted. Il file di pubblicazione trusted è necessario se si decide di non usare più Azure Information Protection ma deve comunque essere in grado di decrittografare il contenuto protetto da Azure Information Protection. Per prepararsi a questo scenario creando in anticipo un valore di pubblicazione trusted appropriato, vedere le istruzioni seguenti [come preparare un Azure Information Protection piano di "cloud Exit"](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631).
+BYOK-Protection usa le chiavi create dai clienti, sia nel Azure Key Vault che in locale nell'organizzazione del cliente. Queste chiavi vengono quindi trasferite a Azure Key Vault per una gestione aggiuntiva.
 
-### <a name="when-you-have-decided-your-tenant-key-topology"></a>Dopo aver scelto la topologia della chiave del tenant
+Usare BYOK quando l'organizzazione dispone di normative di conformità per la generazione di chiavi, incluso il controllo su tutte le operazioni del ciclo di vita. Ad esempio, quando la chiave deve essere protetta da un modulo di protezione hardware.
 
-Se si decide di affidare a Microsoft la gestione della chiave del tenant: 
+Per altre informazioni, vedere [Configure BYOK Protection](byok-price-restrictions.md). 
 
-- Se non si sta eseguendo una migrazione da AD RMS, non è necessaria alcuna azione aggiuntiva per generare la chiave per il tenant ed è possibile passare direttamente alla sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps).
+Una volta configurata, continuare [con l'introduzione alla chiave radice del tenant](get-started-tenant-root-keys.md) per altre informazioni sull'uso e sulla gestione della chiave.
 
-- Se attualmente si dispone di AD RMS e si desidera eseguire la migrazione a Azure Information Protection, utilizzare le istruzioni per la migrazione: [migrazione da ad RMS a Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
+## <a name="hold-your-own-key-hyok-aip-classic-client-only"></a>Mantieni una chiave personalizzata (HYOK) (solo per il client classico AIP)
 
-Se invece si decide di gestire in modo autonomo la propria chiave del tenant, leggere le sezioni seguenti per ottenere altre informazioni.
+HYOK-Protection usa una chiave creata e mantenuta dai clienti, in una località isolata dal cloud. Poiché HYOK-Protection consente solo l'accesso ai dati per le applicazioni e i servizi locali, i clienti che usano HYOK hanno anche una chiave basata sul cloud per i documenti cloud.
 
-## <a name="implementing-byok-for-your-azure-information-protection-tenant-key"></a>Implementazione di BYOK per la chiave del tenant di Azure Information Protection
+Usare HYOK per i documenti:
 
-Usare le informazioni e le procedure descritte in questa sezione se si è deciso di generare e gestire la propria chiave del tenant in base allo schema BYOK.
+- Limitato a poche persone
+- Non condiviso all'esterno dell'organizzazione
+- Vengono utilizzati solo nella rete interna.
+
+Questi documenti in genere hanno la classificazione più alta nell'organizzazione, come "Top Secret".
+
+Per ulteriori informazioni, vedere la pagina relativa ai [Dettagli HYOK](configure-adrms-restrictions.md).
+
+## <a name="double-key-encryption-dke-aip-unified-labeling-client-only"></a>Crittografia a chiave doppia (DKE) (solo per client di assegnazione unificata AIP)
+
+La protezione DKE offre una maggiore sicurezza per i contenuti usando due chiavi: una creata e conservata da Microsoft in Azure e un'altra creata e mantenuta in locale dal cliente.
+
+DKE richiede entrambe le chiavi per accedere al contenuto protetto, assicurando che Microsoft e altre terze parti non possano mai accedere ai dati protetti autonomamente.
+
+DKE può essere distribuito nel cloud o in locale, garantendo una flessibilità completa per i percorsi di archiviazione.
+
+Usare DKE quando l'organizzazione:
+
+- Si vuole assicurare che solo gli utenti possano decrittografare il contenuto protetto, in tutte le circostanze.
+- Non si vuole che Microsoft abbia accesso ai dati protetti autonomamente.
+- Dispone di requisiti normativi per mantenere le chiavi all'interno di un confine geografico. Con DKE, le chiavi detenute dal cliente vengono mantenute all'interno del data center del cliente.
 
 > [!NOTE]
-> Se si è iniziato a usare Azure Information Protection con una chiave del tenant gestita da Microsoft e si vuole gestire la chiave del tenant autonomamente (passare alla modalità BYOK), i documenti e i messaggi di posta elettronica precedentemente protetti saranno comunque accessibili tramite una chiave archiviata. 
+> DKE è simile a una cassetta di sicurezza che richiede l'accesso sia a una chiave della banca che a una chiave del cliente.
+> DKE-Protection richiede che sia la chiave di Microsoft e la chiave posseduta dal cliente per decrittografare il contenuto protetto.
 
-### <a name="prerequisites-for-byok"></a>Prerequisiti per la modalità BYOK
-Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
+<!--
+The following video shows how DKE works to secure your content.
 
-|Requisito|Ulteriori informazioni|
-|---------------|--------------------|
-|Il tenant di Azure Information Protection deve avere una sottoscrizione di Azure. Se non si ha una sottoscrizione, è possibile iscriversi per ottenere un [account gratuito](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Per usare una chiave protetta dal modulo di protezione hardware, è necessario avere un piano tariffario Premium di Azure Key Vault.|La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per confermare di avere una sottoscrizione di Azure che è possibile usare per BYOK, usare i cmdlet di [Azure PowerShell](/powershell/azure/overview) : <br /><br /> 1. avviare una sessione di Azure PowerShell con l'opzione **Esegui come amministratore** e accedere come amministratore globale per il tenant di Azure Information Protection usando, `Connect-AzAccount` quindi copiare e incollare la stringa del token risultante in `https://microsoft.com/devicelogin` usando un browser. <br /><br /> Per altre informazioni, vedere [accedere con Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. digitare quanto segue e verificare che vengano visualizzati i valori per il nome e l'ID della sottoscrizione, il Azure Information Protection ID tenant e che lo stato sia abilitato:`Get-AzSubscription`<br /><br />Se non viene visualizzato alcun valore e viene solo restituito il prompt, non si dispone di una sottoscrizione di Azure utilizzabile per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti di BYOK, se si esegue la migrazione da AD RMS a Azure Information Protection tramite la chiave software alla chiave hardware, è necessario avere una versione minima di 11,62 se si usa il firmware Thales per il modulo di protezione hardware.|
-|Per usare una chiave protetta dal modulo di protezione hardware creata in locale: <br /><br />- Tutti i prerequisiti elencati per la modalità BYOK in Key Vault. |Vedere [Prerequisiti per la modalità BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> **Nota**: oltre ai prerequisiti di BYOK, se si esegue la migrazione da AD RMS a Azure Information Protection tramite la chiave software alla chiave hardware, è necessario avere una versione minima di 11,62 se si usa il firmware Thales per il modulo di protezione hardware.|
-|Se l'insieme di credenziali delle chiavi per contenere la chiave del tenant usa gli endpoint servizio di rete virtuale per Azure Key Vault: <br /><br />- Consentire ai servizi Microsoft considerati attendibili di ignorare il firewall.|Per altre informazioni, vedere [Endpoint servizio di rete virtuale per Azure Key Vault](/azure/key-vault/key-vault-overview-vnet-service-endpoints).|
-|Il modulo AIPService di PowerShell per Azure Information Protection.|Per le istruzioni di installazione, vedere [installazione del modulo PowerShell AIPService](./install-powershell.md).|
-
-Per ulteriori informazioni sul modulo di protezione hardware (HSM) nCipher nShield e sul relativo utilizzo con Azure Key Vault, vedere il [sito Web nCipher](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).
-
-### <a name="choosing-your-key-vault-location"></a>Scelta del percorso dell'insieme di credenziali delle chiavi
-
-Quando si crea un insieme di credenziali delle chiavi che dovrà contenere la chiave da usare come chiave del tenant per Azure Information Protection è necessario specificare un percorso. Il percorso di trova in un'area di Azure o un'istanza di Azure.
-
-Scegliere un'opzione innanzitutto per ragioni di conformità e quindi per ridurre al minimo la latenza di rete:
-
-- Se è stata scelta la topologia di chiave BYOK per ragioni di conformità, i requisiti di conformità potrebbero richiedere l'area di Azure o l'istanza di Azure in cui è archiviata la chiave del tenant di Azure Information Protection.
-
-- Poiché tutte le chiamate alle funzioni di crittografia per la protezione vengono collegate alla chiave del tenant di Azure Information Protection, si vuole ridurre al minimo la latenza di rete causata dalla chiamate. A tale scopo, creare l'insieme di credenziali delle chiavi nella stessa area o istanza di Azure del tenant di Azure Information Protection.
-
-Per identificare il percorso del tenant di Azure Information Protection, usare il cmdlet di PowerShell [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) e identificare l'area dagli URL. Ad esempio:
-
-```ps
-LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
-```
-
-L'area è identificabile da **rms.na.aadrm.com** e, nell'esempio, si trova in America del Nord.
-
-Usare la tabella seguente per identificare l'area o l'istanza di Azure consigliata per ridurre al minimo la latenza di rete.
-
-|Area o istanza di Azure|Percorso dell'insieme di credenziali delle chiavi consigliato|
-|---------------|--------------------|
-|rms.**na**.aadrm.com|**Stati Uniti centro-settentrionali** o **Stati Uniti orientali**|
-|rms.**eu**.aadrm.com|**Europa settentrionale** o **Europa occidentale**|
-|rms.**ap**.aadrm.com|**Asia orientale** o **Asia sud-orientale**|
-|rms.**sa**.aadrm.com|**Stati Uniti occidentali** o **Stati Uniti orientali**|
-|rms.**govus**.aadrm.com|**Stati Uniti centrali** o **Stati Uniti orientali 2**|
-|RMS.**AADRM.US**|**US gov Virginia** o **US gov Arizona**|
-|RMS.**AADRM.cn**|**Cina orientale 2** o **Cina settentrionale 2**|
-
-
-### <a name="instructions-for-byok"></a>Istruzioni per BYOK
-
-Usare la documentazione di Azure Key Vault per creare un insieme di credenziali delle chiavi e la chiave che si vuole usare per Azure Information Protection. Ad esempio, vedere [Introduzione ad Azure Key Vault](/azure/key-vault/key-vault-get-started).
-
-Assicurarsi che la lunghezza della chiave sia 2048 bit (consigliata) o 1024 bit. Altre lunghezze di chiave non sono supportate da Azure Information Protection. 
-
-Non usare una chiave a 1024 bit come chiave del tenant attiva perché viene considerata come un livello di protezione inadeguato. Microsoft non approva l'uso di lunghezze di chiave inferiori, ad esempio chiavi RSA a 1024 bit e l'utilizzo associato di protocolli che offrono livelli di protezione inadeguati, ad esempio SHA-1. Si consiglia di procedere con una lunghezza di chiave superiore.
-
-Per creare una chiave protetta dal modulo di protezione hardware in locale e trasferirla nell'insieme di credenziali delle chiavi come chiave protetta dal modulo di protezione hardware, seguire le procedure descritte in [Come generare e trasferire chiavi protette dal modulo di protezione hardware per Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys).
-
-Per consentire ad Azure Information Protection di usare la chiave, è necessario autorizzare tutte le operazioni di Key Vault per la chiave. Questa è la configurazione predefinita e le operazioni sono Encrypt, Decrypt, wrapKey, unwrapKey, Sign e verify. È possibile controllare le operazioni consentite di una chiave usando il comando di PowerShell seguente: `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps` . Se necessario, aggiungere le operazioni consentite usando [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) e il parametro *KeyOps* .
-
-Le chiavi archiviate in Key Vault hanno un ID chiave. L'ID chiave è un URL che contiene il nome dell'insieme di credenziali delle chiavi, il contenitore delle chiavi e il nome e la versione della chiave. Ad esempio: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . È necessario configurare Azure Information Protection per l'uso della chiave specificando l'URL dell'insieme di credenziali delle chiavi.
-
-Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore di Azure Key Vault può usare il portale di Azure o Azure PowerShell:
-
-Configurazione mediante il portale di Azure:
-
-1. Passare a insiemi di credenziali delle **chiavi**  >  **\<*your key vault name*>**  >  **criteri di accesso**  >  **Aggiungi nuovo**.
-
-2. Nel riquadro **Aggiungi criteri di accesso** selezionare **Azure Information Protection BYOK** nella casella di riepilogo **Configura da modello (facoltativo)** e fare clic su **OK**.
-    
-    Il modello selezionato ha la configurazione seguente:
-    
-    - **Microsoft Rights Management Services** viene assegnato automaticamente per **Selezionare un'entità**.
-    - **Get**, **Decrypt** e **Sign** vengono selezionati automaticamente per le autorizzazioni delle chiavi. 
-
-Configurazione mediante PowerShell:
-
-- Eseguire il cmdlet Key Vault PowerShell, [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy), e concedere le autorizzazioni all'entità servizio Rights Management di Azure, usando il GUID **00000012-0000-0000-C000-000000000000**. Ad esempio:
-
-    ```ps
-    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
-    ```
-
-A questo punto è possibile configurare Azure Information Protection per l'uso di questa chiave come chiave del tenant di Azure Information Protection dell'organizzazione. Tramite i cmdlet di Azure RMS, connettersi al servizio Azure Rights Management e accedere:
-
-```ps
-    Connect-AipService
-```
-
-Eseguire quindi il [cmdlet Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey), specificando l'URL della chiave. Ad esempio:
-
-```ps
-    Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
-```
-
-> [!IMPORTANT]
-> In questo esempio, "aaaabbbbcccc111122223333" è la versione della chiave da usare. Se non si specifica la versione, viene usata la versione corrente della chiave senza avviso e il comando sembra funzionare. Tuttavia, se la chiave in Key Vault viene aggiornata in un secondo momento (rinnovato), il servizio Azure Rights Management smetterà di funzionare per il tenant, anche se si esegue di nuovo il comando use-AipServiceKeyVaultKey.
-> 
-> Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando. È possibile usare il comando Azure Key Vault cmd [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey)per ottenere il numero di versione della chiave corrente. Ad esempio: `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
-
-Se è necessario confermare che l'URL della chiave è impostato correttamente per Azure Information Protection: in Azure Key Vault eseguire [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) per visualizzare l'URL della chiave.
-
-Infine, se il servizio Azure Rights Management è già attivato, eseguire [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) per indicare Azure Information Protection per usare questa chiave come chiave del tenant attiva per il servizio Rights Management di Azure. Se non si esegue questo passaggio, Azure Information Protection continuerà a usare la chiave gestita da Microsoft predefinita creata automaticamente per il tenant.
-
-
-## <a name="next-steps"></a>Passaggi successivi
-
-Dopo aver eseguito la pianificazione e, se necessario, creato e configurato la chiave del tenant, eseguire queste operazioni:
-
-1.  Iniziare a usare la chiave del tenant.
-    
-    - Se il servizio di protezione non è già attivato, è ora necessario attivare il servizio Rights Management in modo che l'organizzazione possa iniziare a usare Azure Information Protection. Gli utenti iniziano immediatamente a usare la chiave del tenant (gestita da Microsoft o gestita dall'utente in Azure Key Vault).
-    
-        Per ulteriori informazioni sull'attivazione, vedere [attivazione del servizio di protezione da Azure Information Protection](./activate-service.md).
-        
-    - Se il servizio Rights Management è già stato attivato e si è deciso di gestire la propria chiave del tenant, gli utenti passano gradualmente dalla chiave del tenant precedente a quella nuova. Il completamento di questa transizione in fasi successive può richiedere alcune settimane. I documenti e i file protetti con la chiave del tenant precedente rimangono accessibili agli utenti autorizzati.
-        
-2. Valutare l'opportunità di usare la registrazione dei dati di utilizzo per tenere traccia di ogni transazione eseguita dal servizio Azure Rights Management.
-    
-    Se si è deciso di gestire la propria chiave del tenant, la registrazione include informazioni sull'uso della chiave stessa. Vedere il frammento seguente di un file di log visualizzato in Excel in cui i tipi di richiesta **KeyVaultDecryptRequest** e **KeyVaultSignRequest** dimostrano che la chiave del tenant è attualmente in uso.
-    
-    ![file di log visualizzato in Excel in cui è attualmente usata la chiave del tenant](./media/RMS_Logging.png)
-    
-    Per ulteriori informazioni sulla registrazione dell'utilizzo, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).
-    
-3.  Gestire la chiave del tenant.
-    
-    Per altre informazioni sulle operazioni del ciclo di vita della chiave del tenant, vedere [Operazioni relative alla chiave del tenant di Azure Information Protection](./operations-tenant-key.md).
+> [!VIDEO https://msit.microsoftstream.com/embed/video/f466a1ff-0400-a936-221c-f1eab45dc756]
+-->
+Per ulteriori informazioni, vedere [crittografia a chiave doppia](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) nella documentazione di Microsoft 365. 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8057d0599cdd1f01dc32adb6b7e20b359f9fea0e
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5ff7dc706d272228892b238da99a008ed626e522
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048256"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927370"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -84,8 +84,6 @@ Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etic
 Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
 ## <a name="using-variables-in-the-text-string"></a>Uso di variabili nella stringa di testo
-
-Le variabili seguenti sono disponibili a livello generale quando si usa Azure Information Protection client classico e si trovano in una disponibilità di anteprima pubblica quando si usa il client di Azure Information Protection Unified labeling.  
 
 Nella stringa di testo è possibile usare le variabili seguenti per l'intestazione, il piè di pagina o la filigrana:
 

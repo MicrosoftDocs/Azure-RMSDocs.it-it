@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32880671c46efb9cb82f13235f98ac42566b65fc
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048902"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868995"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -54,12 +54,6 @@ Questo modulo viene installato in **\Programmi (x86)\Microsoft Azure Information
 
 Attualmente, se si installa il modulo con un account utente e si eseguono i cmdlet nello stesso computer come un altro utente, è prima necessario eseguire il comando `Import-Module AzureInformationProtection`. In questo scenario, il modulo non viene caricato automaticamente alla prima esecuzione di un cmdlet.
 
-La versione corrente del modulo AzureInformationProtection impone le limitazioni seguenti:
-
-- È possibile rimuovere la protezione di cartelle personali di Outlook (file PST), ma non è attualmente possibile proteggere in modo nativo questi file o altri file contenitore tramite questo modulo di PowerShell.
-
-- È possibile rimuovere la protezione dei messaggi di posta elettronica protetti di Outlook (file con estensione rpmsg) solo se i messaggi si trovano in una cartella personale di Outlook (con estensione pst).
-
 Prima di iniziare a usare i cmdlet, vedere le istruzioni e i prerequisiti aggiuntivi corrispondenti alla distribuzione in uso:
 
 - [Servizio Azure Information Protection e servizio Azure Rights Management](#azure-information-protection-and-azure-rights-management-service)
@@ -71,6 +65,7 @@ Prima di iniziare a usare i cmdlet, vedere le istruzioni e i prerequisiti aggiun
 
     - Applicabile se si usa la modalità di sola protezione con la versione locale di Azure Rights Management, Active Directory Rights Management Services (AD RMS).
 
+Per ulteriori informazioni, vedere la raccolta pertinente di [Azure Information Protection problemi noti](../known-issues.md#powershell-support-for-the-azure-information-protection-client).
 
 ## <a name="azure-information-protection-and-azure-rights-management-service"></a>Servizio Azure Information Protection e servizio Azure Rights Management
 
