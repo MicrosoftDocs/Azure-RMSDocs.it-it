@@ -16,12 +16,12 @@ ms.suite: ems
 ms.custom: dev
 experimental: true
 experiment_id: priyamo-test-20160729
-ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: aee6442d79c39172f6b082fb2531588ce50c8cf2
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792026"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135607"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Procedura: Abilitare la revoca e il rilevamento dei documenti
 
@@ -94,7 +94,9 @@ Infine, usare questa API per registrare il documento rilevato con il sistema di 
 
 Di seguito è riportato un frammento di codice che mostra un esempio di impostazione dei metadati di rilevamento del documento e la chiamata per la registrazione con il sistema di rilevamento.
 
-      C++
+**C++**:
+
+  ```cpp
       HRESULT hr = S_OK;
       LPCWSTR wszOutputFile = NULL;
       wstring wszWorkingFile;
@@ -124,7 +126,7 @@ Di seguito è riportato un frammento di codice che mostra un esempio di impostaz
      /* the context to use for the call */
      PCIPC_PROMPT_CTX pContext;
 
-     wstring wstrContentName(“MyDocument.txt”);
+     wstring wstrContentName("MyDocument.txt");
      bool sendLicenseRegistrationNotificationEmail = FALSE;
 
      hr = IpcRegisterLicense( pSerializedLicense,
@@ -132,18 +134,19 @@ Di seguito è riportato un frammento di codice che mostra un esempio di impostaz
                         pContext,
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
+  ```
 
 ## <a name="add-a-track-usage-button-to-your-app"></a>Aggiungere un pulsante **Rileva utilizzo** all'app
 
 Aggiungere un elemento dell'interfaccia utente **Rileva utilizzo** all'app con uno dei seguenti formati di URL è semplice:
 
 - Usando l'ID contenuto
-  - Ottenere l'ID contenuto utilizzando [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) o [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) se la licenza viene serializzata e usare la proprietà licenza **IPC_LI_CONTENT_ID**. Per altre informazioni, vedere [License property types](https://msdn.microsoft.com/library/hh535287.aspx) (Tipi di proprietà di licenza).
-  - Con i metadati **ContentId** e **Issuer**, usare il formato seguente: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - Ottenere l'ID contenuto utilizzando [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) o [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) se la licenza viene serializzata e usare la proprietà licenza **IPC_LI_CONTENT_ID**. Per altre informazioni, vedere [tipi di proprietà di licenza](https://msdn.microsoft.com/library/hh535287.aspx).
+  - Con i metadati **ContentID** e **Issuer** , usare il formato seguente:`https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Ad esempio: `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- Se non si ha accesso ai metadati, ad esempio se si sta esaminando la versione del documento non protetta, è possibile usare **Content_Name** nel formato seguente: `https://track.azurerms.com/#/?q={ContentName}`
+- Se non si ha accesso a tali metadati, ovvero si sta esaminando la versione non protetta del documento, è possibile usare il **Content_Name** nel formato seguente:`https://track.azurerms.com/#/?q={ContentName}`
 
   Esempio - https://track.azurerms.com/#/?q=Secret!.txt
 

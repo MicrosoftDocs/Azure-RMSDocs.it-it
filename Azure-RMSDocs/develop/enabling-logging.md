@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4a9f0b375f9e152d44f4d5b5251a9259456db53c
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792435"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135709"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Procedura: Abilitare la registrazione delle prestazioni e dell'errore
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
@@ -51,50 +51,64 @@ In ognuno dei frammenti di codice di esempio seguenti, l'applicazione chiamante 
 ### <a name="android"></a>Android ###
 Abilitare la registrazione automatica
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    SharedPreferences.Editor editor = preferences.edit();
-    editor.putBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, true);
-    editor.commit();
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+SharedPreferences.Editor editor = preferences.edit();
+editor.putBoolean("IpcCustomerExperienceDataCollectionEnabled", true);
+editor.commit();
+```
 
 Ottenere l'impostazione del flag di controllo della registrazione corrente
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```
 
 ## <a name="ios"></a>iOS ##
 Abilitare la registrazione automatica
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:FALSE forKey:@&quot;IpcCustomerExperienceDataCollectionEnabled”];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+```objectivec
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setBool:FALSE forKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Ottenere l'impostazione del flag di controllo della registrazione corrente
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcCustomerExperienceDataCollectionEnabled&quot;];
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+```
 
 Impostare il controllo a livello di log
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-      [prefs setInteger:1 forKey:@&quot;IpcLogLevel”];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+```java
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:1 forKey:@"IpcLogLevel"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Ottenere l'impostazione del controllo a livello di log
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcLogLevel"];
+```
 
 ## <a name="windows"></a>Windows ##
 Abilitare la registrazione automatica
 
-    CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```cpp
+CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```
 
 Per altre informazioni sulle impostazioni facoltative, vedere [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
 
 Ottenere l'impostazione del flag di controllo della registrazione corrente
 
-    CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
-
+```cpp
+CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
+```
 
 **Nota**: i frammenti di codice Windows precedenti sono in C++. Per C\#, aggiornare la sintassi con '.' al posto di '::'.
 
-**Linux/C++** : questo SDK include alcune registrazioni di base meno ampie di quelle delle altre piattaforme. Per altre informazioni, vedere la sezione **Risoluzione dei problemi** del file "README.md" in [RMS SDK per C++ portabile](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting).
+**Linux/C++**: questo SDK include alcune registrazioni di base meno ampie di quelle delle altre piattaforme. Per altre informazioni, vedere la sezione **Risoluzione dei problemi** del file "README.md" in [RMS SDK per C++ portabile](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting).
