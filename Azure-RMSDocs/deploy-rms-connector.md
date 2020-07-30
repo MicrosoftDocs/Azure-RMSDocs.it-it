@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 405989dae3fb7f37edc4fdd8b213ae5dae3ac592
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: f69c7071c7e4bb257d4325f4404c51a6e0a81046
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665912"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298275"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Distribuzione del connettore di Azure Rights Management
 
@@ -42,7 +42,7 @@ Il connettore RMS supporta i server locali seguenti: Exchange Server, SharePoin
 > [!NOTE]
 > Se si vuole proteggere più tipi di file (non solo i documenti di Office) usando Infrastruttura di classificazione file, non usare il connettore RMS, ma i [cmdlet di AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
 
-Per informazioni sulle versioni dei server locali supportate dal connettore RMS, vedere [Server locali che supportano Azure RMS](requirements-servers.md).
+Per informazioni sulle versioni dei server locali supportate dal connettore RMS, vedere [Server locali che supportano Azure RMS](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
 
 
 ### <a name="support-for-hybrid-scenarios"></a>Supporto per gli scenari ibridi
@@ -61,7 +61,7 @@ Prima di installare il connettore RMS, accertarsi che i requisiti seguenti siano
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Il servizio di protezione è attivato|[Attivazione del servizio di protezione da Azure Information Protection](activate-service.md)|
-|Sincronizzazione delle directory tra le foreste locali di Active Directory e Azure Active Directory|Dopo l'attivazione di RMS, configurare Azure Active Directory per l'uso da parte di utenti e gruppi nel database di Active Directory.<br /><br />**Importante**: è necessario eseguire il passaggio di sincronizzazione della directory in modo che il connettore RMS possa funzionare, anche per una rete di test. Sebbene sia possibile usare Office 365 e Azure Active Directory con account creati manualmente in Azure Active Directory, per usare il connettore è necessario che gli account di Azure Active Directory siano sincronizzati con Servizi di dominio Active Directory. La sincronizzazione manuale della password non è sufficiente.<br /><br />Per altre informazioni, vedere le seguenti risorse:<br /><br />- [Integrare domini di Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [Confronto degli strumenti di integrazione della directory di identità ibrida](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
+|Sincronizzazione delle directory tra le foreste locali di Active Directory e Azure Active Directory|Dopo l'attivazione di RMS, configurare Azure Active Directory per l'uso da parte di utenti e gruppi nel database di Active Directory.<br /><br />**Importante**: è necessario eseguire il passaggio di sincronizzazione della directory in modo che il connettore RMS possa funzionare, anche per una rete di test. Sebbene sia possibile usare Office 365 e Azure Active Directory con account creati manualmente in Azure Active Directory, per usare il connettore è necessario che gli account di Azure Active Directory siano sincronizzati con Servizi di dominio Active Directory. La sincronizzazione manuale della password non è sufficiente.<br /><br />Per altre informazioni, vedere le risorse seguenti:<br /><br />- [Integrare domini di Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [Confronto degli strumenti di integrazione della directory di identità ibrida](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
 |Almeno due computer membri su cui installare il connettore RMS:<br /><br />-Un computer fisico o virtuale a 64 bit che esegue uno dei sistemi operativi seguenti: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.<br /><br />- Almeno 1 GB di RAM.<br /><br />- Almeno 64 GB di spazio su disco.<br /><br />- Almeno un'interfaccia di rete.<br /><br />-Accesso a Internet tramite un firewall o un proxy Web che non richiede l'autenticazione.<br /><br />- Ubicazione in una foresta o in un dominio che considera attendibile altre foreste dell'organizzazione contenenti installazioni di server di Exchange o di SharePoint da usare con il connettore RMS.|Per ottenere elevati livelli di tolleranza di errore e disponibilità, è necessario installare il connettore RMS in almeno due computer.<br /><br />**Suggerimento**: se si esegue Outlook Web Access o si usano dispositivi mobili con Exchange ActiveSync IRM ed è fondamentale mantenere l'accesso ai messaggi di posta elettronica e agli allegati protetti da Azure RMS, è consigliabile distribuire un gruppo con carico bilanciato di server del connettore per garantire una disponibilità elevata.<br /><br />Per l'esecuzione del connettore non sono necessari server dedicati. È invece necessario installare il connettore in un computer separato dai server che lo usano.<br /><br />**Importante**: non installare il connettore in un computer che esegue Exchange Server, SharePoint Server o un file server configurato per la funzionalità Infrastruttura di classificazione file, se si desidera usare tale funzionalità da questi servizi con Azure RMS. Inoltre, non installare il connettore in un controller di dominio.<br /><br />In presenza di carichi di lavoro server che si vuole usare con il connettore RMS, con server inclusi in domini non considerati attendibili dal dominio da cui si esegue il connettore, è possibile installare server del connettore RMS aggiuntivi in questi domini non attendibili o in altri domini nelle rispettive foreste. <br /><br />Non sono previsti limiti per il numero di server del connettore che è possibile eseguire per l'organizzazione e tutti i server del connettore installati in un'organizzazione condividono la stessa configurazione. Tuttavia, per configurare il connettore per autorizzare i server, è necessario essere in grado di visualizzare gli account del servizio o del server da autorizzare e questo significa dover eseguire lo strumento di amministrazione di RMS in una foresta da cui è possibile visualizzare tali account.|
 
 

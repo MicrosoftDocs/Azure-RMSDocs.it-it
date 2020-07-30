@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a6f657db4cce2d62562ff7f20c28aae2f6e8af3
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 6308234bb778969c8e5d3b8e55260f042e501906
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136236"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298224"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guide procedurali per gli scenari comuni che usano Azure Information Protection
 
@@ -71,6 +71,6 @@ Istruzioni dettagliate:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se il proprio scenario non è presente nell'elenco, consultare l'articolo [Guida di orientamento per la distribuzione](deployment-roadmap.md) per un elenco completo dei passaggi di pianificazione e distribuzione.
+Se il proprio scenario non è presente nell'elenco, Per un elenco completo dei passaggi di pianificazione e distribuzione, vedere la Guida di orientamento per la [distribuzione](deployment-roadmap.md) .
 
 Se non si ha familiarità con Azure Information Protection, prima di iniziare la distribuzione consultare l'articolo [Che cos'è Azure Information Protection?](what-is-information-protection.md) per una rapida introduzione al servizio.

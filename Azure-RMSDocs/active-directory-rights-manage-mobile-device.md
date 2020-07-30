@@ -4,19 +4,19 @@ description: Informazioni sulle estensioni per dispositivi mobili Active Directo
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2020
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f20ebed9647570e1f9395791f346eb175a3a8c5e
-ms.sourcegitcommit: 43c9a5c3130a3a8e2ee2644207d07382bed09679
+ms.openlocfilehash: 4351fbd3a7cbbcfbc49df69c1103a6d3a90fb920
+ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880007"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87255149"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Estensione di Active Directory Rights Management Services per dispositivi mobili
 
@@ -45,7 +45,7 @@ Per ulteriori informazioni, scaricare il white paper "Microsoft Azure Informatio
 Prima di installare l'estensione AD RMS dispositivo mobile, verificare che siano presenti le dipendenze seguenti.
 
 
-|Requisito|Ulteriori informazioni|
+|Requisito|Altre informazioni|
 |---------------|------------------------|
 |Una distribuzione di AD RMS esistente in Windows Server 2019, 2016, 2012 R2 o 2012, che include quanto segue:<br /><br /> -Il cluster di AD RMS deve essere accessibile da Internet. <br /><br /> -AD RMS necessario utilizzare un database completo basato su Microsoft SQL Server in un server separato e non il database interno di Windows utilizzato spesso per i test sullo stesso server. <br /><br />-L'account che verrà utilizzato per installare l'estensione per dispositivi mobili deve disporre dei diritti di amministratore di sistema per l'istanza di SQL Server utilizzata per AD RMS. <br /><br />-I server AD RMS devono essere configurati per l'uso di SSL/TLS con un certificato x. 509 valido considerato attendibile dai client dei dispositivi mobili.<br /><br /> -Se i server di AD RMS si trovano dietro un firewall o pubblicati usando un proxy inverso, oltre alla pubblicazione della cartella **/_wmcs** su Internet, è necessario pubblicare anche la cartella/problema (ad esempio: **_https: \/ \/ RMSserver.contoso.com/My**).|Per informazioni dettagliate sui prerequisiti AD RMS e le informazioni sulla distribuzione, vedere la sezione Prerequisiti di questo articolo.|
 |AD FS distribuita in Windows Server:<br /><br /> -Il AD FS server farm deve essere accessibile da Internet (sono stati distribuiti i proxy server federativi). <br /><br />-L'autenticazione basata su form non è supportata. è necessario usare l'autenticazione integrata di Windows <br /><br /> **Importante**: ad FS necessario eseguire un computer diverso dal computer che esegue ad RMS e dall'estensione del dispositivo mobile.|Per la documentazione relativa AD FS, vedere la [Guida alla distribuzione di Windows server ad FS](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on) nella libreria di Windows Server.<br /><br /> ADFS deve essere configurato per l'estensione per dispositivi mobili. Per istruzioni, vedere la sezione **Configuring ad FS for the ad RMS Mobile Device Extension** in questo argomento.|
@@ -82,7 +82,7 @@ $TransformRules = @"
 @RuleTemplate = "LdapClaims"
 @RuleName = "Jwt Token"
 c:[Type ==
-"https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
 Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types =
 ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
@@ -123,7 +123,7 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 
 - Per configurare manualmente AD FS per l'estensione del dispositivo mobile AD RMS, usare le impostazioni seguenti:
 
-|**Configuration**|**Valore**|
+|**Configurazione**|**Valore**|
 |-----|-----|
 |**Attendibilità componente**|_api. RMS. Rest. com|
 |**Regola di attestazione**|**Archivio attributi**: Active Directory <br /><br />**Indirizzi di posta elettronica**: indirizzo di posta elettronica<br /><br>**Nome-entità utente**: UPN<br /><br /> **Indirizzo proxy**: _https: \/ \/schemas.xmlSOAP.org/claims/proxyAddresses|
@@ -223,7 +223,7 @@ Se si usa il ruolo server DNS in Windows Server, usare le tabelle seguenti come 
 |Campo|valore|
 |------|------|
 |Dominio|_tcp. contoso. com
-|Service|_rmsdisco
+|Servizio|_rmsdisco
 |Protocollo|_http
 |Priorità|0
 |Peso|0
@@ -233,7 +233,7 @@ Se si usa il ruolo server DNS in Windows Server, usare le tabelle seguenti come 
 |Campo|valore|
 |------|------|
 |Dominio|_tcp. fabrikam. com
-|Service|_rmsdisco
+|Servizio|_rmsdisco
 |Protocollo|_http
 |Priorità|0
 |Peso|0
@@ -249,7 +249,7 @@ Se si usa il ruolo server DNS in Windows Server, usare la tabella seguente come 
 |Campo|valore|
 |------|------|
 |Dominio|_tcp. contoso. com
-|Service|_rmsdisco
+|Servizio|_rmsdisco
 |Protocollo|_http
 |Priorità|0
 |Peso|0

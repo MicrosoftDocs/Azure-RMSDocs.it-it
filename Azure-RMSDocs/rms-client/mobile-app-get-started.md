@@ -12,12 +12,12 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b50f89c9f8d0a965b630c82461f1190bb893938
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 622786bc1192d6727ef748df970adeb53733f4f8
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048698"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298085"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introduzione all'app Microsoft Azure Information Protection per iOS e Android
 
@@ -37,7 +37,7 @@ Per testare l'app per dispositivi mobili AIP, verificare che sia possibile acced
 
 |Tipo file  |Istruzioni  |
 |---------|---------|
-|**Un file con estensione rpmsg**     | Un messaggio di posta elettronica protetto da diritti. Se l'app di posta elettronica mobile non supporta in modo nativo la protezione dati di Rights Management, i messaggi di posta elettronica protetti vengono visualizzati come allegati di posta elettronica </br></br>Usare un altro dispositivo, ad esempio Outlook, da un computer Windows, per inviare a se stessi un messaggio di posta elettronica protetto da diritti a cui è possibile accedere dal dispositivo mobile. </br></br>**Nota:** Per un elenco dei client di posta elettronica che supportano Rights Management in modo nativo, vedere la colonna **posta elettronica** nelle [applicazioni abilitate per RMS](../requirements-applications.md#rms-enlightened-applications). |
+|**Un file con estensione rpmsg**     | Un messaggio di posta elettronica protetto da diritti. Se l'app di posta elettronica mobile non supporta in modo nativo la protezione dati di Rights Management, i messaggi di posta elettronica protetti vengono visualizzati come allegati di posta elettronica </br></br>Usare un altro dispositivo, ad esempio Outlook, da un computer Windows, per inviare a se stessi un messaggio di posta elettronica protetto da diritti a cui è possibile accedere dal dispositivo mobile. </br></br>**Nota:** Per un elenco dei client di posta elettronica che supportano Rights Management in modo nativo, vedere le righe di **posta elettronica** nelle [applicazioni che supportano la protezione dati di Azure Rights Management](../requirements-applications.md). |
 |**Un file PDF protetto da diritti**     | 1. da un computer Windows proteggere un file PDF usando il client client AIP [classico](client-classify-protect.md) o [Unified Labeling](clientv2-classify-protect.md) . </br>2. inviare manualmente il file PDF protetto oppure caricarlo in una libreria protetta da SharePoint e condividerlo con il proprio indirizzo di posta elettronica.        |
 |**A. ptxt o. pjpg o. ppng**     | 1. da un computer Windows proteggere un file di testo o di immagine usando il client client AIP [classico](client-classify-protect.md) o [Unified Labeling](clientv2-classify-protect.md) . </br></br>2. inviare manualmente il file protetto oppure caricarlo in una raccolta protetta di SharePoint e condividerlo con il proprio indirizzo di posta elettronica. </br></br>**Nota:** Per ulteriori informazioni, vedere [tipi di file supportati per la classificazione e la protezione](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)   |
 | | |

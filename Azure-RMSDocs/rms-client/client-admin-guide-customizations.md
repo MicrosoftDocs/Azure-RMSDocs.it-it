@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a038d70cfbeb75f4bcabbfab0391582cdb0b5e87
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 58d96afe47d6d3fc993c7c7e213e64097777b21e
+ms.sourcegitcommit: edd0614ef6f687ff2745f56e4171cd72e03edc9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047372"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438183"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -680,7 +680,7 @@ Specificare un nome di regola di migrazione a propria scelta. Usare un nome desc
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservato** e ha l'ID etichetta **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -697,7 +697,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservatezza elevata** e ha l'ID etichetta **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -715,7 +715,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "generale" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Generale** e ha l'ID etichetta **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -980,9 +980,9 @@ Impostare il livello di registrazione su uno dei valori seguenti:
 
 Questa impostazione client avanzata non modifica le informazioni inviate ad Azure Information Protection per [reporting centralizzato](../reports-aip.md) o le informazioni scritte nel [registro eventi](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) locale.
 
-## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integrazione con la classificazione dei messaggi di Exchange per una soluzione di etichettatura dei dispositivi mobili
+## <a name="integration-with-the-legacy-exchange-message-classification"></a>Integrazione con la classificazione dei messaggi di Exchange legacy
 
-Outlook sul Web supporta ora l'assegnazione di etichette incorporata per Exchange Online, che è il metodo consigliato per etichettare i messaggi di posta elettronica in Outlook sul Web. Tuttavia, se non si usano ancora le etichette di riservatezza pubblicate da Office 365 Security & Compliance Center, il Centro sicurezza Microsoft 365 o Microsoft Compliance Center, è possibile usare la classificazione dei messaggi di Exchange per estendere Azure Information Protection etichette agli utenti mobili quando usano Outlook sul Web. È inoltre possibile utilizzare questo metodo per Exchange Server. 
+Outlook sul Web supporta ora l'assegnazione di etichette incorporata per Exchange Online, che è il metodo consigliato per etichettare i messaggi di posta elettronica in Outlook sul Web. Tuttavia, se è necessario etichettare i messaggi di posta elettronica in OWA e si usa Exchange Server, che non supporta ancora le etichette di riservatezza, è possibile usare la classificazione dei messaggi di Exchange per estendere le etichette di Azure Information Protection a Outlook sul Web.
 
 Outlook Mobile non supporta la classificazione dei messaggi di Exchange.
 

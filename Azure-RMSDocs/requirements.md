@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ebe0b506862e87e8dc99b9995eb0529f10805207
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 758e3ed214815393206ebe04085c9d61b5116d80
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927659"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298122"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti di Azure Information Protection
 
@@ -63,17 +63,23 @@ Per supportare l'autenticazione e l'autorizzazione per Azure Information Protect
 
 - **Multi-factor authentication** è supportato con Azure Information Protection quando si dispone del software client richiesto e l'infrastruttura di supporto per l'autenticazione a più fattori è stata configurata correttamente.
 
-L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altri dettagli, vedere [Azure Information Protection viene elencato come un'app cloud disponibile per l'accesso condizionale: come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
+L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altre informazioni, vedere: [Azure Information Protection è elencato come app cloud disponibile per l'accesso condizionale, come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Per informazioni dettagliate, vedere:
+Sono necessari altri prerequisiti per scenari specifici, ad esempio quando si usa Office 2010, basato su certificati o l'autenticazione a più fattori, oppure quando i valori UPN non corrispondono agli indirizzi di posta elettronica dell'utente. Per ulteriori informazioni, vedere [requisiti aggiuntivi Azure ad per Azure Information Protection](requirements-azure-ad.md).
 
-- [Requisiti di Azure Active Directory per Azure Information Protection](requirements-azure-ad.md)
+Per altre informazioni, vedere:
 
-- [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md)
+- [Che cos'è una directory di Azure AD?](/azure/active-directory/fundamentals/active-directory-whatis)
+- [Integrare domini Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ## <a name="client-devices"></a>Dispositivi client
 
-I computer o i dispositivi mobili degli utenti devono essere eseguiti in un sistema operativo che supporta Azure Information Protection.
+I computer utente o i dispositivi mobili devono essere eseguiti in un sistema operativo che supporta Azure Information Protection.
+
+- [Sistemi operativi supportati per i dispositivi client](#supported-operating-systems-for-client-devices)
+- [Macchine virtuali](#virtual-machines)
+- [Supporto server](#server-support)
+- [Requisiti aggiuntivi per client](#additional-requirements-per-client)
 
 ### <a name="supported-operating-systems-for-client-devices"></a>Sistemi operativi supportati per i dispositivi client
 
@@ -96,7 +102,7 @@ I sistemi operativi seguenti supportano sia l'etichetta unificata Azure Informat
 Per informazioni dettagliate sul supporto nelle versioni precedenti di Windows, contattare il account Microsoft o il rappresentante del supporto tecnico.
 
 > [!NOTE]
-> Quando il Azure Information Protection client protegge i dati tramite il servizio Azure Rights Management, i dati possono essere usati dagli [stessi dispositivi](requirements-client-devices.md) che supportano il servizio Azure Rights Management.
+> Quando il Azure Information Protection client protegge i dati tramite il servizio Azure Rights Management, i dati possono essere usati dagli [stessi dispositivi](#client-devices) che supportano il servizio Azure Rights Management.
 >
 
 ### <a name="virtual-machines"></a>Macchine virtuali
@@ -122,7 +128,7 @@ Ogni client Azure Information Protection presenta prerequisiti aggiuntivi. Per i
 
 - [Prerequisiti di Azure Information Protection client](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>Applicazioni
+## <a name="applications"></a>APPLICAZIONI
 
 I client Azure Information Protection possono etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word**, **Excel**, **PowerPoint**e **Outlook** da una delle edizioni di Office seguenti:
 
@@ -144,7 +150,7 @@ Con le altre edizioni di Office non è possibile proteggere i documenti e i mess
 
 Queste etichette verrebbero altrimenti visualizzate sulla barra del Azure Information Protection o nel client Unified Labeling sulla barra multifunzione di Office (dal pulsante **Proteggi** nel client classico o il pulsante **sensibilità** nel client Unified Labeling). 
 
-Per informazioni dettagliate, vedere [applicazioni che supportano la protezione dei dati di Azure Rights Management](requirements-applications.md).
+Per altre informazioni, vedere [applicazioni che supportano la protezione dei dati di Azure Rights Management](requirements-applications.md).
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Funzionalità e funzionalità di Office non supportate
 
@@ -175,25 +181,13 @@ Azure Information Protection prevede i requisiti aggiuntivi seguenti:
 
     Il risultato dovrebbe indicare che la CA emittente è da una CA Microsoft, ad esempio: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US` . 
     
-    Se viene visualizzato un nome della CA emittente che non è di Microsoft, è molto probabile che la connessione protetta da client a servizio venga terminata e richieda la riconfigurazione nel firewall.
+    Se viene visualizzato un nome della CA emittente che non è di Microsoft, è probabile che la connessione client-servizio protetta venga terminata e che sia necessaria una riconfigurazione nel firewall.
 
 - **TLS versione 1,2 o successiva** (solo client di etichetta unificata). Il client di etichettatura unificata richiede una versione di TLS 1,2 o successiva per garantire l'uso di protocolli crittograficamente sicuri e allinearsi alle linee guida per la sicurezza di Microsoft.
-    
-### <a name="on-premises-servers"></a>Server locali
-
-I server locali seguenti sono supportati con il servizio Rights Management di Azure da Azure Information Protection:
-
-- **Exchange Server**
-
-- **SharePoint Server**
-
-- **File server di Windows Server** che supportano l'infrastruttura di classificazione file
-
-Per informazioni sui requisiti aggiuntivi per questo scenario, vedere [Server locali che supportano la protezione dati di Azure Rights Management](requirements-servers.md).
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coesistenza di AD RMS con Azure RMS
 
-L'uso di AD RMS e Azure RMS affiancato, nella stessa organizzazione, per proteggere il contenuto da parte dello stesso utente nella stessa organizzazione, è supportato **solo** in ad RMS per la [protezione HYOK (Mantieni la propria chiave)](configure-adrms-restrictions.md) con Azure Information Protection.
+L'uso di AD RMS e Azure RMS affiancato, nella stessa organizzazione, per proteggere il contenuto dallo stesso utente nella stessa organizzazione, è supportato **solo** in ad RMS per la [protezione di HYOK (Mantieni la propria chiave)](configure-adrms-restrictions.md) con Azure Information Protection.
 
 Questo scenario *non* è supportato durante la [migrazione](migrate-from-ad-rms-to-azure-rms.md).
 I percorsi di migrazione supportati includono:
@@ -205,7 +199,7 @@ I percorsi di migrazione supportati includono:
 > [!TIP]
 > Se si distribuisce Azure Information Protection e poi si decide di interrompere l'uso del servizio cloud, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Information Protection](decommission-deactivate.md).
 
-Per altri scenari non di migrazione, in cui entrambi i servizi sono attivi nella stessa organizzazione, entrambi i servizi devono essere configurati in modo che solo uno di essi consente a tutti gli utenti di proteggere il contenuto. Questa configurazione può essere configurata nel modo seguente:
+Per altri scenari non di migrazione, in cui entrambi i servizi sono attivi nella stessa organizzazione, entrambi i servizi devono essere configurati in modo che solo uno di essi consente a tutti gli utenti di proteggere il contenuto. Configurare gli scenari seguenti:
 
 * Usare i reindirizzamenti per la [migrazione di un AD RMS Azure RMS](migrate-from-ad-rms-to-azure-rms.md)
 
@@ -217,10 +211,53 @@ Assicurarsi di consentire l'accesso a tutte le porte per i seguenti tag del serv
 
 - **AzureInformationProtection**
 - **AzureActiveDirectory**
-- **AzureFrontDoor. FrontEnd**
+- **AzureFrontDoor.Frontend**
 
 Il servizio Azure Information Protection dipende anche da due indirizzi IP specifici:
  - **13.107.6.181** 
  - **13.107.9.181**
 
-Assicurarsi di creare regole per consentire l'accesso in uscita a questi indirizzi IP specifici. 
+Assicurarsi di creare regole per consentire l'accesso in uscita a questi indirizzi IP specifici.
+
+## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Server locali supportati per la protezione dei dati Rights Management di Azure
+
+I server locali seguenti sono supportati con Azure Information Protection quando si usa il connettore Azure Rights Management.
+
+Questo connettore funge da interfaccia di comunicazione e inoltra tra i server locali e il servizio Azure Rights Management, che viene usato da Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica di Office. 
+
+Per usare questo connettore, è necessario configurare la sincronizzazione delle directory tra le foreste Active Directory e Azure Active Directory.
+
+I server supportati includono:
+
+|Tipo di server  |Versioni supportate  |
+|---------|---------|
+|**Exchange Server**     | -Exchange Server 2016 </br>-Exchange Server 2013 </br>-Exchange Server 2010       |
+|**Office SharePoint Server**     |-Office SharePoint Server 2016 </br>-Office SharePoint Server 2013 </br>-Office SharePoint Server 2010         |
+|**File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
+| | |
+
+<!-- i think that half of this note was removed at some point, without this other half. keeping it here in case we ever need it..>
+    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](./rms-client/configure-fci.md).
+-->
+
+Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](deploy-rms-connector.md).
+
+## <a name="supported-operating-systems-for-azure-rights-management"></a>Sistemi operativi supportati per Azure Rights Management
+
+I sistemi operativi seguenti supportano il servizio Azure Rights Management, che fornisce la protezione dei dati per AIP:
+
+|Sistema operativo  |Versioni supportate  |
+|---------|---------|
+|**Computer Windows**     |-Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
+|**macOS**     |   la versione minima di macOS è 10.8 (Mountain Lion)      |
+|**Telefoni e Tablet Android**     | Versione minima di Android 6,0        |
+|**iPhone e iPad**     | Versione minima di iOS 11,0        |
+|**Telefoni e Tablet Windows** | Windows 10 Mobile|
+| | |
+
+
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Dopo aver esaminato tutti i requisiti di AIP e aver verificato che il sistema sia conforme, continuare con la [preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
+

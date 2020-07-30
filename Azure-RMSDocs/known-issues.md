@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/02/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cec682216c07f93b36d189f3c385dc935b2f887d
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
+ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869659"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87378285"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti-Azure Information Protection
 
@@ -84,14 +84,14 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problemi noti di AIP nelle applicazioni di Office
 
-|Funzionalità  |Problemi noti  |
+|Feature  |Problemi noti  |
 |---------|---------|
-|Più versioni di Office    | I client Azure Information Protection, incluse le etichette classiche e unificate, non supportano più versioni di Office nello stesso computer o scambiano gli account utente in Office.       |
-|Supporto di IRM in Office 2016 | L'impostazione del registro di sistema [DRMEncryptProperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , che controlla la crittografia dei metadati in in Office 2016, non è supportata per le etichette Azure Information Protection.|
-|Contrassegni di contenuto in Word    | Azure Information Protection i [Contrassegni](configure-policy-markings.md) di contenuto possono essere nascosti nei piè di pagina di Microsoft Word, quando il piè di pagina contiene anche una tabella. Per ulteriori informazioni, vedere [quando vengono applicati i contrassegni visivi](configure-policy-markings.md#when-visual-markings-are-applied). |
-|Contrassegni di contenuto nei messaggi di posta elettronica | Il contrassegno di contenuto dinamico, ad esempio l'aggiunta di intestazioni/piè di pagina con macro ai messaggi di posta elettronica, è supportato solo per Outlook quando si usa il client Azure Information Protection. </br></br>Il contrassegno di contenuto dinamico non è supportato nell'applicazione Outlook nativa o in Outlook online. |
-|File allegati ai messaggi di posta elettronica |A causa di una limitazione negli aggiornamenti recenti di Windows, quando [Microsoft Outlook è protetto da Azure Rights Management](office-apps-services-support.md), i file allegati ai messaggi di posta elettronica possono essere bloccati dopo l'apertura del file. |
-|Unione posta    |  La funzionalità di Unione di Office [mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) non è supportata con alcuna funzionalità Azure Information Protection.       |
+|**Più versioni di Office**    | I client Azure Information Protection, incluse le etichette classiche e unificate, non supportano più versioni di Office nello stesso computer o scambiano gli account utente in Office.       |
+|**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office, la barra di Azure Information Protection potrebbe sembrare fluttuante al centro della schermata di Office, in una o in entrambe le visualizzazioni. </br></br>Per assicurarsi che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e **in generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore.**    |
+|**Supporto di IRM in Office 2016**| L'impostazione del registro di sistema [DRMEncryptProperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , che controlla la crittografia dei metadati in Office 2016, non è supportata per le etichette Azure Information Protection.|
+|**Contrassegni di contenuto in Word**    | Azure Information Protection i [Contrassegni](configure-policy-markings.md) di contenuto possono essere nascosti nei piè di pagina di Microsoft Word, quando il piè di pagina contiene anche una tabella. Per ulteriori informazioni, vedere [quando vengono applicati i contrassegni visivi](configure-policy-markings.md#when-visual-markings-are-applied). |
+|**File allegati ai messaggi di posta elettronica** |A causa di una limitazione negli aggiornamenti recenti di Windows, quando [Microsoft Outlook è protetto da Azure Rights Management](office-apps-services-support.md), i file allegati ai messaggi di posta elettronica possono essere bloccati dopo l'apertura del file. |
+|**Unione posta**    |  La funzionalità di Unione di Office [mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) non è supportata con alcuna funzionalità Azure Information Protection.       |
 | | |
 
 <!-- removing b/c this is relevant for classic only. for UL, labels are configured in m365. so this is basically irrelevant for us.

@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 21a174d8daca5376cd4071d579a50628e1a4d91c
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: c88186c163d1f712c657d9270a7a738289fac6b4
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665793"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298241"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dati in Azure Information Protection
 
@@ -59,7 +59,7 @@ Per altre informazioni su questa modifica, vedere l'annuncio sul blog [Office 36
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Dove è possibile trovare informazioni sulle soluzioni di terze parti integrabili con Azure RMS?
 
-Molti fornitori di software hanno già o stanno implementando soluzioni che si integrano con Azure Rights Management e l'elenco è in rapida crescita. Può essere utile verificare l'elenco delle [soluzioni RMS](requirements-applications.md#rms-enlightened-solutions) e ottenere gli aggiornamenti più recenti da [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) su Twitter. Controllare inoltre la [Guida per gli sviluppatori](./develop/developers-guide.md) e pubblicare eventuali domande specifiche sull'integrazione sul [sito Yammer](https://www.yammer.com/AskIPTeam) di Azure Information Protection.
+Molti fornitori di software hanno già o stanno implementando soluzioni che si integrano con Azure Rights Management e l'elenco è in rapida crescita. Potrebbe risultare utile controllare gli elenchi di [applicazioni abilitate per RMS](requirements-applications.md#) e ottenere gli aggiornamenti più recenti da [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) su Twitter. Controllare inoltre la [Guida per gli sviluppatori](./develop/developers-guide.md) e pubblicare eventuali domande specifiche sull'integrazione sul [sito Yammer](https://www.yammer.com/AskIPTeam) di Azure Information Protection.
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Esiste un Management Pack o un meccanismo di monitoraggio simile per il connettore RMS?
 
@@ -139,7 +139,8 @@ Per supportare questo scenario, Exchange Online deve essere abilitato per il ser
 Per altre informazioni sulle nuove funzionalità che includono il supporto di tutti gli account di posta elettronica in tutti i dispositivi, vedere il seguente post di blog: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) (Annuncio di nuove funzionalità di crittografia Office 365).
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Quali dispositivi e quali tipi di file sono supportati da Azure RMS?
-Per un elenco dei dispositivi che supportano il servizio Azure Rights Management, vedere [Dispositivi client che supportano la protezione dati di Azure Rights Management](./requirements-client-devices.md). Poiché non tutti i dispositivi supportati consentono attualmente di usare tutte le funzionalità di Rights Management, assicurarsi anche di controllare la tabella delle [applicazioni RMS](./requirements-applications.md#rms-enlightened-applications).
+
+Per un elenco dei dispositivi che supportano il servizio Azure Rights Management, vedere [Dispositivi client che supportano la protezione dati di Azure Rights Management](./requirements.md#client-devices). Poiché non tutti i dispositivi supportati sono attualmente in grado di supportare tutte le funzionalità di Rights Management, assicurarsi di controllare anche le tabelle per le [applicazioni con RMS](./requirements-applications.md).
 
 Il servizio Azure Rights Management può supportare tutti i tipi di file. Per i file di testo, immagini, Microsoft Office (Word, Excel, PowerPoint), PDF e quelli di altri tipi di applicazione, Azure Rights Management offre la protezione nativa che include crittografia e applicazione dei diritti (autorizzazioni). Per tutte le altre applicazioni e tipi di file, la protezione generica fornisce l'incapsulamento e l'autenticazione del file per verificare se un utente è autorizzato ad aprirlo.
 
