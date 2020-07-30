@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e1bdf52fd8d73231e9084d36d5d648a2e1ee88c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 01cf998fc6d4c872339d5bfa241eed4f1c9f4b6b
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048630"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298156"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -53,7 +53,7 @@ Se è stata usata la funzionalità Information Rights Management (IRM) di Exchan
 Questa procedura esegue l'installazione e la configurazione del connettore, disabilita IRM per Exchange e SharePoint e configura i server per l'uso del connettore. Infine, se in Azure Information Protection sono stati importati file di configurazione di dati di AD RMS (con estensione xml) usati per proteggere i messaggi di posta elettronica, è necessario modificare manualmente il Registro di sistema nei computer in cui viene eseguito Exchange Server per reindirizzare tutti gli URL dei domini di pubblicazione trusted al connettore RMS.
 
 > [!NOTE]
-> Prima di iniziare, verificare le versioni dei server locali supportate dal servizio Azure Rights Management in [Server locali che supportano Azure RMS](./requirements-servers.md).
+> Prima di iniziare, verificare le versioni dei server locali supportate dal servizio Azure Rights Management in [Server locali che supportano Azure RMS](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
 
 ### <a name="install-and-configure-the-rms-connector"></a>Installare e configurare il connettore RMS
 
