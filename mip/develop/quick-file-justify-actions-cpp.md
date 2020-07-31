@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
 ms.author: v-anikep
-ms.openlocfilehash: f50613340cc4c977239910d5047943d25239b1bc
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 96bd94398c2a5c0bbe2cd87c12ec8e6a0af7e18b
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403290"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135675"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API File di Microsoft Information Protection SDK - Giustificazione dell'azione per abbassare un'etichetta di riservatezza per un file (C++)
 
@@ -220,4 +220,4 @@ Compilare e testare l'applicazione client.
     Press any key to continue . . .
    ```
 
-Si noti che, nel caso in cui l'etichetta da eliminare da un file richieda una giustificazione in base ai criteri per le etichette, è necessario seguire un approccio simile per l'operazione `DeleteLabel()`. La funzione `DeleteLabel()` genera un'eccezione `mip::JustificationRequiredError`. Il flag `isDowngradeJustified` deve essere impostato su true nella gestione delle eccezioni prima di eliminare correttamente l'etichetta.
+Si noti che, nel caso in cui l'etichetta da eliminare da un file richieda una giustificazione in base ai criteri per le etichette, è necessario seguire un approccio simile per l'operazione `DeleteLabel()`. La funzione La funzione `DeleteLabel()` genera un'eccezione `mip::JustificationRequiredError`. Il flag `isDowngradeJustified` deve essere impostato su true nella gestione delle eccezioni prima di eliminare correttamente l'etichetta.

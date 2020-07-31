@@ -1,21 +1,21 @@
 ---
 title: Esercitazione - Usare le impostazioni dei criteri di Azure Information Protection per classificare i dati
 description: Esercitazione introduttiva che illustra la configurazione delle impostazioni dei criteri di Azure Information Protection per agevolare la classificazione dei documenti e dei messaggi di posta elettronica dell'organizzazione.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 07/20/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 1cffeff37cde8f3241b4f91997125efb0467fd1a
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 78132da7a22264af3412197f1bf8c42da61e8740
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047865"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927523"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -60,17 +60,17 @@ Per completare questa esercitazione, è necessario:
 
 4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     
-    - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
+    - App di Office con versione minima 1805, build 9330.2078 da [Microsoft 365 Apps for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quando all'utente viene assegnata una licenza per Azure Rights Management (chiamata anche Azure Information Protection per Office 365).
     
-    - Office 365 ProPlus.
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename).
     
-    - Office Professional Plus 2019.
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019.
     
-    - Office Professional Plus 2016.
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016.
     
-    - Office Professional Plus 2013 con Service Pack 1.
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 con Service Pack 1.
     
-    - Office Professional Plus 2010 con Service Pack 2.
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 con Service Pack 2.
 
 Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
 

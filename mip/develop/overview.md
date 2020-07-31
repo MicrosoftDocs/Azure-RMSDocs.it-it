@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 45d2e4fb96bb81d8eb7bb982502693e9d5ebf981
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 05d8c070e5dc8f8562f59ff0e3d46b6542d8d74f
+ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556062"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87255166"
 ---
 # <a name="overview"></a>Panoramica
 
@@ -22,7 +22,7 @@ Microsoft Information Protection (MIP) riunisce i servizi di classificazione, et
 - L'amministrazione unificata è disponibile per Office 365, Azure Information Protection, Windows Information Protection e ad altri servizi Microsoft. 
 - Il SDK MIP può essere usato da terze parti per integrare le applicazioni, tramite uno schema di etichettatura dei dati e un servizio di protezione standard e coerenti.
 
-* [Che cos'è il centro Conformità e sicurezza di Office 365?](https://docs.microsoft.com/office365/securitycompliance/)
+* [Che cos'è il Centro conformità e sicurezza di Office 365?](https://docs.microsoft.com/office365/securitycompliance/)
 * [Che cos'è Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 * [Come funziona la protezione in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
