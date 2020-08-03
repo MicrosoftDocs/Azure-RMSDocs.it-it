@@ -10,14 +10,10 @@
       items:
         - name: Panoramica
           href: requirements.md
-        - name: Requisiti di Azure Active Directory
+        - name: Requisiti aggiuntivi per Azure Active Directory
           href: requirements-azure-ad.md
-        - name: Supporto di dispositivi client per la protezione
-          href: requirements-client-devices.md
         - name: Supporto di applicazioni per la protezione
           href: requirements-applications.md
-        - name: Supporto di server locali per la protezione
-          href: requirements-servers.md
     - name: AIP è noto anche come ...
       href: aka.md
 - name: Guide introduttive
@@ -94,7 +90,13 @@
     - name: Pianificazione e preparativi per il servizio
       items:
         - name: Guida di orientamento per la distribuzione
-          href: deployment-roadmap.md
+          items:
+            - name: Panoramica
+              href: deployment-roadmap.md
+            - name: 'Guida di orientamento per la classificazione, l''assegnazione di etichette e la protezione'
+              href: deployment-roadmap-classify-label-protect.md
+            - name: Guida di orientamento solo per la protezione (client classico)
+              href: deployment-roadmap-protect-only.md
         - name: Pianificazione e implementazione della chiave del tenant
           items:
             - name: Tipi di chiave supportati
