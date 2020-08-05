@@ -4,7 +4,7 @@ description: Informazioni che consentono di installare e configurare il connetto
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,36 +13,40 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a9bab55999334830c94f64bc32339135db70c5a
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 0a02d5bb811bd18698a0ca4ec0a797ff4e31ffa4
+ms.sourcegitcommit: a495476a439a57cf6a4b3446575e344504b3fefb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136851"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87554943"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows Server 2012 R2, windows Server 2012*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, 2012 R2 e windows Server 2012*
 
 Usare le informazioni seguenti per installare e configurare il connettore Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 descritti nell'articolo [Distribuzione del connettore Azure Rights Management](deploy-rms-connector.md).
 
 Prima di iniziare verificare di aver riesaminato e controllato i [prerequisiti](deploy-rms-connector.md#prerequisites-for-the-rms-connector) per questa distribuzione.
 
+Assicurarsi di conoscere l'istanza corretta di Azure Sovereign cloud per consentire al connettore di completare l'installazione e la configurazione: 
+- **AzureCloud**: offerta commerciale di Azure
+- **AzureChinaCloud**: Azure gestito da 21ViaNet
+- **AzureUSGovernment**: Azure per enti pubblici (GCC High/DOD)
+- **AzureUSGovernment2**: Azure per enti pubblici 2
+- **AzureUSGovernment3**: Azure per enti pubblici 3
 
 ## <a name="installing-the-rms-connector"></a>Installazione del connettore RMS
 
 1.  Identificare i computer (almeno due) per eseguire il connettore RMS. Questi computer devono soddisfare le specifiche minime elencate nei prerequisiti.
 
     > [!NOTE]
-    > Installare un singolo connettore RMS (costituito da più server per la disponibilità elevata) per ciascun tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
+    > Installare un singolo connettore RMS (costituito da più server per la disponibilità elevata) per ogni tenant (Microsoft 365 tenant o Azure AD tenant). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
 
 2.  Scaricare i file di origine per il connettore RMS dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
     Per installare il connettore RMS, scaricare RMSConnectorSetup.exe.
 
     Inoltre:
-
-    -   Se in un secondo momento si desidera configurare il connettore da un computer a 32 bit, scaricare anche RMSConnectorAdminToolSetup_x86.exe.
 
     -   Se si desidera usare lo strumento di configurazione del server per il connettore RMS in modo da automatizzare la configurazione delle impostazioni del registro sui server locali, scaricare anche GenConnectorConfig.ps1.
 
@@ -52,20 +56,25 @@ Prima di iniziare verificare di aver riesaminato e controllato i [prerequisiti](
 
 5.  Leggere e accettare i termini del contratto di licenza del connettore RMS, quindi fare clic su **Avanti**.
 
-Per continuare, immettere un account e una password per configurare il connettore RMS.
 
 ## <a name="entering-credentials"></a>Immissione delle credenziali
-Prima di poter configurare il connettore RMS, è necessario immettere le credenziali per un account dotato di privilegi sufficienti per configurare il connettore RMS. Ad esempio, è possibile digitare <strong>admin@contoso.com</strong> e quindi specificare la password per l'account.
 
-Questo account non deve richiedere l'autenticazione a più fattori perché il programma di installazione di Microsoft Rights Management Connector non supporta l'autenticazione a più fattori. Inoltre, se si usa Azure AD accesso condizionale, non [bloccare l'autenticazione legacy](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) per questo account.
+Prima di poter configurare il connettore RMS, è innanzitutto necessario selezionare l'ambiente cloud corrispondente alla soluzione.   
+- **AzureCloud**: offerta commerciale di Azure
+- **AzureChinaCloud**: Azure gestito da 21ViaNet
+- **AzureUSGovernment**: Azure per enti pubblici (GCC High/DOD)
+- **AzureUSGovernment2**: Azure per enti pubblici 2
+- **AzureUSGovernment3**: Azure per enti pubblici 3
 
-La configurazione del connettore presenta anche alcune restrizioni relative ai caratteri per la password. Non è possibile usare una password con uno dei caratteri seguenti: e commerciale ( **&** ); parentesi uncinata aperta ( **[** ), parentesi quadra chiusa ( **]** ), virgolette semplici ( **"** ); e apostrofo ( **'** ). Se la password include uno di questi caratteri, l'autenticazione non riesce per la configurazione del connettore RMS e viene visualizzato il messaggio di errore la **combinazione di nome utente e password non è corretta**, anche se è possibile accedere con questo account e la password per altri scenari. Se questo scenario si applica alla password, usare un account diverso con una password che non include uno di questi caratteri speciali oppure reimpostare la password in modo che non includa questi caratteri speciali.
+:::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="Selezionare l'ambiente Azure corretto per autenticare il nuovo connettore AAD RM":::
 
-Inoltre, se sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), verificare che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, viene visualizzato il messaggio di errore: **tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Verificare che il servizio Microsoft Rights Management sia abilitato per l'organizzazione.**
+Dopo avere selezionato l'ambiente cloud, immettere il **nome utente** e la **password**. Assicurarsi di immettere le credenziali per un account che dispone di privilegi sufficienti per configurare il connettore RMS. Ad esempio, è possibile digitare <strong>admin@contoso.com</strong> e quindi specificare la password per l'account.
+
+Inoltre, se sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), verificare che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, verrà visualizzato il messaggio di errore: **tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Verificare che il servizio Microsoft Rights Management sia abilitato per l'organizzazione.**
 
 È possibile usare un account con uno dei privilegi seguenti:
 
--   **Amministratore globale per il tenant**: account amministratore globale per il tenant di Office 365 o di Azure AD.
+-   **Amministratore globale per il tenant**: un account amministratore globale per il tenant di Microsoft 365 o Azure ad tenant.
 
 -   **Amministratore globale di Azure Rights Management**: account in Azure Active Directory a cui è stato assegnato il ruolo di amministratore globale di Azure RMS.
 
@@ -81,7 +90,7 @@ Inoltre, se sono stati implementati i [controlli di onboarding](activate-service
     >     Avviare Windows PowerShell con il comando **Esegui come amministratore** e connettersi al servizio di protezione usando il comando [Connect-AipService](/powershell/module/aipservice/connect-aipservice) :
     >
     >     ```
-    >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     Connect-AipService                   //provide Microsoft 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
     > 2.  Eseguire quindi il comando [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) usando solo uno dei parametri seguenti:
     >
@@ -102,7 +111,7 @@ Inoltre, se sono stati implementati i [controlli di onboarding](activate-service
 
 Durante il processo di installazione del connettore RMS, viene eseguita la convalida e l'installazione di tutti i prerequisiti software, l'installazione di Internet Information Services (IIS) se non già presente, e l'installazione e la configurazione del software del connettore. Viene anche preparata la configurazione di Azure RMS attraverso la creazione degli elementi seguenti:
 
--   Una tabella vuota relativa ai server autorizzati a usare il connettore per comunicare con Azure RMS. I server potranno essere aggiunti a questa tabella in un secondo momento.
+-   Una tabella vuota relativa ai server autorizzati a usare il connettore per comunicare con Azure RMS. Aggiungere i server a questa tabella in un secondo momento.
 
 -   Un set di token di sicurezza per il connettore che autorizzano operazioni con Azure RMS. Questi token vengono scaricati da Azure RMS e installati nel computer locale nel registro di sistema. Sono protetti tramite l'interfaccia di programmazione dell'applicazione di protezione dei dati (DPAPI) e le credenziali dell'account di sistema locale.
 
@@ -225,7 +234,7 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 ## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>Installazione dello strumento di amministrazione del connettore RMS su computer amministrativi
 È possibile eseguire lo strumento di amministrazione del connettore RMS da un computer in cui è installato il connettore se il computer soddisfa i requisiti seguenti:
 
--   Un computer fisico o virtuale che esegue Windows Server 2012 o Windows Server 2012 R2 (tutte le edizioni), Windows 8.1, Windows 8.
+-   Un computer fisico o virtuale che esegue Windows Server 2019, 2016, 2012 o Windows Server 2012 R2 (tutte le edizioni), Windows 10, Windows 8.1, Windows 8.
 
 -   Almeno 1 GB di RAM.
 
@@ -236,8 +245,6 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 -   Accesso a Internet tramite un firewall o un proxy Web.
 
 Per installare lo strumento di amministrazione del connettore RMS, eseguire i file seguenti:
-
--   Per un computer a 32 bit: RMSConnectorAdminToolSetup_x86.exe
 
 -   Per un computer a 64 bit: RMSConnectorSetup.exe
 
