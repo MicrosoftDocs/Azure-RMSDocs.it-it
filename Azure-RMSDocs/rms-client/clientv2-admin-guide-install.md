@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ebc917204844e893a4ff27659e29fa29aa3638c2
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 010471368d219cc2ba45d24744a17c09ca83b85d
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298054"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802318"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -61,16 +61,16 @@ Per le versioni di Office 2013 e successive, è consigliabile configurare i crit
     |PowerPoint     |   `MSIP.PowerPointAddin`      |
     | | | 
 
-## <a name="applications"></a>APPLICAZIONI
+## <a name="applications"></a>Applicazioni
 
 Il client di assegnazione di etichette unificato Azure Information Protection può etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office Word, Excel, PowerPoint e Outlook delle edizioni di Office seguenti:
 
-- App di Office versione minima 1805, Build 9330,2078 from [Microsoft 365 app for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365)
-- [App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
-- [App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
-- [Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 con Service Pack 1
-- [Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 con Service Pack 2
+- App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365)
+- Office 365 ProPlus
+- Office Professional Plus 2019
+- Office Professional Plus 2016
+- Office Professional Plus 2013 con Service Pack 1
+- Office Professional Plus 2010 con Service Pack 2
 
 Le altre edizioni di Office, ad esempio **standard**, non possono proteggere documenti e messaggi di posta elettronica utilizzando un servizio Rights Management. Per queste edizioni, Azure Information Protection è supportato solo per l' **etichettatura** . Di conseguenza, le etichette che applicano la protezione non vengono visualizzate agli utenti sul pulsante Azure Information Protection sensibilità o sulla barra.
 
@@ -185,7 +185,7 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
 
 1. Per ogni computer che esegue il file con estensione msi è necessario verificare che siano soddisfatte le seguenti dipendenze software. Ad esempio, creare un pacchetto con le dipendenze e la versione MSI del client oppure distribuire solo ai computer che soddisfano queste dipendenze:
     
-    |Versione di Office|Sistema operativo|Software|Azione|
+    |Versione di Office|Sistema operativo|Software|Action|
     |--------------------|--------------|----------------|---------------------|
     |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installazione|
     |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installazione|

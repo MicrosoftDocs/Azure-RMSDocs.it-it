@@ -4,7 +4,7 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 833659878def719263d0410f086eb3445a6531d1
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: b7dd617a61071542196828a4701ab0c1db8336ee
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927421"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802284"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -82,7 +82,7 @@ Se si sta usando il servizio Azure Rights Management e il client Azure Informati
 > [!TIP]
 > Per trovare indicazioni e istruzioni specifiche dell'applicazione per adottare la protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.
 
-#### <a name="to-protect-a-document-in-wordfrom-microsoft-365-apps-for-enterprise"></a>Per proteggere un documento in Word da app Microsoft 365 per Enterprise
+#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Per proteggere un documento in Word da Office 365 ProPlus
 
 1.  Creare un documento in Microsoft Word.
 
@@ -101,7 +101,7 @@ Un diritto d'uso di sola visualizzazione, ad esempio, non consente all'utente di
 
 I diritti d'uso vengono visualizzati nella parte superiore del documento in un banner di limitazioni, in cui possono essere visualizzate le autorizzazioni applicate al documento o può essere presente un collegamento per visualizzarle.
 
-#### <a name="to-protect-an-email-message-using-outlookfrom-microsoft-365-apps-for-enterprise-connecting-to-exchange-online"></a>Per proteggere un messaggio di posta elettronica usando Outlook da app Microsoft 365 per Enterprise, connettersi a Exchange Online
+#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Per proteggere un messaggio di posta elettronica in Outlook da Office 365 ProPlus, con connessione a Exchange Online
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 

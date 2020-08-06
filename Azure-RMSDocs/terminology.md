@@ -4,7 +4,7 @@ description: Confuso da una parola, una frase o un acronimo correlato a Microsof
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0dafc8df5e9c48517b13c9d0204c8d4b159783a3
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 352e41b1ca511e3ef0487eb680a331339ce457dd
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927353"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802199"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -136,7 +136,7 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 |**Microsoft Information Protection**| Talvolta abbreviato in *MIP*.<br /><br /> Framework per prodotti e funzionalità integrate che usano lo stesso archivio di etichette ("etichette unificate") e consentono di proteggere le informazioni riservate dell'organizzazione.|
 |**MIP**| Vedere *Information Protection Microsoft*|
 |**MSDRM**|Termine usato talvolta in riferimento al client RMS 1.0, sostituito dal client più recente, MSIPC. </br></br>Questo client meno recente supporta applicazioni sviluppate con RMS SDK 1.0 e supporta Office 2010 e 2007, Exchange 2010 e 2013 nonché SharePoint 2007 e 2010.|
-|**MSIPC**|A volte usato in riferimento al client RMS 2.0, che ha sostituito il meno recente client RMS, MSDRM. </br></br>Questo client più recente supporta le applicazioni sviluppate con il RMS SDK 2,0 e supporta le app Microsoft 365 per Enterprise, Office 2019, Office 2016, Office 2013, SharePoint 2013 e il client di Azure Information Protection.|
+|**MSIPC**|A volte usato in riferimento al client RMS 2.0, che ha sostituito il meno recente client RMS, MSDRM. </br></br>Questo client più recente supporta le applicazioni sviluppate con RMS SDK 2.0 e supporta Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 e il client Azure Information Protection.|
 | | |
 
 ### <a name="n"></a>N

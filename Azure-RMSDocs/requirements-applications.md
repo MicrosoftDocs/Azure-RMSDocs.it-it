@@ -4,7 +4,7 @@ description: Identificare le applicazioni e le soluzioni con supporto nativo per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ed56f635c4210c9989fb0e02209f4e3c29129a3
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 37cb3b1f3c3eb60459cabe813f0cb00fb69b7d5b
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298173"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802165"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -36,56 +36,56 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="windows-rms-enlightened-applications"></a>Applicazioni abilitate per Windows RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [App di Office 365](#office-365-app-support) <br />- Office 2010 <br />-Office 2013<br />- Office 2016 <br />-Office 2019 <br />- [Office per il Web (visualizzazione di documenti protetti)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
-|[**E-mail**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook da Office da app Microsoft 365 per Enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
+|[**Posta elettronica**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook da Office 365 ProPlus<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
 |[**Altri tipi di file**](#supported-text-and-image-file-types)    |  -Visio dalle app di Office 365, Office 2019 e Office 2016: **. vsdm,** **. vsdx,** **. vssm**, **. vstm**, **. vssx**,. **vstx** <br />-Client Azure Information Protection per Windows: testo, immagini, **Pfile** <br />-Plug-in RMS SealPath per AutoCAD: **. dwg**       |
 | | |
 
 ## <a name="macos-rms-enlightened-applications"></a>applicazioni abilitate per macOS RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -App Office 365<br />-Office 2019 per Mac<br />-Office 2016 per Mac<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 per Mac<br />-Outlook 2016 per Mac<br />- [Web browser](#web-browser-support)     |
+|[**Posta elettronica**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 per Mac<br />-Outlook 2016 per Mac<br />- [Web browser](#web-browser-support)     |
 |[**Altri tipi di file**](#supported-text-and-image-file-types)    | App RMS sharing (visualizzazione di testo e immagini protetti e di file protetti in modo generico)   |
 | | |
 
 ## <a name="android-rms-enlightened-applications"></a>Applicazioni abilitate per Android RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |-App GigaTrust per Android<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />-Office Mobile (a meno che non si utilizzino etichette di riservatezza, limitate alla visualizzazione e alla modifica di documenti protetti) <br />- [Web browser](#web-browser-support)      |
-|[**E-mail**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry <br />- [App GigaTrust per Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung email (S3 e versioni successive)](#email-clients-using-exchange-activesync-irm)<br />-Classificazione TITUS per dispositivi mobili <br /><br />- [Web browser](#web-browser-support)       |
+|[**Posta elettronica**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry <br />- [App GigaTrust per Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung email (S3 e versioni successive)](#email-clients-using-exchange-activesync-irm)<br />-Classificazione TITUS per dispositivi mobili <br /><br />- [Web browser](#web-browser-support)       |
 |[**Altri tipi di file**](#supported-text-and-image-file-types)    |  App Azure Information Protection (visualizzazione di testo e immagini protetti)  |
 | | |
 
 
 ## <a name="ios-rms-enlightened-applications"></a>applicazioni abilitate per iOS RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -GigaTrust<br />-Office Mobile <br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />-TITUS docs<br />- [Web browser](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry<br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per iPad e iPhone](#email-clients-using-exchange-activesync-irm)<br />-TITUS mail <br />- [Web browser](#web-browser-support)     |
+|[**Posta elettronica**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry<br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per iPad e iPhone](#email-clients-using-exchange-activesync-irm)<br />-TITUS mail <br />- [Web browser](#web-browser-support)     |
 |[**Altri tipi di file**](#supported-text-and-image-file-types)     | -Azure Information Protection app (visualizzazione della protezione di testo e immagini)<br />-Tito docs: **Pfile**  |
 | | |
 
 ## <a name="windows-10-mobile-rms-enlightened-applications"></a>Applicazioni abilitate per Windows 10 Mobile RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | -App Office per dispositivi mobili (visualizzazione di documenti protetti con Azure RMS) <br />- [Web browser](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)    |  -Citrix WorxMail <br />-Posta di Outlook (visualizzazione di messaggi di posta elettronica protetti) <br />- [Web browser](#web-browser-support)     |
+|[**Posta elettronica**](#viewing-protected-content-in-email-clients)    |  -Citrix WorxMail <br />-Posta di Outlook (visualizzazione di messaggi di posta elettronica protetti) <br />- [Web browser](#web-browser-support)     |
 |[**Altri tipi di file**](#supported-text-and-image-file-types)    | Non supportate   |
 | | |
 
 ## <a name="blackberry-10-rms-enlightened-applications"></a>Applicazioni abilitate per RMS BlackBerry 10
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Web browser](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)   | - [Posta elettronica BlackBerry](#email-clients-using-exchange-activesync-irm) <br />- [Web browser](#web-browser-support)      |
+|[**Posta elettronica**](#viewing-protected-content-in-email-clients)   | - [Posta elettronica BlackBerry](#email-clients-using-exchange-activesync-irm) <br />- [Web browser](#web-browser-support)      |
 |[**Altri tipi di file**](#supported-text-and-image-file-types)    | Non supportate   |
 | | |
 
@@ -123,8 +123,8 @@ Per ulteriori informazioni, vedere [tipi di file supportati](./rms-client/client
 ### <a name="office-365-app-support"></a>Supporto delle app di Office 365
 
 Include: 
-- App di Office versione minima 1805, Build 9330,2078 da [app Microsoft 365 for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). Supportato solo quando all'utente viene assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365).
-- [Microsoft 365 app per le aziende](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename).
+- App di Office versione minima 1805, Build 9330,2078 da Office 365 business o Microsoft 365 Business. Supportato solo quando all'utente viene assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365).
+- App Office 365 ProPlus.
 
 ### <a name="viewing-protected-documents-in-office-for-the-web"></a>Visualizzazione di documenti protetti in Office per il Web
 
@@ -170,16 +170,25 @@ Vedere anche: [Descrizione del servizio per le applicazioni di Office](https://t
 
 Le famiglie di prodotti client di Office seguenti supportano la protezione dei file e dei messaggi di posta elettronica nei computer Windows tramite il servizio Azure Rights Management:
 
-|Versione di Office  |Dettagli sul supporto  |
-|---------|---------|
-|[**App Microsoft 365 per le aziende**](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)     |  App di Office versione minima 1805, Build 9330,2078, quando all'utente viene assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365)       |
-|[**App Microsoft 365 per Enterprise**](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)     | Le edizioni di Office seguenti sono incluse con la maggior parte, ma non tutte, le sottoscrizioni di Office 365 che includono la protezione dei dati da Azure Information Protection. </br>Controllare le informazioni sulla sottoscrizione per verificare se Microsoft 365 app per Enterprise è inclusa. Queste informazioni si possono trovare anche nel [foglio dati di Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). </br></br>-Microsoft 365 app per Enterprise 2019 </br>-Microsoft 365 app per Enterprise 2016 </br>-Microsoft 365 app per Enterprise 2013 </br>-Microsoft 365 app per Enterprise 2010 con Service Pack 2       |
+- **App di Office versione minima 1805, build 9330,2078 da office 365 business o Microsoft 365 business** quando all'utente viene assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365)
+
+- **Office 365 ProPlus**
+
+    Queste edizioni di Office sono incluse nella maggior parte, ma non in tutte le sottoscrizione di Office 365 che includono la protezione dati di Azure Information Protection. Controllare le informazioni sulla sottoscrizione per verificare se Office 365 ProPlus è incluso. Queste informazioni si possono trovare anche nel [foglio dati di Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+
+- **Office Professional Plus 2019**
+
+- **Office Professional Plus 2016**
+
+- **Office Professional Plus 2013**
+
+- **Office Professional Plus 2010 con Service Pack 2**
 
 Tutte le edizioni di Office, ad eccezione di Office 2007, possono utilizzare il contenuto protetto.
 
-#### <a name="azure-rights-management-service-with-microsoft-365-apps-for-enterprise-2010"></a>Servizio Rights Management di Azure con app Microsoft 365 per Enterprise 2010
+#### <a name="azure-rights-management-service-with-office-professional-plus-2010-and-service-pack-2-or-office-professional-2010-with-service-pack-2"></a>Servizio Rights Management di Azure con Office Professional Plus 2010 e Service Pack 2 o Office Professional 2010 con Service Pack 2
 
-Quando si usa il servizio Rights Management di Azure con [Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 e Service Pack 2 o Office Professional 2010 con Service Pack 2, è necessario avere anche il client AIP per Windows.
+Quando si usa il servizio Rights Management di Azure con Office Professional Plus 2010 e Service Pack 2 o Office Professional 2010 con Service Pack 2, è necessario avere anche il client AIP per Windows.
 
 Questa configurazione è inoltre:
 
@@ -191,7 +200,7 @@ Questa configurazione è inoltre:
 
 Le famiglie di prodotti client di Office seguenti supportano la protezione dei file e dei messaggi di posta elettronica in macOS tramite Azure RMS:
 
-- [App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- Office 365 ProPlus
 - Office Standard 2019 per Mac
 - Office Standard 2016 per Mac
 
@@ -227,7 +236,7 @@ Scaricare l'app pertinente dalla [pagina Microsoft Azure Information Protection]
 > 
 ## <a name="rights-management-sharing-app"></a>Applicazione di condivisione Rights Management
 
-Per i computer Mac, l'app di condivisione Rights Management offre un visualizzatore per i file PDF protetti **(con estensione Ppdf),** le immagini di testo protette e i file protetti in modo generico. Consente anche di proteggere i file di immagine, ma non altri file. Per proteggere i file di Office in questi computer, usare Office per Mac o [app Microsoft 365 per le aziende](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
+Per i computer Mac, l'app di condivisione Rights Management offre un visualizzatore per i file PDF protetti **(con estensione Ppdf),** le immagini di testo protette e i file protetti in modo generico. Consente anche di proteggere i file di immagine, ma non altri file. Per proteggere i file di Office in questi computer, usare Office per Mac oppure Office 365 ProPlus. 
 
 Per ulteriori informazioni, vedere le [domande frequenti sull'applicazione Microsoft Rights Management sharing per piattaforme mobili](https://technet.microsoft.com/dn451248)
 
