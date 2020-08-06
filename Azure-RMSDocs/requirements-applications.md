@@ -36,7 +36,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="windows-rms-enlightened-applications"></a>Applicazioni abilitate per Windows RMS
 
-|Type  |Applicazioni supportate   |
+|Tipo  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [App di Office 365](#office-365-app-support) <br />- Office 2010 <br />-Office 2013<br />- Office 2016 <br />-Office 2019 <br />- [Office per il Web (visualizzazione di documenti protetti)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook da Office 365 ProPlus<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
@@ -45,7 +45,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="macos-rms-enlightened-applications"></a>applicazioni abilitate per macOS RMS
 
-|Type  |Applicazioni supportate   |
+|Tipo  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -App Office 365<br />-Office 2019 per Mac<br />-Office 2016 per Mac<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 per Mac<br />-Outlook 2016 per Mac<br />- [Web browser](#web-browser-support)     |
@@ -54,7 +54,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="android-rms-enlightened-applications"></a>Applicazioni abilitate per Android RMS
 
-|Type  |Applicazioni supportate   |
+|Tipo  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |-App GigaTrust per Android<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />-Office Mobile (a meno che non si utilizzino etichette di riservatezza, limitate alla visualizzazione e alla modifica di documenti protetti) <br />- [Web browser](#web-browser-support)      |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry <br />- [App GigaTrust per Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung email (S3 e versioni successive)](#email-clients-using-exchange-activesync-irm)<br />-Classificazione TITUS per dispositivi mobili <br /><br />- [Web browser](#web-browser-support)       |
@@ -64,7 +64,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="ios-rms-enlightened-applications"></a>applicazioni abilitate per iOS RMS
 
-|Type  |Applicazioni supportate   |
+|Tipo  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -GigaTrust<br />-Office Mobile <br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />-TITUS docs<br />- [Web browser](#web-browser-support)    |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry<br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per iPad e iPhone](#email-clients-using-exchange-activesync-irm)<br />-TITUS mail <br />- [Web browser](#web-browser-support)     |
@@ -73,7 +73,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="windows-10-mobile-rms-enlightened-applications"></a>Applicazioni abilitate per Windows 10 Mobile RMS
 
-|Type  |Applicazioni supportate   |
+|Tipo  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | -App Office per dispositivi mobili (visualizzazione di documenti protetti con Azure RMS) <br />- [Web browser](#web-browser-support)    |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)    |  -Citrix WorxMail <br />-Posta di Outlook (visualizzazione di messaggi di posta elettronica protetti) <br />- [Web browser](#web-browser-support)     |
@@ -82,7 +82,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="blackberry-10-rms-enlightened-applications"></a>Applicazioni abilitate per RMS BlackBerry 10
 
-|Type  |Applicazioni supportate   |
+|Tipo  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Web browser](#web-browser-support)    |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)   | - [Posta elettronica BlackBerry](#email-clients-using-exchange-activesync-irm) <br />- [Web browser](#web-browser-support)      |
