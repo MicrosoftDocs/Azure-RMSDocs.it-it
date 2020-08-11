@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
+ms.date: 08/10/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
-ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
+ms.openlocfilehash: 7c55faf0138e007ed1a8877ebb60cf01551c4dd3
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87378285"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073738"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti-Azure Information Protection
 
@@ -84,10 +84,10 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problemi noti di AIP nelle applicazioni di Office
 
-|Feature  |Problemi noti  |
+|Funzionalità  |Problemi noti  |
 |---------|---------|
 |**Più versioni di Office**    | I client Azure Information Protection, incluse le etichette classiche e unificate, non supportano più versioni di Office nello stesso computer o scambiano gli account utente in Office.       |
-|**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office, la barra di Azure Information Protection potrebbe sembrare fluttuante al centro della schermata di Office, in una o in entrambe le visualizzazioni. </br></br>Per assicurarsi che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e **in generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore.**    |
+|**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office: </br></br>-È possibile che si verifichino problemi di prestazioni nelle app di Office.</br>-La barra di Azure Information Protection può sembrare mobile al centro della schermata di Office, in una o in entrambe le visualizzazioni </br></br>Per garantire prestazioni coerenti e che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e in **generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore.**    |
 |**Supporto di IRM in Office 2016**| L'impostazione del registro di sistema [DRMEncryptProperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , che controlla la crittografia dei metadati in Office 2016, non è supportata per le etichette Azure Information Protection.|
 |**Contrassegni di contenuto in Word**    | Azure Information Protection i [Contrassegni](configure-policy-markings.md) di contenuto possono essere nascosti nei piè di pagina di Microsoft Word, quando il piè di pagina contiene anche una tabella. Per ulteriori informazioni, vedere [quando vengono applicati i contrassegni visivi](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**File allegati ai messaggi di posta elettronica** |A causa di una limitazione negli aggiornamenti recenti di Windows, quando [Microsoft Outlook è protetto da Azure Rights Management](office-apps-services-support.md), i file allegati ai messaggi di posta elettronica possono essere bloccati dopo l'apertura del file. |
@@ -120,7 +120,7 @@ I criteri di pubblicazione possono richiedere fino a 24 ore.
     - [**Client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md)
 
 
-## <a name="more-information"></a>Ulteriori informazioni
+## <a name="more-information"></a>Altre informazioni
 
 Gli articoli aggiuntivi seguenti possono essere utili per rispondere alle domande sui problemi noti in Azure Information Protection:
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cef1f6f80865f813e613e717ea301176f8fcc317
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 38489d1d1ff7183e5e7a3963b401cdaecf2313dc
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049532"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073653"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner unificato per l'assegnazione di etichette
 
@@ -91,7 +91,7 @@ Per archiviare i dati di configurazione dello scanner, usare un'applicazione SQL
 
 - **Un account con ruolo sysadmin per installare lo scanner.**
 
-    In questo modo, il processo di installazione crea automaticamente il database di configurazione dello scanner e concede il ruolo **db_owner** necessario all'account del servizio che esegue lo scanner.
+    Il ruolo sysadmin consente al processo di installazione di creare automaticamente il database di configurazione dello scanner e concedere al ruolo **db_owner** necessario l'account del servizio che esegue lo scanner.
 
     Se non è possibile concedere il ruolo sysadmin o i criteri dell'organizzazione richiedono che i database vengano creati e configurati manualmente, vedere [distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).
 
@@ -169,12 +169,16 @@ Per altre informazioni, vedere [tipi di file supportati dal client di Azure Info
 
 ## <a name="file-path-requirements"></a>Requisiti del percorso del file
 
-Per analizzare i file, i percorsi dei file devono avere un massimo di 260 caratteri, a meno che lo scanner non sia installato in Windows 2016 e che il computer sia configurato per supportare percorsi lunghi
+Per impostazione predefinita, per analizzare i file, i percorsi dei file devono avere un massimo di 260 caratteri.
 
-Windows 10 e Windows Server 2016 supportano lunghezze di percorso maggiori di 260 caratteri con le seguenti impostazioni di [criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): Configurazione computer **criteri computer locale**  >  **Computer Configuration**  >  **modelli amministrativi**  >  **tutte le impostazioni**  >  **Abilita percorsi lunghi Win32**
+Per analizzare i file con percorsi di file di più di 260 caratteri, installare lo scanner in un computer con una delle seguenti versioni di Windows e configurare il computer in base alle esigenze:
 
-Per altre informazioni sul supporto dei percorsi di file lunghi, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) nella documentazione per sviluppatori di Windows 10.
-
+|Versione di Windows  |Descrizione  |
+|---------|---------|
+|**Windows 2016 o versione successiva**     |   Configurare il computer per supportare percorsi lunghi      |
+|**Windows 10 o Windows Server 2016**     | Definire la seguente [impostazione di criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): Configurazione computer **criteri computer locale**  >  **Computer Configuration**  >  **modelli amministrativi**  >  **tutte le impostazioni**  >  **Abilita percorsi lunghi Win32**.    </br></br>Per ulteriori informazioni sul supporto dei percorsi di file lunghi in queste versioni, vedere la sezione [limitazione della lunghezza massima del percorso](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dalla documentazione per gli sviluppatori di Windows 10.    |
+|**Windows 10, versione 1607 o successiva**     |  Acconsentire esplicitamente alla funzionalità di **MAX_PATH** aggiornata. Per ulteriori informazioni, vedere [Enable Long paths in Windows 10 versioni 1607 e versioni successive](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
+| | |
 ## <a name="usage-statistics-requirements"></a>Requisiti statistici di utilizzo
 
 Disabilitare le statistiche di utilizzo usando uno dei metodi seguenti:
@@ -251,7 +255,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 #### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>Creare un utente e concedere i diritti di db_owner manualmente
 
-Per creare un utente e concedere diritti di db_owner per il database, rivolgersi al sysadmin per eseguire le operazioni seguenti:
+Per creare un utente e concedere diritti di db_owner per il database, rivolgersi al sysadmin per eseguire i passaggi seguenti:
 
 1. Creare un database per lo scanner:
 
