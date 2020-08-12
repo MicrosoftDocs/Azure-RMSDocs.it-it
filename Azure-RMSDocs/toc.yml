@@ -318,11 +318,7 @@
                     - name: Attività eseguite in precedenza con l'applicazione RMS sharing
                       href: ./rms-client/upgrade-client-app.md
         - name: App Azure Information Protection per iOS e Android
-          items:
-            - name: Panoramica
-              href: ./rms-client/mobile-app-faq.md
-            - name: Iniziare a usare le app per dispositivi mobili AIP
-              href: ./rms-client/mobile-app-get-started.md
+          href: ./rms-client/mobile-app-faq.md
         - name: Lettori PDF protetti
           href: ./rms-client/protected-pdf-readers.md
         - name: Note sulla distribuzione del client RMS
