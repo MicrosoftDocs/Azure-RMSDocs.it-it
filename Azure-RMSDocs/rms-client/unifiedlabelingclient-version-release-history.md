@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad63ebcb4ab5be291d669ac6939279740be6efc1
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: a02fabd167fdbe7f0e2cef826c68920c164a20e4
+ms.sourcegitcommit: c0cd6591a44b213a68a6d1bb47acbb344bb94783
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868791"
+ms.lasthandoff: 08/16/2020
+ms.locfileid: "88256860"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -66,6 +66,8 @@ Il client sta sostituendo il client di Azure Information Protection (classico). 
 ## <a name="version-27990"></a>Versione 2.7.99.0
 
 Scanner unificato per l'assegnazione di etichette e versione client 2.7.99.0
+
+**Rilasciato** 07/20/2020
 
 **Correzioni e miglioramenti:**
 
