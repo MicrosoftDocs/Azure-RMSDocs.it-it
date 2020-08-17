@@ -1,9 +1,9 @@
 ---
 title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client di Azure Information Protection (versione classica), è necessario configurare i criteri di Azure Information Protection.
-author: mlottner
-ms.author: mlottner
-ms.date: 1/06/2020
+author: batamig
+ms.author: bagol
+ms.date: 08/17/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f1c423aef10c23d84b6f8fcd2eac19872fdaa35b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264328"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -32,7 +32,7 @@ ms.locfileid: "86047950"
 > 
 > Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
 
-Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=53018).
+Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il client di Azure Information Protection.
 
 I criteri contengono etichette e impostazioni:
 

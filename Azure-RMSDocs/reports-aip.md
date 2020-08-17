@@ -1,9 +1,9 @@
 ---
 title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
-author: mlottner
-ms.author: mlottner
-ms.date: 05/05/2020
+author: batamig
+ms.author: bagol
+ms.date: 08/17/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 824e246a0e979a478dbd135e8497434b0c2b6762
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: ecc0a78a942dc4e0c6b1dc89b3d2d2ec57c87f6e
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264379"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
@@ -154,7 +154,7 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).|
+|Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare il client di etichettatura unificata dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Per distribuire il client classico AIP, aprire un ticket di supporto per ottenere l'accesso al download.|
 |Per informazioni sulla creazione di report da archivi dati basati sul cloud: <br /><br />-Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Per informazioni sulla creazione di report da archivi dati locali: <br /><br />-Azure Information Protection scanner |Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). |
 |Per informazioni sulla creazione di report da computer Windows 10:  <br /><br />-Compilazione minima di 1809 con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|È necessario abilitare la funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center. Per altre informazioni, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
@@ -171,7 +171,7 @@ Dettagli:
     
     - Per creare l'area di lavoro di Log Analytics o per creare query personalizzate:
     
-        - **Amministratore Azure Information Protection**
+        - **Amministratore di Azure Information Protection**
         - **Amministratore della sicurezza**
         - **Amministratore conformità**
         - **Amministratore dati di conformità**
@@ -179,8 +179,8 @@ Dettagli:
     
     - Dopo aver creato l'area di lavoro, è possibile usare i ruoli seguenti con un minor numero di autorizzazioni per visualizzare i dati raccolti:
     
-        - **Lettore di sicurezza**
-        - **Lettore globale**
+        - **Ruolo con autorizzazioni di lettura per la sicurezza**
+        - **Ruolo con autorizzazioni di lettura globali**
 
 2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
     
@@ -222,7 +222,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
 1. Se non già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com) con un account che dispone delle [autorizzazioni necessarie per le analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Quindi passare al riquadro **Azure Information Protection**. 
     
-    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
 2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
 
@@ -296,7 +296,7 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 |Piattaforma|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
 |ApplicationName|Nome descrittivo dell'applicazione|
 |AIPVersion|Versione del client di Azure Information Protection che ha eseguito l'azione di controllo |
-|TenantId|ID del tenant di Azure AD |
+|TenantId|ID tenant di Azure AD |
 |AzureApplicationId|ID applicazione registrato Azure AD (GUID)|
 |ProcessName|Processo che ospita MIP SDK|
 |LabelId|GUID etichetta o null|

@@ -1,24 +1,24 @@
 ---
 title: Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 description: Istruzioni e informazioni per gli amministratori in una rete aziendale che sono responsabili della distribuzione del client Azure Information Protection Unified Labeling per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcd773904dc9570715313a856d512c0bce54811c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 62d1b496df1eb773fdb59b8b4e1dc8c39dd29ca4
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264311"
 ---
-# <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
+# <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Client di etichettatura unificata di Azure Information Protection: guida per gli amministratori
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
@@ -271,7 +271,7 @@ Per disinstallare il client è possibile usare una delle opzioni seguenti:
 
 - Eseguire nuovamente il file eseguibile (ad esempio, **AzInfoProtection_UL.exe**) e nella pagina **Modifica installazione** fare clic su **Disinstalla**. 
 
-- Eseguire l'eseguibile con **/uninstall**. Ad esempio: `AzInfoProtection.exe /uninstall`
+- Eseguire l'eseguibile con **/uninstall**. Ad esempio: `AzInfoProtection_UL.exe /uninstall`
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per installare il client, vedere [Install the Azure Information Protection Unified Labeling client for users](clientv2-admin-guide-install.md).

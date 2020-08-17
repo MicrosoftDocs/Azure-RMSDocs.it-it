@@ -1,10 +1,10 @@
 ---
 title: Guida dell'amministratore del client Azure Information Protection
 description: Istruzioni e informazioni per gli amministratori in una rete aziendale che sono responsabili della distribuzione del client Azure Information Protection per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a913dfbd6e9e992ee90179a59f7351345d1476e1
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: c5a7a774e06f53793151d8de02380b23b0083c4f
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264396"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -28,6 +28,8 @@ ms.locfileid: "86048918"
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>
+> **Per distribuire il client AIP classico,** aprire un ticket di supporto per ottenere l'accesso al download.
 
 Usare le informazioni di questa guida se si è responsabili del client Azure Information Protection in una rete aziendale o se sono necessarie maggiori informazioni rispetto a quelle disponibili nella [Guida per l'utente del client Azure Information Protection](client-user-guide.md). 
 
@@ -187,7 +189,7 @@ Il team di Azure Information Protection aggiorna regolarmente il client Azure In
 
 Se si usa Windows Update, il client Azure Information Protection aggiorna automaticamente la versione del client disponibile a livello generale, indipendentemente dal modo in cui è stato installato il client. Le nuove versioni del client vengono pubblicate nel catalogo alcune settimane dopo il rilascio.
 
-In alternativa, è possibile aggiornare manualmente il client scaricando la nuova versione dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Installare quindi la nuova versione per aggiornare il client. È necessario usare questo metodo per aggiornare le versioni di anteprima.
+In alternativa, è possibile aggiornare manualmente il client con un'installazione della versione più recente. <!--by downloading the new release from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Then install the new version to upgrade the client. -->È necessario usare questo metodo per aggiornare le versioni di anteprima.
 
 Quando si esegue l'aggiornamento manuale, disinstallare prima la versione precedente solo se si sta modificando il metodo di installazione, ad esempio se si passa dalla versione eseguibile (EXE) del client alla versione di Windows Installer (MSI) del client, oppure se è necessario installare una versione precedente del client, ad esempio se è stata installata la versione di anteprima corrente per i test e ora è necessario tornare alla versione disponibile a livello generale corrente.
 
@@ -216,9 +218,9 @@ Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabi
 
 2. Nel computer dello scanner arrestare il servizio dello scanner **Azure Information Protection Scanner**.
 
-3. Aggiornare il client di Azure Information Protection installando la versione di disponibilità generale corrente dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
+3. Aggiornare il client di Azure Information Protection installando la versione di disponibilità generale corrente (GA). <!-- from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).-->
 
-4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
+4. In una sessione di PowerShell eseguire il comando **Update-AIPScanner** con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
 
 5. Solo se lo scanner è in esecuzione in un computer disconnesso: ora eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
 
@@ -251,7 +253,7 @@ Se si vuole spostare il database di configurazione dello scanner per la versione
 
 3. Installare lo scanner usando [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specificando la nuova istanza di SQL Server e il nome del profilo.
 
-4. Facoltativo: se non si vuole che lo scanner esegua la ripetizione dell'analisi di tutti i file, esportare la tabella ScannerFiles e importarla nel nuovo database.
+4. **Facoltativo:** Se non si desidera che lo scanner esegua la ripetizione dell'analisi di tutti i file, esportare la tabella ScannerFiles e importarla nel nuovo database.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Disinstallazione del client Azure Information Protection
 
