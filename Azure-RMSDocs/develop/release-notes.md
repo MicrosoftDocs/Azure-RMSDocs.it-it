@@ -1,6 +1,6 @@
 ---
-title: Note Rrelease per la Rights Management Services SDK v4. x
-description: Descrive importanti modifiche e funzionalità di questa versione e di quelle precedenti.
+title: Note sulla versione per il Rights Management Services SDK v4. x
+description: Scopri le novità e le note sulla versione per Microsoft Rights Management Service SDK v4. x luglio 2017 e versioni precedenti.
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5d4aa9206865493c5fd2c4b2abdb96c3f72e5399
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 010ed1f194fd29a9d5e371c296adae5e1e216bea
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971949"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563791"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
 
@@ -57,7 +57,7 @@ L'aggiornamento della versione di luglio comprende l'incremento del numero di re
 
 - **Supporto per l'autenticazione moderna**: consente l'accesso basato su Active Directory Authentication Library (ADAL) alle app con il supporto predefinito per RMS. Abilita funzionalità di accesso come Multi-Factor Authentication (MFA), provider di identità di terze parti basati su SAML con applicazioni client RMS, autenticazione basata su smart card e certificati ed elimina la necessità per le app con il supporto predefinito per RMS di usare il protocollo di autenticazione di base.
 - **Supporto per il rilevamento dei documenti**: ora gli sviluppatori possono abilitare il rilevamento dei documenti quando attivano la protezione dei documenti nelle app.
-- Miglioramenti delle prestazioni.
+- Miglioramenti delle prestazioni
 - Correzioni di bug
 
 ### <a name="december-2015-update"></a>Aggiornamento di dicembre 2015
@@ -164,9 +164,9 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
     **Soluzione**: verificare che l'applicazione non consenta le chiamate a più istanze per l'API Android.
 
--   Quando si utilizza il [metodo Metodo protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (\[ \] matrice di byte, offset int, Lunghezza int) con una lunghezza diversa dal valore *Array. length* , non è possibile utilizzare il contenuto in un secondo momento utilizzando l'SDK.
+-   Quando si utilizza il metodo [Metodo protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (matrice di byte \[ \] , offset int, Lunghezza int) con una lunghezza diversa dal valore *Array. length* , non è possibile utilizzare il contenuto in un secondo momento utilizzando l'SDK.
 
-    **Soluzione**: si tratta di un problema noto. Per attenuarlo, passare sempre una matrice di *byte \[ * con lo stesso valore di lunghezza del parametro length oppure usare il metodo [Metodo protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (array di\[ \] byte).
+    **Soluzione**: si tratta di un problema noto. Per attenuarlo, passare sempre una matrice di *byte \[ \] * con lo stesso valore di lunghezza del parametro length oppure usare il metodo [Metodo protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (array di byte \[ \] ).
 
 **iOS e OS X**
 
@@ -197,7 +197,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 
 
-**Nota**  le applicazioni MDI non sono supportate dall'API di iOS.
+**Nota**    Le applicazioni MDI non sono supportate dall'API di iOS.
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 

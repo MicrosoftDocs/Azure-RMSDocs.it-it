@@ -1,6 +1,6 @@
 ---
 title: Come registrare l'app con Azure AD - AIP
-description: Descrive i concetti fondamentali dell'autenticazione utente per l'app con abilitazione per RMS.
+description: Informazioni sulla registrazione dell'app e sull'abilitazione di RMS nella portale di Azure e nell'autenticazione utente con la libreria di autenticazione di Azure Active Directory (ADAL).
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 09823af031db2968c951c6c3610bc14e6a31bd17
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: add790bf067ccb4c4b58b1f5654c869d83976464
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135641"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564400"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Come registrare l'app e abilitarla per RMS con Azure AD
 
@@ -70,9 +70,9 @@ Viene ricavato dal passaggio di registrazione precedente tramite il portale di A
 > [!NOTE]
 > Il parametro **Ambito** non è attualmente usato, ma potrebbe esserlo ed è pertanto riservato per un uso futuro.
 
-    Android: `msauth://packagename/Base64UrlencodedSignature`
+Android: `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS: `<app-scheme>://<bundle-id>`
+iOS `<app-scheme>://<bundle-id>`
 
 > [!NOTE]
 > Se l'app non è conforme a queste linee guida, è probabile che i flussi di lavoro di Azure RMS e Azure AD non vadano a buon fine e non siano supportati da Microsoft.com. Inoltre, il Rights Management License Agreement (RMLA) potrebbe essere violato se viene usato un Id Client non valido in un'app di produzione.

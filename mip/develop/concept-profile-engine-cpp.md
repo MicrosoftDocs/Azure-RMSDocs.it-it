@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 193b65a392060e38731a1a8eda4c7565e82ca0df
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 51934a4a285368a00aaf23780c7fd6c2f315ed7d
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764131"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563954"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK - Concetti relativi agli oggetti profilo e motore
 
@@ -30,15 +30,15 @@ L'API usata nell'applicazione di consumo determina la classe del profilo da usar
 Il profilo stesso offre le funzionalità seguenti:
 
 - Definisce se lo stato deve essere caricato in memoria o salvato in modo permanente su disco e, se è salvato in modo permanente su disco, deve essere crittografato.
-- Definisce l' `mip::ConsentDelegate` oggetto che deve essere utilizzato per le operazioni di consenso.
+- Definisce l'oggetto `mip::ConsentDelegate` che deve essere utilizzato per le operazioni di consenso.
 - Definisce l' `mip::FileProfile::Observer` implementazione di che verrà utilizzata per i callback asincroni per le operazioni del profilo.
 
 ### <a name="profile-settings"></a>Impostazioni profilo
 
-- `MipContext`: Oggetto `MipContext` inizializzato per archiviare le informazioni sull'applicazione, il percorso di stato e così via.
+- `MipContext`: `MipContext` Oggetto inizializzato per archiviare le informazioni sull'applicazione, il percorso di stato e così via.
 - `CacheStorageType`: Definisce come archiviare lo stato: in memoria, su disco o su disco e crittografato.
-- `consentDelegate`: Puntatore condiviso della classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
-- `observer`: Puntatore condiviso all'implementazione del profilo `Observer` (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)e [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `consentDelegate`: Puntatore condiviso della classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md) .
+- `observer`: Puntatore condiviso all'implementazione del profilo `Observer` (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md) , [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md) e [`FileProfile`](reference/class_mip_fileprofile_observer.md) ).
 - `applicationInfo`: [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) Oggetto. Informazioni sull'applicazione che utilizza l'SDK, che corrisponde all'ID e al nome della registrazione dell'applicazione Azure Active Directory.
 
 ## <a name="engines"></a>Motori
@@ -56,7 +56,7 @@ Esistono tre classi motore nell'SDK, una per ogni API. L'elenco seguente illustr
   - `ListSensitivityLabels()`: ottiene l'elenco di etichette per il motore caricato.
   - `CreateFileHandler()`: crea un `mip::FileHandler` per un flusso o un file specifico.
 
-Per la creazione di un motore è necessario passare un oggetto impostazioni del motore specifico che contiene le impostazioni per il tipo di motore da creare. L'oggetto Settings consente allo sviluppatore di specificare i dettagli sull'identificatore del motore, `mip::AuthDelegate` l'implementazione, le impostazioni locali e le impostazioni personalizzate, nonché altri dettagli specifici dell'API.
+Per la creazione di un motore è necessario passare un oggetto impostazioni del motore specifico che contiene le impostazioni per il tipo di motore da creare. L'oggetto Settings consente allo sviluppatore di specificare i dettagli sull'identificatore del motore, l' `mip::AuthDelegate` implementazione, le impostazioni locali e le impostazioni personalizzate, nonché altri dettagli specifici dell'API.
 
 ### <a name="engine-states"></a>Stati del motore
 
@@ -65,26 +65,26 @@ Un motore può avere uno di due stati:
 - `CREATED`: indica che l'SDK dispone di informazioni sufficienti sullo stato locale dopo la chiamata dei servizi back-end richiesti.
 - `LOADED`: l'SDK ha costruito le strutture di dati necessarie affinché il motore possa essere operativo.
 
-Un motore deve essere creato e caricato per eseguire qualsiasi operazione. La classe `Profile` espone alcuni metodi di gestione del motore: `AddEngineAsync`, `RemoveEngineAsync` e `UnloadEngineAsync`.
+Un motore deve essere creato e caricato per eseguire qualsiasi operazione. La classe `Profile` espone alcuni metodi di gestione del motore: `AddEngineAsync`, `DeleteEngineAsync` e `UnloadEngineAsync`.
 
 Nella tabella seguente vengono descritti i possibili stati del motore e quali metodi possono modificare lo stato:
 
-|         | NONE              | CREATED           | LOADED         |
-|---------|-------------------|-------------------|----------------|
-| NONE    |                   |                   | AddEngineAsync |
-| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
-| LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
+| Stato del motore | NONE              | CREATED           | LOADED         |
+|--------------|-------------------|-------------------|----------------|
+| NONE         |                   |                   | AddEngineAsync |
+| CREATED      | DeleteEngineAsync |                   | AddEngineAsync |
+| LOADED       | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### <a name="engine-id"></a>ID del motore
 
-Ogni motore ha un identificatore univoco, `id`, che viene usato in tutte le operazioni di gestione del motore. L'applicazione può fornire un `id`oggetto o l'SDK può generarne uno, se non è fornito dall'applicazione. Tutte le altre proprietà del motore (ad esempio, l'indirizzo di posta elettronica nelle informazioni sull'identità) sono payload opachi per l'SDK. L'SDK NON esegue alcuna logica per mantenere univoche le altre proprietà o applicare altri vincoli.
+Ogni motore ha un identificatore univoco, `id`, che viene usato in tutte le operazioni di gestione del motore. L'applicazione può fornire un oggetto `id` o l'SDK può generarne uno, se non è fornito dall'applicazione. Tutte le altre proprietà del motore (ad esempio, l'indirizzo di posta elettronica nelle informazioni sull'identità) sono payload opachi per l'SDK. L'SDK NON esegue alcuna logica per mantenere univoche le altre proprietà o applicare altri vincoli.
 
 > [!IMPORTANT]
 > Come procedura consigliata, usare un ID del motore univoco per l'utente e usarlo ogni volta che l'utente esegue un'operazione con l'SDK. Se non si specifica un ID di motore esistente, i round trip di servizio aggiuntivi potranno recuperare i criteri e le licenze che potrebbero essere già state memorizzate nella cache per il motore esistente.
 
 ### <a name="engine-management-methods"></a>Metodi di gestione del motore
 
-Come indicato in precedenza, nell'SDK sono disponibili tre metodi di gestione del `AddEngineAsync`motore `DeleteEngineAsync`:, `UnloadEngineAsync`e.
+Come indicato in precedenza, nell'SDK sono disponibili tre metodi di gestione del motore: `AddEngineAsync` , `DeleteEngineAsync` e `UnloadEngineAsync` .
 
 #### <a name="addengineasync"></a>AddEngineAsync
 

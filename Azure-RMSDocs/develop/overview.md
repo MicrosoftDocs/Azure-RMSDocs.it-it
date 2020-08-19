@@ -8,14 +8,14 @@ ms.date: 03/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 8b095b9be9cf22facdd40d97aee89cfb55d46306
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 8b5e4d4cc159997f36e971f3a91ab9d136246131
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068639"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563774"
 ---
-# <a name="overview"></a>Panoramica
+# <a name="overview-of-rights-management-sdk42"></a>Panoramica di Rights Management SDK 4,2
 
 [!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
@@ -29,7 +29,7 @@ Di seguito sono riportati alcuni possibili scenari:
 -   Gli sviluppatori di software di progettazione assistita da computer e di produzione desiderano limitare l'accesso ai disegni a un piccolo gruppo di utenti all'interno della divisione di ricerca senza richiedere l'utilizzo di password.
 -   I proprietari di una app mobile di progettazione grafica intendono usare una singola licenza che consenta la visualizzazione gratuita di copie a bassa risoluzione delle proprie immagini, ma che richieda il pagamento per l'accesso alle versioni ad alta risoluzione.
 -   I proprietari di una raccolta documenti online desiderano abilitare i diritti a visualizzare, stampare o modificare i documenti in base all'identità dell'utente quando gli stessi vengono scaricati su un dispositivo mobile.
--   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno che limiti la visualizzazione e la modifica dei privilegi a determinati utenti.
+-   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno limitando la visualizzazione e la modifica dei privilegi a determinati utenti.
 
 MS RMS SDK 4.2 può essere scaricato, previa lettura e accettazione del relativo contratto di licenza, e distribuito liberamente con software di terze parti per consentire l'accesso client a contenuti protetti da diritti mediante l'uso e la distribuzione di server AD RMS nell'ambiente o di servizi Azure RMS. Per altre informazioni, vedere [Introduzione](get-started.md).
 
@@ -49,6 +49,6 @@ Usare la guida [Introduzione](get-started.md) per iniziare il progetto di app pe
 ## <a name="related-topics"></a>Argomenti correlati
 
 * [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
-* [Introduzione](get-started.md)
+* [Operazioni preliminari](get-started.md)
 * [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx)
 * [Account GitHub](https://github.com/AzureAD/)

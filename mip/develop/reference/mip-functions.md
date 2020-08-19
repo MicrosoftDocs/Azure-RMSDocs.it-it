@@ -6,16 +6,14 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489249"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563706"
 ---
-# <a name="functions"></a>Funzioni
-
-
+# <a name="functions-c"></a>Funzioni (C++) 
 
 ## <a name="namespace-mip"></a>Spazio dei nomi MIP
 
@@ -26,25 +24,25 @@ public static std:: String GetActionSourceString (ActionSource actionSource)    
 public static std:: String GetDataStateString (MIP::D ataState state)       |  Ottenere il nome dello stato del contenuto.
 public const std::string& GetCustomSettingPolicyDataName()       |  Nome dell'impostazione per specificare in modo esplicito i dati dei criteri.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Nome dell'impostazione per specificare in modo esplicito il percorso del file in cui esportare i dati dei criteri di controllo del codice sorgente.
-public const std:: String & GetCustomSettingSensitivityTypesDataName ()       |  Nome dell'impostazione per specificare in modo esplicito i dati di riservatezza.
+public const std:: String& GetCustomSettingSensitivityTypesDataName ()       |  Nome dell'impostazione per specificare in modo esplicito i dati di riservatezza.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Nome dell'impostazione per specificare in modo esplicito il percorso del file di dati dei criteri.
-public const std:: String & GetCustomSettingSensitivityTypesDataFile ()       |  Nome dell'impostazione per specificare in modo esplicito il percorso del file di dati dei tipi di riservatezza.
-public const std:: String & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  Nome dell'impostazione che consente di abilitare l'etichetta in base alle proprietà personalizzate e alle proprietà personalizzate tramite le funzionalità di etichetta.
-public const std:: String & GetCustomSettingPolicyTtlDays ()       |  Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri in giorni, per impostazione predefinita sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
-public const std:: String & GetCustomSettingSensitivityPolicyTtlDays ()       |  Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri di riservatezza per impostazione predefinita, il valore predefinito sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
-public const std:: Map\<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  Ottiene un valore che indica se una funzionalità è abilitata per impostazione predefinita.
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: IStream\>& stdIStream)       |  Crea un flusso da un std:: IStream.
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: ostream\>& stdOStream)       |  Crea un flusso da un oggetto std:: ostream.
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: iostream\>& stdIOStream)       |  Crea un flusso da un oggetto std:: iostream.
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromBuffer (uint8_t * buffer, const int64_t size)       |  Crea un flusso da un buffer.
-public MIP_API std:: Vector\<uint8_t\> ReadFromStream (const std:: shared_ptr\<MIP:: Stream\>& Stream)       |  Leggere tutti i byte del flusso.
-public ActionType operator & (ActionType a, ActionType b)       |  Operatore and (&) per il tipo di azione enum.
-public ActionType operator ^ (ActionType a, ActionType b)       |  Operatore XOR (^) per l'enumerazione del tipo di azione.
+public const std:: String& GetCustomSettingSensitivityTypesDataFile ()       |  Nome dell'impostazione per specificare in modo esplicito il percorso del file di dati dei tipi di riservatezza.
+public const std:: String& GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  Nome dell'impostazione che consente di abilitare l'etichetta in base alle proprietà personalizzate e alle proprietà personalizzate tramite le funzionalità di etichetta.
+public const std:: String& GetCustomSettingPolicyTtlDays ()       |  Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri in giorni, per impostazione predefinita sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
+public const std:: String& GetCustomSettingSensitivityPolicyTtlDays ()       |  Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri di riservatezza per impostazione predefinita, il valore predefinito sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
+public const std:: Map \<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  Ottiene un valore che indica se una funzionalità è abilitata per impostazione predefinita.
+public MIP_API std:: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std:: shared_ptr \<std::istream\>& stdIStream)       |  Crea un flusso da std::istream.
+public MIP_API std:: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std:: shared_ptr \<std::ostream\>& stdOStream)       |  Crea un flusso da std::ostream.
+public MIP_API std:: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std:: shared_ptr \<std::iostream\>& stdIOStream)       |  Crea un flusso da std::iostream.
+public MIP_API std:: shared_ptr \<mip::Stream\> CreateStreamFromBuffer (buffer uint8_t *, const int64_t size)       |  Crea un flusso da un buffer.
+public MIP_API std:: Vector \<uint8_t\> ReadFromStream (const std:: shared_ptr \<mip::Stream\>& Stream)       |  Leggere tutti i byte del flusso.
+public ActionType operator& (ActionType a, ActionType b)       |  Operatore and (&) per il tipo di azione enum.
+public ActionType operator ^ (ActionType a, ActionType b)       |  Operatore Xor (^) per il tipo enum Action.
 
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString (funzione)
 Converte l'enumerazione AssignmentMethod in una descrizione di stringa.
 
-Parametri:  
+Parametri  
 * **Metodo**: metodo di assegnazione. 
 
 
@@ -53,7 +51,7 @@ Parametri:
 ### <a name="getactionsourcestring-function"></a>GetActionSourceString (funzione)
 Ottenere il nome dell'origine dell'azione.
 
-Parametri:  
+Parametri  
 * **actionSource**: origine dell'azione. 
 
 **Returns**: rappresentazione di stringa dell'origine dell'azione.
@@ -61,7 +59,7 @@ Parametri:
 ### <a name="getdatastatestring-function"></a>GetDataStateString (funzione)
 Ottenere il nome dello stato del contenuto.
 
-Parametri:  
+Parametri  
 * **actionSource**: lo stato del contenuto su cui si sta lavorando. 
 
 
@@ -124,9 +122,9 @@ Ottiene un valore che indica se una funzionalità è abilitata per impostazione 
 **Returns**: stato predefinito delle funzionalità di Flight
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream (funzione)
-Crea un flusso da un std:: IStream.
+Crea un flusso da std::istream.
 
-Parametri:  
+Parametri  
 * **stdIStream**: std::istream sottostante
 
 
@@ -135,9 +133,9 @@ Parametri:
 **Restituisce**: flusso di wrapping di un std:: IStream
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream (funzione)
-Crea un flusso da un oggetto std:: ostream.
+Crea un flusso da std::ostream.
 
-Parametri:  
+Parametri  
 * **stdOStream**: std::ostream sottostante
 
 
@@ -146,9 +144,9 @@ Parametri:
 **Restituisce**: flusso di wrapping di un oggetto std:: ostream
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream (funzione)
-Crea un flusso da un oggetto std:: iostream.
+Crea un flusso da std::iostream.
 
-Parametri:  
+Parametri  
 * **stdIOStream**: std::iostream sottostante
 
 
@@ -159,7 +157,7 @@ Parametri:
 ### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer (funzione)
 Crea un flusso da un buffer.
 
-Parametri:  
+Parametri  
 * **buffer**: puntatore a un buffer
 
 
@@ -170,7 +168,7 @@ Parametri:
 ### <a name="readfromstream-function"></a>ReadFromStream (funzione)
 Leggere tutti i byte del flusso.
 
-Parametri:  
+Parametri  
 * **puntatore**: a un flusso.
 
 
@@ -179,17 +177,17 @@ Parametri:
 **Restituisce**: un vettore di byte.
   
 ### <a name="operator-function"></a>operatore | funzione
-Operatore OR (|) per il tipo di azione enum.
+Operatore Or (|) per il tipo enum Action.
   
-### <a name="operator-function"></a>operatore & funzione
+### <a name="operator-function"></a>operatore& funzione
 Operatore and (&) per il tipo di azione enum.
   
 ### <a name="operator-function"></a>funzione operator ^
-Operatore XOR (^) per l'enumerazione del tipo di azione.
+Operatore Xor (^) per il tipo enum Action.
 
 ## <a name="namespace-mipauditmetadatakeys"></a>spazio dei nomi MIP:: auditmetadatakeys
 
-Members                        | Descrizioni                                
+Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: String sender ()       |  Controllare le chiavi dei metadati nella rappresentazione di stringa.
 Destinatari std:: String pubblici ()       | _Non ancora documentato._
@@ -211,9 +209,9 @@ _Non ancora documentato._
 _Non ancora documentato._
 
 
-## <a name="namespace-miprights"></a>`mip::rights` dello spazio dei nomi 
+## <a name="namespace-miprights"></a>namespace `mip::rights` 
   
-Members                        | Descrizioni                                
+Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Ottiene l'identificatore della stringa per il diritto "owner".
 public std::string View()       |  Ottiene l'identificatore della stringa per il diritto "view".
@@ -226,9 +224,9 @@ public std::string Comment()       |  Ottiene l'identificatore della stringa per
 public std::string Reply()       |  Ottiene l'identificatore della stringa per il diritto "reply".
 public std::string ReplyAll()       |  Ottiene l'identificatore della stringa per il diritto "reply all".
 public std::string Forward()       |  Ottiene l'identificatore della stringa per il diritto "forward".
-public std:: Vector\<std:: String\> EmailRights ()       |  Ottiene un elenco di diritti che si applicano ai messaggi di posta elettronica.
-public std:: Vector\<std:: String\> EditableDocumentRights ()       |  Ottiene un elenco di diritti che si applicano ai documenti.
-public std:: Vector\<std:: String\> CommonRights ()       |  Ottiene un elenco di diritti che si applicano in tutti gli scenari.
+public std:: Vector \<std::string\> EmailRights ()       |  Ottiene un elenco di diritti che si applicano ai messaggi di posta elettronica.
+public std:: Vector \<std::string\> EditableDocumentRights ()       |  Ottiene un elenco di diritti che si applicano ai documenti.
+public std:: Vector \<std::string\> CommonRights ()       |  Ottiene un elenco di diritti che si applicano in tutti gli scenari.
   
 ### <a name="owner-function"></a>Funzione Owner
 Ottiene l'identificatore della stringa per il diritto "owner".
@@ -260,7 +258,7 @@ Ottiene l'identificatore della stringa per il diritto "export".
   
 **Restituisce**: identificatore della stringa per il diritto "export"
   
-### <a name="extract-function"></a>Extract - funzione
+### <a name="extract-function"></a>Estrarre la funzione
 Ottiene l'identificatore della stringa per il diritto "extract".
 
   
@@ -314,9 +312,9 @@ Ottiene un elenco di diritti che si applicano in tutti gli scenari.
   
 **Restituisce**: elenco di diritti che si applicano in tutti gli scenari
 
-## <a name="namespace-miproles"></a>`mip::roles` dello spazio dei nomi 
+## <a name="namespace-miproles"></a>namespace `mip::roles` 
   
-Members                        | Descrizioni                                
+Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Ottiene l'identificatore della stringa per il ruolo "viewer".
 public std::string Reviewer()       |  Ottiene l'identificatore della stringa per il ruolo "reviewer".

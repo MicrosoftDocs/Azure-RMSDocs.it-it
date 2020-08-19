@@ -1,6 +1,6 @@
 ---
 title: Note sulla versione
-description: Aggiornamenti all'SDK per revisione e altre informazioni per sviluppatori.
+description: Vedere le note sulla versione per Microsoft Rights Management Service SDK v 2.1 ottobre 2019 e gli aggiornamenti precedenti.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: bd2e9284eb43e319b6060c86ef2848c7a2c13b3a
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: b0bd50f739a98d261924e4dba96accc40e87e2bb
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971932"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563757"
 ---
 # <a name="release-notes"></a>Note sulla versione
 
@@ -82,14 +82,14 @@ Questo articolo contiene informazioni importanti su questa versione e quelle pre
 
 ## <a name="may-2015-update"></a>Aggiornamento di maggio 2015
 
--   **App di servizio e RMS** - basato su cloud[IPC\_Credential\_Symmetric\_Key](https://msdn.microsoft.com/library/dn133062.aspx) richiede tre tipi di informazioni; chiave simmetrica, **AppPrincipalId**e **TenantBposId**. L'articolo è stato aggiornato per offrire linee guida sull'elaborazione di queste informazioni. Per questo aggiornamento, vedere la versione aggiornata di [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **App di servizio e RMS**  -  basato su cloud [IPC \_ La \_ \_ chiave simmetrica delle credenziali](https://msdn.microsoft.com/library/dn133062.aspx) richiede tre tipi di informazioni: chiave simmetrica, **AppPrincipalId**e **TenantBposId**. L'articolo è stato aggiornato per offrire linee guida sull'elaborazione di queste informazioni. Per questo aggiornamento, vedere la versione aggiornata di [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>Aggiornamento di aprile 2015
 
 -   **Il controllo dei documenti** è attualmente possibile grazie a una serie di nuove API. Per ulteriori informazioni, vedere [rilevamento del contenuto](tracking-content.md).
 -   **Tipo di crittografia** -È ora supportato il controllo a livello di API per la selezione del pacchetto di crittografia. Per ulteriori informazioni, vedere [utilizzo della crittografia](working-with-encryption.md).
 
-    **Si noti**  che non verrà più esposto il flag **IPC\_li\_deprecated\_Encryption\_algoritmi** nell'API. Ciò significa che le app future non saranno più compilate se fanno riferimento a questo flag, tuttavia le app già create continueranno a funzionare poiché si rispetta il flag privatamente nel codice API. È possibile comunque ottenere il vantaggio del flag di algoritmi di crittografia precedenti deprecati, semplicemente modificando un flag. Per ulteriori informazioni, vedere [utilizzo della crittografia](working-with-encryption.md).
+    **Nota**    Non verrà più esposto il flag **IPC \_ li \_ deprecated \_ Encryption \_ algoritmi** nell'API. Ciò significa che le app future non saranno più compilate se fanno riferimento a questo flag, tuttavia le app già create continueranno a funzionare poiché si rispetta il flag privatamente nel codice API. È possibile comunque ottenere il vantaggio del flag di algoritmi di crittografia precedenti deprecati, semplicemente modificando un flag. Per ulteriori informazioni, vedere [utilizzo della crittografia](working-with-encryption.md).
 
 -   **Le applicazioni in modalità server**, che usano [valori modalità API](https://msdn.microsoft.com/library/hh535236.aspx) di **IPC\_API\_MODE\_SERVER**, non richiedono un manifesto dell'applicazione. È possibile testare l'applicazione rispetto a un server RMS di produzione e non sono necessarie per ottenere una licenza di produzione quando si passa all'ambiente di produzione. Per ulteriori informazioni sulle applicazioni in modalità server, vedere [tipi](application-types.md)di applicazioni.
 -   **La Registrazione** ora viene implementata tramite i metodi per file e di Event Tracing for Windows.
@@ -119,7 +119,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
     Funzioni aggiunte in questa versione:
 
-    **Nota** : sono stati aggiunti altri tipi di dati e strutture di supporto, non elencati qui, per le estensioni dell'API file. Tutti gli articoli aggiornati per questa versione sono contrassegnati come **preliminari e soggetti a modifiche**.
+    **Nota**   -Sono stati aggiunti altri tipi di dati e strutture di supporto, non elencati qui, per le estensioni dell'API file. Tutti gli articoli aggiornati per questa versione sono contrassegnati come **preliminari e soggetti a modifiche**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -132,7 +132,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 ## <a name="april-2014-update"></a>Aggiornamento di aprile 2014
 
 -   **Uso della memoria API file**, ha subito notevoli miglioramenti, soprattutto per PFile di grandi dimensioni.
--   L' **ID contenuto** è ora accessibile in scrittura tramite la proprietà **IPC\_\_li Content\_ID**. Per altre informazioni, vedere [tipi di proprietà di licenza](https://msdn.microsoft.com/library/hh535287.aspx).
+-   L' **ID contenuto** è ora accessibile in scrittura tramite la proprietà **IPC \_ li \_ Content \_ ID**. Per altre informazioni, vedere [tipi di proprietà di licenza](https://msdn.microsoft.com/library/hh535287.aspx).
 -   **Requisito del manifesto di produzione**: quando applicazioni o servizi con abilitazione RMS sono in esecuzione in modalità server, il manifesto non sarà più richiesto. Per ulteriori informazioni, vedere [tipi di applicazioni](application-types.md).
 -   **Aggiornamenti alla documentazione**
 
@@ -148,7 +148,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
 -   I **computer con Windows 7 SP1 e Windows Server 2008 R2 SP1** senza l'aggiornamento [KB2533623](https://support.microsoft.com/kb/2533623) potrebbero visualizzare l'errore seguente durante la protezione dei file di Office "Parametro non corretto. Codice di errore 0x80070057". In tal caso, installare l'aggiornamento e riprovare. Se il problema persiste, contattare l'alias RMS SDK Beta Feedback <rmcstbeta@microsoft.com>.
 
-    **Nota**  a partire dalla versione di aprile 2015, al processo di installazione per questa KB è stato aggiunto un controllo.
+    **Nota**    A partire dalla versione di aprile 2015, al processo di installazione per questa KB è stato aggiunto un controllo.
 
 
 
@@ -176,7 +176,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
 -   **Problema**: quando si compila per diverse architetture, è necessario usare queste linee guida.
 
-    **Soluzione**: se si vuole usare\*Ipcsecproc ISV. dll per un'architettura diversa (ad esempio, è stato installato l'SDK a 64 bit in un computer a 64 bit, ma ora si vuole eseguire la distribuzione in un computer a 32 bit che richiede\*Ipcsecproc ISV. dll), è necessario installare l'SDK a 32 bit in un computer diverso e copiare i\*file con estensione dll ISV Ipcsecproc nella cartella "% ProgramFiles%\\Microsoft Information Protection and Control" (il percorso predefinito o ovunque si sia scelto di installare l'SDK).
+    **Soluzione**: se si vuole usare ilisv.dll Ipcsecproc \* per un'architettura diversa, ad esempio è stato installato l'SDK a 64 bit in un computer a 64 bit, ma ora si vuole eseguire la distribuzione in un computer a 32 bit che richiede Ipcsecproc \*isv.dll), è necessario installare l'SDK a 32 bit in un computer diverso e copiare i \* file diisv.dll IPCSECPROC nella cartella "% ProgramFiles% \\ Microsoft Information Protection and Control" (il percorso predefinito o quando si sceglie di installare l'SDK).
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
@@ -184,8 +184,8 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
 **R**: usare 0 per le impostazioni locali predefinite. In questo caso, AD RMS Client 2.1 cerca i nomi e le descrizioni nella sequenza riportata di seguito, recuperando il primo disponibile:
 
-    1 - User preferred LCID.
-    2 - System locale LCID.
-    3 - The first available language specified in the Rights Management Server (RMS) template.
+1. LCID preferito dall'utente.
+2. LCID delle impostazioni locali del sistema.
+3. La prima lingua disponibile specificata nel modello di Rights Management Server (RMS).
 
 Se non è possibile recuperare alcun nome e descrizione, viene restituito un errore. Può esistere un solo nome e una descrizione per un LCID specifico.
