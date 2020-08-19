@@ -14,22 +14,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6f36ef984a6d6d10ce06ae690c98153524a7d301
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 3c17a737266ceec6bb7e71d805e1a305f0b1c491
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791477"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564320"
 ---
-# <a name="overview"></a>Panoramica
+# <a name="overview-of-rights-management-services-sdk-21"></a>Panoramica di Rights Management Services SDK 2,1
 
 Rights Management Services SDK 2.1 è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati. Tramite l’applicazione abilitata all’uso di diritti, i proprietari del contenuto potranno definire gli utenti autorizzati ad aprire, modificare, stampare, inoltrare o eseguire altre operazioni con il relativo contenuto.
 
 AD RMS è costituito da componenti [server](ad-rms-server.md) e [client](ad-rms-client.md). Il server, in esecuzione su Azure o Windows Server, è costituito da più servizi Web.
 
-Il componente [client](ad-rms-client.md) può essere eseguito su un sistema operativo client o server e contiene funzioni che consentono a un'applicazione di crittografare e decrittografare il contenuto, recuperare modelli ed elenchi di revoche, acquisire licenze e certificati da un server ed eseguire altre attività correlate di gestione dei diritti.
+Il componente [client](ad-rms-client.md) può essere eseguito in un sistema operativo client o server e contiene funzioni che consentono a un'applicazione di crittografare e decrittografare il contenuto, recuperare modelli ed elenchi di revoche, acquisire licenze e certificati da un server e altre attività di Rights Management correlate.
 
-Per altre informazioni, vedere [Tipi di applicazioni](application-types.md).
+Per ulteriori informazioni, vedere [tipi di applicazioni](application-types.md).
 
 Di seguito sono riportati solo alcuni degli scenari in cui è possibile usare le applicazioni basate su Rights Management Services SDK 2.1.
 
@@ -37,15 +37,15 @@ Di seguito sono riportati solo alcuni degli scenari in cui è possibile usare le
 -   Gli sviluppatori di software di progettazione assistita da computer e di produzione desiderano limitare l'accesso ai disegni a un piccolo gruppo di utenti all'interno della divisione di ricerca senza richiedere l'utilizzo di password.
 -   I proprietari di un sito Web di progettazione grafica intendono utilizzare una singola licenza che consenta la visualizzazione gratuita di copie a bassa risoluzione delle proprie immagini, ma che richieda il pagamento per l'accesso alle versioni ad alta risoluzione.
 -   I proprietari di una raccolta documenti online desiderano abilitare i diritti a visualizzare, stampare o modificare i documenti in base all'identità dell'utente.
--   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno che limiti la visualizzazione e la modifica dei privilegi a determinati utenti.
+-   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno limitando la visualizzazione e la modifica dei privilegi a determinati utenti.
 
 Per altre informazioni sul server AD RMS, il client AD RMS e le relative funzionalità, vedere il contenuto del sito TechNet relativo alla [documentazione di AD RMS per i professionisti IT](https://TechNet.Microsoft.Com/library/cc771234.aspx).
 
 Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le relative implementazioni.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-| Argomento | Description |
+| Argomento | Descrizione |
 |-------|-------------|
 |[Client](ad-rms-client.md) |Questo argomento descrive lo scopo e la funzione di Rights Management Service Client 2.1 |
 |[Server](ad-rms-server.md) | Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Windows Server.|
@@ -54,5 +54,5 @@ Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le rela
 ## <a name="related-topics"></a>Argomenti correlati
 
 * [Concetti di RMS](application-types.md)
-* [Introduzione](getting-started-with-ad-rms-2-0.md)
+* [Operazioni preliminari](getting-started-with-ad-rms-2-0.md)
 * [Documentazione di AD RMS per i professionisti IT](https://technet.microsoft.com/library/cc771234.aspx)

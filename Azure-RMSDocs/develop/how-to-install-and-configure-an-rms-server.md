@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 59aa02318a0c6d7ee5e9857bead4c79248546320
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68794106"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564104"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Procedura: installare, configurare e testare un server RMS
 
@@ -56,7 +56,7 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 
        Se si usa AD RMS v1.0 SP2, è possibile registrare il server online. La registrazione viene eseguita in background durante il processo di provisioning, ma è necessario disporre di una connessione Internet.
 
-       **HKEY\_LOCAL\_MACHINE**\\**Software**\\**Microsoft**\\**DRMS**\\**1.0**\\**UddiProvider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
+       **HKEY \_ \_Computer locale** \\ **software** \\ **Microsoft** \\ **DRM** \\ **1,0** \\ **UddiProvider** = 0e3d9bb8-b765-4a68-A329-51548685fed3
 
 3. **Test con il server RMS**
 
@@ -68,39 +68,46 @@ La procedura seguente consente di configurare il server RMS e include queste ope
    - Nell'individuazione del server, un amministratore registra un service connection point (SCP) per il cluster radice RMS con Active Directory e il client esegue una query ad Active Directory per individuare SCP e stabilire una connessione con il server.
    - Nell'individuazione del client, configurare le impostazioni di individuazione del servizio RMS nel Registro sul computer su cui è in esecuzione RMS Client 2.1. Queste impostazioni rimandano RMS Client 2.1 al server RMS da usare. Quando sono presenti, l'individuazione non viene eseguita sul lato server.
 
-   Per configurare l'individuazione sul lato client, è possibile impostare le chiavi del registro seguenti in modo che puntino al server RMS. Per informazioni su come configurare l'individuazione sul lato assistenza, vedere [RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx) (Note sulla distribuzione di RMS Client 2.0).
+   Per configurare l'individuazione sul lato client, è possibile impostare le chiavi del registro seguenti in modo che puntino al server RMS. Per informazioni su come configurare l'individuazione sul lato servizio, vedere [Note sulla distribuzione del client RMS](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 4. **EnterpriseCertification**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterpriseCertification
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterpriseCertification
+  ```
 
-   **Valore**: (predefinito): [**http|https**]://RMSClusterName/ **_wmcs/Certification**
+   **Valore**: (predefinito): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 5. **EnterprisePublishing**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterprisePublishing
-                  
-   **Valore**: (predefinito): [**http|https**]://RMSClusterName/ **_wmcs/Licensing**
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterprisePublishing
+  ```
+
+   **Valore**: (predefinito): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 > [!NOTE]
 > Per impostazione predefinita, queste chiavi non sono presenti nel registro e devono essere create.
-> 
+>
+ 
 > [!IMPORTANT]
-> Se si esegue un'applicazione a 32 bit su una versione a 64 bit di Windows, è necessario impostare queste chiavi nel percorso della chiave seguente:<p>
->   ```    
->   HKEY_LOCAL_MACHINE
->     SOFTWARE
->       Wow6432Node
->         Microsoft
->           MSIPC
->             ```
+> Se si esegue un'applicazione a 32 bit su una versione a 64 bit di Windows, è necessario impostare queste chiavi nel percorso della chiave seguente:  
+>
+
+```console
+HKEY_LOCAL_MACHINE  
+  SOFTWARE  
+    Wow6432Node  
+      Microsoft  
+        MSIPC  
+```

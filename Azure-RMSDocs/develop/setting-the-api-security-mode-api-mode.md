@@ -1,6 +1,6 @@
 ---
 title: Come impostare la modalità di sicurezza dell'API | Azure RMS
-description: Scegliere la modalità di sicurezza eseguita dall'applicazione API file.
+description: Informazioni su come impostare la modalità di sicurezza dell'API usando la funzione IpcSetGlobalProperty per scegliere la modalità di sicurezza in cui viene eseguita l'applicazione API file.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2a71fcddecbe688f38360c42cf83946f82269013
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 942192690e06422246fa0ed7a4fb2d1d3ccf6cd6
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790787"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563601"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Procedura: Impostare la modalità di sicurezza dell'API
 
@@ -29,7 +29,7 @@ Per inizializzare l'applicazione in modo che venga eseguita in *modalità server
 
 Per altre informazioni sulla *modalità server*, vedere [Tipi di applicazioni](application-types.md).
 
-**Importante**  La modalità di sicurezza deve essere impostata prima di chiamare qualsiasi altra funzione di Rights Management Services SDK 2.1. Dopo averla impostata, la modalità di sicurezza non può essere modificata per il processo corrente.
+**Importante**    La modalità di sicurezza deve essere impostata prima di chiamare qualsiasi altra funzione Rights Management Services SDK 2,1. Dopo averla impostata, la modalità di sicurezza non può essere modificata per il processo corrente.
 
 ## <a name="related-topics"></a>Argomenti correlati
 

@@ -1,6 +1,6 @@
 ---
 title: Distribuzione dell'applicazione - AIP
-description: Questo argomento presenta e illustra in dettaglio la distribuzione dell'applicazione dell'utente
+description: Informazioni sul processo di distribuzione per l'applicazione abilitata per l'Azure Information Protection (AIP)/Rights Management Services (RMS).
 keywords: distribuire, RMS, AIP
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: e9a9ce42476cc372b6486b524d99e55edf9d4a11
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 4f4258811ec634a49f84b76fcf1feb41752311df
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971762"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564365"
 ---
 # <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
 
@@ -29,7 +29,7 @@ Questo argomento illustra il processo di distribuzione dell'applicazione abilita
 Prima di poter rilasciare un'applicazione sviluppata con AIP/RMS, è necessario richiedere e concludere un contratto formale con Microsoft.
 
 ### <a name="begin-the-process"></a>Avviare il processo
-Per ottenere il IPIA, inviare un messaggio <strong>IPIA@microsoft.com</strong> di posta elettronica a con le informazioni seguenti:
+Per ottenere il IPIA, inviare un messaggio di posta elettronica a <strong>IPIA@microsoft.com</strong> con le informazioni seguenti:
 
 **Oggetto**: Requesting IPIA for *nome azienda*
 

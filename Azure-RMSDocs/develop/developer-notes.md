@@ -1,6 +1,6 @@
 ---
 title: Istruzioni per sviluppatori per Azure Information Protection SDK 2.1 | Microsoft Docs
-description: Una raccolta di argomenti con procedure per lo sviluppo con AIP SDK 2.1
+description: Ottenere indicazioni per diversi scenari di sviluppo importanti e informazioni generali sullo sviluppo con la Rights Management Services SDK 2,1.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 620464886d40c3f152a32f07952a924eee72920f
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: cfa9f00d7a69966c3a6819294e72c8dfccac02fc
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971813"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564261"
 ---
-# <a name="developer-guidance"></a>Istruzioni per sviluppatori
+# <a name="rights-management-services-sdk-21-developer-guidance"></a>Guida per gli sviluppatori Rights Management Services SDK 2,1
 
 Questa sezione descrive le indicazioni specifiche per diversi scenari di sviluppo importanti, nonché informazioni generali sullo sviluppo con questo SDK. Gli scenari in questa sezione sono specifici per la versione corrente di Rights Management Services SDK 2.1 e possono subire modifiche nelle versioni successive.
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md): autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
@@ -43,4 +43,4 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 
  
 ## <a name="related-topics"></a>Argomenti correlati
-* [Panoramica](ad-rms-overview.md)
+* [Overview](ad-rms-overview.md)

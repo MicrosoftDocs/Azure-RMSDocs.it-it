@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 0caabd18ef06af0daaff44e8829b3bd9750a788b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: d309f08866bc01cde2725581ccef796bdbe96e98
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791942"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563567"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Procedura: Usare le impostazioni di crittografia
 
@@ -55,46 +55,44 @@ Nell'API non è più esposto il flag *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHM
 
 Nessuna modifica necessaria nel codice, *AES 256* CBC4K è l'impostazione predefinita.
 
-    C++
-
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
-                                    0,
-                                    NULL,
-                                    &amp;pLicenseHandle);
-
+```cpp
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                0,
+                                NULL,
+                                &amp;pLicenseHandle);
+```
 
 ## <a name="protect-files-with-aes-128-cbc4k"></a>Protezione dei file con AES-128 CBC4K
 
-    C++
+```cpp
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                0,
+                                NULL,
+                                &amp;pLicenseHandle);
 
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
-                                    0,
-                                    NULL,
-                                    &amp;pLicenseHandle);
+DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
 
-    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
-
-    hr = IpcSetLicenseProperty(pLicenseHandle,
-                           false,
-                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
-                           &amp;dwEncryptionMode);
+hr = IpcSetLicenseProperty(pLicenseHandle,
+                        false,
+                        IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
+                        &amp;dwEncryptionMode);
+```
 
 
 ## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>Protezione dei file con AES-128 ECB (algoritmi deprecati)
 
 Questo esempio mostra anche la nuova modalità di supporto degli *algoritmi deprecati*.
 
-    C++
+```cpp
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                0,
+                                NULL,
+                                &amp;pLicenseHandle);
 
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
-                                    0,
-                                    NULL,
-                                    &amp;pLicenseHandle);
+DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
 
-    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
-
-    hr = IpcSetLicenseProperty(pLicenseHandle,
-                           false,
-                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
-                           &amp;dwEncryptionMode);
-
+hr = IpcSetLicenseProperty(pLicenseHandle,
+                        false,
+                        IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
+                        &amp;dwEncryptionMode);
+```

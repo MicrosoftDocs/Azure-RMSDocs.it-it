@@ -1,6 +1,6 @@
 ---
 title: Installare l'SDK | Azure RMS
-description: Questo argomento descrive l'installazione degli strumenti per sviluppatori.
+description: Vedere How to download and install the Rights Management Services SDK 2,1 Developer Tools and Active Directory Rights Management Services client 2,1.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 1ce52c18e1fb7569ea1b02f56f0564aab0f09129
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e1db44a4455588e828a1b47ad0951931d35f66d0
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791025"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564008"
 ---
 # <a name="install-the-sdk"></a>Installare l'SDK
 
@@ -29,10 +29,10 @@ Questo argomento descrive l'installazione degli strumenti per sviluppatori.
 
 ### <a name="install-the-developer-tools"></a>Installare gli strumenti per sviluppatori
 
-1.  Scaricare [Rights Management Services SDK 2.1](https://www.microsoft.com/download/details.aspx?id=38397) dall'Area download Microsoft, prestando attenzione a scegliere la versione dell'architettura corretta per il computer in uso.
+1.  Scaricare [Rights Management Services SDK 2.1](https://www.microsoft.com/download/details.aspx?id=38397) dall'Area download Microsoft, prestando attenzione a scegliere la versione dell'architettura corretta del computer.
 2.  Eseguire il pacchetto di installazione dal percorso di installazione:
 
-    **...\\setup\_sdk.exe**
+    **...\\sdk.exedi installazione \_**
 
     Il file Setup\_sdk.exe installerà RMS SDK 2.1 e Active Directory Rights Management Services Client 2.1.
 

@@ -1,6 +1,6 @@
 ---
 title: Controllo dell'applicazione | Azure RMS
-description: Istruzioni su come configurare l'applicazione per il test.
+description: Informazioni su come prepararsi per il test dell'applicazione con Azure RMS o un server RMS in esecuzione su Windows Server.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 987b9bb711f96d6622fb1972f13d50fa8cbbfa3d
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 638a8ec54a850a051795c00b2b1aef4ef47866ff
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972032"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564070"
 ---
-# <a name="testing-your-application"></a>Controllo dell'applicazione
+# <a name="testing-your-application"></a>Test dell'applicazione
 
 Viene illustrato come preparare il test dell'applicazione.
 
