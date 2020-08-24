@@ -1,21 +1,21 @@
 ---
 title: Esercitazione - Usare Azure Information Protection per il controllo dell'oversharing - AIP
 description: Esercitazione introduttiva per configurare e vedere in azione le impostazioni avanzate con le quali il client di Azure Information Protection mostra un avviso, chiede una giustificazione o blocca l'invio di messaggi da Outlook.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e386cfb416d508f46e60b4c75a7ac7710d510088
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6bb35700a025105b584b93b5a38219b567dbe99c
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264430"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
@@ -25,8 +25,10 @@ ms.locfileid: "86048496"
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>
+> **Per distribuire il client AIP con interfaccia classica**, aprire un ticket di supporto per ottenere l'accesso al download.
 
-In questa esercitazione si apprenderà come:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 > * Configurare le impostazioni che implementano messaggi di avviso, giustificazione o di blocco popup in Outlook
 > * Vedere le impostazioni in azione
@@ -47,24 +49,28 @@ Per completare questa esercitazione, è necessario:
     
     In assenza di una sottoscrizione con questo piano, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Avere aggiunto il riquadro Azure Information Protection al portale di Azure e aver pubblicato almeno un'etichetta nei criteri globali di Azure Information Protection.
+1. Avere aggiunto il riquadro Azure Information Protection al portale di Azure e aver pubblicato almeno un'etichetta nei criteri globali di Azure Information Protection.
     
     Anche se questa esercitazione usa l'etichetta **General** predefinita, questa etichetta può essere eventualmente sostituita con un'altra. Per informazioni sull'aggiunta del riquadro Azure Information Protection oppure se non sono ancora state pubblicate etichette nei criteri globali, vedere [Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
-3. Un computer con Windows (almeno Windows 7 con Service Pack 1) in cui sia possibile accedere ad Outlook. Prepararsi a riavviare Outlook più volte durante questa esercitazione.
+1. Un computer con Windows (almeno Windows 7 con Service Pack 1) in cui sia possibile accedere ad Outlook. Prepararsi a riavviare Outlook più volte durante questa esercitazione.
 
-4. Il client Azure Information Protection (versione classica) deve essere installato nel computer in uso con Windows.
-    
-    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
-    
-    Se si usa il client di etichettatura unificato anziché la versione classica del client, vedere le istruzioni seguenti che illustrano come usare le impostazioni avanzate di PowerShell per le configurazioni equivalenti in questa esercitazione:
-    
-    - Istruzioni per la guida dell'amministratore: [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - Video: [Configurazione popup di Outlook di Azure Information Protection](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
+1. Avere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
 
-Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
+> [!TIP]
+> Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
+> 
+A questo punto, procedere con l'esercitazione. Continuare con [Identificare un ID etichetta per il test](#identify-a-label-id-for-testing).
 
-A questo punto, procedere con l'esercitazione.
+**Client per l'etichettatura unificata**
+
+Se si usa il client di etichettatura unificato anziché la versione classica del client, vedere le istruzioni seguenti che illustrano come usare le impostazioni avanzate di PowerShell per le configurazioni equivalenti in questa esercitazione:
+    
+- Istruzioni per la guida dell'amministratore: [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- Video: [Configurazione popup di Outlook di Azure Information Protection](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
+
+
 
 ## <a name="identify-a-label-id-for-testing"></a>Identificare un ID etichetta per il test
 
@@ -114,7 +120,7 @@ Per questo passaggio dell'esercitazione, verranno specificate le seguenti impost
 
 Usando il criterio con ambito appena creato, verrà aggiunta una nuova impostazione avanzata del client denominata **OutlookWarnUntrustedCollaborationLabel** con l'ID dell'etichetta**General**: 
 
-1. Tornare al riquadro **Azure Information Protection - Criteri** e selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Tornare al riquadro **Azure Information Protection - Criteri** e selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel riquadro **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookWarnUntrustedCollaborationLabel**, e incollare il proprio ID etichetta per il valore. Usando l'ID etichetta di esempio:
     
@@ -149,7 +155,7 @@ Nel computer client si vedranno ora i risultati della configurazione di questa i
 
 L'impostazione avanzata esistente del client verrà modificata conservando l'ID etichetta **General**, ma cambiando il nome in **OutlookJustifyUntrustedCollaborationLabel**: 
 
-1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel riquadro **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookWarnUntrustedCollaborationLabel**, con il nuovo nome **OutlookJustifyUntrustedCollaborationLabel**:
     
@@ -181,7 +187,7 @@ Nel computer client si vedranno ora i risultati di questa nuova impostazione ava
 
 L'impostazione avanzata esistente del client verrà modificata ancora una volta, conservando l'ID etichetta **General**, ma cambiando il nome in **OutlookBlockUntrustedCollaborationLabel**: 
 
-1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel riquadro **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookJustifyUntrustedCollaborationLabel**, con il nuovo nome **OutlookBlockUntrustedCollaborationLabel**:
     
@@ -286,7 +292,7 @@ I messaggi di avviso, giustificazione e blocco sono stati testati usando il prop
 
 Per illustrare il funzionamento, verrà creata un'impostazione client avanzata aggiuntiva denominata **OutlookBlockTrustedDomains** e verrà specificato il nome di dominio del proprio indirizzo di posta elettronica. In questo modo si eviterà che il messaggio di blocco visualizzato in precedenza venga visualizzato per i destinatari che condividono il nome di dominio nell'indirizzo di posta elettronica, ma verrà comunque visualizzato per altri destinatari. Allo stesso modo è possibile creare impostazioni client avanzate aggiuntive per **OutlookWarnTrustedDomains** e **OutlookJustifyTrustedDomains**.
 
-1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel riquadro **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookBlockTrustedDomains**, e incollare il nome di dominio del proprio indirizzo e-mail come valore. Ad esempio:
     
@@ -308,7 +314,7 @@ Per questo passaggio dell'esercitazione verrà specificata una nuova impostazion
 
 Questa nuova impostazione avanzata del client denominata **OutlookUnlabeledCollaborationAction** non richiede un ID etichetta, ma specifica l'azione da intraprendere per i contenuti senza etichetta: 
 
-1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel riquadro **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookUnlabeledCollaborationAction** e specificare **Warn** come valore:
     
@@ -338,7 +344,7 @@ Nel computer client si vedranno ora i risultati della configurazione di questa i
 
 L'impostazione avanzata esistente del client verrà modificata conservando il nome **OutlookUnlabeledCollaborationAction**, ma cambiando il valore in **Justify**: 
 
-1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel riquadro **Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Warn** precedente con il nuovo valore **Justify**:
     
@@ -368,7 +374,7 @@ Nel computer client si vedranno ora i risultati della modifica del valore per qu
 
 Come in precedenza, l'impostazione avanzata esistente del client verrà modificata conservando il nome **OutlookUnlabeledCollaborationAction**, ma cambiando il valore in **Block**: 
 
-1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel riquadro **Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Justify** precedente con il nuovo valore **Block**:
     
@@ -424,7 +430,7 @@ User Response: Confirmed
 
 Se non si vogliono mantenere le modifiche apportate in questa esercitazione, seguire questa procedura:
 
-1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Elimina criteri**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Elimina criteri**.
 
 2. Se viene chiesto di confermare, selezionare **OK**.
 

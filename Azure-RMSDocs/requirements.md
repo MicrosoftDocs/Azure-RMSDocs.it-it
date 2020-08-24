@@ -4,7 +4,7 @@ description: Identificare i prerequisiti necessari per distribuire Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb55fb0acedc56c2b866d7ce681320c2dc9c2fcd
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: c984af422a867f8821c21a6e52df37e5d36437c7
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802124"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788935"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti di Azure Information Protection
 
@@ -70,7 +70,7 @@ Sono necessari altri prerequisiti per scenari specifici, ad esempio quando si us
 Per altre informazioni, vedere:
 
 - [Che cos'è una directory di Azure AD?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Integrare domini Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
+- [Integrare i domini di Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ## <a name="client-devices"></a>Dispositivi client
 
@@ -132,19 +132,19 @@ Ogni client Azure Information Protection presenta prerequisiti aggiuntivi. Per i
 
 I client Azure Information Protection possono etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word**, **Excel**, **PowerPoint**e **Outlook** da una delle edizioni di Office seguenti:
 
-- **App di Office versione minima 1805**, Build 9330,2078 da Office 365 Business o Microsoft 365 business. 
+- **App di Office versione minima 1805**, Build 9330,2078 da [app Microsoft 365 for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
 
     Questa edizione è supportata solo quando all'utente viene assegnata una licenza per Azure Rights Management, nota anche come Azure Information Protection per Office 365.
 
-- **Office 365 ProPlus**
+- **[App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office Professional Plus 2019**
+- **[App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
 
-- **Office Professional Plus 2016**
+- **[App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
 
-- **Office Professional Plus 2013 con Service Pack 1**
+- **[Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 con Service Pack 1**
 
-- **Office Professional Plus 2010 con Service Pack 2**
+- **[Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 con Service Pack 2**
 
 Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni, Azure Information Protection è supportato solo per la classificazione e le etichette che applicano la protezione non vengono visualizzate per gli utenti. 
 
@@ -246,7 +246,7 @@ Per altre informazioni, vedere [Deploying the Azure Rights Management Connector]
 
 I sistemi operativi seguenti supportano il servizio Azure Rights Management, che fornisce la protezione dei dati per AIP:
 
-|OS  |Versioni supportate  |
+|Sistema operativo  |Versioni supportate  |
 |---------|---------|
 |**Computer Windows**     |-Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
 |**macOS**     |   la versione minima di macOS è 10.8 (Mountain Lion)      |

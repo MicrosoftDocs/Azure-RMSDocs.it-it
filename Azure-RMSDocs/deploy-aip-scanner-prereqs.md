@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 38489d1d1ff7183e5e7a3963b401cdaecf2313dc
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: f190a97e18533640b2edc60513bb29a7ad7d7728
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073653"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788663"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner unificato per l'assegnazione di etichette
 
@@ -179,6 +179,7 @@ Per analizzare i file con percorsi di file di più di 260 caratteri, installare 
 |**Windows 10 o Windows Server 2016**     | Definire la seguente [impostazione di criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): Configurazione computer **criteri computer locale**  >  **Computer Configuration**  >  **modelli amministrativi**  >  **tutte le impostazioni**  >  **Abilita percorsi lunghi Win32**.    </br></br>Per ulteriori informazioni sul supporto dei percorsi di file lunghi in queste versioni, vedere la sezione [limitazione della lunghezza massima del percorso](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dalla documentazione per gli sviluppatori di Windows 10.    |
 |**Windows 10, versione 1607 o successiva**     |  Acconsentire esplicitamente alla funzionalità di **MAX_PATH** aggiornata. Per ulteriori informazioni, vedere [Enable Long paths in Windows 10 versioni 1607 e versioni successive](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
 | | |
+
 ## <a name="usage-statistics-requirements"></a>Requisiti statistici di utilizzo
 
 Disabilitare le statistiche di utilizzo usando uno dei metodi seguenti:

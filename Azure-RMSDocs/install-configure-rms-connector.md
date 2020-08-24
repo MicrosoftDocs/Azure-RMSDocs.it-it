@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a02d5bb811bd18698a0ca4ec0a797ff4e31ffa4
-ms.sourcegitcommit: a495476a439a57cf6a4b3446575e344504b3fefb
+ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87554943"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788722"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore Azure Rights Management
 
@@ -34,6 +34,7 @@ Assicurarsi di conoscere l'istanza corretta di Azure Sovereign cloud per consent
 - **AzureUSGovernment**: Azure per enti pubblici (GCC High/DOD)
 - **AzureUSGovernment2**: Azure per enti pubblici 2
 - **AzureUSGovernment3**: Azure per enti pubblici 3
+
 
 ## <a name="installing-the-rms-connector"></a>Installazione del connettore RMS
 
@@ -70,7 +71,8 @@ Prima di poter configurare il connettore RMS, è innanzitutto necessario selezio
 
 Dopo avere selezionato l'ambiente cloud, immettere il **nome utente** e la **password**. Assicurarsi di immettere le credenziali per un account che dispone di privilegi sufficienti per configurare il connettore RMS. Ad esempio, è possibile digitare <strong>admin@contoso.com</strong> e quindi specificare la password per l'account.
 
-Inoltre, se sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), verificare che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, verrà visualizzato il messaggio di errore: **tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Verificare che il servizio Microsoft Rights Management sia abilitato per l'organizzazione.**
+
+Inoltre, se sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), verificare che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, viene visualizzato il messaggio di errore: **tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Verificare che il servizio Microsoft Rights Management sia abilitato per l'organizzazione.**
 
 È possibile usare un account con uno dei privilegi seguenti:
 
@@ -227,7 +229,7 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 
 3.  Aggiungere il valore di stringa **ProxyAddress**, quindi impostare i dati per questo valore **http://&lt;MyProxyDomainOrIPaddress&gt;:&lt;MyProxyPort&gt;**
 
-    Per esempio:**http://proxyserver.contoso.com:8080**
+    Per esempio: **http://proxyserver.contoso.com:8080**
 
 4.  Chiudere l'editor del Registro di sistema, quindi riavviare il server o eseguire un comando IISReset per riavviare IIS.
 

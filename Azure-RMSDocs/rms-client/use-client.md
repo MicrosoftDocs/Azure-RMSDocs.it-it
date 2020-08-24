@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 53f9b0b11c89e66fccc10243d48bc2835884ea35
-ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
+ms.openlocfilehash: fa0c436035d13c5f1066e121b94e226dccd46d09
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437836"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788646"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -57,7 +57,7 @@ Poiché il client di etichettatura unificata e il client classico richiedono un'
 Usare le sezioni seguenti per determinare il client migliore per l'organizzazione:
 
 - [Client per l'assegnazione di etichette predefiniti per Office](#built-in-office-labeling-client)
-- [Client per l'etichettatura unificata di Azure Information Protection](#azure-information-protection-unified-labeling-client)
+- [Azure Information Protection client di etichetta unificata](#azure-information-protection-unified-labeling-client)
 - [Azure Information Protection client classico](#azure-information-protection-classic-client)
 - [Uso di più client nello stesso ambiente](#using-multiple-clients-in-the-same-environment)
 
@@ -126,7 +126,7 @@ Usare la tabella seguente per confrontare le funzionalità supportate dai tre cl
 
 Per confrontare le funzionalità di riservatezza predefinite di Office in diverse piattaforme del sistema operativo (Windows, macOS, iOS e Android) e per il Web, vedere la documentazione relativa alla conformità del Microsoft 365, [supporto per le funzionalità di etichetta di riservatezza nelle app](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Questa documentazione include anche i numeri di build di Office o le informazioni sul canale di aggiornamento di Office per le funzionalità supportate.
 
-|Funzionalità|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
+|Funzionalità|Client classico|Client per l'etichettatura unificata|Client di assegnazione di etichette incorporato di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Etichettatura manuale:| **Sì** | **Sì** |**Sì** |
 |Etichetta predefinita:| **Sì** | **Sì** | **Sì** |
@@ -138,7 +138,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Supporto multilingue per le etichette:| **Sì** | **Sì** |**Sì** |
 |Ereditarietà delle etichette dagli allegati di posta elettronica:| **Sì** | **Sì**  |No |
 |Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Popup dei messaggi in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| **Sì** <sup>1</sup> | **Sì** <sup>2</sup> | No |
-|Scanner per gli archivi dati locali:| **Sì** | **Sì<br />** | No |
+|Scanner per gli archivi dati locali:| **Sì** | **Sì <br />** | No |
 |Creazione di report centrale (analisi):| **Sì** | **Sì** | No |
 |Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta:| **Sì** | **Sì** <sup>3</sup>| No |
 |Barra di Information Protection nelle app Office:| **Sì** | **Sì**| No |
@@ -184,7 +184,7 @@ Note a piè di pagina:
 
 Quando il client di Azure Information Protection (classico) e il Azure Information Protection client di etichetta unificata supportano entrambe la stessa funzionalità, usare la tabella seguente per identificare alcune differenze funzionali tra i due client.
 
-|Funzionalità |Client classico|Client di etichetta unificato|
+|Funzionalità |Client classico|Client per l'etichettatura unificata|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Configurazione:| Opzione per installare i criteri demo locali | Nessun criterio demo locale|
 |Selezione e visualizzazione di etichette se applicate nelle app Office:|Dal pulsante **Proteggi** nella barra multifunzione <br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|Dal pulsante **Riservatezza** sulla barra multifunzione<br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|
@@ -200,6 +200,9 @@ Quando il client di Azure Information Protection (classico) e il Azure Informati
 |Etichette automatiche e consigliate: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
 |Supporto degli ordini per le etichette secondarie sugli allegati: | Abilitato con un' [impostazione client avanzata](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Abilitata per impostazione predefinita, nessuna configurazione richiesta|
 |Modificare il comportamento di protezione predefinito per i tipi di file: | È possibile utilizzare le [modifiche del registro di sistema](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) per eseguire l'override delle impostazioni predefinite di protezione nativa e generica | È possibile usare [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) per modificare i tipi di file che vengono protetti|
+|Ripetizioni automatiche | Le ripetizioni complete vengono eseguite automaticamente ogni volta che lo scanner rileva una modifica nei criteri o nelle impostazioni di assegnazione di etichette | A partire dalla versione [2.8.83](unifiedlabelingclient-version-release-history.md#version-2883-public-preview), gli amministratori possono scegliere di ignorare una ripetizione completa dopo avere apportato modifiche alle impostazioni del processo di analisi del contenuto o dei criteri. |
+|Individuazione della rete |Le funzionalità di individuazione di rete non sono disponibili per lo scanner classico | Gli amministratori possono individuare ulteriori repository rischiosi analizzando un intervallo o un indirizzo IP specificato.|
+| | | |
 
 Per un confronto dettagliato delle differenze di comportamento per specifiche impostazioni di protezione, vedere [confronto tra il comportamento delle impostazioni di protezione per un'etichetta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
@@ -217,7 +220,7 @@ Anche se il Azure Information Protection client di assegnazione unificata di eti
 
 - Proteggi documento PDF come file con [estensione Ppdf (formato precedente)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)
 
-- Visualizzare il pulsante Non inoltrare in Outlook
+- Visualizzare il pulsante **non trasmettere** in Outlook
 
 - Criteri demo
 
@@ -240,6 +243,6 @@ Per installare e configurare i client di Azure Information Protection, utilizzar
 
 - [Client Azure Information Protection](AIP-client.md)
 
-- [Client per l'etichettatura unificata di Azure Information Protection](unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection client di etichetta unificata](unifiedlabelingclient-version-release-history.md)
 
 Per altre informazioni sull'uso del client di assegnazione di etichette incorporato per le app di Office 365, vedere [etichette di riservatezza nelle app di Office](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).

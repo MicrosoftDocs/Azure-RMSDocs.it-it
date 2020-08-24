@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: b23afa0975f5d8f353b3ed8a5d4cf5332712f3b7
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: cc58a32da1bca1ce14704e0eb23ebbd0007073f7
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298190"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788969"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Ulteriori requisiti di Azure AD per Azure Information Protection
 
@@ -64,7 +64,7 @@ Dopo aver confermato questi prerequisiti, eseguire una delle operazioni seguenti
 
 - **Tenant federati, in cui i server federativi operano in locale**. Configurare i server federativi per Azure Active Directory o Office 365. Se ad esempio si usa AD FS, vedere [configurare metodi di autenticazione aggiuntivi per ad FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
-    Per ulteriori informazioni su questo scenario, vedere [la pagina relativa al funzionamento di office 365 – Identity Program ora semplificata](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) nel Blog di Office. 
+    Per ulteriori informazioni su questo scenario, vedere  [la pagina relativa al funzionamento di office 365 – Identity Program ora semplificata](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) nel Blog di Office. 
 
 ## <a name="rights-management-connector--aip-scanner-requirements"></a>Requisiti di Rights Management Connector/AIP scanner
 

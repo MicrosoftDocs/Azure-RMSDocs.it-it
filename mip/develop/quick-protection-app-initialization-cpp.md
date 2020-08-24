@@ -1,17 +1,17 @@
 ---
-title: Guida introduttiva - inizializzazione per i client di Microsoft Information Protection (MIP) SDK C++
-description: Guida introduttiva che mostra come scrivere la logica di inizializzazione per applicazioni client di Microsoft Information Protection (MIP) SDK.
+title: Avvio rapido - Inizializzazione per i client MIP SDK per C++ per l'API Protezione
+description: Argomento di avvio rapido che illustra come scrivere la logica di inizializzazione per applicazioni client di Microsoft Information Protection (MIP) SDK con l'API Protezione.
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: e0f77c27c38b8b2f1baf4385efce1ee7336c8f9d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 063db1a923e66f108583b17ee998549511265bee
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766389"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564146"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Guida introduttiva: Inizializzazione delle applicazioni client per le API Protezione (C++)
 

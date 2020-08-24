@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6dcad16cdcb2c2d00277ce94b9cf4ab5db94227
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ad11aefa787ded3632b2c3d017fc83cee77364c2
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049533"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788748"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Esecuzione dello scanner Azure Information Protection
 
@@ -87,7 +87,7 @@ Modificare il livello di registrazione utilizzando il parametro *reportLevel* co
 
 Impossibile modificare il percorso o il nome della cartella del report. Se si desidera archiviare i report in un percorso diverso, è consigliabile utilizzare una giunzione di directory per la cartella.
 
-Ad esempio, usare il comando [mklink](/windows-server/administration/windows-commands/mklink) :`mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
+Ad esempio, usare il comando [mklink](/windows-server/administration/windows-commands/mklink) : `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
 
 Se questi passaggi sono stati eseguiti dopo una configurazione iniziale e l'installazione, continuare con [la configurazione dello scanner per applicare la classificazione e la protezione](deploy-aip-scanner-configure-install.md#configure-the-scanner-to-apply-classification-and-protection).
 
@@ -109,32 +109,34 @@ Per arrestare un'analisi attualmente in esecuzione prima che venga completata, u
 
 Per il [primo ciclo di analisi](#run-a-discovery-cycle-and-view-reports-for-the-scanner), lo scanner controlla tutti i file negli archivi dati configurati. Per le analisi successive, vengono controllati solo i file nuovi o modificati.
 
-Il controllo di tutti i file è in genere utile quando si desidera che i report includano tutti i file e quando lo scanner viene eseguito in modalità di individuazione.
+Il controllo di tutti i file è in genere utile quando si desidera che i report includano tutti i file, quando si dispone di modifiche che si desidera applicare in tutti i file e quando lo scanner viene eseguito in modalità di individuazione.
 
-Eseguire una nuova analisi di tutti i file usando uno dei metodi seguenti:
+**Per eseguire manualmente una ripetizione dell'analisi completa:**
 
-- [Esegui manualmente una ripetizione dell'analisi completa](#manually-run-a-full-rescan)
-- [Attivare una ripetizione dell'analisi completa aggiornando il criterio](#trigger-a-full-rescan-by-refreshing-the-policy)
+1. Passare al riquadro **processi di analisi Azure Information Protection-contenuto** nel portale di Azure.
 
-### <a name="manually-run-a-full-rescan"></a>Esegui manualmente una ripetizione dell'analisi completa
+1. Selezionare il processo di analisi del contenuto dall'elenco e quindi selezionare l'opzione **Ripeti analisi di tutti i file** :
 
-Forza lo scanner a ispezionare nuovamente tutti i file, in base alle esigenze, dal riquadro **processi di analisi Azure Information Protection-contenuto** nel portale di Azure.
-
-Selezionare il processo di analisi del contenuto dall'elenco e quindi selezionare l'opzione **Ripeti analisi di tutti i file** :
-
-![Avviare un'altra analisi per lo scanner di Azure Information Protection](./media/scanner-rescan-files.png)
+    ![Avviare un'altra analisi per lo scanner di Azure Information Protection](./media/scanner-rescan-files.png)
 
 Al termine di un'analisi completa, il tipo di analisi viene automaticamente modificato in incrementale in modo che, per le analisi successive, vengano nuovamente analizzati solo i file nuovi o modificati.
 
-### <a name="trigger-a-full-rescan-by-refreshing-the-policy"></a>Attivare una ripetizione dell'analisi completa aggiornando il criterio
+> [!TIP]
+> Se sono state apportate modifiche al [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)AIP, il portale di Azure chiederà di ignorare una ripetizione completa. Per assicurarsi che la ripetizione dell'analisi avvenga, assicurarsi di selezionare **No** nel prompt visualizzato.
+> 
+### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-27990-and-earlier"></a>Attivare una ripetizione dell'analisi completa modificando le impostazioni (versioni 2.7.99.0 e precedenti)
 
-Tutti i file vengono controllati anche ogni volta che lo scanner dispone di impostazioni nuove o modificate per l'etichettatura automatica e consigliata. Lo scanner aggiorna automaticamente i criteri ogni quattro ore.
+Nelle versioni dello scanner 2.7.99.0 e versioni precedenti, tutti i file vengono analizzati ogni volta che lo scanner rileva impostazioni nuove o modificate per le etichette automatiche e consigliate. Lo scanner aggiorna automaticamente i criteri ogni quattro ore.
 
-Per aggiornare i criteri prima, ad esempio durante il test, eliminare manualmente il contenuto di **%LocalAppData%\Microsoft\MSIP\mip \\ < *ProcessName*> directory \mip** e riavviare il servizio Azure Information Protection.
+Per aggiornare prima il criterio, ad esempio durante il test, eliminare manualmente il contenuto della directory **%LocalAppData%\Microsoft\MSIP\mip \<processname> \mip** e riavviare il servizio Azure Information Protection.
 
-> [!NOTE]
-> Se sono state modificate anche le impostazioni di protezione per le etichette, attendere 15 minuti aggiuntivi dal momento in cui sono state salvate le impostazioni di protezione aggiornate prima di riavviare il servizio Azure Information Protection.
+Se sono state modificate anche le impostazioni di protezione per le etichette, attendere 15 minuti aggiuntivi dal momento in cui sono state salvate le impostazioni di protezione aggiornate prima di riavviare il servizio Azure Information Protection.
+
+> [!IMPORTANT]
+> Se è stato eseguito l'aggiornamento alla versione [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) o successiva, AIP ignora la ripetizione dell'analisi completa per le impostazioni aggiornate per garantire prestazioni coerenti. Se è stato eseguito l'aggiornamento, assicurarsi di [eseguire una ripetizione dell'analisi completa manualmente](#rescanning-files) , se necessario. 
 >
+> Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on,** assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
+> 
 
 ## <a name="troubleshooting-a-stopped-scan"></a>Risoluzione dei problemi relativi a un'analisi arrestata
 

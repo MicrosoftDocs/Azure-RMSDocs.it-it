@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection le etichette unificate client-cronologia delle versioni & criteri di supporto
 description: Vedere le informazioni sulla versione del client per l'etichettatura unificata di Azure Information Protection per Windows.
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 07/15/2020
+ms.date: 08/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a02fabd167fdbe7f0e2cef826c68920c164a20e4
-ms.sourcegitcommit: c0cd6591a44b213a68a6d1bb47acbb344bb94783
+ms.openlocfilehash: 6a264c971be86e324f3541f20ab6c91735619f77
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2020
-ms.locfileid: "88256860"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788697"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -29,7 +29,9 @@ ms.locfileid: "88256860"
 
 È possibile scaricare il Azure Information Protection Unified Labeling client dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-Dopo un breve ritardo di genere in un paio di settimane, la versione di disponibilità generale più recente è inclusa anche nel catalogo di Microsoft Update con il nome di un prodotto **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection client unificato**per l'assegnazione di etichette e la classificazione degli **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
+Dopo un breve ritardo di un paio di settimane, viene anche inclusa la versione di disponibilità generale più recente nel catalogo Microsoft Update. Le versioni Azure Information Protection hanno un nome di prodotto **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection client unificato**per l'assegnazione di etichette e una classificazione degli **aggiornamenti**. 
+
+L'inclusione Azure Information Protection nel catalogo significa che è possibile aggiornare il client utilizzando WSUS o Configuration Manager o altri meccanismi di distribuzione software che utilizzano Microsoft Update di.
 
 Per altre informazioni, vedere [upgradeing and maintaining the Azure Information Protection Unified Labeling client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -63,6 +65,96 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
+## <a name="version-2883-public-preview"></a>Versione 2.8.83 (anteprima pubblica)
+
+Versione dello scanner Unified Labeling 2.8.83
+
+**Rilasciato** 08/24/2020
+
+**Nuove funzionalità per lo scanner Unified Labeling:**
+- [Ripetizioni complete facoltative per le modifiche rilevate](#optional-full-rescans-for-changes-detected)
+- [Supporto per l'individuazione della rete](#network-discovery-support)
+
+### <a name="optional-full-rescans-for-changes-detected"></a>Ripetizioni complete facoltative per le modifiche rilevate
+
+Gli amministratori possono ora ignorare una ripetizione dell'analisi completa dopo avere apportato modifiche ai criteri o ai processi di analisi del contenuto. Ignorando una ripetizione completa si applicano le modifiche solo ai file che sono stati modificati o creati dall'ultima analisi.
+
+Ad esempio, è possibile che siano state apportate modifiche che incidono solo sull'utente finale, ad esempio nei contrassegni visivi, e che non si voglia richiedere il tempo necessario per eseguire immediatamente una ripetizione dell'analisi completa. 
+
+Ignorare la ripetizione dell'analisi immediata completa e tornare in seguito per [eseguire una ripetizione dell'analisi completa](../deploy-aip-scanner-manage.md#rescanning-files) e applicare le modifiche nei repository.
+
+> [!IMPORTANT]
+> Gli amministratori che apportano modifiche ai criteri e ai processi di analisi dei contenuti devono ora comprendere gli effetti delle modifiche apportate al contenuto e determinare se è necessaria una ripetizione dell'analisi completa.
+> 
+> Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on,** assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
+>
+
+### <a name="network-discovery-support"></a>Supporto per l'individuazione della rete
+
+Lo scanner Unified Labeling include ora un nuovo servizio di **individuazione della rete** , che consente di analizzare gli indirizzi IP o gli intervalli specificati per le condivisioni file di rete che possono avere contenuto sensibile. 
+
+Il servizio di **individuazione della rete** aggiorna i report del **repository** con un elenco di percorsi di condivisione che potrebbero essere a rischio, in base alle autorizzazioni individuate e ai diritti di accesso. Controllare i report del **repository** aggiornati per assicurarsi che i processi di analisi dei contenuti includano tutti i repository che devono essere analizzati.
+
+- [Prerequisiti per l'individuazione della rete](#network-discovery-prerequisites)
+- [Utilizzo del servizio di individuazione della rete](#using-the-network-discovery-service)
+
+### <a name="network-discovery-prerequisites"></a>Prerequisiti per l'individuazione della rete
+
+|Requisito  |Descrizione  |
+|---------|---------|
+|**Scanner aggiornato e cluster configurato**     |  Aggiornare la versione dello scanner e verificare che il cluster dello scanner sia configurato correttamente. </br></br>Per altre informazioni, vedere: </br>- [Aggiornamento dello scanner](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner) </br>- [Creare un cluster di scanner](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)       |
+|**Analisi Azure Information Protection**     | Assicurarsi di aver abilitato Azure Information Protection Analytics. </br></br>Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima).** </br></br>Per ulteriori informazioni, vedere [la pagina relativa alla creazione di report centrali per Azure Information Protection (anteprima pubblica)](../reports-aip.md).        |
+
+### <a name="using-the-network-discovery-service"></a>Utilizzo del servizio di individuazione della rete
+
+1. Abilitare l'individuazione di rete eseguendo il cmdlet di PowerShell [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) . 
+
+    > [!IMPORTANT]
+    > Quando si esegue questo cmdlet, assicurarsi di usare un utente vulnerabile come valore per il parametro **StandardDomainsUserAccount** per assicurarsi che venga segnalato l'accesso pubblico ai repository. 
+    >
+    > Questo utente deve essere membro solo del gruppo **Domain Users** e viene usato per simulare l'accesso pubblico ai repository.
+
+1. Nella portale di Azure passare a Azure Information Protection > processi di **analisi di rete** e [creare processi per analizzare aree specifiche della rete](../deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview). 
+
+
+1. Usare i report generati nel nuovo riquadro [**repository**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) per trovare altre condivisioni file di rete che potrebbero essere a rischio. Aggiungere qualsiasi condivisione file rischiosa ai [processi di analisi del contenuto](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) per analizzare i repository aggiunti per il contenuto sensibile.
+
+#### <a name="network-discovery-cmdlets"></a>Cmdlet di individuazione della rete
+
+I cmdlet di PowerShell aggiunti per l' **individuazione della rete** includono:
+
+|Cmdlet  |Descrizione  |
+|---------|---------|
+|[**Get-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Ottiene l'impostazione corrente che indica se il servizio di **individuazione** della rete estrae i dati di analisi di rete dalla configurazione predefinita, online o da un file offline esportato dal portale di Azure.      |
+|[**Get-MIPNetworkDiscoveryJobs**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Ottiene un elenco di processi di analisi di rete attualmente configurati.     |
+|[**Get-MIPNetworkDiscoveryStatus**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     Ottiene lo stato corrente del servizio di **individuazione della rete** .    |
+| [**Import-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)     |    Importa la configurazione per un processo di analisi di rete da un file.     |
+| [**Install-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| Installa il servizio di **individuazione della rete** |
+|[**Set-MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   Imposta la configurazione che indica se il servizio di **individuazione** della rete estrae i dati di analisi della rete dalla configurazione predefinita, online o da un file offline esportato dal portale di Azure.      |
+|[**Start-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)     |  Esegue immediatamente un processo di analisi di rete specifico.       |
+|[**Uninstall-MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Disinstalla il servizio di **individuazione della rete** .       |
+
+### <a name="fixes-and-improvements"></a>Correzioni e miglioramenti
+
+Nella versione 2.8.83 di Azure Information Protection scanner Unified Labeling sono state fornite le correzioni seguenti:
+
+|Funzionalità  |Problemi risolti  |
+|---------|---------|
+|**Requisiti del percorso del file**     |  Miglioramenti per l'analisi dei file con percorsi lunghi. Per ulteriori informazioni, vedere [requisiti](../deploy-aip-scanner-prereqs.md#file-path-requirements)per il percorso dei file.       |
+|**Supporto di [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) per più ContentDatabases**     |Lo scanner AIP ora analizza gli ambienti SharePoint completi quando sono presenti più ContentDatabases.    |
+|**Percorsi FilePath di [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) supportati**     |Lo scanner AIP ora supporta i file di SharePoint con un punto nel percorso, ma senza estensione. </br></br>Ad esempio, un file con il percorso `https://sharepoint.contoso.com/shared documents/meeting-notes` , senza estensione, viene ora analizzato correttamente.      |
+|**Supporto per tipi di informazioni riservate personalizzate**     |   Lo scanner AIP supporta ora i [tipi di informazioni riservate personalizzate](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) che vengono creati in Microsoft Security and Compliance Center e non appartengono a nessun criterio.      |
+
+## <a name="version-271010"></a>Versione 2.7.101.0
+
+Scanner unificato per l'assegnazione di etichette e versione client 2.7.101.0
+
+**Rilasciato** 08/23/2020
+
+**Difficoltà**
+
+Correzione di un problema per gli utenti di PPT, Excel e Word che causavano il blocco dei file, l'arresto anomalo o la necessità di ripetere il salvataggio che era correlato a etichette obbligatorie configurate con protezione, filigrana e/o contrassegno di contenuto.
+
 ## <a name="version-27990"></a>Versione 2.7.99.0
 
 Scanner unificato per l'assegnazione di etichette e versione client 2.7.99.0
@@ -70,6 +162,8 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.99.0
 **Rilasciato** 07/20/2020
 
 **Correzioni e miglioramenti:**
+
+**Rilasciato** 07/19/2020
 
 Correzione dei problemi nelle azioni di assegnazione di etichette di file per i nuovi log di controllo delle **etichette** .
 
@@ -83,7 +177,8 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.96.0
 
 **Nuove funzionalità per lo scanner Unified Labeling:**
 
-- [Usare lo scanner per applicare etichette in base alle condizioni consigliate](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). I clienti AIP possono ora scegliere di implementare l'etichettatura automatica lato servizio. Questa funzionalità consente agli utenti finali di AIP di seguire sempre le raccomandazioni invece dello scenario precedente, che abilitava solo l'assegnazione automatica di etichette sul lato utente.
+
+- [Usare lo scanner per applicare etichette in base alle condizioni consigliate](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). I clienti AIP possono ora scegliere di implementare solo l'etichettatura automatica lato servizio. Questa funzionalità consente agli utenti finali di AIP di seguire sempre le raccomandazioni invece dello scenario precedente, che abilitava solo l'assegnazione automatica di etichette sul lato utente.
 
 - [Informazioni sui file individuati in precedenza da scanner eliminati dal repository analizzato](https://docs.microsoft.com/azure/information-protection/reports-aip) Questi file eliminati non sono stati segnalati in precedenza in AIP Analytics e sono ora disponibili nel report di individuazione dello scanner.
 
@@ -126,7 +221,7 @@ Per altre informazioni, vedere:
 
 A partire da questa versione del client di Azure Information Protection, sono supportate solo le versioni di TLS 1,2 o successive.
     
-I clienti che dispongono di un programma di installazione di TLS che non supporta TLS 1,2 devono passare al programma di installazione che supporta TLS 1,2 per l'uso di criteri di Azure Information Protection, token, controllo e protezione e per ricevere comunicazioni basate su Azure Information Protection. 
+I clienti che dispongono di un programma di installazione di TLS che non supporta TLS 1,2 devono passare a una configurazione che supporta TLS 1,2 per l'uso di criteri di Azure Information Protection, token, controllo e protezione e per ricevere comunicazioni basate su Azure Information Protection. 
     
 Per ulteriori informazioni sui requisiti, vedere [firewall e requisiti dell'infrastruttura di rete](../requirements.md#firewalls-and-network-infrastructure).
 
@@ -150,7 +245,7 @@ Per ulteriori informazioni sui requisiti, vedere [firewall e requisiti dell'infr
 
 - Le [variabili utente dinamiche](../configure-policy-markings.md#using-variables-in-the-text-string) sono ora visualizzate nei contrassegni visivi di un documento come previsto.
 
-- Problema per cui è stata risolta solo la prima pagina di contenuto di un file PDF per l'applicazione delle regole di classificazione automatica e la classificazione automatica basata su tutto il contenuto nel file PDF ora procede come previsto. Per ulteriori informazioni sulla classificazione e l'assegnazione di etichette, vedere [domande frequenti sulla classificazione e l'assegnazione di etichette](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
+- Si è verificato un problema per cui solo la prima pagina di contenuto di un file PDF veniva utilizzata per l'applicazione delle regole di classificazione e la classificazione autoclassificazione basata su tutto il contenuto del file PDF ora procede come previsto. Per ulteriori informazioni sulla classificazione e l'assegnazione di etichette, vedere [domande frequenti sulla classificazione e l'assegnazione di etichette](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
 
 - Quando vengono configurati più account di Exchange e il client Azure Information Protection Outlook è abilitato, i messaggi di posta elettronica vengono inviati dall'account secondario come previsto. Per ulteriori informazioni sulla configurazione del client Unified Labeling con Outlook, vedere [prerequisiti aggiuntivi per il Azure Information Protection client Unified Labeling](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -175,12 +270,12 @@ Supportato tramite 12/29/2020
 - Correlate allo [scanner](../deploy-aip-scanner.md) :
     - [Individuazione più semplice in locale e nel sito secondario di SharePoint](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories). L'impostazione di ciascun sito specifico non è più necessaria. 
     - Proprietà avanzata per il [ridimensionamento del blocco SQL](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) aggiunto.
-    - Gli amministratori hanno ora la possibilità di [arrestare le analisi esistenti ed eseguire una nuova analisi](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) se è stata apportata una modifica all'etichetta predefinita.
+    - Gli amministratori hanno ora la possibilità di [arrestare le analisi esistenti ed eseguire una ripetizione dell'analisi](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) se è stata apportata una modifica all'etichetta predefinita.
     - Per impostazione predefinita, lo scanner ora imposta la telemetria minima per le analisi più veloci e le dimensioni ridotte del log e i tipi di informazioni sono ora memorizzati nella cache nel database Altre informazioni sull' [ottimizzazione dello scanner](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
     - Lo scanner supporta ora distribuzioni separate per il database e il servizio, mentre i diritti **sysadmin** sono necessari solo per la distribuzione del database.
     - Miglioramenti apportati alle prestazioni dello scanner. 
 
-- Modifica del cmdlet di [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **set-AIPFileLabel** per abilitare la rimozione della protezione da file PST, rar, 7zip e msg. Questa funzionalità è disabilitata per impostazione predefinita e deve essere attivata usando il cmdlet [set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) , come descritto [qui](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files).  
+- Modifica del cmdlet di [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **set-AIPFileLabel** per abilitare la rimozione della protezione dai file PST, rar, 7zip e msg. Questa funzionalità è disabilitata per impostazione predefinita e deve essere attivata usando il cmdlet [set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) , come descritto [qui](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files).  
 
 - È stata aggiunta la possibilità per gli amministratori di Azure Information Protection di controllare quando vengono usate le estensioni. Pfile per i file. Altre informazioni sulla [modifica dei tipi di file protetti](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
 
@@ -196,7 +291,7 @@ Supportato tramite 12/29/2020
 - Sono stati risolti i danneggiamenti precedenti dei file txt e PDF protetti.
 - È stata corretta l'assegnazione di etichette incoerenti tra **automatico** e **manuale** in log Analytics. 
 - Sono stati risolti problemi di ereditarietà imprevisti identificati tra i nuovi messaggi di posta elettronica e l'ultimo messaggio di posta elettronica aperto.  
-- La protezione dei file con estensione msg come. msg. Pfile ora funziona come previsto. 
+- La protezione dei file con **estensione msg** come **. msg. Pfile** ora funziona come previsto. 
 - Le autorizzazioni di comproprietario aggiunte dalle impostazioni definite dall'utente di Office sono ora applicate come previsto. 
 - Quando si immette la giustificazione del downgrade delle autorizzazioni, non è più possibile immettere il testo quando sono già selezionate altre opzioni. 
 
@@ -250,7 +345,7 @@ Supportato tramite 09/09/2020
 
 - [Supporto per i computer disconnessi](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) esportando i file da un client e copiarli manualmente nel computer disconnesso. Si noti che questa configurazione è supportata per l'assegnazione di etichette con Esplora file, PowerShell e lo scanner. Questa configurazione non è supportata per l'assegnazione di etichette alle app di Office.
 
-- Nuovo cmdlet [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)per raccogliere tutti i file di log da%LocalAppData%\Microsoft\MSIP\Logs e salvarli in un singolo file compresso con formato zip. Questo file può quindi essere inviato a supporto tecnico Microsoft se viene richiesto di inviare i file di log per consentire l'analisi di un problema segnalato.
+- Nuovo cmdlet [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)per raccogliere tutti i file di log da%LocalAppData%\Microsoft\MSIP\Logs e salvarli in un singolo file compresso con formato zip. È possibile inviare questo file con estensione zip a supporto tecnico Microsoft se viene richiesto di inviare i file di log per consentire l'analisi di un problema segnalato.
 
 **Correzioni**
 

@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e54afaf29c01072a99bf943eec5326b5c839472f
-ms.sourcegitcommit: b9ed44cc71e2fa4927e046a3819f758c3e098e82
+ms.openlocfilehash: b41195e6eb50dffe5aada630b423a73c0024d244
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711970"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788629"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -106,4 +106,4 @@ Tuttavia, è possibile integrare questa funzionalità precedente con le etichett
 
 Si noti che non è necessario eseguire questa operazione se si usa Outlook sul Web con Exchange Online, perché questa combinazione supporta l'etichettatura incorporata quando si pubblicano le etichette di riservatezza da Office 365 Security & Compliance Center, Microsoft 365 Security Center o Microsoft Compliance Center.
 
-Se non è possibile usare le etichette predefinite con Outlook sul Web, vedere la procedura di configurazione per questa soluzione alternativa: [integrazione con la classificazione dei messaggi di Exchange legacy](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)
+Se non è possibile usare l'assegnazione di etichette incorporata con Outlook sul Web, vedere la procedura di configurazione per questa soluzione alternativa: [integrazione della classificazione dei messaggi di Exchange con Azure Information Protection per una soluzione per l'assegnazione di etichette ai dispositivi mobili](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).

@@ -4,18 +4,18 @@ description: Esercitazione introduttiva per la modifica dei criteri di Azure Inf
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5521ef3756406457ea0944e87b3fbf3567baae2f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: be5e90f0451f92fff028ff4c583f0753f45567af
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264447"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -25,6 +25,12 @@ ms.locfileid: "87802267"
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>
+> **Per distribuire il client AIP con interfaccia classica**, aprire un ticket di supporto per ottenere l'accesso al download.
+
+> [!TIP]
+> Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la [documentazione sulla conformità di Microsoft 365](/microsoft-365/compliance/sensitivity-labels) per istruzioni equivalenti a questa esercitazione.
+> 
 
 In questa esercitazione si apprenderà come:
 > [!div class="checklist"]
@@ -50,9 +56,7 @@ Per completare questa esercitazione, è necessario:
     
     Questi passaggi sono illustrati nell'[Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
-3. Deve essere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
-    
-    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la [documentazione sulla conformità di Microsoft 365](/microsoft-365/compliance/sensitivity-labels) per istruzioni equivalenti a questa esercitazione.
+3. Avere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
 
 4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     
@@ -68,9 +72,10 @@ Per completare questa esercitazione, è necessario:
     
     - Office Professional Plus 2010 con Service Pack 2.
 
-Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
-
-A questo punto, procedere con l'esercitazione.
+> [!TIP]
+> Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
+> 
+A questo punto, procedere con l'esercitazione. Continuare con [Modificare i criteri di Azure Information Protection](#edit-the-azure-information-protection-policy).
 
 ## <a name="edit-the-azure-information-protection-policy"></a>Modificare i criteri di Azure Information Protection
 
