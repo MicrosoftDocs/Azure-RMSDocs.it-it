@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7960c945ee51c5d2d81f26aa75f350aeb87c0f60
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: 7f7964081893635052de8f5a8da32f7010f49cc5
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788822"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810355"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -210,7 +210,7 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
 
         Quando si aggiungono i percorsi di SharePoint, utilizzare la sintassi seguente:
     
-        |Percorso  |Sintassi  |
+        |Path  |Sintassi  |
         |---------|---------|
         |**Percorso radice**     | `http://<SharePoint server name>` </br></br>Analizza tutti i siti, incluse le raccolte siti consentite per l'utente dello scanner. </br>Richiede [autorizzazioni aggiuntive](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) per individuare automaticamente il contenuto radice        |
         |**Raccolta o sito secondario di SharePoint specifico**     | I tipi validi sono: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Richiede [autorizzazioni aggiuntive](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) per individuare automaticamente il contenuto della raccolta siti         |
@@ -276,7 +276,7 @@ Per ulteriori informazioni, vedere [come etichettare i file in modo non interatt
 Per ottenere un token di Azure AD:
 
 1. Tornare alla portale di Azure per creare un'applicazione Azure AD per specificare un token di accesso per l'autenticazione.
-1. 
+
 1. Dal computer Windows Server, se all'account del servizio di scanner è stato concesso il diritto di **accesso locale** per l'installazione, accedere con questo account e avviare una sessione di PowerShell. 
 
     Eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) specificando i valori copiati nel passaggio precedente:

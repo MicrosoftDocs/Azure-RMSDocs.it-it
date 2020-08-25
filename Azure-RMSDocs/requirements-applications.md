@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37cb3b1f3c3eb60459cabe813f0cb00fb69b7d5b
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 2bf09c4f5ff7587db251b3edeae556621a9aaede
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802165"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810321"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -36,7 +36,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="windows-rms-enlightened-applications"></a>Applicazioni abilitate per Windows RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [App di Office 365](#office-365-app-support) <br />- Office 2010 <br />-Office 2013<br />- Office 2016 <br />-Office 2019 <br />- [Office per il Web (visualizzazione di documenti protetti)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook da Office 365 ProPlus<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
@@ -45,7 +45,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="macos-rms-enlightened-applications"></a>applicazioni abilitate per macOS RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -App Office 365<br />-Office 2019 per Mac<br />-Office 2016 per Mac<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 per Mac<br />-Outlook 2016 per Mac<br />- [Web browser](#web-browser-support)     |
@@ -54,7 +54,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="android-rms-enlightened-applications"></a>Applicazioni abilitate per Android RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |-App GigaTrust per Android<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />-Office Mobile (a meno che non si utilizzino etichette di riservatezza, limitate alla visualizzazione e alla modifica di documenti protetti) <br />- [Web browser](#web-browser-support)      |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry <br />- [App GigaTrust per Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung email (S3 e versioni successive)](#email-clients-using-exchange-activesync-irm)<br />-Classificazione TITUS per dispositivi mobili <br /><br />- [Web browser](#web-browser-support)       |
@@ -64,7 +64,7 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="ios-rms-enlightened-applications"></a>applicazioni abilitate per iOS RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -GigaTrust<br />-Office Mobile <br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />-TITUS docs<br />- [Web browser](#web-browser-support)    |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection app (visualizzazione di messaggi di posta elettronica protetti)<br />-Lavoro BlackBerry<br />-Citrix WorxMail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook per iPad e iPhone](#email-clients-using-exchange-activesync-irm)<br />-TITUS mail <br />- [Web browser](#web-browser-support)     |
@@ -73,20 +73,20 @@ Queste applicazioni e soluzioni sono note come "con RMS" e hanno [restrizioni di
 
 ## <a name="windows-10-mobile-rms-enlightened-applications"></a>Applicazioni abilitate per Windows 10 Mobile RMS
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | -App Office per dispositivi mobili (visualizzazione di documenti protetti con Azure RMS) <br />- [Web browser](#web-browser-support)    |
 |[**Posta elettronica**](#viewing-protected-content-in-email-clients)    |  -Citrix WorxMail <br />-Posta di Outlook (visualizzazione di messaggi di posta elettronica protetti) <br />- [Web browser](#web-browser-support)     |
-|[**Altri tipi di file**](#supported-text-and-image-file-types)    | Non supportate   |
+|[**Altri tipi di file**](#supported-text-and-image-file-types)    | Non supportato   |
 | | |
 
 ## <a name="blackberry-10-rms-enlightened-applications"></a>Applicazioni abilitate per RMS BlackBerry 10
 
-|Tipo  |Applicazioni supportate   |
+|Type  |Applicazioni supportate   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Web browser](#web-browser-support)    |
-|[**Posta elettronica**](#viewing-protected-content-in-email-clients)   | - [Posta elettronica BlackBerry](#email-clients-using-exchange-activesync-irm) <br />- [Web browser](#web-browser-support)      |
-|[**Altri tipi di file**](#supported-text-and-image-file-types)    | Non supportate   |
+|[**Posta elettronica**](#viewing-protected-content-in-email-clients)   | - [ Posta elettronica BlackBerry](#email-clients-using-exchange-activesync-irm) <br />- [Web browser](#web-browser-support)      |
+|[**Altri tipi di file**](#supported-text-and-image-file-types)    | Non supportato   |
 | | |
 
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad11aefa787ded3632b2c3d017fc83cee77364c2
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: d4b3520d89346d0b6fb86a42fcf774fcb4a86499
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788748"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810287"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Esecuzione dello scanner Azure Information Protection
 
@@ -124,9 +124,9 @@ Al termine di un'analisi completa, il tipo di analisi viene automaticamente modi
 > [!TIP]
 > Se sono state apportate modifiche al [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)AIP, il portale di Azure chiederà di ignorare una ripetizione completa. Per assicurarsi che la ripetizione dell'analisi avvenga, assicurarsi di selezionare **No** nel prompt visualizzato.
 > 
-### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-27990-and-earlier"></a>Attivare una ripetizione dell'analisi completa modificando le impostazioni (versioni 2.7.99.0 e precedenti)
+### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-271010-and-lower"></a>Attivare una ripetizione dell'analisi completa modificando le impostazioni (versioni 2.7.101.0 e precedenti)
 
-Nelle versioni dello scanner 2.7.99.0 e versioni precedenti, tutti i file vengono analizzati ogni volta che lo scanner rileva impostazioni nuove o modificate per le etichette automatiche e consigliate. Lo scanner aggiorna automaticamente i criteri ogni quattro ore.
+Nelle versioni dello scanner [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) e versioni precedenti, tutti i file vengono analizzati ogni volta che lo scanner rileva impostazioni nuove o modificate per le etichette automatiche e consigliate. Lo scanner aggiorna automaticamente i criteri ogni quattro ore.
 
 Per aggiornare prima il criterio, ad esempio durante il test, eliminare manualmente il contenuto della directory **%LocalAppData%\Microsoft\MSIP\mip \<processname> \mip** e riavviare il servizio Azure Information Protection.
 
