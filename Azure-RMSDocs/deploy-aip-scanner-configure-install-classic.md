@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c10aed757d625cf78fadc2b3d5889025c460ab75
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a890f7d9096b628489ceeaa156a9ce124d1535b3
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049660"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953032"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Configurazione e installazione dello scanner classico Azure Information Protection
 
@@ -63,7 +63,7 @@ Per configurare lo scanner:
 
 1. [Accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)e passare al riquadro **Azure Information Protection** .
 
-    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Information** e selezionare **Azure Information Protection**.
 
 1. Individuare le opzioni del menu **scanner** e selezionare **cluster**.
 
@@ -88,7 +88,7 @@ Per configurare lo scanner:
     |Sezione  |Impostazioni  |
     |---------|---------|
     |**Impostazioni del processo di analisi del contenuto**     |    - **Pianificazione**: Mantieni il valore predefinito **manuale** </br>- **Tipi di informazioni da**individuare: modificare **solo i criteri** </br>- **Configurare i repository**: non configurare in questo momento perché è necessario salvare prima il processo di analisi del contenuto.         |
-    |**Imposizione dei criteri**     | - **Imponi**: seleziona **disattivato** </br>- **Etichettare i file in base al contenuto**: Mantieni il valore predefinito **in** </br>- **Etichetta predefinita**: Mantieni il valore predefinito dei **criteri predefiniti** </br>- Modifica **etichette file**: Mantieni il valore predefinito **off**        |
+    |**Applicazione dei criteri**     | - **Imponi**: seleziona **disattivato** </br>- **Etichettare i file in base al contenuto**: Mantieni il valore predefinito **in** </br>- **Etichetta predefinita**: Mantieni il valore predefinito dei **criteri predefiniti** </br>- Modifica **etichette file**: Mantieni il valore predefinito **off**        |
     |**Configurare le impostazioni del file**     | - **Mantieni "Data modifica", "Ultima modifica" e "modificato da"**: Mantieni il valore predefinito **in** </br>- **Tipi di file da analizzare**: Mantieni i tipi di file predefiniti per l' **esclusione** </br>- **Proprietario predefinito**: Mantieni il valore predefinito dell' **account scanner**        |
     | | |
 
@@ -120,7 +120,7 @@ Per configurare lo scanner:
 
     Quando si aggiungono i percorsi di SharePoint, utilizzare la sintassi seguente:
     
-    |Percorso  |Sintassi  |
+    |Path  |Sintassi  |
     |---------|---------|
     |**Percorso radice**     | `http://<SharePoint server name>` </br></br>Analizza tutti i siti, incluse le raccolte siti consentite per l'utente dello scanner. </br>Richiede [autorizzazioni aggiuntive](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) per individuare automaticamente il contenuto radice        |
     |**Raccolta o sito secondario di SharePoint specifico**     | I tipi validi sono: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Richiede [autorizzazioni aggiuntive](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) per individuare automaticamente il contenuto della raccolta siti         |
@@ -130,12 +130,6 @@ Per configurare lo scanner:
 
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del processo di analisi del contenuto**. L'impostazione predefinita indica che il repository dei dati eredita le impostazioni dal processo di analisi del contenuto.
 
-    <!--
-    > [!IMPORTANT]
-    > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-    >
-    > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-    -->
 
 1. Se si desidera aggiungere un altro repository di dati, ripetere i passaggi 8 e 9.
 
@@ -264,8 +258,8 @@ Per allineare i tipi di file supportati con il client di, in cui tutti i file ve
 1. Specificare:
 
     - `*`Carattere jolly come chiave del registro di sistema
-    - `Encryption`come valore (REG_SZ)
-    - `Default`come dati del valore
+    - `Encryption` come valore (REG_SZ)
+    - `Default` come dati del valore
 
 1. Verificare che le chiavi **MSIPC** e **fileprotection** esistano. Crearli manualmente in caso contrario, quindi creare una sottochiave per ogni estensione di file.
 
@@ -354,9 +348,6 @@ Usare le opzioni e le linee guida seguenti per ottimizzare le prestazioni dello 
 |**Riduci timeout scanner** | Ridurre i timeout dello scanner con [le impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). I timeout dello scanner ridotti forniscono frequenze di analisi migliori e un consumo di memoria inferiore. </br></br>**Nota:** Diminuendo i timeout dello scanner si significa che alcuni file potrebbero essere ignorati.
 | | |
 
-<!-- removed with local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### <a name="additional-factors-that-affect-performance"></a>Fattori aggiuntivi che influiscono sulle prestazioni
 
@@ -367,8 +358,8 @@ Ulteriori fattori che influiscono sulle prestazioni dello scanner includono:
 |**Tempi di caricamento/risposta**     |Anche i tempi di caricamento e di risposta correnti degli archivi dati che contengono i file da analizzare influiscono sulle prestazioni dello scanner.         |
 |**Modalità scanner** (individuazione/applicazione)    | La modalità di individuazione ha in genere una velocità di analisi superiore rispetto alla modalità di applicazione. </br></br>Per l'individuazione è necessaria un'azione di lettura di un singolo file, mentre la modalità di applicazione richiede azioni di lettura e scrittura.        |
 |**Modifiche dei criteri**     |Le prestazioni dello scanner potrebbero essere interessate se sono state apportate modifiche alle condizioni nei criteri di Azure Information Protection. </br></br>Il primo ciclo di analisi, quando lo scanner deve controllare tutti i file, avrà più tempo dei cicli di analisi successivi che, per impostazione predefinita, ispeziona solo i file nuovi e modificati. </br></br>Se si modificano le condizioni, tutti i file vengono nuovamente sottoposti a scansione. Per ulteriori informazioni, vedere ripetizione dell' [analisi dei file](deploy-aip-scanner-manage-classic.md#rescanning-files).|
-|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. </br></br> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. </br></br>Ad esempio: </br>-Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Usare gruppi non di acquisizione come `(?:expression)` anziché`(expression)`    |
-|**Livello di registrazione**     |  Le opzioni a livello di log includono **debug**, **info**, **Error** e **off** per i report dello scanner.</br></br>- **Risultati migliori** prestazioni </br>- Il **debug** rallenta notevolmente lo scanner e deve essere usato solo per la risoluzione dei problemi. </br></br>Per altre informazioni, vedere il parametro *ReportLevel* del cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. </br></br> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. </br></br>Ad esempio: </br>-Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Usare gruppi non di acquisizione come `(?:expression)` anziché `(expression)`    |
+|**Livello di log**     |  Le opzioni a livello di log includono **debug**, **info**, **Error** e **off** per i report dello scanner.</br></br>- **Risultati migliori** prestazioni </br>- Il **debug** rallenta notevolmente lo scanner e deve essere usato solo per la risoluzione dei problemi. </br></br>Per altre informazioni, vedere il parametro *ReportLevel* del cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**File sottoposti a scansione**     |-Ad eccezione dei file di Excel, i file di Office vengono analizzati più rapidamente rispetto ai file PDF. </br></br>-I file non protetti sono più veloci da analizzare rispetto ai file protetti. </br></br>-I file di grandi dimensioni hanno ovviamente più tempo per l'analisi di file di piccole dimensioni.         |
 | | |
 

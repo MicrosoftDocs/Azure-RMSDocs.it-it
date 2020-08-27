@@ -4,7 +4,7 @@ description: Elenca i prerequisiti per l'installazione e la distribuzione di Azu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 702bff14d27a1dc8b051e994999db877c3991473
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 446369f3a46e99d138455afbb0cc90d9a8635fb2
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049542"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952930"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner classico
 
@@ -197,6 +197,8 @@ Tuttavia, in un ambiente di produzione, i criteri dell'organizzazione possono pr
 
 - [Restrizione: non è possibile concedere all'utente il ruolo Sysadmin o i database devono essere creati e configurati manualmente](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
+- [Restrizione: le etichette non hanno condizioni di etichetta automatica](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restrizione: il server scanner non può avere connettività Internet
 
 Per supportare un computer disconnesso, seguire questa procedura:
@@ -295,6 +297,16 @@ Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** pe
 - **Per l'account del servizio scanner,** utilizzare un account di Windows locale o un account Active Directory.
 
 - **Per l'account Azure Active Directory,** [specificare e usare il parametro token per set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).
+
+#### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restrizione: le etichette non hanno condizioni di etichetta automatica
+
+Se le etichette non hanno condizioni di etichetta automatica, pianificare l'uso di una delle opzioni seguenti durante la configurazione dello scanner:
+
+|Opzione  |Descrizione  |
+|---------|---------|
+|**Individua tutti i tipi di informazioni**     |  Nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)impostare l'opzione **tipi di informazioni su individua** su **tutti**. </br></br>Questa opzione imposta il processo di analisi del contenuto per l'analisi del contenuto per tutti i tipi di informazioni riservate.      |
+|**Definire un'etichetta predefinita**     |   Definire un'etichetta predefinita nei [criteri](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)o nel [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In questo caso lo scanner applica l'etichetta predefinita a tutti i file trovati.       |
+| | |
 
 ## <a name="next-steps"></a>Passaggi successivi
 

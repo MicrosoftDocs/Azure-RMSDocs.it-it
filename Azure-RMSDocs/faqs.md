@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c72d1764ace998b21c17be97639239da2a6a6c19
-ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
+ms.openlocfilehash: e893f7515ed18d749d43eeadc2f0893ea9a9dee9
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334182"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952998"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -27,8 +27,6 @@ ms.locfileid: "87334182"
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Di seguito sono riportate alcune possibili domande su Azure Information Protection o sul servizio Azure Rights Management (Azure RMS) vedere se la risposta è disponibile qui.
-
-<!-- These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Azure Information Protection technical blog](https://aka.ms/AIPblog).-->
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-microsoft-information-protection"></a>Qual è la differenza tra Azure Information Protection e Microsoft Information Protection?
 

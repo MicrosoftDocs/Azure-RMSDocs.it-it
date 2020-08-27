@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 050876f868e549bd0408a62ef869f6b16c1698c8
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: bb50a25ee406ac6899e15480f0c665f82a7434fd
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049551"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953100"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Esecuzione dello scanner classico Azure Information Protection
 
@@ -94,7 +94,7 @@ Modificare il livello di registrazione utilizzando il parametro *reportLevel* co
 
 Impossibile modificare il percorso o il nome della cartella del report. Se si desidera archiviare i report in un percorso diverso, è consigliabile utilizzare una giunzione di directory per la cartella.
 
-Ad esempio, usare il comando [mklink](/windows-server/administration/windows-commands/mklink) :`mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
+Ad esempio, usare il comando [mklink](/windows-server/administration/windows-commands/mklink) : `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
 
 Se questi passaggi sono stati eseguiti dopo una configurazione iniziale e l'installazione, continuare con [la configurazione dello scanner per applicare la classificazione e la protezione](deploy-aip-scanner-configure-install.md#configure-the-scanner-to-apply-classification-and-protection).
 
@@ -139,7 +139,7 @@ Tutti i file vengono controllati anche negli scenari seguenti ogni volta che lo 
 
 Lo scanner aggiorna automaticamente i criteri ogni ora, nonché ogni volta che il servizio viene avviato e il criterio viene trovato più di un'ora prima.
 
-Per aggiornare prima il criterio, ad esempio durante il test, eliminare manualmente il file dei criteri **Policy.msip** dalla directory **%LocalAppData%\Microsoft\MSIP** e riavviare il servizio di Azure Information Protection.
+Per aggiornare prima il criterio, ad esempio durante il test, eliminare manualmente il file dei criteri **Policy.msip**  dalla directory **%LocalAppData%\Microsoft\MSIP** e riavviare il servizio di Azure Information Protection.
 
 > [!NOTE]
 > Se sono state modificate anche le impostazioni di protezione per le etichette, attendere 15 minuti aggiuntivi dal momento in cui sono state salvate le impostazioni di protezione aggiornate prima di riavviare il servizio Azure Information Protection.
@@ -182,7 +182,7 @@ Lo strumento di diagnostica controlla i dettagli seguenti e quindi Esporta un fi
 - Indica se le regole configurate sono valide
 
 > [!TIP]
-> Se si esegue il comando con un utente che non è l'utente dello scanner, assicurarsi di aggiungere il parametro **-onconto** . <!--For more information, see <x>.-->
+> Se si esegue il comando con un utente che non è l'utente dello scanner, assicurarsi di aggiungere il parametro **-onconto** . 
 >
 
 > [!NOTE]

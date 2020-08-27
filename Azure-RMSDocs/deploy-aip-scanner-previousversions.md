@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bc737b4826d16b98bb8361425fbeabe243bb1a66
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 43ff7296f3b35cf63347fef678d3c0d173a5e39c
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047984"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953015"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection
 
@@ -201,7 +201,7 @@ Versioni supportate per SharePoint: SharePoint Server 2019, SharePoint Server 20
     Add-AIPScannerRepository -Path <path>
     ```
 
-    Ad esempio: `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Ad esempio, usare `Add-AIPScannerRepository -Path \\NAS\Documents`
 
     Per altri esempi, utilizzare il comando della Guida `Get-Help Add-AIPScannerRepository -examples` di PowerShell per questo cmdlet.
 
@@ -269,7 +269,7 @@ Per impostazione predefinita, lo scanner viene eseguito una volta e solo ai fini
     Set-AIPScannerConfiguration -Enforce On -Schedule Always
     ```
 
-    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Usare il comando della Guida di PowerShell seguente per ulteriori informazioni su ogni impostazione di configurazione:`Get-Help Set-AIPScannerConfiguration -detailed`
+    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Usare il comando della Guida di PowerShell seguente per ulteriori informazioni su ogni impostazione di configurazione: `Get-Help Set-AIPScannerConfiguration -detailed`
 
 2. Prendere nota dell'ora corrente e avviare di nuovo lo scanner eseguendo il comando seguente:
     
@@ -413,13 +413,6 @@ Per ottimizzare le prestazioni dello scanner:
 
     La ricerca di una corrispondenza nel contenuto dei file in base alle condizioni configurate e la crittografia e la decrittografia dei file sono operazioni che richiedono un uso intensivo del processore. Monitorare i cicli di analisi tipici degli archivi dati specificati per identificare se una mancanza di risorse del processore influisce negativamente sulle prestazioni dello scanner.
 
-<!--   removed w local folders 
-- **Do not scan local folders on the computer running the scanner service**
-    
-    If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
-
-If necessary, install multiple instances of the scanner. Each scanner instance requires its own configuration database in a different SQL Server instance.
--->
 
 Altri fattori che influenzano le prestazioni dello scanner:
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7f7964081893635052de8f5a8da32f7010f49cc5
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: fcc798a8b9b4a2e0472aad77123571ab03070324
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810355"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953151"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -218,12 +218,6 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
         |**Cartella di SharePoint specifica**     | `http://<SharePoint server name>/.../<folder name>`        |
         | | |
 
-        <!--
-        > [!IMPORTANT]
-        > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-        >
-        > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-        -->
 
 1. Ripetere i passaggi precedenti per aggiungere tutti i repository necessari.
 
@@ -439,9 +433,6 @@ Usare le opzioni e le linee guida seguenti per ottimizzare le prestazioni dello 
 |**Controllare l'utilizzo della configurazione alternativa** |L'esecuzione dello scanner è più rapida quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per applicare un'etichetta predefinita a tutti i file in quanto lo scanner non esamina i contenuti del file. <br/></br>L'esecuzione dello scanner è più lenta quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per identificare tutte le condizioni personalizzate e i tipi di informazioni riservate noti.|
 | | |
 
-<!-- removed when removing local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### <a name="additional-factors-that-affect-performance"></a>Fattori aggiuntivi che influiscono sulle prestazioni
 

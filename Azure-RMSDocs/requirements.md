@@ -4,7 +4,7 @@ description: Identificare i prerequisiti necessari per distribuire Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c984af422a867f8821c21a6e52df37e5d36437c7
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: a87c83afd6e1747a2fc3db6a12ef8734ff445c77
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788935"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952828"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti di Azure Information Protection
 
@@ -132,19 +132,19 @@ Ogni client Azure Information Protection presenta prerequisiti aggiuntivi. Per i
 
 I client Azure Information Protection possono etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word**, **Excel**, **PowerPoint**e **Outlook** da una delle edizioni di Office seguenti:
 
-- **App di Office versione minima 1805**, Build 9330,2078 da [app Microsoft 365 for business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
+- **App di Office versione minima 1805**, Build 9330,2078 da Office 365 Business o Microsoft 365 business. 
 
     Questa edizione è supportata solo quando all'utente viene assegnata una licenza per Azure Rights Management, nota anche come Azure Information Protection per Office 365.
 
-- **[App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office 365 ProPlus**
 
-- **[App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
+- **Office Professional Plus 2019**
 
-- **[App Microsoft 365 per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
+- **Office Professional Plus 2016**
 
-- **[Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 con Service Pack 1**
+- **Office Professional Plus 2013 con Service Pack 1**
 
-- **[Microsoft 365 app per Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 con Service Pack 2**
+- **Office Professional Plus 2010 con Service Pack 2**
 
 Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni, Azure Information Protection è supportato solo per la classificazione e le etichette che applicano la protezione non vengono visualizzate per gli utenti. 
 
@@ -235,10 +235,6 @@ I server supportati includono:
 |**Office SharePoint Server**     |-Office SharePoint Server 2016 </br>-Office SharePoint Server 2013 </br>-Office SharePoint Server 2010         |
 |**File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |
-
-<!-- i think that half of this note was removed at some point, without this other half. keeping it here in case we ever need it..>
-    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](./rms-client/configure-fci.md).
--->
 
 Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](deploy-rms-connector.md).
 

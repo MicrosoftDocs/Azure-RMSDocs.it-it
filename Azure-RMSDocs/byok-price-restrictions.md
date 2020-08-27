@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e6b5be8751e01c47b066963ef5ce3588b43cb86
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 3e25ff7d202b7cef964f6b83259b4ff2588c2616
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868961"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953168"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Dettagli di Bring your own key (BYOK) per Azure Information Protection
 
@@ -77,7 +77,7 @@ L'archiviazione della chiave del tenant nell'Azure Key Vault offre i vantaggi se
 |**Domini di sicurezza separati**|Azure Key Vault USA domini di sicurezza distinti per i Data Center in aree quali America del Nord, EMEA (Europa, Medio Oriente e Africa) e Asia. </br></br>Azure Key Vault usa anche istanze diverse di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. |
 |**Esperienza unificata**| Azure Key Vault consente inoltre agli amministratori della sicurezza di archiviare, accedere e gestire i certificati e i segreti, ad esempio le password, per altri servizi che usano la crittografia. <br></br>L'uso di Azure Key Vault per le chiavi del tenant offre un'esperienza utente uniforme per gli amministratori che gestiscono tutti questi elementi.|
 
-Per gli aggiornamenti più recenti e per informazioni sull'uso di altri servizi [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/basic-concepts), visitare il [Blog del team di Azure Key Vault](https://blogs.technet.microsoft.com/kv/).
+Per gli aggiornamenti più recenti e per informazioni sull'uso di altri servizi  [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/basic-concepts), visitare il [Blog del team di Azure Key Vault](https://blogs.technet.microsoft.com/kv/).
 
 ## <a name="usage-logging-for-byok"></a>Registrazione dell'utilizzo per BYOK
 
@@ -147,10 +147,6 @@ I prerequisiti di BYOK variano a seconda della configurazione del sistema. Verif
 |**Prerequisiti Azure Key Vault per BYOK** | Se si usa una chiave protetta dal modulo di protezione hardware creata in locale, assicurarsi di rispettare anche i [prerequisiti per BYOK](https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) elencati nella documentazione di Azure Key Vault.         |
 |**Firmware Thales versione 11,62**    |È necessario avere una versione del firmware Thales 11,62 se si esegue la migrazione da AD RMS a Azure Information Protection usando la chiave software per la chiave hardware e si usa il firmware Thales per il modulo di protezione hardware.
 |**Bypass del firewall per i servizi Microsoft attendibili** |Se l'insieme di credenziali delle chiavi che contiene la chiave del tenant usa gli endpoint di servizio della rete virtuale per Azure Key Vault, è necessario consentire ai servizi Microsoft attendibili di ignorare il firewall. </br>Per altre informazioni, vedere [Endpoint servizio di rete virtuale per Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints).       |
-
-<!--
->[!NOTE]
-> For more information about nCipher nShield hardware security module (HSM) and how they are used with Azure Key Vault, see the [nCipher website](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).-->
 
 #### <a name="verifying-that-you-have-a-byok-compatible-azure-subscription"></a>Verifica della presenza di una sottoscrizione di Azure compatibile con BYOK
 
@@ -307,7 +303,7 @@ Usando i cmdlet di Azure RMS, eseguire i comandi seguenti:
     >
     > Usare il comando [Get-AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey) in base alle esigenze per ottenere il numero di versione della chiave corrente.
     >
-    > Ad esempio: `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+    > ad esempio `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
     Per confermare che l'URL della chiave è impostato correttamente per Azure Information Protection, eseguire il comando [Get-AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey) nella Azure Key Vault per visualizzare l'URL della chiave.
 

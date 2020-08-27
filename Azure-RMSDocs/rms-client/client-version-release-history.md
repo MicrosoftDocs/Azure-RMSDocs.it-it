@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f04af1c6aceba5f3eb9d36bf1445ff33060da48
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 1a51376fc2d6114f7d23ec937b4d8ea1238d1655
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264345"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953236"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -29,14 +29,10 @@ ms.locfileid: "88264345"
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-<!--
-After a short delay of typically a couple of weeks, the latest general availability version is also included in the Microsoft Update Catalog with a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Client**, and the classification of **Updates**. This inclusion in the catalog means that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
--->
-
 > [!TIP]
 > Si è interessati all'uso del client Azure Information Protection Unified Labeling, perché le etichette vengono pubblicate dal centro sicurezza & conformità di Office 365, dal centro sicurezza Microsoft 365 o da Microsoft 365 Compliance Center? Quando si scarica e si installa il client di etichettatura unificata dall'area download Microsoft, è possibile aggiornare il client di Azure Information Protection al [client Unified Labeling](unifiedlabelingclient-version-release-history.md).
 
-**Per distribuire il client AIP classico,** aprire un ticket di supporto per ottenere l'accesso al download.
+**Per distribuire il client AIP con interfaccia classica**, aprire un ticket di supporto per ottenere l'accesso al download.
 
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
