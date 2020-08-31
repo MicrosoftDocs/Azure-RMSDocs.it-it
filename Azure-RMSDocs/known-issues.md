@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: af4a6989dca815d204fee72aafa6d839d2673fc4
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 85a7325bf2bd80294436b233fb81fddbe707ea6e
+ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952862"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176617"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti-Azure Information Protection
 
@@ -36,6 +36,20 @@ Se è presente un file contenitore che include file classificati e protetti, è 
 Il visualizzatore di Azure Information Protection non supporta l'apertura di allegati in un documento PDF protetto. In questo scenario, quando il documento viene aperto nel visualizzatore, gli allegati non sono visibili.
 
 Per altre informazioni, vedere [Guida dell'amministratore: tipi di file supportati dal client Azure Information Protection](rms-client/client-admin-guide-file-types.md).
+
+## <a name="known-issues-for-installing-the-aip-client"></a>Problemi noti per l'installazione del client AIP
+
+Il client Azure Information Protection non è supportato nei computer in cui è abilitata la [protezione dagli exploit](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) .
+
+Assicurarsi di disabilitare la protezione dagli exploit prima di installare AIP. 
+
+Per disabilitare la protezione dagli exploit tramite PowerShell, eseguire le operazioni seguenti:
+
+```PowerShell
+Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
+```
+
+Per ulteriori informazioni, vedere [Azure Information Protection requirements](requirements.md).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>Supporto di PowerShell per il client di Azure Information Protection
 
@@ -80,8 +94,7 @@ I criteri di pubblicazione possono richiedere fino a 24 ore.
     - [**Client classico**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/client-view-use-files.md)
     - [**Client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md)
 
-
-## <a name="more-information"></a>Ulteriori informazioni
+## <a name="more-information"></a>Altre informazioni
 
 Gli articoli aggiuntivi seguenti possono essere utili per rispondere alle domande sui problemi noti in Azure Information Protection:
 
