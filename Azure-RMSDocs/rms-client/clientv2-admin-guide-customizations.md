@@ -1,10 +1,10 @@
 ---
 title: Configurazioni personalizzate-Azure Information Protection client per l'assegnazione di etichette unificata
 description: Informazioni sulla personalizzazione del client di Azure Information Protection Unified Labeling per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,14 +13,14 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 390f89d124d68591e8eaade67f6666d3f7c32ed4
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ee77dc60e1300f494508479925963178413c48d9
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048868"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316851"
 ---
-# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
+# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
@@ -43,25 +43,25 @@ In entrambi i casi, dopo la [connessione a Office 365 Security & Compliance Cent
 
 Per un'impostazione dei criteri di etichetta, valore stringa singola:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 ```
 
 Per le impostazioni dei criteri di etichetta, più valori stringa per la stessa chiave:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
 Per un'impostazione di etichetta, valore stringa singola:
 
-```ps
+```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 ```
 
 Per le impostazioni delle etichette, più valori stringa per la stessa chiave:
 
-```ps
+```PowerShell
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
@@ -74,25 +74,25 @@ Per rimuovere un'impostazione avanzata, utilizzare la stessa sintassi ma specifi
 
 Esempio 1: impostare un'impostazione avanzata dei criteri per le etichette per un singolo valore stringa:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
 Esempio 2: impostare un'impostazione avanzata etichetta per un valore stringa singolo:
 
-```ps
+```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
 Esempio 3: impostare un'impostazione avanzata etichetta per più valori stringa:
 
-```ps
+```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
 Esempio 4: rimuovere un'impostazione avanzata dei criteri di etichetta specificando un valore stringa null:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 ```
 
@@ -110,7 +110,7 @@ Per configurare le impostazioni avanzate dell'etichetta, usare il valore **nome*
 
 Se si preferisce specificare il GUID dell'etichetta, questo valore non viene visualizzato nell'interfaccia di amministrazione in cui si gestiscono le etichette. Per trovare questo valore, tuttavia, è possibile usare il comando seguente di Office 365 Security & Compliance Center di PowerShell:
 
-```ps
+```PowerShell
 Get-Label | Format-Table -Property DisplayName, Name, Guid
 ```
 
@@ -165,7 +165,6 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
-|RunAuditInformationTypesDiscovery|[Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |ScannerFSAttributesToSkip | [Ignora o ignora i file durante le analisi a seconda degli attributi di file](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
@@ -173,7 +172,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 
 Esempio di comando di PowerShell per verificare le impostazioni dei criteri di etichetta attive per un criterio etichetta denominato "globale":
 
-```ps
+```PowerShell
 (Get-LabelPolicy -Identity Global).settings
 ```
 
@@ -192,7 +191,7 @@ Usare il parametro *AdvancedSettings* con [New-Label](https://docs.microsoft.com
 
 Esempio di comando di PowerShell per verificare le impostazioni dell'etichetta attive per un'etichetta denominata "public":
 
-```ps
+```PowerShell
 (Get-Label -Identity Public).settings
 ```
 
@@ -210,7 +209,7 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
 ```
 
@@ -228,7 +227,7 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 ```
 
@@ -246,7 +245,7 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
 ```
 
@@ -254,7 +253,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
 
-Quando si configura questa impostazione, il cmdlet di [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **set-AIPFileLabel** è abilitato per consentire la rimozione della protezione da file PST, rar, 7zip e msg.
+Quando si configura questa impostazione, il cmdlet di  [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **set-AIPFileLabel** è abilitato per consentire la rimozione della protezione da file PST, rar, 7zip e msg.
 
 - Chiave: **EnableContainerSupport**
 
@@ -262,7 +261,7 @@ Quando si configura questa impostazione, il cmdlet di [PowerShell](https://docs.
 
 Comando di PowerShell di esempio in cui è abilitato il criterio:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
 ```
 
@@ -280,7 +279,7 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 ```
 
@@ -296,7 +295,7 @@ Per impostazione predefinita, il client Azure Information Protection Unified Lab
 
 - Chiave: **PFileSupportedExtensions**
 
-- Valore**\<string value>** 
+- Valore **\<string value>** 
 
 Usare la tabella seguente per identificare il valore stringa da specificare:
 
@@ -308,19 +307,19 @@ Usare la tabella seguente per identificare il valore stringa da specificare:
 
 Esempio 1: comando di PowerShell per il client unificato per proteggere solo i tipi di file di Office e i file PDF, in cui il criterio dell'etichetta è denominato "client":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
 ```
 
 Esempio 2: comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
 Esempio 3: comando di PowerShell per lo scanner per proteggere i file con estensione txt e CSV, oltre ai file di Office e PDF, in cui il criterio dell'etichetta è denominato "scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 ```
 
@@ -332,7 +331,7 @@ Il client di etichettatura unificata supporta la modifica \<EXT> . PFILE a P \<E
 
 - Chiave: **AdditionalPPrefixExtensions**
 
-- Valore**\<string value>** 
+- Valore **\<string value>** 
 
 Usare la tabella seguente per identificare il valore stringa da specificare:
 
@@ -344,19 +343,19 @@ Usare la tabella seguente per identificare il valore stringa da specificare:
 
 Esempio 1: comando di PowerShell per comportarsi come il comportamento predefinito in cui Protect ". dwg" diventa ". dwg. Pfile":
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
 Esempio 2: comando di PowerShell per modificare tutte le estensioni PFile dalla protezione generica (DWG. Pfile) alla protezione nativa (. pdwg) quando i file sono protetti:
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
 Esempio 3: comando di PowerShell per impostare ". dwg" su ". pdwg" quando si usa questo servizio per proteggere questo file:
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 ```
 
@@ -365,7 +364,7 @@ Con questa impostazione, le estensioni seguenti (". txt", ". xml", ". bmp", ". J
 
 Ad esempio, nel caso in cui venga utilizzato il seguente comando:
 
-```ps
+```PowerShell
 Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
 ```
 
@@ -387,7 +386,7 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 ```
 
@@ -425,7 +424,7 @@ Esempio: il nome della forma è **DC**. Per rimuovere la forma con questo nome, 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
 ```
 
@@ -453,7 +452,7 @@ Esempi:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 ```
 
@@ -488,7 +487,7 @@ Per gli stessi criteri di etichetta specificare le stringhe seguenti:
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 ```
 
@@ -510,7 +509,7 @@ Per rimuovere il piè di pagina su più righe, creare le due voci seguenti per g
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
 ```
 
@@ -536,7 +535,7 @@ Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
 ```
 
@@ -550,7 +549,7 @@ Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina v
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 ```
 
@@ -568,7 +567,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
@@ -588,7 +587,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
 ```
 
@@ -623,7 +622,7 @@ La descrizione comando personalizzata supporta solo un solo linguaggio.
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
 ```
 
@@ -637,7 +636,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Chiave: **ReportAnIssueLink**
 
-- Valore**\<HTTP string>**
+- Valore **\<HTTP string>**
 
 Valore di esempio per un sito Web: `https://support.contoso.com`
 
@@ -645,7 +644,7 @@ Valore di esempio per un indirizzo di posta elettronica: `mailto:helpdesk@contos
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
 ```
 
@@ -705,7 +704,7 @@ dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df7
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
@@ -727,25 +726,25 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Chiave: **OutlookWarnTrustedDomains**
     
-    - Valore**\<**domain names, comma separated**>**
+    - Valore **\<**domain names, comma separated**>**
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyTrustedDomains**
     
-    - Valore**\<**domain names, comma separated**>**
+    - Valore **\<**domain names, comma separated**>**
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockTrustedDomains**
     
-    - Valore**\<**domain names, comma separated**>**
+    - Valore **\<**domain names, comma separated**>**
 
 Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
 Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
@@ -782,7 +781,7 @@ Per gli stessi criteri di etichetta, creare l'impostazione client avanzata segue
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
 ```
 
@@ -790,7 +789,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborati
 
 Per impostazione predefinita, i messaggi popup avvisa, giustifica o blocca si applicano a tutti i documenti di Office e PDF. È possibile affinare questo elenco specificando quali estensioni di file devono visualizzare i messaggi di avviso, di giustificazione o di blocco con un'impostazione avanzata aggiuntiva e un elenco delimitato da virgole di estensioni di file.
 
-Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole:`.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la giustificazione o il blocco dei messaggi popup.
 
@@ -799,12 +798,12 @@ Per gli stessi criteri di etichetta, immettere le stringhe seguenti:
 
 - Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore**\<**file name extensions to display messages, comma separated**>**
+- Valore **\<**file name extensions to display messages, comma separated**>**
 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 ```
 
@@ -842,7 +841,7 @@ Se non si specifica questa impostazione client, il valore specificato per Outloo
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
@@ -860,36 +859,8 @@ Per modificare questo comportamento in modo che queste informazioni non vengano 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
-```
-
-## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics
-
-Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
-
-Quando si usa il client di assegnazione di etichette unificato Azure Information Protection nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica l'impostazione avanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) non è impostato su **false**, vengono inviati a [Azure Information Protection Analytics](../reports-aip.md)tutti i tipi di informazioni sensibili predefiniti e personalizzati trovati.
-
-Per modificare questo comportamento in modo che i tipi di informazioni riservate individuate dal client Unified Labeling non vengano inviati, immettere le stringhe seguenti per i criteri di etichetta selezionati:
-
-- Chiave: **RunAuditInformationTypesDiscovery**
-
-- Valore: **False**
-
-Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
-
-Ad esempio:
-
-- Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso Financial.docx con etichetta **Confidential \ Sales**.
-
-- Senza questa impostazione, è possibile osservare che Financial.docx contiene 6 numeri di carta di credito.
-    
-    - Se si abilita anche [Corrispondenze di contenuto per un'analisi più approfondita](../reports-aip.md#content-matches-for-deeper-analysis), si potranno vedere anche i numeri di carta di credito stessi.
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-```ps
-Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 ```
 
 ## <a name="send-information-type-matches-to-azure-information-protection-analytics"></a>Invia corrispondenze del tipo di informazioni a Azure Information Protection Analytics
@@ -906,7 +877,7 @@ Per inviare le corrispondenze di contenuto quando si inviano tipi di informazion
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 ```
 
@@ -925,7 +896,7 @@ Per impostazione predefinita, **ScannerMaxCPU** è impostato su 100, il che sign
 
 Se si imposta **ScannerMaxCPU** su un valore inferiore a 100, lo scanner monitorerà il consumo di CPU negli ultimi 30 minuti e se la CPU max supera il limite impostato, inizierà a ridurre il numero di thread allocati per i nuovi file. Il limite per il numero di thread continuerà fino a quando l'utilizzo della CPU è superiore al limite impostato per **ScannerMaxCPU**.
 
-**ScannerMinCPU**, viene verificata solo se **ScannerMaxCPU** non è uguale a 100. **ScannerMinCPU** non può essere impostato su un numero maggiore del numero di **ScannerMaxCPU** . Si consiglia di mantenere **ScannerMinCPU** impostare almeno 15 punti più in basso rispetto al valore di **ScannerMaxCPU**.   
+**ScannerMinCPU**, viene verificata solo se **ScannerMaxCPU** non è uguale a 100. **ScannerMinCPU** non può essere impostato su un numero maggiore del numero di **ScannerMaxCPU** . Si consiglia di mantenere **ScannerMinCPU** impostare almeno 15 punti più in basso rispetto al valore di  **ScannerMaxCPU**.   
 
 Il valore predefinito di questa impostazione è 50, il che significa che se l'utilizzo della CPU negli ultimi 30 minuti è inferiore a questo valore, lo scanner avvierà l'aggiunta di nuovi thread per l'analisi di più file in parallelo, fino a quando l'utilizzo della CPU non raggiunge il livello impostato per **ScannerMaxCPU**-15. 
 
@@ -944,11 +915,11 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 - Chiave: **ScannerConcurrencyLevel**
 
-- Valore**\<number of concurrent threads>**
+- Valore **\<number of concurrent threads>**
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "scanner":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
 ```
 
@@ -992,7 +963,7 @@ Impostazione avanzata:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
-```ps
+```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
 ```
 
@@ -1012,7 +983,7 @@ Impostazione avanzata:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confidential":
 
-```ps
+```PowerShell
 Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
 ```
 
@@ -1032,7 +1003,7 @@ L'impostazione client avanzata è la seguente:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale":
 
-```ps
+```PowerShell
 Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
 ```
 
@@ -1042,7 +1013,7 @@ Quando sono necessarie più regole per la stessa etichetta, definire più valori
 
 In questo esempio, le etichette delle isole sicure denominate "Confidential" e "Secret" vengono archiviate nella proprietà personalizzata denominata **Classification**e si vuole che il client Azure Information Protection Unified Labeling applichi l'etichetta di riservatezza denominata "Confidential":
 
-```ps
+```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
@@ -1058,7 +1029,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 ```
 
@@ -1076,7 +1047,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
 ```
 
@@ -1129,7 +1100,7 @@ Impostazione avanzata:
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
-```ps
+```PowerShell
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 ```
 
@@ -1139,7 +1110,7 @@ Per aggiungere più di una proprietà personalizzata per la stessa etichetta, è
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale" e si vuole aggiungere una proprietà personalizzata denominata **classificazione** con il valore **generale** e una seconda proprietà personalizzata denominata **Sensitivity** con il valore **Internal**:
 
-```ps
+```PowerShell
 Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 ```
 
@@ -1167,7 +1138,7 @@ Se si vuole che l'etichetta sia visibile solo in Outlook, configurare l'etichett
 
 Comandi di PowerShell di esempio, in cui l'etichetta è denominata "solo destinatari":
 
-```ps
+```PowerShell
 Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 
 Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
@@ -1185,7 +1156,7 @@ Quando si aggiunge un'etichetta secondaria a un'etichetta, gli utenti non posson
 
 Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confidential" e l'etichetta secondaria "All Employees" ha un GUID di 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
-```ps
+```PowerShell
 Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 ```
 
@@ -1211,7 +1182,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Esempio di comando di PowerShell: 
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
 ```
 
@@ -1231,7 +1202,7 @@ Per configurare l'impostazione avanzata per il colore di un'etichetta, immettere
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 
-```ps
+```PowerShell
 Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 ```
 
@@ -1329,7 +1300,7 @@ I comandi di PowerShell di esempio seguenti illustrano come usare questa imposta
 
 **Ignorare i file di sola lettura e archiviati**
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
 ```
 
@@ -1337,7 +1308,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
 ```
@@ -1367,9 +1338,451 @@ Per assicurarsi che il valore del proprietario NTFS venga mantenuto, impostare l
 
 Comando di PowerShell di esempio, quando il criterio dell'etichetta è denominato "globale":
 
-```ps
+```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
 ```
+
+## <a name="customize-justification-prompt-texts-for-modified-labels"></a>Personalizzare i testi della richiesta di giustificazione per le etichette modificate
+
+Personalizzare le richieste di giustificazione visualizzate in Office e nel client AIP, quando gli utenti finali cambiano le etichette di classificazione nei documenti e nei messaggi di posta elettronica.
+
+Ad esempio, in qualità di amministratore, è consigliabile ricordare agli utenti di non aggiungere informazioni di identificazione dei clienti in questo campo:
+
+:::image type="content" source="../media/justification-office.png" alt-text="Testo della richiesta di giustificazione personalizzata":::
+
+Per modificare l' **altro** testo predefinito visualizzato, usare la proprietà avanzata **JustificationTextForUserText** con il cmdlet [set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) . Impostare il valore sul testo che si desidera utilizzare.
+
+Ad esempio:
+
+``` PowerShell
+
+[Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+```
+
+## <a name="customize-outlook-popup-messages"></a>Personalizzare i messaggi popup di Outlook
+
+Gli amministratori di AIP possono personalizzare i messaggi popup visualizzati agli utenti finali in Outlook, ad esempio:
+
+- Messaggi per i messaggi di posta elettronica bloccati
+- Messaggi di avviso che richiedono agli utenti di verificare il contenuto che stanno inviando
+- Giustificare i messaggi che richiedono agli utenti di giustificare il contenuto che stanno inviando
+
+**Per personalizzare i messaggi popup di Outlook:**
+
+1. Creare file con **estensione JSON** , ognuno con una regola che configura il modo in cui Outlook Visualizza i messaggi popup agli utenti. Per altre informazioni, vedere la [sintassi Rule value. JSON](#rule-value-json-syntax) e il [codice popup di esempio customziation. JSON](#sample-popup-customziation-json-code).
+
+1. Usare PowerShell per definire le impostazioni avanzate che controllano i messaggi popup che si sta configurando. Eseguire un set separato di comandi per ogni regola che si desidera configurare.
+
+    Ogni set di comandi di PowerShell deve includere il nome del criterio che si sta configurando, nonché la chiave e il valore che definisce la regola.
+
+    Usare la sintassi seguente:
+
+    ```PowerShell
+    $filedata = Get-Content "<Path to json file>”
+    Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{<Key> ="$filedata"}
+    ```
+    Dove: 
+
+    - `<Path to json file>` è il percorso del file JSON creato. Ad esempio: **C:\Users\msanchez\Desktop\ \dlp\OutlookCollaborationRule_1.json**.
+    - `<Policy name>` nome dei criteri che si desidera configurare. 
+    - `<Key>` è un nome per la regola. Usare la sintassi seguente, dove **<#>** è il numero di serie della regola: 
+    
+        `OutlookCollaborationRule_<x>` 
+
+    Per altre informazioni, vedere [ordering your Outlook customziation Rules](#ordering-your-outlook-customziation-rules) and [Rule value JSON Syntax](#rule-value-json-syntax).
+
+   
+> [!TIP]
+> Per un'organizzazione aggiuntiva, assegnare un nome al file con la stessa stringa della chiave usata nel comando di PowerShell. Ad esempio, denominare il file **OutlookCollaborationRule_1.json,** quindi usare anche **OutlookCollaborationRule_1** come chiave.
+> 
+
+### <a name="ordering-your-outlook-customziation-rules"></a>Ordinamento delle regole customziation di Outlook
+
+AIP usa il numero di serie nella chiave immessa per determinare l'ordine in cui vengono elaborate le regole. Quando si definiscono le chiavi usate per ogni regola, definire le regole più restrittive con i numeri più bassi, seguite da regole meno restrittive con numeri più alti.
+
+Quando viene trovata una corrispondenza di regola specifica, AIP interrompe l'elaborazione delle regole ed esegue l'azione associata alla regola di corrispondenza. (**Prima corrispondenza-> logica di uscita** )
+    
+**Esempio:**
+
+Si consiglia di configurare tutti i messaggi di posta elettronica **interni** con un messaggio di **avviso** specifico, ma in genere non si desidera bloccarli. Tuttavia, si desidera impedire agli utenti di inviare allegati classificati come **segreti**, anche come messaggi di posta elettronica **interni** . 
+
+In questo scenario, ordinare la chiave del **blocco Secret** Rule, che è la regola più specifica, prima dell'avviso più generico sulla chiave della regola **interna** :
+- Per il messaggio di **blocco** : **OutlookCollaborationRule_1**
+- Per il messaggio di **avviso** : **OutlookCollaborationRule_2**
+
+### <a name="rule-value-json-syntax"></a>Sintassi value. JSON della regola
+
+Definire il Snytax JSON della regola come indicato di seguito:
+
+``` JSON
+"type" : "And",
+"nodes" : []
+```
+
+È necessario disporre di almeno due nodi, il primo che rappresenta la condizione della regola e l'ultimo represending l'azione della regola. Per altre informazioni, vedere:
+
+- [Sintassi della condizione della regola](#rule-condition-syntax)
+- [Sintassi azione regola](#rule-action-syntax)
+
+##### <a name="rule-condition-syntax"></a>Sintassi della condizione della regola
+
+I nodi della condizione della regola devono includere il tipo di nodo e quindi le stesse condizioni. 
+
+I tipi di nodo supportati includono:
+
+|Tipo di nodo  |Descrizione  |
+|---------|---------|
+| **And**   | Esegue *e* in tutti i nodi figlio     |
+| **Or**    |Esegue *o* in tutti i nodi figlio       |
+| **Non**   | *Non* viene eseguito per il proprio figlio      |
+| **Ad eccezione**    | Restituisce *not* per il proprio elemento figlio, facendo in modo che si comporti come **tutti**        |
+| **SentTo,** seguito da **domini: listOfDomains**    |Verifica uno dei seguenti elementi: </br>-Se l'elemento padre è **Except,** controlla se **tutti** i destinatari si trovano in uno dei domini</br>-Se l'elemento padre è qualsiasi altra **eccezione,** **verifica se uno dei destinatari** si trova in uno dei domini.   |
+| **EMailLabel,** seguito da Label | I tipi validi sono:  </br>: ID etichetta </br>-null, se non con etichetta             |
+| **AttachmentLabel,** seguito da **Label** e **supportedExtensions**    | I tipi validi sono:  </br></br>**true** </br>-Se l'elemento padre è **Except,** controlla se **tutti** gli allegati con un'estensione supportata esistono nell'etichetta</br>-Se l'elemento padre è qualsiasi altra **eccezione,** verifica se **uno degli allegati** con un'estensione supportata esiste nell'etichetta </br>-Se non è etichettato e **Label = null** </br></br> **false:** Per tutti gli altri casi 
+| | |
+
+#### <a name="rule-action-syntax"></a>Sintassi azione regola
+
+Le azioni regola possono essere una delle seguenti:
+
+|Action  |Sintassi  |Messaggio di esempio  |
+|---------|---------|---------|
+|**Bloccato**     |    `Block (List<language, [title, body]>)`     |    ***Posta elettronica bloccata***</br></br>  *Si sta per inviare contenuto classificato come **segreto** a uno o più destinatari non attendibili:*</br>*`rsinclair@contoso.com`*</br></br>*L'azione non è consentita dai criteri dell'organizzazione. Provare a rimuovere questi destinatari o a sostituire il contenuto.*|
+|**Avvertire**     | `Warn (List<language,[title,body]>)`        |  ***Conferma obbligatoria***</br></br>*Si sta per inviare contenuto classificato come **generale** a uno o più destinatari non attendibili:*</br>*`rsinclair@contoso.com`*</br></br>*I criteri dell'organizzazione richiedono la conferma dell'invio del contenuto.*       |
+|**Giustificare**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` </br></br>Sono incluse fino a tre opzioni.        |  ***Giustificazione obbligatoria*** </br></br>*Per i criteri dell'organizzazione è necessario giustificare l'invio di contenuti classificati come **generali** a destinatari non attendibili.*</br></br>*-Conferma che i destinatari sono approvati per la condivisione del contenuto*</br>*-La condivisione del contenuto è stata approvata dal responsabile*</br>*-Other, come illustrato* |
+| | | |
+
+##### <a name="action-parameters"></a>Parametri di azione
+
+Se per un'azione non viene specificato alcun parametro, i popup avranno il testo predefinito. 
+
+Tutti i testi supportano i parametri dinamici seguenti: 
+
+|Parametro  |Descrizione  |
+|---------|---------|
+| `${MatchedRecipientsList}`  | Ultima corrispondenza per le condizioni di **SentTo**       |
+| `${MatchedLabelName}`      | Etichetta posta/allegato **,** con il nome localizzato del criterio               |
+| `${MatchedAttachmentName}` | Nome dell'allegato dall'ultima corrispondenza per la condizione **AttachmentLabel** |
+| | |
+
+> [!NOTE]
+> Tutti i messaggi includono l'opzione **altre informazioni** , nonché le finestre di dialogo **Guida** e **Commenti** .
+>
+> Il **linguaggio** è il nome delle **impostazioni cultura** per il nome delle impostazioni locali, ad esempio: **inglese**  =  `en-us` ; **Spagnolo** = `es-es`
+>
+> Sono supportati anche i nomi di lingua solo padre, ad esempio `en` .
+> 
+
+### <a name="sample-popup-customziation-json-code"></a>Codice popup di esempio customziation. JSON
+
+I set di codice **JSON** seguenti illustrano come è possibile definire una serie di regole che controllano la modalità di visualizzazione dei messaggi popup per gli utenti in Outlook.
+
+- [**Esempio 1**: bloccare i messaggi di posta elettronica o gli allegati interni](#example-1-block-internal-emails-or-attachments)
+- [**Esempio 2**: bloccare gli allegati di Office non classificati](#example-2-block-unclassified-office-attachments)
+- [**Esempio 3**: richiedere all'utente di accettare l'invio di un messaggio di posta elettronica o un allegato riservato](#example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment)
+- [**Esempio 4**: avvisare la posta elettronica senza etichetta e un allegato con un'etichetta specifica](#example-4-warn-on-mail-with-no-label-and-an-attachment-with-a-specific-label)
+- [**Esempio 5**: richiedere una giustificazione, con due opzioni predefinite e un'opzione aggiuntiva per il testo libero](#example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option)
+
+#### <a name="example-1-block-internal-emails-or-attachments"></a>Esempio 1: bloccare i messaggi di posta elettronica o gli allegati interni
+
+Il codice **JSON** seguente bloccherà i messaggi di posta elettronica o gli allegati classificati come **interni** da impostati su destinatari esterni.
+
+In questo esempio, **89a453df-5df4-4976-8191-259d0cf9560a** è l'ID dell'etichetta **interna** e i domini interni includono **contoso.com** e **Microsoft.com**.
+
+```powershell
+{   
+    "type" : "And",     
+    "nodes" : [         
+        {           
+            "type" : "Except" ,             
+            "node" :{               
+                "type" : "SentTo",                  
+                "Domains" : [                   
+                    "contoso.com",                  
+              "microsoft.com"
+                ]               
+            }       
+        },
+        {           
+            "type" : "Or",          
+            "nodes" : [                 
+                {           
+                    "type" : "AttachmentLabel",             
+                    "LabelId" : "89a453df-5df4-4976-8191-259d0cf9560a"      
+                },{                     
+                    "type" : "EmailLabel",                  
+                    "LabelId" : "89a453df-5df4-4976-8191-259d0cf9560a"              
+                }
+            ]
+        },      
+        {           
+            "type" : "Block",           
+            "LocalizationData": {               
+                "en-us": {                
+                    "Title": "Email Blocked",                 
+                    "Body": "The email or at least one of the attachments is classified as <Bold>${MatchedLabelName}</Bold>. Documents classified as <Bold> ${MatchedLabelName}</Bold> cannot be sent to external recipients (${MatchedRecipientsList}).<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance with classification requirements as per Contoso’s policies."               
+                },              
+                "es-es": {                
+                    "Title": "Correo electrónico bloqueado",                  
+                    "Body": "El correo electrónico o al menos uno de los archivos adjuntos se clasifica como <Bold> ${MatchedLabelName}</Bold>."                
+                }           
+            },          
+            "DefaultLanguage": "en-us"      
+        }   
+    ] 
+}
+```
+
+#### <a name="example-2-block-unclassified-office-attachments"></a>Esempio 2: bloccare gli allegati di Office non classificati
+
+Il codice **JSON** seguente blocca l'invio di messaggi di posta elettronica o allegati di Office non classificati all'recipeints esterno.
+
+Nell'esempio seguente, l'elenco degli allegati che richiede l'assegnazione di etichette è: **. doc,. docm,. docx,. dot,. dotm,. dotx, potm, potx, PPS, ppsm, PPSX, PPT, pptm, pptx, VDW, VSD, vsdm, vsdx, VSS, vssm,. VST,. vstm,. vssx,. vstx,. xls,. xlsb,. xlt,. xlsm,. xlsx,. xltm,. xltx**
+
+```powershell
+{   
+    "type" : "And",     
+    "nodes" : [         
+        {           
+            "type" : "Except" ,             
+            "node" :{               
+                "type" : "SentTo",                  
+                "Domains" : [                   
+                    "contoso.com",                  
+                    "microsoft.com"
+                ]               
+            }       
+        },
+        {           
+            "type" : "Or",          
+            "nodes" : [                 
+                {           
+                    "type" : "AttachmentLabel",
+                     "LabelId" : null,
+                    "Extensions": [
+                                    ".doc",
+                                    ".docm",
+                                    ".docx",
+                                    ".dot",
+                                    ".dotm",
+                                    ".dotx",
+                                    ".potm",
+                                    ".potx",
+                                    ".pps",
+                                    ".ppsm",
+                                    ".ppsx",
+                                    ".ppt",
+                                    ".pptm",
+                                    ".pptx",
+                                    ".vdw",
+                                    ".vsd",
+                                    ".vsdm",
+                                    ".vsdx",
+                                    ".vss",
+                                    ".vssm",
+                                    ".vst",
+                                    ".vstm",
+                                    ".vssx",
+                                    ".vstx",
+                                    ".xls",
+                                    ".xlsb",
+                                    ".xlt",
+                                    ".xlsm",
+                                    ".xlsx",
+                                    ".xltm",
+                                    ".xltx"
+                                 ]
+                    
+                },{                     
+                    "type" : "EmailLabel",
+                     "LabelId" : null
+                }
+            ]
+        },      
+        {           
+            "type" : "Email Block",             
+            "LocalizationData": {               
+                "en-us": {                
+                    "Title": "Emailed Blocked",                   
+                    "Body": "Classification is necessary for attachments to be sent to external recipients.<br><br>List of attachments that are not classified:<br><br>${MatchedAttachmentName}<br><br><br>This message will not be sent.<br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br>For MS Office documents, classify and send again.<br><br>For PDF files, classify the document or classify the email (using the most restrictive classification level of any single attachment or the email content) and send again."               
+                },              
+                "es-es": {                
+                    "Title": "Correo electrónico bloqueado",                  
+                    "Body": "La clasificación es necesaria para que los archivos adjuntos se envíen a destinatarios externos."              
+                }           
+            },          
+            "DefaultLanguage": "en-us"      
+        }   
+    ] 
+}
+```
+
+#### <a name="example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment"></a>Esempio 3: richiedere all'utente di accettare l'invio di un messaggio di posta elettronica o un allegato riservato
+
+Nell'esempio seguente Outlook visualizza un messaggio che avvisa l'utente che sta inviando un messaggio di posta elettronica o un allegato **riservato** ai destinatari esterni e richiede **anche che l'utente selezioni accetto**. 
+
+Questo tipo di messaggio di avviso viene tecnicamente considerato una giustificazione, in quanto l'utente deve **selezionare Accetto**.
+
+``` powershell
+{   
+    "type" : "And",     
+    "nodes" : [         
+        {           
+            "type" : "Except" ,             
+            "node" :{               
+                "type" : "SentTo",                  
+                "Domains" : [                   
+                    "contoso.com",                  
+                    "microsoft.com"
+                ]               
+            }       
+        },
+        {           
+            "type" : "Or",          
+            "nodes" : [                 
+                {           
+                    "type" : "AttachmentLabel",             
+                    "LabelId" : "3acd2acc-2072-48b1-80c8-4da23e245613"      
+                },{                     
+                    "type" : "EmailLabel",                  
+                    "LabelId" : "3acd2acc-2072-48b1-80c8-4da23e245613"              
+                }
+            ]
+        },      
+        {           
+            "type" : "Justify",             
+            "LocalizationData": {               
+                "en-us": {                
+                    "Title": "Warning",                   
+                    "Body": "You are sending a document that is classified as <Bold>${MatchedLabelName}</Bold> to at least one external recipient. Please make sure that the content is correctly classified and that the recipients are entitled to receive this document.<br><br>List of attachments classified as <Bold>${MatchedLabelName}</Bold>:<br><br>${MatchedAttachmentName}<br><br><Bold>List of external email addresses:</Bold><br>${MatchedRecipientsList})<br><br>You are responsible for ensuring compliance to classification requirement as per Contoso’s policies.<br><br><Bold>Acknowledgement</Bold><br>By clicking <Bold>I accept<\Bold> below, you confirm that the recipient is entitled to receive the content and the communication complies with CS Policies and Standards",
+                    "Options": [                        
+                        "I accept"              
+                    ] 
+                },              
+                "es-es": {                
+                    "Title": "Advertencia",                   
+                    "Body": "Está enviando un documento clasificado como <Bold>${MatchedLabelName}</Bold> a al menos un destinatario externo. Asegúrese de que el contenido esté correctamente clasificado y que los destinatarios tengan derecho a recibir este documento.",
+                    "Options": [                        
+                        "Acepto"                    
+                    ]                   
+                }           
+            },          
+            "HasFreeTextOption":"false",            
+            "DefaultLanguage": "en-us"      
+        }   
+    ] 
+}
+```
+
+#### <a name="example-4-warn-on-mail-with-no-label-and-an-attachment-with-a-specific-label"></a>Esempio 4: avvisare la posta elettronica senza etichetta e un allegato con un'etichetta specifica
+
+Il **codice JSON** seguente fa in modo che Outlook avvisi l'utente quando invia un messaggio di posta elettronica interno senza etichetta, con un allegato con un'etichetta specifica. 
+
+In questo esempio, **bcbef25a-c4db-446b-9496-1b558d9edd0e** è l'ID dell'etichetta dell'allegato.
+
+Per impostazione predefinita, i messaggi di posta elettronica con allegati con etichetta non ricevono automaticamente la stessa etichetta.
+
+```powershell
+{   
+    "type" : "And",     
+    "nodes" : [         
+        {           
+            "type" : "EmailLabel",
+                     "LabelId" : null           
+        },
+        {
+          "type": "AttachmentLabel",
+          "LabelId": "bcbef25a-c4db-446b-9496-1b558d9edd0e",
+          "Extensions": [
+                ".docx",
+                ".xlsx",
+                ".pptx"
+             ]
+        },
+    {           
+            "type" : "SentTo",              
+            "Domains" : [               
+                "contoso.com",              
+            ]           
+        },      
+        {           
+            "type" : "Warn" 
+        }   
+    ] 
+}
+```
+
+#### <a name="example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option"></a>Esempio 5: richiedere una giustificazione, con due opzioni predefinite e un'opzione aggiuntiva per il testo libero
+
+Il codice **JSON** seguente causa la richiesta da parte di Outlook all'utente di una giustificazione per l'azione. Il testo della giustificazione include due opzioni predefinite, oltre a una terza opzione di testo libero.
+
+```PowerShell
+{   
+    "type" : "And",     
+    "nodes" : [         
+        {           
+            "type" : "Except" ,             
+            "node" :{               
+                "type" : "SentTo",                  
+                "Domains" : [                   
+                    "contoso.com",                                  
+                ]               
+            }       
+        },      
+        {           
+            "type" : "EmailLabel",          
+            "LabelId" : "34b8beec-40df-4219-9dd4-553e1c8904c1"      
+        },      
+        {           
+            "type" : "Justify",             
+            "LocalizationData": {               
+                "en-us": {                  
+                    "Title": "Justification Required",                  
+                    "Body": "Your organization policy requires justification for you to send content classified as <Bold> ${MatchedLabelName}</Bold>,to untrusted recipients:<br>Recipients are: ${MatchedRecipientsList}",                     
+                    "Options": [                        
+                        "I confirm the recipients are approved for sharing this content",                   
+                        "My manager approved sharing of this content",                      
+                        "Other, as explained"                   
+                    ]               
+                },              
+                "es-es": {                  
+                    "Title": "Justificación necesaria",                     
+                    "Body": "La política de su organización requiere una justificación para que envíe contenido clasificado como <Bold> ${MatchedLabelName}</Bold> a destinatarios que no sean de confianza.",                  
+                    "Options": [                        
+                        "Confirmo que los destinatarios están aprobados para compartir este contenido.",
+                        "Mi gerente aprobó compartir este contenido",
+                        "Otro, como se explicó"                     
+                    ]               
+                }           
+            },          
+            "HasFreeTextOption":"true",             
+            "DefaultLanguage": "en-us"      
+        }   
+    ] 
+}
+```
+
+## <a name="configure-sharepoint-timeouts"></a>Configurare i timeout di SharePoint
+
+Per impostazione predefinita, il timeout per le interazioni di SharePoint è di due minuti, dopo il quale l'operazione di AIP tentata ha esito negativo.
+
+A partire dalla [versione 2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), gli amministratori di AIP possono controllare questo timeout usando le proprietà avanzate seguenti, usando una sintassi **hh: mm: SS** per definire i timeout:
+
+- **SharepointWebRequestTimeout**. Determina il timeout per tutte le richieste Web AIP a SharePoint. Impostazione predefinita = 2 minuti.
+
+    Ad esempio, se il criterio è denominato **Global**, il seguente comando di PowerShell di esempio aggiorna il timeout della richiesta Web a 5 minuti.
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointWebRequestTimeout="00:05:00"}
+    ```
+
+- **SharepointFileWebRequestTimeout**. Determina il timeout specifico per i file di SharePoint tramite le richieste Web AIP. Impostazione predefinita = 15 minuti
+
+    Ad esempio, se il criterio è denominato **globale**, il seguente comando di PowerShell di esempio aggiorna il timeout della richiesta Web del file a 10 minuti.
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
+    ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 

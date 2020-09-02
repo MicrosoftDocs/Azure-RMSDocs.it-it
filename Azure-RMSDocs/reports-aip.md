@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecc0a78a942dc4e0c6b1dc89b3d2d2ec57c87f6e
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 1bd48cd64616785a3b8f7c62a3e944cc5eb80097
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264379"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316825"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
@@ -107,6 +107,12 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 - ID utente (indirizzo di posta elettronica o UPN).
 
 - Nome del dispositivo dell'utente.
+
+- Indirizzo IP del dispositivo dell'utente. 
+
+- Nome del processo pertinente, ad esempio **Outlook** o **MSIP. app**.
+
+- Nome dell'applicazione che ha eseguito l'assegnazione di etichette, ad esempio **Outlook** o **Esplora file**
 
 - Per i documenti: percorso e nome file dei documenti ai quali viene aggiunta l'etichetta.
 
@@ -277,7 +283,7 @@ Per creare query personalizzate, usare i nomi di schema descrittivi implementati
 
 Usare la tabella seguente per identificare il nome descrittivo delle funzioni di eventi che è possibile usare per le query personalizzate con le funzionalità di analisi di Azure Information Protection.
 
-|Nome colonna|Descrizione|
+|Nome della colonna|Descrizione|
 |-----------|-----------|
 |Tempo|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
 |Utente|Utente: Format UPN o dominio\utente|

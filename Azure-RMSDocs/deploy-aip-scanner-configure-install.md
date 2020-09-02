@@ -4,7 +4,7 @@ description: Istruzioni per l'installazione e la configurazione del Azure Inform
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/24/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcc798a8b9b4a2e0472aad77123571ab03070324
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 956b9f65c9dd5a4a5fdf66d3f70770ff5e7162d2
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953151"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316910"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -26,7 +26,7 @@ ms.locfileid: "88953151"
 >[!NOTE] 
 > Se si lavora con lo scanner classico di AIP, vedere [installazione e configurazione dello scanner classico Azure Information Protection](deploy-aip-scanner-configure-install-classic.md).
 
-Prima di iniziare la configurazione e l'installazione del Azure Information Protection scanner, verificare che il sistema sia conforme ai [prerequisiti richiesti](deploy-aip-scanner-prereqs.md).
+Prima di iniziare la configurazione e l'installazione del Azure Information Protection scanner, verificare che il sistema sia conforme ai [prerequisiti richiesti](deploy-aip-scanner-prereqs.md). 
 
 Quando si è pronti, continuare con i passaggi seguenti:
 
@@ -57,7 +57,14 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
 
 Per configurare lo scanner: 
 
-1. [Accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)e passare al riquadro **Azure Information Protection** . 
+1. Accedere al [portale di Azure](https://portal.azure.com) con uno dei ruoli seguenti:
+
+    - **Amministratore conformità**
+    - **Amministratore dati di conformità**
+    - **Amministratore della sicurezza**
+    - **Amministratore globale**
+
+    Quindi, passare al riquadro **Azure Information Protection** .
     
     Ad esempio, nella casella di ricerca di risorse, servizi e documenti iniziare a digitare **Information** e selezionare **Azure Information Protection**.
 
@@ -85,7 +92,7 @@ Per configurare lo scanner:
 
 ### <a name="create-a-network-scan-job-public-preview"></a>Creare un processo di analisi di rete (anteprima pubblica)
 
-A partire dalla versione 2.8.83, è possibile analizzare la rete per i repository rischiosi. Aggiungere uno o più repository trovati a un processo di analisi del contenuto per analizzarli per verificare la presenza di contenuto sensibile.
+A partire dalla versione [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview), è possibile analizzare la rete per i repository rischiosi. Aggiungere uno o più repository trovati a un processo di analisi del contenuto per analizzarli per verificare la presenza di contenuto sensibile.
 
 > [!NOTE]
 > L'interfaccia di **individuazione della rete** è attualmente in fase di distribuzione graduale e sarà disponibile in tutte le aree entro il 15 settembre 2020. 
@@ -210,7 +217,7 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
 
         Quando si aggiungono i percorsi di SharePoint, utilizzare la sintassi seguente:
     
-        |Path  |Sintassi  |
+        |Percorso  |Sintassi  |
         |---------|---------|
         |**Percorso radice**     | `http://<SharePoint server name>` </br></br>Analizza tutti i siti, incluse le raccolte siti consentite per l'utente dello scanner. </br>Richiede [autorizzazioni aggiuntive](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) per individuare automaticamente il contenuto radice        |
         |**Raccolta o sito secondario di SharePoint specifico**     | I tipi validi sono: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Richiede [autorizzazioni aggiuntive](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) per individuare automaticamente il contenuto della raccolta siti         |

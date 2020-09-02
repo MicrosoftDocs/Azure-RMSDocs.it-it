@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad523eb3537c11ec2ca839b08da72d3275cfbef5
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953066"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316876"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Esecuzione dello scanner Azure Information Protection
 
@@ -133,7 +133,7 @@ Per aggiornare prima il criterio, ad esempio durante il test, eliminare manualme
 Se sono state modificate anche le impostazioni di protezione per le etichette, attendere 15 minuti aggiuntivi dal momento in cui sono state salvate le impostazioni di protezione aggiornate prima di riavviare il servizio Azure Information Protection.
 
 > [!IMPORTANT]
-> Se è stato eseguito l'aggiornamento alla versione [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) o successiva, AIP ignora la ripetizione dell'analisi completa per le impostazioni aggiornate per garantire prestazioni coerenti. Se è stato eseguito l'aggiornamento, assicurarsi di [eseguire una ripetizione dell'analisi completa manualmente](#rescanning-files) , se necessario. 
+> Se è stato eseguito l'aggiornamento alla versione [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) o successiva, AIP ignora la ripetizione dell'analisi completa per le impostazioni aggiornate per garantire prestazioni coerenti. Se è stato eseguito l'aggiornamento, assicurarsi di [eseguire una ripetizione dell'analisi completa manualmente](#rescanning-files) , se necessario. 
 >
 > Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on,** assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
 > 

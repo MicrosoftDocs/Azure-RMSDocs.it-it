@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cac7a2e655a9718ce73eb60384a4022be449b6dd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 274ef1ef2a7196aa9c25b8f488d83da77eba7c6c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952896"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316808"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner unificato per l'assegnazione di etichette
 
@@ -208,15 +208,35 @@ Tuttavia, in un ambiente di produzione, i criteri dell'organizzazione possono pr
 
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restrizione: il server scanner non può avere connettività Internet
 
+Sebbene il client di etichettatura unificata non possa applicare la protezione senza una connessione Internet, lo scanner può comunque applicare le etichette in base ai criteri importati.
+
 Per supportare un computer disconnesso, seguire questa procedura:
 
-1. Configurare le etichette nei criteri e quindi importare i criteri usando il cmdlet [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) . Sebbene il client di etichettatura unificata non possa applicare la protezione senza una connessione Internet, lo scanner può comunque applicare le etichette in base ai criteri importati.
+1.  Configurare le etichette nei criteri e quindi usare la [procedura per supportare i computer disconnessi](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) per abilitare la classificazione e l'assegnazione di etichette offline.
 
-1. Configurare lo scanner nella portale di Azure creando un cluster dello scanner. Se occorre assistenza per questo passaggio, vedere [Configurare lo scanner nel portale di Azure](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Abilitare la gestione offline per i processi di analisi del contenuto:
 
-1. Esportare il processo del contenuto dal riquadro **processi di analisi Azure Information Protection-contenuto** utilizzando l'opzione **Esporta** .
+    1. Impostare lo scanner per il funzionamento in modalità **offline** , usando il cmdlet [set-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
 
-1. In una sessione di PowerShell eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
+    1. Configurare lo scanner nella portale di Azure creando un cluster dello scanner. Per altre informazioni, vedere [configurare lo scanner nella portale di Azure](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+    1. Esportare il processo del contenuto dal riquadro **processi di analisi Azure Information Protection-contenuto** utilizzando l'opzione **Esporta** .
+    
+    1. Importare i criteri usando il cmdlet [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) . 
+    
+    I risultati per i processi di analisi del contenuto offline sono disponibili all'indirizzo: **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
+    
+1. Abilitare la gestione offline dei processi di analisi di rete:
+
+    1. Impostare il servizio di individuazione della rete per il funzionamento in modalità offline usando il cmdlet [set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
+
+    1. Configurare il processo di analisi di rete nel portale di Azure. Per ulteriori informazioni, vedere [creazione di un processo di analisi di rete](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    
+    1. Esportare il processo di analisi della rete dal riquadro processi di analisi di **rete Azure Information Protection (anteprima)** con l'opzione di **esportazione** . 
+    
+    1.  Importare il processo di analisi di rete usando il file che corrisponde al nome del cluster usando il cmdlet [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) .  
+    
+    I risultati per i processi di analisi di rete offline sono disponibili in: **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restrizione: non è possibile concedere all'utente il ruolo Sysadmin o i database devono essere creati e configurati manualmente
 

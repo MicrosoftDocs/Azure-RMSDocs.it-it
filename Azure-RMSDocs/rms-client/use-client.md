@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fa0c436035d13c5f1066e121b94e226dccd46d09
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: 8b72c0b8efe31ad570bed684dbe63283c5f79b47
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788646"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316638"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -126,7 +126,7 @@ Usare la tabella seguente per confrontare le funzionalità supportate dai tre cl
 
 Per confrontare le funzionalità di riservatezza predefinite di Office in diverse piattaforme del sistema operativo (Windows, macOS, iOS e Android) e per il Web, vedere la documentazione relativa alla conformità del Microsoft 365, [supporto per le funzionalità di etichetta di riservatezza nelle app](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Questa documentazione include anche i numeri di build di Office o le informazioni sul canale di aggiornamento di Office per le funzionalità supportate.
 
-|Funzionalità|Client classico|Client per l'etichettatura unificata|Client di assegnazione di etichette incorporato di Office|
+|Feature|Client classico|Client per l'etichettatura unificata|Client di assegnazione di etichette incorporato di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Etichettatura manuale:| **Sì** | **Sì** |**Sì** |
 |Etichetta predefinita:| **Sì** | **Sì** | **Sì** |
@@ -200,7 +200,7 @@ Quando il client di Azure Information Protection (classico) e il Azure Informati
 |Etichette automatiche e consigliate: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
 |Supporto degli ordini per le etichette secondarie sugli allegati: | Abilitato con un' [impostazione client avanzata](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Abilitata per impostazione predefinita, nessuna configurazione richiesta|
 |Modificare il comportamento di protezione predefinito per i tipi di file: | È possibile utilizzare le [modifiche del registro di sistema](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) per eseguire l'override delle impostazioni predefinite di protezione nativa e generica | È possibile usare [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) per modificare i tipi di file che vengono protetti|
-|Ripetizioni automatiche | Le ripetizioni complete vengono eseguite automaticamente ogni volta che lo scanner rileva una modifica nei criteri o nelle impostazioni di assegnazione di etichette | A partire dalla versione [2.8.83](unifiedlabelingclient-version-release-history.md#version-2883-public-preview), gli amministratori possono scegliere di ignorare una ripetizione completa dopo avere apportato modifiche alle impostazioni del processo di analisi del contenuto o dei criteri. |
+|Ripetizioni automatiche | Le ripetizioni complete vengono eseguite automaticamente ogni volta che lo scanner rileva una modifica nei criteri o nelle impostazioni di assegnazione di etichette | A partire dalla versione [2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview), gli amministratori possono scegliere di ignorare una ripetizione completa dopo avere apportato modifiche alle impostazioni del processo di analisi del contenuto o dei criteri. |
 |Individuazione della rete |Le funzionalità di individuazione di rete non sono disponibili per lo scanner classico | Gli amministratori possono individuare ulteriori repository rischiosi analizzando un intervallo o un indirizzo IP specificato.|
 | | | |
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ec73048a8dcb306a1b8bc94670a80f9cbd8d2861
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 5874103f099898bef603dd56c85371a65d24a74c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176634"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316655"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -62,7 +62,7 @@ Per le versioni di Office 2013 e successive, è consigliabile configurare i crit
     |PowerPoint     |   `MSIP.PowerPointAddin`      |
     | | | 
 
-## <a name="applications"></a>Applicazioni
+## <a name="applications"></a>APPLICAZIONI
 
 Il client di assegnazione di etichette unificato Azure Information Protection può etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office Word, Excel, PowerPoint e Outlook delle edizioni di Office seguenti:
 
@@ -110,8 +110,6 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
     Nella schermata della Guida non sono elencati i parametri seguenti:
     
     - **ServiceLocation**: usare questo parametro se si installa il client in computer che eseguono Office 2010 e gli utenti non sono amministratori locali dei rispettivi computer o non si vuole che vengano visualizzati messaggi di richiesta. [Altre informazioni](#more-information-about-the-servicelocation-installation-parameter) 
-    
-    - **DowngradeDotNetRequirement**: usare questo parametro per ignorare il requisito relativo a Microsoft .NET Framework versione 4.6.2. [Altre informazioni](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
     
     - **AllowTelemetry = 0**: usare questo parametro per disabilitare l'opzione di installazione **Invia le statistiche di utilizzo a Microsoft per contribuire a migliorare Azure Information Protection**. 
 
@@ -162,18 +160,6 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 Esempio per installare il client in modo invisibile all'utente per Office 2010 e Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
-#### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Altre informazioni sul parametro di installazione DowngradeDotNetRequirement installation
-
-Per supportare gli aggiornamenti automatici usando Windows Update e per l'integrazione affidabile con le applicazioni di Office, il client Azure Information Protection Unified labeling usa Microsoft .NET Framework versione 4.6.2. Per impostazione predefinita, l'installazione interattiva tramite file eseguibile controlla se questa versione è presente e, in caso negativo, prova a installarla. A questo punto è necessario riavviare il computer.
-
-Se l'installazione di questa versione più recente di Microsoft .NET Framework non è una soluzione efficace, è possibile installare il client con il parametro **DowngradeDotNetRequirement=True**, in modo da ignorare questo requisito se è installato Microsoft .NET Framework versione 4.5.1.
-
-Ad esempio: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
-
-Si consiglia di usare questo parametro con cautela e con la conoscenza della presenza di problemi segnalati con le applicazioni di Office sospese quando viene usato il client per l'assegnazione di etichette unificata Azure Information Protection con questa versione precedente di Microsoft .NET Framework. Se si riscontrano problemi di blocco delle applicazioni, eseguire l'aggiornamento alla versione consigliata prima di provare altre soluzioni. 
-
-Tenere inoltre presente che se si utilizza Windows Update per tenere aggiornato il client di Azure Information Protection Unified Labeling, è necessario disporre di un altro meccanismo di distribuzione del software per aggiornare il client alle versioni successive.
-
 ### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>Per installare il client di assegnazione di etichette Azure Information Protection unificato usando il programma di installazione MSI
 
 Per la distribuzione centrale, usare le informazioni seguenti specifiche per la versione di installazione con estensione msi del client Azure Information Protection Unified labeling. 
@@ -186,7 +172,7 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
 
 1. Per ogni computer che esegue il file con estensione msi è necessario verificare che siano soddisfatte le seguenti dipendenze software. Ad esempio, creare un pacchetto con le dipendenze e la versione MSI del client oppure distribuire solo ai computer che soddisfano queste dipendenze:
     
-    |Versione di Office|Sistema operativo|Software|Azione|
+    |Versione di Office|Sistema operativo|Software|Action|
     |--------------------|--------------|----------------|---------------------|
     |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installazione|
     |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installazione|

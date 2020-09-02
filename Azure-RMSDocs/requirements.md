@@ -4,7 +4,7 @@ description: Identificare i prerequisiti necessari per distribuire Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a87c83afd6e1747a2fc3db6a12ef8734ff445c77
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: e3d50f6857c2f7c3fd5f104d79997b00feeb2664
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952828"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316893"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti di Azure Information Protection
 
@@ -128,7 +128,7 @@ Ogni client Azure Information Protection presenta prerequisiti aggiuntivi. Per i
 
 - [Prerequisiti di Azure Information Protection client](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>Applicazioni
+## <a name="applications"></a>APPLICAZIONI
 
 I client Azure Information Protection possono etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word**, **Excel**, **PowerPoint**e **Outlook** da una delle edizioni di Office seguenti:
 
@@ -216,8 +216,9 @@ Assicurarsi di consentire l'accesso a tutte le porte per i seguenti tag del serv
 Il servizio Azure Information Protection dipende anche da due indirizzi IP specifici:
  - **13.107.6.181** 
  - **13.107.9.181**
+ - **Porta 443**, per il traffico HTTPS
 
-Assicurarsi di creare regole per consentire l'accesso in uscita a questi indirizzi IP specifici.
+Assicurarsi di creare regole per consentire l'accesso in uscita a questi indirizzi IP specifici e tramite questa porta.
 
 ## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Server locali supportati per la protezione dei dati Rights Management di Azure
 
@@ -242,7 +243,7 @@ Per altre informazioni, vedere [Deploying the Azure Rights Management Connector]
 
 I sistemi operativi seguenti supportano il servizio Azure Rights Management, che fornisce la protezione dei dati per AIP:
 
-|Sistema operativo  |Versioni supportate  |
+|OS  |Versioni supportate  |
 |---------|---------|
 |**Computer Windows**     |-Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
 |**macOS**     |   la versione minima di macOS è 10.8 (Mountain Lion)      |
