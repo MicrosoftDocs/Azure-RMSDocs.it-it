@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26a6b96a8f0de79d78bb5fdb456158f15e86b1e0
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a7705a284690094c3db2ac5fd3ac3e3eca1ed2e5
+ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048817"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423129"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: uso di PowerShell con il client unificato di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
-> **I clienti con supporto Microsoft esteso per Windows 7 e Office 2010 possono anche ottenere supporto Azure Information Protection per queste versioni. Per i dettagli completi, rivolgersi al contatto di supporto.*
+>*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -105,13 +105,13 @@ Set-AIPAuthentication richiede una registrazione dell'app per i parametri *AppID
 
 3. Selezionare **+ nuova registrazione**. Nel riquadro **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
 
-   - **Nome**:`AIP-DelegatedUser`
+   - **Nome**: `AIP-DelegatedUser`
         
         Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
     
     - **Tipi di account supportati**: **solo account in questa directory organizzativa**
     
-    - **URI di reindirizzamento (facoltativo)**: **Web** e`https://localhost`
+    - **URI di reindirizzamento (facoltativo)**: **Web** e `https://localhost`
 
 4. Nel riquadro **AIP-DelegatedUser** , copiare il valore per l' **ID applicazione (client)**. Il valore è simile all'esempio seguente: `77c3c1c3-abf9-404e-8b2b-4652836c8c66` . Questo valore viene usato per il parametro *AppID* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
@@ -121,7 +121,7 @@ Set-AIPAuthentication richiede una registrazione dell'app per i parametri *AppID
 
 7. Per **Aggiungi un segreto client**, specificare quanto segue e quindi selezionare **Aggiungi**:
     
-    - **Descrizione**:`Azure Information Protection unified labeling client`
+    - **Descrizione**: `Azure Information Protection unified labeling client`
     - **Scadenza**: specificare la scelta della durata (1 anno, 2 anni o nessuna scadenza)
 
 8. Tornare al riquadro **AIP-DelegatedUser-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` . Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 

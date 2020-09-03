@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 926c24ae3bd7960df21aba508bdf2edc83f29e9f
-ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
+ms.openlocfilehash: 9566a20489ab24b1e13ca434caa4c2377902a058
+ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2020
-ms.locfileid: "89422382"
+ms.locfileid: "89422857"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti-Azure Information Protection
 
@@ -94,6 +94,23 @@ I criteri di pubblicazione possono richiedere fino a 24 ore.
 
     - [**Client classico**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/client-view-use-files.md)
     - [**Client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md)
+
+## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP per versioni di Windows e Office nel supporto esteso
+
+- [**Windows 7 Extended supported è terminato il 14 gennaio 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+
+    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Windows 10. Tuttavia, se sono presenti aggiornamenti della sicurezza estesi e un contratto di supporto, è disponibile il supporto per AIP per continuare a mantenere i sistemi Windows 7 protetti.
+
+    Per ulteriori informazioni, consultare il contatto del supporto tecnico.
+
+- [**Office 2010 è attualmente in supporto esteso**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+
+    Il supporto terminerà il 13 ottobre 2020 e non verrà esteso. Inoltre, l'unità di gestione delle attività non verrà offerta per Office 2010 e si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Office 365. 
+    
+    Per i clienti che eseguono attualmente Office 2010 nel supporto esteso, il supporto per AIP è disponibile fino al 13 ottobre 2020. 
+
+    Per ulteriori informazioni, consultare il contatto del supporto tecnico.
+
 
 ## <a name="more-information"></a>Altre informazioni
 

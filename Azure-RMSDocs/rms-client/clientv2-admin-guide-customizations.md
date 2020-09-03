@@ -13,18 +13,18 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ebaf12c3784f0a34a36f3a61aa687e1c61fe3126
-ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
+ms.openlocfilehash: d5801d4b76e3e7f08203889dc4ac348d9dd2d746
+ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/03/2020
-ms.locfileid: "89422450"
+ms.locfileid: "89423248"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
 >
-> **I clienti con supporto Microsoft esteso per Windows 7 e Office 2010 possono anche ottenere supporto Azure Information Protection per queste versioni. Per i dettagli completi, rivolgersi al contatto di supporto.*
+>*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -1450,7 +1450,7 @@ I tipi di nodo supportati includono:
 
 Le azioni regola possono essere una delle seguenti:
 
-|Action  |Sintassi  |Messaggio di esempio  |
+|Azione  |Sintassi  |Messaggio di esempio  |
 |---------|---------|---------|
 |**Bloccato**     |    `Block (List<language, [title, body]>)`     |    ***Posta elettronica bloccata***</br></br>  *Si sta per inviare contenuto classificato come **segreto** a uno o più destinatari non attendibili:*</br>*`rsinclair@contoso.com`*</br></br>*L'azione non è consentita dai criteri dell'organizzazione. Provare a rimuovere questi destinatari o a sostituire il contenuto.*|
 |**Avvertire**     | `Warn (List<language,[title,body]>)`        |  ***Conferma obbligatoria***</br></br>*Si sta per inviare contenuto classificato come **generale** a uno o più destinatari non attendibili:*</br>*`rsinclair@contoso.com`*</br></br>*I criteri dell'organizzazione richiedono la conferma dell'invio del contenuto.*       |
