@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 85a7325bf2bd80294436b233fb81fddbe707ea6e
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 926c24ae3bd7960df21aba508bdf2edc83f29e9f
+ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176617"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89422382"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti-Azure Information Protection
 
@@ -65,7 +65,7 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problemi noti di AIP nelle applicazioni di Office
 
-|Funzionalità  |Problemi noti  |
+|Feature  |Problemi noti  |
 |---------|---------|
 |**Più versioni di Office**    | I client Azure Information Protection, incluse le etichette classiche e unificate, non supportano più versioni di Office nello stesso computer o scambiano gli account utente in Office.       |
 |**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office: </br></br>-È possibile che si verifichino problemi di prestazioni nelle app di Office.</br>-La barra di Azure Information Protection può sembrare mobile al centro della schermata di Office, in una o in entrambe le visualizzazioni </br></br>Per garantire prestazioni coerenti e che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e in **generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore.**    |
@@ -73,6 +73,7 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 |**Contrassegni di contenuto in Word**    | Azure Information Protection i [Contrassegni](configure-policy-markings.md) di contenuto possono essere nascosti nei piè di pagina di Microsoft Word, quando il piè di pagina contiene anche una tabella. Per ulteriori informazioni, vedere [quando vengono applicati i contrassegni visivi](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**File allegati ai messaggi di posta elettronica** |A causa di una limitazione negli aggiornamenti recenti di Windows, quando [Microsoft Outlook è protetto da Azure Rights Management](office-apps-services-support.md), i file allegati ai messaggi di posta elettronica possono essere bloccati dopo l'apertura del file. |
 |**Unione posta**    |  La funzionalità di Unione di Office [mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) non è supportata con alcuna funzionalità Azure Information Protection.       |
+| **Messaggi di posta elettronica S/MIME** | L'apertura di messaggi di posta elettronica S/MIME nel riquadro di lettura di Outlook può causare problemi di prestazioni. </br></br>Per evitare problemi di prestazioni con i messaggi di posta elettronica S/MIME, abilitare la proprietà avanzata [**OutlookSkipSmimeOnReadingPaneProperty**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . </br></br>**Nota:** L'abilitazione di questa proprietà impedisce la visualizzazione della barra di AIP o della classificazione dei messaggi di posta elettronica nel riquadro di lettura di Outlook. |
 | | |
 
 ## <a name="known-issues-in-policies"></a>Problemi noti dei criteri
