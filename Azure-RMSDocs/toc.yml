@@ -123,7 +123,7 @@
           items:
             - name: Panoramica
               href: configure-applications.md
-            - name: Servizi di Office 365
+            - name: Servizi di Microsoft 365
               href: configure-office365.md
             - name: App di Office
               href: configure-office-apps.md
