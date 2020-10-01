@@ -335,7 +335,7 @@
         - name: Guida per gli sviluppatori
           href: ./develop/developers-guide.md
         - name: Microsoft Information Protection
-          href: 'https://aka.ms/mipsdkdocs'
+          href: /information-protection/develop/
         - name: Rights Management SDK 4.2
           href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
           items:
@@ -343,7 +343,7 @@
               href: ./develop/deprecation-notice.md
             - name: Panoramica
               href: ./develop/overview.md
-            - name: Introduzione
+            - name: Operazioni preliminari
               href: ./develop/get-started.md
               items:
                 - name: Novità
@@ -486,7 +486,7 @@
     - name: Informazioni su conformità e supporto
       href: compliance.md
     - name: Informazioni di riferimento su PowerShell
-      href: 'https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps'
+      href: /powershell/azure/aip/overview?view=azureipps
     - name: Informazioni di riferimento sui log di controllo
       href: audit-logs.md
     - name: Terminologia
