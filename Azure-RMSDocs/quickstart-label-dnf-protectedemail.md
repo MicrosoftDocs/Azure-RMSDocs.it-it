@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: acdf61bfbcd46ba58d65ccc4ecc5a387fce123dc
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: 4d81f1406f1894acf6c820693e80d00dca1662f4
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810304"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428453"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
@@ -48,7 +48,7 @@ Per completare questa guida introduttiva, è necessario:
 |**AIP aggiunto al portale di Azure**    |  Aver aggiunto il riquadro Azure Information Protection al portale di Azure e aver verificato che il servizio di protezione sia attivato. </br></br>Per altre informazioni, vedere [Avvio rapido: Attività iniziali nel portale di Azure](quickstart-viewpolicy.md).       |
 |**Un'etichetta esistente di Azure Information Protection da configurare**     | Usare una delle etichette predefinite o un'etichetta creata. Per altre informazioni, vedere [Avvio rapido: Creare una nuova etichetta di Azure Information Protection per utenti specifici](quickstart-label-specificusers.md). |
 |**Client classico installato**    |   Per testare la nuova etichetta, è necessario che il client classico sia installato nel computer. </br></br>Il client classico Azure Information Protection verrà deprecato nel marzo 2021. Per distribuire il client classico AIP, aprire un ticket di supporto per ottenere l'accesso al download.  |
-|**Un computer Windows, connesso alle app di Office** |Per testare la nuova etichetta, è necessario un computer che esegue Windows (almeno Windows 7 con Service Pack 1). </br></br>In questo computer accedere a una delle seguenti versioni delle app di Office: </br>- App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365). </br>- Office 365 ProPlus. </br>- Office Professional Plus 2019. </br>- Office Professional Plus 2016.</br>- Office Professional Plus 2013 con Service Pack 1. </br>- Office Professional Plus 2010 con Service Pack 2.|
+|**Un computer Windows, connesso alle app di Office** |Per testare la nuova etichetta, è necessario un computer che esegue Windows (almeno Windows 7 con Service Pack 1). </br></br>In questo computer accedere a una delle seguenti versioni delle app di Office: </br>- App di Office con versione minima 1805, build 9330.2078 da Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente viene assegnata una licenza per Azure Rights Management. </br>- Microsoft 365 Apps for enterprise. </br>- Office Professional Plus 2019. </br>- Office Professional Plus 2016.</br>- Office Professional Plus 2013 con Service Pack 1. </br>- Office Professional Plus 2010 con Service Pack 2.|
 | | |
 
 Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).

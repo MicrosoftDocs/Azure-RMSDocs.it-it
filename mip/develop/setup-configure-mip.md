@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: e1c223744a8651a4318abbf0f532d76a771bde16
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 171132bd2e41dcde4dd879eb9314d909bccd74c3
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971677"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428294"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK
 
-Gli articoli dedicati a guide introduttive ed esercitazioni sono incentrati sulla creazione di applicazioni che usano le librerie e le API di MIP SDK. Questo articolo illustra come installare e configurare l'abbonamento a Office 365 e una workstation client, in preparazione per l'uso dell'SDK.
+Gli articoli dedicati a guide introduttive ed esercitazioni sono incentrati sulla creazione di applicazioni che usano le librerie e le API di MIP SDK. Questo articolo illustra come installare e configurare l'abbonamento a Microsoft 365 e una workstation client, in preparazione per l'uso dell'SDK.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -125,7 +125,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
    - Fare clic sull'icona di Windows nell'angolo inferiore sinistro.
    - Digitare "Path" e premere "INVIO", quando viene visualizzata la voce **Modifica le variabili di ambiente relative al sistema**.
    - Nella finestra di dialogo **Proprietà del sistema** fare clic su **Variabili di ambiente**.
-   - Nella finestra di dialogo **Variabili di ambiente** fare clic sulla riga della variabile **Path** in **Variabili dell'utente per \<utente\>** e quindi fare clic su **Modifica**.
+   - Nella finestra di dialogo **Variabili di ambiente** fare clic sulla riga della variabile **Path** in **Variabili dell'utente per \<user\>** e quindi fare clic su **Modifica**.
    - Nella finestra di dialogo **Modifica variabile di ambiente** fare clic su **Nuovo**, che consente di creare una nuova riga modificabile. Usando il percorso completo per ognuna delle sottodirectory `file\bins\debug\amd64`, `protection\bins\debug\amd64` e `upe\bins\debug\amd64`, aggiungere una nuova riga per ognuna. Le directory dell'SDK sono archiviate nel formato `<API>\bins\<target>\<platform>`, dove:
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
@@ -143,7 +143,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registrare un'applicazione client in Azure Active Directory
 
-Come parte del processo di provisioning dell'abbonamento a Office 365 viene creato un tenant di Azure Active Directory (Azure AD) associato. Il tenant di Azure AD consente la gestione delle identità e dell'accesso per gli *account utente* e gli *account di applicazione* di Office 365. Per le applicazioni che richiedono l'accesso ad API protette (ad esempio le API MIP) è necessario un account di applicazione.
+Come parte del processo di provisioning dell'abbonamento a Microsoft 365 viene creato un tenant di Azure Active Directory (Azure AD) associato. Il tenant di Azure AD consente la gestione delle identità e dell'accesso per gli *account utente* e gli *account di applicazione* di Microsoft 365. Per le applicazioni che richiedono l'accesso ad API protette (ad esempio le API MIP) è necessario un account di applicazione.
 
 Per il processo di autenticazione e autorizzazione in fase di esecuzione, gli account sono rappresentati da un'*entità di sicurezza*, derivata dalle informazioni di identità dell'account. Le entità di sicurezza che rappresentano un account di applicazione vengono definite [*entità servizio*](/azure/active-directory/develop/developer-glossary#service-principal-object).
 

@@ -1,40 +1,40 @@
 ---
-title: "Procedura: eseguire il downgrade o la rimozione di un'etichetta che richiede una giustificazione (C#)"
+title: Procedura - Effettuare il downgrade o la rimozione di un'etichetta che richiede una giustificazione (C#)
 description: Le informazioni in questo articolo sono utili per comprendere come effettuare il downgrade o la rimozione di un'etichetta che richiede una giustificazione.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 88c55d973dde25e1571750e51e36f5fa726770f5
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: 666b0c7fdbc483f638f76def37ec3082c9eb7377
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403222"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421195"
 ---
-# <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API file di Microsoft Information Protection SDK-giustificazione dell'azione per abbassare un'etichetta di riservatezza in un file (C#)
+# <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API File di Microsoft Information Protection SDK - Giustificazione dell'azione per abbassare un'etichetta di riservatezza per un file (C#)
 
-Questa Guida introduttiva gestisce un'operazione di downgrade dell'etichetta quando il criterio dell'etichetta richiede una giustificazione. In questo caso, si userà `IFileHandler` Interface per modificare le etichette di un file. Per altri dettagli, vedere le [informazioni di riferimento sull'API](/dotnet/api/?term=microsoft.informationprotection).
+Questa guida di avvio rapido riguarda la gestione di un'operazione di downgrade di etichette quando i criteri per le etichette richiedono una giustificazione. In questo contesto verrà usata l'interfaccia `IFileHandler` per modificare le etichette di un file. Per altri dettagli, vedere le [informazioni di riferimento sull'API](/dotnet/api/?term=microsoft.informationprotection).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- [Guida introduttiva completa: impostare/ottenere le etichette di riservatezza (C#)](quick-file-set-get-label-csharp.md) che compila una soluzione Starter di Visual Studio per elencare le etichette di riservatezza di un'organizzazione e per impostare e leggere le etichette di riservatezza in/da un file. Questa Guida introduttiva "come eseguire il downgrade o la rimozione di un'etichetta che necessita di una giustificazione C#" si basa su quella precedente.
+- In primo luogo completare [Avvio rapido: Impostare/ottenere le etichette di riservatezza (C#)](quick-file-set-get-label-csharp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione, nonché per impostare e leggere le etichette di riservatezza in/da un file. Questa guida di avvio rapido "Procedura - Eseguire il downgrade o la rimozione di un'etichetta che richiede una giustificazione (C#)" si basa su quella precedente.
 - Facoltativamente: rivedere i [concetti relativi ai gestori di file](concept-handler-file-cpp.md) in MIP SDK.
 
 ## <a name="add-logic-to-set-a-lower-label-to-a-protected-file"></a>Aggiungere la logica per impostare un'etichetta inferiore su un file protetto
 
-Aggiungere la logica per impostare un'etichetta di riservatezza su un file, usando l'oggetto gestore di file.
+Aggiungere la logica per impostare un'etichetta di riservatezza su un file usando l'oggetto gestore di file.
 
-1. Aprire la soluzione di Visual Studio creata nella precedente sezione "Guida introduttiva: impostare/ottenere le etichette di riservatezza (C#).
+1. Aprire la soluzione Visual Studio creata nell'articolo precedente "Avvio rapido: Impostare/ottenere etichette di riservatezza (C#).
 
 2. Usare Esplora soluzioni per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
 3. Aggiornare il valore `<label-id>` dalla guida di avvio rapido precedente impostando un'etichetta di riservatezza che richiede una giustificazione per l'abbassamento. Durante l'esecuzione di questa guida di avvio rapido, si imposterà prima questa etichetta e quindi si tenterà di abbassarla tramite frammenti di codice in ulteriori passaggi.
 
-4. `Main()`Inserire il codice seguente verso la fine del corpo, sotto `Console.ReadKey()` e sopra il blocco di arresto dell'applicazione (in cui è stato interrotto nella Guida introduttiva precedente).
+4. Verso la fine del corpo di `Main()`, sotto `Console.ReadKey()` e prima del bocco di arresto dell'applicazione (il punto in cui è stata interrotta la guida di avvio rapido precedente), inserire il codice seguente.
 
     ```csharp
     //Set paths and label ID
@@ -87,7 +87,7 @@ Aggiungere la logica per impostare un'etichetta di riservatezza su un file, usan
 
     ```
 
-5. Verso la fine di Main () individuare il blocco di arresto dell'applicazione creato nella Guida introduttiva precedente e aggiungere le righe del gestore per rilasciare le risorse.
+5. Verso la fine di Main() trovare il blocco di arresto dell'applicazione creato nella guida di avvio rapido precedente e aggiungerlo sotto le righe del gestore per rilasciare le risorse.
 
     ````csharp
     downgradeHandler = null;
@@ -99,7 +99,7 @@ Aggiungere la logica per impostare un'etichetta di riservatezza su un file, usan
    | Segnaposto | Valore |
    |:----------- |:----- |
    | \<downgraded-labled-output\> | Percorso del file di output in cui si vuole salvare il file modificato. |
-   | \<new-label-id\> | ID modello, copiato dall'output della console nella Guida introduttiva precedente, ad esempio: `bb7ed207-046a-4caf-9826-647cff56b990` . Assicurarsi che abbia una riservatezza inferiore rispetto all'etichetta del file precedentemente protetto. |
+   | \<new-label-id\> | ID modello, copiato dall'output della console nell'Avvio rapido precedente, ad esempio: `bb7ed207-046a-4caf-9826-647cff56b990`. Assicurarsi che abbia una riservatezza inferiore rispetto all'etichetta del file precedentemente protetto. |
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 
@@ -129,4 +129,4 @@ Compilare e testare l'applicazione client.
     Press a key to continue.
    ```
 
-Si noti che l'approccio simile si applica anche all' `DeleteLabel()` operazione, nel caso in cui l'etichetta da eliminare da un file richiede una giustificazione in base ai criteri di etichetta.`DeleteLabel()` la funzione genera un' `JustificationRequiredException` eccezione e il `IsDowngradeJustified` flag deve essere impostato su true nella gestione delle eccezioni prima di eliminare correttamente un'etichetta.
+Si noti che è necessario seguire un approccio simile per l'operazione `DeleteLabel()`, nel caso in cui l'etichetta da eliminare da un file richieda una giustificazione in base ai criteri per le etichette. La funzione `DeleteLabel()` genera un'eccezione `JustificationRequiredException` e il flag `IsDowngradeJustified` deve essere impostato su true nella gestione delle eccezioni prima di eliminare correttamente un'etichetta.

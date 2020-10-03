@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 05d8c070e5dc8f8562f59ff0e3d46b6542d8d74f
-ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
+ms.openlocfilehash: 12b53af8ba70c41d7597139b9158e2ac441fa75b
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87255166"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91427833"
 ---
 # <a name="overview"></a>Panoramica
 
@@ -19,7 +19,7 @@ ms.locfileid: "87255166"
 
 Microsoft Information Protection (MIP) riunisce i servizi di classificazione, etichettatura e protezione di Microsoft:
 
-- L'amministrazione unificata è disponibile per Office 365, Azure Information Protection, Windows Information Protection e ad altri servizi Microsoft. 
+- L'amministrazione unificata è disponibile per Microsoft 365, Azure Information Protection, Windows Information Protection e altri servizi Microsoft. 
 - Il SDK MIP può essere usato da terze parti per integrare le applicazioni, tramite uno schema di etichettatura dei dati e un servizio di protezione standard e coerenti.
 
 * [Che cos'è il Centro conformità e sicurezza di Office 365?](https://docs.microsoft.com/office365/securitycompliance/)
@@ -46,5 +46,5 @@ MIP SDK è supportato nelle piattaforme seguenti:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-A questo punto è possibile iniziare a esplorare l'SDK. In primo luogo è necessario [completare le procedure di installazione e configurazione del SDK MIP](setup-configure-mip.md). Queste procedure garantiscono la configurazione corretta della sottoscrizione di Office 365 e del computer client.
+A questo punto è possibile iniziare a esplorare l'SDK. In primo luogo è necessario [completare le procedure di installazione e configurazione del SDK MIP](setup-configure-mip.md). Queste procedure garantiscono la configurazione corretta della sottoscrizione di Microsoft 365 e del computer client.
 
