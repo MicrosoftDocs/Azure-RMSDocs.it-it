@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: c3de3c7de8a604221732dd0398e019721b51116b
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: c8af932e5210bdf2445926c6584d4680a6fb0158
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972136"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588275"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>Guida introduttiva: Elencare i modelli di protezione (C++)
 
@@ -23,7 +23,7 @@ Questo Avvio rapido illustra come usare l'API Protezione di MIP per i modelli di
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
 - In primo luogo completare l'[Avvio rapido: Inizializzazione delle applicazioni client - API Protezione (C++)](quick-protection-app-initialization-cpp.md) che compila una soluzione Visual Studio iniziale. L'Avvio rapido "Elencare i modelli di protezione" si basa sull'Avvio rapido precedente per la creazione corretta della soluzione iniziale.
-- Facoltativamente: Esaminare i concetti in [Modelli RMS](https://docs.microsoft.com/azure/information-protection/configure-policy-templates).
+- Facoltativamente: Esaminare i concetti in [Modelli RMS](/azure/information-protection/configure-policy-templates).
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>Aggiungere la logica per elencare i modelli di protezione
 

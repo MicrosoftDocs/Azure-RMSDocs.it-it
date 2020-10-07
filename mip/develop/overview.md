@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 12b53af8ba70c41d7597139b9158e2ac441fa75b
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 32f2895d8b52a5fd63d5c764eebb78736b1917a9
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91427833"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588326"
 ---
 # <a name="overview"></a>Panoramica
 
@@ -22,7 +22,7 @@ Microsoft Information Protection (MIP) riunisce i servizi di classificazione, et
 - L'amministrazione unificata è disponibile per Microsoft 365, Azure Information Protection, Windows Information Protection e altri servizi Microsoft. 
 - Il SDK MIP può essere usato da terze parti per integrare le applicazioni, tramite uno schema di etichettatura dei dati e un servizio di protezione standard e coerenti.
 
-* [Che cos'è il Centro conformità e sicurezza di Office 365?](https://docs.microsoft.com/office365/securitycompliance/)
+* [Che cos'è il Centro conformità e sicurezza di Office 365?](/office365/securitycompliance/)
 * [Che cos'è Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 * [Come funziona la protezione in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -47,4 +47,3 @@ MIP SDK è supportato nelle piattaforme seguenti:
 ## <a name="next-steps"></a>Passaggi successivi
 
 A questo punto è possibile iniziare a esplorare l'SDK. In primo luogo è necessario [completare le procedure di installazione e configurazione del SDK MIP](setup-configure-mip.md). Queste procedure garantiscono la configurazione corretta della sottoscrizione di Microsoft 365 e del computer client.
-

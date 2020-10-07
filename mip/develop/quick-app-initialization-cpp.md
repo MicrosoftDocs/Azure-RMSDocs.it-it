@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a08f124a2ec7570469913ec5985d52bfdbf2597f
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 3f74606e8f5caf4b4d0d480ba36830129249c9cf
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564131"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588309"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione delle applicazioni client (C++) 
 
@@ -342,7 +342,7 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
 
    | Segnaposto | Valore | Esempio |
    |:----------- |:----- |:--------|
-   | \<application-id\> | ID di applicazione (GUID) di Azure AD assegnato all'applicazione registrata nel [passaggio 2 dell'articolo "Installazione e configurazione di MIP SDK"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory). Sostituire 2 istanze. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-id\> | ID di applicazione (GUID) di Azure AD assegnato all'applicazione registrata nel [passaggio 2 dell'articolo "Installazione e configurazione di MIP SDK"](./setup-configure-mip.md#register-a-client-application-with-azure-active-directory). Sostituire 2 istanze. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Nome descrittivo definito dall'utente per l'applicazione. Deve contenere caratteri ASCII validi (escluso ';') e idealmente corrisponde al nome dell'applicazione usato nella registrazione di Azure AD. | `"AppInitialization"` |
    | \<application-version\> | Informazioni sulla versione definite dall'utente per l'applicazione. Deve contenere caratteri ASCII validi (escluso ';'). | `"1.1.0.0"` |
    | \<engine-account\> | Account usato per l'identità del motore. Quando si esegue l'autenticazione con un account utente durante l'acquisizione dei token, deve corrispondere a questo valore. | `"user1@tenant.onmicrosoft.com"` |

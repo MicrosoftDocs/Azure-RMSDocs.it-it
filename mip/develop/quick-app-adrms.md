@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: 51e81627c9f06fd7eb7259a5da2ec8b43449bac6
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: cf76a81525d06cf987f24d1966b85ade78f8f8ff
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972019"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588292"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Guida introduttiva: Protezione del server AD RMS (Active Directory Rights Management Server)
 
@@ -27,14 +27,14 @@ Se non è già stato fatto, assicurarsi di:
 
 - In primo luogo completare [Avvio rapido: Inizializzazione delle applicazioni client (C++)](quick-app-initialization-cpp.md) per creare una soluzione Visual Studio iniziale.
 - In primo luogo completare [Avvio rapido: Elencare le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md) o [Avvio rapido: Elencare le etichette di riservatezza (C#)](quick-file-list-labels-csharp.md)
-- Distribuire AD RMS con l'[estensione per dispositivi mobili](https://docs.microsoft.com/azure/information-protection/active-directory-rights-manage-mobile-device).
-- Facoltativamente, assicurarsi che il [record SRV DNS per l'estensione per dispositivi mobili di AD RMS](https://docs.microsoft.com/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) sia pubblicato.
+- Distribuire AD RMS con l'[estensione per dispositivi mobili](/azure/information-protection/active-directory-rights-manage-mobile-device).
+- Facoltativamente, assicurarsi che il [record SRV DNS per l'estensione per dispositivi mobili di AD RMS](/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) sia pubblicato.
 
 ## <a name="service-discovery"></a>Individuazione dei servizi
 
-L'SDK esegue l'individuazione dei servizi in base all'elemento `mip::Identity` fornito tramite `FileEngineSettings` o `ProtectionEngineSettings` usando il suffisso UPN o dell'indirizzo di posta. Prima di tutto cerca nella gerarchia di domini il record *_rmsdisco* per l'estensione per dispositivi mobili. Per altri dettagli su tale processo, vedere [Specifica del record SRV DNS per l'estensione per dispositivi mobili di AD RMS](https://docs.microsoft.com/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Se tale record SRV DNS non viene trovato, per impostazione predefinita usa il servizio Azure Information Protection come posizione del servizio.
+L'SDK esegue l'individuazione dei servizi in base all'elemento `mip::Identity` fornito tramite `FileEngineSettings` o `ProtectionEngineSettings` usando il suffisso UPN o dell'indirizzo di posta. Prima di tutto cerca nella gerarchia di domini il record *_rmsdisco* per l'estensione per dispositivi mobili. Per altri dettagli su tale processo, vedere [Specifica del record SRV DNS per l'estensione per dispositivi mobili di AD RMS](/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Se tale record SRV DNS non viene trovato, per impostazione predefinita usa il servizio Azure Information Protection come posizione del servizio.
 
-Se un'identità non è disponibile o se il record SRV DNS per l'estensione per dispositivi mobili non è stato pubblicato, è possibile eseguire l'override del processo di individuazione dei servizi impostando in modo esplicito l'[URL dell'endpoint cloud](https://docs.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setpolicycloudendpointbaseurl-function).
+Se un'identità non è disponibile o se il record SRV DNS per l'estensione per dispositivi mobili non è stato pubblicato, è possibile eseguire l'override del processo di individuazione dei servizi impostando in modo esplicito l'[URL dell'endpoint cloud](./reference/class_mip_fileengine_settings.md#setpolicycloudendpointbaseurl-function).
 
 ## <a name="configuring-file-api-in-c-to-use-ad-rms"></a>Configurazione dell'API File in C# per usare AD RMS
 

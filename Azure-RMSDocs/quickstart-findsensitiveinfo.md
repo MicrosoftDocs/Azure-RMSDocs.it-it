@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: d8f48a058f03b43e4f4835106c5f882942623740
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 04e114e6b719288a26663bd5534af4b1f1b73ac8
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927982"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91587882"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -96,11 +96,11 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
 
     Sempre nel riquadro **Aggiungi un nuovo profilo** selezionare **Configura i repository** per aprire il riquadro **Repository**:
 
-    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Configurare i repository di dati per lo scanner di Azure Information Protection":::
+    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
 
 1. Nel riquadro **Repository** selezionare **Aggiungi**:
 
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Aggiungere il repository di dati per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-repository-add.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
 
 1. Nel riquadro **Repository** specificare la cartella creata in precedenza, ad esempio `\\server\TestScanner`
 
@@ -132,7 +132,7 @@ A questo punto si è pronti per installare lo scanner con il profilo di scanner 
 
 1. Selezionare il nome del profilo e quindi l'opzione **Avvia analisi**:
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Avviare l'analisi per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
 
     Se questa opzione non è disponibile dopo aver selezionato il profilo, lo scanner non è connesso a Azure Information Protection. Verificare la configurazione e la connettività Internet.
 
@@ -171,7 +171,7 @@ In Excel:
 
     nel riquadro **Azure Information Protection - Profili** verificare che il profilo sia selezionato e quindi selezionare l'opzione **Avvia analisi**:
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Avviare l'analisi per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
 
 1. Visualizzare i nuovi risultati al termine dell'analisi.
 
@@ -213,5 +213,5 @@ Se si vogliono classificare e proteggere i file contenenti informazioni sensibil
 
 **Per il client di etichettatura unificata:**
 
-- [Applicare automaticamente un'etichetta di riservatezza al contenuto](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Applicare automaticamente un'etichetta di riservatezza al contenuto](/microsoft-365/compliance/apply-sensitivity-label-automatically)
+- [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels)
