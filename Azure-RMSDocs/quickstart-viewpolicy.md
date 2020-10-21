@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ebe7260cdbd9a252323b13ffd91897e5cd423810
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 29c79c49de5d28c82281614846f5938ecbf40f89
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927921"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91587899"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
@@ -64,7 +64,7 @@ Il servizio di protezione viene ora attivato automaticamente per i nuovi clienti
 
 1. Verificare che la protezione sia attivata per il tenant. Ad esempio:
 
-    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Verificare l'attivazione di AIP":::
+    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Aggiungere Azure Information Protection al portale di Azure":::
 
     Se la protezione non viene mai attivata, è necessario attivarla selezionando **Attiva** ![Attiva AIP](media/qs-tutor/activate.png "Attiva AIP"). Una volta completata l'attivazione, sulla barra delle informazioni verrà visualizzato il messaggio **Activation finished successfully** (Attivazione completata).
 
@@ -76,7 +76,7 @@ L'organizzazione potrebbe già disporre di etichette, in quanto create automatic
 
     È possibile che siano già state create etichette predefinite. L'immagine seguente mostra le etichette create per impostazione predefinita con Azure Information Protection:
 
-    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Etichette predefinite di Azure Information Protection":::
+    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Aggiungere Azure Information Protection al portale di Azure":::
 
     **Se le etichette predefinite non vengono visualizzate o non viene visualizzata alcuna etichetta**:
 
@@ -85,7 +85,7 @@ L'organizzazione potrebbe già disporre di etichette, in quanto create automatic
     Se non viene visualizzato il pulsante **Genera etichette predefinite** sopra la griglia, in **Gestisci** selezionare **Etichettatura unificata**. Se lo stato di Etichettatura unificata è **Non attivato**, selezionare **Attiva** e tornare al riquadro **Classificazioni** > **Etichette**.
 
     > [!NOTE]
-    > Per il client di etichettatura unificata, le etichette vengono gestite in Microsoft M365. Per altre informazioni, vedere [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels).
+    > Per il client di etichettatura unificata, le etichette vengono gestite in Microsoft M365. Per altre informazioni, vedere [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels).
     >
 
 1. Pubblicare le etichette nel portale di Azure per renderle disponibili per il client classico Azure Information Protection:
@@ -129,7 +129,7 @@ La prima volta che ci si connette al servizio Azure Information Protection dal p
 
 - **Client per l'etichettatura unificata.** Per il client di etichettatura unificata, vengono scaricate solo le etichette nel client. Le impostazioni dei criteri vengono scaricate dal Centro sicurezza e conformità di Office 365, dal Centro conformità Microsoft 365 o dal Centro sicurezza Microsoft 365. Usare questi centri di amministrazione per modificare le etichette ed etichettare i criteri anziché il portale di Azure.
 
-    Per altre informazioni, vedere [Informazioni sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) nella documentazione di Microsoft 365.
+    Per altre informazioni, vedere [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) nella documentazione di Microsoft 365.
 
 **Istruzioni per il client classico:**
 
@@ -139,7 +139,7 @@ Per visualizzare le impostazioni dei criteri predefinite di Azure Information Pr
 
 1. Le impostazioni dei criteri sono visualizzate dopo le etichette nella sezione **Configura le impostazioni da visualizzare e applicare agli utenti finali di Information Protection**. Ad esempio non è presente un'etichetta predefinita (non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta) e gli utenti non devono dare una giustificazione quando modificano le etichette:
 
-    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Impostazioni globali dei criteri di Azure Information Protection":::
+    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Aggiungere Azure Information Protection al portale di Azure":::
 
 1. È ora possibile chiudere tutti i riquadri precedentemente aperti nel portale.
 
