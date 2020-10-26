@@ -1,39 +1,39 @@
 ---
-title: 'Procedura: ripubblicazione dello scenario C #'
-description: Questo articolo consente di comprendere lo scenario di utilizzo del gestore protezione per gli scenari di ripubblicazione.
+title: Procedura - Scenario di ripubblicazione C#
+description: Questo articolo aiuta a comprendere lo scenario di utilizzo del gestore protezione per gli scenari di ripubblicazione.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 2b6e0b866144c4883ece29936c1a23cc946c5976
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: c72d284363c1ca988692d18b7007a88c88d808b5
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403341"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421190"
 ---
-# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Microsoft Information Protection SDK-Guida introduttiva alla ripubblicazione dell'API file (C#)
+# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Microsoft Information Protection SDK - Avvio rapido alla ripubblicazione dell'API File (C#)
 
 ## <a name="overview"></a>Panoramica
 
-Per una panoramica su questo scenario e su dove è possibile usarlo, vedere [ripubblicazione in MIP SDK](concept-republishing.md).
+Per una panoramica su questo scenario e su dove usarlo, vedere [Ripubblicazione in MIP SDK](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- [Guida introduttiva completa: impostare/ottenere prima le etichette di riservatezza (C#)](quick-file-set-get-label-csharp.md) , che compila una soluzione Starter di Visual Studio, per elencare le etichette di riservatezza di un'organizzazione, per impostare e leggere le etichette di riservatezza in/da un file. Questa Guida introduttiva "procedura: ripubblicare un file protetto-C#" si basa su quella precedente.
-- Facoltativamente: esaminare i [gestori di file](concept-handler-file-cpp.md) nei concetti relativi a MIP SDK.
-- Facoltativamente: esaminare i [gestori della protezione](concept-handler-protection-cpp.md) nei concetti relativi a MIP SDK.
+- In primo luogo completare [Avvio rapido: Impostare/ottenere le etichette di riservatezza (C#)](quick-file-set-get-label-csharp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione, per impostare e leggere le etichette di riservatezza in/da un file. Questa guida di avvio rapido alla ripubblicazione di un file protetto in C# si basa sulla precedente.
+- Facoltativamente: rivedere i concetti esposti in [Gestori di file in MIP SDK](concept-handler-file-cpp.md).
+- Facoltativamente: Rivedere i concetti in [Gestori protezione in MIP SDK](concept-handler-protection-cpp.md).
 
 ## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Aggiungere la logica per modificare e ripubblicare un file protetto
 
-1. Aprire la soluzione di Visual Studio creata nell'articolo precedente "Guida introduttiva: impostare/ottenere le etichette di riservatezza (C#)".
+1. Aprire la soluzione Visual Studio creata nell'articolo precedente "Avvio rapido: Impostare/ottenere etichette di riservatezza (C#).
 
 2. Usare Esplora soluzioni per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
-3. `Main()`Inserire il codice seguente verso la fine del corpo, sotto `Console.ReadKey()` e sopra il blocco di arresto dell'applicazione (in cui è stato interrotto nella Guida introduttiva precedente).
+3. Verso la fine del corpo di `Main()`, sotto `Console.ReadKey()` e prima del bocco di arresto dell'applicazione (il punto in cui è stata interrotta la guida di avvio rapido precedente), inserire il codice seguente.
 
 ```csharp
 string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
@@ -88,7 +88,7 @@ if (protectionHandler.AccessCheck("Edit"))
 }
 ```
 
-4. Verso la fine di Main () individuare il blocco di arresto dell'applicazione creato nella Guida introduttiva precedente e aggiungere le righe del gestore per rilasciare le risorse.
+4. Verso la fine di Main() trovare il blocco di arresto dell'applicazione creato nella guida di avvio rapido precedente e aggiungerlo sotto le righe del gestore per rilasciare le risorse.
 
     ````csharp
         protectedFileHandler = null;
@@ -99,14 +99,14 @@ if (protectionHandler.AccessCheck("Edit"))
 
    | Segnaposto | Valore |
    |:----------- |:----- |
-   | \<protected-file-path\> | File protetto dalla Guida introduttiva precedente. |
+   | \<protected-file-path\> | File protetto dalla guida di avvio rapido precedente. |
    | \<reprotected-file-path\> | Percorso del file di output per il file modificato da ripubblicare. |
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 
 Compilare e testare l'applicazione client.
 
-1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
+1. Usare CTRL+MAIUSC+B ( **Compila soluzione** ) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 ( **Avvia debug** ) per eseguire l'applicazione.
 
 2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache, non verrà richiesto di accedere e visualizzare l'elenco delle etichette e quindi le informazioni sull'etichetta applicata e sul file modificato.
 

@@ -4,7 +4,7 @@ description: Azure Information Protection (AIP) è un servizio che consente alle
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 25b520e08d8379580226d589fec511d502065156
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: e5c32a239b038e714ebbff5779f4490df00ccad3
+ms.sourcegitcommit: 637885276cfb6dc5d0b70b8c0b69d8ad428c2056
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588406"
+ms.lasthandoff: 10/18/2020
+ms.locfileid: "92163742"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -44,11 +44,11 @@ Usare Azure Information Protection per applicare etichette di classificazione a 
 
 L'assegnazione di etichette al contenuto include:
 
-- **Classificazione**, che può essere rilevata indipendentemente dalla posizione in cui sono archiviati i dati o da cui vengono condivisi.
-- **Contrassegni visivi**, come intestazioni, piè di pagina o filigrane.
+- **Classificazione** , che può essere rilevata indipendentemente dalla posizione in cui sono archiviati i dati o da cui vengono condivisi.
+- **Contrassegni visivi** , come intestazioni, piè di pagina o filigrane.
 - I **metadati** vengono aggiunti a file e intestazioni di messaggi di posta elettronica come testo non crittografato. I metadati come testo non crittografato consentono ad altri servizi di identificare la classificazione e adottare le misure appropriate.
 
-Nell'immagine seguente, ad esempio, l'assegnazione di etichette ha classificato un messaggio di posta elettronica come *Generale*, usando il [client di etichettatura unificata](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+Nell'immagine seguente, ad esempio, l'assegnazione di etichette ha classificato un messaggio di posta elettronica come *Generale* , usando il [client di etichettatura unificata](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
 
 :::image type="content" source="media/example-email-footerv2.png" alt-text="Piè di pagina e intestazioni del messaggio di posta elettronica di esempio che mostrano la classificazione di Azure Information Protection":::
 
@@ -119,7 +119,7 @@ Gli utenti e gli amministratori possono usare siti di rilevamento dei documenti 
 
 L'uso di AIP con Exchange Online offre l'ulteriore vantaggio di poter inviare messaggi di posta elettronica protetti a tutti gli utenti, con la certezza che possano leggerli in qualsiasi dispositivo.
 
-Ad esempio, potrebbe essere necessario inviare informazioni riservate a indirizzi di posta elettronica personali che usano un account **Gmail**, **Hotmail** o **Microsoft** o a utenti che non hanno un account in Microsoft 365 o Azure AD. Questi messaggi di posta elettronica deve essere crittografati sia nella posizione di archiviazione che in transito e devono essere letti solo dai destinatari originali.
+Ad esempio, potrebbe essere necessario inviare informazioni riservate a indirizzi di posta elettronica personali che usano un account **Gmail** , **Hotmail** o **Microsoft** o a utenti che non hanno un account in Microsoft 365 o Azure AD. Questi messaggi di posta elettronica deve essere crittografati sia nella posizione di archiviazione che in transito e devono essere letti solo dai destinatari originali.
 
 Questo scenario richiede le [funzionalità di Crittografia messaggi di Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). Se i destinatari non possono aprire il messaggio di posta elettronica protetto nel client di posta elettronica nativo, possono usare un passcode monouso per leggere le informazioni riservate in un browser.
 
@@ -143,13 +143,13 @@ Idealmente, i documenti e i messaggi di posta elettronica vengono etichettati al
 
 Per classificare e proteggere il contenuto esistente, usare uno dei metodi seguenti:
 
-- **Archiviazione locale**: usare lo [scanner di Azure Information Protection](deploy-aip-scanner.md) per individuare, classificare e proteggere i documenti nelle condivisioni di rete e in siti e raccolte di Microsoft SharePoint Server.
+- **Archiviazione locale** : usare lo [scanner di Azure Information Protection](deploy-aip-scanner.md) per individuare, classificare e proteggere i documenti nelle condivisioni di rete e in siti e raccolte di Microsoft SharePoint Server.
 
     Lo scanner viene eseguito come servizio in Windows Server e usa le stesse regole dei criteri per rilevare le informazioni riservate e applicare etichette specifiche ai documenti. 
 
     In alternativa, usare lo scanner per applicare un'etichetta predefinita a tutti i documenti in un archivio dati senza esaminare il contenuto dei file. Usare lo scanner in modalità solo report, per individuare informazioni sensibili che potrebbero non essere note.
 
-- **Archiviazione dei dati nel cloud**: usare [Microsoft Cloud App Security](/cloud-app-security/azip-integration) per applicare le etichette ai documenti in Box, SharePoint e OneDrive. Per un'esercitazione, vedere [Applicare automaticamente etichette di classificazione di Azure Information Protection](/cloud-app-security/use-case-information-protection) 
+- **Archiviazione dei dati nel cloud** : usare [Microsoft Cloud App Security](/cloud-app-security/azip-integration) per applicare le etichette ai documenti in Box, SharePoint e OneDrive. Per un'esercitazione, vedere [Applicare automaticamente etichette di classificazione di Azure Information Protection](/cloud-app-security/use-case-information-protection) 
 
 ## <a name="latest-labeling-updates-for-microsoft-365"></a>Ultimi aggiornamenti di etichettatura per Microsoft 365
 
@@ -182,22 +182,19 @@ Per altre informazioni, vedere:
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Microsoft Ignite 2019 a Orlando è stato un ottimo successo. L'evento ha offerto molte informazioni utili su Azure Information Protection, con gli aggiornamenti e miglioramenti più recenti. Per chi non ha potuto partecipare, le sessioni sono state registrate per essere visualizzate in un secondo momento.
+Microsoft Ignite 2020 è stato tenuto in remoto ed è stato un grande successo. Le registrazioni delle sessioni sono disponibili all'indirizzo [https://myignite.microsoft.com/sessions](https://myignite.microsoft.com/sessions).
 
-L'elenco seguente indicate le cinque sessioni principali consigliate:
+Ad esempio:
 
-- [BRK2119: Proteggere i dati sensibili. Informazioni sulle funzionalità più recenti di Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/81172?source=sessions)
- 
-- [THR3067: Informazioni sui dati. I cinque suggerimenti e consigli più importanti per una miglior comprensione del panorama dei dati sensibili](https://myignite.techcommunity.microsoft.com/sessions/81183)
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476) (Potenziare la governance e la protezione delle informazioni in ambienti cloud, locali, endpoint e di lavoro remoto)
 
-- [BRK3103: La protezione di file e dati sensibili può essere difficile. Scegliere le opzioni di protezione dati corrette per l'equilibrio tra sicurezza e produttività degli utenti](https://myignite.techcommunity.microsoft.com/sessions/81177?source=sessions)
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f) (Conoscere i dati, proteggerli e prevenirne la perdita con Microsoft Information Protection)
 
-- [BRK2120: Azure Information Protection è già presente? Esplorazione di etichette unificate, configurazione dei criteri, client e analisi](https://myignite.techcommunity.microsoft.com/sessions/81178?source=sessions)
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d) (Chiedi all'esperto - Domande sulla conformità Microsoft: protezione e governance delle informazioni, rischi interni, gestione della conformità e altro ancora)
 
-- [BRK2121: Estendere la potenza dell'etichettatura e della protezione della riservatezza alle app e soluzioni ISV con Microsoft Information Protection SDK](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
-
-Ultimo post di blog: [Individuare i dati sensibili e proteggerli in modo intelligente con Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
-
+> [!TIP]
+> Per informazioni su Microsoft Ignite 2019 in Orlando, vedere il riepilogo nel blog: [Microsoft Information Protection - Ignite 2019 recap](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-protection-ignite-2019-recap/ba-p/998174) (Microsoft Information Protection - Riepilogo di Ignite 2019)
+> 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

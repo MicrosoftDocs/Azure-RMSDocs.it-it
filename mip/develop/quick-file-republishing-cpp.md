@@ -1,46 +1,46 @@
 ---
-title: 'Procedura: ripubblicazione dello scenario C++'
-description: Questo articolo consente di comprendere lo scenario di utilizzo del gestore protezione per gli scenari di ripubblicazione.
+title: Procedura - Scenario di ripubblicazione C++
+description: Questo articolo aiuta a comprendere lo scenario di utilizzo del gestore protezione per gli scenari di ripubblicazione.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 929959135d4889ec65fcc5122837d6e8a09235e9
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: 49fac8fb748cec60abbe3af779670c928c1608a1
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403358"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421150"
 ---
-# <a name="file-api-re-publishing-quickstart-c"></a>Guida introduttiva alla ripubblicazione dell'API file (C++)
+# <a name="file-api-re-publishing-quickstart-c"></a>Avvio rapido alla ripubblicazione dell'API File (C++)
 
 ## <a name="overview"></a>Panoramica
 
-Per una panoramica su questo scenario e su dove è possibile usarlo, vedere [ripubblicazione in MIP SDK](concept-republishing.md).
+Per una panoramica su questo scenario e su dove usarlo, vedere [Ripubblicazione in MIP SDK](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- In primo luogo completare [Avvio rapido: Impostare/ottenere le etichette di riservatezza (C++)](quick-file-set-get-label-cpp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione, per impostare e leggere le etichette di riservatezza in/da un file. Questa Guida introduttiva "come eseguire il downgrade o la rimozione di un'etichetta che necessita di una giustificazione C++" si basa su quella precedente.
-- Facoltativamente: esaminare i [gestori di file](concept-handler-file-cpp.md) nei concetti relativi a MIP SDK.
-- Facoltativamente: esaminare i [gestori della protezione](concept-handler-protection-cpp.md) nei concetti relativi a MIP SDK.
+- In primo luogo completare [Avvio rapido: Impostare/ottenere le etichette di riservatezza (C++)](quick-file-set-get-label-cpp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione, per impostare e leggere le etichette di riservatezza in/da un file. Questa guida di avvio rapido "Procedura - Eseguire il downgrade o la rimozione di un'etichetta che richiede una giustificazione (C++)" si basa su quella precedente.
+- Facoltativamente: rivedere i concetti esposti in [Gestori di file in MIP SDK](concept-handler-file-cpp.md).
+- Facoltativamente: rivedere i concetti in [Gestori protezione in MIP SDK](concept-handler-protection-cpp.md).
 
 ## <a name="add-logic-to-filehandler-observer-class"></a>Aggiungere la logica alla classe Observer FileHandler
 
-Per poter usare decrittografare un file protetto usando `GetDecryptedTemporaryFileAsync()` il metodo esposto da `mip::FileHandler` , i callback per il metodo asincrono per esito positivo e negativo devono essere definiti come indicato di seguito.
+Per poter decrittografare un file protetto usando il metodo `GetDecryptedTemporaryFileAsync()` esposto da `mip::FileHandler`, è necessario definire i callback per il metodo asincrono in caso di esito positivo e negativo come indicato di seguito.
 
 1. Aprire la soluzione Visual Studio creata nell'articolo precedente "Avvio rapido: Impostare/ottenere etichette di riservatezza (C++).
 
-2. Con Esplora soluzioni aprire il `filehandler_observer.h` file per nel progetto. Verso la fine della definizione FileHandler, prima di `};` aggiungere le righe seguenti per la dichiarazione del metodo.
+2. Con Esplora soluzioni, aprire il file `filehandler_observer.h` nel progetto. Verso la fine della definizione FileHandler, prima di `};` aggiungere le righe seguenti per la dichiarazione del metodo.
 
     ```cpp
         void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr<void>& context) override;
         void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
     ```
 
-3. Con Esplora soluzioni aprire il `filehandler_observer.cpp` file nel progetto. Verso la fine del file, aggiungere le righe seguenti per le definizioni dei metodi.
+3. Con Esplora soluzioni, aprire il file `filehandler_observer.cpp` nel progetto. Verso la fine del file, aggiungere le righe seguenti per le definizioni del metodo.
 
     ```cpp
 
@@ -59,7 +59,7 @@ Per poter usare decrittografare un file protetto usando `GetDecryptedTemporaryFi
 
 1. Usare Esplora soluzioni per aprire il file con estensione cpp nel progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
-2. Verso la fine del corpo principale (), al di sotto del sistema ("pausa"); e versioni successive restituiscono 0; (dal punto in cui è stata abbandonata la Guida introduttiva precedente), inserire il codice seguente:
+2. Verso la fine del corpo di main(), sotto system("pause"); e sopra return 0; (il punto in cui è stata interrotta la guida di avvio rapido precedente), inserire il codice seguente:
 
 ```cpp
 //Originally protected file's path.
@@ -121,7 +121,7 @@ if (protectionHandler->AccessCheck("Edit")) {
 }
 ```
 
-3. Verso la fine di Main () individuare il blocco di arresto dell'applicazione creato nella Guida introduttiva precedente e aggiungere le righe del gestore per rilasciare le risorse.
+3. Verso la fine di Main() trovare il blocco di arresto dell'applicazione creato nella guida di avvio rapido precedente e aggiungerlo sotto le righe del gestore per rilasciare le risorse.
 
     ````csharp
         protectedFileHandler = nullptr;
@@ -133,16 +133,16 @@ if (protectionHandler->AccessCheck("Edit")) {
 
    | Segnaposto | Valore |
    |:----------- |:----- |
-   | \<protected-file-path\> | File protetto dalla Guida introduttiva precedente. |
+   | \<protected-file-path\> | File protetto dalla guida di avvio rapido precedente. |
    | \<reprotected-file-path\> | Percorso del file di output per il file modificato da ripubblicare. |
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 
 Compilare e testare l'applicazione client.
 
-1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
+1. Usare CTRL+MAIUSC+B ( **Compila soluzione** ) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 ( **Avvia debug** ) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. Come è stato fatto in precedenza nella Guida introduttiva "impostare/ottenere l'etichetta di riservatezza", eseguire lo script di PowerShell per acquisire il token ogni volta, usando i valori specificati per $authority e $resourceUrl.
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. Come già fatto in precedenza nella guida di avvio rapido "Impostare/ottenere etichette di riservatezza", eseguire lo script di PowerShell per acquisire ogni volta il token usando i valori specificati per $authority e $resourceUrl.
 
   ```console
     Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
