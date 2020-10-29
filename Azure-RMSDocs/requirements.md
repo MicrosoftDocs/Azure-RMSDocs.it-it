@@ -4,7 +4,7 @@ description: Identificare i prerequisiti necessari per distribuire Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d24383a3ae5312d9c690fdac61b0cbdf52072163
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: edf42dc9d41aebe8f4cb21bbca624bd671b5eba4
+ms.sourcegitcommit: 22ac808221a66141406589a9d8d619bfee056cf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178148"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92429197"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti per Azure Information Protection
 
@@ -61,7 +61,7 @@ Per supportare l'autenticazione e l'autorizzazione per Azure Information Protect
 
 - L'accesso **Single Sign-On (SSO)** è supportato per Azure Information Protection, in modo che agli utenti non vengono richieste ripetutamente le credenziali. Se si usa la soluzione di un altro fornitore per la federazione, verificare con il fornitore come configurarla per Azure AD. WS-Trust è un requisito comune per queste soluzioni per il supporto di Single Sign-On. 
 
-- L'**autenticazione a più fattori (MFA)** è supportata in Azure Information Protection quando si ha il software client richiesto e l'infrastruttura di supporto MFA è configurata correttamente.
+- L' **autenticazione a più fattori (MFA)** è supportata in Azure Information Protection quando si ha il software client richiesto e l'infrastruttura di supporto MFA è configurata correttamente.
 
 L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altre informazioni, vedere: [Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
@@ -114,13 +114,13 @@ Se si usano macchine virtuali, controllare con il fornitore del software per la 
 
 Ad esempio, per le soluzioni Citrix può essere necessario [disabilitare gli hook dell'API Citrix](https://support.citrix.com/article/CTX107825) per Office, il client dell'etichettatura unificata di Azure Information Protection o il client di Azure Information Protection. 
 
-Queste applicazioni usano rispettivamente i file seguenti: **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
+Queste applicazioni usano rispettivamente i file seguenti: **winword.exe** , **excel.exe** , **outlook.exe** , **powerpnt.exe** , **msip.app.exe** , **msip.viewer.exe**
 
 ### <a name="server-support"></a>Supporto server
 
 Per ogni versione del server elencata sopra, i client di Azure Information Protection sono supportati per Servizi Desktop remoto. 
 
-Se si eliminano profili utente quando si usano i client di Azure Information Protection con Servizi Desktop remoto, non eliminare la cartella **%Appdata%\Microsoft\Protect**.
+Se si eliminano profili utente quando si usano i client di Azure Information Protection con Servizi Desktop remoto, non eliminare la cartella **%Appdata%\Microsoft\Protect** .
 
 Inoltre, Server Core e Nano Server non sono supportati.
 
@@ -134,9 +134,9 @@ Ogni client di Azure Information Protection ha requisiti aggiuntivi. Per informa
 
 ## <a name="applications"></a>Applicazioni
 
-I client di Azure Information Protection consentono di etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word**, **Excel**, **PowerPoint** e **Outlook** di una delle edizioni di Office seguenti:
+I client di Azure Information Protection consentono di etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word** , **Excel** , **PowerPoint** e **Outlook** di una delle edizioni di Office seguenti:
 
-- **App di Office con versione minima 1805**, build 9330.2078 da Microsoft 365 Apps for business o Microsoft 365 Business Premium. 
+- **App di Office con versione minima 1805** , build 9330.2078 da Microsoft 365 Apps for business o Microsoft 365 Business Premium. 
 
     L'edizione è supportata solo quando all'utente viene assegnata una licenza per Azure Rights Management, chiamato anche Azure Information Protection per Microsoft 365.
 
@@ -168,12 +168,18 @@ Se si ha un firewall o simili dispositivi di rete intermedi che devono essere co
 
 Azure Information Protection ha i requisiti aggiuntivi seguenti:
 
-- **Client di etichettatura unificata**. Per scaricare le etichette e i criteri delle etichette, consentire l'URL seguente tramite HTTPS: * **.protection.outlook.com**
+- **Client di etichettatura unificata** . Per scaricare le etichette e i criteri delle etichette, consentire l'URL seguente tramite HTTPS: * *_.protection.outlook.com_*
 
-- **Proxy Web**. Se si usa un proxy Web che richiede l'autenticazione, è necessario configurare il proxy per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
+- **Proxy Web** . Se si usa un proxy Web che richiede l'autenticazione, è necessario configurare il proxy per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
 
+    Per supportare i file **Proxy.pac** quando si usa un proxy per acquisire un token, aggiungere la nuova chiave del Registro di sistema seguente:
+
+    - **Percorso:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Chiave:** `UseDefaultCredentialsInProxy`
+    - **Tipo:** `DWORD`
+    - **Valore:** `1`
     
-- **Connessioni da client a servizio TLS**. Non terminare le connessioni da client a servizio TLS, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com**. Se si terminano le connessione, viene interrotta l'associazione dei certificati usati dai client RMS con le autorità di certificazione gestite da Microsoft per contribuire a proteggere le comunicazioni con il servizio Azure Rights Management.
+- **Connessioni da client a servizio TLS** . Non terminare le connessioni da client a servizio TLS, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com** . Se si terminano le connessione, viene interrotta l'associazione dei certificati usati dai client RMS con le autorità di certificazione gestite da Microsoft per contribuire a proteggere le comunicazioni con il servizio Azure Rights Management.
      
     Per determinare se la connessione client viene terminata prima che raggiunga il servizio Azure Rights Management, usare i comandi di PowerShell seguenti:
 
