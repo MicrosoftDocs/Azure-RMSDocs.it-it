@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: 406068f5770f489c66963fc34a462ec7e205765b
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: b0aeeabeabf6dc4c3bba39ea2f58374b98bac491
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91108950"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93044380"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C#)
 
@@ -34,8 +34,8 @@ Se non è già stato fatto, assicurarsi di:
 
 Verranno prima di tutto creati e configurati la soluzione e il progetto iniziali di Visual Studio su cui si baseranno le altre guide introduttive.
 
-1. Aprire Visual Studio 2017 e scegliere **File**, **Nuovo**, **Progetto** dal menu. Nella finestra di dialogo **Nuovo progetto**:
-   - Nel riquadro a sinistra in **Installati**, **Visual C#** selezionare **Windows Desktop**.
+1. Aprire Visual Studio 2017 e scegliere **File** , **Nuovo** , **Progetto** dal menu. Nella finestra di dialogo **Nuovo progetto** :
+   - Nel riquadro a sinistra in **Installati** , **Visual C#** selezionare **Windows Desktop**.
    - Nel riquadro centrale selezionare **App console (.NET Framework)** .
    - Nel riquadro inferiore, aggiornare **Nome** e **Posizione** del progetto, nonché il **Nome della soluzione** in cui è contenuto corrispondentemente.
    - Al termine fare clic sul pulsante **OK** in basso a destra.
@@ -43,7 +43,7 @@ Verranno prima di tutto creati e configurati la soluzione e il progetto iniziali
      [![Creazione di una soluzione Visual Studio](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. Aggiungere il pacchetto NuGet per l'API File di MIP SDK al progetto:
-   - In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto (subito sotto il nodo della soluzione principale) e scegliere **Gestisci pacchetti NuGet**:
+   - In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto (subito sotto il nodo della soluzione principale) e scegliere **Gestisci pacchetti NuGet** :
    - Quando viene aperta la scheda **Gestione pacchetti NuGet** nell'area delle schede Gruppo di editor:
      - Selezionare **Sfoglia**.
      - Immettere "Microsoft.InformationProtection" nella casella di ricerca.
@@ -211,7 +211,7 @@ namespace mip_sdk_dotnet_quickstart
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
                // Create a FileEngineSettings object, then use that to add an engine to the profile.
-               var engineSettings = new FileEngineSettings("user1@tenant.com", authDelegate "", "en-US");
+               var engineSettings = new FileEngineSettings("user1@tenant.com", authDelegate, "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
 
