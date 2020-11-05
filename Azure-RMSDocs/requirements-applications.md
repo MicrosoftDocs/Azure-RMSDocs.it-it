@@ -4,7 +4,7 @@ description: Identificare le applicazioni e le soluzioni con supporto nativo per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3115cbbce67f3997ad12f1fdb8a4ddd1f5ed2ca6
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 2461aed992c46859191a118db72c97ca90815315
+ms.sourcegitcommit: 1e028d89d179d0ef81851d969f5d0dc90b8dd45c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178193"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93245100"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -47,8 +47,8 @@ Queste applicazioni e soluzioni sono dette "abilitate per RMS" e il supporto di 
 
 |Tipo  |Applicazioni supportate   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    |  - Microsoft 365 Apps<br />- Office 2019 per Mac<br />- Office 2016 per Mac<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
-|[**E-mail**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 per Mac<br />- Outlook 2016 per Mac<br />- [Web browser](#web-browser-support)     |
+|**Word, Excel, PowerPoint**    |  - Microsoft 365 Apps, versione 16.40 o successive <br />- Office 2019 per Mac, versione 16.40 o successive<br />- Office 2016 per Mac, versione 16.16.27 o successive<br />- [Office per il Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)    |
+|[**E-mail**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 per Mac, versione 16.40 o successive<br />- Outlook 2016 per Mac, versione 16.16.27 o successive<br />- [Web browser](#web-browser-support)     |
 |[**Altri tipi di file**](#supported-text-and-image-file-types)    | App RMS sharing (visualizzazione di testo e immagini protetti e di file protetti in modo generico)   |
 | | |
 
@@ -112,11 +112,11 @@ Tuttavia, se è protetto solo l'allegato e non il messaggio di posta elettronica
 
 ### <a name="supported-text-and-image-file-types"></a>Tipi di file di testo e di immagine supportati
 
-I tipi di file diversi dai messaggi di posta elettronica e dai file di Office includono file di testo e di immagine con estensioni quali **txt** , **xml** , **jpg** e **jpeg** . 
+I tipi di file diversi dai messaggi di posta elettronica e dai file di Office includono file di testo e di immagine con estensioni quali **txt** , **xml** , **jpg** e **jpeg**. 
 
 Dopo che i file vengono protetti in modo nativo da Rights Management l'estensione cambia e i file diventano di sola lettura. 
 
-I file che non possono essere protetti in modo nativo, dopo essere stati protetti in modo generico da Rights Management hanno un'estensione di tipo **pfile** .
+I file che non possono essere protetti in modo nativo, dopo essere stati protetti in modo generico da Rights Management hanno un'estensione di tipo **pfile**.
 
 Per altre informazioni, vedere [Tipi di file supportati](./rms-client/client-admin-guide-file-types.md).
 
@@ -132,7 +132,7 @@ Supportata solo con Microsoft SharePoint e OneDrive e i documenti devono essere 
 
 ### <a name="web-browser-support"></a>Supporto Web browser
 
-- I Web browser sono supportati per i file di **Word, Excel e PowerPoint** quando gli [allegati di Office ](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sono protetti usando la [crittografia dei messaggi di Microsoft 365 con le nuove funzionalità](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
+- I Web browser sono supportati per i file di **Word, Excel e PowerPoint** quando gli [allegati di Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sono protetti usando la [crittografia dei messaggi di Microsoft 365 con le nuove funzionalità](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 - Per i **messaggi di posta elettronica** , i Web browser sono supportati solo negli scenari seguenti:
 
