@@ -4,8 +4,6 @@
   items:
     - name: Che cos'è Azure Information Protection?
       href: what-is-information-protection.md
-    - name: Gestione dei diritti di Azure Information Protection
-      href: what-is-azure-rms.md
     - name: Requisiti per AIP
       items:
         - name: Panoramica
@@ -19,24 +17,24 @@
 - name: Guide introduttive
   expanded: true
   items:
-    - name: Attività iniziali nel portale di Azure
-      href: quickstart-viewpolicy.md
-    - name: Trovare le informazioni riservate disponibili
-      href: quickstart-findsensitiveinfo.md
-    - name: Configurare un'etichetta per proteggere i messaggi di posta elettronica - client classico
-      href: quickstart-label-dnf-protectedemail.md
-    - name: Creare una nuova etichetta per utenti specifici - client classico
-      href: quickstart-label-specificusers.md
+    - name: Distribuzione del client
+      href: quickstart-deploy-client.md
 - name: Esercitazioni
   items:
-    - name: Modificare i criteri e creare una nuova etichetta - client classico
-      href: infoprotect-quick-start-tutorial.md
-    - name: Configurare impostazioni dei criteri che interagiscono tra loro - client classico
-      href: infoprotect-settings-tutorial.md
-    - name: Configurare le impostazioni client per il controllo dell'oversharing - client classico
-      href: infoprotect-oversharing-tutorial.md
+    - name: Installazione dello scanner
+      href: tutorial-install-scanner.md
+    - name: Individuazione del contenuto sensibile
+      href: tutorial-scan-networks-and-content.md
+    - name: Prevenzione dell'oversharing
+      href: tutorial-preventing-oversharing.md
+    - name: Migrazione dal client classico al client di etichettatura unificata
+      href: tutorial-migrating-to-ul.md
 - name: Concetti
   items:
+    - name: Classificazione e protezione di AIP
+      href: aip-classification-and-protection.md
+    - name: Gestione dei diritti di Azure Information Protection
+      href: what-is-azure-rms.md
     - name: Protezione di Rights Management
       items:
         - name: Come funziona la protezione di Rights Management
@@ -343,7 +341,7 @@
               href: ./develop/deprecation-notice.md
             - name: Panoramica
               href: ./develop/overview.md
-            - name: Operazioni preliminari
+            - name: Introduzione
               href: ./develop/get-started.md
               items:
                 - name: Novità
