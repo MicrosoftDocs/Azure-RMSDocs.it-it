@@ -81,6 +81,10 @@
               href: migrate-from-ad-rms-phase5.md
     - name: Criteri di Azure Information Protection
       href: overview-policy.md
+    - name: Sicurezza
+      items:
+        - name: Baseline di sicurezza
+          href: security-baseline.md
 - name: Guide pratiche
   items:
     - name: Procedure per scenari comuni
