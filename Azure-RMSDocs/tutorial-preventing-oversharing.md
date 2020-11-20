@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8d86d6f114bd1a0886883b9cda277ffd6ae9904b
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: 851bc48926c6634fc7d5a529aa2910e11974f3a7
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377211"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503418"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Esercitazione: Prevenzione dell'oversharing in Outlook con Azure Information Protection (AIP)
 
@@ -40,7 +40,7 @@ Prima di iniziare questa esercitazione, assicurarsi di disporre dei requisiti di
 |Prerequisiti  |Descrizione  |
 |---------|---------|
 |**Requisiti per il computer**     | Verificare quanto segue: <br /><br />- Disponibilità di un computer Windows con il client di etichettatura unificata di Azure Information Protection installato. Per altre informazioni, vedere [Avvio rapido: Distribuzione del client di etichettatura unificata di Azure Information Protection (AIP)](quickstart-deploy-client.md). <br /><br />- Disponibilità di PowerShell installato e possibilità di eseguire PowerShell come amministratore. <br /><br />- Possibilità di accedere a Outlook. Prepararsi a riavviare Outlook più volte durante questa esercitazione.     |
-|**Sottoscrizione di Azure Information Protection**     |   È necessaria una [sottoscrizione](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) di Azure che includa il **piano 2 di Azure Information Protection**.      |
+|**Sottoscrizione di Azure Information Protection**     |   Sarà necessaria una sottoscrizione che includa [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />In assenza di una di queste sottoscrizioni, creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
 |**Etichette di riservatezza e criteri di test**     |  Un etichetta di riservatezza **Generale** configurata nei criteri. <br /><br />Configurare le etichette di riservatezza nell'interfaccia di amministrazione dell'etichettatura, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365. Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Si consiglia di usare criteri di test per questa esercitazione, per evitare effetti sui criteri attivi. <br />Assicurarsi di avere a portata di mano il nome del criterio, nonché il GUID per l'etichetta **Generale**.   |
 | | |
 

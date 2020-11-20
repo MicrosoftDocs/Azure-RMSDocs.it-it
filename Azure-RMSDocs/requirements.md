@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edf42dc9d41aebe8f4cb21bbca624bd671b5eba4
-ms.sourcegitcommit: 22ac808221a66141406589a9d8d619bfee056cf0
+ms.openlocfilehash: 5e52571568a54cf015269fde76603e334f0bc7b6
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92429197"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503554"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti per Azure Information Protection
 
@@ -45,9 +45,11 @@ Per verificare se la sottoscrizione include le funzionalità di Azure Informatio
 Per domande sulle licenze, leggere le [domande frequenti](https://azure.microsoft.com/pricing/details/information-protection#faq) sulle licenze.
 
 > [!TIP]
-> Per verificare se il piano di Microsoft 365 o il piano autonomo di Exchange Online supporta le [nuove funzionalità di Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) per inviare messaggi di posta elettronica protetti a indirizzi di posta elettronica personali, ad esempio, Gmail, Yahoo e Microsoft, vedere le risorse seguenti:
+> Per verificare se il proprio piano supporta le [nuove funzionalità di Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) per inviare messaggi di posta elettronica protetti a indirizzi di posta elettronica personali, ad esempio, Gmail, Yahoo e Microsoft, vedere le risorse seguenti:
 >
 > - [Descrizione del servizio Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
+>
+> - [Microsoft 365 Compliance Licensing Comparison](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description)
 >
 > - [Office 365 Education](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
 >
@@ -61,7 +63,7 @@ Per supportare l'autenticazione e l'autorizzazione per Azure Information Protect
 
 - L'accesso **Single Sign-On (SSO)** è supportato per Azure Information Protection, in modo che agli utenti non vengono richieste ripetutamente le credenziali. Se si usa la soluzione di un altro fornitore per la federazione, verificare con il fornitore come configurarla per Azure AD. WS-Trust è un requisito comune per queste soluzioni per il supporto di Single Sign-On. 
 
-- L' **autenticazione a più fattori (MFA)** è supportata in Azure Information Protection quando si ha il software client richiesto e l'infrastruttura di supporto MFA è configurata correttamente.
+- L'**autenticazione a più fattori (MFA)** è supportata in Azure Information Protection quando si ha il software client richiesto e l'infrastruttura di supporto MFA è configurata correttamente.
 
 L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altre informazioni, vedere: [Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
@@ -114,13 +116,13 @@ Se si usano macchine virtuali, controllare con il fornitore del software per la 
 
 Ad esempio, per le soluzioni Citrix può essere necessario [disabilitare gli hook dell'API Citrix](https://support.citrix.com/article/CTX107825) per Office, il client dell'etichettatura unificata di Azure Information Protection o il client di Azure Information Protection. 
 
-Queste applicazioni usano rispettivamente i file seguenti: **winword.exe** , **excel.exe** , **outlook.exe** , **powerpnt.exe** , **msip.app.exe** , **msip.viewer.exe**
+Queste applicazioni usano rispettivamente i file seguenti: **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
 
 ### <a name="server-support"></a>Supporto server
 
 Per ogni versione del server elencata sopra, i client di Azure Information Protection sono supportati per Servizi Desktop remoto. 
 
-Se si eliminano profili utente quando si usano i client di Azure Information Protection con Servizi Desktop remoto, non eliminare la cartella **%Appdata%\Microsoft\Protect** .
+Se si eliminano profili utente quando si usano i client di Azure Information Protection con Servizi Desktop remoto, non eliminare la cartella **%Appdata%\Microsoft\Protect**.
 
 Inoltre, Server Core e Nano Server non sono supportati.
 
@@ -134,9 +136,9 @@ Ogni client di Azure Information Protection ha requisiti aggiuntivi. Per informa
 
 ## <a name="applications"></a>Applicazioni
 
-I client di Azure Information Protection consentono di etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word** , **Excel** , **PowerPoint** e **Outlook** di una delle edizioni di Office seguenti:
+I client di Azure Information Protection consentono di etichettare e proteggere documenti e messaggi di posta elettronica usando Microsoft **Word**, **Excel**, **PowerPoint** e **Outlook** di una delle edizioni di Office seguenti:
 
-- **App di Office con versione minima 1805** , build 9330.2078 da Microsoft 365 Apps for business o Microsoft 365 Business Premium. 
+- **App di Office con versione minima 1805**, build 9330.2078 da Microsoft 365 Apps for business o Microsoft 365 Business Premium. 
 
     L'edizione è supportata solo quando all'utente viene assegnata una licenza per Azure Rights Management, chiamato anche Azure Information Protection per Microsoft 365.
 
@@ -168,9 +170,9 @@ Se si ha un firewall o simili dispositivi di rete intermedi che devono essere co
 
 Azure Information Protection ha i requisiti aggiuntivi seguenti:
 
-- **Client di etichettatura unificata** . Per scaricare le etichette e i criteri delle etichette, consentire l'URL seguente tramite HTTPS: * *_.protection.outlook.com_*
+- **Client di etichettatura unificata**. Per scaricare le etichette e i criteri delle etichette, consentire l'URL seguente tramite HTTPS: **_.protection.outlook.com_*
 
-- **Proxy Web** . Se si usa un proxy Web che richiede l'autenticazione, è necessario configurare il proxy per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
+- **Proxy Web**. Se si usa un proxy Web che richiede l'autenticazione, è necessario configurare il proxy per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
 
     Per supportare i file **Proxy.pac** quando si usa un proxy per acquisire un token, aggiungere la nuova chiave del Registro di sistema seguente:
 
@@ -179,7 +181,7 @@ Azure Information Protection ha i requisiti aggiuntivi seguenti:
     - **Tipo:** `DWORD`
     - **Valore:** `1`
     
-- **Connessioni da client a servizio TLS** . Non terminare le connessioni da client a servizio TLS, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com** . Se si terminano le connessione, viene interrotta l'associazione dei certificati usati dai client RMS con le autorità di certificazione gestite da Microsoft per contribuire a proteggere le comunicazioni con il servizio Azure Rights Management.
+- **Connessioni da client a servizio TLS**. Non terminare le connessioni da client a servizio TLS, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com**. Se si terminano le connessione, viene interrotta l'associazione dei certificati usati dai client RMS con le autorità di certificazione gestite da Microsoft per contribuire a proteggere le comunicazioni con il servizio Azure Rights Management.
      
     Per determinare se la connessione client viene terminata prima che raggiunga il servizio Azure Rights Management, usare i comandi di PowerShell seguenti:
 

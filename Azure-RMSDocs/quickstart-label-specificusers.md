@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f947edadde9b4dfecb91adf9bcb8fefe168bf38b
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: d452f2c6c1d58af8f352664e087514f798bc1b5b
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927838"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503571"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
@@ -38,7 +38,7 @@ Per completare questa guida introduttiva, è necessario:
 
 |Requisito  |Descrizione  |
 |---------|---------|
-|**Una sottoscrizione di supporto**     |  È necessaria una sottoscrizione che includa un [**piano 1 o 2 di Azure Information Protection**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
+|**Una sottoscrizione di supporto**     |  Sarà necessaria una sottoscrizione che includa [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
 |**AIP aggiunto al portale di Azure**    |  Aver aggiunto il riquadro Azure Information Protection al portale di Azure e aver verificato che il servizio di protezione sia attivato. </br></br>Per altre informazioni, vedere [Avvio rapido: Attività iniziali nel portale di Azure](quickstart-viewpolicy.md).       |
 |**Un gruppo abilitato per la posta elettronica in Azure AD**     | È necessario un gruppo abilitato per la posta elettronica in Azure AD che contiene gli utenti che potranno visualizzare e applicare la nuova etichetta. </br></br>Se non si ha un gruppo adatto, crearne uno denominato **Team vendite** e aggiungere almeno un utente. |
 |**Client classico installato**    |   Per testare la nuova etichetta, è necessario che il client classico sia installato nel computer. </br></br>Il client classico Azure Information Protection verrà deprecato nel marzo 2021. Per distribuire il client classico AIP, aprire un ticket di supporto per ottenere l'accesso al download.  |

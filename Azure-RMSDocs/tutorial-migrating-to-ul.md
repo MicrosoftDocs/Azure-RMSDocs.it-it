@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e4c1ae01b35a19fc3cc84f207f4f17b510926931
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: f988ba63671164463a4ad1b566daab7df123e057
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377258"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503639"
 ---
 # <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-the-unified-labeling-client"></a>Esercitazione: Migrazione dal client classico al client di etichettatura unificata di Azure Information Protection (AIP)
 
@@ -103,7 +103,7 @@ Continuare con [Copiare i criteri nella piattaforma di etichettatura unificata](
 
 ### <a name="synchronizing-labeling-edits"></a>Sincronizzazione delle modifiche alle etichette
 
-Dopo aver eseguito la migrazione delle etichette nell'interfaccia di amministrazione, le eventuali modifiche apportate alle etichette migrate nel portale di Azure vengono sincronizzate automaticamente con la stessa etichetta nell'interfaccia di amministrazione per l'etichettatura unificata.
+Dopo aver eseguito la migrazione delle etichette nell'interfaccia di amministrazione dell'etichettatura, inclusi il Centro sicurezza di Microsoft 365, il Centro conformità di Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365, le eventuali modifiche apportate alle etichette migrate nel portale di Azure vengono sincronizzate automaticamente con la stessa etichetta nell'interfaccia di amministrazione per l'etichettatura unificata.
 
 Tuttavia, le modifiche apportate alle etichette migrate nell'interfaccia di amministrazione *non* vengono sincronizzate nel portale di Azure. Se si apportano modifiche nell'interfaccia di amministrazione ed è necessario aggiornarle nel portale di Azure, tornare al portale per pubblicare l'aggiornamento.
 

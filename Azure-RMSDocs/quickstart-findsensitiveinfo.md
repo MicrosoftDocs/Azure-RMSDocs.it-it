@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 04e114e6b719288a26663bd5534af4b1f1b73ac8
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 0ab3f66437882f6c458b3e4793be935d5f14686d
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91587882"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503656"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -33,7 +33,7 @@ Per completare l'esercitazione introduttiva, sono necessari gli elementi seguent
 
 |Requisito  |Descrizione  |
 |---------|---------|
-|**Una sottoscrizione di supporto**     |  È necessaria una sottoscrizione che includa un [**piano 1 o 2 di Azure Information Protection**](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
+|**Una sottoscrizione di supporto**     |  Sarà necessaria una sottoscrizione che includa [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). </br></br>In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
 |**Client installato**    |   È necessario il client classico o il client di etichettatura unificata installato nel computer. </br></br>- Per installare il client di etichettatura unificata, passare all'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018) e scaricare **AzInfoProtection_UL.exe** dalla pagina di Azure Information Protection. </br>- Per distribuire il client classico AIP, aprire un ticket di supporto per ottenere l'accesso al download.       |
 |**SQL Server Express**     | È necessario avere installato SQL Server Express nel computer. </br></br> Per eseguire l'installazione, accedere all'[Area download Microsoft](https://www.microsoft.com/sql-server/sql-server-editions-express) e selezionare **Scarica ora** nell'opzione Express. Nel programma di installazione selezionare il tipo di installazione **Basic**.        |
 |**Azure AD**     |  L'account di dominio deve essere sincronizzato con Azure AD. </br></br>Se non si è certi del proprio account, contattare uno degli amministratori di sistema.      |
@@ -96,11 +96,11 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
 
     Sempre nel riquadro **Aggiungi un nuovo profilo** selezionare **Configura i repository** per aprire il riquadro **Repository**:
 
-    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
+    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Configurare i repository di dati per lo scanner di Azure Information Protection":::
 
 1. Nel riquadro **Repository** selezionare **Aggiungi**:
 
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-repository-add.png" alt-text="Aggiungere il repository di dati per lo scanner di Azure Information Protection":::
 
 1. Nel riquadro **Repository** specificare la cartella creata in precedenza, ad esempio `\\server\TestScanner`
 
@@ -132,7 +132,7 @@ A questo punto si è pronti per installare lo scanner con il profilo di scanner 
 
 1. Selezionare il nome del profilo e quindi l'opzione **Avvia analisi**:
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Avviare l'analisi per lo scanner di Azure Information Protection":::
 
     Se questa opzione non è disponibile dopo aver selezionato il profilo, lo scanner non è connesso a Azure Information Protection. Verificare la configurazione e la connettività Internet.
 
@@ -171,7 +171,7 @@ In Excel:
 
     nel riquadro **Azure Information Protection - Profili** verificare che il profilo sia selezionato e quindi selezionare l'opzione **Avvia analisi**:
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Aggiungere il profilo per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Avviare l'analisi per lo scanner di Azure Information Protection":::
 
 1. Visualizzare i nuovi risultati al termine dell'analisi.
 

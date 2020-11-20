@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 82f8e2a9566379318f0a41ed625048a0036b0a62
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: b55178f6cd0bef2fa14eb7fcf9ecaefa3ea75f7a
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94423449"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503673"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Esercitazione: Individuazione del contenuto sensibile con lo scanner di Azure Information Protection (AIP)
 
@@ -23,7 +23,7 @@ ms.locfileid: "94423449"
 >
 > *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Il client di Azure Information Protection include uno scanner locale che consente agli amministratori di sistema di analizzare le reti e le condivisioni file per individuare eventuale contenuto sensibile. 
+Il client di Azure Information Protection include uno scanner locale che consente agli amministratori di sistema di analizzare le reti e i repository di file locali per individuare eventuale contenuto sensibile. 
 
 In questa esercitazione si apprenderà come:
 
@@ -44,11 +44,11 @@ In questa esercitazione si apprenderà come:
 
 |Requisito  |Descrizione  |
 |---------|---------|
-|**Una sottoscrizione di supporto**     |  Sarà necessaria una sottoscrizione che includa il [piano 1 o 2 di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
+|**Una sottoscrizione di supporto**     |  Sarà necessaria una sottoscrizione di Azure che includa [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
 |**Accesso amministrativo al portale di Azure** |Verificare che sia possibile accedere al [portale di Azure](https://portal.azure.com/) con un account amministratore supportato e che la protezione sia abilitata. Gli account amministratore supportati includono: <br /><br />- **Amministratore di conformità**<br />- **Amministratore dati di conformità**<br />- **Amministratore della sicurezza**<br />- **Amministratore globale**   |
 |**Client e scanner di AIP e servizio di individuazione della rete**   |   Per completare questa esercitazione, è necessario aver installato il client e lo scanner di etichettatura unificata di Azure Information Protection, nonché il servizio di individuazione della rete (anteprima pubblica). <br /><br />Per altre informazioni, vedere: <br /><br />- [Avvio rapido: Distribuzione del client di etichettatura unificata di Azure Information Protection (AIP)](quickstart-deploy-client.md) <br />- [Esercitazione: Installazione dello scanner di etichettatura unificata di Azure Information Protection (AIP)](tutorial-install-scanner.md) |
 |**Un processo di analisi dei contenuti** | Assicurarsi di avere a disposizione un processo di analisi dei contenuti di base che è possibile usare per i test. È possibile che ne sia stato creato uno al momento dell'[installazione dello scanner](tutorial-install-scanner.md).<br /><br />Se è necessario crearne uno ora, è possibile usare le istruzioni riportate in [Configurare Azure Information Protection nel portale di Azure](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). Quando è disponibile un processo di analisi dei contenuti di base, tornare qui per completare questa esercitazione. |
-|**SQL Server**     | Per eseguire lo scanner, è necessario SQL Server installato nel computer dello scanner. <br /><br /> Per eseguire l'installazione, accedere all'[Area download Microsoft](https://www.microsoft.com/sql-server/sql-server-editions-express) e selezionare **Scarica ora** per l'opzione di installazione desiderata. Nel programma di installazione selezionare il tipo di installazione **Basic**. <br /><br />**Nota**: Si consiglia di installare SQL Server Enterprise per gli ambienti di produzione ed Express solo per i test.    |
+|**SQL Server**     | Per eseguire lo scanner, è necessario SQL Server installato nel computer dello scanner. <br /><br /> Per eseguire l'installazione, passare alla [pagina di download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) e selezionare **Scarica ora** per l'opzione di installazione desiderata. Nel programma di installazione selezionare il tipo di installazione **Basic**. <br /><br />**Nota**: Si consiglia di installare SQL Server Enterprise per gli ambienti di produzione ed Express solo per i test.    |
 |**Account di Azure Active Directory**     |  Quando si lavora in un ambiente standard e connesso al cloud, l'account di dominio deve essere sincronizzato con [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). Ciò non è necessario se si lavora offline. <br /><br />In caso di dubbi per il proprio account, contattare uno degli amministratori di sistema per verificare lo stato di sincronizzazione. Per altre informazioni, vedere [Distribuzione dello scanner con configurazioni alternative](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
 |**Etichette di riservatezza e criteri pubblicati** |È necessario avere creato etichette di riservatezza e aver pubblicato criteri con almeno un'etichetta nell'interfaccia di amministrazione dell'etichettatura per l'account del servizio scanner. <br /><br />Configurare le etichette di riservatezza nell'interfaccia di amministrazione dell'etichettatura, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365. Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
 | | | 

@@ -9,15 +9,15 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq1
+ms.custom: contperfq2
 search.appverid:
 - MET150
-ms.openlocfilehash: 5167d790c557661181b03f90055dfc75b0b1cf72
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: 4a945f07532786c268886a44de23430be9a78700
+ms.sourcegitcommit: 822b23024cfd01ea41ac6ae9370489193782f078
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94379263"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634700"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -47,7 +47,7 @@ Scaricare il client dalla [pagina di download di Microsoft Azure Information Pro
     
 ## <a name="aip-on-premises-scanner"></a>Scanner locale di AIP
 
-Lo scanner locale di Azure Information Protection consente agli amministratori di analizzare le reti e le condivisioni file per individuare il contenuto sensibile che deve essere etichettato, classificato e/o protetto.
+Lo scanner locale di Azure Information Protection consente agli amministratori di analizzare le reti e i repository di file locali per individuare il contenuto sensibile che deve essere etichettato, classificato e/o protetto.
 
 Lo scanner locale viene installato usando i cmdlet di PowerShell forniti con il client di etichettatura unificata e può essere gestito con PowerShell e l'area Azure Information Protection nel portale di Azure.
 
