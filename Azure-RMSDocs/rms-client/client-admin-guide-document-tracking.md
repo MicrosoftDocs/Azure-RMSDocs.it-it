@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 776cebe55505322895e1da80f87f0476f8a893f7
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 66ad27bb61e4cdc24d5c047b8f2c464ba98e5a8d
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047423"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567614"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -49,7 +49,7 @@ Se sono presenti utenti che non devono avere questa attività rilevata da altri 
 
 Gli utenti non possono vedere le attività dei membri di questo gruppo nel sito di rilevamento, quando queste attività sono correlate a documenti che hanno condiviso con loro. Inoltre non vengono inviate notifiche tramite posta elettronica all'utente che ha condiviso il documento.
 
-Con questa configurazione tutti gli utenti possono comunque usare il sito di rilevamento dei documenti e revocare l'accesso ai documenti protetti, Tuttavia, non visualizzano l'attività per gli utenti specificati usando il cmdlet Set-AipServiceDoNotTrackUserGroup.
+Con questa configurazione tutti gli utenti possono comunque usare il sito di rilevamento dei documenti e revocare l'accesso ai documenti protetti, Tuttavia, non visualizzano l'attività per gli utenti specificati tramite il cmdlet Set-AipServiceDoNotTrackUserGroup.
 
 Questa impostazione influisce solo sugli utenti finali. Gli amministratori di Azure Information Protection possono sempre tenere traccia delle attività di tutti gli utenti, anche quando tali utenti vengono specificati tramite set-AipServiceDoNotTrackUserGroup. Per altre informazioni su come gli amministratori possono rilevare i documenti per gli utenti, vedere la sezione [Rilevamento e revoca dei documenti per gli utenti](#tracking-and-revoking-documents-for-users).
 

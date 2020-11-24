@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9b13f31a13d447dcd620f986cac17c74f0a7de17
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a354e9f787cf079e2c67a03fb58d330ab7785ce3
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048664"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567908"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -75,7 +75,7 @@ La distribuzione corrente di AD RMS usa una delle seguenti configurazioni per la
 - Protezione con password tramite un provider del servizio di crittografia esterno.
 
 > [!NOTE]
-> Per altre informazioni sull'uso di moduli di protezione hardware con AD RMS, vedere [Uso di AD RMS con moduli di protezione hardware](https://technet.microsoft.com/library/jj651024.aspx).
+> Per altre informazioni sull'uso di moduli di protezione hardware con AD RMS, vedere [Uso di AD RMS con moduli di protezione hardware](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj651024(v=ws.11)).
 
 Per la topologia della chiave del tenant di Azure Information Protection esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Insieme di credenziali delle chiavi di Azure. Quando si gestisce la propria chiave del tenant Azure Information Protection, viene a volte definita "Bring your own key" (BYOK). Per altre informazioni, vedere l'articolo [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
@@ -154,7 +154,7 @@ Se i modelli in AD RMS hanno usato il gruppo **anyone** , il gruppo equivalente 
 
 Quando si gestiscono i modelli e le etichette nel portale di Azure, questo gruppo viene visualizzato come nome di dominio del tenant di Azure AD. Ad esempio, questo gruppo potrebbe essere simile al seguente per Contoso: **contoso.onmicrosoft.com**. Per aggiungere questo gruppo, l'opzione Visualizza **i \<organization name> membri Add-All**.
 
-Se non si è certi che i modelli AD RMS includano il gruppo ANYONE, è possibile usare lo script di Windows PowerShell di esempio seguente per identificare tali modelli. Per altre informazioni sull'uso di Windows PowerShell con AD RMS, vedere l'articolo relativo a [Using Windows PowerShell to Administer AD RMS (Uso di Windows PowerShell per amministrare AD RMS)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+Se non si è certi che i modelli AD RMS includano il gruppo ANYONE, è possibile usare lo script di Windows PowerShell di esempio seguente per identificare tali modelli. Per altre informazioni sull'uso di Windows PowerShell con AD RMS, vedere l'articolo relativo a [Using Windows PowerShell to Administer AD RMS (Uso di Windows PowerShell per amministrare AD RMS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221079(v=ws.10)).
 
 È possibile aggiungere con facilità utenti esterni ai modelli, quando si convertono questi modelli in etichette nel portale di Azure. Quindi, nel riquadro **Aggiungi autorizzazioni** , scegliere **immettere i dettagli** per specificare manualmente gli indirizzi di posta elettronica per questi utenti.
 

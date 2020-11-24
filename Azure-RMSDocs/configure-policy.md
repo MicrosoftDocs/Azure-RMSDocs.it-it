@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 35eb3d59031fb30de1c9d6b1c6cdd2745f7d7ef2
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264328"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568245"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "88264328"
 > [!NOTE]
 > Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
+> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
 
 Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il client di Azure Information Protection.
 
@@ -48,7 +48,7 @@ Azure Information Protection supporta livelli diversi di sottoscrizioni:
 
 - Azure Information Protection P1: supporta la maggior parte delle funzionalità di classificazione, etichettatura e protezione, ad eccezione della classificazione automatica o di HYOK.
 
-- Office 365 con il servizio Azure Rights Management: supporta le funzionalità di protezione, ma non quelle di classificazione ed etichettatura.
+- Microsoft 365 che include il servizio Azure Rights Management: supporto per la protezione, ma non per la classificazione e l'assegnazione di etichette.
 
 Le opzioni che richiedono una sottoscrizione di Azure Information Protection P2 sono identificate nel portale.
 
@@ -56,7 +56,7 @@ Se l'organizzazione dispone di varie sottoscrizioni, è responsabilità dell'org
 
 - **Se l'organizzazione dispone di una combinazione di licenze di Azure Information Protection P1 e Azure Information Protection P2**: per gli utenti con licenza P2, creare e usare uno o più [criteri con ambito](configure-policy-scope.md) quando si configurano le opzioni che richiedono una licenza di Azure Information Protection P2. Assicurarsi che i criteri globali non contengano opzioni che richiedono una licenza di Azure Information Protection P2.
 
-- **Se l'organizzazione dispone di una sottoscrizione di Azure Information Protection, ma alcuni utenti hanno solo una licenza per Office 365 che include il servizio Azure Rights Management**: modificare il Registro di sistema nei computer degli utenti che non hanno una licenza di Azure Information Protection, in modo che non scarichino i criteri di Azure Information Protection. Per istruzioni, vedere la personalizzazione seguente nella guida per l'amministratore: [Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **Quando l'organizzazione ha una sottoscrizione per Azure Information Protection ma alcuni utenti hanno solo una licenza per Microsoft 365 che include il servizio Azure Rights Management**: per gli utenti che non dispongono di una licenza per Azure Information Protection, modificare il registro di sistema nei propri computer in modo che non scarichino i criteri di Azure Information Protection. Per istruzioni, vedere la personalizzazione seguente nella guida per l'amministratore: [Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
@@ -70,7 +70,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
     
     - **Amministratore di Azure Information Protection**
     
-  - **Amministratore conformità**
+  - **Amministratore di conformità**
     
   - **Amministratore dati di conformità**
     
@@ -163,7 +163,7 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Come configurare etichette per lingue diverse](configure-policy-languages.md)
 
-- [Come eseguire la migrazione delle etichette di Azure Information Protection a Office 365](configure-policy-migrate-labels.md)
+- [Come eseguire la migrazione di etichette Azure Information Protection Microsoft 365](configure-policy-migrate-labels.md)
 
 ## <a name="label-information-stored-in-emails-and-documents"></a>Etichettare le informazioni archiviate in documenti e messaggi di posta elettronica
 
@@ -186,4 +186,3 @@ Per esempi su come personalizzare i criteri di Azure Information Protection e os
 - [Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro](infoprotect-settings-tutorial.md)
 
 Per informazioni sull'esecuzione dei criteri, vedere [Central Reporting per Azure Information Protection](reports-aip.md).
-

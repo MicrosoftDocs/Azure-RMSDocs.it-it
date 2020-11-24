@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 05/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6b5a54cf02c9e34e9fc411a66dca9c589830458
-ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
+ms.openlocfilehash: 429616f5efb363b03a74d2cb571b7e9ca2aaa70e
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "82736712"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567597"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Verifica del servizio Azure Rights Management
 

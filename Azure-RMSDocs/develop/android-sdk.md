@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: ef1306dbcbd4727f4e6c0207e328e7df3da8ed74
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 24de585a77268611115342154a55cf6d78c443ad
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971898"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567969"
 ---
 # <a name="android-setup"></a>Installazione per Android
 
@@ -49,11 +49,11 @@ Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
     Questo SDK consente di sviluppare per Android 4.0.3 (API livello 15) e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100)). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Si noti**  che se l'applicazione non usa la libreria adal come la libreria di autenticazione OAuth 2,0, è consigliabile consultare questo materiale sussidiario Android, [alcuni pensieri SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Nota**    Se l'applicazione non usa la libreria ADAL come OAuth 2,0 Authentication Library, è consigliabile consultare questo materiale sussidiario Android, [alcuni pensieri SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
 
 
@@ -65,7 +65,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 ## <a name="configuring-your-development-environment"></a>Configurazione dell'ambiente di sviluppo
 
-**Nota**  versione di anteprima di MS RMS SDK 4,2: in questa versione di anteprima, le schermate non sono state aggiornate per mostrare la modifica nel nome dei percorsi da com/Microsoft/Protection a com/Microsoft/RightsManagement. Il testo, tuttavia, è stato aggiornato.
+**Nota**    Versione di anteprima di MS RMS SDK 4,2: in questa versione di anteprima, le schermate non sono state aggiornate per mostrare la modifica nel nome dei percorsi da com/Microsoft/Protection a com/Microsoft/RightsManagement. Il testo, tuttavia, è stato aggiornato.
 
 
 -   Aprire l'ambiente di sviluppo Eclipse.
@@ -86,7 +86,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
     ![Creare l'attività](../media/Android-setup-04.png)
 
--   Fare clic su **Avanti** e fornire un nome per l'attività. È possibile lasciare *MainActivity* come nome predefinito con un nome di layout *Activity\_Main*.
+-   Fare clic su **Avanti** e fornire un nome per l'attività. È possibile lasciare *MainActivity* come nome predefinito con un nome di layout *Activity \_ Main*.
 
     ![Specificare un nome per l'attività](../media/Android-setup-05a.jpg)
 
@@ -98,14 +98,14 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 **Aggiunta del riferimento all'SDK.**
 
-- Passare alla cartella in cui è stato estratto il *file\_ADRMS\_Android SDK. zip*. Nella cartella "SDK > com > microsoft > rightsmanagement", assicurarsi che i file *.classpath*, *.project* e *project.properties* non siano contrassegnati come di sola lettura.
+- Passare alla cartella in cui è stato estratto il *\_ \_sdk.zipADRMS Android*. Nella cartella "SDK > com > microsoft > rightsmanagement", assicurarsi che i file *.classpath*, *.project* e *project.properties* non siano contrassegnati come di sola lettura.
 - Per fare riferimento all'SDK, è necessario importarlo nell'area di lavoro.
 
   In Eclipse, fare clic su **File**. Scegliere **Importa** dal menu **File**. Nella finestra di dialogo **Importa**, selezionare **Android / Codice Android esistente nell'area di lavoro**.
 
   ![Importare l'SDK nell'area di lavoro](../media/Android-setup-07.png)
 
-- Fare clic su **Avanti**. Passare a selezionare la cartella in cui è stato estratto *il\_file\_ADRMS Android SDK. zip*. L'SDK dovrebbe essere visualizzato nell'elenco come **com.microsoft.rightsmanagement**.
+- Fare clic su **Avanti**. Passare a selezionare la cartella in cui è stato estratto *il \_ \_sdk.zipADRMS Android*. L'SDK dovrebbe essere visualizzato nell'elenco come **com.microsoft.rightsmanagement**.
 
   ![Esplorare per selezionare la cartella](../media/Android-setup-08c.jpg)
 
@@ -121,7 +121,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 - Fare clic su **OK**.
 
-  Poiché MS RMS SDK 4,2 si connette con AAD RM, l'applicazione deve essere concessa a **Internet** e **ad\_accedere\_allo stato della rete**. A tale scopo, aprire il file *Androidmanifest* nella radice del progetto.
+  Poiché MS RMS SDK 4,2 si connette con AAD RM, l'applicazione deve essere concessa a **Internet** e **ad \_ accedere \_ allo stato della rete**. A tale scopo, aprire il file *Androidmanifest* nella radice del progetto.
 
   Per aggiungere le autorizzazioni, fare clic su **Aggiungi** e quindi selezionare **Usa autorizzazioni**.
 
@@ -138,7 +138,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
   <uses-permission/>
   ```
 
-**Si noti**  che l'SDK USA *Android. support. v4*
+**Nota**    L'SDK USA *Android. support. v4*
 
 -   A questo punto si è pronti a creare le proprie nuove app Android.
 
@@ -150,4 +150,4 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 [Concetti e termini per sviluppatori](core-concepts.md)
 
-[Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/library/dn758245.aspx)
+[Informazioni di riferimento sulle API di Android](/previous-versions/windows/desktop/msipcthin2/android)

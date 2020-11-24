@@ -1,17 +1,17 @@
 ---
 title: Classe AddContentHeaderAction
 description: 'Documenta la classe addcontentheaderaction:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 341c8d22902d937068de3e9afb80aac9cb8305c4
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 090bf4e1ad70238d6023a914fba4786a97a25a0d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763751"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567326"
 ---
 # <a name="class-addcontentheaderaction"></a>Classe AddContentHeaderAction 
 Classe di azione che specifica l'aggiunta di un'intestazione contenuto.
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Ottiene il margine dell'intestazione a partire 
 API usata per contrassegnare l'elemento di intestazione contenuto.
 
   
-**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene l'intestazione contenuto. Lo stesso nome verrà restituito in [RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) nel caso in cui l'intestazione contenuto debba essere rimossa.
+**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene l'intestazione contenuto. Lo stesso nome verrà restituito in RemoveContentHeaderAction nel caso in cui l'intestazione contenuto debba essere rimossa.
   
 ### <a name="gettext-function"></a>Funzione gettext
 Ottiene il testo destinato a essere inserito nell'intestazione contenuto.
@@ -57,7 +57,7 @@ Ottiene le dimensioni del carattere usato per visualizzare l'intestazione conten
 Ottiene il colore del carattere usato per visualizzare l'intestazione contenuto.
 
   
-**Restituisce**il colore del carattere sotto forma di stringa, ad esempio #000000 ".
+**Restituisce** il colore del carattere sotto forma di stringa, ad esempio #000000 ".
   
 ### <a name="getalignment-function"></a>Funzione getAlignment
 Ottiene l'allineamento dell'intestazione.

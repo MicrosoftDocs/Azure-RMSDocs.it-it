@@ -1,17 +1,17 @@
 ---
 title: Classe MipContext
 description: 'Documenta la classe mipcontext:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cf191a1e770d13d84603fe593d63dedb98bbb14b
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c593ebc368b0717d32e873e6924f80af103325ea
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761460"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566762"
 ---
 # <a name="class-mipcontext"></a>Classe MipContext 
 MipContext rappresenta lo stato condiviso tra tutti i profili, i motori e i gestori.
@@ -25,9 +25,9 @@ public const ApplicationInfo& GetApplicationInfo() const  |  Ottenere la descriz
 public const std:: String& GetMipPath () const  |  Ottenere il percorso del file per log, cache e così via.
 public bool IsOfflineOnly ()  |  Ottiene l'impostazione solo offline.
 public LogLevel GetThresholdLogLevel () const  |  Ottenere il livello di registrazione della soglia.
-public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Ottiene l'implementazione del logger.
+public std:: shared_ptr \<LoggerDelegate\> GetLoggerDelegate ()  |  Ottiene l'implementazione del logger.
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Ottiene l'implementazione del logger.
-public const std::\<map FlightingFeature,\> bool& GetFlightingFeatures () const  |  Ottiene il set di funzionalità di Flight.
+public const std:: Map \<FlightingFeature, bool\>& GetFlightingFeatures () const  |  Ottiene il set di funzionalità di Flight.
   
 ## <a name="members"></a>Members
   
@@ -44,7 +44,7 @@ Parametri
 
 
   
-**Restituisce**un valore che indica se una funzionalità è abilitata se un FeatureFlightingDelegate non è stato fornito da un'applicazione. verrà restituito sempre true.
+**Restituisce** un valore che indica se una funzionalità è abilitata se un FeatureFlightingDelegate non è stato fornito da un'applicazione. verrà restituito sempre true.
   
 ### <a name="getapplicationinfo-function"></a>GetApplicationInfo (funzione)
 Ottenere la descrizione dell'applicazione.

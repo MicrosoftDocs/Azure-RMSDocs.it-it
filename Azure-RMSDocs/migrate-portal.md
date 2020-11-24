@@ -5,19 +5,19 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24c40dd9cb4fdccd2103fd40ac9a104e28934a8a
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: a29700cd29d291d80bb425229d958b5e18a5d262
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483083"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567633"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -47,9 +47,9 @@ Usare le informazioni seguenti per una transizione rapida al portale aggiornato.
 |Creare un modello con ambito|Creare criteri con ambito e creare un'etichetta in tale ambito che applichi la protezione. <br /><br />Per altre informazioni, vedere [Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito](configure-policy-scope.md).
 |Copiare un modello|Non è possibile copiare un modello nel portale di Azure. Se si vuole che due etichette abbiano le stesse impostazioni di protezione, è necessario impostare le autorizzazioni in ogni etichetta. <br /><br />Per altre informazioni, vedere [Per configurare un'etichetta per le impostazioni di protezione](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Eliminare un modello|L'eliminazione di modelli può comportare che alcuni dati risultino inaccessibili, pertanto il portale di Azure non supporta questa azione. Tuttavia, è possibile eliminare l'etichetta e quindi usare il cmdlet [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) di PowerShell per rimuovere il modello. <br /><br />Per altre informazioni, vedere [Come eliminare o riordinare un'etichetta per Azure Information Protection](configure-policy-delete-reorder.md).
-|Supporto per più lingue|Dalla selezione di menu **Gestisci** selezionare **Lingue** per esportare i campi personalizzabili che includono il nome e la descrizione del modello. Tradurre le stringhe e importarle nel portale. <br /><br />Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](configure-policy-languages.md).
+|Supporto per più linguaggi|Dalla selezione di menu **Gestisci** selezionare **Lingue** per esportare i campi personalizzabili che includono il nome e la descrizione del modello. Tradurre le stringhe e importarle nel portale. <br /><br />Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](configure-policy-languages.md).
 |Report Web di Rights Management|[Reporting centralizzato per Azure Information Protection](reports-aip.md) è ora disponibile in anteprima.<br /><br />È anche possibile usare il cmdlet PowerShell [Get-AipServiceUsageLog](/powershell/module/aipservice/get-aipserviceuserlog) per scaricare i log di utilizzo per il servizio Azure Rights Management. È quindi possibile usare i dati per creare report personalizzati. Per ulteriori informazioni, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](log-analyze-usage.md).
-|Attivare e disattivare il servizio Rights Management|Scegliere **Attivazione della protezione** dal menu **Gestisci**.<br /><br />Per ulteriori informazioni, vedere [come attivare il servizio Rights Management Protection dal portale di Azure](activate-azure.md).
+|Attivare e disattivare il servizio Rights Management|Scegliere **attivazione protezione** dal menu **Gestisci** .<br /><br />Per ulteriori informazioni, vedere [come attivare il servizio Rights Management Protection dal portale di Azure](activate-azure.md).
 
 Prima di modificare i modelli o convertirli in etichette nel portale di Azure, vedere [Considerazioni sui modelli nel portale di Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 

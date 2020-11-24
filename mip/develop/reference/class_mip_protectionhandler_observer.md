@@ -1,17 +1,17 @@
 ---
 title: 'Classe ProtectionHandler:: Observer'
 description: "Documenta la classe protectionhandler:: Observer dell'SDK Microsoft Information Protection (MIP)."
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 66453d343505cc57427e177eac258b83a2663eb0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 092448f4af5c27625b8a19f7cfea039e9bcd8071
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764444"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567140"
 ---
 # <a name="class-protectionhandlerobserver"></a>Classe ProtectionHandler:: Observer 
 Interfaccia che riceve le notifiche correlate a ProtectionHandler.
@@ -20,8 +20,8 @@ Questa interfaccia deve essere implementata dalle applicazioni che usano l'SDK d
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateProtectionHandlerSuccess (const std::\<shared_ptr\> ProtectionHandler& ProtectionHandler, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando ProtectionHandler è stato creato correttamente.
-public virtual void OnCreateProtectionHandlerFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando la creazione di ProtectionHandler non è riuscita.
+public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr\<ProtectionHandler\>& protectionHandler, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando ProtectionHandler è stato creato correttamente.
+public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando la creazione di ProtectionHandler non è riuscita.
   
 ## <a name="members"></a>Members
   

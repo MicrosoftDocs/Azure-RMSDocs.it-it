@@ -1,17 +1,17 @@
 ---
 title: Classe AsyncControl
 description: 'Documenta la classe AsyncControl:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d032abf9fe7192cfe6ccfd5890d6585aaa2ba645
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 7058ccdcac0133bc708a81d5e7342f61c48994f9
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763665"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567273"
 ---
 # <a name="class-asynccontrol"></a>Classe AsyncControl 
 Classe utilizzata per annullare l'operazione asincrona.

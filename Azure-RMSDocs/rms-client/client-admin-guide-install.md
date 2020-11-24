@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb2f7d2cacad3623eb590c338a7f19585e9c80d1
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 468e7a5b7ef5482b1027d491adf6b6b4d8271261
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176651"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568142"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -67,7 +67,7 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
 
     Per Office 2013 e versioni successive, configurare i criteri di gruppo per garantire che il componente aggiuntivo **Microsoft Azure Information Protection** per le applicazioni di Office sia sempre abilitato. Senza questa configurazione, è possibile che il componente aggiuntivo Microsoft Azure Information Protection venga disabilitato e gli utenti non potranno assegnare etichette a documenti e messaggi di posta elettronica nella propria applicazione Office.
 
-    - Per Outlook: usare l'impostazione dei criteri di gruppo documentata in [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) (Controllo dell'amministratore sui componenti aggiuntivi) nella documentazione di Office.
+    - Per Outlook: usare l'impostazione dei criteri di gruppo documentata in [System Administrator control over add-ins](/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) (Controllo dell'amministratore sui componenti aggiuntivi) nella documentazione di Office.
 
     - Per Word, Excel e PowerPoint: usare l'impostazione dei criteri di gruppo **Elenco dei componenti aggiuntivi gestiti** documentata nell'articolo del supporto tecnico [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Nessun componente aggiuntivo caricato a causa di impostazioni criteri di gruppo per Office 2013 e Office 2016).
 
@@ -79,7 +79,7 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
 
         Per PowerPoint: `MSIP.PowerPointAddin`
 
-- Il client AIP non è supportato nei computer in cui è abilitata la [protezione dagli exploit](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) . Assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-installing-the-aip-client) prima di installare il client AIP.  
+- Il client AIP non è supportato nei computer in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) . Assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-installing-the-aip-client) prima di installare il client AIP.  
 
 > [!IMPORTANT]
 > L'installazione del client Azure Information Protection richiede autorizzazioni amministrative locali.
@@ -120,7 +120,7 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
 
     - **AllowTelemetry = 0**: usare questo parametro per disabilitare l'opzione di installazione **Invia le statistiche di utilizzo a Microsoft per contribuire a migliorare Azure Information Protection**.
 
-1. Se si sceglie l'installazione interattiva, selezionare l'opzione per l'installazione di un **criterio demo** se non si riesce a connettersi a Office 365 o ad Azure Active Directory, ma si vuole esaminare e provare il lato client di Azure Information Protection usando un criterio locale per scopi dimostrativi. Quando il client si connette a un servizio di Azure Information Protection, questo criterio demo viene sostituito dai criteri di Azure Information Protection dell'organizzazione.
+1. Se si installa in modo interattivo, selezionare l'opzione per l'installazione di un **criterio demo** se non si riesce a connettersi a Microsoft 365 o Azure Active Directory, ma si vuole vedere e provare il lato client di Azure Information Protection usando un criterio locale a scopo dimostrativo. Quando il client si connette a un servizio di Azure Information Protection, questo criterio demo viene sostituito dai criteri di Azure Information Protection dell'organizzazione.
 
 1. Per completare l'installazione:
 
@@ -154,7 +154,7 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>Per identificare il valore da specificare per il parametro ServiceLocation
 
-1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) e specificare le credenziali di amministratore per connettersi al servizio Rights Management di Azure. Quindi eseguire [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration).
+1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AipService](/powershell/module/aipservice/connect-aipservice) e specificare le credenziali di amministratore per connettersi al servizio Rights Management di Azure. Quindi eseguire [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration).
 
     Se il modulo PowerShell per il servizio Rights Management di Azure non è già stato installato, vedere [installazione del modulo PowerShell AIPService](../install-powershell.md).
 
@@ -174,7 +174,7 @@ Per il supporto degli aggiornamenti automatici tramite Windows Update e per l'in
 
 Se l'installazione di questa versione più recente di Microsoft .NET Framework non è una soluzione efficace, è possibile installare il client con il parametro **DowngradeDotNetRequirement=True**, in modo da ignorare questo requisito se è installato Microsoft .NET Framework versione 4.5.1.
 
-Ad esempio: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
+ad esempio `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 È consigliabile usare questo parametro con cautela, tenendo presente che sono stati segnalati problemi di blocco delle applicazioni di Office quando il client Azure Information Protection viene usato con questa versione precedente di Microsoft .NET Framework. Se si riscontrano problemi di blocco delle applicazioni, eseguire l'aggiornamento alla versione consigliata prima di provare altre soluzioni. 
 
@@ -184,7 +184,7 @@ Tenere anche presente che se si usa Windows Update per mantenere aggiornato il c
 
 Per la distribuzione centrale, usare le seguenti informazioni specifiche della versione dell'installazione MSI del client Azure Information Protection. 
 
-Se si usa Intune per il metodo di distribuzione del software, usare queste istruzioni insieme a quelle incluse in [Aggiungere app con Microsoft Intune](/intune/deploy-use/add-apps).
+Se si usa Intune per il metodo di distribuzione del software, usare queste istruzioni insieme a quelle incluse in [Aggiungere app con Microsoft Intune](/intune/apps/apps-add).
 
 1. Per ogni computer che esegue il file con estensione msi è necessario verificare che siano soddisfatte le seguenti dipendenze software. Ad esempio, creare un pacchetto con le dipendenze e la versione MSI del client oppure distribuire solo ai computer che soddisfano queste dipendenze:
     

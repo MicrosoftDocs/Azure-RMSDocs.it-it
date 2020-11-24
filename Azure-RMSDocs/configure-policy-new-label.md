@@ -5,18 +5,18 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 1d3632f402cb691a7df6212f699de62ccc1f182b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: f0a027ed70cc335e75bea9c5ee2afc1b243c7c13
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048086"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567543"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
@@ -53,7 +53,7 @@ Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possi
     
     Si noti che alle nuove etichette viene assegnato automaticamente il colore nero. Scegliere un colore distintivo dall'elenco dei colori o immettere un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) pagina della documentazione Web di MSDN. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
-4. Per rendere disponibile la nuova etichetta agli utenti: dall'opzione di menu **classificazioni**  >  **criteri** selezionare i criteri che contengono la nuova etichetta. Selezionare **Add or remove labels** (Aggiungi o rimuovi etichette). Selezionare l'etichetta nel riquadro **criteri: Aggiungi o Rimuovi etichette** , selezionare **OK**e quindi fare clic su **Salva**.
+4. Per rendere disponibile la nuova etichetta agli utenti: dall'opzione di menu **classificazioni**  >  **criteri** selezionare i criteri che contengono la nuova etichetta. Selezionare **Add or remove labels** (Aggiungi o rimuovi etichette). Selezionare l'etichetta nel riquadro **criteri: Aggiungi o Rimuovi etichette** , selezionare **OK** e quindi fare clic su **Salva**.
     
     >[!TIP]
     >Per quanto riguarda le nuove etichette, valutare la possibilità di aggiungerle in un primo momento a un criterio con ambito usato a scopi di test. Quando si è soddisfatti dei risultati, rimuovere l'etichetta da questo ambito di test e quindi aggiungerla a un criterio in uso nell'ambiente di produzione.     

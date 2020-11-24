@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 25a45be35851035411436a58fc72682ff4e6d66d
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564104"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568209"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Procedura: installare, configurare e testare un server RMS
 
@@ -68,7 +68,7 @@ La procedura seguente consente di configurare il server RMS e include queste ope
    - Nell'individuazione del server, un amministratore registra un service connection point (SCP) per il cluster radice RMS con Active Directory e il client esegue una query ad Active Directory per individuare SCP e stabilire una connessione con il server.
    - Nell'individuazione del client, configurare le impostazioni di individuazione del servizio RMS nel Registro sul computer su cui è in esecuzione RMS Client 2.1. Queste impostazioni rimandano RMS Client 2.1 al server RMS da usare. Quando sono presenti, l'individuazione non viene eseguita sul lato server.
 
-   Per configurare l'individuazione sul lato client, è possibile impostare le chiavi del registro seguenti in modo che puntino al server RMS. Per informazioni su come configurare l'individuazione sul lato servizio, vedere [Note sulla distribuzione del client RMS](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
+   Per configurare l'individuazione sul lato client, è possibile impostare le chiavi del registro seguenti in modo che puntino al server RMS. Per informazioni su come configurare l'individuazione sul lato servizio, vedere [Note sulla distribuzione del client RMS](../rms-client/client-deployment-notes.md).
 
 4. **EnterpriseCertification**
 

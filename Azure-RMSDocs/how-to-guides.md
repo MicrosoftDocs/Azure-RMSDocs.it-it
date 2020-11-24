@@ -5,18 +5,18 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6308234bb778969c8e5d3b8e55260f042e501906
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 56d465d8efbc0b5bc2c6b87e1b60e34cb4e091f8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298224"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567579"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guide procedurali per gli scenari comuni che usano Azure Information Protection
 
@@ -33,7 +33,7 @@ Le distribuzioni più efficienti sono quelle in cui si identificano casi d'uso s
 |Scenario: Per...|Istruzioni|
 |----------------|---------------|
 |Trovare le informazioni riservate che la mia organizzazione archivia in locale|[Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale](quickstart-findsensitiveinfo.md)|
-|Consentire agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate|[Guida introduttiva: Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](quickstart-label-dnf-protectedemail.md)|
+|Consentire agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate|[Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](quickstart-label-dnf-protectedemail.md)|
 |Consentire agli utenti di classificare i dati nel momento in cui vengono creati o modificati e proteggerli se contengono informazioni riservate| [Esercitazione: Modificare i criteri e creare una nuova etichetta](infoprotect-quick-start-tutorial.md)|
 |Consentire agli utenti di collaborare facilmente su un documento protetto|[Configurazione della collaborazione per i documenti protetti con Azure Information Protection](secure-collaboration-documents.md)|
 |Proteggere automaticamente i messaggi di posta elettronica degli utenti inviati all'esterno dell'organizzazione| [Configurazione delle regole del flusso di posta per le etichette di Azure Information Protection](configure-exo-rules.md)

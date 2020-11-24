@@ -1,6 +1,6 @@
 ---
-title: Configurazione per i servizi di Office 365 per l'uso di Azure RMS-AIP
-description: Informazioni e istruzioni per gli amministratori per configurare i servizi di Office 365 per l'uso con il servizio Rights Management di Azure da Azure Information Protection.
+title: Configurazione per i servizi di Microsoft 365 per l'uso di Azure RMS-AIP
+description: Informazioni e istruzioni per gli amministratori per configurare i servizi di Microsoft 365 per l'uso con il servizio Azure Rights Management da Azure Information Protection.
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
@@ -13,14 +13,14 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee38abad373662034a5c8d5c5b31d3a0b006d4ce
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 30f4789b5f6fcf7c62e5f84f84fc8187acfcff12
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136247"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568185"
 ---
-# <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: configurazione per Servizi online usare il servizio Rights Management di Azure
+# <a name="microsoft365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Microsoft 365: configurazione per Servizi online usare il servizio Azure Rights Management
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -40,7 +40,7 @@ Exchange Online potrebbe già essere abilitato per l'uso del servizio Azure Righ
 
     Premere **S** per confermare.
 
-2. Nella sessione di Windows PowerShell accedere a Exchange Online usando un account abilitato per l'accesso alla shell remota. Per impostazione predefinita, tutti gli account creati in Exchange Online sono abilitati per l'accesso alla Shell remota. L'accesso può essere disabilitato o abilitato usando il comando [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx).
+2. Nella sessione di Windows PowerShell accedere a Exchange Online usando un account abilitato per l'accesso alla shell remota. Per impostazione predefinita, tutti gli account creati in Exchange Online sono abilitati per l'accesso alla Shell remota. L'accesso può essere disabilitato o abilitato usando il comando [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](/powershell/exchange/disable-access-to-exchange-online-powershell).
 
     Per accedere, digitare prima di tutto:
 
@@ -48,7 +48,7 @@ Exchange Online potrebbe già essere abilitato per l'uso del servizio Azure Righ
     $Cred = Get-Credential
     ```
 
-    Quindi, nella finestra di dialogo **Richiesta credenziali di Windows PowerShell** specificare il nome utente e la password di Office 365.
+    Quindi, nella finestra di dialogo **richiesta credenziali di Windows PowerShell** specificare il nome utente e la password del Microsoft 365.
 
 3. Connettersi al servizio Exchange Online impostando prima di tutto una variabile:
 
@@ -62,7 +62,7 @@ Exchange Online potrebbe già essere abilitato per l'uso del servizio Azure Righ
     Import-PSSession $Session
     ```
 
-4. Eseguire il comando [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) per visualizzare la configurazione di Exchange Online per il servizio di protezione:
+4. Eseguire il comando [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) per visualizzare la configurazione di Exchange Online per il servizio di protezione:
 
     ```md
     Get-IRMConfiguration
@@ -80,11 +80,11 @@ Exchange Online potrebbe già essere abilitato per l'uso del servizio Azure Righ
     Test-IRMConfiguration -Sender <user email address>
     ```
 
-    Ad esempio: **Test-IRMConfiguration -Sender  adams@contoso.com**
+    Ad esempio: **Test-IRMConfiguration-sender adams \@ contoso.com**
 
     Questo comando esegue una serie di controlli, inclusi la verifica della connettività al servizio, il recupero della configurazione, il recupero di URI, licenze ed eventuali modelli. Nella sessione di Windows PowerShell verranno visualizzati i risultati di ogni controllo e, se tutti gli elementi superano positivamente i controlli, verrà visualizzato un messaggio analogo a: **RISULTATO COMPLESSIVO: ESITO POSITIVO**
 
-Se Exchange Online è abilitato per l'uso del servizio Azure Rights Management, è possibile configurare funzionalità che applicano automaticamente la protezione delle informazioni, ad esempio [regole del flusso di posta](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8), [criteri di prevenzione della perdita dei dati (DLP)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx) e [casella vocale protetta](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (messaggistica unificata).
+Se Exchange Online è abilitato per l'uso del servizio Azure Rights Management, è possibile configurare funzionalità che applicano automaticamente la protezione delle informazioni, ad esempio [regole del flusso di posta](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8), [criteri di prevenzione della perdita dei dati (DLP)](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) e [casella vocale protetta](/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/protect-voice-mail) (messaggistica unificata).
 
 ## <a name="sharepoint-in-microsoft-365-and-onedrive-irm-configuration"></a>SharePoint in Microsoft 365 e OneDrive: configurazione di IRM
 
@@ -97,9 +97,9 @@ Per configurare SharePoint in Microsoft 365 e OneDrive per supportare il servizi
 
 Per abilitare il servizio IRM (Information Rights Management) per SharePoint, vedere le istruzioni seguenti dalla documentazione di Office:
 
-- [Configurare Information Rights Management (IRM) nell'interfaccia di amministrazione di SharePoint](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
+- [Configurare Information Rights Management (IRM) nell'interfaccia di amministrazione di SharePoint](/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
 
-Questa configurazione viene eseguita dall'amministratore di Office 365.
+Questa configurazione viene eseguita dall'amministratore Microsoft 365.
 
 ### <a name="configuring-irm-for-libraries-and-lists"></a>Configurazione di IRM per elenchi e raccolte
 
@@ -114,17 +114,17 @@ Questa configurazione viene eseguita dall'amministratore del sito di SharePoint.
 Dopo aver abilitato il servizio IRM per SharePoint, è possibile configurare la raccolta documenti OneDrive degli utenti o le singole cartelle per la protezione Rights Management. Gli utenti possono configurarla autonomamente usando il sito Web OneDrive. Anche se gli amministratori non possono configurare questa protezione per gli utenti usando il centro di amministrazione di SharePoint, è possibile farlo tramite Windows PowerShell.
 
 > [!NOTE]
-> Per ulteriori informazioni sulla configurazione di OneDrive, vedere la documentazione di Office [configurare OneDrive in office 365](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb).
+> Per ulteriori informazioni sulla configurazione di OneDrive, vedere la documentazione di [OneDrive](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb) .
 
 #### <a name="configuration-for-users"></a>Configurazione per gli utenti
 
 Fornire agli utenti le istruzioni seguenti per poter configurare i OneDrive per proteggere i file aziendali.
 
-1. Accedere a Office 365 con l'account aziendale o dell'istituto di istruzione e andare al [sito Web OneDrive](https://admin.microsoft.com/onedrive).
+1. Accedere a Microsoft 365 con l'account aziendale o dell'Istituto di istruzione e passare al [sito Web OneDrive](https://admin.microsoft.com/onedrive).
 
 2. Nella parte inferiore del riquadro di spostamento selezionare **Return to classic OneDrive** (Torna a OneDrive classico).
 
-3. Selezionare l'icona **Impostazioni**. Nel riquadro **Impostazioni**, se **Barra multifunzione** è impostato su **No**, selezionare questa impostazione per attivare la barra multifunzione.
+3. Selezionare l'icona **Impostazioni** . Nel riquadro **Impostazioni**, se **Barra multifunzione** è impostato su **No**, selezionare questa impostazione per attivare la barra multifunzione.
 
 4. Per configurare tutti i file OneDrive da proteggere, selezionare la scheda **libreria** nella barra multifunzione e quindi selezionare **Impostazioni libreria**.
 
@@ -421,7 +421,7 @@ Sebbene non sia possibile configurare IRM per OneDrive degli utenti usando l'int
        if(-not $o365TenantAdminCredential)
        {
            # when credentials are not cached, prompt for the tenant admin credentials
-           $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Office 365 admin"
+           $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Microsoft 365 admin"
 
            if(-not $o365TenantAdminCredential -or -not $o365TenantAdminCredential.UserName -or $o365TenantAdminCredential.Password.Length -eq 0 )
            {
@@ -513,23 +513,23 @@ Sebbene non sia possibile configurare IRM per OneDrive degli utenti usando l'int
 
    1. Cercare `$sharepointAdminCenterUrl` e sostituire il valore di esempio con il proprio URL dell'interfaccia di amministrazione di SharePoint.
 
-      Questo valore viene trovato come URL di base quando si accede all'interfaccia di amministrazione di SharePoint e ha il formato seguente: https://* &lt; tenant_name &gt; *-admin.SharePoint.com
+      Questo valore viene trovato come URL di base quando si accede all'interfaccia di amministrazione di SharePoint e ha il formato seguente: https://*&lt; tenant_name &gt;*-admin.SharePoint.com
 
-      Ad esempio, se il nome del tenant è "contoso", è necessario specificare:**https://contoso-admin.sharepoint.com**
+      Ad esempio, se il nome del tenant è "contoso", è necessario specificare: **https://contoso-admin.sharepoint.com**
 
-   2. Cercare `$tenantAdmin` e sostituire il valore di esempio con il proprio account amministratore globale completo per Office 365.
+   2. Cercare `$tenantAdmin` e sostituire il valore di esempio con il proprio account amministratore globale completo per Microsoft 365.
 
-      Questo valore corrisponde a quello usato per accedere all'interfaccia di amministrazione di Microsoft 365 come amministratore globale e ha il formato seguente: user_name@* &lt; &gt; nome di dominio tenant*. com
+      Questo valore corrisponde a quello usato per accedere all'interfaccia di amministrazione di Microsoft 365 come amministratore globale e ha il formato seguente: user_name@*&lt; &gt; nome di dominio tenant*. com
 
-      Ad esempio, se il nome utente dell'amministratore globale di Office 365 è "admin" per il dominio del tenant "contoso.com", è necessario specificare:**admin@contoso.com**
+      Se, ad esempio, il nome utente dell'amministratore globale Microsoft 365 è "admin" per il dominio del tenant "contoso.com", è necessario specificare: **admin@contoso.com**
 
    3. Cercare `$webUrls` e sostituire i valori di esempio con gli URL Web di OneDrive degli utenti, aggiungendo o eliminando tutte le voci necessarie.
 
       In alternativa, leggere i commenti nello script su come sostituire questa matrice importando un file con estensione csv contenente tutti gli URL da configurare.  È stato fornito un altro script di esempio per cercare ed estrarre automaticamente gli URL per popolare questo file con estensione csv. Quando si è pronti a eseguire questa operazione, usare lo [script aggiuntivo per restituire tutti gli URL di OneDrive a un. Sezione del file CSV](#additional-script-to-output-all-onedrive-urls-to-a-csv-file) immediatamente dopo questi passaggi.
 
-      L'URL Web per l'OneDrive dell'utente è nel formato seguente:* &lt; nome &gt; tenant*https://-My.SharePoint.com/Personal/* &lt; &gt; user_name*_* &lt; nome &gt; tenant*_com
+      L'URL Web per l'OneDrive dell'utente è nel formato seguente:*&lt; nome &gt; tenant* https://-My.SharePoint.com/Personal/*&lt; &gt; user_name* _ *&lt; nome &gt; tenant* _com
 
-      Ad esempio, se l'utente nel tenant Contoso ha un nome utente "rsimone", è necessario specificare:**https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
+      Ad esempio, se l'utente nel tenant Contoso ha un nome utente "rsimone", è necessario specificare: **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
    4. Poiché si sta usando lo script per configurare OneDrive, non modificare il valore dei **documenti** per la `$listTitle` variabile.
 
@@ -537,14 +537,14 @@ Sebbene non sia possibile configurare IRM per OneDrive degli utenti usando l'int
 
 5. Salvare lo script e firmarlo. Se non si firma lo script (condizione più sicura), Windows PowerShell deve essere configurato nel computer in uso per eseguire script non firmati. A tal fine eseguire la sessione di Windows PowerShell con l'opzione **Esegui come amministratore** e digitare: **Set-ExecutionPolicy Unrestricted**. Questa configurazione, tuttavia, consente l'esecuzione di tutti gli script non firmati (condizione meno sicura).
 
-   Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) nella raccolta documenti di PowerShell.
+   Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) nella raccolta documenti di PowerShell.
 
-6. Eseguire lo script e, se richiesto, immettere la password per l'account di amministratore di Office 365. Se si modifica lo script e lo si esegue nella stessa sessione di Windows PowerShell, le credenziali non verranno richieste.
+6. Eseguire lo script e, se richiesto, specificare la password per l'account amministratore Microsoft 365. Se si modifica lo script e lo si esegue nella stessa sessione di Windows PowerShell, le credenziali non verranno richieste.
 
 > [!TIP]
 > È inoltre possibile utilizzare questo script per configurare IRM per una raccolta di SharePoint. Per questa configurazione, probabilmente si desidererà attivare l'opzione aggiuntiva **Non consentire il caricamento di documenti che non supportano IRM**, per assicurare che la libreria contenga solo documenti protetti.    A tale scopo aggiungere il parametro `-IrmReject` al comando Set-IrmConfiguration nello script.
 >
-> È anche necessario modificare la `$webUrls` variabile (ad esempio, **https: \/ /contoso.SharePoint.com**) e la `$listTitle` variabile (ad esempio, **$Reports**).
+> È anche necessario modificare la `$webUrls` variabile (ad esempio, **https: \/ /contoso.SharePoint.com**) e la  `$listTitle` variabile (ad esempio, **$Reports**).
 
 Se è necessario disabilitare IRM per le librerie OneDrive dell'utente, vedere la sezione [script per disabilitare IRM per OneDrive](#script-to-disable-irm-for-onedrive) .
 
@@ -562,7 +562,7 @@ Questo script richiede anche l' [SDK dei componenti client di SharePoint](https:
 <#
   Description:
 
-    Queries the search service of an Office 365 tenant to retrieve all OneDrive sites.  
+    Queries the search service of a Microsoft 365 tenant to retrieve all OneDrive sites.  
     Details of the discovered sites are written to a .CSV file (by default,"OneDriveForBusinessSiteInfo_<date>.csv").
 
  Script Installation Requirements:
@@ -746,7 +746,7 @@ function Add-CredentialToCredentialCache
     $clientContext = New-Object Microsoft.SharePoint.Client.ClientContext($sharepointAdminCenterUrl)
     $clientContext.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($o365TenantAdminCredential.UserName, $o365TenantAdminCredential.Password)
 
-# run a query against the Office 365 tenant search service to retrieve all OneDrive URLs
+# run a query against the Microsoft 365 tenant search service to retrieve all OneDrive URLs
 
     do
     {

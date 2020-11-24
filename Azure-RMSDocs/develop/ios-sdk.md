@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: a07db66ed4edec0e80e3afa44741faecbe6a945b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972051"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568292"
 ---
 # <a name="ios-and-os-x-setup"></a>Installazione per iOS e OS X
 
@@ -29,7 +29,7 @@ Le applicazioni iOS e OS X possono usare Microsoft Rights Management SDK 4.2 per
 
 Questo argomento illustra come impostare l'ambiente per la creazione di nuove applicazioni personalizzate.
 
-**Si noti**  che questo SDK non supporta iPod touch.
+**Nota**    Questo SDK non supporta iPod touch.
 
 
 -   [Prerequisiti](#prerequisites)
@@ -50,7 +50,7 @@ Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
     Questo SDK consente di sviluppare per iOS 7.0 e OS X 10.8 e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100)). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) o [ADAL per OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -111,4 +111,4 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 * [Concetti e termini per sviluppatori](core-concepts.md)
 
-* [informazioni di riferimento sulle API di iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
+* [informazioni di riferimento sulle API di iOS/OS X](/previous-versions/windows/desktop/msipcthin2/ios)

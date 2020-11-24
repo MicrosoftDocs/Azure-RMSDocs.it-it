@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 165833b5d3b768be322dcd15548ef9cdbb70927c
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 1aba9e7f0d6cea7edde34d66e571a6eef4599555
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953219"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567867"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
@@ -41,13 +41,13 @@ Quando si usa Exchange Online o Exchange Server, è possibile configurare le opz
 
 -   Supporto di protezione della posta elettronica per **Outlook sul Web**, implementato in modo analogo al client Outlook. Questa configurazione consente agli utenti di proteggere i messaggi di posta elettronica tramite opzioni o modelli di protezione. Gli utenti possono leggere e usare messaggi di posta elettronica protetti ricevuti.
 
--   **Regole di protezione** per client Outlook che un amministratore configura per applicare automaticamente opzioni e modelli di protezione ai messaggi di posta elettronica per destinatari specifici. Quando ad esempio vengono inviati messaggi e-mail interni all'ufficio legale dell'organizzazione, è possibile configurare tali messaggi in modo che possano essere letti solo dai membri dell'ufficio e che non possano essere inoltrati. Prima di inviare il messaggio di posta elettronica gli utenti vedono la regola di protezione applicata e, per impostazione predefinita, possono rimuovere la protezione se ritengono non sia necessaria. I messaggi e-mail vengono crittografati prima dell'invio. Per altre informazioni, vedere [Regole di protezione di Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) e [Creare una regola di protezione di Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) nella libreria di Exchange.
+-   **Regole di protezione** per client Outlook che un amministratore configura per applicare automaticamente opzioni e modelli di protezione ai messaggi di posta elettronica per destinatari specifici. Quando ad esempio vengono inviati messaggi e-mail interni all'ufficio legale dell'organizzazione, è possibile configurare tali messaggi in modo che possano essere letti solo dai membri dell'ufficio e che non possano essere inoltrati. Prima di inviare il messaggio di posta elettronica gli utenti vedono la regola di protezione applicata e, per impostazione predefinita, possono rimuovere la protezione se ritengono non sia necessaria. I messaggi e-mail vengono crittografati prima dell'invio. Per altre informazioni, vedere [Regole di protezione di Outlook](/exchange/outlook-protection-rules-exchange-2013-help) e [Creare una regola di protezione di Outlook](/exchange/create-an-outlook-protection-rule-exchange-2013-help) nella libreria di Exchange.
 
--   **Regole del flusso di posta** che un amministratore configura per applicare automaticamente opzioni o modelli di protezione ai messaggi di posta elettronica. Queste regole sono basate su proprietà quali il mittente, il destinatario, l'oggetto e il contenuto del messaggio. Queste regole sono concettualmente analoghe a quelle di protezione, ma non consentono agli utenti di rimuovere la protezione perché quest'ultima viene impostata dal servizio Exchange anziché dal client. Dal momento che la protezione viene impostata dal servizio, non importa quale dispositivo o quale sistema operativo abbiano gli utenti. Per altre informazioni, vedere [Regole del flusso di posta (regole di trasporto) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) e [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx) per Exchange locale.
+-   **Regole del flusso di posta** che un amministratore configura per applicare automaticamente opzioni o modelli di protezione ai messaggi di posta elettronica. Queste regole sono basate su proprietà quali il mittente, il destinatario, l'oggetto e il contenuto del messaggio. Queste regole sono concettualmente analoghe a quelle di protezione, ma non consentono agli utenti di rimuovere la protezione perché quest'ultima viene impostata dal servizio Exchange anziché dal client. Dal momento che la protezione viene impostata dal servizio, non importa quale dispositivo o quale sistema operativo abbiano gli utenti. Per altre informazioni, vedere [Regole del flusso di posta (regole di trasporto) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) e [Creare una regola di protezione del trasporto](/exchange/create-a-transport-protection-rule-exchange-2013-help) per Exchange locale.
 
 -   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni, in modo da prevenire la perdita di dati nel caso di informazioni riservate o sensibili. Una delle azioni che è possibile specificare consiste nell'applicare la crittografia come protezione, specificando una delle opzioni o dei modelli di protezione. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione. Per altre informazioni, vedere [Prevenzione della perdita di dati](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) nella documentazione di Exchange Online.
 
--   **Office 365 Message Encryption** che supporta l'invio di un messaggio di posta elettronica protetto e di documenti di Office protetti come allegati a qualsiasi indirizzo di posta elettronica in un dispositivo qualunque. Per gli account utente che non usano Azure AD. Questa esperienza Web supporta i provider di identità basati su social network e un passcode monouso. Per altre informazioni, vedere [Configurare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) nella documentazione di Office 365. Per trovare altre informazioni correlate a questa configurazione, vedere [Office 365 Message Encryption](https://docs.microsoft.com/microsoft-365/compliance/ome).
+-   **Crittografia dei messaggi** che supporta l'invio di un messaggio di posta elettronica protetto e i documenti di Office protetti come allegati a qualsiasi indirizzo di posta elettronica su qualsiasi dispositivo. Per gli account utente che non usano Azure AD. Questa esperienza Web supporta i provider di identità basati su social network e un passcode monouso. Per ulteriori informazioni, vedere la pagina relativa alla [configurazione di nuove funzionalità di crittografia dei messaggi Microsoft 365 basate su Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) dalla documentazione di Microsoft 365. Per trovare informazioni aggiuntive relative a questa configurazione, vedere [Microsoft 365 crittografia del messaggio](/microsoft-365/compliance/ome).
 
 Se si usa Exchange locale, è possibile usare le funzionalità IRM con il servizio di Azure Rights Management tramite la distribuzione del connettore Azure Rights Management. Il connettore funziona come un relè tra i server locali e il servizio di Azure Rights Management.
 
@@ -72,7 +72,7 @@ Per ottenere un controllo più granulare, è possibile configurare un elenco o u
 
 È necessario inoltre che il servizio IRM sia abilitato per SharePoint. Quindi, si specificano le autorizzazioni IRM per una raccolta. Per SharePoint e OneDrive, gli utenti possono anche specificare le autorizzazioni IRM per la propria libreria OneDrive. SharePoint non usa modelli di criteri per i diritti, anche se è possibile selezionare impostazioni di configurazione di SharePoint molto simili ad alcune impostazioni che si possono specificare nei modelli.
 
-Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM distribuendo il connettore di Azure Rights Management. Il connettore funziona come un relè tra i server locali e il servizio cloud di Rights Management. Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](deploy-rms-connector.md).
+Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM distribuendo il connettore di Azure Rights Management. Il connettore funziona come un relè tra i server locali e il servizio cloud di Rights Management. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
 
 > [!NOTE]
 > L'utilizzo di IRM per SharePoint presenta alcune limitazioni:
@@ -86,11 +86,11 @@ Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM di
 Per le librerie che non sono protette con IRM, se si applica la protezione solo a un file che viene quindi caricato in SharePoint o OneDrive, le operazioni seguenti non funzionano con questo file: creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima, eDiscovery e prevenzione della perdita dei dati (DLP).
 
 > [!IMPORTANT]
-> È possibile utilizzare IRM per SharePoint in combinazione con etichette di riservatezza che applicano la protezione. Quando si utilizzano entrambe le funzionalità insieme, il comportamento cambia per i file protetti. Per altre informazioni, vedere [abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> È possibile utilizzare IRM per SharePoint in combinazione con etichette di riservatezza che applicano la protezione. Quando si utilizzano entrambe le funzionalità insieme, il comportamento cambia per i file protetti. Per altre informazioni, vedere [abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
-Quando si usa la protezione IRM per SharePoint il servizio Azure Rights Management applica restrizioni d'uso e crittografia dei dati ai documenti quando questi vengono scaricati da SharePoint, e non quando il documento viene creato per la prima volta in SharePoint o caricato nella raccolta. Per informazioni sul modo in cui i documenti vengono protetti prima del download, vedere la pagina relativa alla [crittografia dei dati in OneDrive e SharePoint](https://technet.microsoft.com/library/dn905447.aspx) dalla documentazione di SharePoint.
+Quando si usa la protezione IRM per SharePoint il servizio Azure Rights Management applica restrizioni d'uso e crittografia dei dati ai documenti quando questi vengono scaricati da SharePoint, e non quando il documento viene creato per la prima volta in SharePoint o caricato nella raccolta. Per informazioni sul modo in cui i documenti vengono protetti prima del download, vedere la pagina relativa alla [crittografia dei dati in OneDrive e SharePoint](/microsoft-365/compliance/data-encryption-in-odb-and-spo?redirectSourcePath=%252fen-us%252farticle%252f6501b5ef-6bf7-43df-b60d-f65781847d6c) dalla documentazione di SharePoint.
 
-Sebbene non sia più nuovo, il post seguente del Blog di Office 365 contiene alcune informazioni aggiuntive che possono risultare utili: novità delle [informazioni Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Sebbene non sia più nuovo, il post seguente del Blog di Microsoft 365 contiene alcune informazioni aggiuntive che possono risultare utili: novità delle [informazioni Rights Management in SharePoint](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
 Per le modifiche in arrivo, vedere [aggiornamenti alla sicurezza, all'amministrazione e alla migrazione di SharePoint](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
@@ -103,7 +103,7 @@ Se si è pronti per la configurazione di SharePoint per IRM:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se si usa Office 365, può essere interessante leggere il documento [File Protection Solutions in Office 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect) (Soluzioni di protezione dei file in Office 365), che indica le funzionalità consigliate per la protezione dei file in Office 365.
+Se si dispone di Microsoft 365, potrebbe essere interessante esaminare le [soluzioni di protezione dei file in Microsoft 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect), che fornisce le funzionalità consigliate per la protezione dei file in Microsoft 365.
 
 Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 

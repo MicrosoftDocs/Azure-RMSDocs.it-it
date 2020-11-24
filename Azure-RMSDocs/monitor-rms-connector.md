@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fec116c8bd0c8f02d57a9772bacf87a11d0966ac
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: ab20a68a2895962095bc83904851ef3a9955dd79
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136960"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568100"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
@@ -177,7 +177,7 @@ La registrazione dei dati relativi all'utilizzo consente di identificare i casi 
 
 Per ulteriori informazioni sulla registrazione dell'utilizzo, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](log-analyze-usage.md).
 
-Se occorre una registrazione più dettagliata per scopi di diagnosi, è possibile usare [DebugView](https://go.microsoft.com/fwlink/?LinkID=309277) da Windows Sysinternals. Abilitare la traccia per il connettore RMS modificando il file web.config per il sito predefinito in IIS:
+Se occorre una registrazione più dettagliata per scopi di diagnosi, è possibile usare [DebugView](/sysinternals/downloads/debugview) da Windows Sysinternals. Abilitare la traccia per il connettore RMS modificando il file web.config per il sito predefinito in IIS:
 
 1. Individuare il file web.config da **%programfiles%\Microsoft Rights Management connector\Web Service**.
 

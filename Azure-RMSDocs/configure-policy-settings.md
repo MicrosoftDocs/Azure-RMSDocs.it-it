@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3a58a256bb000b43314a098d99d76347045a475b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 8a04682a796ceb4305a98bfcbce2266a5fbd834b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048154"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568149"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "86048154"
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> Per informazioni sulla configurazione delle impostazioni dei criteri per il client Unified Labeling, vedere la documentazione relativa alla conformità del Microsoft 365. Ad esempio, informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+> Per informazioni sulla configurazione delle impostazioni dei criteri per il client Unified Labeling, vedere la documentazione relativa alla conformità del Microsoft 365. Ad esempio, [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
 Oltre al titolo della barra e alla descrizione comando di Information Protection, nei criteri di Azure Information Protection sono disponibili alcune impostazioni che è possibile configurare indipendentemente dalle etichette:
 
@@ -109,4 +109,3 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 Per vedere come alcune delle impostazioni relative ai criteri possano interagire, seguire l'esercitazione [Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro](infoprotect-settings-tutorial.md).
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).
-

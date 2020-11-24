@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788722"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568352"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore Azure Rights Management
 
@@ -187,7 +187,7 @@ Il nome del server dell'URL del connettore può essere qualsiasi nome incluso in
 > [!IMPORTANT]
 > È consigliabile non modificare questo nome dopo aver configurato i server Exchange o SharePoint per l'utilizzo del connettore, poiché altrimenti sarà necessario eliminare tali server da tutte le configurazioni IRM e configurarli nuovamente.
 
-Dopo aver creato il nome nel DNS e averlo configurato per un indirizzo IP, configurare il bilanciamento del carico per tale indirizzo in modo da indirizzare il traffico ai server del connettore. A tale scopo, è possibile usare qualsiasi servizio di bilanciamento del carico basato su IP, inclusa la funzionalità di bilanciamento del carico di rete (NLB) in Windows Server. Per altre informazioni, vedere la [guida di distribuzione relativa al bilanciamento del carico](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Dopo aver creato il nome nel DNS e averlo configurato per un indirizzo IP, configurare il bilanciamento del carico per tale indirizzo in modo da indirizzare il traffico ai server del connettore. A tale scopo, è possibile usare qualsiasi servizio di bilanciamento del carico basato su IP, inclusa la funzionalità di bilanciamento del carico di rete (NLB) in Windows Server. Per altre informazioni, vedere la [guida di distribuzione relativa al bilanciamento del carico](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10)).
 
 Usare le impostazioni seguenti per configurare il cluster NLB:
 
@@ -215,8 +215,8 @@ Se si usa l'opzione HTTPS, assicurarsi che tutti i server che eseguono il connet
 > Per richiedere e installare un certificato di autenticazione server e per associare quest'ultimo al sito Web predefinito in IIS, usare le informazioni e le risorse indicate di seguito:
 >
 > - Se per distribuire i certificati di autenticazione server si usano Servizi certificati Active Directory e un'autorità di certificazione (CA) globale (enterprise), è possibile duplicare e quindi usare il modello di certificato del server Web. Questo modello di certificato usa **Fornito nella richiesta** per il nome soggetto del certificato. Questo significa che, quando si richiede il certificato, è possibile fornire il nome di dominio completo del nome del connettore RMS come nome soggetto del certificato o come nome alternativo del soggetto.
-> -   Se si usa una CA autonoma o si acquista il certificato da un'altra società, vedere la sezione relativa alla [configurazione dei certificati del server Internet (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) nella raccolta di documentazione relativa al [Server Web (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) su TechNet.
-> - Per configurare IIS per l'uso del certificato, vedere [Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) (Aggiungere un'associazione a un sito - IIS 7) nella raccolta di documentazione [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) (Server Web - IIS) su TechNet.
+> -   Se si usa una CA autonoma o si acquista il certificato da un'altra società, vedere la sezione relativa alla [configurazione dei certificati del server Internet (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731977(v=ws.10)) nella raccolta di documentazione relativa al [Server Web (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) su TechNet.
+> - Per configurare IIS per l'uso del certificato, vedere [Add a Binding to a Site (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731692(v=ws.10)) (Aggiungere un'associazione a un sito - IIS 7) nella raccolta di documentazione [Web Server (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) (Server Web - IIS) su TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configurazione del connettore RMS per un server proxy web
 Se i server del connettore sono installati in una rete che non dispone di connettività Internet diretta e richiede la configurazione manuale di un server proxy Web per l'accesso a Internet in uscita, è necessario configurare il registro di sistema in questi server per il connettore RMS.
@@ -255,4 +255,3 @@ Se non sono stati già scaricati questi file, è possibile farlo dall'[Area down
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo l'installazione e la configurazione del connettore RMS, è possibile configurare i server locali per l'uso del connettore stesso. Passare a [Configurazione dei server per il connettore di Azure Rights Management](configure-servers-rms-connector.md).
-

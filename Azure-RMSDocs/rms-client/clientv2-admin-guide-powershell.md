@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25851b966b5c28baab003bb949ecf9144cacf66a
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 2133259809b87a66fe5e63e10e1273a0412208b7
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447196"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568053"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: uso di PowerShell con il client unificato di Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "89447196"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Quando si installa il client Azure Information Protection Unified Labeling, i comandi di PowerShell vengono installati automaticamente. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
@@ -37,17 +37,20 @@ I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtec
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Per una cartella condivisa, applica un'etichetta specificata a tutti i file privi di etichetta.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
 
-> [!TIP]
-> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> Criteri del computer **locale**  >  **Configurazione computer**  >  **Modelli amministrativi**  >  **Tutte le impostazioni**  >  **Abilita percorsi lunghi Win32** 
-> 
-> Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
->
-> Per altre informazioni, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) della documentazione per sviluppatori di Windows 10.
-
 Questo modulo viene installato in **\Programmi (x86)\Microsoft Azure Information Protection** e aggiunge questa cartella alla variabile di sistema **PSModulePath**. Il file DLL per questo modulo si chiama **AIP.dll**.
 
 > [!IMPORTANT]
 > Il modulo AzureInformationProtection non supporta la configurazione delle impostazioni avanzate per le etichette o i criteri di etichetta. Per queste impostazioni, è necessario Office 365 Security & Compliance Center PowerShell. Per ulteriori informazioni, vedere [Custom Configurations for the Azure Information Protection Unified Labeling client](clientv2-admin-guide-customizations.md).
+> [!NOTE]
+> Se è stata eseguita la migrazione da Azure RMS, si noti che i cmdlet correlati a RMS sono stati deprecati per l'uso in un'etichetta unificata. Alcune di queste sono state sostituite con nuovi cmdlet per l'etichettatura unificata. Per ulteriori informazioni, vedere la pagina relativa [al mapping dei cmdlet da RMS a Unified Labeling](#rms-to-unified-labeling-cmdlet-mapping).
+>
+
+> [!TIP]
+> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) seguente disponibile a partire da Windows 10 versione 1607:<br /> Criteri del computer **locale**  >  **Configurazione computer**  >  **Modelli amministrativi**  >  **Tutte le impostazioni**  >  **Abilita percorsi lunghi Win32** 
+> 
+> Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
+>
+> Per altre informazioni, vedere la sezione [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) della documentazione per sviluppatori di Windows 10.
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Prerequisiti per l'uso del modulo AzureInformationProtection
 
@@ -69,6 +72,25 @@ Gli scenari tipici per la rimozione della protezione dai file per altri utenti i
 
 Per poter rimuovere la protezione dai file, è necessario avere diritti di utilizzo per Rights Management oppure un account utente con privilegi avanzati. Per l'individuazione dei dati o il ripristino dei dati, viene in genere usata la funzionalità per utenti con privilegi avanzati. Per abilitare questa funzionalità e configurare l'account come utente con privilegi avanzati, vedere [configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](../configure-super-users.md).
 
+## <a name="rms-to-unified-labeling-cmdlet-mapping"></a>Mapping dei cmdlet da RMS a Unified Labeling
+
+Nella tabella seguente viene eseguito il mapping dei cmdlet correlati a RMS con i cmdlet aggiornati utilizzati per l'assegnazione di etichette unificata.
+
+Ad esempio, se è stato usato **New-RMSProtectionLicense** con la protezione RMS ed è stata eseguita la migrazione all'etichettatura unificata, usare invece **New-AIPCustomPermissions** .
+
+|Cmdlet di RMS  |Cmdlet Unified Labeling  |
+|---------|---------|
+|[Get-Rmsfilestatus successivamente](/powershell/module/azureinformationprotection/get-rmsfilestatus)     |  [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)        |
+|[Get-RMSServer](/powershell/module/azureinformationprotection/get-rmsserver)     |  Non pertinente per l'etichettatura unificata.      |
+|[Get-RMSServerAuthentication](/powershell/module/azureinformationprotection/get-rmsserverauthentication)      |   [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Clear-RMSAuthentication](/powershell/module/azureinformationprotection/clear-rmsauthentication)     | [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication)     |  [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)      |
+|[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Non pertinente per l'etichettatura unificata  |
+|[New-RMSProtectionLicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/new-aipcustompermissions)e [set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)con il parametro **CustomPermissions**      |
+|[Proteggi-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), con il parametro **RemoveProtection** |
+| | |
+
+
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection
 
 È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication).
@@ -82,7 +104,7 @@ Il computer che esegue il cmdlet AIPAuthentication Scarica i criteri di etichett
 > [!NOTE]
 > Se si usano criteri di etichetta per utenti diversi, potrebbe essere necessario creare nuovi criteri di etichetta che pubblichino tutte le etichette e pubblicare i criteri solo in questo account utente delegato.
 
-Quando il token in Azure AD scade, è necessario eseguire nuovamente il cmdlet per acquisire un nuovo token. È possibile configurare il token di accesso in Azure AD per un anno, due anni o per non scadere mai. I parametri per set-AIPAuthentication usano i valori di un processo di registrazione delle app in Azure AD, come descritto nella sezione successiva.
+Quando il token in Azure AD scade, è necessario eseguire nuovamente il cmdlet per acquisire un nuovo token. È possibile configurare il token di accesso in Azure AD per un anno, due anni o per non scadere mai. I parametri per Set-AIPAuthentication usano i valori di un processo di registrazione delle app in Azure AD, come descritto nella sezione successiva.
 
 Per l'account utente delegato:
 
@@ -97,7 +119,7 @@ Per l'account utente delegato:
 > [!IMPORTANT]
 > Queste istruzioni riguardano la versione di disponibilità generale corrente del client Unified Labeling e si applicano anche alla versione di disponibilità generale dello scanner per questo client.
 
-Set-AIPAuthentication richiede una registrazione dell'app per i parametri *AppID* e *AppSecret* . Se è stato eseguito l'aggiornamento da una versione precedente del client e è stata creata una registrazione dell'app per i parametri *webappid* e *NativeAppId* precedenti, questi non funzioneranno con il client di etichettatura unificata. È necessario creare una nuova registrazione per l'app come segue:
+Set-AIPAuthentication richiede la registrazione di un'app per i parametri *AppID* e *AppSecret* . Se è stato eseguito l'aggiornamento da una versione precedente del client e è stata creata una registrazione dell'app per i parametri *webappid* e *NativeAppId* precedenti, questi non funzioneranno con il client di etichettatura unificata. È necessario creare una nuova registrazione per l'app come segue:
 
 1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
 
@@ -143,7 +165,7 @@ Set-AIPAuthentication richiede una registrazione dell'app per i parametri *AppID
 
 14. Tornare al riquadro **autorizzazioni AIP-DelegatedUser-API** , selezionare **+ Aggiungi nuovamente un'autorizzazione** .
 
-15. Nel riquadro **richieste AIP autorizzazioni** selezionare **API utilizzate dall'organizzazione**e cercare **Microsoft Information Protection Sync Service**.
+15. Nel riquadro **richieste AIP autorizzazioni** selezionare **API utilizzate dall'organizzazione** e cercare **Microsoft Information Protection Sync Service**.
 
 16. Nel riquadro **autorizzazioni API richiesta** selezionare **Autorizzazioni applicazione**.
 
@@ -159,16 +181,16 @@ Set-AIPAuthentication richiede una registrazione dell'app per i parametri *AppID
     
     ![Autorizzazioni API per l'app registrata in Azure AD](../media/api-permissions-app.png)
 
-A questo punto è stata completata la registrazione di questa app con un segreto, si è pronti per eseguire [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *AppID*e *AppSecret*. Inoltre, sarà necessario l'ID tenant. 
+A questo punto è stata completata la registrazione di questa app con un segreto, si è pronti per eseguire [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *AppID* e *AppSecret*. Inoltre, sarà necessario l'ID tenant. 
 
 > [!TIP]
->È possibile copiare rapidamente l'ID tenant usando portale di Azure: **Azure Active Directory**  >  **Gestisci**  >  **Properties**  >  **ID directory**proprietà.
+>È possibile copiare rapidamente l'ID tenant usando portale di Azure: **Azure Active Directory**  >  **Gestisci**  >  **Properties**  >  **ID directory** proprietà.
 
 1. Aprire Windows PowerShell con l' **opzione Esegui come amministratore**. 
 
 2. Nella sessione di PowerShell creare una variabile per archiviare le credenziali dell'account utente di Windows che eseguirà in modo non interattivo. Ad esempio, se è stato creato un account del servizio per lo scanner:
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential "CONTOSO\srv-scanner"
     ```
 
@@ -176,7 +198,7 @@ A questo punto è stata completata la registrazione di questa app con un segreto
 
 2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Specificare anche i valori di registrazione dell'app, l'ID tenant e il nome dell'account utente delegato in Azure AD. Ad esempio:
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
     ```
 
@@ -186,7 +208,7 @@ A questo punto è stata completata la registrazione di questa app con un segreto
 ## <a name="next-steps"></a>Passaggi successivi
 Per la guida del cmdlet quando ci si trova in una sessione di PowerShell, digitare `Get-Help <cmdlet name> -online` . Ad esempio: 
 
-```ps
+```PowerShell
 Get-Help Set-AIPFileLabel -online
 ```
 

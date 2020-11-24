@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2e727e438f0baf5cb61a59b699da811e36e48d4f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: da5c20824af73ed28a602cffb79c3e4167db5bf7
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802080"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568113"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Guida dell'utente: classificare e proteggere con il client di Azure Information Protection
 
@@ -39,7 +39,7 @@ Tuttavia, è anche possibile classificare e proteggere i file tramite **Esplora 
 Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano i seguenti elementi per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima e eDiscovery.
 
 > [!TIP]
-> Chiedere all'amministratore di eseguire la migrazione delle etichette a etichette di riservatezza unificate supportate per queste posizioni quando [SharePoint è abilitato per le etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> Chiedere all'amministratore di eseguire la migrazione delle etichette a etichette di riservatezza unificate supportate per queste posizioni quando [SharePoint è abilitato per le etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
 
@@ -88,7 +88,7 @@ Motivi possibili:
 
 - Se l'etichetta mancante serve per applicare la protezione, l'edizione di Office in uso potrebbe non supportare l'applicazione della protezione di Rights Management. Per verificare, fare clic su **Proteggi**  >  **Guida e commenti**. Controllare se nella sezione **Stato del client** è presente il messaggio **Questo client non ha la licenza per Office Professional Plus.** 
     
-    Office Professional Plus non è necessario se sono disponibili app di Office 365 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
+    Office Professional Plus non è necessario se si dispone di app di Office da Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente viene assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365).
 
 - L'etichetta potrebbe essere in un criterio con ambito che non include l'account in uso. Rivolgersi all'help desk o all'amministratore.
 
@@ -195,4 +195,3 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 Per istruzioni sulla configurazione per abilitare l'impostazione dei criteri **Make the custom permissions option available to users** (Rendi l'opzione delle autorizzazioni personalizzate disponibile per gli utenti), vedere [Come configurare le impostazioni dei criteri per Azure Information Protection](../configure-policy-settings.md).
 
 Altre istruzioni sulla configurazione: [Configurazione dei criteri di Azure Information Protection](../configure-policy.md).
-

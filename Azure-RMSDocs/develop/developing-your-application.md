@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 841669b3db3e86e2ea6f1860a9d8e9d915c4d28d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 2fc3fecd33d6e461156e8c608eae91dee17dff2b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564244"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568322"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
@@ -36,9 +36,9 @@ La configurazione di Azure per questa app richiede la creazione di un ID tenant,
 
 ### <a name="azure-ad-tenant-configuration"></a>Configurazione del tenant di Azure AD
 
-Per configurare l'ambiente di Azure AD per Azure Information Protection, seguire le istruzioni riportate in [attivazione del servizio di protezione da Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+Per configurare l'ambiente di Azure AD per Azure Information Protection, seguire le istruzioni riportate in [attivazione del servizio di protezione da Azure Information Protection](/information-protection/deploy-use/activate-service).
 
-Una volta attivato il servizio saranno necessari i componenti di PowerShell per i passaggi successivi. Per eseguire questa operazione, seguire la procedura di [amministrazione della protezione da Azure Information Protection usando PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) .
+Una volta attivato il servizio saranno necessari i componenti di PowerShell per i passaggi successivi. Per eseguire questa operazione, seguire la procedura di [amministrazione della protezione da Azure Information Protection usando PowerShell](/information-protection/deploy-use/administer-powershell) .
 
 ### <a name="getting-your-tenant-id"></a>Ottenere un ID tenant
 

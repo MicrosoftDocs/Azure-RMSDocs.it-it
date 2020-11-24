@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 568ed4dee01c59f8808442a4499b8a858f9ebcf5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971966"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568076"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Configurare un'app per l'autenticazione ADAL
 
@@ -29,8 +29,8 @@ Questo argomento illustra i passaggi per configurare un'app per l'autenticazione
 
 È necessario quanto segue:
 
-- Una [sottoscrizione Microsoft Azure](https://azure.microsoft.com/) (è sufficiente una versione di prova gratuita). Per altre informazioni, vedere [How users sign up for RMS for individuals](../rms-for-individuals-user-sign-up.md) (Come eseguire l'iscrizione a RMS per utenti singoli).
-- Un abbonamento a Microsoft Azure Rights Management (è sufficiente un account [RMS per utenti singoli](https://technet.microsoft.com/library/dn592127.aspx) gratuito).
+- Una [sottoscrizione Microsoft Azure](https://azure.microsoft.com/) (è sufficiente una versione di prova gratuita). Per altre informazioni, vedere [How users sign up for RMS for individuals](../rms-for-individuals.md) (Come eseguire l'iscrizione a RMS per utenti singoli).
+- Un abbonamento a Microsoft Azure Rights Management (è sufficiente un account [RMS per utenti singoli](../rms-for-individuals.md) gratuito).
 
 > [!NOTE]
 > Chiedere all'amministratore IT se si dispone di un abbonamento a Microsoft Azure Rights Management e richiedere all'amministratore IT di eseguire i passaggi descritti di seguito. Se l'organizzazione non dispone di un abbonamento, è necessario che l'amministratore IT crei un nuovo abbonamento. Inoltre, l'amministratore IT deve sottoscrivere un *account aziendale o dell'Istituto di istruzione*, anziché un *account Microsoft* (ad esempio, Hotmail).

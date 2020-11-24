@@ -1,17 +1,17 @@
 ---
 title: Classe ProtectionHandler::P ublishingSettings
 description: Documenta la classe protectionhandler::p ublishingsettings di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: fc1de565e103b840c1190b397c247caca515d5bd
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c5edcb9eca5e14d0f0f611f32e2f91d9ed2fcb25
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764427"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567115"
 ---
 # <a name="class-protectionhandlerpublishingsettings"></a>Classe ProtectionHandler::P ublishingSettings 
 Impostazioni usate per creare un ProtectionHandler per proteggere il nuovo contenuto.
@@ -19,8 +19,8 @@ Impostazioni usate per creare un ProtectionHandler per proteggere il nuovo conte
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public PublishingSettings (const std::\<shared_ptr\> ProtectionDescriptor& ProtectionDescriptor)  |  Costruttore ProtectionHandler:: Settings per la creazione di un nuovo motore.
-public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  | _Non ancora documentato._
+public PublishingSettings (const std:: shared_ptr \<ProtectionDescriptor\>& protectionDescriptor)  |  Costruttore ProtectionHandler:: Settings per la creazione di un nuovo motore.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Non ancora documentato._
 public bool GetIsAuditedExtractionAllowed () const  |  Ottiene un valore che indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto.
 public void SetIsAuditedExtractionAllowed (bool isAuditedExtractionAllowed)  |  Imposta un valore che indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto.
 public bool GetIsDeprecatedAlgorithmPreferred () const  |  Ottiene un valore che indica se per la compatibilità con le versioni precedenti è preferibile l'algoritmo di crittografia (BCE) deprecato.
@@ -43,7 +43,7 @@ Parametri
 
   
 ### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getisauditedextractionallowed-function"></a>GetIsAuditedExtractionAllowed (funzione)

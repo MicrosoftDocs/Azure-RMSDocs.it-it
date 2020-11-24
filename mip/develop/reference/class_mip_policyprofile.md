@@ -1,17 +1,17 @@
 ---
 title: Classe PolicyProfile
 description: 'Documenta la classe policyprofile:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9f70b8bfa1eee6e994b67c668b5144d6cb74ecad
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0cd8c300aa2c6edb0e06c6cd8306c48d2cb8dafa
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760899"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567375"
 ---
 # <a name="class-policyprofile"></a>Classe PolicyProfile 
 PolicyProfile è la classe radice per l'uso delle operazioni di Microsoft Information Protection. Un'applicazione tipica avrà bisogno di un solo PolicyProfile, ma se necessario può creare più profili.
@@ -20,15 +20,15 @@ PolicyProfile è la classe radice per l'uso delle operazioni di Microsoft Inform
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ottiene le impostazioni configurate nel profilo.
-public std:: shared_ptr\<AsyncControl\> ListEnginesAsync (const std::\<shared_ptr\> void& context)  |  Avvia l'operazione di elenco motori.
-public std:: Vector\<std:: String\> ListEngines ()  |  Elenco dei motori.
-public std:: shared_ptr\<AsyncControl\> UnloadEngineAsync (const std:: String& ID, const std:\<:\> shared_ptr void& context)  |  Avvia lo scaricamento del motore dei criteri con l'ID specificato.
+public std:: shared_ptr \<AsyncControl\> ListEnginesAsync (const std:: shared_ptr \<void\>& context)  |  Avvia l'operazione di elenco motori.
+public std:: Vector \<std::string\> ListEngines ()  |  Elenco dei motori.
+public std:: shared_ptr \<AsyncControl\> UnloadEngineAsync (const std:: string& ID, const std:: shared_ptr \<void\>& context)  |  Avvia lo scaricamento del motore dei criteri con l'ID specificato.
 public void UnloadEngine (const std:: String& ID)  |  Avvia lo scaricamento del motore dei criteri con l'ID specificato.
-public std:: shared_ptr\<AsyncControl\> AddEngineAsync (const PolicyEngine:: Settings& Settings, const std:\<:\> shared_ptr void& context)  |  Avvia l'aggiunta di un nuovo motore dei criteri al profilo.
-public std:: shared_ptr\<PolicyEngine\> AddEngine (const PolicyEngine:: Settings& Settings, const std:\<:\> shared_ptr void& context)  |  Aggiungere un nuovo motore di criteri al profilo.
-public std:: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std:: String& ID, const std:\<:\> shared_ptr void& context)  |  Avvia l'eliminazione del motore dei criteri con l'ID specificato. Tutti i dati per il profilo specificato verranno eliminati.
+public std:: shared_ptr \<AsyncControl\> AddEngineAsync (const PolicyEngine:: settings& Settings, const std:: shared_ptr \<void\>& context)  |  Avvia l'aggiunta di un nuovo motore dei criteri al profilo.
+public std:: shared_ptr \<PolicyEngine\> AddEngine (const PolicyEngine:: settings& Settings, const std:: shared_ptr \<void\>& context)  |  Aggiungere un nuovo motore di criteri al profilo.
+public std:: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std:: string& ID, const std:: shared_ptr \<void\>& context)  |  Avvia l'eliminazione del motore dei criteri con l'ID specificato. Tutti i dati per il profilo specificato verranno eliminati.
 public void DeleteEngine(const std::string& engineId)  |  Eliminare il motore dei criteri con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
-public void AcquireAuthToken (Cloud Cloud, const std::\<shared_ptr\> AuthDelegate& AuthDelegate) const  |  Attiva un callback di autenticazione.
+public void AcquireAuthToken (Cloud Cloud, const std:: shared_ptr \<AuthDelegate\>& authDelegate) const  |  Attiva un callback di autenticazione.
   
 ## <a name="members"></a>Members
   

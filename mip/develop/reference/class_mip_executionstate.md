@@ -1,17 +1,17 @@
 ---
 title: Classe ExecutionState
 description: 'Documenta la classe ExecutionState:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ff22cebbcb4a83015248c8f6990f04dfad4538e0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: f73c3e366f1be0647d2c9a7de78f37b6a9a95549
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763308"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566992"
 ---
 # <a name="class-executionstate"></a>Classe ExecutionState 
 Interfaccia per tutti gli stati necessari per eseguire il motore.
@@ -20,19 +20,19 @@ I client dovrebbero chiamare i metodi solo per ottenere lo stato necessario. Di 
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<label\> GetNewLabel () const  |  Ottiene l'ID dell'etichetta di riservatezza da applicare al documento.
+public std:: shared_ptr \<Label\> GetNewLabel () const  |  Ottiene l'ID dell'etichetta di riservatezza da applicare al documento.
 public std::string GetContentIdentifier() const  |  Ottiene la descrizione del contenuto che descrive il documento. esempio per un file: [percorso\nomefile] esempio per un messaggio di posta elettronica: [Subject: sender].
 public virtual DataState GetDataState () const  |  Ottiene lo stato del contenuto mentre l'applicazione interagisce con esso.
-public std::p aria\<bool, std:: String\> IsDowngradeJustified () const  |  L'implementazione dovrebbe restituire un valore che indica se è stata fornita una giustificazione per effettuare il downgrade di un'etichetta esistente.
+STD pubblico::p aria \<bool, std::string\> IsDowngradeJustified () const  |  L'implementazione dovrebbe restituire un valore che indica se è stata fornita una giustificazione per effettuare il downgrade di un'etichetta esistente.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ottiene il metodo di assegnazione della nuova etichetta.
-public virtual std:: Vector\<std::p Air\<std:: String, std:: String\> \> GetNewLabelExtendedProperties () const  |  Restituisce le proprietà estese della nuova etichetta.
-public std:: Vector\<MetadataEntry\> GetContentMetadata (const std::\<vector std::\> String& names, const std\<:: Vector STD\> :: String& namePrefixes) const  |  Ottiene gli elementi dei metadati dal contenuto.
-public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  Ottiene il descrittore di protezione.
+public virtual std:: Vector \<std::pair\<std::string, std::string\> \> GetNewLabelExtendedProperties () const  |  Restituisce le proprietà estese della nuova etichetta.
+public std:: Vector \<MetadataEntry\> GetContentMetadata (const std:: vector \<std::string\>& names, const std:: Vector \<std::string\>& namePrefixes) const  |  Ottiene gli elementi dei metadati dal contenuto.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Ottiene il descrittore di protezione.
 public ContentFormat GetContentFormat() const  |  Ottiene il formato del contenuto.
-public virtual unsigned int GetContentMetadataVersion () const  |  Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.
+public virtual MetadataVersion GetContentMetadataVersion () const  |  Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.
 public ActionType GetSupportedActions() const  |  Ottiene un'enumerazione mascherata che descrive tutti i tipi di azioni supportati.
-public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std::\<vector std::\<shared_ptr\> \> ClassificationRequest &) const  |  Restituisce una mappa dei risultati della classificazione.
-public virtual std:: Map\<std:: String, std:: String\> GetAuditMetadata () const  |  Restituisce una mappa delle coppie chiave-valore di controllo specifiche dell'applicazione.
+public virtual std:: shared_ptr \<ClassificationResults\> GetClassificationResults (const std:: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Restituisce una mappa dei risultati della classificazione.
+public virtual std:: Map \<std::string, std::string\> GetAuditMetadata () const  |  Restituisce una mappa delle coppie chiave-valore di controllo specifiche dell'applicazione.
   
 ## <a name="members"></a>Members
   

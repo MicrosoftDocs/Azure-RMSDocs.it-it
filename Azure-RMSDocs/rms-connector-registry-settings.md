@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 536d3662c5e3e7a90a8da2f6b9d97f522d1f4111
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: fb2a081b03ae8b92fa58073b37336066f087da4c
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136924"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567716"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Impostazioni del Registro di sistema per il connettore Rights Management
 
@@ -54,7 +54,7 @@ Istruzioni per l'uso delle impostazioni:
 
 ## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Impostazioni del Registro di sistema per Exchange 2016 o Exchange 2013
 
-**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE \Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
 **Tipo:** Reg_SZ
 
@@ -105,7 +105,7 @@ Istruzioni per l'uso delle impostazioni:
 
 ## <a name="exchange-2010-registry-settings"></a>Impostazioni del Registro di sistema per Exchange 2010
 
-**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE \Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
 **Tipo:** Reg_SZ
 
@@ -201,7 +201,7 @@ Istruzioni per l'uso delle impostazioni:
 
 ## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Impostazioni del Registro di sistema per i file server e la funzionalità Infrastruttura di classificazione file
 
-**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
 **Tipo:** Reg_SZ
 

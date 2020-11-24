@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a51376fc2d6114f7d23ec937b4d8ea1238d1655
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 146fa9442aa5fcb05cebab27f1d4104bd33328f0
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953236"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568472"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -40,12 +40,11 @@ Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Inform
 
 Ogni versione con disponibilità generale del client di Azure Information Protection è supportata per un massimo di sei mesi dopo il rilascio della versione con disponibilità generale successiva. Fatta eccezione per questa sezione, nella documentazione non sono incluse informazioni sulle versioni non supportate del client. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
 
-Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma è possibile usare la versione di anteprima più recente per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione disponibile a livello generale. Non sono supportate le versioni di anteprima non aggiornate.
-
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versioni di disponibilità generale non più supportate:
 
-|Versione client |Data di rilascio|
+|Versione client|Data di rilascio|
 |--------------|-------------|
+|1.54.33.0 | 23/10/2019|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|27/11/2018|
@@ -64,11 +63,13 @@ Il formato della data usato in questa pagina è *mese/giorno/anno*.
 
 A partire da 6/2/2019, il servizio di assegnazione di etichette per Azure Information Protection richiede connessioni che usano TLS 1,2.
 
-Tutte le versioni client di 1.4.21.0 rilasciate 03/15/2017 supportano TLS 1,2. Le versioni client **1.3.155.2**, **1.2.4.0**e **1.1.23.0** non usano TLS 1,2 e pertanto non possono più scaricare i criteri di Azure Information Protection.
+Tutte le versioni client di 1.4.21.0 rilasciate 03/15/2017 supportano TLS 1,2. Le versioni client **1.3.155.2**, **1.2.4.0** e **1.1.23.0** non usano TLS 1,2 e pertanto non possono più scaricare i criteri di Azure Information Protection.
 
 ### <a name="release-history"></a>Cronologia delle versioni
 
 Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima.
+
+Si noti che Azure Information Protection funzionalità sono attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
 
 > [!NOTE]
 > Dato che le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, è consigliabile controllare se tale problema è stato risolto con la versione disponibile a livello generale più recente. Se il problema persiste, controllare la versione di anteprima corrente (se disponibile).
@@ -77,7 +78,7 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 
 ## <a name="version-154590"></a>Versione 1.54.59.0
 
-**Rilasciata**: 12/02/2020
+**Rilasciata**: 02/12/2020
 
 Questa versione include solo correzioni. 
 
@@ -90,16 +91,6 @@ Questa versione include solo correzioni.
 - Problemi relativi alla stabilità dei client quando si lavora con i file PDF protetti vengono risolti. 
 
 - Le etichette di protezione vengono ora rimosse come previsto se l'etichetta viene eliminata nel messaggio di posta elettronica durante il processo di creazione della posta elettronica. 
-
-## <a name="version-154330"></a>Versione 1.54.33.0
-
-**Rilasciata**: 10/23/2019
-
-Supportato tramite 08/12/2020
-
-Questa versione include MSIPC versione 1.0.4008.0813 del client RMS.
-
-Questa versione include correzioni generali per la stabilità e le prestazioni.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

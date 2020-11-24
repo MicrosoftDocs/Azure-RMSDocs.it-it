@@ -14,29 +14,29 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 883dc9375e3e862726dd4f0ccf55985b3c8ddd61
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6aa1e633096a332b0071c721c0e96714fdd2d625
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792804"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568065"
 ---
 # <a name="api-sdk-42-reference"></a>Informazioni di riferimento per API SDK 4.2
 
 Azure Information Protection SDK 4.2 supporta vari sistemi operativi. Per altre informazioni sulle specifiche, vedere [Novità](release-notes.md).
 
 ### <a name="apple"></a>Apple
-- [Informazioni di riferimento sulle API di iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx): informazioni di riferimento sulle API per i sistemi operativi Apple iOS e OS X.
+- [Informazioni di riferimento sulle API di iOS/OS X](/previous-versions/windows/desktop/msipcthin2/ios): informazioni di riferimento sulle API per i sistemi operativi Apple iOS e OS X.
 
 ### <a name="google"></a>Google
-- [Spazi dei nomi Android](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Spazi dei nomi Android](/previous-versions/windows/desktop/msipcthin2/android)
 
 ### <a name="linux"></a>Linux
 - [Informazioni di riferimento sulle API di Linux](linux-c-api-reference.md): le informazioni di riferimento sulle API per il supporto della versione Linux del sistema operativo sono ospitate in Github - [RMS SDK per C++](https://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 ### <a name="microsoft"></a>Microsoft
-- [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/dn891914.aspx): informazioni di riferimento sulle API per gli SDK delle applicazioni di Windows Phone e Windows Store.
+- [Informazioni di riferimento sulle API di Windows](/previous-versions/windows/desktop/msipcthin2/winrt): informazioni di riferimento sulle API per gli SDK delle applicazioni di Windows Phone e Windows Store.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-* [Introduzione](get-started.md)
+* [Operazioni preliminari](get-started.md)

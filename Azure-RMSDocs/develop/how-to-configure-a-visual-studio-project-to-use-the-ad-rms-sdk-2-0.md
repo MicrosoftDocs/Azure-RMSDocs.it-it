@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9fd65730baf1fefad6dd4e39341dab1260b51dd0
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792417"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567470"
 ---
 # <a name="configure-visual-studio"></a>Configurare Visual Studio
 
@@ -31,7 +31,7 @@ Questo argomento contiene le istruzioni di configurazione di un progetto di Visu
 
 **Istruzioni**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Passaggio 1: configurare un progetto di Visual Studio per l'uso di RMS SDK 2,1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Passaggio 1: Configurare un progetto di Visual Studio per usare RMS SDK 2.1
 
 Queste istruzioni sono specifiche per Microsoft Visual Studio 2010. Se si utilizza una versione diversa di Microsoft Visual Studio, le finestre di dialogo delle impostazioni possono apparire leggermente diverse.
 

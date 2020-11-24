@@ -1,17 +1,17 @@
 ---
 title: Classe PolicyHandler
 description: 'Documenta la classe PolicyHandler:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: c46b72f3a040204b4485da14f00f38ca69fa8222
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: b70643c9db84cef329b64e515bef5c7c47801718
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760946"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567380"
 ---
 # <a name="class-policyhandler"></a>Classe PolicyHandler 
 Questa classe fornisce un'interfaccia per tutte le funzioni del gestore dei criteri in un file.
@@ -19,8 +19,8 @@ Questa classe fornisce un'interfaccia per tutte le funzioni del gestore dei crit
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (const ExecutionState& state)  |  Ottiene l'etichetta di riservatezza dal contenuto esistente.
-public std:: Vector\<std:: shared_ptr\<Action\> \> ComputeActions (const ExecutionState& state)  |  Esegue le regole nel gestore in base allo stato specificato e restituisce l'elenco di azioni da eseguire.
+public std::shared_ptr\<ContentLabel\> GetSensitivityLabel(const ExecutionState& state)  |  Ottiene l'etichetta di riservatezza dal contenuto esistente.
+public std:: Vector \<std::shared_ptr\<Action\> \> ComputeActions (const ExecutionState& state)  |  Esegue le regole nel gestore in base allo stato specificato e restituisce l'elenco di azioni da eseguire.
 public void NotifyCommittedActions(const ExecutionState& state)  |  Viene chiamato dopo che sono state applicate le operazioni calcolate ed è stato eseguito il commit dei dati su disco.
   
 ## <a name="members"></a>Members

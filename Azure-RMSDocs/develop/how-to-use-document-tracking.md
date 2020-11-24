@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c29dd3c364cdc1df506494819e5d0b5abe1f5454
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: dfcb4c616be2f5891b242a918a06abf2708c12cc
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068492"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568197"
 ---
 # <a name="how-to-use-document-tracking"></a>Procedura: Usare il rilevamento dei documenti
 
@@ -36,22 +36,22 @@ Dal punto di vista operativo, solo le proprietà relative al **nome contenuto** 
 La sequenza di passaggi da usare per configurare il rilevamento dei documenti per un dato contenuto è la seguente:
 
 - Creare un oggetto **metadati di licenza** e impostare il **nome contenuto** e il **tipo di notifica**. Queste sono le uniche proprietà necessarie.
-  - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) per Android
-  -  [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) per iOS
+  - [LicenseMetadata](/previous-versions/windows/desktop/msipcthin2/licensemetadata-interface-java) per Android
+  -  [MSLicenseMetadata](/previous-versions/windows/desktop/msipcthin2/mslicensemetadata-class-objc) per iOS
 
 Scegliere il tipo di criterio: modello o ad hoc:
 - Per il rilevamento dei documenti basato su modello, creare un oggetto **criteri utente** passando i metadati di licenza come parametro.
-  - [UserPolicy.create](https://msdn.microsoft.com/library/dn790887.aspx) per Android
-  - [MSUserPolicy.userPolicyWithTemplateDescriptor](https://msdn.microsoft.com/library/dn790808.aspx) per iOS
+  - [UserPolicy.create](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) per Android
+  - [MSUserPolicy.userPolicyWithTemplateDescriptor](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-templatedescriptor-property-objc) per iOS
 
 - Per il rilevamento dei documenti su base ad hoc, impostare la proprietà **metadati di licenza** sull’oggetto **descrittore criteri**.
-  - [PolicyDescriptor.setLicenseMetadata](https://msdn.microsoft.com/library/mt573698.aspx) per Android
-  - [MSPolicyDescriptor.licenseMetadata](https://msdn.microsoft.com/library/mt573693.aspx) per iOS
+  - [PolicyDescriptor.setLicenseMetadata](/previous-versions/windows/desktop/msipcthin2/policydescriptor-setlicensemetadata-java) per Android
+  - [MSPolicyDescriptor.licenseMetadata](/previous-versions/windows/desktop/msipcthin2/mspolicydescriptor-licensemetadata-property-objc) per iOS
 
-    **Nota**  È possibile accedere direttamente all’oggetto metadati di licenza solo durante il processo di configurazione del rilevamento dei documenti per i criteri utente specificati. Dopo la creazione dell'oggetto criteri utente, i metadati di licenza associati non sono accessibili, ad esempio la modifica dei valori dei metadati di licenza non produce alcun effetto.
+    **Nota**    L'oggetto metadati di licenza è direttamente accessibile solo durante il processo di configurazione del rilevamento dei documenti per i criteri utente specificati. Dopo la creazione dell'oggetto criteri utente, i metadati di licenza associati non sono accessibili, ad esempio la modifica dei valori dei metadati di licenza non produce alcun effetto.
 
      
 
 - Chiamare alla fine il metodo di registrazione alla piattaforma per il rilevamento dei documenti.
-  - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) o [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx) per Android
-  - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx) per iOS
+  - [UserPolicy.registerForDocTracking asynchronous](/previous-versions/windows/desktop/msipcthin2/userpolicy-registerfordoctracking-boolean--sting--authenticationcallback--creationcallback--java) o [UserPolicy.registerForDocTracking synchronous](/previous-versions/windows/desktop/msipcthin2/userpolicy-registerfordoctracking-synchronous-method-java) per Android
+  - [MSUserPolicy.registerForDocTracking](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-registerfordoctracking-userid-authenticationcallback-completionblock-method-objc) per iOS

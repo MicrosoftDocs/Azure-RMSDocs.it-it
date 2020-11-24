@@ -12,14 +12,14 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
+ms.sourcegitcommit: bf8867a2270bd9e9695f2a5fe53fa5653faf7f94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316876"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "95567950"
 ---
-# <a name="running-the-azure-information-protection-scanner"></a>Esecuzione dello scanner Azure Information Protection
+# <a name="running-the-azure-information-protection-scanner"></a>Esecuzione dello scanner di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
 
@@ -49,7 +49,7 @@ Eseguire di nuovo questi passaggi in base alle esigenze quando il contenuto camb
 
     In alternativa, nella sessione di PowerShell, eseguire il comando seguente:
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -63,7 +63,7 @@ Eseguire di nuovo questi passaggi in base alle esigenze quando il contenuto camb
 
     - **Usare un comando di PowerShell.** Eseguire `Get-AIPScannerStatus` per monitorare la modifica dello stato.
 
-1. Una volta completata l'analisi, esaminare i report archiviati nella directory ** % *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports**
+1. Una volta completata l'analisi, esaminare i report archiviati nella directory **% *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports**
 
     - I file summary.txt includono il tempo impiegato per l'analisi, il numero di file analizzati e il numero di file con una corrispondenza per i tipi di informazioni.
 
@@ -101,7 +101,7 @@ Per arrestare un'analisi attualmente in esecuzione prima che venga completata, u
 
 - **Eseguire un comando di PowerShell.** Eseguire il comando seguente:
 
-    ```ps
+    ```PowerShell
     Stop-AIPScan 
     ```
 
@@ -133,7 +133,7 @@ Per aggiornare prima il criterio, ad esempio durante il test, eliminare manualme
 Se sono state modificate anche le impostazioni di protezione per le etichette, attendere 15 minuti aggiuntivi dal momento in cui sono state salvate le impostazioni di protezione aggiornate prima di riavviare il servizio Azure Information Protection.
 
 > [!IMPORTANT]
-> Se è stato eseguito l'aggiornamento alla versione [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) o successiva, AIP ignora la ripetizione dell'analisi completa per le impostazioni aggiornate per garantire prestazioni coerenti. Se è stato eseguito l'aggiornamento, assicurarsi di [eseguire una ripetizione dell'analisi completa manualmente](#rescanning-files) , se necessario. 
+> Se è stato eseguito l'aggiornamento alla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) o successiva, AIP ignora la ripetizione dell'analisi completa per le impostazioni aggiornate per garantire prestazioni coerenti. Se è stato eseguito l'aggiornamento, assicurarsi di [eseguire una ripetizione dell'analisi completa manualmente](#rescanning-files) , se necessario. 
 >
 > Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on,** assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
 > 
@@ -144,14 +144,14 @@ Se lo scanner si interrompe in modo imprevisto e non completa l'analisi di un nu
 
 - **Numero di porte dinamiche**. Potrebbe essere necessario aumentare il numero di porte dinamiche per il sistema operativo che ospita i file. Uno dei motivi per cui lo scanner supera il numero di connessioni di rete consentite e pertanto si arresta può essere la protezione avanzata dei server per SharePoint.
 
-    Per verificare se questa è la conseguenza dell'arresto dello scanner, verificare se il seguente messaggio di errore viene registrato per lo scanner nel file ** % *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
+    Per verificare se questa è la conseguenza dell'arresto dello scanner, verificare se il seguente messaggio di errore viene registrato per lo scanner nel file **% *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
 
     **Impossibile connettersi al server remoto---> System .NET. Sockets. SocketException: un solo utilizzo di ogni indirizzo del socket (protocollo/indirizzo di rete/porta) è in genere consentito IP: porta**
 
     > [!NOTE]
     > Il file verrà compresso se sono presenti più log.
 
-    Per altre informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo, vedere [Impostazioni che possono essere modificate per migliorare le prestazioni di rete](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+    Per altre informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo, vedere [Impostazioni che possono essere modificate per migliorare le prestazioni di rete](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 - **Soglia visualizzazione elenco.** Per le farm di SharePoint di grandi dimensioni, potrebbe essere necessario aumentare la soglia di visualizzazione elenco. Per impostazione predefinita, la soglia di visualizzazione elenco è impostata su 5.000.
 
@@ -161,7 +161,7 @@ Se lo scanner si interrompe in modo imprevisto e non completa l'analisi di un nu
 
 Se si verificano problemi con Azure Information scanner, verificare se la distribuzione è integra usando il comando PowerShell seguente:
 
-```ps
+```PowerShell
 Start-AIPScannerDiagnostics
 ```
 

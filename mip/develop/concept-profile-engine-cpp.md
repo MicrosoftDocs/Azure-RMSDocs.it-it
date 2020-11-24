@@ -6,18 +6,18 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 51934a4a285368a00aaf23780c7fd6c2f315ed7d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 8c414b5b66525169b1c55ae83f60e91e69188b53
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563954"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "95568437"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK - Concetti relativi agli oggetti profilo e motore
 
-## <a name="profiles"></a>Profili
+## <a name="profiles"></a>Profiles
 
-Dove `MipContext` è la classe per l'archiviazione delle impostazioni specifiche dell'SDK, il profilo è la classe radice per tutte le operazioni di assegnazione di etichette MIP e specifiche della protezione in MIP SDK. Prima di usare uno dei tre set di API, l'applicazione client deve creare un profilo. Le operazioni future vengono eseguite dal profilo o da altri oggetti *aggiunti* al profilo.
+Dove `MipContext` è la classe per l'archiviazione delle impostazioni specifiche dell'SDK, il profilo è la classe radice per tutte le operazioni di assegnazione di etichette MIP e specifiche della protezione in MIP SDK. Prima di usare uno dei tre set di API, l'applicazione client deve creare un profilo. Le operazioni future vengono eseguite dal profilo o da altri oggetti *aggiunti* al profilo. È consigliabile un solo oggetto profilo singolo per processo. La creazione di più di uno può causare un comportamento imprevisto. 
 
 Esistono tre tipi di profilo in MIP SDK:
 

@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 22f98a6781dc0ff0b43d1da73c72c2029c960021
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 3df1283cd678167b7daa4a5fc64b5bb3d6d3fa33
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403375"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567914"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configurazione della telemetria
 
@@ -21,13 +21,9 @@ Per impostazione predefinita, Microsoft Information Protection SDK invia i dati 
 
 ## <a name="telemetry-configuration"></a>Configurazione della telemetria
 
-Le opzioni di telemetria nell'SDK MIP possono essere controllate tramite [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Creare un'istanza di questa classe, quindi impostare **IsTelemetryOptedOut** su true. Fornire l'oggetto della classe **TelemetryConfiguration** alla funzione utilizzata per creare **MipContext**.
-
-A partire da MIP SDK versione 1,6, l'opzione di impostazione **Disabilita completamente** i dati di telemetria. In verisons 1,5 e versioni precedenti si invia un set di informazioni di telemetria minime.
+Le opzioni di telemetria nell'SDK MIP possono essere controllate tramite [TelemetryConfiguration](/dotnet/api/microsoft.informationprotection.telemetryconfiguration). Creare un'istanza di questa classe, quindi impostare **IsTelemetryOptedOut** su true. Fornire l'oggetto della classe **TelemetryConfiguration** alla funzione utilizzata per creare **MipContext**.
 
 ### <a name="minimum-telemetry-events"></a>Eventi di telemetria minimi
-
-In MIP SDK 1,6 e versioni successive, quando la telemetria è impostata su *opt-out*, **non viene inviato alcun evento di telemetria.** Le versioni precedenti alla 1,6 presentano il comportamento seguente.
 
 Quando la telemetria è impostata su *opt-out*, un set di dati minimo viene inviato a Microsoft. Tutte le informazioni personali vengono rimosse da queste informazioni. Questi dati includono informazioni sull'heartbeat per comprendere che l'SDK è in uso e i metadati di sistema. **Nessun contenuto utente o informazioni identificabili dall'utente finale è impostato sul servizio.**
 
@@ -146,7 +142,6 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | UserObjectId                         | Azure AD ID oggetto dell'utente.                                                        | No       |
 | Versione                              | Schema della versione di controllo ("1,1").                                                          | No       |
 
-
 ### <a name="opting-out-in-c"></a>Rifiuto esplicito in C++
 
 Per impostare la telemetria solo sul valore minimo, creare un puntatore condiviso di **MIP:: TelemetryConfiguration ()** e impostare **isTelemetryOptedOut** su true. Passare l'oggetto di configurazione in a **MipContent:: Create ()**.
@@ -182,3 +177,13 @@ mipContext = MIP.CreateMipContext(appInfo,
     telemetryConfiguration);
 ```
 
+## <a name="telemetry-in-mip-sdk-16102-to-16152"></a>Telemetria in MIP SDK 1.6.102 in 1.6.152
+
+In MIP SDK Versions 1.6.102, 103, 113, 151 e 152, è stato documentato che quando `IsTelemetryOptedOut` è impostato su **true** , viene inviato zero telemetria. È stato rilevato un bug che indica che gli eventi di telemetria rilevati vengono emessi quando questo flag è impostato. Questi eventi di telemetria generati quando si chiamano le API elencate di seguito nell'SDK dei criteri.
+
+- MIP::P olicyEngine:: ListSensitivityLabels ()
+- MIP::P olicyHandler:: ComputeActions ()
+- MIP::P olicyHandler:: NotifyCommitAsync ()
+- MIP::P olicyHandler:: GetSensitivityLabel ()
+
+Con la funzionalità in MIP SDK 1.6. n viene ripristinato il comportamento precedente e vengono inviati gli eventi descritti in dettaglio negli [eventi di telemetria minimi](#minimum-telemetry-events). MIP SDK 1,7 Aggiorna il nome di `IsTelemetryOptedOut` a `SendMinimumTelemetry` e segue lo stesso comportamento descritto in precedenza.

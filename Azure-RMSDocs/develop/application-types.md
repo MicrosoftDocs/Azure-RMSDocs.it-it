@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 06a92e4b2da227ede08249479554d12526fe2432
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0e67a086fb0fa3d1134a5f7768940b81c48947fd
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791294"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567518"
 ---
 # <a name="application-types"></a>Tipi di applicazioni
 
@@ -36,7 +36,7 @@ Un’applicazione semplice può essere rappresentata da uno strumento da riga di
 
 La *modalità server* è destinata ad applicazioni non interattive che utilizzano, proteggono o elaborano contenuto protetto tramite RMS. Un esempio può essere un’applicazione per la *prevenzione della perdita di dati* che viene eseguita come servizio in un file server e che protegge automaticamente i documenti riservati. Per un esempio di questo tipo di applicazione, vedere l’[esempio IpcDlp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp).
 
-Se l'applicazione usa la *modalità server*, l’autenticazione al server RMS deve avvenire automaticamente. A differenza della *modalità client*, RMS SDK 2.1 non apre una richiesta di credenziali se l'autenticazione automatica non riesce. Inoltre, nell’esecuzione in *modalità server* non è necessario alcun manifesto dell'applicazione.
+Se l'applicazione usa la *modalità server*, l’autenticazione al server RMS deve avvenire automaticamente. A differenza della *modalità client*, RMS SDK 2.1 non visualizzerà una finestra di richiesta di credenziali se l’autenticazione automatica non riesce. Inoltre, nell’esecuzione in *modalità server* non è necessario alcun manifesto dell'applicazione.
 
 Per altre informazioni sull'impostazione della modalità di sicurezza dell’API, vedere [Impostazione della modalità di sicurezza API](setting-the-api-security-mode-api-mode.md).
 

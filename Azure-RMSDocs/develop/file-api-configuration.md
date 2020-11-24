@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 673a23afa25872981967b48f81397d4a742855a8
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 891f27a971c72465a4a0e61b1b2097c42fa06bd4
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135624"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568311"
 ---
 # <a name="file-api-configuration"></a>Configurazione dell'API file
 
@@ -66,7 +66,7 @@ Per specificare il comportamento di protezione, impostare il valore della **crit
 > [!Note]
 > Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato con la protezione nativa o Pfile, purché l'utente disponga del diritto di **estrazione** .
 
-- **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio i file con estensione txt vengono crittografati in un file con estensione ptxt. Di seguito viene fornito un elenco di estensioni di file a cui può essere applicata la protezione nativa.
+- **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p *zzz*, dove *zzz* è l'estensione del file originale. Ad esempio i file con estensione txt vengono crittografati in un file con estensione ptxt. Di seguito viene fornito un elenco di estensioni di file a cui può essere applicata la protezione nativa.
 
 - **Pfile**: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
@@ -82,7 +82,7 @@ L'impostazione di un valore diverso o la mancata impostazione produce il comport
 -   **File txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** è abilitata la crittografia nativa (xxx diventa pxxx)
 -   **Tutti gli altri file** è abilitata la crittografia del file protetto (pfile) (xxx diventa xxx.pfile)
 
-Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx).
+Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes).
 
 ### <a name="file-api---file-support-details"></a>API file: dettagli sul supporto dei file
 
@@ -149,4 +149,4 @@ HKEY_LOCAL_MACHINE
 ## <a name="related-articles"></a>Articoli correlati
 
 - [Note per gli sviluppatori](developer-notes.md)
-- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes)

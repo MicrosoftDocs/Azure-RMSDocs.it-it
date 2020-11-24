@@ -1,23 +1,23 @@
 ---
 title: Amministrazione della protezione da Azure Information Protection tramite PowerShell
 description: Informazioni su come usare il modulo di PowerShell per il servizio di protezione da Azure Information Protection per amministrare questo servizio per il tenant.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: efb7f76b89e9918100c9fd092fe321c738fd44ba
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 49e2d716362ebc637015a1032ff373f1d33b9860
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224649"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567446"
 ---
 # <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Amministrazione della protezione da Azure Information Protection tramite PowerShell
 
@@ -27,7 +27,7 @@ ms.locfileid: "82224649"
 
 La tabella nella sezione seguente elenca alcuni degli scenari di configurazione avanzata che usano PowerShell. Nella tabella è indicato inoltre quando la configurazione può essere eseguita anche senza l'uso di PowerShell.
 
-Per un elenco completo dei cmdlet disponibili per questo modulo, con ulteriori informazioni su ciascuno di essi, vedere [AIPService](/powershell/module/aipservice/?view=azureipps#aipservice).
+Per un elenco completo dei cmdlet disponibili per questo modulo, con ulteriori informazioni su ciascuno di essi, vedere [AIPService](/powershell/module/aipservice/#aipservice).
 
 > [!NOTE]
 > Per installare questo modulo di PowerShell, vedere [installazione del modulo PowerShell AIPService](install-powershell.md).

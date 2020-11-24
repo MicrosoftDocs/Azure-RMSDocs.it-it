@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6c7ab059ff19cc7f8b41bc345521e9e1798e7769
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: f57529603a8d96a8621195ea4168eb2fe9cc3dc8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264362"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567542"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Come configurare i criteri di Azure Information Protection per utenti specifici attraverso criteri con ambito
 
@@ -53,7 +53,7 @@ Ad esempio, se si ha un'etichetta denominata **Confidential** (Confidenziale) ne
 
 2. Dall'opzione di menu **classificazioni**  >  **criteri** : nel riquadro **Azure Information Protection-criteri** selezionare **Aggiungi un nuovo criterio**. Viene quindi visualizzato il riquadro **criteri** che Visualizza i criteri globali esistenti, in cui è ora possibile configurare i nuovi criteri con ambito.
 
-3. Specificare un nome e una descrizione per il criterio visibile solo agli amministratori nel portale di Azure. ll nome deve essere univoco nel tenant. Selezionare quindi **specificare gli utenti o i gruppi che ottengono questo criterio**e nei riquadri successivi è possibile cercare e selezionare gli utenti e i gruppi per questo criterio. Le etichette e le impostazioni configurate in questo criterio con ambito verranno applicate solo a tali utenti.
+3. Specificare un nome e una descrizione per il criterio visibile solo agli amministratori nel portale di Azure. ll nome deve essere univoco nel tenant. Selezionare quindi **specificare gli utenti o i gruppi che ottengono questo criterio** e nei riquadri successivi è possibile cercare e selezionare gli utenti e i gruppi per questo criterio. Le etichette e le impostazioni configurate in questo criterio con ambito verranno applicate solo a tali utenti.
     
     Per motivi di prestazioni, l'appartenenza ai gruppi per i criteri con ambito viene [memorizzata nella cache](prepare.md#group-membership-caching-by-azure-information-protection).
 

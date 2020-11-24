@@ -1,17 +1,17 @@
 ---
 title: Classe PublishingLicenseInfo
 description: 'Documenta la classe publishinglicenseinfo:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 6477af8499020aed08e0a0178558da54ca73e19d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 362a5fe810a5244feef723563dfed910d0c88e62
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764556"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567075"
 ---
 # <a name="class-publishinglicenseinfo"></a>Classe PublishingLicenseInfo 
 Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
@@ -19,13 +19,13 @@ Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore 
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public PublishingLicenseInfo (const std::\<vector\> uint8_t& serializedPublishingLicense)  | _Non ancora documentato._
-public PublishingLicenseInfo (const std::\<vector\> uint8_t& serializedPreLicense, const std:\<:\> Vector uint8_t& serializedPublishingLicense)  | _Non ancora documentato._
-public void SetParsedData (const std::\<vector std::\> String& Domains, const std:: String& serverPublicCert, const std:: String& ContentId, const std:: String& issuerId)  | _Non ancora documentato._
-public void SetDoubleKeyData (const std:: String& Algorithm, const std:\<: Map std:: String, std:\> : String& doubleKeyApplicationData)  | _Non ancora documentato._
-public const std::\<vector\> uint8_t& GetSerializedPublishingLicense () const  | _Non ancora documentato._
-public const std::\<vector\> uint8_t& GetPreLicense () const  | _Non ancora documentato._
-public const std::\<vector std::\> String& getdomains () const  | _Non ancora documentato._
+public PublishingLicenseInfo (const std:: Vector \<uint8_t\>& serializedPublishingLicense)  | _Non ancora documentato._
+public PublishingLicenseInfo (const std:: Vector \<uint8_t\>& serializedPreLicense, const std:: vector \<uint8_t\>& serializedPublishingLicense)  | _Non ancora documentato._
+public void SetParsedData (const std:: Vector \<std::string\>& Domains, const std:: string& serverPublicCert, const std:: string& ContentId, const std:: string& issuerId)  | _Non ancora documentato._
+public void SetDoubleKeyData (const std:: String& Algorithm, const std:: Map \<std::string, std::string\>& doubleKeyApplicationData)  | _Non ancora documentato._
+public const std:: Vector \<uint8_t\>& GetSerializedPublishingLicense () const  | _Non ancora documentato._
+public const std:: Vector \<uint8_t\>& GetPreLicense () const  | _Non ancora documentato._
+public const std:: Vector \<std::string\>& Getdomains () const  | _Non ancora documentato._
 public const std:: String& GetServerPublicCertificate () const  | _Non ancora documentato._
 public const std:: String& GetIssuerId () const  | _Non ancora documentato._
 public const std:: String& GetContentId () const  | _Non ancora documentato._
@@ -33,65 +33,65 @@ public bool IsLicenseParsed () const  | _Non ancora documentato._
 public bool HasPreLicense () const  | _Non ancora documentato._
 public bool GetIsDoubleKeyLicense () const  | _Non ancora documentato._
 public const std:: String& GetDoubleKeyAlgorithm () const  | _Non ancora documentato._
-public const std::\<map std:: String, std::\> String& GetDoubleKeyApplicationData () const  | _Non ancora documentato._
+public const std:: Map \<std::string, std::string\>& GetDoubleKeyApplicationData () const  | _Non ancora documentato._
   
 ## <a name="members"></a>Members
   
 ### <a name="publishinglicenseinfo-function"></a>PublishingLicenseInfo (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="publishinglicenseinfo-function"></a>PublishingLicenseInfo (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="setparseddata-function"></a>SetParsedData (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="setdoublekeydata-function"></a>SetDoubleKeyData (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getprelicense-function"></a>GetPreLicense (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getdomains-function"></a>Funzione getdomains
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getserverpubliccertificate-function"></a>GetServerPublicCertificate (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getissuerid-function"></a>GetIssuerId (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getcontentid-function"></a>GetContentId (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="islicenseparsed-function"></a>IsLicenseParsed (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="hasprelicense-function"></a>HasPreLicense (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getisdoublekeylicense-function"></a>GetIsDoubleKeyLicense (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getdoublekeyalgorithm-function"></a>GetDoubleKeyAlgorithm (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getdoublekeyapplicationdata-function"></a>GetDoubleKeyApplicationData (funzione)
-_Non ancora documentato._
+Non ancora documentato.

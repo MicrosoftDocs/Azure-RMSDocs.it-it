@@ -1,8 +1,8 @@
 ---
 title: Configurare etichette per lingue diverse in Azure Information Protection
 description: È possibile aggiungere il supporto di varie lingue per le etichette che gli utenti visualizzano sulla barra di Information Protection e per i modelli visualizzati dagli utenti, specificando le lingue nei criteri di Azure Information Protection e importando le traduzioni.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a582a32a149fcaf6146c5deb13d8b88f682d7b0d
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: f39ba64ed2702f4f994d5626697fa5185e546f2b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048273"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568166"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "86048273"
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> Se si cercano informazioni per configurare lingue diverse per le etichette di riservatezza, usare Office 365 Security & Compliance PowerShell e il parametro *LocaleSettings* per [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+> Se si cercano informazioni per configurare lingue diverse per le etichette di riservatezza, usare Office 365 Security & Compliance PowerShell e il parametro *LocaleSettings* per [set-label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 Anche se le etichette predefinite per Azure Information Protection supportano più lingue, è necessario configurare il supporto per i nomi di etichetta e le descrizioni specificate. Per questa configurazione è necessario:
 
@@ -115,6 +115,3 @@ Negli scenari seguenti non vengono usati nomi di etichette, ed etichette seconda
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sulle opzioni disponibili per le etichette e su altre configurazioni dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).
-
-
-

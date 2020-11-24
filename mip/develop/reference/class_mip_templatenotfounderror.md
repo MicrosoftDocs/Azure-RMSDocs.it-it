@@ -1,17 +1,17 @@
 ---
 title: Classe TemplateNotFoundError
 description: 'Documenta la classe templatenotfounderror:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9c8a1f1d89c581950bc1760a7bcb339e10114c2a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0ba4eae1c1c3d846c5e696a55a8a089b18a583ed
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764235"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567393"
 ---
 # <a name="class-templatenotfounderror"></a>Classe TemplateNotFoundError 
 ID modello non riconosciuto dal servizio RMS.
@@ -20,25 +20,38 @@ ID modello non riconosciuto dal servizio RMS.
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: String mMessage  | _Non ancora documentato._
-public std:: Map\<std:: String, std:: String\> mDebugInfo  | _Non ancora documentato._
+public std:: Map \<std::string, std::string\> mDebugInfo  | _Non ancora documentato._
+public std:: string mName  | _Non ancora documentato._
+public ErrorCode GetErrorCode () const  |  Ottiene il codice errorCode dell'input errato.
 public char const* what() const  |  Ottiene il messaggio di errore.
-public std:: shared_ptr\<Error\> Clone () const  |  Clona l'errore.
+public std::shared_ptr\<Error\> Clone() const  |  Clona l'errore.
 public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
 public const std:: String& geterrorname () const  |  Ottiene il nome dell'errore.
 public const std:: String& GetMessage () const  |  Ottiene il messaggio di errore.
 public void semessage (const std:: String& msg)  |  Imposta il messaggio di errore.
 public void AddDebugInfo (const std:: String& Key, const std:: String& value)  |  Aggiungere la voce di informazioni di debug.
-public const std::\<map std:: String, std::\> String& GetDebugInfo () const  |  Ottenere le informazioni di debug.
+public const std:: Map \<std::string, std::string\>& GetDebugInfo () const  |  Ottenere le informazioni di debug.
+ErrorCode enum  |  Errore di input errato.
   
 ## <a name="members"></a>Members
   
 ### <a name="mmessage"></a>mMessage
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="mdebuginfo"></a>mDebugInfo
-_Non ancora documentato._
+Non ancora documentato.
 
+  
+### <a name="mname"></a>mName
+Non ancora documentato.
+
+  
+### <a name="geterrorcode-function"></a>GetErrorCode (funzione)
+Ottiene il codice errorCode dell'input errato.
+
+  
+**Restituisce**: codice errore errore di input errato
   
 ### <a name="what-function"></a>funzione
 Ottiene il messaggio di errore.
@@ -94,3 +107,12 @@ Ottenere le informazioni di debug.
 
   
 **Restituisce**: informazioni di debug (chiavi/valori)
+  
+### <a name="errorcode-enum"></a>Enumerazione ErrorCode
+
+ Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Generale            | Errore generale di input non valido
+FileIsTooLargeForProtection            | Il file è troppo grande per la protezione
+
+Errore di input errato.

@@ -1,17 +1,17 @@
 ---
 title: Classe ProtectionDescriptorBuilder
 description: 'Documenta la classe protectiondescriptorbuilder:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 11890665b02ade782edcff6c23296ab70c9368f8
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2e5573a896ef0935c33e85a2ed7f73451ced8e7c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764466"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567153"
 ---
 # <a name="class-protectiondescriptorbuilder"></a>Classe ProtectionDescriptorBuilder 
 Costruisce un ProtectionDescriptor che descrive la protezione associata a una parte del contenuto.
@@ -19,14 +19,14 @@ Costruisce un ProtectionDescriptor che descrive la protezione associata a una pa
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public MIP_API std:: shared_ptr\<ProtectionDescriptor\> build ()  |  Crea una classe ProtectionDescriptor le cui autorizzazioni di accesso vengono definite da questa istanza di ProtectionDescriptorBuilder.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Crea una classe ProtectionDescriptor le cui autorizzazioni di accesso vengono definite da questa istanza di ProtectionDescriptorBuilder.
 public void SetName(const std::string& value)  |  Imposta il nome dei criteri di protezione.
 public void SetDescription(const std::string& value)  |  Imposta la descrizione dei criteri di protezione.
-public void SetContentValidUntil (const std:: Chrono::\<time_point std:: Chrono::\> system_clock& value)  |  Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
+public void SetContentValidUntil (const std:: Chrono:: time_point \<std::chrono::system_clock\>& value)  |  Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
 public void SetAllowOfflineAccess(bool value)  |  Imposta un valore che indica se i criteri di protezione consentono l'accesso al contenuto offline.
 public void SetReferrer(const std::string& uri)  |  Imposta l'indirizzo del referrer dei criteri di protezione.
-public void SetEncryptedAppData (const std::\<map std:: String, std::\> String& valore)  |  Imposta i dati specifici dell'app da crittografare.
-public void SetSignedAppData (const std::\<map std:: String, std::\> String& valore)  |  Imposta i dati specifici dell'app da firmare.
+public void SetEncryptedAppData (const std:: Map \<std::string, std::string\>& valore)  |  Imposta i dati specifici dell'app da crittografare.
+public void SetSignedAppData (const std:: Map \<std::string, std::string\>& valore)  |  Imposta i dati specifici dell'app da firmare.
 public void SetDoubleKeyUrl (const std:: String& doubleKeyUrl)  |  Imposta l'URL della chiave doppia da utilizzare per la protezione personalizzata.
   
 ## <a name="members"></a>Members

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: d309f08866bc01cde2725581ccef796bdbe96e98
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 45b5b2b76abb7a2b2c5dcb826ed15774fb81c606
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563567"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568263"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Procedura: Usare le impostazioni di crittografia
 
@@ -41,7 +41,7 @@ A partire dall'[aggiornamento di marzo 2015](release-notes-rtm.md), nell'API e n
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (noto anche come algoritmo deprecato)
 
-I flag del pacchetto di crittografia (vedere [Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx)) possono essere usati in combinazione con il flag della proprietà di licenza, *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
+I flag del pacchetto di crittografia (vedere [Preferred encryption](/previous-versions/windows/desktop/msipc/preferred-encryption)) possono essere usati in combinazione con il flag della proprietà di licenza, *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
 
 Di seguito sono elencati alcuni frammenti di codice semplici che dimostrano come utilizzare la nuova proprietà di licenza.
 

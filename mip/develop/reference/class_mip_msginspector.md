@@ -1,28 +1,29 @@
 ---
 title: Classe MsgInspector
 description: 'Documenta la classe msginspector:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 79a044099c09d799d77f4af11eb0b80ecc21d6d6
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 9f19c53a2c6eca82cdf1469c63436ad56112dc52
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761489"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567944"
 ---
 # <a name="class-msginspector"></a>Classe MsgInspector 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::\<vector\> uint8_t& GetBody ()  |  Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
+public const std:: Vector \<uint8_t\>& GetBody () const  |  Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
+public unsigned int GetCodePage () const  |  Ottenere la tabella codici di codifica del corpo, pertinente per txt, formati HTML del corpo.
 public BodyType GetBodyType () const  |  Ottiene il tipo di corpo.
-public const std::\<vector std::\<shared_ptr\> \> MsgAttachmentData& GetAttributes () const  |  Ottenere un elenco di allegati come oggetti dati dell'allegato msg.
+public const std:: Vector \<std::shared_ptr\<MsgAttachmentData\> \>& GetAttributes () const  |  Ottenere un elenco di allegati come oggetti dati dell'allegato msg.
 public InspectorType GetInspectorType () const  |  Ottenere i tipi di file.
-public std:: shared_ptr\<Stream\> GetFileStream () const  |  Ottenere il flusso di file.
+public std:: shared_ptr \<Stream\> GetFileStream () const  |  Ottenere il flusso di file.
   
 ## <a name="members"></a>Members
   
@@ -31,6 +32,14 @@ Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
 
   
 **Restituisce**: un vettore di byte.
+  
+### <a name="getcodepage-function"></a>GetCodePage (funzione)
+Ottenere la tabella codici di codifica del corpo, pertinente per txt, formati HTML del corpo.
+
+  
+**Returns**: tabella codici senza segno. 
+  
+**Vedere anche**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
   
 ### <a name="getbodytype-function"></a>GetBodyType (funzione)
 Ottiene il tipo di corpo.

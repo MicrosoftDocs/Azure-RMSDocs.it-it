@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbdbf45f337b2647bb260c4a9d01c1c777d078a2
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: 6f095c7cfd7a41663da3fd4f19d47012fa2604b5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810338"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568137"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -32,20 +32,20 @@ Quando si usa il servizio Rights Management di Azure da Azure Information Protec
 |Applicazione o servizio|Modalità di aggiornamento dei modelli dopo le modifiche|
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Applicabile per regole di trasporto e Outlook Web App |Vengono aggiornati automaticamente in un'ora e non sono necessari altri passaggi.|
-|Client Azure Information Protection|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client Azure Information Protection.|
-|Client per l'etichettatura unificata di Azure Information Protection|Per le app di Office, i modelli vengono aggiornati automaticamente ogni volta che l'app viene aperta.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client di etichettatura unificata Azure Information Protection.<br /><br /> Per Esplora file, PowerShell e lo scanner, il client non Scarica i modelli ma li accede online senza ulteriori passaggi necessari.|
-|App di Office 365, Office 2019, Office 2016 e Office 2013|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />- Per le versioni più recenti di Office: l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per forzare un aggiornamento prima della pianificazione, vedere la sezione seguente, [app di office 365, office 2019, office 2016 e office 2013: come forzare un aggiornamento per i modelli](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
+|Client Azure Information Protection|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché questo client è strettamente integrato con Office, verranno aggiornati anche tutti i modelli aggiornati per le app Microsoft 365, Office 2019, Office 2016 o Office 2013 per il client di Azure Information Protection.|
+|Client per l'etichettatura unificata di Azure Information Protection|Per le app di Office, i modelli vengono aggiornati automaticamente ogni volta che l'app viene aperta.<br /><br /> Inoltre, poiché questo client è strettamente integrato con Office, tutti i modelli aggiornati per le app Microsoft 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati per il client di Azure Information Protection Unified labeling.<br /><br /> Per Esplora file, PowerShell e lo scanner, il client non Scarica i modelli ma li accede online senza ulteriori passaggi necessari.|
+|App Microsoft 365, Office 2019, Office 2016 e Office 2013|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />- Per le versioni più recenti di Office: l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per forzare un aggiornamento prima della pianificazione, vedere la sezione seguente, [Microsoft 365 app, office 2019, office 2016 e office 2013: How to Force a refresh for templates](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |Office 2010|I modelli vengono aggiornati automaticamente quando gli utenti si disconnettono da Windows, eseguono nuovamente l'accesso e attendono al massimo un'ora.|
 |Exchange locale con il connettore di Rights Management<br /><br />Applicabile per regole di trasporto e Outlook Web App|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi. Tuttavia, Outlook Web App memorizza nella cache l'interfaccia utente per un giorno.|
 |Office 2019 per Mac e Office 2016 per Mac|Aggiornamento automatico quando si apre il contenuto protetto. Per forzare un aggiornamento, vedere la sezione seguente [office 2019 per Mac e office 2016 per Mac: come forzare un aggiornamento per i modelli](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |App RMS sharing per computer Mac|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
-|Office 365 ProPlus con [etichetta incorporata](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Questo client di assegnazione di etichette incorporato non Scarica i modelli ma vi accede online senza ulteriori passaggi necessari.|
+|Office 365 ProPlus con [etichetta incorporata](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Questo client di assegnazione di etichette incorporato non Scarica i modelli ma vi accede online senza ulteriori passaggi necessari.|
 | | |
 
 Quando le applicazioni client devono scaricare i modelli (inizialmente o aggiornati per le modifiche), prepararsi ad attendere fino a 30 minuti prima che il download sia completo e che i modelli nuovi o aggiornati siano completamente operativi. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei modelli e la connettività di rete. 
 
-## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates"></a>App Office 365, Office 2019, Office 2016 e Office 2013: come forzare un aggiornamento per i modelli
-Modificando il Registro di sistema nei computer che eseguono app di Office 365, Office 2019, Office 2016 oppure Office 2013 è possibile modificare la pianificazione automatica in modo che i modelli modificati vengano aggiornati nei computer più frequentemente rispetto al relativo valore predefinito. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
+## <a name="microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates"></a>App Microsoft 365, Office 2019, Office 2016 e Office 2013: come forzare un aggiornamento per i modelli
+Modificando il registro di sistema nei computer che eseguono Microsoft 365 app, Office 2019, Office 2016 o Office 2013, è possibile modificare la pianificazione automatica in modo che i modelli modificati vengano aggiornati nei computer con una frequenza maggiore rispetto al valore predefinito. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
 
 > [!WARNING]
 > L'errato utilizzo dell'editor del Registro di sistema può provocare gravi problemi che potrebbero richiedere la reinstallazione del sistema operativo. La risoluzione dei problemi derivanti dall'errato utilizzo dell'editor del Registro di sistema non è garantita. L'uso dell'editor del Registro di sistema è di sola responsabilità dell'utente.
@@ -78,7 +78,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
 1. Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime**. Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per eliminare i dati con questo valore di registro.
 
-   **Percorso del registro di sistema:** HKEY_CURRENT_USER \software\classes\local Settings\Software\Microsoft\MSIPC \\ < *MicrosoftRMS_FQDN*> \Template \\ < *user_alias*>
+   **Percorso del registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> \Template \\ < *user_alias*>
 
    **Tipo:** REG_SZ
 
@@ -118,4 +118,3 @@ In queste versioni di Office per Mac, i modelli vengono aggiornati quando si apr
 
 ## <a name="see-also"></a>Vedere anche
 [Configurazione e gestione dei modelli nei criteri di Azure Information Protection](configure-policy-templates.md)
-

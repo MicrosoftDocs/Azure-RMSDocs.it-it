@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 010ed1f194fd29a9d5e371c296adae5e1e216bea
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 63beff811a9a9d6d08cfb7d2119c976e91097109
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563791"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568382"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
 
@@ -44,7 +44,7 @@ Questo argomento descrive importanti modifiche e funzionalità in questa nuova v
 
 L'aggiornamento della versione di luglio comprende l'incremento del numero di revisione dell'SDK alla versione 4.2.5.
 
-- Android SDK: l'app può ora **impostare immediatamente il livello di registrazione ** con Android SDK. Per altre informazioni, vedere [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](https://docs.microsoft.com/information-protection/develop/enabling-logging).
+- Android SDK: l'app può ora **impostare immediatamente il livello di registrazione** con Android SDK. Per altre informazioni, vedere [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](/information-protection/develop/enabling-logging).
 - Il livello di registrazione non è supportato da iOS SDK.
 - In caso di token di accesso NULL, SDK ora restituisce un errore.
 
@@ -57,7 +57,7 @@ L'aggiornamento della versione di luglio comprende l'incremento del numero di re
 
 - **Supporto per l'autenticazione moderna**: consente l'accesso basato su Active Directory Authentication Library (ADAL) alle app con il supporto predefinito per RMS. Abilita funzionalità di accesso come Multi-Factor Authentication (MFA), provider di identità di terze parti basati su SAML con applicazioni client RMS, autenticazione basata su smart card e certificati ed elimina la necessità per le app con il supporto predefinito per RMS di usare il protocollo di autenticazione di base.
 - **Supporto per il rilevamento dei documenti**: ora gli sviluppatori possono abilitare il rilevamento dei documenti quando attivano la protezione dei documenti nelle app.
-- Miglioramenti delle prestazioni
+- Miglioramenti alle prestazioni
 - Correzioni di bug
 
 ### <a name="december-2015-update"></a>Aggiornamento di dicembre 2015
@@ -66,29 +66,29 @@ Con questa versione è disponibile la versione 4.2 SDK RMS per i dispositivi, ch
 
 -   Rilevamento dei documenti, RMS solo online, per sistemi operativi iOS/OS X e Android.
 
-    Per informazioni dettagliate e linee guida sull'uso in iOS/OS X, vedere la classe [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) che offre informazioni sul rilevamento e il metodo aggiuntivo di registrazione del rilevamento dei documenti in [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Ci sono aggiunte simili per Android in [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) e [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
+    Per informazioni dettagliate e linee guida sull'uso in iOS/OS X, vedere la classe [MSLicenseMetadata](/previous-versions/windows/desktop/msipcthin2/mslicensemetadata-class-objc) che offre informazioni sul rilevamento e il metodo aggiuntivo di registrazione del rilevamento dei documenti in [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc). Ci sono aggiunte simili per Android in [LicenseMetadata](/previous-versions/windows/desktop/msipcthin2/licensemetadata-interface-java) e [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java).
 
     Per una descrizione dettagliata della funzionalità di rilevamento dei documenti, vedere [Procedura: Usare il rilevamento dei documenti](how-to-use-document-tracking.md).
 
 -   Set di metodi sincroni paralleli alle versioni asincrone per l'API Android:
 
-    [Metodo sincrono CustomProtectedInputStream.create](https://msdn.microsoft.com/library/mt631362.aspx)
+    [Metodo sincrono CustomProtectedInputStream.create](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-create-synchronous-method-java)
 
-    [Metodo sincrono CustomProtectedOutputStream.create](https://msdn.microsoft.com/library/mt631363.aspx)
+    [Metodo sincrono CustomProtectedOutputStream.create](/previous-versions/windows/desktop/msipcthin2/customprotectedoutputstream-create-synchronous-method)
 
-    [Metodo sincrono ProtectedFileInputStream.create](https://msdn.microsoft.com/library/mt631375.aspx)
+    [Metodo sincrono ProtectedFileInputStream.create](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-create-synchronous-method)
 
-    [Metodo sincrono ProtectedFileOutputStream.create](https://msdn.microsoft.com/library/mt631376.aspx)
+    [Metodo sincrono ProtectedFileOutputStream.create](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-create-synchronous-method-java)
 
-    [Metodo sincrono TemplateDescriptor.getTemplates](https://msdn.microsoft.com/library/mt631380.aspx)
+    [Metodo sincrono TemplateDescriptor.getTemplates](/previous-versions/windows/desktop/msipcthin2/templatedescriptor-gettemplates-synchronous-method-java)
 
-    [Metodo sincrono UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
+    [Metodo sincrono UserPolicy.acquire](/previous-versions/windows/desktop/msipcthin2/userpolicy-acquire-synchronous-method-java)
 
-    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)**](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-policydescriptor-------synchronous-method-java)
 
-    [Metodo sincrono UserPolicy.create (TempalteDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
+    [Metodo sincrono UserPolicy.create (TempalteDescriptor…)](/previous-versions/windows/desktop/msipcthin2/userpolicy-create-templatedescriptor-------synchronous-method-java)
 
--   È stata aggiunta una nuova classe [ProtectedBuffer](https://msdn.microsoft.com/library/mt631369.aspx) all'API Android.
+-   È stata aggiunta una nuova classe [ProtectedBuffer](/previous-versions/windows/desktop/msipcthin2/protectedbuffer-class) all'API Android.
 -   Aggiornamenti per migliorare i messaggi di errore e la risoluzione ottimale dei problemi di prestazioni.
 -   Miglioramenti significativi delle prestazioni per le operazioni crittografiche.
 
@@ -108,7 +108,7 @@ In questa versione è stato aggiunto il supporto per gli aggiornamenti seguenti:
 
     I processi di crittografia e decrittografia dell'app possono operare in modo indipendente e in parallelo.
 
-    Per altre informazioni, vedere [MSProtector](https://msdn.microsoft.com/library/mt210993.aspx).
+    Per altre informazioni, vedere [MSProtector](/previous-versions/windows/desktop/msipcthin2/msprotector-class-objc).
 
     Abilitazione delle impostazioni di controllo a livello di registro.
 
@@ -116,7 +116,7 @@ In questa versione è stato aggiunto il supporto per gli aggiornamenti seguenti:
 
     Aggiunta del supporto per la cancellazione della cache.
 
-    Per altre informazioni, vedere [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
+    Per altre informazioni, vedere [MSProtection:resetStateWithCompletionBlock](/previous-versions/windows/desktop/msipcthin2/msprotection-resetstatewithcompletionblock-method-objc).
 
 ### <a name="february-2015-update---adds-windows-store-application-support"></a>Aggiornamento di febbraio 2015: aggiunta del supporto per applicazioni Windows Store
 
@@ -132,11 +132,11 @@ Nella versione 4.1 di RMS SDK sono state aggiunte le nuove funzionalità seguent
 
 -   Estensioni dell'API Android e iOS/OS X inerenti l'*elaborazione del consenso utente*, per permettere all'utente di confermare i comportamenti dell'SDK. Attualmente, i tipi di consenso supportati sono il rilevamento dei documenti e l'accesso a URL del servizio AD RMS sconosciuti.
 
-    Per altre informazioni, vedere l'esempio della versione dell'API Android dell'[interfaccia ConsentCallback](https://msdn.microsoft.com/library/dn833503.aspx).
+    Per altre informazioni, vedere l'esempio della versione dell'API Android dell'[interfaccia ConsentCallback](/previous-versions/windows/desktop/msipcthin2/consentcallback-interface-java).
 
 -   Sono ora supportati iOS 8 e OS X 10.10 (Yosemite). Sono state apportate anche alcune modifiche ai nomi di proprietà richiesti da Xcode 6.
 
-    Ad esempio MSUserPolicy.name è stato modificato in [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx).
+    Ad esempio MSUserPolicy.name è stato modificato in [MSUserPolicy.policyName](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-name-property-objc).
 
 ## <a name="release-notes"></a>Note sulla versione
 
@@ -146,7 +146,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 -   **Supporto per AD RMS**: gli amministratori IT possono usare le app abilitate per RMS sui dispositivi mobili con le nuove estensioni del dispositivo mobile del server AD RMS.
 -   **Utilizzo offline**: gli utenti finali possono accedere offline ai dati protetti da RMS.
--   **Autenticazione separata**: gli sviluppatori possono usare la propria libreria di autenticazione per Azure RMS e AD RMS o usare la libreria consigliata [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx).
+-   **Autenticazione separata**: gli sviluppatori possono usare la propria libreria di autenticazione per Azure RMS e AD RMS o usare la libreria consigliata [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100)).
 -   **Interfaccia utente separata**: gli sviluppatori possono compilare la propria interfaccia utente per proteggere e usare documenti protetti da RMS.
 -   **API riprogettata**: gli sviluppatori possono ora sfruttare un'API di crittografia e decrittografia semplice e trasparente che offre comportamenti RMS ed esperienza utente coerenti, con un impegno minimo.
 
@@ -164,9 +164,9 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
     **Soluzione**: verificare che l'applicazione non consenta le chiamate a più istanze per l'API Android.
 
--   Quando si utilizza il metodo [Metodo protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (matrice di byte \[ \] , offset int, Lunghezza int) con una lunghezza diversa dal valore *Array. length* , non è possibile utilizzare il contenuto in un secondo momento utilizzando l'SDK.
+-   Quando si utilizza il metodo [Metodo protectedfileoutputstream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java). Write (matrice di byte \[ \] , offset int, Lunghezza int) con una lunghezza diversa dal valore *Array. length* , non è possibile utilizzare il contenuto in un secondo momento utilizzando l'SDK.
 
-    **Soluzione**: si tratta di un problema noto. Per attenuarlo, passare sempre una matrice di *byte \[ \] * con lo stesso valore di lunghezza del parametro length oppure usare il metodo [Metodo protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (array di byte \[ \] ).
+    **Soluzione**: si tratta di un problema noto. Per attenuarlo, passare sempre una matrice di *byte \[ \]* con lo stesso valore di lunghezza del parametro length oppure usare il metodo [Metodo protectedfileoutputstream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java). Write (array di byte \[ \] ).
 
 **iOS e OS X**
 
@@ -192,8 +192,8 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
     I metodi seguenti non devono essere eseguiti contemporaneamente. Per monitorare il completamento dell'esecuzione, usare i blocchi di completamento come indicato di seguito.
 
-    - [MSProtectedData.protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx)
-    - [MSCustomProtectedData.customProtectedDataWithPolicy](https://msdn.microsoft.com/library/dn758315.aspx)
+    - [MSProtectedData.protectedDataWithProtectedFile](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-protecteddatawithprotectedfile-completionblock-method-objc)
+    - [MSCustomProtectedData.customProtectedDataWithPolicy](/previous-versions/windows/desktop/msipcthin2/mscustomprotecteddata-customprotecteddatawithpolicy-protecteddata-contentstartposition-contentsize-completionblock-method-objc)
 
 
 
@@ -203,7 +203,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 **Tutte le piattaforme**
 
-**D**: non è possibile visualizzare l'interfaccia utente per la selezione delle **autorizzazioni personalizzate** nel flusso di lavoro di protezione. Perché?
+**D**: non è possibile visualizzare l'interfaccia utente per la selezione delle **autorizzazioni personalizzate** nel flusso di lavoro di protezione. Questo problema dipende
 
 **R**: si tratta di un problema noto che verrà risolto in un secondo momento.
 
@@ -211,7 +211,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 **R**: per richiedere le credenziali per le organizzazioni di test di Azure AD RMS, inviare un messaggio a <rmcstbeta@microsoft.com>.
 
-**D**: nella documentazione non sono visualizzate informazioni dettagliate sulla gerarchia di test. Perché?
+**D**: nella documentazione non sono visualizzate informazioni dettagliate sulla gerarchia di test. Questo problema dipende
 
 **R**: non è presente alcun concetto di gerarchia di test nei nuovi SDK di AD RMS. Si usa sempre la gerarchia di produzione.
 
@@ -234,7 +234,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 **R**: Xcode 5.0 con iOS 7 e versioni successive.
 
-**D**: è stato chiamato un metodo Cancel () su un'operazione, tuttavia viene comunque ricevuta la notifica del completamento dell'operazione. Perché?
+**D**: è stato chiamato un metodo Cancel () su un'operazione, tuttavia viene comunque ricevuta la notifica del completamento dell'operazione. Questo problema dipende
 
 **R:**: non tutte le operazioni possono essere annullate, pertanto l'operazione di annullamento viene eseguita nel miglior modo possibile.
 

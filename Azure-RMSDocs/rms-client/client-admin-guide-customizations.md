@@ -1,10 +1,10 @@
 ---
 title: Configurazioni personalizzate-client Azure Information Protection
 description: Informazioni sulla personalizzazione del client Azure Information Protection per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 58d96afe47d6d3fc993c7c7e213e64097777b21e
-ms.sourcegitcommit: edd0614ef6f687ff2745f56e4171cd72e03edc9c
+ms.openlocfilehash: 3b81566a0853776a2b06e9a731e0cb3cf11fa5ff
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438183"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568490"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -124,11 +124,11 @@ Inoltre:
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste
 
-Se l'organizzazione non ha alcuna licenza per Azure Information Protection, ma dispone di licenze per Office 365 che includono il servizio Azure Rights Management per la protezione dei dati, il client Azure Information Protection per Windows viene eseguito automaticamente in [modalità di sola protezione](client-protection-only-mode.md).
+Se l'organizzazione non dispone di licenze per Azure Information Protection, ma dispone di licenze per Microsoft 365 che includono il servizio Rights Management di Azure per la protezione dei dati, il client Azure Information Protection per Windows viene eseguito automaticamente in [modalità di sola protezione](client-protection-only-mode.md).
 
 Tuttavia, se l'organizzazione ha una sottoscrizione per Azure Information Protection, tutti i computer Windows possono scaricare i criteri di Azure Information Protection per impostazione predefinita. Il client Azure Information Protection non gestisce il controllo e l'applicazione delle licenze. 
 
-Se alcuni utenti non dispongono di una licenza di Azure Information Protection, ma hanno una licenza per Office 365 che include il servizio Azure Rights Management, modificare il Registro di sistema nei computer degli utenti per impedire loro di eseguire le funzionalità di classificazione ed etichettatura senza licenza da Azure Information Protection.
+Se sono presenti utenti che non dispongono di una licenza per Azure Information Protection ma hanno una licenza per Microsoft 365 che include il servizio Azure Rights Management, modificare il registro di sistema nei computer degli utenti per impedire agli utenti di eseguire le funzionalità di classificazione e assegnazione di etichette senza licenza da Azure Information Protection.
 
 Individuare il nome di valore seguente e impostare i dati del valore su **0**:
 
@@ -146,7 +146,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **ReportAnIssueLink**
 
-- Valore**\<HTTP string>**
+- Valore **\<HTTP string>**
 
 Valore di esempio per un sito Web: `https://support.contoso.com`
 
@@ -228,7 +228,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Quando si configura l'[impostazione di criteri](../configure-policy-settings.md) **Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non possono visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
 
@@ -239,6 +239,10 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 - Chiave: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Valore: **true**
+
+> [!NOTE]
+> Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
+> 
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Nascondere in modo permanente la barra di Azure Information Protection
 
@@ -288,7 +292,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
 Quando si configura un'etichetta per la classificazione consigliata, agli utenti viene richiesto di accettare o ignorare l'etichetta consigliata in Word, Excel e PowerPoint. Questa impostazione estende questa indicazione per l'etichetta anche per la visualizzazione in Outlook.
 
@@ -298,6 +302,9 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Valore: **true**
 
+> [!NOTE]
+> Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
+> 
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
 
@@ -325,9 +332,9 @@ Le azioni risultanti dai messaggi popup vengono registrate nel registro eventi d
 
 - Messaggi di avviso: ID informazioni 301
 
-- Giustifica messaggi: ID informazioni 302
+- Messaggi di giustificazione: ID informazioni 302
 
-- Bloccare i messaggi: ID informazioni 303
+- Messaggi di blocco: ID informazioni 303
 
 Voce dell'evento di esempio di un messaggio di giustificazione:
 
@@ -386,19 +393,19 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Chiave: **OutlookWarnTrustedDomains**
     
-    - Valore**\<**domain names, comma separated**>**
+    - Valore **\<**domain names, comma separated**>**
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyTrustedDomains**
     
-    - Valore**\<**domain names, comma separated**>**
+    - Valore **\<**domain names, comma separated**>**
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockTrustedDomains**
     
-    - Valore**\<**domain names, comma separated**>**
+    - Valore **\<**domain names, comma separated**>**
 
 Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
@@ -434,14 +441,14 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 Per impostazione predefinita, i messaggi popup avvisa, giustifica o blocca si applicano a tutti i documenti di Office e PDF. È possibile affinare questo elenco specificando quali estensioni di file devono visualizzare i messaggi di avviso, di giustificazione o di blocco con una proprietà client avanzata aggiuntiva e un elenco delimitato da virgole di estensioni di file.
 
-Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole:`.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la giustificazione o il blocco dei messaggi popup.
 
 
 - Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore**\<**file name extensions to display messages, comma separated**>**
+- Valore **\<**file name extensions to display messages, comma separated**>**
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Per specificare un'azione diversa per i messaggi di posta elettronica senza allegati
 
@@ -496,7 +503,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
-Usare questa impostazione solo se è disponibile una [distribuzione di S/MIME](https://docs.microsoft.com/exchange/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché la protezione di Rights Management da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
+Usare questa impostazione solo se è disponibile una [distribuzione di S/MIME](/exchange/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché la protezione di Rights Management da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 
 Per questa configurazione è necessario specificare un'impostazione client avanzata denominata **LabelToSMIME** per ogni etichetta di Azure Information Protection a cui si vuole applicare la protezione S/MIME. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
@@ -548,13 +555,13 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Attivare l'esecuzione continua della classificazione in background
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.  
 
 Quando si configura questa impostazione, cambia il [comportamento predefinito](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) del client Azure Information Protection rispetto all'applicazione delle etichette automatiche e consigliate ai documenti: 
 
 - Per Word, Excel e PowerPoint, la classificazione automatica viene eseguita in modo continuo in background.  
 
-Il comportamento rimane invariato per Outlook.
+- Il comportamento rimane invariato per Outlook.
 
 Quando il client di Azure Information Protection controlla periodicamente i documenti per le regole di condizione specificate, questo comportamento Abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in Microsoft SharePoint. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite. 
 
@@ -565,6 +572,10 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 - Chiave: **RunPolicyInBackground**
 
 - Valore: **true**
+
+> [!NOTE]
+> Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
+> 
 
 ## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Non proteggere i file PDF usando lo standard ISO per la crittografia dei file PDF
 
@@ -626,8 +637,6 @@ Il file mantiene l'estensione pdf ma viene classificato come in precedenza ed è
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Supporto di file protetti da Secure Islands
 
-Questa opzione di configurazione è in anteprima e potrebbe cambiare.
-
 Se è stato usato Secure Islands è possibile che siano stati protetti file di testo, file immagine e file generici. Sono esempi i file con estensione ptxt, pjpeg o pfile. Quando si modifica il registro di sistema come indicato di seguito, Azure Information Protection può decrittografare questi file:
 
 
@@ -646,6 +655,10 @@ In seguito a questa modifica del registro sono supportati gli scenari seguenti:
 - Esplora file, PowerShell e lo scanner Azure Information Protection possono assegnare etichette a questi file. È quindi possibile applicare un'etichetta di Azure Information Protection che applica la nuova protezione da Azure Information Protection o che rimuove la protezione esistente di Secure Islands.
 
 - È possibile usare la [personalizzazione client per la migrazione delle etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions) per convertire automaticamente l'etichetta Secure Islands di questi file protetti in un'etichetta di Azure Information Protection.
+
+> [!NOTE]
+> Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
+> 
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette
 
@@ -680,7 +693,7 @@ Specificare un nome di regola di migrazione a propria scelta. Usare un nome desc
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservato** e ha l'ID etichetta **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -689,7 +702,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|valore|
+|Nome|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "L'etichetta Secure Islands è Riservato",Classificazione,Riservato|
 
@@ -697,7 +710,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservatezza elevata** e ha l'ID etichetta **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -706,7 +719,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|valore|
+|Nome|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "L'etichetta Secure Islands è Sensibile",Classificazione,Sensibile|
 
@@ -715,7 +728,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "generale" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Generale** e ha l'ID etichetta **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -724,14 +737,14 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|valore|
+|Nome|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"L'etichetta Secure Islands contiene Interno",Classificazione,.\*Interno.\*|
 
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
-Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. Queste impostazioni sono di anteprima e potrebbero cambiare.
+Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. 
 
 Le impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina basati su testo nei documenti, quando questi contrassegni visivi sono stati applicati da un'altra soluzione di etichettatura. Ad esempio, il piè di pagina precedente contiene il nome di un'etichetta precedente di cui è stata eseguita la migrazione ad Azure Information Protection con un nuovo nome di etichetta e un proprio piè di pagina.
 
@@ -739,7 +752,7 @@ Quando il client ottiene questa configurazione nei relativi criteri, le intestaz
 
 Questa configurazione non è supportata per Outlook e tenere presente che quando viene usata con Word, Excel e PowerPoint, può influire negativamente sulle prestazioni di queste app per gli utenti. La configurazione consente di definire le impostazioni per ogni applicazione, ad esempio la ricerca di testo nelle intestazioni e nei piè di pagina di documenti di Word, ma non nei fogli di calcolo di Excel o nelle presentazioni di PowerPoint.
 
-Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, E**X**cel, **P**owerPoint) solo a quelli che devono essere cercati:
+Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W** Ord, E **X** cel, **P** owerPoint) solo a quelli che devono essere cercati:
 
 - Chiave: **RemoveExternalContentMarkingInApp**
 
@@ -752,6 +765,10 @@ Esempi:
 - Per eseguire la ricerca in documenti di Word e presentazioni di PowerPoint, specificare **WP**.
 
 Sarà necessaria almeno un'altra impostazione client avanzata, **ExternalContentMarkingToRemove**, per specificare il contenuto dell'intestazione o del piè di pagina e il modo in cui rimuoverlo o sostituirlo.
+
+> [!NOTE]
+> Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
+> 
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Come configurare ExternalContentMarkingToRemove
 
@@ -790,11 +807,11 @@ Per rimuovere il piè di pagina su più righe, creare le due voci seguenti:
 
 - Chiave 1: **ExternalContentMarkingToRemove**
 
-- Valore chiave 1: ** \* riservato***
+- Valore chiave 1: **\* riservato***
 
 - Chiave 2: **ExternalContentMarkingToRemove**
 
-- Valore chiave 2: ** \* etichetta applicata*** 
+- Valore chiave 2: **\* etichetta applicata*** 
 
 #### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
 
@@ -841,7 +858,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave 1: **SyncPropertyName**
 
-- Valore chiave 1:\<**property name**> 
+- Valore chiave 1: \<**property name**> 
 
 - Chiave 2: **SyncPropertyState**
 
@@ -851,7 +868,7 @@ Usare queste chiavi e i valori corrispondenti per una sola proprietà personaliz
 
 Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classificazione** con i valori possibili **Pubblico**, **Generale** e **Riservatezza elevata\Tutti i dipendenti**. I documenti vengono archiviati in SharePoint, con i valori **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** impostati per la proprietà Classificazione.
 
-Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a ** OneWay**. 
+Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
 
@@ -900,7 +917,7 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 - Chiave: **ScannerConcurrencyLevel**
 
-- Valore**\<number of concurrent threads>**
+- Valore **\<number of concurrent threads>**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Disabilitare il livello di integrità basso per lo scanner
 
@@ -910,7 +927,7 @@ Per impostazione predefinita, lo scanner di Azure Information Protection viene e
 
 Tuttavia, quando l'account del servizio che esegue lo scanner dispone solo dei diritti documentati nei prerequisiti per la [distribuzione dello scanner](../deploy-aip-scanner-prereqs.md), il livello di integrità basso non è necessario e non è consigliato perché influisce negativamente sulle prestazioni. 
 
-Per altre informazioni sui livelli di integrità di Windows, vedere [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx) (Informazioni sul meccanismo di integrità di Windows)
+Per altre informazioni sui livelli di integrità di Windows, vedere [What is the Windows Integrity Mechanism?](/previous-versions/dotnet/articles/bb625957(v=msdn.10)) (Informazioni sul meccanismo di integrità di Windows)
 
 Per configurare questa impostazione avanzata in modo che lo scanner venga eseguito con un livello di integrità assegnato automaticamente da Windows (un account utente standard viene eseguito con un livello di integrità medio), immettere le stringhe seguenti:
 
@@ -928,7 +945,7 @@ Se si verifica questo problema di timeout a causa di file di grandi dimensioni, 
 
 - Chiave: **ContentExtractionTimeout**
 
-- Valore**\<hh:min:sec>**
+- Valore **\<hh:min:sec>**
 
 Il tipo di file può influire sul tempo necessario per eseguire la scansione di un file. Tempi di analisi di esempio:
 
@@ -952,7 +969,7 @@ Per modificare il periodo di timeout per l'elaborazione dei file, configurare l'
 
 - Chiave: **FileProcessingTimeout**
 
-- Valore**\<hh:min:sec>**
+- Valore **\<hh:min:sec>**
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
@@ -964,7 +981,7 @@ Per modificare il livello di registrazione per questi file, configurare l'impost
 
 - Chiave: **LogLevel**
 
-- Valore**\<logging level>**
+- Valore **\<logging level>**
 
 Impostare il livello di registrazione su uno dei valori seguenti:
 
@@ -988,7 +1005,7 @@ Outlook Mobile non supporta la classificazione dei messaggi di Exchange.
 
 Per ottenere questa soluzione: 
 
-1. Usare il cmdlet [New-MessageClassification](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/New-MessageClassification?view=exchange-ps) di Exchange PowerShell per creare le classificazioni dei messaggi con la proprietà Name che esegue il mapping ai nomi di etichetta nei criteri di Azure Information Protection. 
+1. Usare il cmdlet [New-MessageClassification](/powershell/module/exchange/policy-and-compliance/New-MessageClassification) di Exchange PowerShell per creare le classificazioni dei messaggi con la proprietà Name che esegue il mapping ai nomi di etichetta nei criteri di Azure Information Protection. 
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
@@ -1027,5 +1044,3 @@ Dopo aver personalizzato il client di Azure Information Protection, vedere le ri
 - [Tipi di file supportati](client-admin-guide-file-types.md)
 
 - [Comandi di PowerShell](client-admin-guide-powershell.md)
-
-

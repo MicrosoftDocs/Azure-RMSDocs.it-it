@@ -1,8 +1,8 @@
 ---
 title: Installare il modulo PowerShell AIPService per Azure Information Protection
 description: Istruzioni per l'installazione di PowerShell per il servizio di protezione da Azure Information Protection. Il nome di questo modulo è AIPService.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 23c18236413aaa2056d3eaaa30a64430de1e608b
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 57d8ac29ea58eab7820d642876e246b5ff985c4e
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136824"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568340"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installazione del modulo PowerShell AIPService
 
@@ -31,7 +31,7 @@ Usare le informazioni seguenti per installare il modulo di Windows PowerShell pe
 
 Questa tabella elenca i prerequisiti per installare e usare il modulo di PowerShell AIPService per il servizio di protezione da Azure Information Protection.
 
-|Requisito|Ulteriori informazioni|
+|Requisito|Altre informazioni|
 |---------------|--------------------|
 |Versione minima di Windows PowerShell: 3.0|È possibile verificare quale versione di Windows PowerShell sia in esecuzione digitando `$PSVersionTable` in una sessione di PowerShell. <br /><br /> Se è necessario installare una versione successiva di Windows PowerShell, vedere [Aggiornamento di Windows PowerShell esistente](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
 |Versione minima di Microsoft .NET Framework: 4.5<br /><br />Nota: questa versione di Microsoft .NET Framework è inclusa nei sistemi operativi successivi. È pertanto necessario installarla manualmente solo se il sistema operativo client è inferiore a Windows 8.0 o se il sistema operativo server è inferiore a Windows Server 2012.|Se la versione minima di Microsoft .NET Framework non è già installata, è possibile scaricare [Microsoft .NET framework 4,5](https://www.microsoft.com/download/details.aspx?id=30653).<br /><br />Questa versione minima di Microsoft .NET Framework è obbligatoria per alcune delle classi utilizzate dal modulo AIPService.|
@@ -56,7 +56,7 @@ Il modulo AIPService si trova nel [PowerShell Gallery](https://www.powershellgal
 
 ### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>Per installare il modulo AIPService dalla PowerShell Gallery
 
-Se non si ha familiarità con PowerShell Gallery, vedere [Introduzione a PowerShell Gallery](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-6). Seguire le istruzioni per i requisiti della raccolta, che includono l'installazione del modulo PowerShellGet e del provider NuGet.
+Se non si ha familiarità con PowerShell Gallery, vedere [Introduzione a PowerShell Gallery](/powershell/scripting/gallery/getting-started). Seguire le istruzioni per i requisiti della raccolta, che includono l'installazione del modulo PowerShellGet e del provider NuGet.
 
 Per visualizzare i dettagli sul modulo AIPService nel PowerShell Gallery, visitare la [pagina AIPService](https://www.powershellgallery.com/packages/AIPService).
 
@@ -100,7 +100,7 @@ Get-Help Connect-AipService -online
 
 Per altre informazioni:
 
-- Elenco completo dei cmdlet disponibili: [modulo AIPService](/powershell/module/aipservice/?view=azureipps#aipservice)
+- Elenco completo dei cmdlet disponibili: [modulo AIPService](/powershell/module/aipservice/)
 
 - Elenco dei principali scenari di configurazione che supportano PowerShell: [amministrazione della protezione da Azure Information Protection tramite PowerShell](administer-powershell.md)
 

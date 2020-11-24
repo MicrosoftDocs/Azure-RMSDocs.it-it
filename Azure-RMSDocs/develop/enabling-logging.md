@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 4a9f0b375f9e152d44f4d5b5251a9259456db53c
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 4a9a0029cbf9d3d171b24fc7a20a146a4646f799
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135709"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567956"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Procedura: Abilitare la registrazione delle prestazioni e dell'errore
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
@@ -101,7 +101,7 @@ Abilitare la registrazione automatica
 CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 ```
 
-Per altre informazioni sulle impostazioni facoltative, vedere [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
+Per altre informazioni sulle impostazioni facoltative, vedere [CustomerExperienceOptions](/previous-versions/windows/desktop/msipcthin2/customerexperienceoptions).
 
 Ottenere l'impostazione del flag di controllo della registrazione corrente
 

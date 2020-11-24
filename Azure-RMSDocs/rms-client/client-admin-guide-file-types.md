@@ -1,10 +1,10 @@
 ---
 title: Tipi di file supportati-client Azure Information Protection
 description: Dettagli tecnici sui tipi di file supportati, le estensioni di file e i livelli di protezione per gli amministratori che sono responsabili del client Azure Information Protection per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4213be53fe21491118b4771c22ed43255d5c342d
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: eb1896adf9899700fe03fa1286509602e73c90bd
+ms.sourcegitcommit: c6b0b092735504fd76d74a46d024321673482098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868944"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "95568461"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 
@@ -81,9 +81,9 @@ Anche nei criteri predefiniti correnti l'etichetta **Riservato \ Tutti i dipende
 
 Il client Azure Information Protection supporta la protezione a due livelli diversi, come descritto nella tabella seguente.
 
-|Tipo di protezione|Nativa|Generico|
+|Tipo di protezione|Nativo|Generico|
 |----------------------|----------|-----------|
-|Descrizione|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per tutte le altre applicazioni e gli altri tipi di file, la protezione generica offre un livello di protezione che include funzionalità di incapsulamento dei file, usando il tipo di file pfile, e di autenticazione per verificare se un utente è autorizzato ad aprire il file.|
+|Descrizione|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per gli altri tipi di file supportati, la protezione generica fornisce un livello di protezione che include sia l'incapsulamento dei file con il tipo di file. Pfile che l'autenticazione per verificare se un utente è autorizzato ad aprire il file.|
 |Protezione|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Vengono anche applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto al momento dell'applicazione della protezione ai file quando viene eseguito il rendering del contenuto nel visualizzatore Azure Information Protection (per i file di testo e immagine protetti) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione non riesce, il file non viene aperto.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Viene effettuata la registrazione di controllo dell'apertura di file e dell'accesso a questi da parte di utenti autorizzati. I diritti di utilizzo, tuttavia, non vengono applicati.|
 |Livello predefinito per tipi di file|Questo è il livello di protezione predefinito per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione che segue, [Tipi di file supportati per la classificazione e la protezione](#supported-file-types-for-classification-and-protection).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio i file con estensione vsdx, rtf e così via) che non sono supportati dalla protezione nativa.|
 
@@ -168,7 +168,7 @@ Per configurare il client Azure Information Protection per l'applicazione della 
 
     - Per la versione a 32 bit di Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
-    - Per la versione a 64 bit di Windows: **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** e **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection**
+    - Per la versione a 64 bit di Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
 2. Nella nuova chiave aggiunta (ad esempio HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), creare un nuovo valore stringa (REG_SZ) denominato **Encryption** con valore dati **Pfile**.
 
@@ -176,7 +176,7 @@ Per configurare il client Azure Information Protection per l'applicazione della 
 
 Queste due impostazioni hanno come risultato l'applicazione della protezione generica da parte del client Azure Information Protection a tutti i file dotati di estensione. Se è questo l'obiettivo, non è necessario eseguire altre configurazioni. È tuttavia possibile definire eccezioni per specifici tipi di file, in modo che vengano comunque protetti in modo nativo. A tale scopo, è necessario apportare 3 (per Windows a 32 bit) o 6 (per Windows a 64 bit) modifiche aggiuntive del Registro di sistema per ogni tipo di file:
 
-1. Per **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection** e **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** (se applicabile): aggiungere una nuova chiave con il nome dell'estensione del nome file (senza il punto precedente).
+1. Per **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (se applicabile): aggiungere una nuova chiave con il nome dell'estensione di file (senza il punto precedente).
 
     Ad esempio, i file con estensione del nome di file .docx, creano una chiave denominata **DOCX**.
 
@@ -188,7 +188,7 @@ In seguito a queste impostazioni, tutti i file sono protetti in modo generico ad
 
 Ripetere questi tre passaggi per altri tipi di file da definire come eccezioni, in quanto supportano la protezione nativa e non si vuole vengano protetti in modo generico dal client Azure Information Protection.
 
-È possibile applicare modifiche del Registro di sistema simili per altri scenari cambiando il valore della stringa**Encryption** che supporta i valori seguenti:
+È possibile applicare modifiche del Registro di sistema simili per altri scenari cambiando il valore della stringa **Encryption** che supporta i valori seguenti:
 
 - **Pfile**: Protezione generica
 
@@ -256,9 +256,9 @@ Senza alcuna configurazione aggiuntiva, il client Azure Information Protection u
 |PDF |pdf|
 |Testo|.txt; .xml; .csv|
 
-Con impostazioni di configurazione aggiuntive è possibile esaminare anche altri tipi di file. Ad esempio, è possibile [registrare un'estensione di file personalizzata per usare il gestore di filtro di Windows esistente per i file di testo](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters), ed è anche possibile installare filtri aggiuntivi di produttori di software.
+Con impostazioni di configurazione aggiuntive è possibile esaminare anche altri tipi di file. Ad esempio, è possibile [registrare un'estensione di file personalizzata per usare il gestore di filtro di Windows esistente per i file di testo](/windows/desktop/search/-search-ifilter-registering-filters), ed è anche possibile installare filtri aggiuntivi di produttori di software.
 
-Per verificare quali filtri sono installati, vedere la sezione [Finding a Filter Handler for a Given File Extension](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) (Come trovare un gestore filtri per un'estensione di file data) nella Guida sviluppatori di Windows Search.
+Per verificare quali filtri sono installati, vedere la sezione [Finding a Filter Handler for a Given File Extension](/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) (Come trovare un gestore filtri per un'estensione di file data) nella Guida sviluppatori di Windows Search.
 
 Le sezioni seguenti includono istruzioni di configurazione per il controllo dei file con estensione zip e tiff.
 
@@ -278,7 +278,7 @@ Dopo aver controllato il file, lo scanner lo classifica come **Confidential \ Fi
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>Per esaminare i file con estensione tiff tramite OCR
 
-Lo scanner Azure Information Protection e il comando di PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) possono anche usare una soluzione OCR (Optical Character Recognition) per esaminare immagini TIFF con estensione di file tiff quando si installa la funzionalità IFilter TIFF di Windows e quindi si configurano le [impostazioni IFilter TIFF di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) nel computer che esegue lo scanner o la sessione di PowerShell.
+Lo scanner Azure Information Protection e il comando di PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) possono anche usare una soluzione OCR (Optical Character Recognition) per esaminare immagini TIFF con estensione di file tiff quando si installa la funzionalità IFilter TIFF di Windows e quindi si configurano le [impostazioni IFilter TIFF di Windows](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) nel computer che esegue lo scanner o la sessione di PowerShell.
 
 Per lo scanner: dopo aver individuato le informazioni riservate, se il file con estensione TIFF deve essere classificato e protetto con un'etichetta, aggiungere una voce del registro di sistema per questa estensione di file in modo che disponga della protezione nativa, come descritto in [usare il registro di sistema per modificare i tipi di file protetti](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) dalle istruzioni per la distribuzione dello scanner.
 
@@ -292,4 +292,3 @@ Dopo aver identificato i tipi di file supportati dal client di Azure Information
 - [Rilevamento dei documenti](client-admin-guide-document-tracking.md)
 
 - [Comandi di PowerShell](client-admin-guide-powershell.md)
-

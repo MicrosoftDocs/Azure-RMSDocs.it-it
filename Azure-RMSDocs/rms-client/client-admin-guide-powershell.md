@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 7c5f2975b93e907d244db7c95975105f58ed1b94
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868995"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568130"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -40,11 +40,11 @@ I cmdlet vengono installati con il modulo **AzureInformationProtection** di Powe
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
 
 > [!TIP]
-> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> Criteri del computer **locale**  >  **Configurazione computer**  >  **Modelli amministrativi**  >  **Tutte le impostazioni**  >  **Abilita percorsi lunghi Win32** 
+> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) seguente disponibile a partire da Windows 10 versione 1607:<br /> Criteri del computer **locale**  >  **Configurazione computer**  >  **Modelli amministrativi**  >  **Tutte le impostazioni**  >  **Abilita percorsi lunghi Win32** 
 > 
 > Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
 >
-> Per altre informazioni, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) della documentazione per sviluppatori di Windows 10.
+> Per altre informazioni, vedere la sezione [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) della documentazione per sviluppatori di Windows 10.
 
 Lo [scanner Azure Information Protection](../deploy-aip-scanner.md) usa i cmdlet dal modulo AzureInformationProtection per installare e configurare un servizio in Windows Server. Lo scanner consente quindi di individuare, classificare e proteggere i file negli archivi dati.
 
@@ -150,7 +150,7 @@ Eseguire il cmdlet Get-AipServiceConfiguration dal modulo Azure RMS Windows Powe
     Connect-AipService
     ```
 
-    Quando richiesto, immettere le credenziali di amministratore del tenant di Azure Information Protection. In genere si usa un account che sia un amministratore globale per Azure Active Directory o Office 365.
+    Quando richiesto, immettere le credenziali di amministratore del tenant di Azure Information Protection. In genere, si usa un account amministratore globale per Azure Active Directory o Microsoft 365.
     
 4. Eseguire `Get-AipServiceConfiguration` ed eseguire una copia del valore di BPOSId.
     
@@ -193,7 +193,7 @@ Creare una nuova entità servizio eseguendo il cmdlet `New-MsolServicePrincipal`
     Connect-MsolService
     ```
 
-    Quando viene richiesto, immettere le credenziali di amministratore del tenant Azure AD. In genere, viene usato un account amministratore globale per Azure Active Directory o Office 365.
+    Quando richiesto, immettere le credenziali di amministratore del tenant Azure AD (in genere si usa un account amministratore globale per Azure Active Directory o Microsoft 365).
 
 4. Eseguire il cmdlet New-MsolServicePrincipal per creare una nuova entità servizio:
 
@@ -543,36 +543,36 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 2. Per il tenant Azure ad usato con Azure Information Protection, passare a **Azure Active Directory**  >  **Gestisci**  >  **registrazioni app**. 
 
-3. Selezionare **+ nuova registrazione**per creare l'applicazione/API dell'app Web. Nel riquadro **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
+3. Selezionare **+ nuova registrazione** per creare l'applicazione/API dell'app Web. Nel riquadro **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
 
-   - **Nome**:`AIPOnBehalfOf`
+   - **Nome**: `AIPOnBehalfOf`
         
         Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
     
     - **Tipi di account supportati**: **solo account in questa directory organizzativa**
     
-    - **URI di reindirizzamento (facoltativo)**: **Web** e`http://localhost`
+    - **URI di reindirizzamento (facoltativo)**: **Web** e `http://localhost`
 
 4. Nel riquadro **AIPOnBehalfOf** , copiare il valore per l' **ID applicazione (client)**. Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66` . Questo valore viene usato per il parametro *webappid* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-5. Sempre nel riquadro **AIPOnBehalfOf** scegliere **autenticazione**dal menu **Gestisci** .
+5. Sempre nel riquadro **AIPOnBehalfOf** scegliere **autenticazione** dal menu **Gestisci** .
 
 6. Nel riquadro **AIPOnBehalfOf-Authentication** , nella sezione **Impostazioni avanzate** , selezionare la casella di controllo **token ID** , quindi selezionare **Salva**.
 
-7. Sempre nel riquadro **AIPOnBehalfOf-Authentication** scegliere **certificati & segreti**dal menu **Gestisci** .
+7. Sempre nel riquadro **AIPOnBehalfOf-Authentication** scegliere **certificati & segreti** dal menu **Gestisci** .
 
 8. Nella sezione **segreti client** del riquadro **AIPOnBehalfOf-Certificates & Secrets** selezionare **+ New client Secret**. 
 
 9. Per **Aggiungi un segreto client**, specificare quanto segue e quindi selezionare **Aggiungi**:
     
-    - **Descrizione**:`Azure Information Protection client`
+    - **Descrizione**: `Azure Information Protection client`
     - **Scadenza**: specificare la scelta della durata (1 anno, 2 anni o nessuna scadenza)
 
 9. Tornare al riquadro **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` . Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
     
     È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
 
-10. Sempre nel riquadro **AIPOnBehalfOf-certificates & Secrets** selezionare **expose an API**dal menu **Gestisci** .
+10. Sempre nel riquadro **AIPOnBehalfOf-certificates & Secrets** selezionare **expose an API** dal menu **Gestisci** .
 
 11. Nel riquadro **AIPOnBehalfOf-esporre un'API** selezionare **imposta** per l'opzione **URI ID applicazione** e nel valore **URI ID applicazione** , modificare **API** in **http**. Questa stringa ha un aspetto simile all'esempio seguente: `http://d244e75e-870b-4491-b70d-65534953099e` . 
     
@@ -582,11 +582,11 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 13. Nel riquadro **Aggiungi ambito** , specificare quanto segue, usando le stringhe suggerite come esempi, quindi selezionare **Aggiungi ambito**:
     - **Nome ambito**: `user-impersonation`
-    - **Chi può acconsentire?**: **amministratori e utenti**
+    - **Utenti che possono fornire il consenso**: **Amministratori e utenti**
     - **Nome visualizzato per il consenso amministratore**: `Access Azure Information Protection scanner`
     - **Descrizione del consenso amministratore**: `Allow the application to access the scanner for the signed-in user`
-    - **Nome visualizzato del consenso dell'utente**:`Access Azure Information Protection scanner`
-    - **Descrizione del consenso dell'utente**:`Allow the application to access the scanner for the signed-in user`
+    - **Nome visualizzato per il consenso utente**: `Access Azure Information Protection scanner`
+    - **Descrizione del consenso utente**: `Allow the application to access the scanner for the signed-in user`
     - **Stato**: **abilitato** (impostazione predefinita)
 
 
@@ -605,23 +605,23 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 20. Nel riquadro **registrazioni app** selezionare **+ registrazione nuova applicazione** per creare ora l'applicazione nativa.
 
 21. Nel riquadro **registra un'applicazione** specificare le impostazioni seguenti e quindi selezionare **registra**:
-    - **Nome**:`AIPClient`
+    - **Nome**: `AIPClient`
     - **Tipi di account supportati**: **solo account in questa directory organizzativa**
-    - **URI di reindirizzamento (facoltativo)**: **client pubblico (mobile & desktop)** e`http://localhost`
+    - **URI di reindirizzamento (facoltativo)**: **client pubblico (mobile & desktop)** e `http://localhost`
 
 22. Nel riquadro **AIPClient** , copiare il valore dell' **ID applicazione (client)**. Il valore è simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f` . 
     
     Questo valore viene usato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-23. Sempre nel riquadro **AIPClient** scegliere **autenticazione**dal menu **Gestisci** .
+23. Sempre nel riquadro **AIPClient** scegliere **autenticazione** dal menu **Gestisci** .
 
-24. Nel riquadro **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu **Gestisci** .
+24. Nel riquadro **AIPClient-Authentication** scegliere **autorizzazioni API** dal menu **Gestisci** .
 
 25. Nel riquadro **AIPClient-autorizzazioni** selezionare **+ Aggiungi un'autorizzazione**.
 
 26. Nel riquadro **autorizzazioni API richiesta** selezionare **API personali**.
 
-27. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente**come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
+27. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente** come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
 
 28. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** , selezionare Concedi il **consenso dell'amministratore \<*your tenant name*> per** e selezionare **Sì** per la richiesta di conferma.
 
@@ -701,9 +701,9 @@ Procedure generali:
 
 2. Nel computer che assegnerà le etichette e proteggerà i file aprire l'Utilità di pianificazione e creare una nuova attività. Configurare questa attività per l'esecuzione come account del servizio per l'assegnazione di etichette e la protezione di file, quindi configurare i valori seguenti per **Azioni**:
 
-   - **Azione**:`Start a program`
-   - **Programma/script**:`Powershell.exe`
-   - **Aggiungere argomenti (facoltativo)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **Azione**: `Start a program`
+   - **Programma/script**: `Powershell.exe`
+   - **Aggiungere argomenti (facoltativo)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      Per la riga dell'argomento specificare il percorso e il nome file, se sono diversi da quelli indicati nell'esempio.
 

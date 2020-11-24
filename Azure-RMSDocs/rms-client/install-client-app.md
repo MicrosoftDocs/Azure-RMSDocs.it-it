@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 26e9f85a4e5d171232dc8d30f4502557808ac538
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 49d684dc4eb0852d4545abc86f725107732ad6e9
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953185"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567657"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guida dell'utente: Scaricare e installare il client Azure Information Protection
 
@@ -49,7 +49,7 @@ Per distribuire il client classico AIP, aprire un ticket di supporto per ottener
 
 1. Se viene richiesto di continuare, fare clic su **Sì** e attendere il completamento dell'installazione.    
 
-1. Fare clic su **Chiudi**. Prima di iniziare a usare il client di Azure Information Protection:    
+1. Fare clic su **Close**. Prima di iniziare a usare il client di Azure Information Protection:    
 
     - Se il computer esegue Office 2010, riavviare il computer e quindi passare alla sezione successiva per il passaggio finale.    
         

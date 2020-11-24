@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c88186c163d1f712c657d9270a7a738289fac6b4
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: d5da3848ab1791a9cfe4ac00ae28193669190435
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298241"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567795"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dati in Azure Information Protection
 
@@ -35,7 +35,7 @@ Per ulteriori informazioni, vedere [come funziona Azure RMS? Dietro le quinte](.
 
 ## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Qual è la differenza tra la crittografia Rights Management Azure e la crittografia in altri servizi cloud Microsoft?
 
-Microsoft offre varie tecnologie di crittografia che consentono di proteggere i dati per scenari differenti e spesso complementari. Ad esempio, mentre Office 365 offre la crittografia dei dati inattivi per i dati archiviati in Office 365, il servizio Azure Rights Management da Azure Information Protection crittografa in modo indipendente i dati in maniera che siano protetti indipendentemente da dove si trovano o da come sono trasmessi.
+Microsoft offre varie tecnologie di crittografia che consentono di proteggere i dati per scenari differenti e spesso complementari. Ad esempio, mentre Microsoft 365 offre la crittografia dei dati inattivi per i dati archiviati in Microsoft 365, il servizio Azure Rights Management di Azure Information Protection crittografa i dati in modo indipendente, in modo che siano protetti indipendentemente dalla posizione in cui si trovano o dal modo in cui vengono trasmessi.
 
 Queste tecnologie di crittografia sono complementari e per usarle è necessario abilitarle e configurarle in modo indipendente. Quando si esegue questa operazione, si potrebbe avere la possibilità di trasferire la propria chiave per la crittografia, uno scenario noto anche come "BYOK" (bring your own key). L'abilitazione della modalità BYOK per una di queste tecnologie non avrà effetti sulle altre. Ad esempio, è possibile usare la modalità BYOK di Azure Information Protection e non usare la modalità BYOK per altre tecnologie di crittografia e viceversa. Le chiavi utilizzate da queste tecnologie diverse potrebbero essere uguali o diverse, a seconda della modalità di configurazione delle opzioni di crittografia per ogni servizio.
 
@@ -53,7 +53,7 @@ Per altre informazioni su HYOK e per assicurarsi di aver compreso le relative li
 
 ## <a name="can-i-now-use-byok-with-exchange-online"></a>Adesso è possibile usare BYOK con Exchange Online?
 
-Sì, ora è possibile usare BYOK con Exchange Online quando si seguono le istruzioni indicate in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Configurare le nuove funzionalità di crittografia Office 365 basate su Azure Information Protection). Queste istruzioni abilitano le nuove funzionalità di Exchange Online che supportano l'uso della modalità BYOK per Azure Information Protection, nonché la nuova crittografia Office 365.
+Sì, è ora possibile usare BYOK con Exchange Online quando si seguono le istruzioni riportate in [configurare nuove funzionalità di crittografia dei messaggi Microsoft 365 basate su Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Queste istruzioni abilitano le nuove funzionalità di Exchange Online che supportano l'uso della modalità BYOK per Azure Information Protection, nonché la nuova crittografia Office 365.
 
 Per altre informazioni su questa modifica, vedere l'annuncio sul blog [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) (La crittografia Office 365 con le nuove funzionalità)
 
@@ -86,10 +86,10 @@ Se il documento è stato protetto usando autorizzazioni personalizzate, è possi
 Suggerimento: per controllare se un documento è stato protetto con un modello o tramite autorizzazione personalizzata, usare il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus). Per le autorizzazioni personalizzate è sempre presente la descrizione **Accesso limitato** con un ID modello univoco che non viene visualizzato quando si esegue [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Si ha una distribuzione ibrida di Exchange con alcuni utenti su Exchange Online e altri su Exchange Server: questa configurazione è supportata da Azure RMS?
-Assolutamente e l'aspetto interessante è che gli utenti sono in grado di proteggere e usare senza problemi messaggi di posta elettronica e allegati protetti con le due distribuzioni di Exchange. Per questa configurazione [attivare Azure RMS](activate-service.md) e [abilitare IRM per Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), quindi [distribuire e configurare il connettore RMS](deploy-rms-connector.md) per Exchange Server.
+Assolutamente e l'aspetto interessante è che gli utenti sono in grado di proteggere e usare senza problemi messaggi di posta elettronica e allegati protetti con le due distribuzioni di Exchange. Per questa configurazione [attivare Azure RMS](activate-service.md) e [abilitare IRM per Exchange Online](/microsoft-365/enterprise/activate-rms-in-microsoft-365), quindi [distribuire e configurare il connettore RMS](deploy-rms-connector.md) per Exchange Server.
 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>Se si usa questa protezione nell'ambiente di produzione, l'azienda è costretta a usare sempre questa soluzione o esiste il rischio di perdere l'accesso ai contenuti protetti con Azure RMS?
-No, si ha sempre il controllo dei dati e si può continuare ad accedervi, anche se si decide di non usare più il servizio Azure Rights Management. Per altre informazioni, vedere [Rimozione delle autorizzazioni e disattivazione della protezione per Azure Information Protection](decommission-deactivate.md).
+No, si ha sempre il controllo dei dati e si può continuare ad accedervi, anche se si decide di non usare più il servizio Azure Rights Management. Per altre informazioni, vedere [rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>È possibile controllare quali utenti possono usare Azure RMS per proteggere i contenuti?
 Sì, il servizio Azure Rights Management include controlli di onboarding degli utenti per questo scenario. Per ulteriori informazioni, vedere la sezione [configurazione dei controlli di onboarding per una distribuzione](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) in più fasi nell'articolo [attivazione del servizio di protezione da Azure Information Protection](activate-service.md) .
@@ -101,7 +101,7 @@ Non sono disponibili opzioni di amministrazione per impedire agli utenti di cond
 
 ## <a name="when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated"></a>Quando si condivide un documento protetto con qualcuno all'esterno dell'azienda, come viene autenticato questo utente?
 
-Per impostazione predefinita, il servizio Azure Rights Management usa un account Azure Active Directory e un indirizzo di posta elettronica associato per l'autenticazione dell'utente, semplificando la collaborazione business-to-business per gli amministratori. Se l'altra organizzazione usa i servizi di Azure, gli utenti hanno già account in Azure Active Directory, anche se questi account vengono creati e gestiti in locale e poi sincronizzati in Azure. Se l'organizzazione dispone di Office 365, dietro le quinte questo servizio usa anche Azure Active Directory per gli account utente. Se l'organizzazione dell'utente non dispone di account gestiti in Azure, gli utenti possono iscriversi a [RMS per utenti singoli](./rms-for-individuals.md), creando un tenant e una directory di Azure non gestiti per l'organizzazione con un account per l'utente, in modo che l'utente (e gli utenti successivi) possano quindi essere autenticati per il servizio Rights Management di Azure.
+Per impostazione predefinita, il servizio Azure Rights Management usa un account Azure Active Directory e un indirizzo di posta elettronica associato per l'autenticazione dell'utente, semplificando la collaborazione business-to-business per gli amministratori. Se l'altra organizzazione usa i servizi di Azure, gli utenti hanno già account in Azure Active Directory, anche se questi account vengono creati e gestiti in locale e poi sincronizzati in Azure. Se l'organizzazione ha Microsoft 365, dietro le quinte, questo servizio usa anche Azure Active Directory per gli account utente. Se l'organizzazione dell'utente non dispone di account gestiti in Azure, gli utenti possono iscriversi a [RMS per utenti singoli](./rms-for-individuals.md), creando un tenant e una directory di Azure non gestiti per l'organizzazione con un account per l'utente, in modo che l'utente (e gli utenti successivi) possano quindi essere autenticati per il servizio Rights Management di Azure.
 
 Il metodo di autenticazione per questi account può variare a seconda di come l'amministratore dell'altra organizzazione ha configurato l'account Azure Active Directory. Ad esempio, è possibile utilizzare password create per questi account, la federazione o password create in Active Directory Domain Services e quindi sincronizzate con Azure Active Directory.
 
@@ -148,13 +148,13 @@ Per un elenco delle estensioni di file supportate in modo nativo da Azure Rights
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Come si configura un computer Mac per proteggere e rilevare i documenti?
 
-Prima di tutto, assicurarsi di avere installato Office per Mac usando il collegamento di installazione software da https://admin.microsoft.com. Per le istruzioni complete, vedere [Scaricare e installare o reinstallare Office 365 o Office 2019 in un PC o Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Prima di tutto, assicurarsi di avere installato Office per Mac usando il collegamento di installazione software da https://admin.microsoft.com. Per istruzioni complete, vedere [scaricare e installare o reinstallare Microsoft 365 o Office 2019 in un PC o Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
-Aprire Outlook e creare un profilo mediante l'account Office 365 aziendale o dell'istituto di istruzione. Creare un nuovo messaggio, quindi eseguire le operazioni seguenti per configurare Office in modo che possa proteggere documenti e messaggi di posta elettronica usando il servizio Azure Rights Management:
+Aprire Outlook e creare un profilo usando il Microsoft 365 account aziendale o dell'Istituto di istruzione. Creare un nuovo messaggio, quindi eseguire le operazioni seguenti per configurare Office in modo che possa proteggere documenti e messaggi di posta elettronica usando il servizio Azure Rights Management:
 
 1. Nel nuovo messaggio, nella scheda **Opzioni** fare clic su **Autorizzazioni**, quindi fare clic su **Verifica credenziali**.
 
-2. Quando richiesto, specificare nuovamente i dettagli dell'account Office 365 aziendale o dell'istituto di istruzione e selezionare **Accedi**.
+2. Quando richiesto, specificare di nuovo Microsoft 365 i dettagli dell'account aziendale o dell'Istituto di istruzione e selezionare **Accedi**.
 
     Vengono scaricati i modelli di Azure Rights Management e **Verifica credenziali** viene sostituito da opzioni che includono **Nessuna restrizione**, **Non inoltrare**, nonché tutti i modelli di Azure Rights Management pubblicati per il tenant. Ora è possibile annullare questo nuovo messaggio.
 
@@ -171,9 +171,9 @@ Attualmente, Microsoft SharePoint supporta i documenti protetti da RMS utilizzan
 Se si è interessati a una funzionalità specifica che non è ancora supportata, tenere d'occhio gli annunci del [blog su Enterprise Mobility e la sicurezza](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## <a name="how-do-i-configure-one-drive-in-sharepoint-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Ricerca per categorie configurare un'unità in SharePoint, in modo che gli utenti possano condividere i propri file in modo sicuro con le persone all'interno e all'esterno della società?
-Per impostazione predefinita, l'amministratore di Office 365 non è configurato utenti.
+Per impostazione predefinita, come amministratore di Microsoft 365, non è necessario configurarlo; utenti.
 
-Così come un amministratore del sito di SharePoint Abilita e configura IRM per una raccolta di SharePoint di cui è proprietario, OneDrive è progettato per consentire agli utenti di abilitare e configurare IRM per la propria libreria OneDrive. Tuttavia un amministratore può farlo per gli utenti usando PowerShell. Per istruzioni, vedere la sezione [SharePoint in Microsoft 365 e OneDrive: configurazione di IRM](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration) nell'articolo [Office 365: configurazione per i client e servizi online](configure-office365.md) .
+Così come un amministratore del sito di SharePoint Abilita e configura IRM per una raccolta di SharePoint di cui è proprietario, OneDrive è progettato per consentire agli utenti di abilitare e configurare IRM per la propria libreria OneDrive. Tuttavia un amministratore può farlo per gli utenti usando PowerShell. Per istruzioni, vedere [SharePoint in Microsoft 365 e OneDrive: configurazione di IRM](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Ci sono suggerimenti o trucchi per una distribuzione corretta?
 
@@ -195,7 +195,7 @@ L'utente che ha protetto il documento, l'[autorità di certificazione di Rights 
 Il valore predefinito per il periodo di validità della licenza d'uso per un tenant è di 30 giorni e questa impostazione può essere modificata da un'impostazione più restrittiva in un'etichetta o un modello. Per altre informazioni sulla licenza d'uso e su come configurarla, vedere la documentazione sulla [licenza d'uso di Rights Management](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management può impedire l'acquisizione di schermate?
-Non concedendo **Copia come ** [diritto di utilizzo](configure-usage-rights.md), Rights Management può impedire l'acquisizione di schermate dagli strumenti più usati per l'acquisizione di schermate nelle piattaforme Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) e Android. Tuttavia, i dispositivi iOS e Mac non consentono alle app di impedire l'acquisizione di schermate. Inoltre, i browser su qualsiasi dispositivo non possono impedire l'acquisizione di schermate. L'uso del browser include Outlook sul Web e Office per il Web.
+Non concedendo **Copia come** [diritto di utilizzo](configure-usage-rights.md), Rights Management può impedire l'acquisizione di schermate dagli strumenti più usati per l'acquisizione di schermate nelle piattaforme Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) e Android. Tuttavia, i dispositivi iOS e Mac non consentono alle app di impedire l'acquisizione di schermate. Inoltre, i browser su qualsiasi dispositivo non possono impedire l'acquisizione di schermate. L'uso del browser include Outlook sul Web e Office per il Web.
 
 Impedire l'acquisizione di schermate consente di evitare la diffusione accidentale o non appropriata di informazioni riservate o sensibili. Tuttavia, esistono molti modi in cui un utente può condividere i dati visualizzati in una schermata e l'acquisizione di una schermata è solo un metodo. Ad esempio, un utente che desidera condividere informazioni visualizzate può scattare una foto usando la fotocamera del telefono, digitare nuovamente i dati o semplicemente comunicarli verbalmente a qualcuno.
 
@@ -204,4 +204,3 @@ Come illustrano in questi esempi, anche se tutte le piattaforme e tutto il softw
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Qual è la differenza tra un utente che protegge un messaggio di posta elettronica con Non inoltrare e un modello che non include il diritto Inoltra?
 
 Nonostante il nome, **Non inoltrare** non è l'opposto del diritto Inoltra o un modello. Si tratta in realtà di un set di diritti che includono la limitazione della copia, della stampa e del salvataggio del messaggio di posta elettronica all'esterno della cassetta postale, oltre a limitare l'inoltro dei messaggi di posta elettronica. I diritti sono applicati dinamicamente agli utenti tramite i destinatari scelti e non assegnati staticamente dall'amministratore. Per ulteriori informazioni, vedere la sezione non [inviare l'opzione per i messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails) in [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md).
-

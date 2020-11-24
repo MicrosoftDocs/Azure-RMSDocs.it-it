@@ -1,17 +1,17 @@
 ---
 title: Classe ContentMarkingActionData
 description: 'Documenta la classe contentmarkingactiondata:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 31362a636498c0c12be9f1b24783d6a7bde166db
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 165fbaae25b57e2963b55105b2f42de99f71b900
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763362"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567189"
 ---
 # <a name="class-contentmarkingactiondata"></a>Classe ContentMarkingActionData 
   
@@ -30,32 +30,32 @@ public virtual ~ ContentMarkingActionData ()  | _Non ancora documentato._
 ## <a name="members"></a>Members
   
 ### <a name="gettext-function"></a>Funzione gettext
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getfontname-function"></a>GetFontName (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getfontcolor-function"></a>GetFontColor (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getcontentmarkalignment-function"></a>GetContentMarkAlignment (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getfontsize-function"></a>Funzione GetFontSize
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getmargin-function"></a>Funzione GetMargin
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="getcontentmarkplacement-function"></a>GetContentMarkPlacement (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="contentmarkingactiondata-function"></a>~ ContentMarkingActionData (funzione)
-_Non ancora documentato._
+Non ancora documentato.

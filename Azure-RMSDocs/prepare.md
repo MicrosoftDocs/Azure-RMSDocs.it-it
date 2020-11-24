@@ -1,9 +1,9 @@
 ---
 title: Preparare utenti e gruppi per Azure Information Protection
 description: Verificare di avere gli account utente e di gruppo necessari per iniziare la classificazione, l'assegnazione di etichette e la protezione di documenti e messaggi di posta elettronica dell'organizzazione.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 880e3b8acd3d17bcb3aec424e3aef96c2aeadbaf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: cc54660ce021b2d00a80ad3292ed17c5c13c204a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048307"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568143"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -73,15 +73,15 @@ Per l'assegnazione di diritti di utilizzo e controlli di accesso e per la config
 
 - Per autorizzare gli utenti, vengono usati due attributi in Azure AD: **proxyAddresses** e **userPrincipalName**.
 
-- L'attributo **proxyAddresses di Azure AD** archivia tutti gli indirizzi di posta elettronica di un account e può essere popolato in diversi modi. Ad esempio a un utente di Office 365 che dispone di una cassetta postale di Exchange Online viene assegnato automaticamente un indirizzo di posta elettronica archiviato in questo attributo. Se a un utente di Office 365 si assegna un indirizzo di posta elettronica alternativo, anche quest'ultimo viene salvato nell'attributo proxyAddresses. L'attributo può essere popolato anche con indirizzi di posta elettronica sincronizzati con gli account locali. 
+- L'attributo **proxyAddresses di Azure AD** archivia tutti gli indirizzi di posta elettronica di un account e può essere popolato in diversi modi. Ad esempio, un utente in Microsoft 365 che dispone di una cassetta postale di Exchange Online dispone automaticamente di un indirizzo di posta elettronica archiviato in questo attributo. Se si assegna un indirizzo di posta elettronica alternativo per un utente Microsoft 365, questo viene salvato anche in questo attributo. L'attributo può essere popolato anche con indirizzi di posta elettronica sincronizzati con gli account locali. 
 
     Azure Information Protection può usare qualsiasi valore nell'attributo proxyAddresses di Azure AD se il dominio è stato aggiunto al tenant dell'utente ("dominio verificato"). Per altre informazioni sulla verifica di domini:
 
     - Per Azure AD: [Aggiungere un nome di dominio personalizzato ad Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Per Office 365: [aggiungere un dominio a office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Per Office 365: [aggiungere un dominio a office 365](/office365/admin/setup/add-domain)
 
-- L'attributo **userPrincipalName di Azure AD** viene usato solo se per un account nel tenant non sono presenti valori nell'attributo proxyAddresses di Azure AD, ad esempio se nel portale di Azure o per Office 365 si crea un utente senza una cassetta postale.
+- L'attributo **userPrincipalName di Azure AD** viene usato solo se per un account nel tenant non sono presenti valori nell'attributo proxyAddresses di Azure AD, Ad esempio, si crea un utente nella portale di Azure o si crea un utente per Microsoft 365 che non dispone di una cassetta postale.
 
 ### <a name="assigning-usage-rights-and-access-controls-to-external-users"></a>Assegnazione di diritti di utilizzo e controlli di accesso a utenti esterni
 
@@ -99,7 +99,7 @@ Per l'assegnazione di etichette:
 
 - Per configurare criteri con ambito che assegnano etichette aggiuntive a membri del gruppo, è possibile usare qualsiasi tipo di gruppo in Azure AD che abbia un indirizzo di posta elettronica con un dominio verificato per il tenant dell'utente. Un gruppo dotato di un indirizzo di posta elettronica è spesso detto gruppo abilitato alla posta elettronica.
 
-    È ad esempio possibile usare un gruppo di sicurezza abilitato alla posta elettronica, un gruppo di distribuzione statico e un gruppo di Office 365. Non è possibile usare un gruppo di sicurezza (statico o dinamico), perché questo tipo di gruppo non ha un indirizzo di posta elettronica. Non è nemmeno possibile usare una lista di distribuzione dinamica di Exchange Online, perché questo gruppo non viene replicato in Azure AD.
+    È ad esempio possibile utilizzare un gruppo di sicurezza abilitato alla posta elettronica, un gruppo di distribuzione statico e un gruppo di Microsoft 365. Non è possibile usare un gruppo di sicurezza (statico o dinamico), perché questo tipo di gruppo non ha un indirizzo di posta elettronica. Non è nemmeno possibile usare una lista di distribuzione dinamica di Exchange Online, perché questo gruppo non viene replicato in Azure AD.
 
 Per l'assegnazione di diritti di utilizzo e controlli di accesso:
 
@@ -127,7 +127,7 @@ Dall'elenco degli attributi per Azure Rights Management risulta che per gli uten
 
 È possibile usare Azure AD PowerShell per verificare che utenti e gruppi possano essere usati con Azure Information Protection. È possibile usare PowerShell anche per verificare i valori utilizzabili per autorizzare gli utenti e i gruppi. 
 
-Ad esempio, usando il modulo PowerShell V1 per Azure Active Directory, [MSOnline](/powershell/module/msonline/?view=azureadps-1.0), in una sessione di PowerShell, connettersi prima di tutto al servizio, specificando le credenziali di amministratore globale:
+Ad esempio, usando il modulo PowerShell V1 per Azure Active Directory, [MSOnline](/powershell/module/msonline/), in una sessione di PowerShell, connettersi prima di tutto al servizio, specificando le credenziali di amministratore globale:
 
 ```ps
 Connect-MsolService
@@ -182,7 +182,7 @@ Nella maggior parte dei casi il valore di UserPrincipalName corrisponde a uno de
 > [!TIP]
 > Per una gestione più semplice, ad esempio per eseguire ricerche e modifiche in blocco per l'importazione, è possibile usare il cmdlet Export-Csv per esportare i risultati in un foglio di calcolo.
 >
-> Ad esempio: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> ad esempio `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Verificare se gli account di gruppo sono pronti per Azure Information Protection
 
@@ -194,7 +194,7 @@ Get-MsolGroup | select DisplayName, ProxyAddresses
 
 Assicurarsi che siano visualizzati i gruppi che si vogliono usare con Azure Information Protection. Per l'autorizzazione dei membri dei gruppi visualizzati per il servizio Azure Rights Management è possibile usare gli indirizzi di posta elettronica nella colonna **ProxyAddresses**.
 
-Controllare quindi che i gruppi contengano gli utenti (o gli altri gruppi) che si vogliono usare per Azure Information Protection. A tale scopo è possibile usare un cmdlet di PowerShell (ad esempio, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0)) o il portale di gestione.
+Controllare quindi che i gruppi contengano gli utenti (o gli altri gruppi) che si vogliono usare per Azure Information Protection. A tale scopo è possibile usare un cmdlet di PowerShell (ad esempio, [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember)) o il portale di gestione.
 
 Per i due scenari di configurazione del servizio Azure Rights Management che usano gruppi di sicurezza, è possibile trovare l'ID oggetto e il nome visualizzato che consentono di identificare questi gruppi tramite il comando PowerShell seguente. Per trovare questi gruppi e copiare i valori relativi all'ID oggetto e al nome visualizzato, è anche possibile usare il portale di Azure:
 

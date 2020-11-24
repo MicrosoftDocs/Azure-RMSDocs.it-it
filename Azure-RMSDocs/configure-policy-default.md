@@ -1,21 +1,21 @@
 ---
 title: Criteri predefiniti per Azure Information Protection - AIP
 description: Informazioni sulla configurazione dei criteri predefiniti per Azure Information Protection. Se si modificano i criteri predefiniti, è possibile fare riferimento a questi valori per ripristinare le impostazioni predefinite dei criteri.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 9cbfea73a667c0d7b96c0daddb9efbb5cf97b78b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6f50cd82076e8906ddf2ecaf0ec2d63350fffc35
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048290"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568503"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -29,7 +29,7 @@ ms.locfileid: "86048290"
 > [!NOTE]
 > Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 > 
-> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
+> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
 
 Le informazioni seguenti sono utili per comprendere come viene configurato il criterio predefinito per Azure Information Protection.
 
@@ -91,10 +91,10 @@ Quando gli utenti selezionano questa etichetta, l'opzione Non inoltrare di Outlo
 |-------------------------------|---------------------------|-----------------|
 |Confidential \ All Employees (Riservato \ Tutti i dipendenti)|Dati riservati che richiedono protezione, ma che garantiscono autorizzazioni complete a tutti i dipendenti. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure (chiave cloud) [[1]](#footnote-1)|
 |Confidential \ Anyone (not protected) (Riservato \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
-|Riservato\Solo i destinatari|Dati riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Configura le autorizzazioni definite dall'utente (anteprima), In Outlook applica Non inoltrare|
+|Riservato\Solo i destinatari|Dati riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: impostare le autorizzazioni definite dall'utente (anteprima [[3]](#footnote-3)), in Outlook applica non inoltrare|
 |Highly Confidential \ All Employees (Riservatezza elevata \ Tutti i dipendenti)|Dati particolarmente riservati che garantiscono a tutti i dipendenti autorizzazioni di visualizzazione, modifica e risposta per il relativo contenuto. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure (chiave cloud) [[2]](#footnote-2)|
 |Highly Confidential \ Anyone (not protected) (Riservatezza elevata \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
-|Riservatezza elevata\Solo i destinatari|Dati altamente riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Configura le autorizzazioni definite dall'utente (anteprima), In Outlook applica Non inoltrare|
+|Riservatezza elevata\Solo i destinatari|Dati altamente riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: impostare le autorizzazioni definite dall'utente (anteprima [[3]](#footnote-3)), in Outlook applica non inoltrare|
 
 ###### <a name="footnote-1"></a>Nota 1
 Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito](configure-policy-templates.md#default-templates), **Riservato\Tutti i dipendenti**.
@@ -102,10 +102,12 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 ###### <a name="footnote-2"></a>Nota 2 
 Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito](configure-policy-templates.md#default-templates), **Riservatezza elevata\Tutti i dipendenti**.
 
+###### <a name="footnote-3"></a>Nota a piè di pagina 3
+Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazione|valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
@@ -115,7 +117,7 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 Alcune impostazioni sono state aggiunte dopo il 31 luglio 2017.
 
-|Impostazione|valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Selezionare l'etichetta predefinita|nessuno|
 |Invia i dati di controllo alle analisi di Azure Information Protection|Off|
@@ -154,7 +156,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazione|valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
@@ -162,7 +164,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazione|valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|nessuno|
@@ -192,7 +194,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazione|valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|La riservatezza delle informazioni è suddivisa in quattro livelli, ovvero Public (Pubblico), Internal (Interno), Confidential (Riservato) e Secret (Segreto), che consentono di identificare il rischio derivante dall'esposizione delle informazioni a utenti non autorizzati all'interno o all'esterno dell'azienda.|
@@ -200,7 +202,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazione|valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|nessuno|
@@ -210,4 +212,4 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy). 
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).

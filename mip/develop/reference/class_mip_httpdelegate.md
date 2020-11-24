@@ -1,17 +1,17 @@
 ---
 title: Classe HttpDelegate
 description: 'Documenta la classe httpdelegate:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: e1ddc8595e3cba2172228532a84ca68883cc0afd
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: d52752538aae982f8f5b0138aaf26deefa0d98a3
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762817"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566888"
 ---
 # <a name="class-httpdelegate"></a>Classe HttpDelegate 
 Interfaccia per l'override della gestione HTTP.
@@ -19,8 +19,8 @@ Interfaccia per l'override della gestione HTTP.
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<HttpOperation\> Send (const std::\<shared_ptr\> HttpRequest& request, const std:\<:\> shared_ptr void& context)  |  Inviare una richiesta HTTP.
-public std:: shared_ptr\<HttpOperation\> SendAsync (const std::\<shared_ptr\> HttpRequest& request, const std:\<:\> shared_ptr void& context, const std\<:: Function void (STD\<:\> : shared_ptr HttpOperation)  |  Inviare una richiesta HTTP in modo asincrono.
+public std::shared_ptr\<HttpOperation\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Inviare una richiesta HTTP.
+public std:: shared_ptr \<HttpOperation\> SendAsync (const std:: shared_ptr \<HttpRequest\>& request, const std:: shared_ptr \<void\>& context, const std:: Function \<void(std::shared_ptr\<HttpOperation\> )  |  Inviare una richiesta HTTP in modo asincrono.
 public void CancelOperation (const std:: String& RequestId)  |  Annulla un'operazione HTTP specifica.
 public void CancelAllOperations ()  |  Annulla le richieste HTTP in corso.
   

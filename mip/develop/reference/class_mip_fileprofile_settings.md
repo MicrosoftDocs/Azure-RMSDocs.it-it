@@ -1,17 +1,17 @@
 ---
 title: 'Classe fileprofile:: Settings'
 description: "Documenta la classe fileprofile:: Settings dell'SDK Microsoft Information Protection (MIP)."
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 8202dc85cf54b7629d688442a0b386d4ca725ac7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 5ab95e72c1b6198b8619f1fe6b0f850562ff00df
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762734"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566912"
 ---
 # <a name="class-fileprofilesettings"></a>Classe fileprofile:: Settings 
 Oggetto Settings usato da FileProfile durante la creazione e per tutta la sua durata.
@@ -19,15 +19,15 @@ Oggetto Settings usato da FileProfile durante la creazione e per tutta la sua du
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const std::\<shared_ptr\> MipContext& MipContext, CacheStorageType CacheStorageType, std::\<shared_ptr\> ConsentDelegate ConsentDelegate, std::\<shared_ptr\> Observer Observer)  |  Costruttore FileProfile::Settings.
+Impostazioni pubbliche (const std:: shared_ptr \<MipContext\>& mipContext, cacheStorageType CacheStorageType, std:: shared_ptr \<ConsentDelegate\> consentDelegate, std:: shared_ptr \<Observer\> Observer)  |  Costruttore FileProfile::Settings.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
-public std:: shared_ptr\<ConsentDelegate\> GetConsentDelegate () const  |  Ottiene il delegato del consenso usato per richiedere il consenso dell'utente che si connette ai servizi.
-public std:: shared_ptr\<Observer\> getobserver () const  |  Ottiene l'observer che riceve le notifiche degli eventi correlati a FileProfile.
-public std:: shared_ptr\<MipContext\> GetMipContext () const  |  Ottiene il contesto MIP che rappresenta lo stato condiviso in tutti i profili.
-public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
-public void SetHttpDelegate (const std::\<shared_ptr\> HttpDelegate& HttpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
-public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
-public void SetTaskDispatcherDelegate (const std::\<shared_ptr\> TaskDispatcherDelegate& TaskDispatcherDelegate)  |  Eseguire l'override della gestione delle attività modo asincrono rispetto predefinite con il client.
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Ottiene il delegato del consenso usato per richiedere il consenso dell'utente che si connette ai servizi.
+public std::shared_ptr\<Observer\> GetObserver() const  |  Ottiene l'observer che riceve le notifiche degli eventi correlati a FileProfile.
+public std:: shared_ptr \<MipContext\> GetMipContext () const  |  Ottiene il contesto MIP che rappresenta lo stato condiviso in tutti i profili.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
+public std:: shared_ptr \<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
+public void SetTaskDispatcherDelegate (const std:: shared_ptr \<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Eseguire l'override della gestione delle attività modo asincrono rispetto predefinite con il client.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione.
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configura se le licenze dell'utente finale (contratti) verranno memorizzate nella cache locale.

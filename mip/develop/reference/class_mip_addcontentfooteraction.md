@@ -1,17 +1,17 @@
 ---
 title: Classe AddContentFooterAction
 description: 'Documenta la classe addcontentfooteraction:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 58c0767f2c880a52ef4a831e5d57670820187fc7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 58f4e72361f9dfbe1e13b1d636f5cb6acd287784
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763780"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567327"
 ---
 # <a name="class-addcontentfooteraction"></a>Classe AddContentFooterAction 
 Classe di azione che specifica l'aggiunta di un piè di pagina contenuto al documento.
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Ottiene il margine del piè di pagina a partire
 API usata per contrassegnare l'elemento piè di pagina contenuto.
 
   
-**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene il piè di pagina contenuto. Lo stesso nome verrà restituito in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) nel caso in cui il piè di pagina contenuto debba essere rimosso.
+**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene il piè di pagina contenuto. Lo stesso nome verrà restituito in RemoveContentFooterAction nel caso in cui il piè di pagina contenuto debba essere rimosso.
   
 ### <a name="gettext-function"></a>Funzione gettext
 Ottiene il testo destinato a essere inserito nel piè di pagina contenuto.

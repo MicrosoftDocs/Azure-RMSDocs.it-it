@@ -1,22 +1,22 @@
 ---
 title: 'Tipi di file supportati: Azure Information Protection Unified Labeling client'
 description: Dettagli tecnici sui tipi di file supportati, le estensioni dei nomi di file e i livelli di protezione per gli amministratori che sono responsabili del Azure Information Protection client unificato per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 11/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7da516f320e97479e59d10ef2bb778356e57189
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: b9f8a53135407e91d04542bc53c709b82662a19a
+ms.sourcegitcommit: c6b0b092735504fd76d74a46d024321673482098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447294"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "95568455"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: tipi di file supportati dal client di Azure Information Protection Unified Labeling
 
@@ -24,7 +24,7 @@ ms.locfileid: "89447294"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Il client Azure Information Protection Unified Labeling può applicare quanto segue ai documenti e ai messaggi di posta elettronica:
 
@@ -82,7 +82,7 @@ Il Azure Information Protection client di etichetta unificata supporta la protez
 
 |Tipo di protezione|Nativo|Generico|
 |----------------------|----------|-----------|
-|Descrizione|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per tutte le altre applicazioni e gli altri tipi di file, la protezione generica offre un livello di protezione che include funzionalità di incapsulamento dei file, usando il tipo di file pfile, e di autenticazione per verificare se un utente è autorizzato ad aprire il file.|
+|Descrizione|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per gli altri tipi di file supportati, la protezione generica fornisce un livello di protezione che include sia l'incapsulamento dei file con il tipo di file. Pfile che l'autenticazione per verificare se un utente è autorizzato ad aprire il file.|
 |Protezione|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Vengono anche applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto al momento dell'applicazione della protezione ai file quando viene eseguito il rendering del contenuto nel visualizzatore Azure Information Protection (per i file di testo e immagine protetti) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione non riesce, il file non viene aperto.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Viene effettuata la registrazione di controllo dell'apertura di file e dell'accesso a questi da parte di utenti autorizzati. I diritti di utilizzo, tuttavia, non vengono applicati.|
 |Livello predefinito per tipi di file|Questo è il livello di protezione predefinito per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione che segue, [Tipi di file supportati per la classificazione e la protezione](#supported-file-types-for-classification-and-protection).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio i file con estensione vsdx, rtf e così via) che non sono supportati dalla protezione nativa.|
 
@@ -189,9 +189,9 @@ Senza alcuna configurazione aggiuntiva, il client Azure Information Protection U
 |PDF |pdf|
 |Testo|.txt; .xml; .csv|
 
-Con impostazioni di configurazione aggiuntive è possibile esaminare anche altri tipi di file. Ad esempio, è possibile [registrare un'estensione di file personalizzata per usare il gestore di filtro di Windows esistente per i file di testo](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters), ed è anche possibile installare filtri aggiuntivi di produttori di software.
+Con impostazioni di configurazione aggiuntive è possibile esaminare anche altri tipi di file. Ad esempio, è possibile [registrare un'estensione di file personalizzata per usare il gestore di filtro di Windows esistente per i file di testo](/windows/desktop/search/-search-ifilter-registering-filters), ed è anche possibile installare filtri aggiuntivi di produttori di software.
 
-Per verificare quali filtri sono installati, vedere la sezione [Finding a Filter Handler for a Given File Extension](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) (Come trovare un gestore filtri per un'estensione di file data) nella Guida sviluppatori di Windows Search.
+Per verificare quali filtri sono installati, vedere la sezione [Finding a Filter Handler for a Given File Extension](/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension) (Come trovare un gestore filtri per un'estensione di file data) nella Guida sviluppatori di Windows Search.
 
 Le sezioni seguenti includono istruzioni di configurazione per il controllo dei file con estensione zip e tiff.
 
@@ -211,7 +211,7 @@ Dopo aver esaminato il file, il client Unified Labeling dalla sessione di PowerS
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>Per esaminare i file con estensione tiff tramite OCR
 
-Il comando di PowerShell [set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) può usare il riconoscimento ottico dei caratteri (OCR) per controllare le immagini TIFF con estensione TIFF quando si installa la funzionalità IFilter TIFF di Windows e quindi configurare le [impostazioni di IFilter TIFF di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) nel computer che esegue la sessione di PowerShell.
+Il comando di PowerShell [set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) può usare il riconoscimento ottico dei caratteri (OCR) per controllare le immagini TIFF con estensione TIFF quando si installa la funzionalità IFilter TIFF di Windows e quindi configurare le [impostazioni di IFilter TIFF di Windows](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) nel computer che esegue la sessione di PowerShell.
 
 Per lo scanner: dopo aver individuato le informazioni riservate, se il file con estensione TIFF deve essere classificato e protetto con un'etichetta, specificare questa estensione di file con l'impostazione avanzata di PowerShell, **PFileSupportedExtensions**, come descritto in [usare PowerShell per modificare i tipi di file protetti](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) dalle istruzioni per la distribuzione dello scanner.
 

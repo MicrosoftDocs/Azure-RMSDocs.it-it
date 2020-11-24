@@ -1,10 +1,10 @@
 ---
 title: Configurare i diritti di utilizzo per Azure Rights Management - Azure Information Protection
 description: Comprendere e implementare la funzionalità per utenti con privilegi avanzati del servizio Rights Management di Azure da Azure Information Protection, in modo che gli utenti e i servizi autorizzati possano sempre leggere e controllare ("motivo") i dati protetti dell'organizzazione.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4397be5c6206c74bcf8753e5452cd19b02b31316
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: bf7b4d46c2dd63c87f48c244f38a515c7376fc1a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136751"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568238"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati
 
@@ -53,9 +53,19 @@ Non è importante quando si abilita la funzionalità per utenti con privilegi av
 
 ## <a name="security-best-practices-for-the-super-user-feature"></a>Procedure di sicurezza consigliate per la funzionalità per utenti con privilegi avanzati
 
-- Limitare e monitorare gli amministratori a cui viene assegnato un amministratore globale per il tenant di Office 365 o Azure Information Protection o a cui viene assegnato il ruolo GlobalAdministrator mediante il cmdlet [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) . Questi utenti possono abilitare la funzionalità per utenti con privilegi avanzati e assegnare agli utenti (e a se stessi) la condizione di utenti con privilegi avanzati, e potenzialmente decrittografare tutti i file che l'organizzazione protegge.
+- Limitare e monitorare gli amministratori a cui viene assegnato un amministratore globale per il Microsoft 365 o Azure Information Protection tenant o a cui viene assegnato il ruolo GlobalAdministrator tramite il cmdlet [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) . Questi utenti possono abilitare la funzionalità per utenti con privilegi avanzati e assegnare agli utenti (e a se stessi) la condizione di utenti con privilegi avanzati, e potenzialmente decrittografare tutti i file che l'organizzazione protegge.
 
-- Per visualizzare quali utenti e account di servizio vengono assegnati individualmente come utenti con privilegi avanzati, usare il cmdlet [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) . Per verificare se è configurato un gruppo di utenti con privilegi avanzati, usare il cmdlet [Get-AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) e gli strumenti standard per la gestione degli utenti per verificare quali utenti sono membri di questo gruppo. Come tutte le azioni di amministrazione, l'abilitazione o la disabilitazione della funzionalità con privilegi avanzati e l'aggiunta o la rimozione di utenti con privilegi avanzati vengono registrate e possono essere controllate tramite il comando [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) . Vedere la sezione successiva per un esempio. Quando gli utenti con privilegi avanzati eseguono la decrittografia dei file, questa azione viene registrata e può essere controllata con la [registrazione dell'utilizzo](log-analyze-usage.md).
+- Per visualizzare quali utenti e account di servizio vengono assegnati individualmente come utenti con privilegi avanzati, usare il cmdlet [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) . 
+
+- Per verificare se è configurato un gruppo di utenti con privilegi avanzati, usare il cmdlet [Get-AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) e gli strumenti standard per la gestione degli utenti per verificare quali utenti sono membri di questo gruppo. 
+
+- Come tutte le azioni di amministrazione, l'abilitazione o la disabilitazione della funzionalità con privilegi avanzati e l'aggiunta o la rimozione di utenti con privilegi avanzati vengono registrate e possono essere controllate tramite il comando [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) . Vedere ad esempio [il controllo di esempio per la funzionalità per utenti con privilegi avanzati](#example-auditing-for-the-super-user-feature).
+
+- Quando gli utenti con privilegi avanzati eseguono la decrittografia dei file, questa azione viene registrata e può essere controllata con la [registrazione dell'utilizzo](log-analyze-usage.md).
+
+    > [!NOTE]
+    > Mentre i log includono i dettagli relativi alla decrittografia, incluso l'utente che ha decrittografato il file, non si notano quando l'utente è un utente con privilegi avanzati. Usare i log con i cmdlet elencati sopra per raccogliere prima un elenco di utenti con privilegi avanzati che è possibile identificare nei log.
+    >
 
 - Se non è necessaria la funzionalità per utenti con privilegi avanzati per i servizi quotidiani, abilitare la funzionalità solo quando è necessario e disabilitarla nuovamente utilizzando il cmdlet [Disable-AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) .
 
@@ -87,9 +97,9 @@ Per maggiori informazioni su questi cmdlet, vedere [Uso di PowerShell con il cli
 
 Benché sia possibile usare il cmdlet Unprotect-RMSFile per decrittografare il contenuto protetto nei file PST, è consigliabile usare questo cmdlet in modo strategico nell'ambito del processo di eDiscovery. L'esecuzione di Unprotect-RMSFile con file di grandi dimensioni in un computer è un'attività che richiede molte risorse (memoria e spazio su disco) e le dimensioni massime del file supportate per questo cmdlet sono 5 GB.
 
-Idealmente, usare [Office 365 eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/ediscovery) per cercare ed estrarre i messaggi di posta elettronica protetti e gli allegati protetti in essi contenuti. La capacità degli utenti con privilegi avanzati viene integrata automaticamente con Exchange Online in modo che eDiscovery nel Centro sicurezza e conformità di Office 365 o nel Centro conformità Microsoft 365 possa cercare gli elementi crittografati prima di esportare o di decrittografare i messaggi di posta elettronica crittografati in fase di esportazione.
+Idealmente, usare [eDiscovery in Microsoft 365](/microsoft-365/compliance/ediscovery) per cercare ed estrarre i messaggi di posta elettronica protetti e l'allegato protetto nei messaggi di posta elettronica. La capacità degli utenti con privilegi avanzati viene integrata automaticamente con Exchange Online in modo che eDiscovery nel Centro sicurezza e conformità di Office 365 o nel Centro conformità Microsoft 365 possa cercare gli elementi crittografati prima di esportare o di decrittografare i messaggi di posta elettronica crittografati in fase di esportazione.
 
-Se non è possibile usare Office 365 eDiscovery, potrebbe essere disponibile un'altra soluzione di eDiscovery in grado di integrarsi con il servizio Azure Rights Management per un'analisi analoga dei dati. In alternativa, se la soluzione di eDiscovery non è in grado di leggere e decrittografare automaticamente il contenuto protetto, è comunque possibile usare questa soluzione in un processo in più passaggi che consente di eseguire Unprotect-RMSFile in modo più efficiente:
+Se non è possibile usare Microsoft 365 eDiscovery, è possibile che si disponga di un'altra soluzione eDiscovery che si integra con il servizio Azure Rights Management per un motivo analogo rispetto ai dati. In alternativa, se la soluzione di eDiscovery non è in grado di leggere e decrittografare automaticamente il contenuto protetto, è comunque possibile usare questa soluzione in un processo in più passaggi che consente di eseguire Unprotect-RMSFile in modo più efficiente:
 
 1. Esportare il messaggio di posta elettronica in questione in un file PST da Exchange Online o Exchange Server oppure dalla workstation in cui l'utente ha archiviato la posta elettronica.
 
@@ -100,4 +110,3 @@ Se non è possibile usare Office 365 eDiscovery, potrebbe essere disponibile un'
 4. Eseguire Unprotect-RMSFile nel secondo file PST per decrittografare il contenuto di questo file molto più piccolo. Dall'output, importare il file PST decrittografato nello strumento di individuazione.
 
 Per informazioni più dettagliate e altre indicazioni per l'esecuzione di eDiscovery su cassette postali e file PST, vedere il post di blog seguente: [Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216) (Azure Information Protection e processi di eDiscovery).
-

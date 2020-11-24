@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3c17a737266ceec6bb7e71d805e1a305f0b1c491
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 001cace1cdc3a9fd3e5cc1dd1a06a77215bd438c
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564320"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567980"
 ---
 # <a name="overview-of-rights-management-services-sdk-21"></a>Panoramica di Rights Management Services SDK 2,1
 
@@ -39,7 +39,7 @@ Di seguito sono riportati solo alcuni degli scenari in cui è possibile usare le
 -   I proprietari di una raccolta documenti online desiderano abilitare i diritti a visualizzare, stampare o modificare i documenti in base all'identità dell'utente.
 -   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno limitando la visualizzazione e la modifica dei privilegi a determinati utenti.
 
-Per altre informazioni sul server AD RMS, il client AD RMS e le relative funzionalità, vedere il contenuto del sito TechNet relativo alla [documentazione di AD RMS per i professionisti IT](https://TechNet.Microsoft.Com/library/cc771234.aspx).
+Per altre informazioni sul server AD RMS, il client AD RMS e le relative funzionalità, vedere il contenuto del sito TechNet relativo alla [documentazione di AD RMS per i professionisti IT](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10)).
 
 Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le relative implementazioni.
 
@@ -55,4 +55,4 @@ Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le rela
 
 * [Concetti di RMS](application-types.md)
 * [Operazioni preliminari](getting-started-with-ad-rms-2-0.md)
-* [Documentazione di AD RMS per i professionisti IT](https://technet.microsoft.com/library/cc771234.aspx)
+* [Documentazione di AD RMS per i professionisti IT](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10))

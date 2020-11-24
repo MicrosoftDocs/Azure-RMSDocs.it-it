@@ -1,17 +1,17 @@
 ---
 title: Classe TaskDispatcherDelegate
 description: 'Documenta la classe taskdispatcherdelegate:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b7cd2267b795540a8bb4035a695f5b34f0580b87
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 057ba0d4de58ab4dedf8d3e2f8b2a42b0e5f969a
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764290"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567032"
 ---
 # <a name="class-taskdispatcherdelegate"></a>Classe TaskDispatcherDelegate 
 Classe che definisce l'interfaccia per il dispatcher di attività dell'SDK MIP.
@@ -19,9 +19,9 @@ Classe che definisce l'interfaccia per il dispatcher di attività dell'SDK MIP.
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public void DispatchTask (const std:: String& taskId, std::\<Function void (\> ) Task)  |  Eseguire un'attività in un thread in background.
-public void DispatchTask (const std:: String& taskId, std::\<Function void (\> ) Task, int64_t delaySeconds)  |  Eseguire un'attività in un thread in background con il ritardo specificato.
-public void ExecuteTaskOnIndependentThread (const std:: String& taskId, std::\<Function void (\> ) Task)  |  Eseguire immediatamente un'attività su un thread indipendente.
+public void DispatchTask (const std:: String& taskId, std:: Function \<void()\> Task)  |  Eseguire un'attività in un thread in background.
+public void DispatchTask (const std:: String& taskId, std:: Function \<void()\> Task, Int64_t delaySeconds)  |  Eseguire un'attività in un thread in background con il ritardo specificato.
+public void ExecuteTaskOnIndependentThread (const std:: String& taskId, std:: Function \<void()\> Task)  |  Eseguire immediatamente un'attività su un thread indipendente.
 public bool CancelTask (const std:: String& taskId)  |  Annulla un'attività in background.
 public void CancelAllTasks ()  |  Annulla tutte le attività in background.
   

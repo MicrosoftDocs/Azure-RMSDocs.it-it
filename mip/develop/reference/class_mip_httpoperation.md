@@ -1,17 +1,17 @@
 ---
 title: Classe HttpOperation
 description: 'Documenta la classe httpoperation:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 09fac96f16bf18e72d6217842728d48244b9c412
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: ece0d76577747170e4328bc1d9bdabb0678e65a5
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762815"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566880"
 ---
 # <a name="class-httpoperation"></a>Classe HttpOperation 
 Interfaccia che descrive una singola operazione HTTP, implementata dall'app client quando si esegue l'override di HttpDelegate.
@@ -20,7 +20,7 @@ Interfaccia che descrive una singola operazione HTTP, implementata dall'app clie
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ottiene l'ID operazione.
-public std:: shared_ptr\<HttpResponse\> GetResponse ()  |  Ottenere la risposta, se disponibile.
+public std:: shared_ptr \<HttpResponse\> GetResponse ()  |  Ottenere la risposta, se disponibile.
 public bool annullato ()  |  Ottenere lo stato di annullamento dell'operazione.
   
 ## <a name="members"></a>Members
@@ -29,7 +29,7 @@ public bool annullato ()  |  Ottenere lo stato di annullamento dell'operazione.
 Ottiene l'ID operazione.
 
   
-**Restituisce**: ID operazione i cui [HttpRequest](class_mip_httprequest.md) e [HTTPRESPONSE](class_mip_httpresponse.md) corrispondenti avranno lo stesso ID
+**Restituisce**: ID operazione i cui HttpRequest e HttpResponse corrispondenti avranno lo stesso ID
   
 ### <a name="getresponse-function"></a>GetResponse (funzione)
 Ottenere la risposta, se disponibile.

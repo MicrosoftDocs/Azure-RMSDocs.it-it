@@ -4,7 +4,7 @@ description: Installare un Reader per documenti PDF etichettati per la classific
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/17/2020
+ms.date: 10/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,18 +14,18 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 56aac3e677ab835b0345394be014c1a803bd0b2e
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: e8cd7846159e2299d33b8b6533813ac8502140d3
+ms.sourcegitcommit: 2a72516a1f380adddd6501984b1989e3fa051976
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316723"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "95568425"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Quali lettori PDF sono supportati per i PDF protetti?
 
 I lettori PDF per i file PDF classificati e/o protetti consentono di aprire i file PDF crittografati che contengono informazioni riservate.
 
-La crittografia dei file PDF con [Azure Information Protection (AIP)](../what-is-information-protection.md) garantisce che utenti non autorizzati non possano leggere il contenuto del file e che anche gli utenti autorizzati non possano condividere schermate o screenshot che visualizzano il contenuto.
+La crittografia dei file PDF con [Azure Information Protection (AIP)](../what-is-information-protection.md) garantisce che utenti non autorizzati non possano leggere il contenuto del file.
 
 I lettori PDF protetti che supportano Azure Information Protection verificare che siano state concesse le autorizzazioni per aprire il documento e decrittografare anche il contenuto.
 
@@ -56,7 +56,7 @@ Questo standard viene usato per impostazione predefinita dai client AIP classico
 
 Adobe Acrobat Reader si integra con le soluzioni Information Protection Microsoft, ad esempio [Azure Information Protection](../what-is-information-protection.md) per offrire agli utenti un'esperienza semplificata e coerente per i file PDF classificati e/o protetti.
 
-Adobe Acrobat Reader con Microsoft Information Protection Integration è supportato per [Windows](protected-pdf-readers-windows.md) e [MacOS](protected-pdf-readers-mac.md).
+Adobe Acrobat Reader con Microsoft Information Protection Integration è supportato per [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) e [MacOS](#installing-a-protected-pdf-reader-for-windows-or-mac).
 
 Per ulteriori informazioni, vedere i post di Blog seguenti: 
 

@@ -12,12 +12,12 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 ms.custom: has-adal-ref
-ms.openlocfilehash: 05036616c77d559dc82a0334b99b548da724df18
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 1ce4499d20da066eddac8d01c29ef1b52ccea250
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971796"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567968"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
 
@@ -41,7 +41,7 @@ Le applicazioni di servizio forniscono funzionalità per proteggere le informazi
 
 ## <a name="powershell-guides"></a>Guide di PowerShell
 
-I cmdlet PowerShell, usati dagli amministratori di Azure Rights Management, sono utili anche per sviluppare e testare le applicazioni di servizio. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](/azure/information-protection/rms-client/client-admin-guide-powershell).
+I cmdlet PowerShell, usati dagli amministratori di Azure Rights Management, sono utili anche per sviluppare e testare le applicazioni di servizio. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 
 ## <a name="user-applications"></a>Applicazioni utente
 
@@ -51,7 +51,7 @@ La versione 4.2 è basata su client REST con API specifiche del sistema operativ
 ### <a name="user-application-development-guides"></a>Guide di sviluppo per le applicazioni utente
 
 - [Sviluppo dell'applicazione](developing-your-application.md)
-- [Controllo dell'applicazione](how-to-set-up-your-test-environment.md)
+- [Test dell'applicazione](how-to-set-up-your-test-environment.md)
 - [Distribuzione dell'applicazione](deploying-your-application.md)
 
 ### <a name="user-application-samples"></a>Esempi di applicazioni utente
@@ -64,11 +64,11 @@ La versione 4.2 è basata su client REST con API specifiche del sistema operativ
 
 Le guide seguenti illustrano i passaggi di configurazione specifici del sistema operativo per un ambiente di sviluppo di applicazioni usando strumenti comuni.
 
-[![installazione di iOS/OSX](../media/develop/ios-icon.png)](ios-sdk.md)
-installazione di[![Android](../media/develop/android-icon.png)](android-sdk.md)
-[![Windows Phone configurazione](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
-[![del servizio](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
-Windows configurazione di[![Linux](../media/develop/linux-icon.png)](linux-setup.md) installazione
+installazione di [ ![ iOS/OSX](../media/develop/ios-icon.png)](ios-sdk.md)installazione di 
+ [ ![ Android](../media/develop/android-icon.png)](android-sdk.md) 
+ [ ![ Windows Phone configurazione](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)del 
+ [ ![ servizio Windows](../media/develop/windows-icon.png)](install-the-rms-sdk.md)configurazione di 
+ [ ![ Linux](../media/develop/linux-icon.png)](linux-setup.md) installazione
 
 
 ## <a name="how-tos"></a>Procedure
@@ -86,7 +86,7 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 
 ### <a name="security-and-authentication"></a>Sicurezza e autenticazione
 
-- [Come configurare l'applicazione del servizio app per usare Azure Active Directory account di accesso](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Come configurare l'applicazione del servizio app per usare Azure Active Directory account di accesso](/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md)
 - [Configurare Azure RMS per l'autenticazione ADAL (servizio)](adal-auth.md)
 - [Procedura: Impostare la modalità di sicurezza dell'API (servizio)](setting-the-api-security-mode-api-mode.md)
@@ -107,7 +107,7 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 ## <a name="other-resources"></a>Altre risorse
 
 - [Guida per le procedura di sicurezza consigliate](security-guidelines.md)
-- [Domande frequenti per Azure Information Protection](/azure/information-protection/faqs)
+- [Domande frequenti per Azure Information Protection](../faqs.md)
 
 ### <a name="support-articles"></a>Articoli del supporto tecnico
 
@@ -117,28 +117,28 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 
 ### <a name="message-protocol-and-file-formats"></a>Protocolli e formati file dei messaggi
 
-- [Protocollo Client-to-Server](https://msdn.microsoft.com/library/cc243191.aspx)
-- [Protocollo Rights-Managed Email Object](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
-- [Formato di file Compound File Binary](https://msdn.microsoft.com/library/dd942138.aspx)
+- [Protocollo Client-to-Server](/openspecs/windows_protocols/ms-rmpr/d8ed4b1e-e605-4668-b173-6312cba6977e)
+- [Protocollo Rights-Managed Email Object](/openspecs/exchange_server_protocols/ms-oxormms/a121dda4-48f3-41f8-b12f-170f533038bb)
+- [Formato di file Compound File Binary](/openspecs/windows_protocols/ms-cfb/53989ce4-7b05-4f8d-829b-d08d6148375b)
 
 #### <a name="rights-managed-email-message"></a>Messaggio di posta elettronica gestito da diritti
 
-- [Formato di file msg (parte 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
-- [Formato di file msg (parte 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+- [Formato di file msg (parte 1)](/archive/blogs/openspecification/msg-file-format-part-1)
+- [Formato di file msg (parte 2)](/archive/blogs/openspecification/msg-file-format-rights-managed-email-message-part-2)
 
-### <a name="api-reference"></a>API (riferimento)
+### <a name="api-reference"></a>Informazioni di riferimento sulle API
 
-- [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/hh535292.aspx)
-  - [Codici di errore di Windows SDK](https://msdn.microsoft.com/library/hh535248.aspx)
-- [Informazioni di riferimento sulle API per Windows Phone e Windows Store](https://msdn.microsoft.com/library/dn891914.aspx)
-- [Informazioni di riferimento sulle API di iOS/OSX](https://msdn.microsoft.com/library/dn758306.aspx)
-- [Informazioni di riferimento sulle API Android](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Informazioni di riferimento sulle API di Windows](/previous-versions/windows/desktop/msipc/msipc-reference)
+  - [Codici di errore di Windows SDK](/previous-versions/windows/desktop/msipc/error-codes)
+- [Informazioni di riferimento sulle API per Windows Phone e Windows Store](/previous-versions/windows/desktop/msipcthin2/winrt)
+- [Informazioni di riferimento sulle API di iOS/OSX](/previous-versions/windows/desktop/msipcthin2/ios)
+- [Informazioni di riferimento sulle API Android](/previous-versions/windows/desktop/msipcthin2/android)
 - [Informazioni di riferimento sulle API di Linux](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### <a name="previous-versions"></a>Versioni precedenti
 
-- [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) è la prima versione di RMS SDK.
-- [Strumento di scripting di AD RMS](https://msdn.microsoft.com/library/bb968797.aspx) è uno strumento di amministrazione per un'installazione di AD RMS.
+- [AD RMS SDK](/previous-versions/windows/desktop/adrms_sdk/active-directory-rights-management-services-sdk-portal) è la prima versione di RMS SDK.
+- [Strumento di scripting di AD RMS](/previous-versions/windows/desktop/adrms_script/adrms-script-portal) è uno strumento di amministrazione per un'installazione di AD RMS.
 
 ### <a name="see-also"></a>Vedere anche
 

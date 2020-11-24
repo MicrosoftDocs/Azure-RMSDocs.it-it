@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f4039b1c74ae8b341c5afb13a02a743267f00930
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: a3b81890343cd390a42e17dee24708af4367bd8a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298426"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568005"
 ---
 # <a name="aip-deployment-roadmap-for-classification-labeling-and-protection"></a>Roadmap per la distribuzione di AIP per la classificazione, l'assegnazione di etichette e la protezione
 
@@ -42,7 +42,7 @@ Questa roadmap è supportata sia per le etichette AIP create con il client class
 
 ## <a name="deployment-process"></a>Processo di distribuzione
 
-Eseguire questa procedura:
+Seguire questa procedura:
 
 1. [Verificare la sottoscrizione e assegnare licenze utente](#confirm-your-subscription-and-assign-user-licenses)
 1. [Preparare il tenant per l'uso di Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -64,13 +64,13 @@ Assegnare quindi le licenze da tale sottoscrizione a ogni utente dell'organizzaz
 > [!IMPORTANT]
 > Non assegnare manualmente le licenze utente dalla sottoscrizione gratuita di RMS per utenti singoli e non usare questa licenza per amministrare il servizio Rights Management di Azure per l'organizzazione. 
 >
-> Queste licenze vengono visualizzate come **Rights Management Adhoc** (Ad-hoc per Rights Manager) nell'interfaccia di amministrazione di Microsoft 365 e come **RIGHTSMANAGEMENT_ADHOC** quando si esegue il cmdlet di PowerShell per Azure AD, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). 
+> Queste licenze vengono visualizzate come **Rights Management Adhoc** (Ad-hoc per Rights Manager) nell'interfaccia di amministrazione di Microsoft 365 e come **RIGHTSMANAGEMENT_ADHOC** quando si esegue il cmdlet di PowerShell per Azure AD, [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)). 
 >
 > Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Information Protection](./rms-for-individuals.md).
 > 
 ## <a name="prepare-your-tenant-to-use-azure-information-protection"></a>Preparare il tenant per l'uso di Azure Information Protection
 
-Prima di iniziare a usare Azure Information Protection, assicurarsi di avere gli account utente e i gruppi in Office 365 o Azure Active Directory che AIP possa usare per autenticare e autorizzare gli utenti.
+Prima di iniziare a usare Azure Information Protection, assicurarsi di disporre di account utente e gruppi in Microsoft 365 o Azure Active Directory che AIP possa usare per autenticare e autorizzare gli utenti.
 
 Se necessario, creare questi account e gruppi o sincronizzarli dalla directory locale. 
 
@@ -106,7 +106,7 @@ Determinare se si intende usare il client AIP classico o AIP Unified Labeling cl
     Per ulteriori informazioni sulla configurazione delle etichette e delle impostazioni dei criteri, vedere:
 
     - **Client classico:** [configurazione dei criteri di Azure Information Protection](./configure-policy.md)
-    - Client per l'assegnazione di etichette **unificata:** [informazioni sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+    - Client per l'assegnazione di etichette **unificata:** [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels)
     
 1. **Distribuire il client**
 
@@ -180,19 +180,19 @@ Per preparare la protezione dei dati, seguire questa procedura:
 
 ## <a name="configure-labels-and-settings-applications-and-services-for-data-protection"></a>Configurare etichette e impostazioni, applicazioni e servizi per la protezione dei dati
 
-Eseguire questa procedura:
+Seguire questa procedura:
 
 1. **Aggiornare le etichette per applicare la protezione**
     
     Usare una delle guide seguenti, a seconda del client:
 
     - Distribuzione classica: [come configurare un'etichetta per la protezione Rights Management](./configure-policy-protection.md)
-    - Assegnazione di etichette unificate: [limitare l'accesso al contenuto usando la crittografia in etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+    - Assegnazione di etichette unificate: [limitare l'accesso al contenuto usando la crittografia in etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels)
     
     > [!IMPORTANT]
     > Gli utenti possono applicare le etichette in Outlook che applicano la protezione Rights Management anche se Exchange non è configurato per Information Rights Management (IRM). 
     > 
-    > Tuttavia, finché Exchange non sarà configurato per IRM o per [Office 365 Message Encryption con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), l'organizzazione non potrà usufruire in modo completo della protezione di Azure Rights Management con Exchange. Questa configurazione aggiuntiva è inclusa nell'elenco seguente, 2 per Exchange Online e 5 per Exchange locale. 
+    > Tuttavia, fino a quando Exchange non viene configurato per IRM o [Microsoft 365 crittografia dei messaggi con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), l'organizzazione non otterrà la funzionalità completa dell'uso della protezione Rights Management di Azure con Exchange. Questa configurazione aggiuntiva è inclusa nell'elenco seguente, 2 per Exchange Online e 5 per Exchange locale. 
     > 
 
 1. **Configurare le applicazioni e i servizi di Office**
@@ -216,16 +216,16 @@ Eseguire questa procedura:
     - **Client classico:** [uso di PowerShell con il client di Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
     - **Client per l'assegnazione di etichette unificata:** [uso di PowerShell con il client di etichettatura unificato di Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md)
 
-    Per gli archivi dati basati su cloud, usare [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+    Per gli archivi dati basati su cloud, usare [Azure Cloud App Security](/cloud-app-security). 
 
     > [!TIP]
-    > Sebbene la classificazione e la protezione dei file esistenti in blocco non sia uno dei principali casi d'uso per cloud app Security, le [soluzioni alternative documentate](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) possono aiutare a ottenere i file classificati e protetti.
+    > Sebbene la classificazione e la protezione dei file esistenti in blocco non sia uno dei principali casi d'uso per cloud app Security, le [soluzioni alternative documentate](/cloud-app-security/azip-integration#enable-azure-information-protection) possono aiutare a ottenere i file classificati e protetti.
 
 6. **Distribuire il connettore per le raccolte protette con IRM in SharePoint Server e i messaggi protetti con IRM per Exchange locale**
     
     Se si dispone di SharePoint ed Exchange locale e si vogliono usare le funzionalità di Information Rights Management (IRM), installare e configurare il connettore di Rights Management. 
 
-    Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](./deploy-rms-connector.md).
+    Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
 
 ## <a name="use-and-monitor-your-data-protection-solutions"></a>Usare e monitorare le soluzioni di protezione dei dati
 

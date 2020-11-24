@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc4c86c020427066d519fec4ae6363f131ce64c2
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: d22a79a3968e164e2bec8c3852c4ab0c181e5ef8
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810261"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567800"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -38,21 +38,21 @@ Attualmente sono disponibili due client di Azure Information Protection per Wind
 
 Si consiglia di eseguire il test con il client di etichettatura unificata se il set di funzionalità e le funzionalità correnti soddisfano i requisiti aziendali. In caso contrario, o se sono state configurate etichette nel portale di Azure di cui non è ancora stata [eseguita la migrazione nell'archivio Unified Labeling](configure-policy-migrate-labels.md), usare il client classico. Per altre informazioni, inclusa una tabella per il confronto di funzioni e funzionalità, vedere [Scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
-Il client Azure Information Protection è supportato solo in Windows. Per classificare e proteggere documenti e messaggi di posta elettronica in iOS, Android, macOS e sul Web, usare le [app di Office che supportano l'assegnazione di etichette incorporata](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+Il client Azure Information Protection è supportato solo in Windows. Per classificare e proteggere documenti e messaggi di posta elettronica in iOS, Android, macOS e sul Web, usare le [app di Office che supportano l'assegnazione di etichette incorporata](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
 
 ## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Dove è possibile reperire informazioni sull'uso delle etichette di riservatezza per le app di Office?
 
 Vedere le risorse di documentazione seguenti:
 
-- [Informazioni sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+- [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) 
 
-- [Usare le etichette di riservatezza nelle app di Office](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Usare le etichette di riservatezza nelle app di Office](/microsoft-365/compliance/sensitivity-labels-office-apps)
 
-- [Abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
+- [Abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
 
 - [Applicare le etichette di riservatezza ai documenti e ai messaggi di posta elettronica in Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
 
-Per informazioni su altri scenari che supportano le etichette di riservatezza, vedere [scenari comuni per le etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels).
+Per informazioni su altri scenari che supportano le etichette di riservatezza, vedere [scenari comuni per le etichette di riservatezza](/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels).
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Un file può avere più di una classificazione?
 

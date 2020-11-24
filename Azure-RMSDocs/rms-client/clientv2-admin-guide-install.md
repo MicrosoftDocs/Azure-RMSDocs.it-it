@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 38e2998244edc7170263741b128885779e975c6e
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 26cb50eb6532eccee86eb28313c1cd1ac1751949
+ms.sourcegitcommit: ed3745bff0f0d4883200a310a0b63f7794149330
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447141"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "95568418"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -24,7 +24,7 @@ ms.locfileid: "89447141"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Prima di installare il client Azure Information Protection Unified Labeling nella rete aziendale, verificare che i computer dispongano delle versioni e delle applicazioni del sistema operativo necessarie per Azure Information Protection: [requisiti per Azure Information Protection](../requirements.md). 
 
@@ -43,31 +43,31 @@ I prerequisiti seguenti per il client di assegnazione unificata di AIP sono in a
 |**Assistente per l'accesso ai Microsoft Online Services 7.250.4303.0**     |   I computer che eseguono Office 2010 richiedono l'assistente per l'accesso ai Microsoft Online Services versione 7.250.4303.0, inclusa nell'installazione del client. </br></br>Se si dispone di una versione più recente dell'assistente per l'accesso, disinstallarla prima di installare il client di Azure Information Protection Unified labeling. </br></br>Controllare, ad esempio, la versione e disinstallare l'assistente per l'accesso tramite il **Pannello di controllo**  >  **programmi e funzionalità**  >  **Disinstalla o modifica programma**.      |
 |**KB 4482887**     | Solo per Windows 10 versione 1809, per le build del sistema operativo precedenti alla build 17763.348, installare [1 marzo 2019 - KB4482887 (build sistema operativo 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) per garantire che la barra di Information Protection venga visualizzata correttamente nelle applicazioni Office. </br></br>Questo aggiornamento non è necessario se si usa Office 365 1902 o versione successiva.        |
 |**Autorizzazioni di amministratore**| L'installazione del client Azure Information Protection Unified Labeling richiede autorizzazioni amministrative locali.| 
-|**Disabilitare la protezione dagli exploit**   |Il client AIP non è supportato nei computer in cui è abilitata la [protezione dagli exploit](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) . Assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-installing-the-aip-client) prima di installare il client AIP.  |
+|**Disabilitare la protezione dagli exploit**   |Il client AIP non è supportato nei computer in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) . Assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-installing-the-aip-client) prima di installare il client AIP.  |
 |||
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>Configurare i criteri di gruppo per impedire la disabilitazione di AIP
 
 Per le versioni di Office 2013 e successive, è consigliabile configurare i criteri di gruppo per assicurarsi che il componente aggiuntivo **Microsoft Azure Information Protection** per le applicazioni di Office sia sempre abilitato.  Senza questo componente aggiuntivo, gli utenti non saranno in grado di assegnare etichette ai documenti o ai messaggi di posta elettronica nelle applicazioni di Office.   
 
-- **Per Outlook:** Utilizzare l'impostazione di criteri di gruppo documentata nel [controllo amministratore di sistema sui componenti](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)aggiuntivi.
-- **Per Word, Excel e PowerPoint:** Usare l' **elenco delle impostazioni di criteri di gruppo dei componenti aggiuntivi gestiti** documentati in [nessun componente aggiuntivo caricato a causa delle impostazioni di criteri di gruppo per i programmi Office 2013 e Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). . 
+Per Word, Excel, PowerPoint e Outlook, usare l' **elenco delle impostazioni di criteri di gruppo dei componenti aggiuntivi gestiti** documentati in [nessun componente aggiuntivo caricato a causa delle impostazioni di criteri di gruppo per i programmi Office 2013 e Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
 
-    Specificare i seguenti identificatori programmatici (ProgID) per AIP e impostare l'opzione su **1: il componente aggiuntivo è sempre abilitato**.
+Specificare i seguenti identificatori programmatici (ProgID) per AIP e impostare l'opzione su **1: il componente aggiuntivo è sempre abilitato**.
 
-    |Applicazione  |ProgID  |
-    |---------|---------|
-    |Word     |     `MSIP.WordAddin`    |
-    |Excel     |  `MSIP.ExcelAddin`       |
-    |PowerPoint     |   `MSIP.PowerPointAddin`      |
-    | | | 
+|Applicazione  |ProgID  |
+|---------|---------|
+|Word     |     `MSIP.WordAddin`    |
+|Excel     |  `MSIP.ExcelAddin`       |
+|PowerPoint     |   `MSIP.PowerPointAddin`      |
+|Outlook | `MSIP.OutlookAddin` |
+| | | 
 
 ## <a name="applications"></a>APPLICAZIONI
 
 Il client di assegnazione di etichette unificato Azure Information Protection può etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office Word, Excel, PowerPoint e Outlook delle edizioni di Office seguenti:
 
-- App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365)
-- Office 365 ProPlus
+- App di Office versione minima 1805, Build 9330,2078 from Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente viene assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365)
+- Microsoft 365 Apps for enterprise
 - Office Professional Plus 2019
 - Office Professional Plus 2016
 - Office Professional Plus 2013 con Service Pack 1
@@ -75,13 +75,13 @@ Il client di assegnazione di etichette unificato Azure Information Protection pu
 
 Le altre edizioni di Office, ad esempio **standard**, non possono proteggere documenti e messaggi di posta elettronica utilizzando un servizio Rights Management. Per queste edizioni, Azure Information Protection è supportato solo per l' **etichettatura** . Di conseguenza, le etichette che applicano la protezione non vengono visualizzate agli utenti sul pulsante Azure Information Protection sensibilità o sulla barra.
 
-Per informazioni sulle edizioni di Office che supportano il servizio di protezione, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](https://docs.microsoft.com/azure/information-protection/requirements-applications).
+Per informazioni sulle edizioni di Office che supportano il servizio di protezione, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](../requirements-applications.md).
 
-### <a name="office-features-and-capabilities-not-supported"></a>Funzionalità e funzionalità di Office non supportate
+### <a name="office-features-and-capabilities-not-supported"></a>Funzionalità e capacità di Office non supportate
 
 Il client di Azure Information Protection Unified Labeling non supporta più versioni di Office nello stesso computer o il cambio di account utente in Office.
 
-La funzionalità di Unione di Office mail non è supportata con alcuna funzionalità Azure Information Protection.
+La funzionalità di stampa unione di Office non è supportata con alcuna funzionalità di Azure Information Protection.
 
 ## <a name="options-to-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Opzioni per installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -145,7 +145,7 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>Per identificare il valore da specificare per il parametro ServiceLocation
 
-1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) e specificare le credenziali di amministratore per connettersi al servizio Rights Management di Azure. Quindi eseguire [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration). 
+1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AipService](/powershell/module/aipservice/connect-aipservice) e specificare le credenziali di amministratore per connettersi al servizio Rights Management di Azure. Quindi eseguire [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration). 
  
     Se il modulo PowerShell per il servizio Rights Management di Azure non è già stato installato, vedere [installazione del modulo PowerShell AIPService](../install-powershell.md).
 
@@ -164,7 +164,7 @@ Esempio per installare il client in modo invisibile all'utente per Office 2010 e
 
 Per la distribuzione centrale, usare le informazioni seguenti specifiche per la versione di installazione con estensione msi del client Azure Information Protection Unified labeling. 
 
-Se si usa Intune per il metodo di distribuzione del software, usare queste istruzioni insieme a quelle incluse in [Aggiungere app con Microsoft Intune](/intune/deploy-use/add-apps).
+Se si usa Intune per il metodo di distribuzione del software, usare queste istruzioni insieme a quelle incluse in [Aggiungere app con Microsoft Intune](/mem/intune/apps/apps-add).
 
 1. Scaricare la versione MSI della Azure Information Protection Unified Labeling client (AzInfoProtection_UL) dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
     
@@ -202,4 +202,3 @@ Ora che è stato installato il client di etichettatura Azure Information Protect
 - [Tipi di file supportati](clientv2-admin-guide-file-types.md)
 
 - [Comandi di PowerShell](clientv2-admin-guide-powershell.md)
-

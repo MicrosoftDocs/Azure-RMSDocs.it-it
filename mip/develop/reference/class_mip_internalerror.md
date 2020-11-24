@@ -1,17 +1,17 @@
 ---
 title: Classe InternalError
 description: 'Documenta la classe InternalError:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 88fdcf356be109fe482b5c7a4f01ab08bc83748c
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 873e701a8df9366678e7bcf218fa19b4da5738a5
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762245"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566867"
 ---
 # <a name="class-internalerror"></a>Classe InternalError 
 Errore interno. Questo errore viene generato quando un evento imprevisto si verifica durante l'esecuzione.
@@ -21,4 +21,4 @@ Errore interno. Questo errore viene generato quando un evento imprevisto si veri
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Members
-_Non ancora documentato._
+Non ancora documentato.

@@ -1,17 +1,17 @@
 ---
 title: 'Classe PolicyProfile:: Observer'
 description: "Documenta la classe policyprofile:: Observer dell'SDK Microsoft Information Protection (MIP)."
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5fc8dab4c74b613ff199d16c7b39205476b87249
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 35768afacc22202721fb093c91e4a28a02a99d65
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760618"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567374"
 ---
 # <a name="class-policyprofileobserver"></a>Classe PolicyProfile:: Observer 
 Interfaccia Observer per il recupero delle notifiche degli eventi correlati al profilo da parte dei client.
@@ -20,17 +20,17 @@ Tutti gli errori ereditano da mip::Error. I client non devono eseguire il callba
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess (const std::\<shared_ptr\> PolicyProfile& profile, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
-public virtual void OnLoadFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
-public virtual void OnListEnginesSuccess (const std::\<vector std::\> String& engineIds, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
-public virtual void OnListEnginesFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
-public virtual void OnUnloadEngineSuccess (const std::\<shared_ptr\> void& context)  |  Viene chiamato quando un motore è stato scaricato correttamente.
-public virtual void OnUnloadEngineFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
-public virtual void OnAddEngineSuccess (const std::\<shared_ptr\> PolicyEngine& Engine, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
+public virtual void OnLoadSuccess(const std::shared_ptr\<PolicyProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
+public virtual void OnListEnginesSuccess (const std:: Vector \<std::string\>& engineIds, const std:: shared_ptr \<void\>& context)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
+public virtual void OnUnloadEngineSuccess(const std::shared_ptr\<void\>& context)  |  Viene chiamato quando un motore è stato scaricato correttamente.
+public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
+public virtual void OnAddEngineSuccess(const std::shared_ptr\<PolicyEngine\>& engine, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
 public virtual void OnAddEngineStarting (bool requiresPolicyFetch)  |  Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore devono essere recuperati dal server o se possono essere creati dai dati memorizzati nella cache locale.
-public virtual void OnAddEngineFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
-public virtual void OnDeleteEngineSuccess (const std::\<shared_ptr\> void& context)  |  Viene chiamato quando un motore è stato eliminato correttamente.
-public virtual void OnDeleteEngineFailure (const std:: exception_ptr& Error, const std:\<:\> shared_ptr void& context)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Viene chiamato quando un motore è stato eliminato correttamente.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Viene chiamato quando i criteri vengono modificati per il motore con l'ID specificato o quando i tipi di riservatezza personalizzati caricati sono stati modificati.
   
 ## <a name="members"></a>Members

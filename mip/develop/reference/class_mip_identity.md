@@ -1,17 +1,17 @@
 ---
 title: Identità della classe
 description: 'Documents the Identity:: undefined Class of the Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 1b1dbbe146832773613124917c1ea6d43f5cf13a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: ae89ed32a48deae7132bc65adabf86f7fb63ffe1
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762372"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566872"
 ---
 # <a name="class-identity"></a>Identità della classe 
 Astrazione per Identity.

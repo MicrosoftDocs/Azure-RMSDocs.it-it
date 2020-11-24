@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: ca7c845b01d6aaf592592d7d57b062619c8a38ee
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 76bbfce88fb35241ee5180221267e83a121482b4
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447107"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568034"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: visualizzare i file protetti con il client di Azure Information Protection Unified Labeling
 
@@ -24,7 +24,7 @@ ms.locfileid: "89447107"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 
@@ -49,7 +49,7 @@ Se tuttavia si usa un dispositivo iOS o Android, è possibile usare l'app di Azu
 
 Prima di poter visualizzare il file protetto, il servizio Rights Management usato per proteggere il file deve prima di tutto verificare che siano presenti le autorizzazioni necessarie per la visualizzazione del file. Il servizio esegue tale controllo verificando il nome utente e la password. In alcuni casi, le credenziali possono essere memorizzate nella cache e non verrà visualizzato un messaggio che richiede di eseguire l'accesso. In altri casi, verrà richiesto di immettere le credenziali.
 
-Se l'organizzazione non può mettere a disposizione dell'utente un account basato sul cloud (per Office 365 o Azure) e non usa una versione locale equivalente (AD RMS), sono disponibili due opzioni:
+Se l'organizzazione non ha un account basato sul cloud per l'uso (per Microsoft 365 o Azure) e non usa una versione locale equivalente (AD RMS), sono disponibili due opzioni:
 
 - Se il messaggio di posta elettronica ricevuto è protetto, seguire le istruzioni per accedere tramite il provider di identità basato su social network (ad esempio Google per un account Gmail) o richiedere un passcode monouso.
 
@@ -68,7 +68,7 @@ Se l'organizzazione non può mettere a disposizione dell'utente un account basat
 4. Per aprire altri file protetti, è possibile visualizzarli direttamente nel visualizzatore usando l'opzione **Apri**. Il file selezionato sostituisce il file originale nel visualizzatore. 
 
 > [!TIP]
-> Se il file protetto non si apre e nel sistema è installato il client di Azure Information Protection completo, provare con l'opzione **Ripristina le impostazioni**. Per accedere a questa opzione, da un'app di Office selezionare il pulsante **Sensitivity (sensibilità** ) > le impostazioni della **Guida e**della  >  **reimpostazione**del feedback. 
+> Se il file protetto non si apre e nel sistema è installato il client di Azure Information Protection completo, provare con l'opzione **Ripristina le impostazioni**. Per accedere a questa opzione, da un'app di Office selezionare il pulsante **Sensitivity (sensibilità** ) > le impostazioni della **Guida e** della  >  **reimpostazione** del feedback. 
 > 
 > [Altre informazioni sull'opzione Ripristina le impostazioni](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

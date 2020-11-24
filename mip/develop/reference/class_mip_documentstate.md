@@ -1,17 +1,17 @@
 ---
 title: Classe DocumentState
 description: 'Documenta la classe documentstate:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 674e43b89a43fe90fa1fb38fb7c6d1d51a7326e0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: ad1c99a76c3078c86ec80a4ec6e1cc7d244cbbeb
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763322"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567008"
 ---
 # <a name="class-documentstate"></a>Classe DocumentState 
   
@@ -20,13 +20,13 @@ ms.locfileid: "81763322"
 --------------------------------|---------------------------------------------
 public std::string GetContentIdentifier() const  |  Ottiene la descrizione del contenuto che descrive il documento. esempio per un file: [percorso\nomefile] esempio per un messaggio di posta elettronica: [Subject: sender].
 public virtual DataState GetDataState () const  |  Ottiene lo stato del contenuto mentre l'applicazione interagisce con esso.
-public std:: Vector\<MetadataEntry\> GetContentMetadata (const std::\<vector std::\> String& names, const std\<:: Vector STD\> :: String& namePrefixes) const  |  Ottiene gli elementi dei metadati dal contenuto.
-public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  Ottiene il descrittore di protezione.
+public std:: Vector \<MetadataEntry\> GetContentMetadata (const std:: vector \<std::string\>& names, const std:: Vector \<std::string\>& namePrefixes) const  |  Ottiene gli elementi dei metadati dal contenuto.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Ottiene il descrittore di protezione.
 public ContentFormat GetContentFormat() const  |  Ottiene il formato del contenuto.
-public virtual unsigned int GetContentMetadataVersion () const  |  Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.
-public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std::\<vector std::\<shared_ptr\> \> ClassificationRequest &) const  |  Restituisce una mappa dei risultati della classificazione.
-public virtual std:: Map\<std:: String, std:: String\> GetAuditMetadata () const  |  Restituisce una mappa delle coppie chiave-valore di controllo specifiche dell'applicazione.
-public virtual std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetLastModifiedTime () const  |  Restituisce un punto di ora all'Ultima modifica apportata al documento.
+public virtual MetadataVersion GetContentMetadataVersion () const  |  Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.
+public virtual std:: shared_ptr \<ClassificationResults\> GetClassificationResults (const std:: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Restituisce una mappa dei risultati della classificazione.
+public virtual std:: Map \<std::string, std::string\> GetAuditMetadata () const  |  Restituisce una mappa delle coppie chiave-valore di controllo specifiche dell'applicazione.
+public virtual std:: Chrono:: time_point \<std::chrono::system_clock\> GetLastModifiedTime () const  |  Restituisce un punto di ora all'Ultima modifica apportata al documento.
   
 ## <a name="members"></a>Members
   

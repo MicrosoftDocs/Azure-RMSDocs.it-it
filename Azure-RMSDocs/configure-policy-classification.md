@@ -4,19 +4,19 @@ description: Le condizioni per un'etichetta consentono di assegnare automaticame
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e760ae71b07c72dc761e51c9ebc07bb52c5b006c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 0b75dd62f4910a2416806e7b0e8a8682e99fe102
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047797"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568179"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -86,7 +86,7 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
 4. Nel riquadro **condizione** selezionare tipi di **informazioni** se si vuole usare una condizione predefinita oppure **personalizzata** se si vuole specificare il proprio:
     - Per **Tipi di informazioni** selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
-        I tipi di informazioni usano il rilevamento di modelli e i tipi di informazioni riservate della prevenzione perdita dei dati (DLP) di Office 365. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per altre informazioni, vedere [Elementi cercati dai tipi di informazioni riservate](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) nella documentazione di Office 365.
+        I tipi di informazioni usano i tipi di informazioni di riservatezza del Microsoft 365 di prevenzione della perdita dei dati e il rilevamento dei modelli. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per ulteriori informazioni, vedere la [ricerca dei tipi di informazioni riservate](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) dalla documentazione Microsoft 365.
         
         L'elenco dei tipi di informazioni selezionabili nel portale di Azure viene aggiornato periodicamente per includere i nuovi tipi aggiunti a DLP di Office. L'elenco esclude tuttavia i tipi di informazioni riservate specificati dall'utente e caricati come pacchetto di regole nel Centro sicurezza e conformità di Office 365.
         
@@ -97,7 +97,7 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
     
     - Per **Custom** (Personalizzata), specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
-        Le espressioni regolari usano i criteri di espressione regolare di Office 365. Per informazioni su come specificare espressioni regolari per le condizioni personalizzate, vedere la seguente versione specifica della [sintassi delle espressioni regolari Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) da Boost.
+        Le espressioni regolari usano i criteri di espressione regolare di Office 365. Per informazioni su come specificare espressioni regolari per le condizioni personalizzate, vedere la seguente versione specifica della [sintassi delle espressioni regolari Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) da Boost. Le espressioni regolari personalizzate devono essere conformi alla [documentazione di .NET](/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net). Inoltre, il carattere di escape Perl 5 usato per specificare Unicode (il formato \x{# # # #...}, dove # # # #... è una serie di cifre esadecimali) **non** supportata.
         
 5. Decidere se modificare i valori **Numero minimo di occorrenze** e **Conta solo le occorrenze con valori univoci**, quindi selezionare **Salva**. 
     

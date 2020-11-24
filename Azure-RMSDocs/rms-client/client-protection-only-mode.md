@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 94fc1ee1613151011fe574ff45bb867f7b6a2d91
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a91aab5d0d12744fb782bac331cf4b3b4bbc2589
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047338"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568106"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guida dell'utente: Modalità di sola protezione per il client Azure Information Protection
 
@@ -32,7 +32,7 @@ Quando il client Azure Information Protection non dispone di etichette per class
 
 La modalità di sola protezione viene eseguita negli scenari seguenti:
 
-- L'organizzazione non ha una sottoscrizione per Azure Information Protection che include le funzionalità di classificazione ed etichettatura, ma ha un abbonamento a Office 365 che include la protezione dati con il servizio Azure Rights Management. 
+- L'organizzazione non ha una sottoscrizione per Azure Information Protection che include funzionalità di classificazione e assegnazione di etichette, ma dispone di una sottoscrizione per Microsoft 365 che include la protezione dei dati tramite il servizio Rights Management di Azure. 
     
     - È possibile usare il client Azure Information Protection per proteggere i file e visualizzare i file protetti. Non è possibile classificare o etichettare documenti e messaggi di posta elettronica.
 
@@ -59,7 +59,7 @@ La modalità di sola protezione viene eseguita negli scenari seguenti:
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Attività supportate per la modalità di sola protezione
 
-- Proteggere (e rimuovere la protezione) documenti e messaggi di posta elettronica dalle app di Office, usando la funzionalità Office Information Rights Management (IRM): ad esempio: fare clic su **file**  >  **informazioni**  >  **Proteggi documento**  >  **limita accesso**. Per altre informazioni, vedere [Uso della protezione delle informazioni con Office 365, Office 2019, Office 2016 o Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
+- Proteggere (e rimuovere la protezione) documenti e messaggi di posta elettronica dalle app di Office, usando la funzionalità Office Information Rights Management (IRM): ad esempio: fare clic su **file**  >  **informazioni**  >  **Proteggi documento**  >  **limita accesso**. Per altre informazioni, vedere [Uso della protezione delle informazioni con Office 365, Office 2019, Office 2016 o Office 2013](../help-users.md#using-information-protection-with-office365-office-2019-office-2016-or-office2013).
 
 - Proteggere i file (e rimuovere la protezione) usando Esplora file di Windows: fare clic con il pulsante destro del mouse su uno o più file o su una cartella > **Classifica e proteggi**. Per applicare la protezione configurata dall'amministratore, nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Seleziona modello** e scegliere uno dei modelli disponibili.
 

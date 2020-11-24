@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c4b450eb1356eb36bc7b3c18573146985e5c346d
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: fc6a8cd4e891e007c9cf23d5dcb9f2381e068ac8
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952981"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568124"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -74,7 +74,7 @@ Se si usa AD RMS e si vuole passare ad Azure Information Protection, vedere [Mig
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>È consigliabile distribuire il client Azure Information Protection?
 
-Distribuire il client di Azure Information Protection se non si usano le [etichette di riservatezza nel centro sicurezza & conformità di Office 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) , ma si usano invece Azure Information Protection etichette scaricate da Azure e si verifica una delle condizioni seguenti:
+Distribuire il client di Azure Information Protection se non si usano le [etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) in Microsoft 365 ma usando le etichette Azure Information Protection scaricate da Azure e si applica una delle seguenti condizioni:
 
 - Si vuole classificare (e, facoltativamente, proteggere) documenti e messaggi di posta elettronica selezionando etichette dalle applicazioni di Office (Word, Excel, PowerPoint, Outlook).
 
@@ -143,21 +143,21 @@ L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eli
     
     Per le reti aziendali, queste impostazioni vengono in genere configurate tramite Criteri di gruppo e in questo caso vengono automaticamente riapplicate al momento dell'aggiornamento dei Criteri di gruppo nel computer. Potrebbero essere tuttavia presenti impostazioni configurate una sola volta tramite script o manualmente. In questi casi, è necessario intervenire per riconfigurare queste impostazioni. Ad esempio, è possibile che i computer eseguano un script una sola volta per configurare le impostazioni per il reindirizzamento ad Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio. Dopo aver reimpostato il client, il computer deve eseguire nuovamente lo script.
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
 - L'utente connesso viene disconnesso.
 
 #### <a name="client-status-section"></a>Sezione **Stato del client**
 
-Usare il valore di **Connessione effettuata come** per verificare se il nome utente visualizzato identifica l'account da usare per l'autenticazione di Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory. L'account deve anche appartenere a un tenant configurato per Azure Information Protection.
+Usare il valore di **Connessione effettuata come** per verificare se il nome utente visualizzato identifica l'account da usare per l'autenticazione di Azure Information Protection. Questo nome utente deve corrispondere a un account utilizzato per Microsoft 365 o Azure Active Directory. L'account deve anche appartenere a un tenant configurato per Azure Information Protection.
 
 Se è necessario accedere con un nome utente diverso da quello visualizzato, vedere la personalizzazione in [Accedere come utente diverso](client-admin-guide-customizations.md#sign-in-as-a-different-user).
 
@@ -169,7 +169,7 @@ Usare le informazioni di **Versione** per verificare la versione del client inst
 
 ## <a name="support-for-multiple-languages"></a>Supporto di più lingue
 
-Il client Azure Information Protection supporta le stesse lingue supportate da Office 365. Per un elenco di queste lingue, vedere la sezione **Office 365, Exchange Online Protection e Power BI** nella pagina [Disponibilità internazionale](https://products.office.com/business/international-availability) di Office.
+Il client Azure Information Protection supporta le stesse lingue supportate da Microsoft 365. Per un elenco di queste lingue, vedere la pagina relativa alla [disponibilità internazionale](https://products.office.com/business/international-availability) da Office.
 
 Per queste lingue, le opzioni di menu, le finestre di dialogo e i messaggi del client Azure Information Protection vengono visualizzati nella lingua dell'utente. La lingua viene rilevata da un singolo programma di installazione, quindi non sono necessarie operazioni aggiuntive per installare il client Azure Information Protection in lingue diverse. 
 
@@ -206,9 +206,9 @@ Usare le istruzioni seguenti per aggiornare lo scanner da una versione di dispon
 
 A partire dalla versione 1.48.204.0, il processo di aggiornamento delle versioni precedenti modifica automaticamente lo scanner in modo da ottenere le impostazioni di configurazione dal portale di Azure. Viene inoltre aggiornato lo schema per il database di configurazione dello scanner e questo database viene anche rinominato da AzInfoProtection:
 
-- Se non si specifica il nome del proprio profilo, il database di configurazione viene rinominato **AIPScanner_ \<computer_name> **. 
+- Se non si specifica il nome del proprio profilo, il database di configurazione viene rinominato **AIPScanner_ \<computer_name>**. 
 
-- Se si specifica il nome del proprio profilo, il database di configurazione viene rinominato **AIPScanner_ \<profile_name> **.
+- Se si specifica il nome del proprio profilo, il database di configurazione viene rinominato **AIPScanner_ \<profile_name>**.
 
 Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabile usare la procedura seguente:
 

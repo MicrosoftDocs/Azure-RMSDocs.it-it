@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: a2b69b7744b17c4f5ccce32a1513015fb4e4cbcc
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810262"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567674"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -105,7 +105,7 @@ I diritti d'uso vengono visualizzati nella parte superiore del documento in un b
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Dalla scheda **Opzioni** : **autorizzazione** > selezionare un'opzione. Ad esempio: non **inviare**né ** \<Company Name> -Confidential**, né ** \<Company Name> -solo la visualizzazione riservata**.
+2.  Dalla scheda **Opzioni** : **autorizzazione** > selezionare un'opzione. Ad esempio: non **inviare** né **\<Company Name> -Confidential**, né **\<Company Name> -solo la visualizzazione riservata**.
 
 3.  Inviare il messaggio.
 
@@ -117,7 +117,7 @@ Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzi
 
 1. In Outlook sul Web creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si desidera modificare il valore predefinito, selezionare **modifica autorizzazioni** e quindi selezionare un'opzione dall'elenco a discesa. Ad esempio: **Encrypt** o ** \<Company Name> -Confidential**.
+2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si desidera modificare il valore predefinito, selezionare **modifica autorizzazioni** e quindi selezionare un'opzione dall'elenco a discesa. Ad esempio: **Encrypt** o **\<Company Name> -Confidential**.
 
 3. Inviare il messaggio.
 

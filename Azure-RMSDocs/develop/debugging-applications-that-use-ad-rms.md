@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c0b53c0f749427f785bf12afa6b3f8cda461947e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7b8d3a47949483baca3768670bfcdbdf457f62ef
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792554"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567494"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
 
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
 
 Il nome del registro eventi è "Microsoft-RMS-MSIPC/Debug". Ciò significa che in Visualizzatore eventi di Windows il registro viene visualizzato come "Registri applicazioni e servizi\\Microsoft\\RMS\\MSIPC\\Debug".
 
-**Nota**:  il registro è abilitato per impostazione predefinita ed è impostato sul livello di dettaglio 3.
+**Nota**    Il log è abilitato per impostazione predefinita e impostato sul livello di dettaglio 3.
 
  
 
@@ -64,4 +64,4 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**Nota**:  nel menu **Visualizza** del Visualizzatore eventi di Windows selezionare **Visualizza registri analitici e di debug**  per rendere visibile il registro di debug MSIPC.
+**Nota**    Nel Visualizzatore eventi di Windows scegliere Mostra **log analitici e di debug** dal menu **Visualizza** per rendere visibile il log di debug di MSIPC.

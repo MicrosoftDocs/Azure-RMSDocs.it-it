@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 974995056b14d714dbda7e00df4255cbd54302e1
-ms.sourcegitcommit: 44b874f32cbd1e0552ba8a1f8c9496344ecf8adc
+ms.openlocfilehash: 9b0f9e3fa619762e08d32fb17da576d58f92071d
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630402"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567831"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 
@@ -25,7 +25,7 @@ In questo articolo vengono fornite le risposte alle domande comuni e informazion
 
 L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transformation Format - 8 bit)](https://wikipedia.org/wiki/UTF-8) per la gestione delle stringhe. Le linee guida specifiche dipendono dalla piattaforma in uso:
 
-| Piattaforma | Materiale sussidiario |
+| Piattaforma | Indicazioni |
 |-|-|
 | Nativa Windows | Per i client SDK C++, il tipo di libreria standard C++ [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) viene usato per passare stringhe da e verso le funzioni API. La conversione da e verso UTF-8 viene gestita internamente da MIP SDK. Quando l'API restituisce `std::string`, è necessario aspettarsi la codifica UTF-8 e gestire di conseguenza l'eventuale conversione della stringa. In alcuni casi, viene restituita una stringa come parte di un vettore `uint8_t`(ad esempio, una licenza di pubblicazione), ma deve essere trattata come un BLOB opaco.<br><br>Per ulteriori informazioni ed esempi, vedere:<ul><li>[Funzione WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) per assistenza con la conversione di stringhe di caratteri wide a più byte, ad esempio UTF-8.<li>I file di esempio seguenti inclusi nel [download dell'SDK](setup-configure-mip.md#configure-your-client-workstation):<ul><li>Le funzioni di utilità per le stringhe di esempio `file\samples\common\string_utils.cpp`, per la conversione da e verso stringhe UTF-8 wide.<li>Un'implementazione di `wmain(int argc, wchar_t *argv[])` in `file\samples\file\main.cpp`, che usa le funzioni di conversione stringa precedenti.</li></ul></ul>|
 | .NET | Per i client .NET dell'SDK, tutte le stringhe usano la codifica predefinita UTF-16 e non è necessaria alcuna conversione speciale. La conversione da e verso UTF-16 viene gestita internamente da MIP SDK. |
@@ -49,11 +49,19 @@ Questa eccezione deriva dal tentativo di proteggere o etichettare un file PDF co
 
 Ciò indica che non è stata eseguita la migrazione delle etichette da Azure Information Protection all'esperienza unificata di assegnazione di etichette. Vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels) per eseguire la migrazione delle etichette e quindi creare criteri per le etichette nel Centro sicurezza e conformità di Office 365. 
 
+### <a name="error-nopolicyexception-label-policy-did-not-contain-data"></a>Errore: "nopolicyexception: i criteri di etichetta non contengono dati"
+
+**Domanda**: perché si verifica l'errore seguente quando si tenta di leggere un'etichetta o un elenco di etichette tramite il MIP SDK?
+
+> Nopolicyexception: i criteri di etichetta non contengono dati, CorrelationId = GUID, CorrelationId. Description = PolicyProfile, NoPolicyError. Category = SyncFile, NoPolicyError. Category = SyncFile
+
+Ciò indica che non è stato pubblicato alcun criterio di etichettatura in Microsoft Security and Compliance Center. Seguire [creare e configurare le etichette di riservatezza e i relativi criteri](/microsoft-365/compliance/create-sensitivity-labels) per configurare i criteri di etichettatura.
+
 ### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Errore: "System. ComponentModel. Win32exception: LoadLibrary failed"
 
 **Domanda**: perché si verifica l'errore seguente quando si usa il wrapper .NET di MIP SDK?
 
-> System. ComponentModel. Win32exception: LoadLibrary non riuscito per: [sdk_wrapper_dotnet. dll] quando si chiama MIP. Inizializzare ().
+> System. ComponentModel. Win32exception: LoadLibrary non riuscito per: [sdk_wrapper_dotnet.dll] quando viene chiamato MIP.Initialize ().
 
 L'applicazione non dispone del runtime necessario o non è stata compilata come versione. Per ulteriori informazioni, vedere [verificare che l'applicazione disponga del runtime necessario](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) . 
 
@@ -63,10 +71,10 @@ L'applicazione non dispone del runtime necessario o non è stata compilata come 
 
 > "ProxyAuthenticatonError: autenticazione proxy non supportata"
 
-Il MIP SDK non supporta l'uso di proxy autenticati. Per correggere questo messaggio, gli amministratori del proxy devono impostare gli endpoint di servizio di Microsoft Information Protection per ignorare il proxy. Un elenco di tali endpoint è disponibile nella pagina [URL e intervalli di indirizzi IP di Office 365](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) . Per MIP SDK è necessario che `*.protection.outlook.com` (riga 9) e gli endpoint servizio Azure Information Protection (riga 73) ignorino l'autenticazione proxy.
+Il MIP SDK non supporta l'uso di proxy autenticati. Per correggere questo messaggio, gli amministratori del proxy devono impostare gli endpoint di servizio di Microsoft Information Protection per ignorare il proxy. Un elenco di tali endpoint è disponibile nella pagina [URL e intervalli di indirizzi IP di Office 365](/office365/enterprise/urls-and-ip-address-ranges) . Per MIP SDK è necessario che `*.protection.outlook.com` (riga 9) e gli endpoint servizio Azure Information Protection (riga 73) ignorino l'autenticazione proxy.
 
 ### <a name="issues-in-net-core"></a>Problemi in .NET Core
 
 **Domanda**: il pacchetto NuGet funziona in .NET Core? 
 
-Il pacchetto NuGet verrà installato in un progetto .NET Core, ma non verrà eseguito. Stiamo lavorando per correggere questa operazione per Windows, ma non abbiamo una sequenza temporale per supportare altre piattaforme. 
+Il pacchetto NuGet verrà installato in un progetto .NET Core, ma non verrà eseguito. Stiamo lavorando per correggere questa operazione per Windows, ma non abbiamo una sequenza temporale per supportare altre piattaforme.

@@ -4,19 +4,19 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3730c8d781c9b53de1848ef2ebee1185cae38560
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: a1ed0a5b10db4ffd0a50b8738cb85cbff973eaa5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953134"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568161"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -62,6 +62,10 @@ Per i documenti, i contrassegni visivi vengono applicati come segue:
 - Quando a un documento viene applicata un'etichetta usando Esplora file, PowerShell o lo scanner di Azure Information Protection, i contrassegni visivi non vengono applicati subito, ma vengono applicati dal client di Azure Information Protection quando tale documento viene aperto in un'app di Office e salvato per la prima volta.
 
     L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in Microsoft SharePoint, OneDrive for Work o School oppure OneDrive per Home: quando il salvataggio automatico è on, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background.
+
+> [!NOTE]
+> Per ulteriori informazioni sul supporto per i contrassegni visivi nei client AIP e nelle funzionalità predefinite per l'assegnazione di etichette, vedere [confrontare i client di assegnazione di etichette per i computer Windows](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
+> 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
 

@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: 0d24a2fedad93ecca3b4d5a48f5434746a7a7c4e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 2939a4c64ab3e1a47704811875c6a7e941bcfe3c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763848"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567344"
 ---
 # <a name="structures"></a>Strutture
 
@@ -42,8 +42,8 @@ Informazioni fornite da un server per generare un token OAuth2
 | Campo | Descrizione |
 |---|---|
 | authority | Autorità OAuth2  |
-| risorse | Risorsa OAuth2  |
-| ambito | Ambito OAuth2  |
+| Risorsa | Risorsa OAuth2  |
+| scope | Ambito OAuth2  |
 
 
 ```c
@@ -62,7 +62,7 @@ Handle opaco per l'oggetto MIP
 | Campo | Descrizione |
 |---|---|
 | typeId | Numero magico che identifica in modo univoco il tipo di handle specifico  |
-| data | Dati handle non elaborati  |
+| Data | Dati handle non elaborati  |
 
 
 ```c
@@ -91,7 +91,7 @@ Coppia chiave/valore
 | Campo | Descrizione |
 |---|---|
 | Key | Chiave  |
-| value | Valore  |
+| Valore | Valore  |
 
 
 ```c
@@ -132,7 +132,7 @@ Intestazione richiesta/risposta HTTP
 | Campo | Descrizione |
 |---|---|
 | name | Nome/chiave dell'intestazione  |
-| value | Valore intestazione  |
+| Valore | Valore intestazione  |
 
 
 ```c
@@ -150,7 +150,7 @@ Richiesta HTTP
 | Campo | Descrizione |
 |---|---|
 | id | ID richiesta univoco: correlato con la stessa proprietà in mip_cc_http_response  |
-| type | Tipo di richiesta HTTP (ad esempio, GET e POST)  |
+| tipo | Tipo di richiesta HTTP (ad esempio, GET e POST)  |
 | url | URL della richiesta HTTP  |
 | bodySize | Dimensioni del corpo della richiesta HTTP in byte  |
 | Corpo | Corpo della richiesta HTTP con memorizzazione nel buffer  |
@@ -222,7 +222,7 @@ Definisce lo stato abilitato/disabilitato di una singola funzionalità
 | Campo | Descrizione |
 |---|---|
 | feature | Nome funzionalità  |
-| value | Stato abilitato/disabilitato  |
+| Valore | Stato abilitato/disabilitato  |
 
 
 ```c
@@ -263,7 +263,7 @@ Un gruppo di utenti e i ruoli associati
 |---|---|
 | user | Elenco di utenti  |
 | usersCount | Numero di utenti  |
-| roles | Elenco dei ruoli  |
+| Ruoli | Elenco dei ruoli  |
 | rolesCount | Numero di ruoli  |
 
 
@@ -327,51 +327,38 @@ typedef struct {
 
 ## <a name="mip_cc_document_state"></a>mip_cc_document_state
 
-Definizione della funzione di callback per recuperare il documento metatdata, filtrato in base al nome e al prefisso
+Definizione della funzione di callback per recuperare il documento metatdata, filtrato in base al nome o al prefisso.
+
+| Campo | Descrizione |
+|---|---|
+| dataState | Stato dei dati del documento come applicazione interagisce con esso. |
+| contentMetadataCallback | Callback dei metadati del documento. |
+| protectionDescriptor | Descrittore di protezione se il documento è attualmente protetto; in caso contrario, null.  |
+| contentFormat | Formato del documento (file o posta elettronica).  |
+| auditMetadata | Metadati facoltativi specifici dell'applicazione usati quando si inviano report di controllo. Valori riconosciuti:' sender ': indirizzo di posta elettronica del mittente; ' Recipients ': matrice JSON di destinatari di posta elettronica; ' LastModifiedBy ': indirizzo di posta elettronica dell'utente che ha apportato l'ultima modifica a un documento; ' LastModifiedDate ': data dell'Ultima modifica di un documento  |
+| contentMetadataVersion | Versione dei metadati del documento, il valore predefinito è 0.  |
+| contentMetadataVersionFormat | Descrive il modo in cui viene elaborato il controllo delle versioni dei metadati.  |
 
 ```c
 typedef struct {
-  /**
-   * Human-readable document description visible in tenant audit portal
-   *     Example for a file: [path\filename]
-   *     Example for an email: [Subject:Sender]
-   */
+
   const char* contentId;
 
-  /**
-   * State of document data as application interacts with it
-   */
+
   mip_cc_data_state dataState;
 
-  /**
-   * Document metadata callback
-   */
   mip_cc_metadata_callback contentMetadataCallback;
 
-  /**
-   * Protection descriptor if document is currently protected, else null
-   */
   mip_cc_protection_descriptor protectionDescriptor;
 
-  /**
-   * Format of document (file vs. email)
-   */
   mip_cc_content_format contentFormat;
 
-  /**
-   * Optional application-specific metadata that is used when sending audit reports
-   *     Recognized values:
-   *       'Sender': Sender email address
-   *       'Recipients': JSON array of email recipients
-   *       'LastModifiedBy': Email address of the user who last modified a document
-   *       'LastModifiedDate': Date a document was last modified
-   */
   mip_cc_dictionary auditMetadata;
-  
-  /**
-   * Document metadata version, default should be 0.
-   */
-  unsigned int contentMetadataVersion;
+
+  uint32_t contentMetadataVersion;
+
+  mip_cc_metadata_version_format contentMetadataVersionFormat;
+
 } mip_cc_document_state;
 
 ```
@@ -383,7 +370,7 @@ Immissione dei metadati
 | Campo | Descrizione |
 |---|---|
 | Key | Immissione chiave |
-| value | Immissione valore  |
+| Valore | Immissione valore  |
 | Versione | La voce Version deve essere inizializzata su 0 se non diversamente noto |
 
 

@@ -4,25 +4,25 @@ description: Panoramica della protezione HYOK (AD RMS) con Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: cfd88d6356655e4f3ebe969935175302424a7a57
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: c5e401f831cfed9080ae1454c6ee73377591c176
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868827"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568191"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Details Your Own Key (HYOK) per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Istruzioni per: [Client classico Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -41,9 +41,9 @@ Le chiavi basate sul cloud sono gestite in Azure Key Vault, che offre ai clienti
 
 - **L'autenticazione basata sul cloud** consente una condivisione più semplice con partner e utenti di altre organizzazioni. 
 
-- **Stretta integrazione con altri servizi di Azure e Office 365**, ad esempio ricerca, visualizzatori Web, viste trasformate tramite pivot, anti-malware, eDiscovery e approfondimenti.
+- **Stretta integrazione con altri servizi di Azure e Microsoft 365**, ad esempio ricerca, visualizzatori Web, viste trasformate tramite pivot, anti-malware, eDiscovery e approfondimenti.
 
-- **Rilevamento dei documenti**, **revoca**e **notifiche tramite posta elettronica** per i documenti riservati che sono stati condivisi.
+- **Rilevamento dei documenti**, **revoca** e **notifiche tramite posta elettronica** per i documenti riservati che sono stati condivisi.
 
 Tuttavia, alcune organizzazioni possono avere requisiti normativi che richiedono la crittografia di contenuti specifici usando una chiave isolata dal cloud. Questo isolamento significa che il contenuto crittografato può essere letto solo da applicazioni locali e servizi locali.
 
@@ -78,11 +78,11 @@ Per assicurarsi che solo gli utenti che devono applicare la protezione HYOK veda
 
 ### <a name="hyok-and-email-support"></a>Supporto per HYOK e posta elettronica
 
-I servizi di Office 365 e altri Servizi online non possono decrittografare il contenuto protetto con HYOK.
+Microsoft 365 Services e altri Servizi online non possono decrittografare il contenuto protetto da HYOK.
 
-Per i messaggi di posta elettronica, questa perdita di funzionalità include gli scanner di malware, le soluzioni di prevenzione della perdita dei dati, le regole di routing della posta elettronica, il journaling, eDiscovery, le soluzioni di archiviazione ed Exchange ActiveSync.
+Per i messaggi di posta elettronica, questa perdita di funzionalità include scanner di malware, Encrypt-Only Protection, soluzioni di prevenzione della perdita dei dati, regole di routing della posta elettronica, journaling, eDiscovery, soluzioni di archiviazione ed Exchange ActiveSync.
 
-Gli utenti potrebbero non comprendere il motivo per cui alcuni dispositivi non sono in grado di aprire messaggi di posta elettronica protetti da HYOK, ottenendo chiamate aggiuntive al help desk. Per evitare queste chiamate aggiuntive alla guida, non configurare la protezione HYOK per i messaggi di posta elettronica.
+Gli utenti potrebbero non comprendere il motivo per cui alcuni dispositivi non sono in grado di aprire messaggi di posta elettronica protetti da HYOK, ottenendo chiamate aggiuntive al help desk. Tenere presente queste limitazioni gravi quando si configura la protezione HYOK con i messaggi di posta elettronica.
 
 ## <a name="supported-applications-for-hyok"></a>Applicazioni supportate per HYOK
 
@@ -96,56 +96,44 @@ Le tabelle seguenti elencano gli scenari supportati per la protezione e l'utiliz
 - [supporto delle applicazioni macOS per HYOK](#macos-application-support-for-hyok)
 - [supporto delle applicazioni iOS per HYOK](#ios-application-support-for-hyok)
 - [Supporto delle applicazioni Android per HYOK](#android-application-support-for-hyok)
-- [Supporto dell'applicazione Web per HYOK](#web-application-support-for-hyok)
-- [Supporto dell'applicazione universale per HYOK](#universal-application-support-for-hyok)
 
+> [!NOTE]
+> Le applicazioni Office Web e Universal non sono supportate per HYOK.
 
 ### <a name="windows-application-support-for-hyok"></a>Supporto delle applicazioni Windows per HYOK
 
 |Applicazione  |Protezione  |Consumo  |
 |---------|---------|---------|
-|Azure Information Protection client con app di Office 365, Office 2019, Office 2016 e Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![sì](media/yes-icon.png)        | ![Sì](media/yes-icon.png)        |
-|Client di Azure Information Protection     | ![sì](media/yes-icon.png)        | ![Sì](media/yes-icon.png) |
+|Azure Information Protection client con Microsoft 365 app, Office 2019, Office 2016 e Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![sì](media/yes-icon.png)        | ![sì](media/yes-icon.png)        |
+|Client di Azure Information Protection     | ![sì](media/yes-icon.png)        | ![sì](media/yes-icon.png) |
 |Visualizzatore di Azure Information Protection     |   Non applicabile      |  ![sì](media/yes-icon.png)       |
-|Client di Azure Information Protection con cmdlet per le etichette di PowerShell     | ![sì](media/yes-icon.png)        | ![Sì](media/yes-icon.png)        |
-|Scanner di Azure Information Protection     |![sì](media/yes-icon.png)       |   ![Sì](media/yes-icon.png)      |
-|Applicazione di condivisione Rights Management     |  ![no](media/no-icon.png)    |  ![sì](media/yes-icon.png)       |
+|Client di Azure Information Protection con cmdlet per le etichette di PowerShell     | ![sì](media/yes-icon.png)        | ![sì](media/yes-icon.png)        |
+|Scanner di Azure Information Protection     |![sì](media/yes-icon.png)       |   ![sì](media/yes-icon.png)      |
+| | | |
 
 ### <a name="macos-application-support-for-hyok"></a>supporto delle applicazioni macOS per HYOK
 
 |Applicazione|Protezione|Consumo|
 |----------------------|----------|-----------|
-|Office per Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![sì](media/yes-icon.png)|
-|Applicazione di condivisione Rights Management|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
+|Office per Mac: </br>Word, Excel, PowerPoint, Outlook|![No](media/no-icon.png)|![sì](media/yes-icon.png)|
+| | | |
 
 ### <a name="ios-application-support-for-hyok"></a>supporto delle applicazioni iOS per HYOK
 
 |Applicazione|Protezione|Consumo|
 |----------------------|----------|-----------|
-|Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
-|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![no](media/no-icon.png)|
+|Office Mobile: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)| ![sì](media/yes-icon.png)|
+|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![No](media/no-icon.png)|
 |Visualizzatore di Azure Information Protection|Non applicabile|![sì](media/yes-icon.png)|
 
 ### <a name="android-application-support-for-hyok"></a>Supporto delle applicazioni Android per HYOK
 
 |Applicazione|Protezione|Consumo|
 |----------------------|----------|-----------|
-|Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
-|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![no](media/no-icon.png)|
+|Office Mobile: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)| ![sì](media/yes-icon.png)|
+|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![No](media/no-icon.png)|
 |Visualizzatore di Azure Information Protection|Non applicabile| ![sì](media/yes-icon.png)|
 
-### <a name="web-application-support-for-hyok"></a>Supporto dell'applicazione Web per HYOK
-
-|Applicazione|Protezione|Consumo|
-|----------------------|----------|-----------|
-|Outlook sul web|![No](media/no-icon.png)|![no](media/no-icon.png)|
-|Office per il Web: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)|![no](media/no-icon.png)|
-
-### <a name="universal-application-support-for-hyok"></a>Supporto dell'applicazione universale per HYOK
-
-|Applicazione|Protezione|Consumo|
-|----------------------|----------|-----------|
-|App universali di Office: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)|![no](media/no-icon.png)|
 
 ## <a name="implementing-hyok"></a>Implementazione di HYOK
 
@@ -178,7 +166,7 @@ Una distribuzione AD RMS deve soddisfare i requisiti seguenti per fornire la pro
 > - Configurare il cluster di AD RMS con un modulo di protezione hardware (HSM). Ciò consente di garantire che la chiave privata del certificato concessore di licenze server (SLC) non possa essere esposta o rubata se la distribuzione di AD RMS deve essere violata o compromessa.
 
 > [!TIP]
-> Per informazioni sulla distribuzione e istruzioni per AD RMS, vedere [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) nella libreria di Windows Server. 
+> Per informazioni sulla distribuzione e istruzioni per AD RMS, vedere [Active Directory Rights Management Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831364(v=ws.11)) nella libreria di Windows Server. 
 
 #### <a name="ad-rms-configuration-requirements"></a>Requisiti di configurazione di AD RMS
 
@@ -187,14 +175,14 @@ Per supportare HYOK, verificare che il sistema AD RMS disponga delle configurazi
 |Requisito  |Descrizione  |
 |---------|---------|
 |**Versione di Windows**     |Come minimo, una delle seguenti versioni di Windows: </br></br>**Ambienti di produzione:** Windows Server 2012 R2</br>**Ambienti di test/valutazione**: Windows Server 2008 R2 con Service Pack 1        |
-|**Topologia**     |HYOK richiede una delle seguenti topologie: </br>-Una singola foresta con un singolo cluster di AD RMS </br>-Più foreste, con AD RMS cluster in ognuno di essi. </br></br>**Gestione delle licenze per più foreste**</br> Se si dispone di più insiemi di strutture, ogni cluster AD RMS condivide un URL di licenza che punta allo stesso cluster AD RMS. </br>In questo AD RMS cluster importare tutti i certificati del dominio utente trusted (dominio utente trusted) da tutti gli altri cluster AD RMS. </br>Per altre informazioni su questa topologia, vedere [Dominio utente trusted](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx). </br></br>**Etichette dei criteri globali per più foreste**</br>Quando si hanno più cluster AD RMS in foreste diverse, eliminare le etichette presenti nei criteri globali che applicano la protezione HYOK (AD RMS) e configurare [criteri con ambito](configure-policy-scope.md) per ogni cluster. <br>Assegnare gli utenti per ogni cluster ai criteri con ambito, assicurandosi di non usare i gruppi che comporteranno l'assegnazione di un utente a più criteri con ambito.</br>In seguito a questa assegnazione ogni utente deve avere etichette per un solo cluster AD RMS.          |
-|**Modalità crittografia**     | Il AD RMS deve essere configurato con la [modalità crittografia 2](https://technet.microsoft.com/library/hh867439.aspx). </br>Verificare la modalità controllando la AD RMS proprietà cluster, scheda **generale** .        |
+|**Topologia**     |HYOK richiede una delle seguenti topologie: </br>-Una singola foresta con un singolo cluster di AD RMS </br>-Più foreste, con AD RMS cluster in ognuno di essi. </br></br>**Gestione delle licenze per più foreste**</br> Se si dispone di più insiemi di strutture, ogni cluster AD RMS condivide un URL di licenza che punta allo stesso cluster AD RMS. </br>In questo AD RMS cluster importare tutti i certificati del dominio utente trusted (dominio utente trusted) da tutti gli altri cluster AD RMS. </br>Per altre informazioni su questa topologia, vedere [Dominio utente trusted](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd983944(v=ws.10)). </br></br>**Etichette dei criteri globali per più foreste**</br>Quando si hanno più cluster AD RMS in foreste diverse, eliminare le etichette presenti nei criteri globali che applicano la protezione HYOK (AD RMS) e configurare [criteri con ambito](configure-policy-scope.md) per ogni cluster. <br>Assegnare gli utenti per ogni cluster ai criteri con ambito, assicurandosi di non usare i gruppi che comporteranno l'assegnazione di un utente a più criteri con ambito.</br>In seguito a questa assegnazione ogni utente deve avere etichette per un solo cluster AD RMS.          |
+|**Modalità crittografia**     | Il AD RMS deve essere configurato con la [modalità crittografia 2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)). </br>Verificare la modalità controllando la AD RMS proprietà cluster, scheda **generale** .        |
 |**Configurazione URL certificazione**     | Ogni server di AD RMS deve essere configurato per l'URL di certificazione. </br>Per ulteriori informazioni, vedere di [seguito](#configuring-ad-rms-servers-to-locate-the-certification-url).        |
 |**Punti di connessione del servizio**     | Un punto di connessione del servizio (SCP) non viene usato quando si usa la protezione AD RMS con Azure Information Protection. </br></br>**Se si dispone di un SCP registrato per la distribuzione di ad RMS**, rimuoverlo per assicurarsi che l' [individuazione dei servizi](./rms-client/client-deployment-notes.md#rms-service-discovery) abbia esito positivo per la protezione Rights Management di Azure. </br></br>**Se si sta installando un nuovo cluster ad RMS per HYOK**, non registrare SCP quando si configura il primo nodo. Per ogni nodo aggiuntivo, assicurarsi che il server sia configurato per l'URL di certificazione prima di aggiungere il ruolo AD RMS e aggiungere il cluster esistente.         |
 |**SSL/TLS**     |Negli ambienti di produzione, i server di AD RMS devono essere configurati per l'uso di SSL/TLS con un certificato x. 509 valido considerato attendibile dai client che si connettono. </br></br>Questa operazione non è necessaria a scopo di test o valutazione.         |
 |**Modelli di diritti**     |È necessario disporre di modelli di diritti configurati per il AD RMS.         |
 |**IRM di Exchange**    |Non è possibile configurare il AD RMS per Exchange IRM.         |
-|**Dispositivi mobili/computer Mac**     | È necessario che l' [estensione Active Directory Rights Management Services dispositivo mobile](https://technet.microsoft.com/library/dn673574.aspx) sia installata e configurata.        |
+|**Dispositivi mobili/computer Mac**     | È necessario che l' [estensione Active Directory Rights Management Services dispositivo mobile](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) sia installata e configurata.        |
 
 
 #### <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>Configurazione dei server AD RMS per individuare l'URL di certificazione
@@ -236,7 +224,7 @@ Ad esempio: **82bf3474-6efe-4fa1-8827-d1bd93339119**
  
 1. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. 
 
-Per esempio:**https://rmscluster.contoso.com** 
+Per esempio: **https://rmscluster.contoso.com** 
     
 > [!NOTE]
 > Se si dispone di valori di licenze Extranet e Intranet diversi, specificare il valore Extranet solo se si condivide il contenuto protetto con i partner. I partner che condividono contenuti protetti devono essere definiti con trust Point-to-Point espliciti. 

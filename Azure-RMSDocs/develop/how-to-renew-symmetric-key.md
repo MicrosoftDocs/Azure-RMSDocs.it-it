@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 ms.custom: dev
-ms.openlocfilehash: 61eda99c43493ad4221b470781f4a8ea319ce5fc
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 539ad36df7d2c74a00650347abb8ed067dd743c7
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788469"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567824"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Procedura: Rinnovare la chiave simmetrica in Azure Information Protection
 
@@ -28,14 +28,14 @@ La procedura seguente illustra come rinnovare la chiave simmetrica.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Il modulo di Azure Active Directory (Azure AD) PowerShell deve essere installato come descritto in [Riferimenti per Azure AD Powershell](https://docs.microsoft.com/powershell/msonline/).
+* Il modulo di Azure Active Directory (Azure AD) PowerShell deve essere installato come descritto in [Riferimenti per Azure AD Powershell](/powershell/msonline/).
 
 
 ## <a name="renewing-the-symmetric-key-after-expiry"></a>Rinnovo della chiave simmetrica dopo la scadenza
 
-Non è necessario creare una nuova entità servizio quando scade la chiave simmetrica associata all'applicazione. Al contrario, è possibile usare i [cmdlet di PowerShell](https://docs.microsoft.com/powershell/module/msonline) offerti da Microsoft Online Services (MSol) per creare una nuova chiave simmetrica per un'entità servizio esistente.
+Non è necessario creare una nuova entità servizio quando scade la chiave simmetrica associata all'applicazione. Al contrario, è possibile usare i [cmdlet di PowerShell](/powershell/module/msonline) offerti da Microsoft Online Services (MSol) per creare una nuova chiave simmetrica per un'entità servizio esistente.
 
-Per illustrare questo processo, si supponga che è stata già creata una nuova entità servizio tramite il comando [`New-MsolServicePrincipal`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential).
+Per illustrare questo processo, supponiamo che sia già stata creata una nuova entità servizio usando il [`New-MsolServicePrincipal`](/powershell/msonline/v1/new-msolserviceprincipalcredential) comando.
 
 ```
 New-MsolServicePrincipalCredential -ServicePrincipalName "SupportExampleApp"
@@ -61,7 +61,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-La chiave simmetrica scade il 22/3/2018 alle ore 15.27.53. Per usare l'entità servizio oltre la data di scadenza, è necessario rinnovare la chiave simmetrica. A tale scopo, usare il comando [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential). 
+La chiave simmetrica scade il 22/3/2018 alle ore 15.27.53. Per usare l'entità servizio oltre la data di scadenza, è necessario rinnovare la chiave simmetrica. A tale scopo, utilizzare il [`New-MsolServicePrincipalCredential`](/powershell/msonline/v1/new-msolserviceprincipalcredential) comando. 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -72,7 +72,7 @@ Questo comando crea una nuova chiave simmetrica per **AppPrincipalId** specifica
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-È possibile usare il comando [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) per verificare che la nuova chiave simmetrica è associata all'entità servizio corretta come illustrato. Si noti che il comando elenca tutte le chiavi attualmente associate all'entità servizio.
+È possibile utilizzare il [`GetMsolServicePrincipalCredential`](/powershell/msonline/v1/get-msolserviceprincipalcredential) comando per verificare che la nuova chiave simmetrica sia associata all'entità servizio corretta, come illustrato. Si noti che il comando elenca tutte le chiavi attualmente associate all'entità servizio.
 
 ```
 Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
@@ -94,7 +94,7 @@ Usage : Verify
 
 Dopo avere verificato che la chiave simmetrica è effettivamente associata all'entità servizio appropriata, è possibile aggiornare i parametri di autenticazione dell'entità servizio con la nuova chiave. 
 
-È quindi possibile rimuovere la vecchia chiave simmetrica usando il comando [`Remove-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/remove-msolserviceprincipalcredential) e verificare che la chiave è stata rimossa tramite il comando `Get-MsolServicePrincipalCredential`.
+È quindi possibile rimuovere la chiave simmetrica precedente usando il [`Remove-MsolServicePrincipalCredential`](/powershell/msonline/v1/remove-msolserviceprincipalcredential) comando e verificare che la chiave venga rimossa usando il `Get-MsolServicePrincipalCredential` comando.
 
 ```
 Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcbe -ObjectId 0ee53770-ec86-409e-8939-6d8239880518
@@ -103,4 +103,4 @@ Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcb
 ## <a name="related-topics"></a>Argomenti correlati
 
 * [Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)
-* [Riferimenti per Azure Active Directory MSOnline Powershell](https://docs.microsoft.com/powershell/msonline/)
+* [Riferimenti per Azure Active Directory MSOnline Powershell](/powershell/msonline/)

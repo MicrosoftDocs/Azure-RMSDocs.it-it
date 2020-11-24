@@ -1,11 +1,11 @@
 ---
 title: Attivazione del servizio di protezione da Azure Information Protection
 description: Il servizio di protezione, Azure Rights Management, deve essere attivato prima che l'organizzazione possa iniziare a proteggere documenti e messaggi di posta elettronica usando le applicazioni e i servizi che supportano questa soluzione di protezione delle informazioni.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b4dd50ba7afd8a6d3d1c85e66b6cfab12fa88ed
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: c6f52dac44fc85bec09607bd6832b07484a161ac
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746406"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567464"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Attivazione del servizio di protezione da Azure Information Protection
 
@@ -40,7 +40,7 @@ Quanto Azure Rights Management è incluso in un piano di servizio, non è necess
 
 - **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection è stata ottenuta fino alla fine del 2018 febbraio o versione successiva:** Il servizio viene attivato automaticamente. Non è necessario attivare il servizio, a meno che Azure Rights Management sia stato disattivato dall'utente o da un altro amministratore globale.
 
-- **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale a febbraio 2018 o prima:** Microsoft sta iniziando ad attivare il servizio Azure Rights Management per queste sottoscrizioni se il tenant usa Exchange Online. Per queste sottoscrizioni, l'implementazione dell'attivazione automatica inizierà l'1 agosto 2018 quando il servizio verrà automaticamente attivato a meno che **AutomaticServiceUpdateEnabled** non risulti impostato su **false** quando si esegue [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
+- **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale a febbraio 2018 o prima:** Microsoft sta iniziando ad attivare il servizio Azure Rights Management per queste sottoscrizioni se il tenant usa Exchange Online. Per queste sottoscrizioni, l'implementazione dell'attivazione automatica inizierà l'1 agosto 2018 quando il servizio verrà automaticamente attivato a meno che **AutomaticServiceUpdateEnabled** non risulti impostato su **false** quando si esegue [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration). 
 
 Se nessuno degli scenari successivi è applicabile, è necessario attivare manualmente il servizio di protezione. 
 
@@ -53,7 +53,7 @@ Dopo l'attivazione del servizio, tutti gli utenti dell'organizzazione potranno a
 
 Per usare questa soluzione di protezione dati, l'organizzazione deve essere in possesso di un piano di servizio che include il servizio Azure Rights Management di Azure Information Protection. Senza questo, il servizio di protezione non può essere attivato. È necessario disporre di:
 
-- Un [piano Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
+- [Piano di Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
 
 - Un [piano Office 365 che includa Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
@@ -102,7 +102,7 @@ Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
 
 Per ulteriori informazioni su questo cmdlet ed esempi aggiuntivi, vedere la Guida di [set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) .
 
-Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'organizzazione potranno utilizzare sempre i contenuti protetti dal sottoinsieme di utenti, ma non potranno applicare direttamente la protezione delle informazioni da applicazioni client. Ad esempio, non vedranno nelle app di Office i modelli di protezione predefiniti che vengono pubblicati automaticamente quando viene attivato il servizio di protezione o modelli personalizzati che è possibile configurare. Le applicazioni lato server, come Exchange, possono implementare i propri controlli per utente per ottenere lo stesso risultato. Ad esempio, per impedire agli utenti di proteggere messaggi di posta elettronica in Outlook sul Web, usare [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) per impostare il parametro *IRMEnabled* su *$false*.
+Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'organizzazione potranno utilizzare sempre i contenuti protetti dal sottoinsieme di utenti, ma non potranno applicare direttamente la protezione delle informazioni da applicazioni client. Ad esempio, non vedranno nelle app di Office i modelli di protezione predefiniti che vengono pubblicati automaticamente quando viene attivato il servizio di protezione o modelli personalizzati che è possibile configurare. Le applicazioni lato server, come Exchange, possono implementare i propri controlli per utente per ottenere lo stesso risultato. Ad esempio, per impedire agli utenti di proteggere messaggi di posta elettronica in Outlook sul Web, usare [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy) per impostare il parametro *IRMEnabled* su *$false*.
 
 
 ## <a name="next-steps"></a>Passaggi successivi

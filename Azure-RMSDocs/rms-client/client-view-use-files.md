@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fe3309ac4ca51668b0c351f90baa79c97607e96a
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 19ee7b67b7774420e799876e91d1889c5c788888
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298037"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568058"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guida dell'utente: visualizzare i file protetti con il Visualizzatore Azure Information Protection
 
@@ -49,7 +49,7 @@ Se tuttavia si usa un dispositivo iOS o Android, è possibile usare l'app di Azu
 
 Prima di poter visualizzare il file protetto, il servizio Rights Management usato per proteggere il file deve prima di tutto verificare che siano presenti le autorizzazioni necessarie per la visualizzazione del file. Il servizio esegue tale controllo verificando il nome utente e la password. In alcuni casi, le credenziali possono essere memorizzate nella cache e non verrà visualizzato un messaggio che richiede di eseguire l'accesso. In altri casi, verrà richiesto di immettere le credenziali.
 
-Se l'organizzazione non può mettere a disposizione dell'utente un account basato sul cloud (per Office 365 o Azure) e non usa una versione locale equivalente (AD RMS), sono disponibili due opzioni:
+Se l'organizzazione non ha un account basato sul cloud per l'uso (per Microsoft 365 o Azure) e non usa una versione locale equivalente (AD RMS), sono disponibili due opzioni:
 
 - Se il messaggio di posta elettronica ricevuto è protetto, seguire le istruzioni per accedere tramite il provider di identità basato su social network (ad esempio Google per un account Gmail) o richiedere un passcode monouso.
 

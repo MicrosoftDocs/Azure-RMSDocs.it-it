@@ -1,17 +1,17 @@
 ---
 title: classe HttpRequest
 description: 'Documenta la classe HttpRequest:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: af302a760ee6b8f24b077b2c45bfe86ab0a80dac
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 9384976b01899f6d37b6ac55073014bb4a49e924
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762698"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566891"
 ---
 # <a name="class-httprequest"></a>classe HttpRequest 
 Interfaccia che descrive una singola richiesta HTTP.
@@ -22,8 +22,8 @@ Interfaccia che descrive una singola richiesta HTTP.
 public const std::string& GetId() const  |  Ottiene l'ID della richiesta.
 public HttpRequestType GetRequestType() const  |  Ottiene il tipo di richiesta.
 public const std::string& GetUrl() const  |  Ottiene l'URL della richiesta.
-public const std::\<vector\> uint8_t& GetBody () const  |  Ottiene il corpo della richiesta.
-public const std::\<map std:: String, std:: String,\> CaseInsensitiveComparator& GetHeaders () const  |  Ottiene le intestazioni della richiesta.
+public const std:: Vector \<uint8_t\>& GetBody () const  |  Ottiene il corpo della richiesta.
+public const std:: Map \<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders () const  |  Ottiene le intestazioni della richiesta.
   
 ## <a name="members"></a>Members
   

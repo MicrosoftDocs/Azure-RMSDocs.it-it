@@ -1,45 +1,44 @@
 ---
 title: Classe ProtectionHandler
 description: 'Documenta la classe protectionhandler:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d3c7a5151d55c143f7f90d3457b32875e614c936
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: e38aaf0e4dfee1d10f67f175eb50119fe3aa484d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564437"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567129"
 ---
-# <a name="class-protectionhandler"></a>Classe ProtectionHandler
- 
+# <a name="class-protectionhandler"></a>Classe ProtectionHandler 
 Gestisce azioni correlate alla protezione per una configurazione di protezione specifica.
   
 ## <a name="summary"></a>Riepilogo
-
-| Membri                        | Descrizioni
-|--------------------------------|---------------------------------------------
-| public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Creare un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
-| public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Crittografa un buffer.
-| public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrittografa un buffer.
-| public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcola la dimensione (in byte) del contenuto se fosse da crittografare con questo ProtectionHandler.
-| public int64_t GetBlockSize()  |  Ottiene la dimensione del blocco (in byte) per la modalità crittografia usata da questo ProtectionHandler.
-| public std:: Vector \<std::string\> Getrights () const  |  Ottiene i diritti concessi all'utente/identità associata a questo ProtectionHandler.
-| public bool AccessCheck(const std::string& right) const  |  Controlla se il gestore di protezione concede l'accesso utente al diritto specificato.
-| public const std::string GetIssuedTo()  |  Ottiene l'utente associato al gestore di protezione.
-| public const std::string GetOwner()  |  Ottiene indirizzo e-mail del proprietario del contenuto.
-| public bool IsIssuedToOwner()  |  Ottiene un valore che indica se l'utente corrente è o meno il proprietario del contenuto.
-| public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Ottiene i dettagli della protezione.
-| public const std::string GetContentId()  |  Ottiene l'identificatore univoco del documento/contenuto.
-| public bool DoesUseDeprecatedAlgorithms()  |  Ottiene un valore che indica se il gestore di protezione usa o meno algoritmi di crittografia deprecati per compatibilità con le versioni precedenti.
-| public bool IsAuditedExtractAllowed()  |  Ottiene un valore che indica se il gestore di protezione concede o meno all'utente il diritto 'audited extract'.
-| public const std:: Vector \<uint8_t\>& GetSerializedPublishingLicense () const  |  Serializza ProtectionHandler in una licenza di pubblicazione
-| public const std:: Vector \<uint8_t\>& GetSerializedPreLicense (formato PreLicenseFormat) const  |  Ottenere la pre-licenza.
-| PreLicenseFormat enum  |  Formato di pre-licenza.
+ Members                        | Descrizioni                                
+--------------------------------|---------------------------------------------
+public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
+public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Crittografa un buffer.
+public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrittografa un buffer.
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcola la dimensione (in byte) del contenuto se fosse da crittografare con questo ProtectionHandler.
+public int64_t GetBlockSize()  |  Ottiene la dimensione del blocco (in byte) per la modalità crittografia usata da questo ProtectionHandler.
+public std:: Vector \<std::string\> Getrights () const  |  Ottiene i diritti concessi all'utente/identità associata a questo ProtectionHandler.
+public bool AccessCheck(const std::string& right) const  |  Controlla se il gestore di protezione concede l'accesso utente al diritto specificato.
+public const std::string GetIssuedTo()  |  Ottiene l'utente associato al gestore di protezione.
+public const std::string GetOwner()  |  Ottiene indirizzo e-mail del proprietario del contenuto.
+public bool IsIssuedToOwner()  |  Ottiene un valore che indica se l'utente corrente è o meno il proprietario del contenuto.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Ottiene i dettagli della protezione.
+public const std::string GetContentId()  |  Ottiene l'identificatore univoco del documento/contenuto.
+public bool DoesUseDeprecatedAlgorithms()  |  Ottiene un valore che indica se il gestore di protezione usa o meno algoritmi di crittografia deprecati per compatibilità con le versioni precedenti.
+public bool IsAuditedExtractAllowed()  |  Ottiene un valore che indica se il gestore di protezione concede o meno all'utente il diritto 'audited extract'.
+public const std:: Vector \<uint8_t\>& GetSerializedPublishingLicense () const  |  Serializza ProtectionHandler in una licenza di pubblicazione
+public const std:: Vector \<uint8_t\>& GetSerializedPreLicense (formato PreLicenseFormat) const  |  Ottenere la pre-licenza.
+public CipherMode GetCipherMode () const  |  Ottiene la modalità di crittografia del gestore di protezione.
+PreLicenseFormat enum  |  Formato di pre-licenza.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="createprotectedstream-function"></a>CreateProtectedStream (funzione)
 Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
@@ -204,13 +203,19 @@ Parametri
 
 
   
-**Restituisce**: la pre-licenza serializzata consente a un utente di utilizzare immediatamente il contenuto senza effettuare una chiamata http aggiuntiva. ProtectionHandler deve essere stato creato con un valore [ProtectionHandler::P ublishingsettings:: SetPreLicenseUserEmail](class_mip_protectionhandler_publishingsettings.md) . in caso contrario, verrà restituito un vettore vuoto.
+**Restituisce**: la pre-licenza serializzata consente a un utente di utilizzare immediatamente il contenuto senza effettuare una chiamata http aggiuntiva. ProtectionHandler deve essere stato creato con un valore ProtectionHandler::P ublishingSettings:: SetPreLicenseUserEmail. in caso contrario, verrà restituito un vettore vuoto.
+  
+### <a name="getciphermode-function"></a>GetCipherMode (funzione)
+Ottiene la modalità di crittografia del gestore di protezione.
+
+  
+**Restituisce**: la modalità di crittografia
   
 ### <a name="prelicenseformat-enum"></a>Enumerazione PreLicenseFormat
 
-Formato di pre-licenza.
+ Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Xml            | Formato XML/SOAP legacy utilizzato da MSIPC
+Json            | Formato JSON/REST usato da MIP SDK e RMS SDK
 
-| Valori | Descrizioni
-|--------|---------------------------------------------
-| Xml    | Formato XML/SOAP legacy utilizzato da MSIPC
-| Json   | Formato JSON/REST usato da MIP SDK e RMS SDK
+Formato di pre-licenza.

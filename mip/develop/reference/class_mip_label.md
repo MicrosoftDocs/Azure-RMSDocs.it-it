@@ -1,17 +1,17 @@
 ---
 title: Etichetta classe
 description: 'Documents the label:: undefined Class of the Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 95eb7c523e7e627aff767169b9d35479839ac72d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 6a0bd370dd8a0f08156861995c498f4f3710e9e2
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762176"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566856"
 ---
 # <a name="class-label"></a>Etichetta classe 
 Astrazione per una singola etichetta di Microsoft Information Protection.
@@ -27,9 +27,9 @@ public int GetSensitivity() const  |  Ottiene la riservatezza dell'etichetta.
 public const std::string& GetTooltip() const  |  Ottiene la descrizione comando dell'etichetta.
 public const std:: String& GetAutoTooltip () const  |  Ottenere la descrizione della descrizione comando della classificazione che determina l'applicazione di questa etichetta.
 public bool IsActive() const  |  Ottiene un valore booleano che indica se l'etichetta è attiva.
-public std:: weak_ptr\<label\> GetParent () const  |  Ottiene l'etichetta padre.
-public const std::\<vector std::\<shared_ptr\> \> label& GetChildren () const  |  Ottiene le etichette figlio dell'etichetta corrente.
-public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate di un'etichetta.
+public std::weak_ptr\<Label\> GetParent() const  |  Ottiene l'etichetta padre.
+public const std:: Vector \<std::shared_ptr\<Label\> \>& GetChildren () const  |  Ottiene le etichette figlio dell'etichetta corrente.
+public const std:: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate di un'etichetta.
 public ActionSource GetActionSource() const  |  Ottiene l'origine dell'azione dell'etichetta.
   
 ## <a name="members"></a>Members
@@ -99,7 +99,7 @@ Ottiene le etichette figlio dell'etichetta corrente.
 Ottiene le impostazioni personalizzate di un'etichetta.
 
   
-**Restituisce**un vettore di coppie chiave-valore che rappresenta le impostazioni personalizzate.
+**Restituisce** un vettore di coppie chiave-valore che rappresenta le impostazioni personalizzate.
   
 ### <a name="getactionsource-function"></a>GetActionSource (funzione)
 Ottiene l'origine dell'azione dell'etichetta.

@@ -5,18 +5,18 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8c273bd483a7a29c3475841183592135eff0841c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: e4370c2a9fbecac42b43efd9783b19f9af4bc31d
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048528"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567549"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
@@ -67,7 +67,7 @@ Per apportare le modifiche, seguire queste istruzioni.
 
     - Per eliminare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **OK** per confermare. 
 
-    - Per disabilitare un'etichetta: selezionare l'etichetta che si vuole disabilitare. Nel riquadro **etichetta** per **abilitato**Selezionare **disattivato**, quindi fare clic su **Salva**.
+    - Per disabilitare un'etichetta: selezionare l'etichetta che si vuole disabilitare. Nel riquadro **etichetta** per **abilitato** Selezionare **disattivato**, quindi fare clic su **Salva**.
 
     - Per riordinare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.  
 

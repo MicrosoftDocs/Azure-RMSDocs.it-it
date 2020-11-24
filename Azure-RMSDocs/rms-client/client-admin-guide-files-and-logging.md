@@ -1,10 +1,10 @@
 ---
 title: File e registrazione dell'utilizzo del client Azure Information Protection
 description: Informazioni sui file e sulla registrazione dell'utilizzo per il client Azure Information Protection per Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 676a58b6dc16a8a61b1a528f5b5d0a043c427c09
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 4a8ee6c5f3879786b76a8466b198b0b4040a540f
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048953"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568136"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
@@ -57,9 +57,9 @@ Il client registra l'attività dell'utente nel registro eventi di Windows locale
 
     - Imposta etichetta: ID informazioni 101
     
-    - Imposta etichetta (inferiore): ID informazioni 101
+    - Imposta etichetta (inferiore): ID informazioni 102
     
-    - Imposta etichetta (superiore): ID informazioni 101
+    - Imposta etichetta (superiore): ID informazioni 103
     
     - Rimuovere l'etichetta: ID informazioni 104
     

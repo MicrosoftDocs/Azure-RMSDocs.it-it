@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4351fbd3a7cbbcfbc49df69c1103a6d3a90fb920
-ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
+ms.openlocfilehash: 59bc53914d73d64c7dc34bbc63b28bf1e70adeb4
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87255149"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567830"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Estensione di Active Directory Rights Management Services per dispositivi mobili
 
@@ -30,10 +30,10 @@ Si applica a: Windows Server 2019, 2016, 2012 R2 e 2012
 - Usare l'app Azure Information Protection per aprire un file di Office (Word, Excel, PowerPoint) che è una copia PDF (formato PDF e Ppdf).
 - Usare l'app Azure Information Protection per aprire i messaggi di posta elettronica protetti (con estensione rpmsg) e i file PDF protetti in Microsoft SharePoint.
 - Usare un visualizzatore PDF con supporto per AIP per la visualizzazione multipiattaforma o per aprire file PDF protetti con qualsiasi applicazione abilitata per AIP.
-- Usare le app abilitate per AIP sviluppate internamente, scritte con l' [SDK MIP](https://aka.ms/mipsdkdocs).
+- Usare le app abilitate per AIP sviluppate internamente, scritte con l' [SDK MIP](/information-protection/develop/).
 
 > [!NOTE]
-> È possibile scaricare l'app Azure Information Protection dalla pagina [microsoft Rights Management](https://go.microsoft.com/fwlink/?linkid=303970) del sito Web Microsoft. Per informazioni sulle altre app supportate con l'estensione per dispositivi mobili, vedere la tabella nella pagina [applicazioni](https://docs.microsoft.com/azure/information-protection/requirements-applications) da questa documentazione. Per ulteriori informazioni sui diversi tipi di file supportati da RMS, vedere la sezione tipi di file [e estensioni di file supportati](https://docs.microsoft.com/rights-management/rms-client/sharing-app-admin-guide-technical%23supported-file-types-and-file-name-extensions) nella Guida dell'amministratore dell'applicazione di condivisione Rights Management.
+> È possibile scaricare l'app Azure Information Protection dalla pagina [microsoft Rights Management](https://go.microsoft.com/fwlink/?linkid=303970) del sito Web Microsoft. Per informazioni sulle altre app supportate con l'estensione per dispositivi mobili, vedere la tabella nella pagina [applicazioni](./requirements-applications.md) da questa documentazione. Per ulteriori informazioni sui diversi tipi di file supportati da RMS, vedere la sezione tipi di file [e estensioni di file supportati](/rights-management/rms-client/sharing-app-admin-guide-technical#supported-file-types-and-file-name-extensions) nella Guida dell'amministratore dell'applicazione di condivisione Rights Management.
 
 > [!IMPORTANT]
 > Assicurarsi di leggere e configurare i prerequisiti prima di installare l'estensione per dispositivi mobili.
@@ -48,7 +48,7 @@ Prima di installare l'estensione AD RMS dispositivo mobile, verificare che siano
 |Requisito|Altre informazioni|
 |---------------|------------------------|
 |Una distribuzione di AD RMS esistente in Windows Server 2019, 2016, 2012 R2 o 2012, che include quanto segue:<br /><br /> -Il cluster di AD RMS deve essere accessibile da Internet. <br /><br /> -AD RMS necessario utilizzare un database completo basato su Microsoft SQL Server in un server separato e non il database interno di Windows utilizzato spesso per i test sullo stesso server. <br /><br />-L'account che verrà utilizzato per installare l'estensione per dispositivi mobili deve disporre dei diritti di amministratore di sistema per l'istanza di SQL Server utilizzata per AD RMS. <br /><br />-I server AD RMS devono essere configurati per l'uso di SSL/TLS con un certificato x. 509 valido considerato attendibile dai client dei dispositivi mobili.<br /><br /> -Se i server di AD RMS si trovano dietro un firewall o pubblicati usando un proxy inverso, oltre alla pubblicazione della cartella **/_wmcs** su Internet, è necessario pubblicare anche la cartella/problema (ad esempio: **_https: \/ \/ RMSserver.contoso.com/My**).|Per informazioni dettagliate sui prerequisiti AD RMS e le informazioni sulla distribuzione, vedere la sezione Prerequisiti di questo articolo.|
-|AD FS distribuita in Windows Server:<br /><br /> -Il AD FS server farm deve essere accessibile da Internet (sono stati distribuiti i proxy server federativi). <br /><br />-L'autenticazione basata su form non è supportata. è necessario usare l'autenticazione integrata di Windows <br /><br /> **Importante**: ad FS necessario eseguire un computer diverso dal computer che esegue ad RMS e dall'estensione del dispositivo mobile.|Per la documentazione relativa AD FS, vedere la [Guida alla distribuzione di Windows server ad FS](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on) nella libreria di Windows Server.<br /><br /> ADFS deve essere configurato per l'estensione per dispositivi mobili. Per istruzioni, vedere la sezione **Configuring ad FS for the ad RMS Mobile Device Extension** in questo argomento.|
+|AD FS distribuita in Windows Server:<br /><br /> -Il AD FS server farm deve essere accessibile da Internet (sono stati distribuiti i proxy server federativi). <br /><br />-L'autenticazione basata su form non è supportata. è necessario usare l'autenticazione integrata di Windows <br /><br /> **Importante**: ad FS necessario eseguire un computer diverso dal computer che esegue ad RMS e dall'estensione del dispositivo mobile.|Per la documentazione relativa AD FS, vedere la [Guida alla distribuzione di Windows server ad FS](/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on) nella libreria di Windows Server.<br /><br /> ADFS deve essere configurato per l'estensione per dispositivi mobili. Per istruzioni, vedere la sezione **Configuring ad FS for the ad RMS Mobile Device Extension** in questo argomento.|
 |I dispositivi mobili devono considerare attendibili i certificati PKI nel server o nei server RMS|Quando si acquistano i certificati del server da una CA pubblica, ad esempio VeriSign o comodo, è probabile che i dispositivi mobili considerino già attendibile la CA radice per questi certificati, in modo che questi dispositivi considerino attendibili i certificati del server senza ulteriori configurazioni.<br /><br /> Tuttavia, se si usa la CA interna per distribuire i certificati server per RMS, è necessario eseguire passaggi aggiuntivi per installare il certificato CA radice nei dispositivi mobili. In caso contrario, i dispositivi mobili non saranno in grado di stabilire una connessione con il server RMS.|
 |Record SRV in DNS|Creare uno o più record SRV nel dominio o nei domini aziendali:<br /><br />1: creare un record per ogni suffisso di dominio di posta elettronica che gli utenti useranno <br /><br />2: creare un record per ogni FQDN usato dai cluster RMS per proteggere il contenuto, escluso il nome del cluster <br /><br />Questi record devono essere risolvibili da qualsiasi rete utilizzata dai dispositivi mobili che si connettono, che include la Intranet se i dispositivi mobili si connettono tramite Intranet.<br /><br /> Quando gli utenti forniscono il proprio indirizzo di posta elettronica dal dispositivo mobile, il suffisso di dominio viene usato per identificare se usare un'infrastruttura AD RMS o Azure AIP. Quando il record SRV viene trovato, i client vengono reindirizzati al server AD RMS che risponde a tale URL.<br /><br /> Quando gli utenti usano contenuti protetti con un dispositivo mobile, l'applicazione client cerca in DNS un record che corrisponda al nome di dominio completo nell'URL del cluster che ha protetto il contenuto, senza il nome del cluster. Il dispositivo viene quindi indirizzato al cluster AD RMS specificato nel record DNS e acquisisce una licenza per aprire il contenuto. Nella maggior parte dei casi, il cluster RMS sarà lo stesso che ha protetto il contenuto.<br /><br /> Per informazioni su come specificare i record SRV, vedere la sezione **specifica dei record DNS SRV per l'estensione ad RMS Mobile Device** in questo argomento.|
 |Client supportati che usano applicazioni sviluppate con l'SDK MIP per questa piattaforma. |Scaricare le app supportate per i dispositivi usati usando i collegamenti disponibili nella pagina di download [Microsoft Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=40333) .|
@@ -123,13 +123,13 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 
 - Per configurare manualmente AD FS per l'estensione del dispositivo mobile AD RMS, usare le impostazioni seguenti:
 
-|**Configurazione**|**Valore**|
+|**Configuration**|**Valore**|
 |-----|-----|
 |**Attendibilità componente**|_api. RMS. Rest. com|
-|**Regola di attestazione**|**Archivio attributi**: Active Directory <br /><br />**Indirizzi di posta elettronica**: indirizzo di posta elettronica<br /><br>**Nome-entità utente**: UPN<br /><br /> **Indirizzo proxy**: _https: \/ \/schemas.xmlSOAP.org/claims/proxyAddresses|
+|**Regola attestazione**|**Archivio attributi**: Active Directory <br /><br />**Indirizzi di posta elettronica**: indirizzo di posta elettronica<br /><br>**Nome-entità utente**: UPN<br /><br /> **Indirizzo proxy**: _https: \/ \/schemas.xmlSOAP.org/claims/proxyAddresses|
 
 > [!TIP]
-> Per istruzioni dettagliate per una distribuzione di esempio di AD RMS con AD FS, vedere [distribuzione di Active Directory Rights Management Services con Active Directory Federation Services](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
+> Per istruzioni dettagliate per una distribuzione di esempio di AD RMS con AD FS, vedere [distribuzione di Active Directory Rights Management Services con Active Directory Federation Services](/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
 
 #### <a name="step-2-authorize-apps-for-your-devices"></a>Passaggio 2: autorizzare le app per i dispositivi
 
@@ -214,13 +214,13 @@ I record SRV hanno il formato seguente: _rmsdisco. _http. _tcp. \<emailsuffix>\<
 Se ad esempio l'organizzazione ha utenti con gli indirizzi di posta elettronica seguenti:
   - _user@contoso.com
   - _user@sales.contoso.com
-  - _user@fabrikam.comSe non sono presenti altri domini figlio per _contoso. com che usano un cluster RMS diverso da quello denominato _rmsserver. contoso. com, creare due record DNS SRV con questi valori:
-- _rmsdisco. _http. _tcp. contoso. com 443 _rmsserver. contoso. com
-- _rmsdisco. _http. _tcp. fabrikam. com 443 _rmsserver. contoso. com
+  - _user@fabrikam.com Se non sono presenti altri domini figlio per _contoso. com che usano un cluster RMS diverso da quello denominato _rmsserver. contoso. com, creare due record DNS SRV con questi valori:
+- _rmsdisco _rmsdisco._http _rmsdisco._http._tcp. contoso. com 443 _rmsserver. contoso. com
+- _rmsdisco _rmsdisco._http _rmsdisco._http._tcp. fabrikam. com 443 _rmsserver. contoso. com
 
 Se si usa il ruolo server DNS in Windows Server, usare le tabelle seguenti come guida per le proprietà del record SRV nella console Gestore DNS:
 
-|Campo|valore|
+|Campo|Valore|
 |------|------|
 |Dominio|_tcp. contoso. com
 |Servizio|_rmsdisco
@@ -230,7 +230,7 @@ Se si usa il ruolo server DNS in Windows Server, usare le tabelle seguenti come 
 |Numero della porta|443
 |Host che offre questo servizio|_rmsserver. contoso. com
 
-|Campo|valore|
+|Campo|Valore|
 |------|------|
 |Dominio|_tcp. fabrikam. com
 |Servizio|_rmsdisco
@@ -246,7 +246,7 @@ Ad esempio, se il cluster RMS è **_rmsserver. contoso. com**, creare un record 
 
 Se si usa il ruolo server DNS in Windows Server, usare la tabella seguente come guida per le proprietà del record SRV nella console Gestore DNS:
 
-|Campo|valore|
+|Campo|Valore|
 |------|------|
 |Dominio|_tcp. contoso. com
 |Servizio|_rmsdisco
@@ -293,7 +293,7 @@ Se si dispone di un server proxy tra il cluster AD RMS e i server AD FS, per imp
 - Sostituire \<AD FS URL> con l'URL del servizio federativo. Non includere il prefisso HTTP.
 
     > [!NOTE]
-    > Per ulteriori informazioni sull'override delle impostazioni proxy, vedere la documentazione sulla [configurazione del proxy](https://msdn.microsoft.com/library/dkwyc043(v=vs.110).aspx) .
+    > Per ulteriori informazioni sull'override delle impostazioni proxy, vedere la documentazione sulla [configurazione del proxy](/dotnet/framework/network-programming/proxy-configuration) .
 
 1. Ripristinare IIS, ad esempio eseguendo **iisreset** come amministratore da un prompt dei comandi.
 

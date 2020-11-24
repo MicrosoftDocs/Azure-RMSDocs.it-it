@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: 438cdc93989ffbd5b294adb24175c443aeaf1024
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 6269921c14b0ac284aab501253d07bea416ef137
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763856"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567351"
 ---
 # <a name="mip-sdk-for-c-reference"></a>Guida di riferimento a MIP SDK per C
 
@@ -80,68 +80,12 @@ Funzione | Breve descrizione |
 | [MIP_CC_TelemetryConfiguration_SetCustomSettings](functions.md#mip_cc_telemetryconfiguration_setcustomsettings) | Imposta le impostazioni di telemetria personalizzate |
 | [MIP_CC_TelemetryConfiguration_AddMaskedProperty](functions.md#mip_cc_telemetryconfiguration_addmaskedproperty) | Imposta una proprietà di telemetria su maschera |
 | [MIP_CC_ReleaseTelemetryConfiguration](functions.md#mip_cc_releasetelemetryconfiguration) | Rilascia le risorse associate a impostazioni del profilo di protezione |
-| [MIP_CC_ReleaseProtectionEngine](functions.md#mip_cc_releaseprotectionengine) | Rilasciare le risorse associate a un motore di protezione |
-| [MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing](functions.md#mip_cc_protectionengine_createprotectionhandlerforpublishing) | Crea un gestore protezione per la pubblicazione di nuovo contenuto |
-| [MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption](functions.md#mip_cc_protectionengine_createprotectionhandlerforconsumption) | Crea un gestore protezione per l'utilizzo del contenuto esistente |
-| [MIP_CC_ProtectionEngine_GetEngineIdSize](functions.md#mip_cc_protectionengine_getengineidsize) | Ottiene le dimensioni del buffer necessario per l'ID del motore |
-| [MIP_CC_ProtectionEngine_GetEngineId](functions.md#mip_cc_protectionengine_getengineid) | Ottiene l'ID del motore |
-| [MIP_CC_ProtectionEngine_GetTemplatesSize](functions.md#mip_cc_protectionengine_gettemplatessize) | Ottiene il numero di modelli RMS associati a un motore di protezione |
-| [MIP_CC_ProtectionEngine_GetTemplates](functions.md#mip_cc_protectionengine_gettemplates) | Ottenere la raccolta di modelli disponibili per un utente |
-| [MIP_CC_ProtectionEngine_GetRightsForLabelId](functions.md#mip_cc_protectionengine_getrightsforlabelid) | Ottiene l'elenco dei diritti concessi a un utente per un ID etichetta |
-| [MIP_CC_ProtectionEngine_GetClientDataSize](functions.md#mip_cc_protectionengine_getclientdatasize) | Ottiene le dimensioni dei dati client associati a un motore di protezione |
-| [MIP_CC_ProtectionEngine_GetClientData](functions.md#mip_cc_protectionengine_getclientdata) | Ottenere i dati client associati a un motore di protezione |
-| [MIP_CC_CreateProtectionEngineSettingsWithIdentity](functions.md#mip_cc_createprotectionenginesettingswithidentity) | Creare un oggetto impostazioni usato per creare un nuovo motore di protezione |
-| [MIP_CC_ProtectionEngineSettings_SetClientData](functions.md#mip_cc_protectionenginesettings_setclientdata) | Imposta i dati client che verranno archiviati in maniera opaca insieme a questo motore e mantengono tra le sessioni |
-| [MIP_CC_ProtectionEngineSettings_SetCustomSettings](functions.md#mip_cc_protectionenginesettings_setcustomsettings) | Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità. |
-| [MIP_CC_ProtectionEngineSettings_SetSessionId](functions.md#mip_cc_protectionenginesettings_setsessionid) | Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria |
-| [MIP_CC_ProtectionEngineSettings_SetCloud](functions.md#mip_cc_protectionenginesettings_setcloud) | Imposta il cloud che influiscono sugli URL dell'endpoint per tutte le richieste di servizio |
-| [MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl](functions.md#mip_cc_protectionenginesettings_setcloudendpointbaseurl) | Imposta l'URL di base per tutte le richieste di servizio |
-| [MIP_CC_ReleaseProtectionEngineSettings](functions.md#mip_cc_releaseprotectionenginesettings) | Rilasciare le risorse associate a impostazioni del motore di protezione |
-| [MIP_CC_CreateProtectionHandlerPublishingSettings](functions.md#mip_cc_createprotectionhandlerpublishingsettings) | Creare un oggetto impostazioni utilizzato per creare un gestore protezione per la pubblicazione di nuovo contenuto |
-| [MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorithmPreferred](functions.md#mip_cc_protectionhandlerpublishingsettings_setisdeprecatedalgorithmpreferred) | Imposta un valore che indica se è preferibile un algoritmo di crittografia deprecato (BCE) per la compatibilità con le versioni precedenti |
-| [MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed](functions.md#mip_cc_protectionhandlerpublishingsettings_setisauditedextractionallowed) | Imposta un valore che indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto |
-| [MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson](functions.md#mip_cc_protectionhandlerpublishingsettings_setispublishingformatjson) | Imposta un valore che indica se PL è in formato JSON (il valore predefinito è XML) |
-| [MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail](functions.md#mip_cc_protectionhandlerpublishingsettings_setdelegateduseremail) | Imposta l'utente delegato |
-| [MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail](functions.md#mip_cc_protectionhandlerpublishingsettings_setprelicenseuseremail) | Imposta un utente con licenza preliminare |
-| [MIP_CC_CreateProtectionHandlerConsumptionSettings](functions.md#mip_cc_createprotectionhandlerconsumptionsettings) | Creare un oggetto impostazioni utilizzato per creare un gestore protezione per l'utilizzo del contenuto esistente |
-| [MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense](functions.md#mip_cc_createprotectionhandlerconsumptionsettingswithprelicense) | Creare un oggetto impostazioni utilizzato per creare un gestore protezione per l'utilizzo del contenuto esistente |
-| [MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly](functions.md#mip_cc_protectionhandlerconsumptionsettings_setisofflineonly) | Imposta un valore che indica se la creazione del gestore protezione consente operazioni HTTP online |
-| [MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail](functions.md#mip_cc_protectionhandlerconsumptionsettings_setdelegateduseremail) | Imposta l'utente delegato |
-| [MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize](functions.md#mip_cc_protectionhandler_getserializedpublishinglicensesize) | Ottiene le dimensioni della licenza di pubblicazione (in byte) |
-| [MIP_CC_ProtectionHandler_GetSerializedPublishingLicense](functions.md#mip_cc_protectionhandler_getserializedpublishinglicense) | Ottiene la licenza di pubblicazione |
-| [MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize](functions.md#mip_cc_protectionhandler_getserializedprelicensesize) | Ottiene le dimensioni della pre-licenza (in byte) |
-| [MIP_CC_ProtectionHandler_GetSerializedPreLicense](functions.md#mip_cc_protectionhandler_getserializedprelicense) | Ottiene la pre-licenza |
-| [MIP_CC_ProtectionHandler_GetProtectionDescriptor](functions.md#mip_cc_protectionhandler_getprotectiondescriptor) | Ottiene il descrittore di protezione |
-| [MIP_CC_ProtectionHandler_GetRights](functions.md#mip_cc_protectionhandler_getrights) | Ottiene l'elenco dei diritti concessi a un utente |
-| [MIP_CC_ProtectionHandler_GetProtectedContentSize](functions.md#mip_cc_protectionhandler_getprotectedcontentsize) | Calcola le dimensioni del contenuto protetto, il factoring nella spaziatura interna e così via. |
-| [MIP_CC_ProtectionHandler_GetBlockSize](functions.md#mip_cc_protectionhandler_getblocksize) | Ottiene la dimensione del blocco (in byte) per la modalità di crittografia utilizzata da un gestore di protezione. |
-| [MIP_CC_ProtectionHandler_GetIssuedUserSize](functions.md#mip_cc_protectionhandler_getissuedusersize) | Ottiene le dimensioni del buffer necessarie per archiviare l'utente a cui è stato concesso l'accesso al contenuto protetto |
-| [MIP_CC_ProtectionHandler_GetIssuedUser](functions.md#mip_cc_protectionhandler_getissueduser) | Ottiene l'utente a cui è stato concesso l'accesso al contenuto protetto |
-| [MIP_CC_ProtectionHandler_GetOwnerSize](functions.md#mip_cc_protectionhandler_getownersize) | Ottiene le dimensioni del buffer necessarie per archiviare il proprietario del contenuto protetto |
-| [MIP_CC_ProtectionHandler_GetOwner](functions.md#mip_cc_protectionhandler_getowner) | Ottiene il proprietario del contenuto protetto |
-| [MIP_CC_ProtectionHandler_GetContentId](functions.md#mip_cc_protectionhandler_getcontentid) | Ottiene il contenuto di IE del contenuto protetto |
-| [MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm](functions.md#mip_cc_protectionhandler_doesusedeprecatedalgorithm) | Ottiene un valore che indica se il gestore della protezione utilizza un algoritmo di crittografia deprecato (BCE) per la compatibilità con le versioni precedenti |
-| [MIP_CC_ProtectionHandler_DecryptBuffer](functions.md#mip_cc_protectionhandler_decryptbuffer) | Decrittografare un buffer |
-| [MIP_CC_ReleaseProtectionHandlerPublishingSettings](functions.md#mip_cc_releaseprotectionhandlerpublishingsettings) | Rilasciare le risorse associate a impostazioni del gestore protezione |
-| [MIP_CC_ReleaseProtectionHandlerConsumptionSettings](functions.md#mip_cc_releaseprotectionhandlerconsumptionsettings) | Rilasciare le risorse associate a impostazioni del gestore protezione |
-| [MIP_CC_ReleaseProtectionHandler](functions.md#mip_cc_releaseprotectionhandler) | Rilasciare le risorse associate a un gestore protezione |
-| [MIP_CC_LoadProtectionProfile](functions.md#mip_cc_loadprotectionprofile) | Carica un profilo |
-| [MIP_CC_ReleaseProtectionProfile](functions.md#mip_cc_releaseprotectionprofile) | Rilascia le risorse associate a un profilo di protezione |
-| [MIP_CC_CreateProtectionProfileSettings](functions.md#mip_cc_createprotectionprofilesettings) | Creare un oggetto impostazioni utilizzato per creare un profilo di protezione |
-| [MIP_CC_ProtectionProfileSettings_SetSessionId](functions.md#mip_cc_protectionprofilesettings_setsessionid) | Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria |
-| [MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses](functions.md#mip_cc_protectionprofilesettings_setcancachelicenses) | Configura se le licenze dell'utente finale (contratti) verranno memorizzate nella cache localmente |
-| [MIP_CC_ProtectionProfileSettings_SetHttpDelegate](functions.md#mip_cc_protectionprofilesettings_sethttpdelegate) | Esegui override dello stack HTTP predefinito con il proprio client |
-| [MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate](functions.md#mip_cc_protectionprofilesettings_settaskdispatcherdelegate) | Esegui override del dispatcher attività asincrono predefinito con il proprio client |
-| [MIP_CC_ProtectionProfileSettings_SetCustomSettings](functions.md#mip_cc_protectionprofilesettings_setcustomsettings) | Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità. |
-| [MIP_CC_ReleaseProtectionProfileSettings](functions.md#mip_cc_releaseprotectionprofilesettings) | Rilascia le risorse associate a impostazioni del profilo di protezione |
 | [MIP_CC_TemplateDescriptor_GetId](functions.md#mip_cc_templatedescriptor_getid) | Ottiene l'ID modello |
 | [MIP_CC_TemplateDescriptor_GetNameSize](functions.md#mip_cc_templatedescriptor_getnamesize) | Ottiene le dimensioni del buffer necessarie per archiviare il nome |
 | [MIP_CC_TemplateDescriptor_GetName](functions.md#mip_cc_templatedescriptor_getname) | Ottiene il nome del modello |
 | [MIP_CC_TemplateDescriptor_GetDescriptionSize](functions.md#mip_cc_templatedescriptor_getdescriptionsize) | Ottiene la dimensione del buffer necessaria per archiviare la descrizione |
 | [MIP_CC_TemplateDescriptor_GetDescription](functions.md#mip_cc_templatedescriptor_getdescription) | Ottiene la descrizione del modello |
 | [MIP_CC_ReleaseTemplateDescriptor](functions.md#mip_cc_releasetemplatedescriptor) | Rilasciare le risorse associate a un descrittore di modello |
-| [MIP_CC_Action_GetType](functions.md#mip_cc_action_gettype) | Ottiene il tipo di un'azione |
-| [MIP_CC_Action_GetId](functions.md#mip_cc_action_getid) | Ottiene l'ID di un'azione |
 | [MIP_CC_ActionResult_GetActions](functions.md#mip_cc_actionresult_getactions) | Ottenere azioni che compongono il risultato di un'azione |
 | [MIP_CC_ReleaseActionResult](functions.md#mip_cc_releaseactionresult) | Rilasciare le risorse associate al risultato di un'azione |
 | [MIP_CC_AddContentFooterAction_GetUIElementNameSize](functions.md#mip_cc_addcontentfooteraction_getuielementnamesize) | Ottiene le dimensioni del buffer necessarie per archiviare il nome dell'elemento dell'interfaccia utente dell'azione "Aggiungi piè di pagina contenuto" |
@@ -185,7 +129,6 @@ Funzione | Breve descrizione |
 | [MIP_CC_CustomAction_GetNameSize](functions.md#mip_cc_customaction_getnamesize) | Ottiene le dimensioni del buffer necessarie per archiviare il nome di un'azione "personalizzata" |
 | [MIP_CC_CustomAction_GetName](functions.md#mip_cc_customaction_getname) | Ottiene il nome di un'azione "personalizzata" |
 | [MIP_CC_CustomAction_GetProperties](functions.md#mip_cc_customaction_getproperties) | Ottiene le proprietà di un'azione "personalizzata". |
-| [mip_cc_metadata_callback](functions.md#mip_cc_metadata_callback) | Definizione della funzione di callback per recuperare il documento metatdata, filtrato in base al nome e al prefisso |
 | [MIP_CC_ReleaseLabel](functions.md#mip_cc_releaselabel) | Rilasciare le risorse associate a un'etichetta |
 | [MIP_CC_Label_GetId](functions.md#mip_cc_label_getid) | Ottiene l'ID etichetta |
 | [MIP_CC_Label_GetNameSize](functions.md#mip_cc_label_getnamesize) | Ottiene le dimensioni del buffer necessarie per archiviare il nome |
@@ -209,61 +152,12 @@ Funzione | Breve descrizione |
 | [MIP_CC_CreateMetadataDictionary](functions.md#mip_cc_createmetadatadictionary) | Creare un dizionario di chiavi/valori stringa |
 | [MIP_CC_MetadataDictionary_GetEntries](functions.md#mip_cc_metadatadictionary_getentries) | Ottenere le voci di metadati che compongono un dizionario |
 | [MIP_CC_ReleaseMetadataDictionary](functions.md#mip_cc_releasemetadatadictionary) | Rilasciare le risorse associate a un dizionario |
-| [MIP_CC_ReleasePolicyEngine](functions.md#mip_cc_releasepolicyengine) | Rilasciare le risorse associate a un motore dei criteri |
-| [MIP_CC_PolicyEngine_GetEngineIdSize](functions.md#mip_cc_policyengine_getengineidsize) | Ottiene le dimensioni del buffer necessario per l'ID del motore |
-| [MIP_CC_PolicyEngine_GetEngineId](functions.md#mip_cc_policyengine_getengineid) | Ottiene l'ID del motore |
-| [MIP_CC_PolicyEngine_GetMoreInfoUrlSize](functions.md#mip_cc_policyengine_getmoreinfourlsize) | Ottiene le dimensioni dei dati client associati a un motore di criteri |
-| [MIP_CC_PolicyEngine_GetMoreInfoUrl](functions.md#mip_cc_policyengine_getmoreinfourl) | Ottenere i dati client associati a un motore dei criteri |
-| [MIP_CC_PolicyEngine_IsLabelingRequired](functions.md#mip_cc_policyengine_islabelingrequired) | Ottiene un valore che indica se i criteri stabiliscono che è necessario etichettare un documento. |
-| [MIP_CC_PolicyEngine_GetPolicyFileIdSize](functions.md#mip_cc_policyengine_getpolicyfileidsize) | Ottiene le dimensioni dei dati client associati a un motore di criteri |
-| [MIP_CC_PolicyEngine_GetPolicyFileId](functions.md#mip_cc_policyengine_getpolicyfileid) | Ottenere i dati client associati a un motore dei criteri |
-| [MIP_CC_PolicyEngine_GetSensitivityFileIdSize](functions.md#mip_cc_policyengine_getsensitivityfileidsize) | Ottiene le dimensioni dei dati client associati a un motore di criteri |
-| [MIP_CC_PolicyEngine_GetSensitivityFileId](functions.md#mip_cc_policyengine_getsensitivityfileid) | Ottenere i dati client associati a un motore dei criteri |
-| [MIP_CC_PolicyEngine_HasClassificationRules](functions.md#mip_cc_policyengine_hasclassificationrules) | Ottiene un valore che indica se il criterio ha regole automatiche o consigliate |
-| [MIP_CC_PolicyEngine_GetLastPolicyFetchTime](functions.md#mip_cc_policyengine_getlastpolicyfetchtime) | Ottiene l'ora dell'ultimo recupero dei criteri |
-| [MIP_CC_PolicyEngine_GetSensitivityLabelsSize](functions.md#mip_cc_policyengine_getsensitivitylabelssize) | Ottiene il numero di etichette di riservatezza associate al motore dei criteri |
-| [MIP_CC_PolicyEngine_GetSensitivityLabels](functions.md#mip_cc_policyengine_getsensitivitylabels) | Ottiene le etichette di riservatezza associate al motore dei criteri |
-| [MIP_CC_PolicyEngine_GetLabelById](functions.md#mip_cc_policyengine_getlabelbyid) | Ottiene l'etichetta di riservatezza in base all'ID |
-| [MIP_CC_PolicyEngine_GetSensitivityTypesSize](functions.md#mip_cc_policyengine_getsensitivitytypessize) | Ottiene il numero di tipi di riservatezza associati al motore dei criteri. |
-| [MIP_CC_PolicyEngine_GetSensitivityTypes](functions.md#mip_cc_policyengine_getsensitivitytypes) | Ottiene i tipi di riservatezza associati al motore dei criteri. |
-| [MIP_CC_PolicyEngine_CreatePolicyHandler](functions.md#mip_cc_policyengine_createpolicyhandler) | Creazione di un gestore dei criteri per l'esecuzione di funzioni correlate ai criteri |
-| [MIP_CC_PolicyEngine_SendApplicationAuditEvent](functions.md#mip_cc_policyengine_sendapplicationauditevent) | Registra un evento specifico dell'applicazione nella pipeline di controllo |
-| [MIP_CC_PolicyEngine_GetTenantIdSize](functions.md#mip_cc_policyengine_gettenantidsize) | Ottiene le dimensioni dell'ID tenant |
-| [MIP_CC_PolicyEngine_GetTenantId](functions.md#mip_cc_policyengine_gettenantid) | Ottiene l'ID tenant |
-| [MIP_CC_PolicyEngine_GetPolicyDataXmlSize](functions.md#mip_cc_policyengine_getpolicydataxmlsize) | Ottiene le dimensioni del codice XML dei dati dei criteri |
-| [MIP_CC_PolicyEngine_GetPolicyDataXml](functions.md#mip_cc_policyengine_getpolicydataxml) | Ottiene il codice XML dei dati dei criteri |
-| [MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize](functions.md#mip_cc_policyengine_getsensitivitytypesdataxmlsize) | Ottiene le dimensioni dei dati XML dei tipi di riservatezza |
-| [MIP_CC_PolicyEngine_GetSensitivityTypesDataXml](functions.md#mip_cc_policyengine_getsensitivitytypesdataxml) | Ottiene il codice XML di dati dei tipi di riservatezza |
-| [MIP_CC_PolicyEngine_GetClientDataSize](functions.md#mip_cc_policyengine_getclientdatasize) | Ottiene le dimensioni dei dati client associati a un motore di criteri |
-| [MIP_CC_PolicyEngine_GetClientData](functions.md#mip_cc_policyengine_getclientdata) | Ottenere i dati client associati a un motore dei criteri |
-| [MIP_CC_CreatePolicyEngineSettingsWithIdentity](functions.md#mip_cc_createpolicyenginesettingswithidentity) | Creare un oggetto impostazioni usato per creare un nuovo motore dei criteri |
-| [MIP_CC_PolicyEngineSettings_SetClientData](functions.md#mip_cc_policyenginesettings_setclientdata) | Imposta i dati client che verranno archiviati in maniera opaca insieme a questo motore e mantengono tra le sessioni |
-| [MIP_CC_PolicyEngineSettings_SetCustomSettings](functions.md#mip_cc_policyenginesettings_setcustomsettings) | Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità. |
-| [MIP_CC_PolicyEngineSettings_SetSessionId](functions.md#mip_cc_policyenginesettings_setsessionid) | Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria |
-| [MIP_CC_PolicyEngineSettings_SetCloud](functions.md#mip_cc_policyenginesettings_setcloud) | Imposta il cloud che influiscono sugli URL dell'endpoint per tutte le richieste di servizio |
-| [MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl](functions.md#mip_cc_policyenginesettings_setcloudendpointbaseurl) | Imposta l'URL di base per tutte le richieste di servizio |
-| [MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail](functions.md#mip_cc_policyenginesettings_setdelegateduseremail) | Imposta l'utente delegato |
-| [MIP_CC_PolicyEngineSettings_SetLabelFilter](functions.md#mip_cc_policyenginesettings_setlabelfilter) | Imposta il filtro etichette |
-| [MIP_CC_ReleasePolicyEngineSettings](functions.md#mip_cc_releasepolicyenginesettings) | Rilasciare le risorse associate a impostazioni del motore dei criteri |
 | [MIP_CC_ReleasePolicyHandler](functions.md#mip_cc_releasepolicyhandler) | Rilasciare le risorse associate a un gestore dei criteri |
 | [MIP_CC_PolicyHandler_GetSensitivityLabel](functions.md#mip_cc_policyhandler_getsensitivitylabel) | Ottiene l'etichetta corrente di un documento |
 | [MIP_CC_PolicyHandler_ComputeActions](functions.md#mip_cc_policyhandler_computeactions) | Esegue le regole dei criteri in base allo stato fornito e determina le azioni corrispondenti |
 | [MIP_CC_PolicyHandler_NotifyCommittedActions](functions.md#mip_cc_policyhandler_notifycommittedactions) | Chiamata eseguita dall'applicazione dopo l'applicazione delle azioni calcolate e i dati di cui è stato eseguito il commit su disco |
-| [MIP_CC_PolicyProfile_AcquireAuthToken](functions.md#mip_cc_policyprofile_acquireauthtoken) | Attivare un callback di autenticazione |
-| [MIP_CC_LoadPolicyProfile](functions.md#mip_cc_loadpolicyprofile) | Carica un profilo |
-| [MIP_CC_ReleasePolicyProfile](functions.md#mip_cc_releasepolicyprofile) | Rilasciare le risorse associate a un profilo criteri |
-| [MIP_CC_CreatePolicyProfileSettings](functions.md#mip_cc_createpolicyprofilesettings) | Creare un oggetto impostazioni usato per creare un profilo criteri |
-| [MIP_CC_PolicyProfileSettings_SetSessionId](functions.md#mip_cc_policyprofilesettings_setsessionid) | Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria |
-| [MIP_CC_PolicyProfileSettings_SetHttpDelegate](functions.md#mip_cc_policyprofilesettings_sethttpdelegate) | Esegui override dello stack HTTP predefinito con il proprio client |
-| [MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate](functions.md#mip_cc_policyprofilesettings_settaskdispatcherdelegate) | Esegui override del dispatcher attività asincrono predefinito con il proprio client |
-| [MIP_CC_PolicyProfileSettings_SetCustomSettings](functions.md#mip_cc_policyprofilesettings_setcustomsettings) | Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità. |
-| [MIP_CC_ReleasePolicyProfileSettings](functions.md#mip_cc_releasepolicyprofilesettings) | Rilasciare le risorse associate a impostazioni del profilo criteri |
 | [MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectadhocdkaction_getdoublekeyencryptionurlsize) | Ottiene le dimensioni del buffer necessarie per archiviare l'URL di crittografia a chiave doppia. |
 | [MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectadhocdkaction_getdoublekeyencryptionurl) | Ottiene l'URL di crittografia a chiave doppia |
-| [MIP_CC_ProtectByTemplateAction_GetTemplateId](functions.md#mip_cc_protectbytemplateaction_gettemplateid) | Ottiene l'ID modello dell'azione "Proteggi per modello" |
-| [MIP_CC_ProtectByTemplateDkAction_GetTemplateId](functions.md#mip_cc_protectbytemplatedkaction_gettemplateid) | Ottiene un ID modello dell'azione "Proteggi per modello con chiave doppia" |
-| [MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurlsize) | Ottiene le dimensioni del buffer necessarie per archiviare l'URL di crittografia a chiave doppia. |
-| [MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurl) | Ottiene l'URL di crittografia a chiave doppia |
 | [MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurlsize) | Ottiene le dimensioni del buffer necessarie per archiviare l'URL di crittografia a chiave doppia. |
 | [MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurl) | Ottiene l'URL di crittografia a chiave doppia |
 | [MIP_CC_RemoveContentFooterAction_GetUIElementNames](functions.md#mip_cc_removecontentfooteraction_getuielementnames) | Ottiene i nomi degli elementi dell'interfaccia utente dell'azione "Rimuovi piè di pagina contenuto" da rimuovere |

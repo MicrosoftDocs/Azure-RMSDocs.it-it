@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 4f4258811ec634a49f84b76fcf1feb41752311df
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: c600f6e332ec230d73c90faafe8fb602e1d3dd88
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564365"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568329"
 ---
 # <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
 
@@ -29,9 +29,9 @@ Questo argomento illustra il processo di distribuzione dell'applicazione abilita
 Prima di poter rilasciare un'applicazione sviluppata con AIP/RMS, è necessario richiedere e concludere un contratto formale con Microsoft.
 
 ### <a name="begin-the-process"></a>Avviare il processo
-Per ottenere il IPIA, inviare un messaggio di posta elettronica a <strong>IPIA@microsoft.com</strong> con le informazioni seguenti:
+Per ottenere il contratto, inviare un messaggio di posta elettronica all'indirizzo <strong>IPIA@microsoft.com</strong> con le informazioni seguenti:
 
-**Oggetto**: Requesting IPIA for *nome azienda*
+**Oggetto:** Requesting IPIA for *nome azienda*
 
 Nel corpo del messaggio di posta elettronica includere:
 - Nome dell'applicazione e del prodotto
@@ -40,12 +40,12 @@ Nel corpo del messaggio di posta elettronica includere:
 
 ### <a name="next-steps"></a>Passaggi successivi
 In seguito alla ricezione della richiesta del contratto, Microsoft invierà un modulo in forma di documento di Word.
-Esaminare i termini e le condizioni del IPIA e restituire il modulo a <strong>IPIA@microsoft.com</strong> con le informazioni seguenti:
+Leggere i termini e le condizioni del contratto di integrazione di Information Protection e restituire il modulo all'indirizzo <strong>IPIA@microsoft.com</strong> con le informazioni seguenti:
 - Ragione sociale dell'azienda
 - Stato/provincia (Stati Uniti o Canada) o paese di costituzione
 - URL dell'azienda
 - Indirizzo di posta elettronica del contatto
-- Altri indirizzi dell'azienda (facoltativo)
+- Ulteriori indirizzi dell'azienda (facoltativo)
 - Nome dell'applicazione dell'azienda
 - Breve descrizione dell'applicazione
 - *ID tenant di Azure*
@@ -89,7 +89,7 @@ Non è un componente del sistema operativo Windows. Il client viene fornito come
 -   Scaricare il programma di installazione di RMS Client 2.1
 -   Integrare il programma di installazione di RMS Client 2.1 per l'esecuzione con il programma di installazione dell'applicazione
 
-Un esempio di integrazione di RMS Client 2.1 con l'applicazione è il pacchetto [Rights Protected Folder Explorer](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx). Provare a installarlo autonomamente per comprendere l'approccio.
+Un esempio di integrazione di RMS Client 2.1 con l'applicazione è il pacchetto [Rights Protected Folder Explorer](/previous-versions/orphan-topics/ws.10/hh538204(v=ws.10)). Provare a installarlo autonomamente per comprendere l'approccio.
 
 ### <a name="make-rmsclient21-a-pre-requisite-for-your-application-install"></a>Rendere RMS Client 2.1 un prerequisito per l'installazione dell'applicazione
 
@@ -114,14 +114,14 @@ Per consentire all'utente finale di sfruttare i vantaggi dei servizi Information
 
 -   Scaricare l'[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177) dall'Area download Microsoft.
 -   Assicurarsi che la distribuzione di un'applicazione abilitata all'utilizzo di diritti includa una verifica dei prerequisiti per la selezione di questo servizio.
--   Per eseguire test personalizzati e per l'utilizzo dei servizi online da parte degli utenti finali, vedere l'argomento di TechNet [Configurazione di Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx).
+-   Per eseguire test personalizzati e per l'utilizzo dei servizi online da parte degli utenti finali, vedere l'argomento di TechNet [Configurazione di Rights Management](../deployment-roadmap.md).
 
-È necessario anche usare questa guida per configurare l'app: [Come configurare un'applicazione del servizio app per usare l'account di accesso di Azure Active Directory](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
+È necessario anche usare questa guida per configurare l'app: [Come configurare un'applicazione del servizio app per usare l'account di accesso di Azure Active Directory](/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
 
 Per altre informazioni sull'abilitazione dell'applicazione per l'utilizzo di RMS per i servizi di Azure Rights Management, vedere [Abilitare l'applicazione all'utilizzo di RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
 * [Assistente per l'accesso a Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)
-* [Configurazione di Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
+* [Configurazione di Rights Management](../deployment-roadmap.md)
 * [Abilitare l'applicazione all'utilizzo di RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)

@@ -1,17 +1,17 @@
 ---
 title: 'Classe ProtectionEngine:: Settings'
 description: "Documenta la classe protectionengine:: Settings dell'SDK Microsoft Information Protection (MIP)."
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 7c6b96a1ec78712cb256ab63efe869213fc71f8e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 47947ed2b9b815204e3843ad64c18ffccf39b913
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764586"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567134"
 ---
 # <a name="class-protectionenginesettings"></a>Classe ProtectionEngine:: Settings 
 Oggetto Settings usato da ProtectionEngine durante la creazione e per tutta la sua durata.
@@ -19,8 +19,8 @@ Oggetto Settings usato da ProtectionEngine durante la creazione e per tutta la s
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const Identity& Identity, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale)  |  Costruttore ProtectionEngine::Settings per la creazione di un nuovo motore.
-Impostazioni pubbliche (const std:: String& engineId, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale)  |  Costruttore ProtectionEngine::Settings per il caricamento di un motore esistente.
+Impostazioni pubbliche (const Identity& Identity, const std:: shared_ptr \<AuthDelegate\>& authDelegate, const std:: string& clientData, const std:: string& locale)  |  Costruttore ProtectionEngine::Settings per la creazione di un nuovo motore.
+Impostazioni pubbliche (const std:: String& engineId, const std:: shared_ptr \<AuthDelegate\>& authDelegate, const std:: string& clientData, const std:: string& locale)  |  Costruttore ProtectionEngine::Settings per il caricamento di un motore esistente.
 public const std::string& GetEngineId() const  |  Ottiene l'ID motore.
 public void SetEngineId(const std::string& engineId)  |  Imposta l'ID motore.
 public const Identity& GetIdentity() const  |  Ottiene l'identità utente associata al motore.
@@ -28,16 +28,18 @@ public void SetIdentity(const Identity& identity)  |  Imposta l'identità utente
 public const std::string& GetClientData() const  |  Ottiene i dati personalizzati specificati dal client.
 public void SetClientData(const std::string& clientData)  |  Imposta i dati personalizzati specificati dal client.
 public const std::string& GetLocale() const  |  Ottiene le impostazioni locali in cui verranno scritti i dati del motore.
-public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\> \> String& value)  |  Imposta coppie nome-valore usate a scopi di test e sperimentazione.
-public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
+public void SetCustomSettings (const std:: Vector \<std::pair\<std::string, std::string\> \>& valore)  |  Imposta coppie nome-valore usate a scopi di test e sperimentazione.
+public const std:: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione del motore, usato per la correlazione di registrazione/telemetria.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione del motore.
 void public void (Cloud Cloud)  |  Imposta facoltativamente il cloud di destinazione.
 Cloud pubblico getcloud () const  |  Ottiene il cloud di destinazione utilizzato da tutte le richieste di servizio.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Imposta l'URL di base dell'endpoint cloud per il cloud personalizzato.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
-public void SetAuthDelegate (const std::\<shared_ptr\> AuthDelegate& AuthDelegate)  |  Impostare il delegato di autenticazione del motore.
-public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Ottiene il delegato di autenticazione del motore.
+public void SetAuthDelegate (const std:: shared_ptr \<AuthDelegate\>& authDelegate)  |  Impostare il delegato di autenticazione del motore.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Ottiene il delegato di autenticazione del motore.
+public const std:: String& GetUnderlyingApplicationId () const  |  Ottiene l'ID applicazione sottostante.
+public void SetUnderlyingApplicationId (const std:: String& underlyingApplicationId)  |  Imposta l'ID applicazione sottostante.
   
 ## <a name="members"></a>Members
   
@@ -194,3 +196,16 @@ Ottiene il delegato di autenticazione del motore.
 
   
 **Restituisce**: delegato di autenticazione del motore.
+  
+### <a name="getunderlyingapplicationid-function"></a>GetUnderlyingApplicationId (funzione)
+Ottiene l'ID applicazione sottostante.
+
+  
+**Restituisce**: ID applicazione sottostante
+  
+### <a name="setunderlyingapplicationid-function"></a>SetUnderlyingApplicationId (funzione)
+Imposta l'ID applicazione sottostante.
+
+Parametri  
+* **UnderlyingApplicationId**: ID applicazione sottostante.
+

@@ -12,12 +12,12 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d02f0e3e848e4a4743f7e61344f12108cca8c714
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: d7cd108b74d42a9d7bb7aab0480328b642697288
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136905"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567764"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
@@ -47,7 +47,7 @@ Dopo aver creato l'account, viene visualizzata la pagina finale con collegamenti
 
     Microsoft usa l'indirizzo di posta elettronica dell'utente per verificare se l'organizzazione dispone già di una [sottoscrizione di Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o un [abbonamento a Office 365 che include la protezione dei dati tramite Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se una di queste sottoscrizioni viene trovata, non è necessario RMS per utenti singoli. In questo caso si può accedere immediatamente e l'iscrizione self-service a RMS per utenti singoli viene annullata. Se non viene trovata nessuna di queste sottoscrizioni, si procederà al passaggio successivo.
 
-4. Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Il messaggio proviene dal team di Office 365 (support@email.microsoftonline.com) e ha come oggetto il testo **Finish signing up for Microsoft Azure Information Protection** (Completare l'iscrizione a Microsoft Azure Information Protection).
+4. Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Verrà dal team di Microsoft 365 ( support@email.microsoftonline.com ) e il soggetto **concluderà l'iscrizione a Microsoft Azure Information Protection**.
 
 5. Quando si riceve il messaggio di posta elettronica, fare clic su **Sì, sono io** per confermare l'indirizzo di posta elettronica e completare il processo di iscrizione.
 
@@ -62,5 +62,5 @@ A questo punto l'account viene creato. Se viene richiesto di accedere per legger
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-RMS per utenti singoli è un esempio di utilizzo della funzionalità di iscrizione self-service supportata da Azure Active Directory. Per ulteriori informazioni sul funzionamento di questa funzionalità, vedere informazioni sull' [iscrizione self-service per Azure Active Directory](/azure/active-directory/users-groups-roles/directory-self-service-signup) nella documentazione di Azure Active Directory.
+RMS per utenti singoli è un esempio di utilizzo della funzionalità di iscrizione self-service supportata da Azure Active Directory. Per ulteriori informazioni sul funzionamento di questa funzionalità, vedere [che cos'è Self-Service iscrizione per Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) nella documentazione di Azure Active Directory.
 

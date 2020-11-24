@@ -1,17 +1,17 @@
 ---
 title: Classe fileprofile
 description: 'Documents The fileprofile:: undefined Class of the Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cf5950b37953dc32100e8ae2700b6111783cb612
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 6a7ed521ce5a277a72e8b151c8331d537484c86a
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762928"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566928"
 ---
 # <a name="class-fileprofile"></a>Classe fileprofile 
 FileProfile è la classe radice per l'uso delle operazioni di Microsoft Information Protection.
@@ -21,11 +21,11 @@ Un'applicazione comune richiede un solo profilo.
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Restituisce le impostazioni del profilo.
-public std:: shared_ptr\<AsyncControl\> ListEnginesAsync (const std::\<shared_ptr\> void& context)  |  Avvia l'operazione di elenco motori.
-public std:: shared_ptr\<AsyncControl\> UnloadEngineAsync (const std:: String& ID, const std:\<:\> shared_ptr void& context)  |  Avvia lo scaricamento del motore di file con l'ID specificato.
-public std:: shared_ptr\<AsyncControl\> AddEngineAsync (const Fileengine:: Settings& Settings, const std:\<:\> shared_ptr void& context)  |  Avvia l'aggiunta di un nuovo motore di file al profilo.
-public std:: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std:: String& ID, const std:\<:\> shared_ptr void& context)  |  Avvia l'eliminazione del motore di file con l'ID specificato. Tutti i dati per il profilo specificato verranno eliminati.
-public void AcquirePolicyAuthToken (Cloud Cloud, const std::\<shared_ptr\> AuthDelegate& AuthDelegate) const  |  Attivare un callback di autenticazione per i criteri.
+public std:: shared_ptr \<AsyncControl\> ListEnginesAsync (const std:: shared_ptr \<void\>& context)  |  Avvia l'operazione di elenco motori.
+public std:: shared_ptr \<AsyncControl\> UnloadEngineAsync (const std:: string& ID, const std:: shared_ptr \<void\>& context)  |  Avvia lo scaricamento del motore di file con l'ID specificato.
+public std:: shared_ptr \<AsyncControl\> AddEngineAsync (const fileengine:: settings& Settings, const std:: shared_ptr \<void\>& context)  |  Avvia l'aggiunta di un nuovo motore di file al profilo.
+public std:: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std:: string& ID, const std:: shared_ptr \<void\>& context)  |  Avvia l'eliminazione del motore di file con l'ID specificato. Tutti i dati per il profilo specificato verranno eliminati.
+public void AcquirePolicyAuthToken (Cloud Cloud, const std:: shared_ptr \<AuthDelegate\>& authDelegate) const  |  Attivare un callback di autenticazione per i criteri.
   
 ## <a name="members"></a>Members
   

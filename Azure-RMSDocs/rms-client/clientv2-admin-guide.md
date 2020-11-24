@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8d2b5ad766f02a7c7861d64aaef39e905f578bd1
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 2af1d3fad0e831032d8c7f6aa2a312cdfb7a9558
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447176"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568047"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Client di etichettatura unificata di Azure Information Protection: guida per gli amministratori
 
@@ -24,7 +24,7 @@ ms.locfileid: "89447176"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Utilizzare le informazioni contenute in questa guida se si è responsabili del client Azure Information Protection Unified Labeling in una rete aziendale o se si desiderano informazioni più tecniche rispetto a quelle disponibili nella [Guida per l'utente del client di Azure Information Protection Unified Labeling](clientv2-user-guide.md). 
 
@@ -65,7 +65,7 @@ Se si usa AD RMS e si vuole passare ad Azure Information Protection, vedere [Mig
 
 ## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>È consigliabile distribuire il client di Azure Information Protection Unified Labeling?
 
-Distribuire il client di etichettatura unificata Azure Information Protection se si usano le [etichette di riservatezza in Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)e si verifica una delle condizioni seguenti:
+Distribuire il client di etichettatura unificata Azure Information Protection se si usano le [etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) in Microsoft 365 e si verifica una delle condizioni seguenti:
 
 - Si vuole classificare e, facoltativamente, proteggere i documenti e i messaggi di posta elettronica selezionando etichette dalle app di Office (Word, Excel, PowerPoint, Outlook) nei computer Windows.
 
@@ -128,21 +128,21 @@ Con le **impostazioni di reimpostazione** l'utente viene disconnesso, Elimina le
     
     Per le reti aziendali, queste impostazioni vengono in genere configurate tramite Criteri di gruppo e in questo caso vengono automaticamente riapplicate al momento dell'aggiornamento dei Criteri di gruppo nel computer. Potrebbero essere tuttavia presenti impostazioni configurate una sola volta tramite script o manualmente. In questi casi, è necessario intervenire per riconfigurare queste impostazioni. Ad esempio, è possibile che i computer eseguano un script una sola volta per configurare le impostazioni per il reindirizzamento ad Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio. Dopo aver reimpostato il client, il computer deve eseguire nuovamente lo script.
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - L'utente connesso viene disconnesso.
 
 #### <a name="client-status-section"></a>Sezione **Stato del client**
 
-Usare il valore di **Connessione effettuata come** per verificare se il nome utente visualizzato identifica l'account da usare per l'autenticazione di Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory. L'account deve appartenere anche a un tenant di Office 365 configurato per le etichette di riservatezza nel portale di gestione delle etichette.
+Usare il valore di **Connessione effettuata come** per verificare se il nome utente visualizzato identifica l'account da usare per l'autenticazione di Azure Information Protection. Questo nome utente deve corrispondere a un account utilizzato per Microsoft 365 o Azure Active Directory. L'account deve appartenere anche a un tenant di Microsoft 365 configurato per le etichette di riservatezza nel portale di gestione delle etichette.
 
 Se è necessario accedere come utente diverso a quello visualizzato, vedere le istruzioni per l' [accesso come utente diverso](clientv2-admin-guide-customizations.md#sign-in-as-a-different-user) .
 
@@ -150,11 +150,11 @@ Usare le informazioni di **Versione** per verificare la versione del client inst
 
 ## <a name="support-for-multiple-languages"></a>Supporto di più lingue
 
-Il client di assegnazione unificata Azure Information Protection supporta le stesse lingue supportate da Office 365. Per un elenco di queste lingue, vedere la sezione **Office 365, Exchange Online Protection e Power BI** nella pagina [Disponibilità internazionale](https://products.office.com/business/international-availability) di Office.
+Il client di assegnazione unificata Azure Information Protection supporta le stesse lingue supportate da Office 365. Per un elenco di queste lingue, vedere la pagina relativa alla [disponibilità internazionale](https://products.office.com/business/international-availability) da Office.
 
 Per questi linguaggi, le opzioni di menu, le finestre di dialogo e i messaggi della Azure Information Protection client Unified Labeling vengono visualizzati nella lingua dell'utente. È disponibile un singolo programma di installazione che rileva la lingua, pertanto non è necessaria alcuna configurazione aggiuntiva per installare il client di etichetta unificato Azure Information Protection per le diverse lingue. 
 
-Tuttavia, i nomi di etichetta e le descrizioni specificati non vengono convertiti automaticamente quando si configurano le etichette nel centro di etichette. Per consentire agli utenti di visualizzare le etichette nella lingua preferita, fornire le proprie traduzioni e configurarle per le etichette usando con Office 365 Security & Compliance PowerShell e il parametro *LocaleSettings* per [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps). I contrassegni visivi non vengono convertiti e non supportano più di una lingua.
+Tuttavia, i nomi di etichetta e le descrizioni specificati non vengono convertiti automaticamente quando si configurano le etichette nel centro di etichette. Per consentire agli utenti di visualizzare le etichette nella lingua preferita, fornire le proprie traduzioni e configurarle per le etichette usando con Office 365 Security & Compliance PowerShell e il parametro *LocaleSettings* per [set-label](/powershell/module/exchange/policy-and-compliance/set-label). I contrassegni visivi non vengono convertiti e non supportano più di una lingua.
 
 ## <a name="post-installation-tasks"></a>Attività successive all'installazione
 
@@ -199,7 +199,7 @@ Le istruzioni per l'aggiornamento dello scanner variano a seconda che si stia es
 
 2.    Aggiornare il client di Azure Information Protection Unified Labeling scaricando e installando la versione più recente del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. Ad esempio: `Update-AIPScanner –Profile Europe`
+3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. ad esempio `Update-AIPScanner –Profile Europe`
 
 4. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -215,7 +215,7 @@ Le modalità di aggiornamento dello scanner dipendono dalla versione del client 
 
 - [Aggiornamento da versioni precedenti a 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
-Con l'aggiornamento viene creato un nuovo database denominato **AIPScannerUL_ \<profile_name> **e il database dello scanner precedente viene mantenuto nel caso in cui sia necessario per la versione precedente. Quando si è certi che non è necessario il database scanner precedente, è possibile eliminarlo. Poiché l'aggiornamento crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito.
+Con l'aggiornamento viene creato un nuovo database denominato **AIPScannerUL_ \<profile_name>** e il database dello scanner precedente viene mantenuto nel caso in cui sia necessario per la versione precedente. Quando si è certi che non è necessario il database scanner precedente, è possibile eliminarlo. Poiché l'aggiornamento crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito.
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Aggiornamento dal client di Azure Information Protection (versione classica) 1.48.204.0 e versioni successive di questo client
 
@@ -227,7 +227,7 @@ Se è stato aggiornato lo scanner usando la versione di anteprima del client Uni
 
 3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. Ad esempio: `Update-AIPScanner –Profile Europe`.
     
-    Questo passaggio consente di creare un nuovo database con il nome **AIPScannerUL_ \<profile_name> **
+    Questo passaggio consente di creare un nuovo database con il nome **AIPScannerUL_ \<profile_name>**
 
 4. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -246,7 +246,7 @@ A partire dalla versione 1.48.204.0, lo scanner ottiene le impostazioni di confi
 
 3. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando il client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
-4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
+4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
 
 5. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -254,7 +254,7 @@ A partire dalla versione 1.48.204.0, lo scanner ottiene le impostazioni di confi
 
 ###### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Aggiornamento in un ordine diverso rispetto alla procedura consigliata
 
-Quando si esegue l'aggiornamento da una versione precedente a 1.48.204.0 e non si configura lo scanner nella portale di Azure prima di eseguire il comando Update-AIPScanner, non è presente un nome di profilo per specificare che identifichi le impostazioni di configurazione dello scanner per il processo di aggiornamento. 
+Quando si esegue l'aggiornamento da una versione precedente a 1.48.204.0 e non si configura lo scanner nella portale di Azure prima di eseguire il comando Update-AIPScanner, non si avrà un nome di profilo per specificare che identifichi le impostazioni di configurazione dello scanner per il processo di aggiornamento. 
 
 In questo scenario, quando si configura lo scanner nel portale di Azure, è necessario specificare esattamente lo stesso nome di profilo usato quando è stato eseguito il comando Update-AIPScanner. Se il nome non corrisponde, lo scanner non verrà configurato per le impostazioni. 
 
@@ -285,5 +285,3 @@ Se il client è già stato installato, vedere gli argomenti seguenti per altre i
 - [Tipi di file supportati](client-admin-guide-file-types.md)
 
 - [Comandi di PowerShell](client-admin-guide-powershell.md)
-
-

@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cd7705a9010d0b692d7f613550c9aa6052c123d9
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 42c74f9ffa8097768e4ab97d1dea6e75bc0aaffc
+ms.sourcegitcommit: b5043f88f9287e63b510f44a5e6ceaead9093163
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073771"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "95568400"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Che cos'è l'app Azure Information Protection per iOS o Android?
 
@@ -27,7 +27,7 @@ L'app per dispositivi mobili Azure Information Protection (AIP) per iOS e Androi
 
 Ad esempio, se i messaggi di posta elettronica protetti vengono visualizzati nell'app per dispositivi mobili di posta elettronica normale come allegati, è possibile usare l'app AIP per dispositivi mobili per visualizzare il messaggio di posta elettronica.
 
-Per altre informazioni, vedere [applicazioni che supportano la protezione dei dati di Azure Rights Management](../requirements-applications.md).
+Per altre informazioni, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](../requirements-applications.md).
 
 > [!NOTE]
 > Le app per dispositivi mobili AIP sono *solo visualizzatori* e non consentono di creare nuovi messaggi di posta elettronica o di rispondere ai messaggi di posta elettronica oppure di creare o modificare file protetti. Le app per dispositivi mobili AIP non possono anche aprire allegati a file PDF o messaggi di posta elettronica protetti.
@@ -57,9 +57,25 @@ Se il dispositivo mobile è gestito da Microsoft Intune, potrebbe essere possibi
 
 Per ulteriori informazioni, contattare l'amministratore di sistema.
 
-## <a name="view-protected-files-on-your-device"></a>Visualizzare i file protetti nel dispositivo
+## <a name="ios-view-protected-files-on-your-device"></a>iOS: visualizzare i file protetti nel dispositivo
 
-1. Dopo aver [installato l'app per dispositivi mobili AIP](#download-and-install-the-aip-app-for-your-device), aprire un file o un messaggio di posta elettronica protetto. 
+Dopo aver [installato l'app per dispositivi mobili AIP](#download-and-install-the-aip-app-for-your-device), aprire un file o un messaggio di posta elettronica protetto. 
+
+1. Se viene richiesto di selezionare un'app per aprire il file, toccare il pulsante Condividi per condividere il file.
+
+    Selezionare **Condividi file tramite...** e quindi selezionare **copia in AIP Viewer.**
+
+    Ad esempio:
+
+    :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Condividi nel Visualizzatore AIP in iOS" border="false":::
+
+1. Accedere o selezionare un certificato come richiesto.
+
+    Una volta eseguita l'autenticazione, l'indirizzo di posta elettronica o il file si aprirà nel Visualizzatore AIP.
+ 
+## <a name="android-view-protected-files-on-your-device"></a>Android: visualizzare i file protetti nel dispositivo
+
+Dopo aver [installato l'app per dispositivi mobili AIP](#download-and-install-the-aip-app-for-your-device), aprire un file o un messaggio di posta elettronica protetto. 
 
 1. Quando viene richiesto di selezionare un'app, selezionare il Visualizzatore AIP:
 
@@ -68,7 +84,7 @@ Per ulteriori informazioni, contattare l'amministratore di sistema.
 1. Accedere o selezionare un certificato come richiesto.
 
     Una volta eseguita l'autenticazione, l'indirizzo di posta elettronica o il file si aprirà nel Visualizzatore AIP.
- 
+
 ## <a name="aip-mobile-app-requirements"></a>Requisiti dell'app mobile AIP
 
 Le app per dispositivi mobili AIP per iOS e Android supportano i tipi di file e gli ambienti seguenti:

@@ -1,23 +1,23 @@
 ---
 title: Gestire i dati personali per Azure Information Protection
 description: Informazioni sui dati personali usati da Azure Information Protection e su come visualizzarli, esportarli ed eliminarli.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 10/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b808fd6e3c1080d7c6d9f06384408bd196aadc45
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 89f46156ec8e22c0e44a99c9e3d8d5f79b260129
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136808"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567639"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -130,7 +130,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ### <a name="document-tracking-logs"></a>Log di rilevamento dei documenti
 
-Eseguire il cmdlet [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) per recuperare le informazioni dal sito di rilevamento dei documenti relativi a un utente specifico. Per ottenere le informazioni di rilevamento associate ai log del documento, usare il cmdlet [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) .
+Eseguire il cmdlet [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) per recuperare le informazioni dal sito di rilevamento dei documenti relativi a un utente specifico. Per ottenere le informazioni di rilevamento associate ai log del documento, usare il cmdlet [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog) .
 
 Ad esempio:
 ```
@@ -212,7 +212,7 @@ I dati personali visualizzati e specificati nel portale di Azure sono accessibil
     
 - **Amministratore di Azure Information Protection**
 
-- **Amministratore conformità**
+- **Amministratore di conformità**
 
 - **Amministratore dati di conformità**
 
@@ -222,9 +222,9 @@ I dati personali visualizzati e specificati nel portale di Azure sono accessibil
 
 - **Amministratore globale**
 
-- **Ruolo con autorizzazioni di lettura globali**
+- **Lettore globale**
 
-I dati personali che è possibile visualizzare e specificare usando il modulo AIPService (o il modulo precedente, AADRM) sono accessibili solo agli utenti a cui sono stati assegnati i ruoli amministratore **Azure Information Protection**, **amministratore conformità**, **amministratore dati di conformità**o **amministratore globale** da Azure Active Directory o ruolo di amministratore globale per il servizio di protezione.
+I dati personali che è possibile visualizzare e specificare usando il modulo AIPService (o il modulo precedente, AADRM) sono accessibili solo agli utenti a cui sono stati assegnati i ruoli amministratore **Azure Information Protection**, **amministratore conformità**, **amministratore dati di conformità** o **amministratore globale** da Azure Active Directory o ruolo di amministratore globale per il servizio di protezione.
 
 ## <a name="updating-personal-data"></a>Aggiornamento dei dati personali
 

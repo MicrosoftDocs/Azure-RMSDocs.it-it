@@ -1,33 +1,33 @@
 ---
 title: 'Classe fileengine:: Settings'
 description: "Documenta la classe fileengine:: Settings dell'SDK Microsoft Information Protection (MIP)."
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5a992c81b4d32a876f5f047a98b229aace7cb075
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 05fb06ec06943b39209c980236643e50d873d451
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763258"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566976"
 ---
 # <a name="class-fileenginesettings"></a>Classe fileengine:: Settings 
   
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const std:: String& engineId, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale, bool loadSensitivityTypes)  |  Costruttore FileEngine::Settings per il caricamento di un motore esistente.
-Impostazioni pubbliche (const Identity& Identity, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale, bool loadSensitivityTypes)  |  Costruttore FileProfile::Settings per la creazione di un nuovo motore.
+Impostazioni pubbliche (const std:: String& engineId, const std:: shared_ptr \<AuthDelegate\>& authDelegate, const std:: string& clientData, const std:: string& locale, bool loadSensitivityTypes)  |  Costruttore FileEngine::Settings per il caricamento di un motore esistente.
+Impostazioni pubbliche (const Identity& Identity, const std:: shared_ptr \<AuthDelegate\>& authDelegate, const std:: string& clientData, const std:: string& locale, bool loadSensitivityTypes)  |  Costruttore FileProfile::Settings per la creazione di un nuovo motore.
 public const std::string& GetEngineId() const  |  Restituisce l'ID motore.
 public void SetEngineId(const std::string& id)  |  Imposta l'ID del motore.
 public const Identity& GetIdentity() const  |  Restituisce l'identità del motore.
 public void SetIdentity(const Identity& identity)  |  Imposta l'identità del motore.
 public const std::string& GetClientData() const  |  Restituisce i dati client del motore.
 public const std::string& GetLocale() const  |  Restituisce le impostazioni locali del motore.
-public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\> \> String& value)  |  Imposta un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
-public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
+public void SetCustomSettings (const std:: Vector \<std::pair\<std::string, std::string\> \>& valore)  |  Imposta un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
+public const std:: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Ottiene un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione del motore.
 public const std::string& GetSessionId() const  |  Restituisce l'ID sessione del motore.
 void public void (Cloud Cloud)  |  Imposta facoltativamente il cloud di destinazione.
@@ -43,10 +43,14 @@ public void EnablePFile (valore bool)  |  Imposta il flag che indica se produrre
 Public Const bool IsPFileEnabled ()  |  Ottiene il flag che indica se produce Pfile.
 public void SetDelegatedUserEmail (const std:: String& delegatedUserEmail)  |  Imposta l'utente delegato.
 public const std:: String& GetDelegatedUserEmail () const  |  Ottiene l'utente delegato.
-public void SetLabelFilter (const std::\<vector\> LabelFilterType& labelFilter)  |  Imposta il filtro delle etichette.
-public const std::\<vector\> LabelFilterType& GetLabelFilter () const  |  Ottiene il filtro dell'etichetta.
-public void SetAuthDelegate (const std::\<shared_ptr\> AuthDelegate& AuthDelegate)  |  Impostare il delegato di autenticazione del motore.
-public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Ottiene il delegato di autenticazione del motore.
+public void SetLabelFilter (const std:: Vector \<LabelFilterType\>& deprecatedLabelFilters)  |  Imposta il filtro delle etichette.
+public const std:: Vector \<LabelFilterType\>& GetLabelFilter () const  |  Ottiene i filtri delle etichette impostati tramite la funzione deprecata SetLabelFilter.
+public void ConfigureFunctionality (LabelFilterType labelFilterType, bool Enabled)  |  Abilita o Disabilita la funzionalità.
+public const std:: Map \<LabelFilterType, bool\>& GetConfiguredFunctionality () const  |  Ottiene la funzionalità configurata.
+public void SetClassifierEnabled (classificatore classifierType, bool abilitato)  |  Abilita o Disabilita il supporto per i tipi di classificazione.
+public const std:: Map \<Classifier, bool\>& GetConfiguredClassifierSupport () const  |  Ottiene le sostituzioni di classificatori supportate.
+public void SetAuthDelegate (const std:: shared_ptr \<AuthDelegate\>& authDelegate)  |  Impostare il delegato di autenticazione del motore.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Ottiene il delegato di autenticazione del motore.
   
 ## <a name="members"></a>Members
   
@@ -215,11 +219,47 @@ Parametri
 Per impostazione predefinita, le etichette sono filtro per ambito. questa API consente di filtrare in base alle possibili azioni. Se non è impostato, HyokProtection e DoubleKeyProtection vengono filtrati.
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter (funzione)
-Ottiene il filtro dell'etichetta.
+Ottiene i filtri delle etichette impostati tramite la funzione deprecata SetLabelFilter.
 
   
 **Restituisce**: filtro etichette.
 Per impostazione predefinita, le etichette sono filtro per ambito. questa API consente di filtrare in base alle possibili azioni.
+  
+### <a name="configurefunctionality-function"></a>ConfigureFunctionality (funzione)
+Abilita o Disabilita la funzionalità.
+
+Parametri  
+* **labelFilterType**: il tipo di funzionalità. 
+
+
+* **Enabled**: true per abilitare, false per disabilitare
+
+
+HyokProtection, DoubleKeyProtection, DoubleKeyUserDefinedProtection sono disabilitati per impostazione predefinita e devono essere abilitati
+  
+### <a name="getconfiguredfunctionality-function"></a>GetConfiguredFunctionality (funzione)
+Ottiene la funzionalità configurata.
+
+  
+**Returns**: mappa dei tipi a un valore booleano che indica se è abilitata o meno.
+  
+### <a name="setclassifierenabled-function"></a>SetClassifierEnabled (funzione)
+Abilita o Disabilita il supporto per i tipi di classificazione.
+
+Parametri  
+* **classifierType**: tipo di classificatore 
+
+
+* **Enabled**: true per abilitare, false per disabilitare
+
+
+Solo SensitiveInformation classifers sono abilitati per impostazione predefinita
+  
+### <a name="getconfiguredclassifiersupport-function"></a>GetConfiguredClassifierSupport (funzione)
+Ottiene le sostituzioni di classificatori supportate.
+
+  
+**Returns**: mappa dei tipi a un valore booleano che indica se sono stati sovrascritti con il supporto
   
 ### <a name="setauthdelegate-function"></a>SetAuthDelegate (funzione)
 Impostare il delegato di autenticazione del motore.

@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecf9257a69a5046592cb52f810e171859df238a4
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: f56373bfd3aa37b13b89a552e1767bd954c81bde
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298411"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567999"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Guida di orientamento per la distribuzione di Azure Information Protection solo per la protezione
 
@@ -38,9 +38,9 @@ Questa roadmap è consigliata per i clienti con una sottoscrizione che non suppo
 
 ## <a name="deployment-process"></a>Processo di distribuzione
 
-Eseguire questa procedura:
+Seguire questa procedura:
 
-1. [Verificare di disporre di una sottoscrizione che includa il servizio di protezione AIP](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) [
+1. [Verificare di disporre di una sottoscrizione che includa il servizio di protezione AIP](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Preparare il tenant per l'uso di Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
 1. [Installare le applicazioni e i servizi di Azure Information Protection classico e client per Rights Management](#install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management)
 1. [Usare e monitorare le soluzioni di protezione dei dati](#use-and-monitor-your-data-protection-solutions)
@@ -55,7 +55,7 @@ Assegnare una licenza da questa sottoscrizione a ogni utente dell'organizzazione
 > [!IMPORTANT]
 > non assegnare manualmente licenze utente dalla sottoscrizione gratuita di RMS per singoli utenti e non usare questa licenza per amministrare il servizio Azure Rights Management per la propria organizzazione. 
 >
-> Queste licenze vengono visualizzate come **Rights Management Adhoc** (Ad-hoc per Rights Manager) nell'interfaccia di amministrazione di Microsoft 365 e come **RIGHTSMANAGEMENT_ADHOC** quando si esegue il cmdlet di PowerShell per Azure AD, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). 
+> Queste licenze vengono visualizzate come **Rights Management Adhoc** (Ad-hoc per Rights Manager) nell'interfaccia di amministrazione di Microsoft 365 e come **RIGHTSMANAGEMENT_ADHOC** quando si esegue il cmdlet di PowerShell per Azure AD, [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100)). 
 >
 > Per altre informazioni sulle modalità in cui la sottoscrizione di RMS per singoli utenti viene automaticamente concessa e assegnata agli utenti, vedere [RMS per utenti singoli e Azure Information Protection](./rms-for-individuals.md).
 
@@ -65,7 +65,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
 1. **Configurare gli account utente e i gruppi per AIP.**
 
-    Verificare che il tenant di Office 365 contenga gli account utente e i gruppi che Azure Information Protection dovrà usare per autenticare gli utenti dell'organizzazione. Se necessario, creare questi account e gruppi o sincronizzarli dalla directory locale. 
+    Verificare che il tenant di Microsoft 365 contenga gli account utente e i gruppi che verranno usati da Azure Information Protection per autenticare e autorizzare gli utenti dell'organizzazione. Se necessario, creare questi account e gruppi o sincronizzarli dalla directory locale. 
 
     Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 
@@ -97,7 +97,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
     Considerare la possibilità di configurare una delle funzionalità seguenti, ora o versione successiva.
     
-    |Feature  |Descrizione  |
+    |Funzionalità  |Descrizione  |
     |---------|---------|
     |**Modelli personalizzati per le impostazioni di protezione**     |  Se i modelli predefiniti non sono sufficienti per l'organizzazione, configurare i modelli personalizzati. </br>Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](./configure-policy-templates.md).       |
     |**Registrazione dell'utilizzo**     | Configurare la registrazione dell'utilizzo per monitorare il modo in cui l'organizzazione usa il servizio di protezione. </br>Per ulteriori informazioni, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).        |
@@ -105,7 +105,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
 ## <a name="install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management"></a>Installare le applicazioni e i servizi di Azure Information Protection classico e client per Rights Management
 
-Eseguire questa procedura:
+Seguire questa procedura:
 
 1. **Distribuire il client di Azure Information Protection classico**
     
@@ -137,7 +137,7 @@ Eseguire questa procedura:
     
     Se si prevede di usare servizi locali con il servizio di protezione, installare e configurare il connettore di Rights Management. 
 
-    Per altre informazioni, vedere [Deploying the Azure Rights Management Connector](./deploy-rms-connector.md).
+    Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
 
 ## <a name="use-and-monitor-your-data-protection-solutions"></a>Usare e monitorare le soluzioni di protezione dei dati
 

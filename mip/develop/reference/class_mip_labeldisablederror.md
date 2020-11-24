@@ -1,17 +1,17 @@
 ---
 title: Classe LabelDisabledError
 description: 'Documenta la classe labeldisablederror:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 2535dd246f3ef71195a98e591f27b76d50d1f57b
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 04feb2b0d5f2c63333bcf5ba1c89a8a02a442c53
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762004"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566811"
 ---
 # <a name="class-labeldisablederror"></a>Classe LabelDisabledError 
 Label è disabilitato o inattivo.
@@ -21,4 +21,4 @@ Label è disabilitato o inattivo.
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>Members
-_Non ancora documentato._
+Non ancora documentato.

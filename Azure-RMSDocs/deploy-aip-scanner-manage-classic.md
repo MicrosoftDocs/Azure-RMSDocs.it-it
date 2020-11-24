@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb50a25ee406ac6899e15480f0c665f82a7434fd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: c3292782a3a824db1166e255be3935978c8b8ce9
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953100"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567897"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Esecuzione dello scanner classico Azure Information Protection
 
@@ -70,7 +70,7 @@ Eseguire di nuovo questi passaggi in base alle esigenze quando il contenuto camb
 
         Questo log segnala anche quando lo scanner ha terminato l'analisi, incluso un riepilogo dei risultati. Cercare l'ID evento informativo **911**. Per altre informazioni, vedere [ID e descrizioni del registro eventi per lo scanner](#event-log-ids-and-descriptions-for-the-scanner).
 
-1. Una volta completata l'analisi, esaminare i report archiviati nella directory ** % *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports**
+1. Una volta completata l'analisi, esaminare i report archiviati nella directory **% *LocalAppData*% \ Microsoft\MSIP\Scanner\Reports**
 
     - I file summary.txt includono il tempo impiegato per l'analisi, il numero di file analizzati e il numero di file con una corrispondenza per i tipi di informazioni.
 
@@ -151,14 +151,14 @@ Se lo scanner si interrompe in modo imprevisto e non completa l'analisi di un nu
 
 - **Numero di porte dinamiche**. Potrebbe essere necessario aumentare il numero di porte dinamiche per il sistema operativo che ospita i file. Uno dei motivi per cui lo scanner supera il numero di connessioni di rete consentite e pertanto si arresta può essere la protezione avanzata dei server per SharePoint.
 
-    Per verificare se questa è la conseguenza dell'arresto dello scanner, verificare se il seguente messaggio di errore viene registrato per lo scanner nel file ** % *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
+    Per verificare se questa è la conseguenza dell'arresto dello scanner, verificare se il seguente messaggio di errore viene registrato per lo scanner nel file **% *LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog** .
 
     **Impossibile connettersi al server remoto---> System .NET. Sockets. SocketException: un solo utilizzo di ogni indirizzo del socket (protocollo/indirizzo di rete/porta) è in genere consentito IP: porta**
 
     > [!NOTE]
     > Il file verrà compresso se sono presenti più log.
 
-    Per altre informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo, vedere [Impostazioni che possono essere modificate per migliorare le prestazioni di rete](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+    Per altre informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo, vedere [Impostazioni che possono essere modificate per migliorare le prestazioni di rete](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 - **Soglia visualizzazione elenco.** Per le farm di SharePoint di grandi dimensioni, potrebbe essere necessario aumentare la soglia di visualizzazione elenco. Per impostazione predefinita, la soglia di visualizzazione elenco è impostata su 5.000.
 

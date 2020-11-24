@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: f94f885f77d15ec5c38894a4801b08908e65a166
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 60420046a1b8c102143a6d6b0dcd2d7b01f55821
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555807"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567771"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK - Concetti relativi ai gestori di file
 
@@ -36,11 +36,11 @@ In questo articolo verranno descritti i metodi seguenti:
 - `DeleteLabel()`
 - `CommitAsync()`
 
-## <a name="requirements"></a>requisiti
+## <a name="requirements"></a>Requisiti
 
 La creazione `FileHandler` per lavorare con un file specifico richiede quanto segue:
 
-- Un elemento `FileProfile`
+- Elemento `FileProfile`
 - Un elemento `FileEngine` aggiunto a `FileProfile`
 - Una classe che eredita `mip::FileHandler::Observer`
 
@@ -69,7 +69,7 @@ Dopo la creazione corretta dell'oggetto `FileHandler` è possibile eseguire oper
 
 Esistono alcuni requisiti per leggere correttamente i metadati da un file e convertirli in informazioni utilizzabili nelle applicazioni.
 
-- L'etichetta letta deve esistere ancora nel servizio Office 365. Se è stata eliminata completamente, l'SDK non riuscirà a ottenere informazioni su tale etichetta e restituirà un errore.
+- L'etichetta da leggere deve ancora esistere nel servizio Microsoft 365. Se è stata eliminata completamente, l'SDK non riuscirà a ottenere informazioni su tale etichetta e restituirà un errore.
 - I metadati dei file devono essere intatti. Questi metadati includono:
   - Attribute1
   - Attribute2
@@ -93,11 +93,11 @@ I dati dell'etichetta possono essere letti dall'oggetto `label` e passati a qual
 
 ## <a name="set-a-label"></a>Impostare un'etichetta
 
-L'impostazione di un'etichetta è un processo costituito da due parti. Per prima cosa, dopo aver creato un gestore che punta al file in questione, è possibile impostare l'etichetta chiamando `FileHandler->SetLabel()` con alcuni parametri: `mip::Label`, `mip::LabelingOptions`e `mip::ProtectionOptions`. In primo luogo, è necessario risolvere l'ID etichetta in un'etichetta e quindi definire le opzioni di etichettatura. 
+L'impostazione di un'etichetta è un processo costituito da due parti. Per prima cosa, dopo aver creato un gestore che punta al file in questione, l'etichetta può essere impostata chiamando `FileHandler->SetLabel()` con alcuni parametri: `mip::Label` , `mip::LabelingOptions` e `mip::ProtectionOptions` . In primo luogo, è necessario risolvere l'ID etichetta in un'etichetta e quindi definire le opzioni di etichettatura. 
 
 ### <a name="resolve-label-id-to-miplabel"></a>Risolvere l'ID etichetta in MIP:: Label
 
-Il primo parametro della funzione **selabel** è un `mip::Label`. Spesso, l'applicazione utilizza identificatori di etichetta invece di etichette. È possibile risolvere l'identificatore di etichetta nel `mip::Label` chiamando **GetLabelById** nel motore dei criteri o del file:
+Il primo parametro della funzione **selabel** è un oggetto `mip::Label` . Spesso, l'applicazione utilizza identificatori di etichetta invece di etichette. L'identificatore di etichetta può essere risolto in chiamando `mip::Label` **GetLabelById** sul file o sul motore dei criteri:
 
 ```cpp
 mip::Label label = mEngine->GetLabelById(labelId);
@@ -105,14 +105,14 @@ mip::Label label = mEngine->GetLabelById(labelId);
 
 ### <a name="labeling-options"></a>Opzioni di etichettatura
 
-Il secondo parametro necessario per impostare l'etichetta è `mip::LabelingOptions`. 
+Il secondo parametro necessario per impostare l'etichetta è `mip::LabelingOptions` . 
 
 `LabelingOptions` specifica informazioni aggiuntive sull'etichetta, ad esempio `AssignmentMethod` e la giustificazione per un'azione.
 
 - `mip::AssignmentMethod` è semplicemente un enumeratore con tre valori: `STANDARD`, `PRIVILEGED` o `AUTO`. Per altri dettagli, vedere le informazioni di riferimento per `mip::AssignmentMethod`.
 - La giustificazione è obbligatoria solo se richiesta dai criteri di servizio *e* per l'abbassamento del livello di riservatezza *esistente* di un file.
 
-Questo snip Mostra come creare l'oggetto `mip::LabelingOptions` e impostare la giustificazione e il messaggio di downgrade.
+Questo snip Mostra come creare l' `mip::LabelingOptions` oggetto e impostare la giustificazione e il messaggio di downgrade.
 
 ```cpp
 auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
@@ -121,9 +121,9 @@ labelingOptions.SetDowngradeJustification(true, "Because I made an educated deci
 
 ### <a name="protection-settings"></a>Impostazioni di protezione
 
-Per alcune applicazioni potrebbe essere necessario eseguire operazioni per conto di un'identità utente delegato. La classe `mip::ProtectionSettings` consente all'applicazione di definire l'identità delegata *per ogni gestore*. In precedenza, la delega veniva eseguita dalle classi del motore. Si sono verificati svantaggi significativi nel sovraccarico dell'applicazione e nei round trip del servizio. Spostando le impostazioni utente delegato in `mip::ProtectionSettings` e rendendola parte della classe handler, viene eliminato questo overhead, ottenendo prestazioni migliori per le applicazioni che eseguono molte operazioni per conto di diversi set di identità utente. 
+Per alcune applicazioni potrebbe essere necessario eseguire operazioni per conto di un'identità utente delegato. La `mip::ProtectionSettings` classe consente all'applicazione di definire l'identità delegata *per ogni gestore*. In precedenza, la delega veniva eseguita dalle classi del motore. Si sono verificati svantaggi significativi nel sovraccarico dell'applicazione e nei round trip del servizio. Spostando le impostazioni dell'utente delegato in `mip::ProtectionSettings` e rendendola parte della classe del gestore, questo overhead viene eliminato, ottenendo prestazioni migliori per le applicazioni che eseguono molte operazioni per conto di diversi set di identità utente. 
 
-Se la delega non è necessaria, passare semplicemente `mip::ProtectionSettings()` alla funzione di **etichetta** . Se la delega è obbligatoria, è possibile ottenerla creando un oggetto `mip::ProtectionSettings` e impostando l'indirizzo di posta elettronica delegato:
+Se la delega non è necessaria, è sufficiente passare `mip::ProtectionSettings()` alla funzione di **etichetta** . Se la delega è obbligatoria, è possibile ottenerla creando un `mip::ProtectionSettings` oggetto e impostando l'indirizzo di posta elettronica delegato:
 
 ```cpp
 mip::ProtectionSettings protectionSettings; 
@@ -132,7 +132,7 @@ protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
 
 ### <a name="set-the-label"></a>Imposta l'etichetta
 
-Dopo aver recuperato il `mip::Label` dall'ID, aver impostato le opzioni di etichettatura e, facoltativamente, aver impostato le impostazioni di protezione, è ora possibile impostare l'etichetta.
+Dopo aver recuperato l'oggetto `mip::Label` dall'ID, avere impostato le opzioni per l'assegnazione di etichette e, facoltativamente, impostare le impostazioni di protezione, è ora possibile impostare l'etichetta.
 
 Se non sono state impostate le impostazioni di protezione, impostare l'etichetta chiamando `SetLabel` sul gestore:
 

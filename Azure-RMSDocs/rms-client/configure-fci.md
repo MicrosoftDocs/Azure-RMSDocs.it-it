@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d289db484d647bb909fcb7445138f156322f72be
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 127682099f082d81c93e5951b149033a96d9504b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046539"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568029"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
 
@@ -54,9 +54,9 @@ Prerequisiti per queste istruzioni:
     
   - Se si vuole modificare il livello predefinito di protezione (nativa o generica) per estensioni di file specifiche, si deve modificare il Registro di sistema come descritto nella sezione relativa alla [modifica del livello di protezione predefinito dei file](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) della guida dell'amministratore.
     
-  - Si dispone di una connessione Internet e sono state configurate le impostazioni del computer se sono necessarie per un server proxy. Ad esempio: `netsh winhttp import proxy source=ie`
+  - Si dispone di una connessione Internet e sono state configurate le impostazioni del computer se sono necessarie per un server proxy. ad esempio `netsh winhttp import proxy source=ie`
     
-- L'utente ha sincronizzato gli account utente di Active Directory locali e i relativi indirizzi di posta elettronica con Azure Active Directory oppure con Office 365. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Per altre informazioni su questi requisiti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../prepare.md).
+- Sono stati sincronizzati gli account utente Active Directory locali con Azure Active Directory o Microsoft 365, inclusi i relativi indirizzi di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Per altre informazioni su questi requisiti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../prepare.md).
     
 - Questo scenario non supporta i modelli di reparto, quindi è necessario usare un modello non configurato per un ambito oppure usare il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) e il parametro *EnableInLegacyApps* .
 
@@ -120,7 +120,7 @@ Tenere presente che se si apportano modifiche al modello Rights Management usato
 
 3.  Firmare lo script. Se non si firma lo script (più sicuro), è necessario configurare Windows PowerShell sui server che lo eseguono. Eseguire, ad esempio, una sessione di Windows PowerShell con l'opzione **Esegui come amministratore** e digitare: **Set-ExecutionPolicy RemoteSigned**. Questa configurazione, tuttavia, consente l'esecuzione di tutti gli script non firmati quando vengono archiviati nel server (meno sicuri).
 
-    Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) nella raccolta documenti di PowerShell.
+    Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) nella raccolta documenti di PowerShell.
 
 4.  Salvare il file localmente su ogni file server che eseguirà Gestione risorse file con l'interfaccia di classificazione file. Ad esempio, salvare il file in **C:\RMS-Protection**. Se si usa un percorso o un nome di cartella diverso, scegliere un percorso e una cartella che non includono spazi. Proteggere questo file usando le autorizzazioni NTFS in modo che utenti non autorizzati non possano modificarlo.
 
@@ -152,7 +152,7 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
         -   **Descrizione**: digitare **classifica tutti i file nella &lt; cartella nome cartella &gt; per Rights Management**.
 
-            Sostituire * &lt; nome &gt; cartella* con il nome della cartella scelta. Ad esempio, **Classifica tutti i file nella cartella C:\FileShare per Rights Management**
+            Sostituire *&lt; nome &gt; cartella* con il nome della cartella scelta. Ad esempio, **Classifica tutti i file nella cartella C:\FileShare per Rights Management**
 
         -   **Ambito**: Aggiungere la cartella scelta. Ad esempio, **C:\FileShare**.
 
@@ -164,7 +164,7 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
     -   **Proprietà** : Selezionare **RMS**
 
-    -   **Valore**proprietà: Selezionare **Sì**
+    -   **Valore** proprietà: Selezionare **Sì**
 
 Nonostante sia possibile eseguire manualmente le regole di classificazione per le operazioni in corso, si vuole che questa regola venga eseguita in una pianificazione in modo tale che i nuovi file vengano classificati con la proprietà RMS.
 
@@ -194,7 +194,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
         -   **Descrizione**: Digitare **Proteggi i file in &lt;nome cartella&gt; con Rights Management e un modello usando uno script di Windows PowerShell.**
 
-            Sostituire * &lt; nome &gt; cartella* con il nome della cartella scelta. Digitare, ad esempio, **Proteggi i file in C:\FileShare con Rights Management e un modello usando uno script di Windows PowerShell**
+            Sostituire *&lt; nome &gt; cartella* con il nome della cartella scelta. Digitare, ad esempio, **Proteggi i file in C:\FileShare con Rights Management e un modello usando uno script di Windows PowerShell**
 
         -   **Ambito**: Selezionare la cartella scelta. Ad esempio, **C:\FileShare**.
 
@@ -304,5 +304,4 @@ A questo punto è sufficiente creare una nuova attività di gestione file che us
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner). 
-
+Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).

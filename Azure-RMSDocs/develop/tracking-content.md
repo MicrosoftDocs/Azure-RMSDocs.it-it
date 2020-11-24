@@ -16,12 +16,12 @@ ms.suite: ems
 ms.custom: dev
 experimental: true
 experiment_id: priyamo-test-20160729
-ms.openlocfilehash: aee6442d79c39172f6b082fb2531588ce50c8cf2
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 5159f39d5b91c748abe9fe7e0734c4a6eacbe4d5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135607"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568371"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Procedura: Abilitare la revoca e il rilevamento dei documenti
 
@@ -47,12 +47,12 @@ Usare queste API per aggiungere o aggiornare una licenza con i metadati di rilev
 Dal punto di vista operativo, solo le proprietà relative al **nome contenuto** e al **tipo di notifica** sono necessarie per rilevamento dei documenti.
 
 
-- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
-- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+- [IpcCreateLicenseMetadataHandle](/previous-versions/windows/desktop/msipc/ipccreatelicensemetadatahandle)
+- [IpcSetLicenseMetadataProperty](/previous-versions/windows/desktop/msipc/ipcsetlicensemetadataproperty)
 
   È probabile che si imposteranno tutte le proprietà dei metadati, elencate qui sotto in base al tipo.
 
-  Per ulteriori informazioni, vedere [License metadata property types](https://msdn.microsoft.com/library/dn974062.aspx) (Tipi di proprietà dei metadati di licenza).
+  Per ulteriori informazioni, vedere [License metadata property types](/previous-versions/windows/desktop/msipc/license-metadata-property-types) (Tipi di proprietà dei metadati di licenza).
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -78,16 +78,16 @@ Dal punto di vista operativo, solo le proprietà relative al **nome contenuto** 
 
     Consente di impostare la data di creazione del file
 
-- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+- [IpcSerializeLicenseWithMetadata](/previous-versions/windows/desktop/msipc/ipcserializelicensemetadata)
 
 Usare l'API appropriata per aggiungere metadati al file o flusso.
 
-- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
-- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+- [IpcfEncryptFileWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilewithmetadata)
+- [IpcfEncryptFileStreamWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilestreamwithmetadata)
 
 Infine, usare questa API per registrare il documento rilevato con il sistema di rilevamento.
 
-- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
+- [IpcRegisterLicense](/previous-versions/windows/desktop/msipc/ipcregisterlicense)
 
 
 ## <a name="2-register-the-document-with-the-rms-service"></a>2. registrare il documento con il servizio RMS
@@ -141,12 +141,12 @@ Di seguito è riportato un frammento di codice che mostra un esempio di impostaz
 Aggiungere un elemento dell'interfaccia utente **Rileva utilizzo** all'app con uno dei seguenti formati di URL è semplice:
 
 - Usando l'ID contenuto
-  - Ottenere l'ID contenuto utilizzando [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) o [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) se la licenza viene serializzata e usare la proprietà licenza **IPC_LI_CONTENT_ID**. Per altre informazioni, vedere [tipi di proprietà di licenza](https://msdn.microsoft.com/library/hh535287.aspx).
-  - Con i metadati **ContentID** e **Issuer** , usare il formato seguente:`https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - Ottenere l'ID contenuto utilizzando [IpcGetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcgetlicenseproperty) o [IpcGetSerializedLicenseProperty](/previous-versions/windows/desktop/msipc/ipcgetserializedlicenseproperty) se la licenza viene serializzata e usare la proprietà licenza **IPC_LI_CONTENT_ID**. Per altre informazioni, vedere [tipi di proprietà di licenza](/previous-versions/windows/desktop/msipc/license-property-types).
+  - Con i metadati **ContentID** e **Issuer** , usare il formato seguente: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Ad esempio: `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- Se non si ha accesso a tali metadati, ovvero si sta esaminando la versione non protetta del documento, è possibile usare il **Content_Name** nel formato seguente:`https://track.azurerms.com/#/?q={ContentName}`
+- Se non si ha accesso a tali metadati, ovvero si sta esaminando la versione non protetta del documento, è possibile usare il **Content_Name** nel formato seguente: `https://track.azurerms.com/#/?q={ContentName}`
 
   Esempio - https://track.azurerms.com/#/?q=Secret!.txt
 
@@ -154,13 +154,12 @@ Il client deve soltanto aprire un browser con l'URL appropriato. Il portale di r
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-* [Tipi di proprietà dei metadati di licenza](https://msdn.microsoft.com/library/dn974062.aspx)
-* [Preferenze di notifica](https://msdn.microsoft.com/library/dn974063.aspx)
-* [Tipo di notifica](https://msdn.microsoft.com/library/dn974064.aspx)
-* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
-* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
-* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
-* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
-* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
-* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
-
+* [Tipi di proprietà dei metadati di licenza](/previous-versions/windows/desktop/msipc/license-metadata-property-types)
+* [Preferenze di notifica](/previous-versions/windows/desktop/msipc/notification-preference)
+* [Tipo di notifica](/previous-versions/windows/desktop/msipc/notification-type)
+* [IpcCreateLicenseMetadataHandle](/previous-versions/windows/desktop/msipc/ipccreatelicensemetadatahandle)
+* [IpcSetLicenseMetadataProperty](/previous-versions/windows/desktop/msipc/ipcsetlicensemetadataproperty)
+* [IpcSerializeLicenseWithMetadata](/previous-versions/windows/desktop/msipc/ipcserializelicensemetadata)
+* [IpcfEncryptFileWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilewithmetadata)
+* [IpcfEncryptFileStreamWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilestreamwithmetadata)
+* [IpcRegisterLicense](/previous-versions/windows/desktop/msipc/ipcregisterlicense)

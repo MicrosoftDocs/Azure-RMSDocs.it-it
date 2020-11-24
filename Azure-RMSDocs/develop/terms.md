@@ -14,19 +14,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 87aa190a87426e61d919b8781444239c4ce5d3c7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4f33a7a730ad8f6f48870ce4b2450007712e7bf1
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790756"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567807"
 ---
-# <a name="terms"></a>Condizioni
+# <a name="terms"></a>Termini
 
 Una raccolta di definizioni di termini specifici di Azure Information Protection per gli sviluppatori.
 
 **Algoritmo deprecato**  
-Un'impostazione modale che implementa uno schema di protezione del contenuto precedente che fa riferimento alla modalità di crittografia ECB (Electronic Codebook). In questo SDK, l'impostazione consente di generare licenze compatibili con la libreria MSDRM usata da [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
+Un'impostazione modale che implementa uno schema di protezione del contenuto precedente che fa riferimento alla modalità di crittografia ECB (Electronic Codebook). In questo SDK, l'impostazione consente di generare licenze compatibili con la libreria MSDRM usata da [AD Rights Management Services SDK](/previous-versions/windows/desktop/adrms_sdk/active-directory-rights-management-services-sdk-portal).
 
 Questa impostazione può causare la protezione del contenuto da parte dell'applicazione in un modo non conforme allo standard dei clienti per la protezione del contenuto.
 
@@ -37,4 +37,3 @@ Questa impostazione impedisce all'applicazione di beneficiare dei miglioramenti 
 Noto anche come formato PFile, è il formato di file predefinito per AD RMS e rappresenta lo standard tra le applicazioni abilitate per RMS.
 
 Il formato PFile è trasparente allo sviluppatore dell'applicazione in quanto è incorporato nella progettazione di Microsoft Rights Management SDK 4.2.
-

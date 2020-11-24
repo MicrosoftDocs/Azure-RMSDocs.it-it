@@ -1,8 +1,8 @@
 ---
 title: 'Eseguire la migrazione da AD RMS ad Azure Information Protection: Fase 4'
 description: Fase 4 della migrazione da AD RMS ad Azure Information Protection che include i passaggi 8 e 9 della migrazione da AD RMS ad Azure Information Protection
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/02/2020
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 01cf998fc6d4c872339d5bfa241eed4f1c9f4b6b
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: e2faf09b40daac41eb1d42ee2dcbfc7ebbc7d549
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298156"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567878"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -38,13 +38,13 @@ Indipendentemente dalla topologia di chiave del tenant di Azure Information Prot
     
     Quando questo record DNS è applicato, gli utenti che usano Outlook nei client di posta elettronica Web e per dispositivi mobili potranno visualizzare i messaggi di posta elettronica protetti da AD RMS in tali app ed Exchange potrà usare la chiave importata da AD RMS per decrittografare, indicizzare, registrare e proteggere il contenuto protetto da AD RMS.  
 
-2. Eseguire il comando di Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx). Se occorre assistenza per l'esecuzione di questo comando, vedere le istruzioni dettagliate in [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration).
+2. Eseguire il comando di Exchange Online [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration). Se occorre assistenza per l'esecuzione di questo comando, vedere le istruzioni dettagliate in [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration).
     
     Nell'output controllare se il parametro **AzureRMSLicensingEnabled** è impostato su **True**:
     
     - Se AzureRMSLicensingEnabled è impostato su **True**, non è necessaria alcuna configurazione aggiuntiva per questo passaggio. 
     
-    - Se AzureRMSLicensingEnabled è impostato su **False**, eseguire `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` e quindi seguire i passaggi per la verifica descritti in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection) per verificare che Exchange Online sia pronto per usare il servizio Azure Rights Management. 
+    - Se AzureRMSLicensingEnabled è impostato su **false**, eseguire `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` e quindi usare la procedura di verifica per [configurare nuove funzionalità di crittografia dei messaggi Microsoft 365 basate su Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) per confermare che Exchange Online è pronto per l'uso del servizio Rights Management di Azure. 
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Passaggio 9. Configurare l'integrazione IRM per Exchange Server e SharePoint Server
 
@@ -64,7 +64,7 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 > [!IMPORTANT]
 > Se IRM non è stato ancora configurato su uno dei server Exchange, eseguire solo i passaggi 2 e 6.
 > 
-> Eseguire tutti questi passaggi se tutti gli URL di gestione licenze di tutti i cluster di AD RMS non vengono visualizzati nel parametro *LicensingLocation* quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
+> Eseguire tutti questi passaggi se tutti gli URL di gestione licenze di tutti i cluster di AD RMS non vengono visualizzati nel parametro *LicensingLocation* quando si esegue [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration).
 
 1. In ogni Exchange Server individuare la cartella seguente ed eliminare tutte le voci nella cartella: **\programdata\microsoft\drm\server\s-1-5-18**
 
@@ -79,7 +79,7 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
     Set-IRMConfiguration -LicensingLocation $list
     ```
 
-    A questo punto, quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), verranno visualizzati tutti gli URL di licenze del cluster ad RMS e l'URL del servizio Rights Management di Azure visualizzato per il parametro *LicensingLocation* .
+    A questo punto, quando si esegue [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration), verranno visualizzati tutti gli URL di licenze del cluster ad RMS e l'URL del servizio Rights Management di Azure visualizzato per il parametro *LicensingLocation* .
 
 3.  Disattivare ora le funzionalità IRM per i messaggi inviati a destinatari interni:
 

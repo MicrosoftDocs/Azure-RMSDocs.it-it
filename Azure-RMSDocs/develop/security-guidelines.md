@@ -11,12 +11,12 @@ ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: fe9afaa7bc9951ce7264e4e27e308c39e3718551
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67521198"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568274"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Procedure di sicurezza consigliate per Information Protection
 
@@ -51,7 +51,7 @@ Questi argomenti riguardano principalmente i problemi di fuga di dati. L'integri
 
 Microsoft non esegue test né analisi dei risultati dei test per verificare la conformità allo standard minimo. È responsabilità del partner verificare che siano soddisfatti gli standard minimi. Microsoft offre due livelli aggiuntivi di consigli per ridurre le minacce più comuni. In generale, si tratta di suggerimenti supplementari. Ad esempio, rispettare le indicazioni preferite presuppone che siano stati soddisfatti gli standard minimi, ove possibile, se non diversamente specificato.
 
-|Livello standard|Description|
+|Livello standard|Descrizione|
 |---|---|
 |Standard minimo| Un'applicazione che gestisce le informazioni protette deve rispettare lo standard minimo per poter essere firmata con il certificato di produzione ricevuto da Microsoft. I partner in genere usano il certificato di gerarchia di produzione al momento del rilascio della versione finale del software. I test interni di un partner vengono usati per verificare se l'applicazione soddisfa lo standard minimo. Soddisfare lo standard minimo non costituisce, né può essere interpretato come, una garanzia di sicurezza da parte di Microsoft. Microsoft non esegue test né analisi dei risultati dei test per verificare la conformità allo standard minimo. È responsabilità del partner verificare che siano soddisfatti i requisiti minimi.|
 |Standard consigliato| Le linee guida consigliate consentono di ottimizzare la sicurezza delle applicazioni e offrono un'indicazione di come l'SDK potrebbe evolvere con l'implementazione di altri criteri di sicurezza. I fornitori possono differenziare le proprie applicazioni creandole in base a questo livello più elevato di sicurezza.|
@@ -73,7 +73,7 @@ Information Protection SDK non supporta la modifica del codice in fase di esecuz
 - Non è possibile modificare il caricamento ritardato apportando modifiche durante o dopo la fase di esecuzione all'opzione /DELAYLOAD del linker.
 - Non è possibile modificare il caricamento ritardato specificando la propria versione della funzione Delayimp.lib dell'helper.
 - Non è possibile scaricare i moduli a caricamento ritardato da moduli autenticati in presenza dell'ambiente Information Protection SDK.
-- Non è possibile usare l'opzione **`/DELAY:UNLOAD`** del linker per abilitare lo scaricamento dei moduli ritardati.
+- Non è possibile usare l' **`/DELAY:UNLOAD`** opzione del linker per consentire lo scaricamento dei moduli ritardati.
 
 ## <a name="incorrectly-interpreting-license-rights"></a>Errata interpretazione dei diritti di licenza
 
@@ -87,22 +87,22 @@ AIP consente a un utente di decrittografare o meno le informazioni. Le informazi
 
 ### <a name="minimum-standard"></a>Standard minimo
 
-- L'implementazione del cliente dei diritti di XrML v.1.2 dovrebbe essere coerente con le definizioni di questi diritti, come descritto nelle specifiche XrML, che sono disponibili nel sito Web di XrML (http://www.xrml.org) ). Per tutte le entità che hanno un interesse per l'applicazione è necessario definire tutti i diritti che sono specifici di quest'ultima.
+- L'implementazione del cliente dei diritti di XrML v.1.2 dovrebbe essere coerente con le definizioni di questi diritti, come descritto nelle specifiche XrML, che sono disponibili nel sito Web di XrML (http://www.xrml.org)). Per tutte le entità che hanno un interesse per l'applicazione è necessario definire tutti i diritti che sono specifici di quest'ultima.
 - Il gruppo e il processo di test devono verificare che l'applicazione venga eseguita correttamente rispetto ai diritti che supporta e che **non** agisca in base a diritti non supportati.
 - Se si sta creando un'applicazione di pubblicazione, è necessario rendere disponibili informazioni che spiegano i diritti intrinseci in uso, tra cui quelli che sono e non sono supportati dall'applicazione di pubblicazione, e come devono essere interpretati questi diritti. In aggiunta, l'interfaccia utente dovrebbe chiarire all'utente finale quali sono le implicazioni di ogni diritto concesso o negato a una singola informazione.
 - Eventuali diritti che vengono ricavati per inclusione nei nuovi diritti implementati da un'applicazione devono essere mappati alla nuova terminologia. Ad esempio, un nuovo diritto denominato GESTIONE potrebbe includere come diritti separati STAMPA, COPIA e MODIFICA.
 
 ### <a name="recommended-standard"></a>Standard consigliato
 
-Nessuna in questo momento.
+Nessuna al momento.
 
 ### <a name="preferred-standard"></a>Standard preferito
 
-Nessuna in questo momento.
+Nessuna al momento.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Le procedure consigliate per l'implementazione di applicazioni con AIP SDK includono gli articoli seguenti:
 
-- [Modelli di minacce e strategie di riduzione del rischio](https://msdn.microsoft.com/library/aa362751.aspx)
-- [Attacchi alla sicurezza](https://msdn.microsoft.com/library/aa362736.aspx)
+- [Modelli di minacce e strategie di riduzione del rischio](/previous-versions//aa362751(v=vs.85))
+- [Attacchi alla sicurezza](/previous-versions//aa362736(v=vs.85))
