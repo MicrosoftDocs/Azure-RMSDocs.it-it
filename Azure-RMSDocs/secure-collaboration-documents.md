@@ -1,10 +1,10 @@
 ---
 title: Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 description: Flusso di lavoro end-to-end per collaborare a documenti protetti da Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 61567869b889ba72c61e736804c313fd4e0bfbb0
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: bbb085aa7de8555594d33bc0b2e0ea4d06034aa2
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483389"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568562"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -37,7 +37,7 @@ Quando si configurano queste autorizzazioni, è possibile specificare gli utenti
 
 - **Per gli utenti che non hanno un account Azure Active Directory**: specificare un indirizzo di posta elettronica che verrà usato con un account Microsoft. Questo account può esistere già oppure gli utenti possono crearlo quando aprono il documento protetto. 
     
-    Per aprire documenti con un account Microsoft, gli utenti devono usare app di Office 365 (A portata di clic). Le altre edizioni e versioni di Office non supportano ancora l'apertura di documenti protetti di Office con un account Microsoft.
+    Per aprire documenti con una account Microsoft, gli utenti devono usare Microsoft 365 app (a cui è possibile fare clic per eseguire). Le altre edizioni e versioni di Office non supportano ancora l'apertura di documenti protetti di Office con un account Microsoft.
 
 - **Per gli utenti autenticati**: questa opzione è adatta quando non è necessario controllare chi accede al documento protetto, purché l'utente possa essere autenticato. L'autenticazione può essere eseguita da Azure AD, usando un account Microsoft, o anche da un provider di servizi di social networking federato o una passcode monouso quando il contenuto viene protetto dalle nuove funzionalità di Office 365 Message Encryption. 
 
@@ -47,13 +47,13 @@ Un amministratore può configurare un'etichetta di Azure Information Protection 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Configurazione di esempio per un'etichetta per l'applicazione della protezione in modo da supportare la collaborazione interna ed esterna
 
 
-Questo esempio descrive in modo dettagliato la configurazione di un'etichetta esistente per applicare la protezione in modo che gli utenti dell'organizzazione possano collaborare a documenti con tutti gli utenti di un'altra organizzazione che usa Office 365 o Azure AD, con un gruppo di un'organizzazione diversa che usa Office 365 o Azure AD e con un utente che non ha un account in Azure AD e che usa invece il proprio indirizzo di posta elettronica Gmail.
+In questo esempio viene illustrata la configurazione di un'etichetta esistente per applicare la protezione in modo che gli utenti dell'organizzazione possano collaborare ai documenti con tutti gli utenti di un'altra organizzazione con Microsoft 365 o Azure AD, un gruppo di un'organizzazione diversa con Microsoft 365 o Azure AD e un utente che non dispone di un account in Azure AD e utilizzerà invece il proprio indirizzo di posta elettronica di Gmail.
 
 Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazione per tutti gli utenti autenticati. Per un esempio di configurazione di un'etichetta con questa impostazione, vedere [Esempio 5: Etichetta che crittografa il contenuto, ma non limita chi può accedervi](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel riquadro **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
+1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel riquadro **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)**.
     
-2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni** e fare clic su **Aggiungi autorizzazioni**.
+2. Assicurarsi che l'opzione **Configura le autorizzazioni** sia selezionata e selezionare **Aggiungi autorizzazioni**.
 
 3. Nel riquadro **Aggiungi autorizzazioni**: 
     
@@ -61,9 +61,9 @@ Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazi
     
    - Per tutti gli utenti nella prima organizzazione esterna: selezionare **Immettere i dettagli** e digitare il nome di un dominio nel tenant dell'organizzazione. Ad esempio, fabrikam.com.
     
-   - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica del gruppo nel tenant dell'organizzazione. Ad esempio, sales@contoso.com
+   - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica del gruppo nel tenant dell'organizzazione. Ad esempio: sales@contoso.com.
     
-   - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica dell'utente. Ad esempio, bengi.turan@gmail.com 
+   - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica dell'utente. Ad esempio: bengi.turan@gmail.com. 
 
 4. Per concedere le stesse autorizzazioni a tutti questi utenti: per **Scegliere le autorizzazioni dai valori preimpostati** selezionare **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate** per selezionare le autorizzazioni che si vuole concedere.
     
@@ -99,7 +99,7 @@ Condividere il documento protetto allegandolo a un messaggio di posta elettronic
 
 ## <a name="opening-and-editing-the-protected-document"></a>Apertura e modifica del documento protetto
 
-Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio,
+Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio:
 
 ![Banner informativo di esempio sulle autorizzazioni di Azure Information Protection](./media/example-restricted-access-banner.png)
 
@@ -138,19 +138,16 @@ Anche gli scenari seguenti supportano la visualizzazione di documenti:
 
 |Piattaforme per la visualizzazione e la modifica di documenti: <br />Word, Excel, PowerPoint|Metodo di autenticazione:<br />Azure AD|Metodo di autenticazione:<br />Account Microsoft|
 |---------------|----------|-----------|-----------|
-|WINDOWS|Sì [[1]](#footnote-1)|Sì [[2]](#footnote-2)|
-|iOS|Sì [[1]](#footnote-1)|No|
-|Android|Sì [[1]](#footnote-1)|No|
+|Windows|Sì [[1]](#footnote-1)|Sì [[2]](#footnote-2)|
+|iOS|Sì [[1]](#footnote-1)|Sì (versione 1385219 e successive) |
+|Android|Sì [[1]](#footnote-1)|Sì (versione 13029 e successive)|
 |MacOS|Sì [[1]](#footnote-1)|No|
 
 ###### <a name="footnote-1"></a>Nota 1
 Supporta account utente, gruppi abilitati per la posta elettronica e tutti i membri. Gli account utente e i gruppi abilitati per la posta elettronica possono includere account guest. Da tutti i membri sono esclusi gli account guest.
 
 ###### <a name="footnote-2"></a>Nota 2
-Attualmente supportato solo da app di Office 365 (A portata di clic).
-
-
-
+Attualmente supportato solo da app Microsoft 365.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

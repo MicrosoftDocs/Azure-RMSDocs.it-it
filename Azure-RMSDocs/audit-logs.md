@@ -4,7 +4,7 @@ description: Informazioni sui log di controllo generati da Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 11/09/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,18 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 14d8101da8b00071256e9ed3e4ae06002f96acbb
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: 334b90b19451dc4a22fe8203e95b973b73e3c6b3
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316791"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568569"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection riferimento al log di controllo (anteprima pubblica)
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+La funzionalità del log di controllo Azure Information Protection è attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
 
 Microsoft Azure Information Protection genera log di controllo negli eventi di attività seguenti:
 
@@ -37,6 +39,9 @@ Microsoft Azure Information Protection genera log di controllo negli eventi di a
 * [Rimuovere la protezione](#remove-protection-audit-logs)
 * [Aggiorna etichetta](#upgrade-label-audit-logs)
 
+> [!NOTE]
+> Il [Visualizzatore AIP](rms-client/clientv2-view-use-files.md) non invia i log di controllo. 
+>
 ## <a name="access-audit-logs"></a>Accedere ai log di controllo
 
 I log di controllo di **accesso** vengono generati per le attività seguenti:
@@ -45,7 +50,7 @@ I log di controllo di **accesso** vengono generati per le attività seguenti:
 |---------|---------|---------|---------|
 |Azure Information Protection: solo client classico | Windows        | Office        |Generato per la prima volta in ogni sessione in cui viene salvato un file con etichetta o protetto.<br>Il log include qualsiasi tipo di informazione corrispondente.      |
 |Azure Information Protection: solo client classico     |Windows         |Office         |Generato ogni volta che viene creato un file con etichetta o protetto.       |
-|Azure Information Protection:</br>-Client classico</br>-Client con etichetta unificata     | Windows, SharePoint, OneDrive        | Office        | Generato ogni volta che viene aperto un file con etichetta o protetto. </br></br>**Nota:** Per i file protetti, i log di controllo degli accessi vengono generati solo quando il file viene aperto e il contenuto viene correttamente decrittografato ed esposto all'utente. </br>Per i messaggi di posta elettronica protetti in Outlook, vengono generati anche i log di controllo dell'accesso ogni volta che l'utente tenta di aprire un messaggio di posta elettronica crittografato, anche se la decrittografia è bloccata a causa di una mancanza di autorizzazioni.         |
+|Azure Information Protection:<br />-Client classico<br />-Client con etichetta unificata     | Windows, SharePoint, OneDrive        | Office        | Generato ogni volta che viene aperto un file con etichetta o protetto. <br /><br />**Nota:** Per i file protetti, i log di controllo degli accessi vengono generati solo quando il file viene aperto e il contenuto viene correttamente decrittografato ed esposto all'utente. <br />Per i messaggi di posta elettronica protetti in Outlook, vengono generati anche i log di controllo dell'accesso ogni volta che l'utente tenta di aprire un messaggio di posta elettronica crittografato, anche se la decrittografia è bloccata a causa di una mancanza di autorizzazioni.         |
 |SDK di Microsoft Information Protection (MIP)     | Qualsiasi        | Applicazioni di terze parti        | Generato ogni volta che viene eseguito l'accesso a un file con etichetta o protetto da un'applicazione di terze parti che la supporta.       |
 |Servizio RMS     | Windows        | Office         |Generato ogni volta che si accede a un documento con etichetta o protetto.       |
 
@@ -64,7 +69,7 @@ Vengono generati i log di controllo della **protezione delle modifiche** per le 
 
 |Segnalato da  |Piattaforma  |Applicazione  |Azione/descrizione   |
 |---------|---------|---------|---------|
-|Azure Information Protection:</br>-Client classico</br>-Client con etichetta unificata     | Windows, SharePoint, OneDrive        | Office        | Generato ogni volta che la protezione su un documento senza etichetta viene modificata manualmente.         |
+|Azure Information Protection:<br />-Client classico<br />-Client con etichetta unificata     | Windows, SharePoint, OneDrive        | Office        | Generato ogni volta che la protezione su un documento senza etichetta viene modificata manualmente.         |
 |SDK di Microsoft Information Protection (MIP)     | Qualsiasi        | Applicazioni di terze parti        | Generato ogni volta che la protezione su un documento senza etichetta viene modificata manualmente.<br>Generato solo se supportato dall'applicazione di terze parti.       |
 
 ## <a name="discover-audit-logs"></a>Individuare i log di controllo
@@ -73,8 +78,8 @@ Vengono generati i log di controllo della **protezione delle modifiche** per le 
 
 |Segnalato da  |Piattaforma  |Applicazione  |Azione/descrizione   |
 |---------|---------|---------|---------|
-|Azure Information Protection: solo scanner classico | Windows        | Office        |Generato ogni volta che un file viene sottoposta a scansione dallo scanner AIP.<br>Il log include i dettagli seguenti:<br>-Tipi di informazioni corrispondenti<br>-Etichette |
-|SDK di Microsoft Information Protection (MIP) | Qualsiasi | Applicazioni di terze parti | Generato ogni volta che un file viene sottoposta a scansione da un'applicazione di terze parti che la supporta. </br>Il log include i dettagli seguenti:</br>-Tipi di informazioni corrispondenti</br>-Etichette|
+|Azure Information Protection: <br />-Scanner classico <br />-Scanner di etichette unificato | Windows        | Office        |Generato ogni volta che un file viene sottoposta a scansione dallo scanner AIP.<br>Il log include i dettagli seguenti:<br>-Tipi di informazioni corrispondenti<br>-Etichette |
+|SDK di Microsoft Information Protection (MIP) | Qualsiasi | Applicazioni di terze parti | Generato ogni volta che un file viene sottoposta a scansione da un'applicazione di terze parti che la supporta. <br />Il log include i dettagli seguenti:<br />-Tipi di informazioni corrispondenti<br />-Etichette|
 
 ## <a name="downgrade-label-audit-logs"></a>Downgrade log di controllo etichetta
 
@@ -82,7 +87,7 @@ I log di controllo delle **etichette di downgrade** vengono generati per le atti
 
 | Segnalato da      | Piattaforma                       | Applicazione              | Azione/descrizione      |
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
-|Azure Information Protection:</br>-Scanner e client classici</br>-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta meno sensibile.|
+|Azure Information Protection:<br />-Scanner e client classici<br />-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta meno sensibile.|
 | Microsoft Defender ATP            | Windows                        | OS                       | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta meno sensibile. |
 | SDK di Microsoft Information Protection (MIP)          | Qualsiasi                            | Applicazioni di terze parti | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta meno sensibile.<br>Generato solo se supportato dall'applicazione di terze parti. |
 
@@ -103,7 +108,7 @@ Vengono generati nuovi log di controllo **etichetta** per le attività seguenti:
 
 | Segnalato da                                                                      | Piattaforma                       | Applicazione              | Azione/descrizione                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Scanner e client classici</br>-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che viene applicata una nuova etichetta.                                                                  |
+| Azure Information Protection:<br />-Scanner e client classici<br />-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che viene applicata una nuova etichetta.                                                                  |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | Generato ogni volta che viene applicata una nuova etichetta del documento.                                                                  |
 | SDK di Microsoft Information Protection (MIP)                                                                          | Qualsiasi                            | Applicazioni di terze parti | Generato ogni volta che viene applicata una nuova etichetta del documento.<br>Generato solo se supportato dall'applicazione di terze parti. |
 
@@ -113,7 +118,7 @@ Vengono generati nuovi log di controllo della **protezione** per le attività se
 
 | Segnalato da                                                                      | Piattaforma                       | Applicazione              | Azione/descrizione                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Client classico</br>-Client con etichetta unificata | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che la protezione viene aggiunta manualmente, senza un'etichetta.                                                                  |
+| Azure Information Protection:<br />-Client classico<br />-Client con etichetta unificata | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che la protezione viene aggiunta manualmente, senza un'etichetta.                                                                  |
 | SDK di Microsoft Information Protection (MIP)                                                                          | Qualsiasi                            | Applicazioni di terze parti | Generato ogni volta che la protezione viene aggiunta manualmente, senza un'etichetta.<br>Generato solo se supportato dall'applicazione di terze parti. |
 
 ## <a name="remove-label-audit-logs"></a>Rimuovi log di controllo etichetta
@@ -122,7 +127,7 @@ Vengono generati nuovi log di controllo della **protezione** per le attività se
 
 | Segnalato da                                                                      | Piattaforma                       | Applicazione              | Azione/descrizione                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Scanner e client classici</br>-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che un'etichetta viene rimossa.                                                                  |
+| Azure Information Protection:<br />-Scanner e client classici<br />-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che un'etichetta viene rimossa.                                                                  |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | Generato ogni volta che un'etichetta viene rimossa.                                                                  |
 | SDK di Microsoft Information Protection (MIP)                                                                          | Qualsiasi                            | Applicazioni di terze parti | Generato ogni volta che un'etichetta viene rimossa.<br>Generato solo se supportato dall'applicazione di terze parti. |
 
@@ -132,7 +137,7 @@ Vengono generati nuovi log di controllo della **protezione** per le attività se
 
 | Segnalato da                                                                      | Piattaforma                       | Applicazione              | Azione/descrizione                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Client classico</br>-Client con etichetta unificata | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che la protezione viene rimossa manualmente, senza un'etichetta.                                                                  |
+| Azure Information Protection:<br />-Client classico<br />-Client con etichetta unificata | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che la protezione viene rimossa manualmente, senza un'etichetta.                                                                  |
 | SDK di Microsoft Information Protection (MIP)                                                                          | Qualsiasi                            | Applicazioni di terze parti | Generato ogni volta che la protezione viene rimossa manualmente, senza un'etichetta.<br>Generato solo se supportato dall'applicazione di terze parti. |
 
 ## <a name="upgrade-label-audit-logs"></a>Aggiornare i log di controllo dell'etichetta
@@ -141,6 +146,10 @@ Vengono generati i log di controllo dell' **etichetta di aggiornamento** per le 
 
 | Segnalato da                                                                      | Piattaforma                       | Applicazione              | Azione/descrizione                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Scanner e client classici</br>-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta più sensibile.                                                                   |
+| Azure Information Protection:<br />-Scanner e client classici<br />-Scanner unificato per l'assegnazione di etichette e client | Windows, SharePoint, un'unità | Office                   | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta più sensibile.                                                                   |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta più sensibile.                                                                   |
 | SDK di Microsoft Information Protection (MIP)                                                                          | Qualsiasi                            | Applicazioni di terze parti | Generato ogni volta che un'etichetta di documento viene aggiornata con un'etichetta più sensibile.<br>Generato solo se supportato dall'applicazione di terze parti. |
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per ulteriori informazioni sulla registrazione di controllo, vedere [Central Reporting per Azure Information Protection (Public Preview)](reports-aip.md).

@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 352e41b1ca511e3ef0487eb680a331339ce457dd
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: f5b2dd317a6cdcf5d5d164f6431f8aa3163550da
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802199"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568574"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -34,13 +34,14 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 
 [Oggetto](#a)  |  [B](#b)  |  [C](#c)  |  [D](#d)  |  [E](#e)  |  [G](#g)  |  [H](#h)  |  [I](#i)  |  [K](#k)  |  [L](#l)  |  [M](#m) [N](#n)  |  [O](#o)  |  [P](#p)  |  [R](#r)  |  [S](#s)  |  [T](#t)  |  [U](#u)
 
-### <a name="a"></a>Una
+### <a name="a"></a>A
 |Termine|Definizione|
 |--------|--------------|
 |**AADRM**|Nome del primo modulo di PowerShell per il servizio di protezione (Azure Rights Management), derivato dall'abbreviazione non ufficiale di Azure Rights Management quando in precedenza era denominato (Windows) Azure Active Directory Rights Management. </br></br>Questo modulo di PowerShell è ora sostituito con il modulo AIPService.|
 |**attivare**|Abilitare il servizio Azure Rights Management Protection in modo che un'organizzazione possa proteggere i propri documenti e messaggi di posta elettronica. </br></br>Questa azione abilita anche le funzionalità IRM in Exchange Online e Microsoft SharePoint.|
-|**Active Directory Rights Management Services**|Spesso abbreviato in *AD RMS*.<br /><br />Ruolo di Windows Server che rende disponibile la protezione basata sulla gestione dei diritti usando la crittografia e i criteri per proteggere documenti, file e messaggi di posta elettronica.|
+|**Active Directory Rights Management Services**|Spesso abbreviato in *AD RMS*.<br /><br />Ruolo di Windows Server che fornisce la protezione basata sulla gestione dei diritti tramite crittografia e criteri che consentono di proteggere documenti, file e messaggi di posta elettronica.|
 |**AD RMS**|Vedere *Active Directory Rights Management Services*.|
+|**AIP** |Vedere *Azure Information Protection*.|
 |**AIPService**|Nome corrente del modulo di PowerShell per il servizio di protezione, che sostituisce con il modulo AADRM precedente.|
 |**AzureInformationProtection**|Nome del modulo di PowerShell per il client Azure Information Protection classico o unificato per l'assegnazione di etichette.|
 |**Azure Information Protection**|Servizio basato sul cloud che usa le etichette per classificare e proteggere documenti e messaggi di posta elettronica. </br></br> Azure Rights Management garantisce la protezione tramite criteri di crittografia, identità e autorizzazione.|
@@ -49,17 +50,17 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 |**Criteri di Azure Information Protection**|Configurazione definita dall'amministratore per i client e i servizi che usano le etichette e le impostazioni dei criteri di Azure Information Protection.|
 |**Scanner di Azure Information Protection**|Un servizio che viene eseguito in Windows Server e consente di individuare, classificare e proteggere documenti in condivisioni di rete e siti e librerie di SharePoint Server.|
 |**Client per l'etichettatura unificata di Azure Information Protection**|Talvolta abbreviato in *client con etichetta unificata*.<br /><br />Il client per i computer Windows che consente a utenti, amministratori e servizi di usare le etichette di riservatezza e le impostazioni dei criteri di etichetta da Office 365 Security & Compliance Center, il Centro sicurezza Microsoft 365 e Microsoft 365 Compliance Center. </br></br>Sostituisce il client classico Azure Information Protection.|
-|**Azure RMS**|Vedere *Rights Management di Microsoft Azure*.|
+|**Azure RMS**|Vedere *Azure Rights Management*.|
 |**Visualizzatore di Azure Information Protection**|App eseguita su computer Windows e dispositivi mobili, per visualizzare i file protetti.|
-|**Azure Rights Management**|Noto anche come *servizio Rights Management di Azure*e spesso abbreviato in *Azure RMS*.<br /><br />Servizio Azure usato da Azure Information Protection che consente di proteggere documenti, file e messaggi di posta elettronica tramite crittografia e criteri. </br></br>I nomi precedenti includono:<br /><br />- *Windows Azure Active Directory Rights Management*: spesso abbreviato in servizio Windows Azure AD Rights Management.<br /><br />- *RMS Online*: il nome proposto in origine, che è possibile incontrare nei messaggi di errore e nelle voci dei file di log.|
+|**Azure Rights Management**|Noto anche come *servizio Rights Management di Azure* e spesso abbreviato in *Azure RMS*.<br /><br />Servizio Azure usato da Azure Information Protection che consente di proteggere documenti, file e messaggi di posta elettronica tramite crittografia e criteri. </br></br>I nomi precedenti includono:<br /><br />- *Windows Azure Active Directory Rights Management*: spesso abbreviato in servizio Windows Azure AD Rights Management.<br /><br />- *RMS Online*: il nome proposto in origine, che è possibile incontrare nei messaggi di errore e nelle voci dei file di log.|
 | | |
 
-### <a name="b"></a>b
+### <a name="b"></a>B
 
 |Termine|Definizione|
 |--------|--------------|
 |**Bring your own key**|Spesso abbreviato in *BYOK*.<br /><br />Opzione di topologia e configurazione disponibile per un'organizzazione che vuole generare e gestire la propria chiave del tenant per Azure Information Protection.|
-|**assegnazione di etichette incorporata**|Un'app di Office 365 o una funzionalità di servizio per supportare le etichette di riservatezza senza la necessità di installare un altro client di assegnazione di etichette. Noto anche come *assegnazione di etichette native*.|
+|**assegnazione di etichette incorporata**|Un'app Microsoft 365 o una funzionalità del servizio per supportare le etichette di riservatezza senza la necessità di installare un altro client di assegnazione di etichette. Noto anche come *assegnazione di etichette native*.|
 |**BYOK**|Vedere *bring your own key*.|
 | | |
 
@@ -135,8 +136,8 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 |--------|--------------|
 |**Microsoft Information Protection**| Talvolta abbreviato in *MIP*.<br /><br /> Framework per prodotti e funzionalità integrate che usano lo stesso archivio di etichette ("etichette unificate") e consentono di proteggere le informazioni riservate dell'organizzazione.|
 |**MIP**| Vedere *Information Protection Microsoft*|
-|**MSDRM**|Termine usato talvolta in riferimento al client RMS 1.0, sostituito dal client più recente, MSIPC. </br></br>Questo client meno recente supporta applicazioni sviluppate con RMS SDK 1.0 e supporta Office 2010 e 2007, Exchange 2010 e 2013 nonché SharePoint 2007 e 2010.|
-|**MSIPC**|A volte usato in riferimento al client RMS 2.0, che ha sostituito il meno recente client RMS, MSDRM. </br></br>Questo client più recente supporta le applicazioni sviluppate con RMS SDK 2.0 e supporta Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 e il client Azure Information Protection.|
+|**MSDRM**|Termine usato talvolta in riferimento al client RMS 1.0, sostituito dal client più recente, MSIPC. </br></br>Questo client meno recente supporta applicazioni sviluppate con RMS SDK 1.0 e supporta Office 2010 e 2007, Exchange 2010 e 2013 nonché SharePoint 2007 e 2010.|
+|**MSIPC**|A volte usato in riferimento al client RMS 2.0, che ha sostituito il meno recente client RMS, MSDRM. </br></br>Questo client più recente supporta le applicazioni sviluppate con RMS SDK 2.0 e supporta Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 e il client Azure Information Protection.|
 | | |
 
 ### <a name="n"></a>N
@@ -169,7 +170,7 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 
 |Termine|Definizione|
 |--------|--------------|
-|**connettore Rights Management**|Servizio di inoltro proxy in uscita che può essere distribuito per servizi locali, ad esempio Exchange Server e SharePoint, per proteggere i dati usando il servizio Azure Rights Management.|
+|**connettore Rights Management**|Servizio di inoltro proxy in uscita che può essere distribuito per servizi locali, ad esempio Exchange Server e SharePoint, per proteggere i dati mediante il servizio Azure Rights Management.|
 |**Autorità di certificazione di Rights Management**|Account che ha protetto un documento o un messaggio di posta elettronica.|
 |**Proprietario di Rights Management**|Account che mantiene il controllo completo di un documento o di un messaggio di posta elettronica protetto. A questo account è automaticamente concesso il diritto di utilizzo Controllo completo di Rights Management, senza alcuna data di scadenza o impostazione modalità offline.|
 |**servizi Rights Management**|Termine generico che si applica sia alla versione cloud (Azure Rights Management) che alla versione locale (AD RMS) di Rights Management.|

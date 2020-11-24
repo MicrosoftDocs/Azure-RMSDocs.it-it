@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 11/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,21 +12,21 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d56e4850cab6c9395dd56247cab111dc9b847c5d
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 33e6d4205fbfc2c168514fc30cc20acbd9d8578f
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047890"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568551"
 ---
-# <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Qual è il Azure Information Protection scanner unificato per l'assegnazione di etichette?
+# <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Informazioni sullo scanner di etichettatura unificata di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
 
 >[!NOTE] 
 > Se si usa lo scanner classico, vedere [che cos'è il Azure Information Protection scanner classico?](deploy-aip-scanner-classic.md).
 >
-> Per analizzare ed etichettare i file nei repository cloud, usare [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) invece dello scanner.
+> Per analizzare ed etichettare i file nei repository cloud, usare [Cloud App Security](/cloud-app-security/) invece dello scanner.
 
 Usare le informazioni contenute in questa sezione per informazioni sul Azure Information Protection scanner Unified Labeling, quindi su come installare, configurare, eseguire e, se necessario, risolverlo correttamente.
 
@@ -36,15 +36,17 @@ Lo scanner AIP viene eseguito come servizio in Windows Server e consente di indi
 
 - **Raccolte documenti di SharePoint e cartella** per sharepoint server 2019 tramite sharepoint Server 2013. Anche SharePoint 2010 è supportato per i clienti che hanno [esteso il supporto per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
+Per classificare e proteggere i file, lo scanner usa le [etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) configurate in uno dei Microsoft 365 assegnare etichette ai centri di amministrazione, tra cui il centro sicurezza Microsoft 365, il centro di conformità Microsoft 365 e il Microsoft 365 Centro sicurezza e conformità. 
+
 ## <a name="azure-information-protection-unified-labeling-scanner-overview"></a>Panoramica di Azure Information Protection Unified Labeling scanner
 
-Lo scanner AIP può ispezionare tutti i file che Windows può indicizzare. Se sono state configurate etichette che applicano la classificazione automatica, lo scanner può etichettare i file individuati per applicare tale classificazione e, facoltativamente, applicare o rimuovere la protezione.
+Lo scanner AIP può ispezionare tutti i file che Windows può indicizzare. Se sono state configurate le etichette di riservatezza per applicare la classificazione automatica, lo scanner può etichettare i file individuati per applicare tale classificazione e, facoltativamente, applicare o rimuovere la protezione. 
 
 La figura seguente mostra l'architettura dello scanner AIP, in cui lo scanner individua i file nei server locali e SharePoint.
 
 :::image type="content" source="media/ul-scanner-arch.png" alt-text="Azure Information Protection architettura dello scanner per l'assegnazione di etichette unificata":::
 
-Per esaminare i file, lo scanner usa i filtri IFilter installati nel computer. Per determinare se i file richiedono l'assegnazione di etichette, lo scanner usa i tipi di informazioni riservate per la prevenzione della perdita dei dati (DLP) di Office 365 e il rilevamento dei pattern o i modelli Regex di Office 365.
+Per esaminare i file, lo scanner usa i filtri IFilter installati nel computer. Per determinare se i file richiedono l'assegnazione di etichette, lo scanner usa Microsoft 365 i tipi di informazioni riservate per la prevenzione della perdita dei dati (DLP) incorporati e il rilevamento dei modelli o Microsoft 365 i modelli Regex.
 
 Lo scanner usa il client Azure Information Protection e può classificare e proteggere gli stessi tipi di file del client. Per altre informazioni, vedere [tipi di file supportati dal client di Azure Information Protection Unified Labeling](./rms-client/clientv2-admin-guide-file-types.md).
 
@@ -63,7 +65,6 @@ Per configurare le analisi in base alle esigenze, eseguire una delle operazioni 
 > 
 > È possibile distribuire più nodi direttamente dall'inizio o iniziare con un cluster a nodo singolo e aggiungere altri nodi in un secondo momento quando si cresce. Distribuire più nodi usando lo stesso nome del cluster e il database per il cmdlet **Install-AIPScanner** .
 > 
- 
 
 ## <a name="aip-scanning-process"></a>Processo di analisi AIP
 
@@ -99,6 +100,24 @@ Per un elenco completo dei tipi di file supportati per l'ispezione e istruzioni 
 
 Dopo l'ispezione, i tipi di file supportati vengono contrassegnati con le condizioni specificate per le etichette. Se si usa la modalità di individuazione, è possibile che i file vengano segnalati per contenere le condizioni specificate per le etichette o che siano presenti tipi di informazioni riservate note.
 
+#### <a name="stopped-scanner-processes"></a>Processi scanner arrestati
+
+Se lo scanner si arresta e non completa un'analisi per un numero elevato di file nel repository, potrebbe essere necessario aumentare il numero di porte dinamiche per il sistema operativo che ospita i file.
+
+Ad esempio, la protezione avanzata dei server per SharePoint è uno dei motivi per cui lo scanner supera il numero di connessioni di rete consentite e pertanto si arresta.
+
+Per verificare se questa è la conseguenza dell'arresto dello scanner, verificare la presenza del seguente messaggio di errore nei log dello scanner in **%LocalAppData%\Microsoft\MSIP\Logs\MSIPScanner.Iplog** (più log vengono compressi in un file zip):
+
+`Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port`
+
+Per ulteriori informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo se necessario, vedere [impostazioni che possono essere modificate per migliorare le prestazioni di rete](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+
+> [!TIP]
+> Per le farm di SharePoint di grandi dimensioni, potrebbe essere necessario aumentare la soglia di visualizzazione elenco, il cui valore predefinito è **5.000.**
+>
+> Per ulteriori informazioni, vedere la pagina relativa alla [gestione di elenchi di grandi dimensioni e librerie in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+>
+
 ### <a name="3-label-files-that-cant-be-inspected"></a>3. etichettare i file che non possono essere controllati
 
 Per tutti i tipi di file che non possono essere controllati, lo scanner AIP applica l'etichetta predefinita nei criteri di Azure Information Protection o l'etichetta predefinita configurata per lo scanner.
@@ -128,9 +147,10 @@ Per ulteriori informazioni sulla distribuzione dello scanner, vedere gli articol
 
 **Ulteriori informazioni:**
 
+- Consultare il Blog sulle procedure consigliate per lo scanner Unified Labeling: procedure consigliate [per la distribuzione e l'uso dello scanner AIP UL](https://aka.ms/AIPScannerBestPractices)
+
 - Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
 
 - Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
-- È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari in cui viene usato PowerShell, vedere [uso di PowerShell con il Azure Information Protection Unified Labeling client](./rms-client/clientv2-admin-guide-powershell.md).
-
+- È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari in cui viene usato PowerShell, vedere [uso di PowerShell con il Azure Information Protection Unified Labeling client](./rms-client/clientv2-admin-guide-powershell.md)

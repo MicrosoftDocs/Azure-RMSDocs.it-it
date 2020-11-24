@@ -4,7 +4,7 @@ description: Elenca i prerequisiti per l'installazione e la distribuzione di Azu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/27/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,21 +12,21 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 274ef1ef2a7196aa9c25b8f488d83da77eba7c6c
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: 266ff1c9ff09b9b9b1a2133601f5adf44a4c7d4a
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316808"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568563"
 ---
-# <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner unificato per l'assegnazione di etichette
+# <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione dello scanner di etichettatura unificata di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
 
 >[!NOTE]
 > Se si lavora con lo scanner classico, vedere [prerequisiti per l'installazione e la distribuzione del Azure Information Protection scanner classico](deploy-aip-scanner-prereqs-classic.md).
 
-Prima di installare il Azure Information Protection scanner, verificare che il sistema soddisfi i requisiti seguenti:
+Prima di installare lo scanner locale Azure Information Protection, verificare che il sistema sia conforme ai requisiti di [Azure Information Protection](requirements.md)di base, nonché i requisiti seguenti specifici per lo scanner:
 
 - [Requisiti di Windows Server](#windows-server-requirements)
 - [Requisiti dell'account del servizio](#service-account-requirements)
@@ -71,9 +71,10 @@ I requisiti di questo account del servizio sono i seguenti:
 |---------|---------|
 |Assegnazione a destra dell'utente **di accesso locale**     |Necessario per installare e configurare lo scanner, ma non è necessario per eseguire le analisi.  </br></br>Una volta verificato che lo scanner è in grado di individuare, classificare e proteggere i file, è possibile rimuovere questo diritto dall'account del servizio.  </br></br>Se la concessione di questo diritto anche per un breve periodo di tempo non è possibile a causa dei criteri dell'organizzazione, vedere [distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).         |
 |Assegnazione dei diritti utente per l'**accesso come servizio**.     |  Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner.        |
-|**Autorizzazioni per i repository di dati**     |- **Condivisioni file o file locali:** Concedere le autorizzazioni di **lettura**, **scrittura**e **modifica** per analizzare i file e quindi applicare la classificazione e la protezione come configurata.  <br /><br />- **SharePoint:** Concedere le autorizzazioni di **controllo completo** per analizzare i file e quindi applicare la classificazione e la protezione come configurata.  <br /><br />- **Modalità di individuazione:** Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione di **lettura** .         |
+|**Autorizzazioni per i repository di dati**     |- **Condivisioni file o file locali:** Concedere le autorizzazioni di **lettura**, **scrittura** e **modifica** per analizzare i file e quindi applicare la classificazione e la protezione come configurata.  <br /><br />- **SharePoint:** È necessario concedere le autorizzazioni di **controllo completo** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni nei criteri di Azure Information Protection.  <br /><br />- **Modalità di individuazione:** Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione di **lettura** .         |
 |**Per le etichette che riproteggono o rimuovono la protezione**     | Per assicurarsi che lo scanner abbia sempre accesso ai file protetti, rendere questo account un [utente con privilegi avanzati](configure-super-users.md) per Azure Information Protection e assicurarsi che la funzionalità per utenti con privilegi avanzati sia abilitata. </br></br>Inoltre, se sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione in più fasi, assicurarsi che l'account del servizio sia incluso nei controlli di onboarding configurati.|
-| ||
+|**Analisi specifica a livello di URL:** |Per analizzare e individuare siti e siti secondari [in un URL specifico](#deploying-the-scanner-with-alternative-configurations), concedere all' **agente di raccolta siti** i diritti per l'account scanner a livello di farm.|
+| | |
 
 ## <a name="sql-server-requirements"></a>Requisiti di SQL Server
 
@@ -81,12 +82,16 @@ Per archiviare i dati di configurazione dello scanner, usare un'applicazione SQL
 
 - **Istanza locale o remota.**
 
-    È consigliabile ospitare il servizio SQL Server e scanner in computer diversi, a meno che non si stia lavorando a una distribuzione di piccole dimensioni.
+    Si consiglia di ospitare SQL Server e il servizio scanner in computer diversi, a meno che non si stia lavorando a una distribuzione di piccole dimensioni. Inoltre, è consigliabile disporre di un'istanza di SQL dedicata che funge solo da database scanner e che non sia condivisa con altre applicazioni.
 
-    SQL Server 2012 è la versione minima per le edizioni seguenti:
+    Se si lavora su un server condiviso, verificare che il [numero consigliato di core](#windows-server-requirements) siano gratuiti per il funzionamento del database dello scanner.
+
+    SQL Server 2016 è la versione minima per le edizioni seguenti:
 
     - SQL Server Enterprise
+
     - SQL Server Standard
+
     - SQL Server Express (consigliato solo per gli ambienti di test)
 
 - **Un account con ruolo sysadmin per installare lo scanner.**
@@ -97,7 +102,7 @@ Per archiviare i dati di configurazione dello scanner, usare un'applicazione SQL
 
 - **Capacità.** Per informazioni aggiuntive sulla capacità, vedere [requisiti di archiviazione e pianificazione della capacità per SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Regole di confronto senza distinzione tra maiuscole e minuscole](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver15)**
+- **[Regole di confronto senza distinzione tra maiuscole e minuscole](/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
 > Quando si specifica un nome di cluster personalizzato (profilo) per lo scanner oppure quando si usa la versione di anteprima dello scanner, sono supportati più database di configurazione nello stesso server SQL.
@@ -139,22 +144,28 @@ Per ulteriori informazioni, vedere la [Guida all'amministrazione client per l'as
 
 ## <a name="label-configuration-requirements"></a>Requisiti di configurazione delle etichette
 
-È necessario che siano configurate le etichette che applicano automaticamente la classificazione e, facoltativamente, la protezione.
+Per applicare la classificazione e, facoltativamente, la protezione, è necessario che sia configurata almeno un'etichetta di riservatezza in uno dei Microsoft 365 l'assegnazione di etichette ai centri di amministrazione per l'account dello scanner.
 
-Se non sono state configurate queste etichette, vedere [distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).
+Microsoft 365 l'assegnazione di etichette ai centri di amministrazione includono il Centro sicurezza Microsoft 365, il centro di conformità Microsoft 365 e il Microsoft 365 Centro sicurezza e conformità. 
+
+L' *account dello scanner* è l'account che verrà specificato nel parametro **DelegatedUser** del cmdlet [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) , eseguito quando si configura lo scanner. 
+
+Se le etichette non hanno condizioni di etichetta automatica, vedere le [istruzioni per le configurazioni alternative](#restriction-your-labels-do-not-have-auto-labeling-conditions) riportate di seguito.
 
 Per altre informazioni, vedere:
 
-- [Applicare automaticamente un'etichetta di riservatezza al contenuto](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels)
+- [Applicare automaticamente un'etichetta di riservatezza al contenuto](/microsoft-365/compliance/apply-sensitivity-label-automatically)
+- [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling](deploy-aip-scanner-configure-install.md)
 
 ## <a name="sharepoint-requirements"></a>Requisiti di SharePoint
 
 Per analizzare le cartelle e le raccolte documenti di SharePoint, verificare che il server SharePoint soddisfi i requisiti seguenti:
 
-- **Versioni supportate.** Le versioni supportate includono: SharePoint 2019, SharePoint 2016, SharePoint 2013 e SharePoint 2010. Altre versioni di SharePoint non sono supportate per lo scanner.
+- **Versioni supportate.** Le versioni supportate includono: SharePoint 2019, SharePoint 2016 e SharePoint 2013. Altre versioni di SharePoint non sono supportate per lo scanner.
 
-- **Versioning.** Quando si usa il [controllo delle versioni](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), lo scanner controlla ed etichetta l'ultima versione pubblicata. Se le etichette dello scanner sono obbligatorie per un file e l' [approvazione del contenuto](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) , è necessario approvare il file con etichetta in modo che sia disponibile per gli utenti.  
+- **Versioning.** Quando si usa il [controllo delle versioni](/sharepoint/governance/versioning-content-approval-and-check-out-planning), lo scanner controlla ed etichetta l'ultima versione pubblicata. Se le etichette dello scanner sono obbligatorie per un file e l' [approvazione del contenuto](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) , è necessario approvare il file con etichetta in modo che sia disponibile per gli utenti.  
 
 - **Farm di SharePoint di grandi dimensioni.** Per le farm SharePoint di grandi dimensioni, controllare se è necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000) per lo scanner al fine di accedere a tutti i file. Per ulteriori informazioni, vedere [gestire elenchi e librerie di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
@@ -176,15 +187,15 @@ Per analizzare i file con percorsi di file di più di 260 caratteri, installare 
 |Versione di Windows  |Descrizione  |
 |---------|---------|
 |**Windows 2016 o versione successiva**     |   Configurare il computer per supportare percorsi lunghi      |
-|**Windows 10 o Windows Server 2016**     | Definire la seguente [impostazione di criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): Configurazione computer **criteri computer locale**  >  **Computer Configuration**  >  **modelli amministrativi**  >  **tutte le impostazioni**  >  **Abilita percorsi lunghi Win32**.    </br></br>Per ulteriori informazioni sul supporto dei percorsi di file lunghi in queste versioni, vedere la sezione [limitazione della lunghezza massima del percorso](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dalla documentazione per gli sviluppatori di Windows 10.    |
-|**Windows 10, versione 1607 o successiva**     |  Acconsentire esplicitamente alla funzionalità di **MAX_PATH** aggiornata. Per ulteriori informazioni, vedere [Enable Long paths in Windows 10 versioni 1607 e versioni successive](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
+|**Windows 10 o Windows Server 2016**     | Definire la seguente [impostazione di criteri di gruppo](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): Configurazione computer **criteri computer locale**  >  **Computer Configuration**  >  **modelli amministrativi**  >  **tutte le impostazioni**  >  **Abilita percorsi lunghi Win32**.    </br></br>Per ulteriori informazioni sul supporto dei percorsi di file lunghi in queste versioni, vedere la sezione [limitazione della lunghezza massima del percorso](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dalla documentazione per gli sviluppatori di Windows 10.    |
+|**Windows 10, versione 1607 o successiva**     |  Acconsentire esplicitamente alla funzionalità di **MAX_PATH** aggiornata. Per ulteriori informazioni, vedere [Enable Long paths in Windows 10 versioni 1607 e versioni successive](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
 | | |
 
 ## <a name="usage-statistics-requirements"></a>Requisiti statistici di utilizzo
 
 Disabilitare le statistiche di utilizzo usando uno dei metodi seguenti:
 
-- Impostazione del parametro [AllowTelemetry](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-install#to-install-the-azure-information-protection-client-by-using-the-executable-installer) su 0
+- Impostazione del parametro [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) su 0
 
 - Assicurarsi che l'opzione migliora Azure Information Protection inviando le **statistiche di utilizzo a Microsoft** rimanga deselezionata durante il processo di installazione dello scanner.
 
@@ -194,9 +205,11 @@ I prerequisiti elencati sopra sono i requisiti predefiniti per la distribuzione 
 
 I requisiti predefiniti devono essere appropriati per i test iniziali, in modo da poter controllare le funzionalità dello scanner.
 
-Tuttavia, in un ambiente di produzione, i criteri dell'organizzazione possono proibire questi requisiti predefiniti. Lo scanner è in grado di soddisfare le restrizioni seguenti con la configurazione aggiuntiva:
+Tuttavia, in un ambiente di produzione, i criteri dell'organizzazione possono essere diversi dai requisiti predefiniti. Lo scanner è in grado di supportare le seguenti modifiche con la configurazione aggiuntiva:
 
-- [Il server scanner non può avere connettività Internet](#restriction-the-scanner-server-cannot-have-internet-connectivity)
+- [Individuare e analizzare tutti i siti e i siti secondari in un URL specifico](#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url)
+
+- [Restrizione: il server scanner non può avere connettività Internet](#restriction-the-scanner-server-cannot-have-internet-connectivity)
 
 - [Restrizione: l'account del servizio scanner non può essere sincronizzato con Azure Active Directory, ma il server ha connettività Internet](#restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity)
 
@@ -205,6 +218,26 @@ Tuttavia, in un ambiente di produzione, i criteri dell'organizzazione possono pr
 - [Restrizione: non è possibile concedere all'utente il ruolo Sysadmin o i database devono essere creati e configurati manualmente](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
 - [Restrizione: le etichette non hanno condizioni di etichetta automatica](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
+### <a name="discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url"></a>Individuare e analizzare tutti i siti e i siti Web di SharePoint in un URL specifico
+
+Lo scanner è in grado di individuare e analizzare tutti i siti e i siti Web di SharePoint in un URL specifico con la seguente configurazione:
+
+1. Avviare **Amministrazione centrale SharePoint**.
+
+1. Nel sito Web **Amministrazione centrale SharePoint** , nella sezione **Gestione applicazioni** , fare clic su **Gestisci applicazioni Web**.
+
+1. Fare clic per evidenziare l'applicazione Web di cui si desidera gestire il livello di criteri di autorizzazione.
+
+1. Scegliere la farm pertinente e quindi selezionare **Gestisci livelli di criteri autorizzazioni**.
+
+1. Selezionare **site collection auditor** nelle opzioni delle autorizzazioni per la **raccolta siti** , quindi concedere la **visualizzazione delle pagine dell'applicazione** nell'elenco delle autorizzazioni e infine assegnare un nome al nuovo **Auditor e al visualizzatore della raccolta siti** del livello di criteri AIP scanner.
+
+1. Aggiungere l'utente dello scanner al nuovo criterio e concedere la **raccolta siti** nell'elenco delle autorizzazioni.   
+
+1. Aggiungere un URL di SharePoint che ospita siti o siti secondari che devono essere analizzati. Per altre informazioni, vedere [configurare lo scanner nella portale di Azure](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+Per ulteriori informazioni sulla gestione dei livelli di criteri di SharePoint, vedere [gestire i criteri di autorizzazione per un'applicazione Web](/sharepoint/administration/manage-permission-policies-for-a-web-application).
 
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restrizione: il server scanner non può avere connettività Internet
 
@@ -216,25 +249,25 @@ Per supportare un computer disconnesso, seguire questa procedura:
 
 1. Abilitare la gestione offline per i processi di analisi del contenuto:
 
-    1. Impostare lo scanner per il funzionamento in modalità **offline** , usando il cmdlet [set-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
+    1. Impostare lo scanner per il funzionamento in modalità **offline** , usando il cmdlet [set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
 
     1. Configurare lo scanner nella portale di Azure creando un cluster dello scanner. Per altre informazioni, vedere [configurare lo scanner nella portale di Azure](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
     1. Esportare il processo del contenuto dal riquadro **processi di analisi Azure Information Protection-contenuto** utilizzando l'opzione **Esporta** .
     
-    1. Importare i criteri usando il cmdlet [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) . 
+    1. Importare i criteri usando il cmdlet [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/import-aipscannerconfiguration) . 
     
     I risultati per i processi di analisi del contenuto offline sono disponibili all'indirizzo: **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
     
 1. Abilitare la gestione offline dei processi di analisi di rete:
 
-    1. Impostare il servizio di individuazione della rete per il funzionamento in modalità offline usando il cmdlet [set-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
+    1. Impostare il servizio di individuazione della rete per il funzionamento in modalità offline usando il cmdlet [set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
 
     1. Configurare il processo di analisi di rete nel portale di Azure. Per ulteriori informazioni, vedere [creazione di un processo di analisi di rete](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
     
     1. Esportare il processo di analisi della rete dal riquadro processi di analisi di **rete Azure Information Protection (anteprima)** con l'opzione di **esportazione** . 
     
-    1.  Importare il processo di analisi di rete usando il file che corrisponde al nome del cluster usando il cmdlet [Import-MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) .  
+    1.  Importare il processo di analisi di rete usando il file che corrisponde al nome del cluster usando il cmdlet [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) .  
     
     I risultati per i processi di analisi di rete offline sono disponibili in: **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
 
@@ -263,18 +296,10 @@ Inoltre:
 - È necessario essere un amministratore locale nel server che eseguirà lo scanner
 - All'account del servizio che eseguirà lo scanner devono essere concesse le autorizzazioni controllo completo per le chiavi del registro di sistema seguenti:
 
-    - HKEY_LOCAL_MACHINE \SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
-    - HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
 
 Se, dopo aver configurato queste autorizzazioni, viene visualizzato un errore durante l'installazione dello scanner, l'errore può essere ignorato ed è possibile avviare manualmente il servizio scanner.
-
-#### <a name="populate-the-database-manually"></a>Popolamento manuale del database
-
-Popolare il database utilizzando lo script seguente:
-
-```cli
-if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END 
-```
 
 #### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>Creare un utente e concedere i diritti di db_owner manualmente
 
@@ -304,21 +329,21 @@ Per creare un utente e concedere diritti di db_owner per il database, rivolgersi
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
-#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restrizione: all'account del servizio per lo scanner non può essere concesso il diritto **Log on locally** (Accesso locale)
+### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restrizione: all'account del servizio per lo scanner non può essere concesso il diritto **Log on locally** (Accesso locale)
 
-Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** per gli account del servizio, ma consentono il diritto **di accesso come processo batch** , usare il parametro *OnBehalfOf* con set-AIPAuthentication.
+Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** per gli account del servizio, usare il parametro *OnBehalfOf* con set-AIPAuthentication.
 
-Per ulteriori informazioni, vedere [come etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restrizione: l'account del servizio scanner non può essere sincronizzato con Azure Active Directory, ma il server ha connettività Internet
+### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restrizione: l'account del servizio scanner non può essere sincronizzato con Azure Active Directory, ma il server ha connettività Internet
 
 È possibile usare un account per eseguire il servizio dello scanner e un altro per l'autenticazione in Azure Active Directory:
 
 - **Per l'account del servizio scanner,** utilizzare un account di Windows locale o un account Active Directory.
 
-- **Per l'account Azure Active Directory,** specificare l'account locale per il parametro *OnBehalfOf* con set-AIPAuthentication. Per ulteriori informazioni, vedere [come etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+- **Per l'account Azure Active Directory,** specificare l'account locale per il parametro *OnBehalfOf* con set-AIPAuthentication. Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-#### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restrizione: le etichette non hanno condizioni di etichetta automatica
+### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restrizione: le etichette non hanno condizioni di etichetta automatica
 
 Se le etichette non hanno condizioni di etichetta automatica, pianificare l'uso di una delle opzioni seguenti durante la configurazione dello scanner:
 
@@ -326,7 +351,7 @@ Se le etichette non hanno condizioni di etichetta automatica, pianificare l'uso 
 |---------|---------|
 |**Individua tutti i tipi di informazioni**     |  Nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)impostare l'opzione **tipi di informazioni su individua** su **tutti**. </br></br>Questa opzione imposta il processo di analisi del contenuto per l'analisi del contenuto per tutti i tipi di informazioni riservate.      |
 |**Usa l'etichettatura consigliata**     |  Nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)impostare l'opzione considera l' **etichetta consigliata come automatica** **su on**.</br></br> Questa impostazione configura lo scanner in modo da applicare automaticamente tutte le etichette consigliate al contenuto.      |
-|**Definire un'etichetta predefinita**     |   Definire un'etichetta predefinita nei [criteri](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)o nel [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In questo caso lo scanner applica l'etichetta predefinita a tutti i file trovati.       |
+|**Definire un'etichetta predefinita**     |   Definire un'etichetta predefinita nei [criteri](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)o nel [repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In questo caso lo scanner applica l'etichetta predefinita a tutti i file trovati.       |
 | | |
 
 ## <a name="next-steps"></a>Passaggi successivi

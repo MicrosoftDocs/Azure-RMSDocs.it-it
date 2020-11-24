@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
-ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
+ms.openlocfilehash: c525903e8b9bca6679455ddc5767c53f28b6d69d
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281954"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568556"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Che cos'è il Azure Information Protection scanner classico?
 
@@ -34,10 +34,10 @@ Lo scanner AIP viene eseguito come servizio in Windows Server e consente di indi
 
 - **Percorsi UNC** per le condivisioni di rete che usano il protocollo SMB (Server Message Block).
 
-- **Raccolte documenti di SharePoint e cartella** per sharepoint server 2019 tramite sharepoint Server 2013. Anche SharePoint 2010 è supportato per i clienti che hanno [esteso il supporto per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+- **Raccolte documenti di SharePoint e cartella** per sharepoint server 2019 tramite sharepoint Server 2013. 
 
 > [!NOTE]
-> Per analizzare ed etichettare i file nei repository cloud, usare [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) invece dello scanner.
+> Per analizzare ed etichettare i file nei repository cloud, usare [Cloud App Security](/cloud-app-security/) invece dello scanner.
 >
 ## <a name="azure-information-protection-classic-scanner-overview"></a>Panoramica dello scanner classico Azure Information Protection
 
@@ -47,7 +47,7 @@ La figura seguente mostra l'architettura dello scanner AIP, in cui lo scanner in
 
 :::image type="content" source="media/classic-scanner-arch.png" alt-text="Azure Information Protection architettura dello scanner classico":::
 
-Per esaminare i file, lo scanner usa i filtri IFilter installati nel computer. Per determinare se i file richiedono l'assegnazione di etichette, lo scanner usa i tipi di informazioni riservate per la prevenzione della perdita dei dati (DLP) di Office 365 e il rilevamento dei pattern o i modelli Regex di Office 365.
+Per esaminare i file, lo scanner usa i filtri IFilter installati nel computer. Per determinare se i file richiedono l'assegnazione di etichette, lo scanner usa Microsoft 365 i tipi di informazioni riservate per la prevenzione della perdita dei dati (DLP) incorporati e il rilevamento dei modelli o Microsoft 365 i modelli Regex.
 
 Lo scanner usa il client Azure Information Protection e può classificare e proteggere gli stessi tipi di file del client. Per ulteriori informazioni, vedere [tipi di file supportati dal client Azure Information Protection](./rms-client/client-admin-guide-file-types.md).
 
