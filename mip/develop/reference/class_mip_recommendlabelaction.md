@@ -1,17 +1,17 @@
 ---
 title: Classe RecommendLabelAction
 description: 'Documenta la classe recommendlabelaction:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 3990d6de9d78002d9c240e621f96351cd337aabb
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2a0318c0da7bfc3a2be72c1139754da1f7142d71
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764549"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566570"
 ---
 # <a name="class-recommendlabelaction"></a>Classe RecommendLabelAction 
 Consigliare le azioni dell'etichetta serve a suggerire un'etichetta agli utenti. L'eliminazione di questa chiamata dopo che un utente ignora l'etichetta consigliata deve essere eseguita tramite le azioni supportate sullo stato di esecuzione.
@@ -19,8 +19,8 @@ Consigliare le azioni dell'etichetta serve a suggerire un'etichetta agli utenti.
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::\<shared_ptr\> label& GetLabel () const  |  Ottiene l'etichetta suggerita.
-public const std::\<vector std::\> String& GetClassificationIds () const  |  Ottiene gli ID di classificazione che corrispondono e ha causato la visualizzazione di questa etichetta.
+public const std:: shared_ptr \<Label\>& GetLabel () const  |  Ottiene l'etichetta suggerita.
+public const std:: Vector \<std::string\>& GetClassificationIds () const  |  Ottiene gli ID di classificazione che corrispondono e ha causato la visualizzazione di questa etichetta.
   
 ## <a name="members"></a>Members
   

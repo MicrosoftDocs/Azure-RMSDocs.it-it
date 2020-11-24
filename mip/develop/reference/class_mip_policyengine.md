@@ -1,17 +1,17 @@
 ---
 title: classe PolicyEngine
 description: 'Documenta la classe PolicyEngine:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 40072d56fd5bd1c577759991f7b98236a58e5ed2
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 733e1ced7a1f5ca1ec8d47709ef4c364c04e37a5
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761142"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566672"
 ---
 # <a name="class-policyengine"></a>classe PolicyEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
@@ -19,24 +19,25 @@ Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Ottiene [Settings](class_mip_policyengine_settings.md) del motore dei criteri.
-public const std::\<vector std::\<shared_ptr\> \> label& ListSensitivityLabels ()  |  Elenca le etichette di riservatezza associate al motore dei criteri.
-public const std::\<vector std::\<shared_ptr\> \> SensitivityTypesRulePackage& ListSensitivityTypes () const  |  elencare i tipi di riservatezza associati al motore dei criteri.
+public const Settings& GetSettings() const  |  Ottiene Settings del motore dei criteri.
+public const std:: Vector \<std::shared_ptr\<Label\> \>& ListSensitivityLabels ()  |  Elenca le etichette di riservatezza associate al motore dei criteri.
+public const std:: Vector \<std::shared_ptr\<SensitivityTypesRulePackage\> \>& ListSensitivityTypes () const  |  elencare i tipi di riservatezza associati al motore dei criteri.
 public const std::string& GetMoreInfoUrl() const  |  Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
 public bool IsLabelingRequired() const  |  Controlla se il criterio determina che un documento deve essere o meno etichettato.
-public std:: shared_ptr\<label\> GetDefaultSensitivityLabel ()  |  Ottiene l'etichetta di riservatezza predefinita.
-public std:: shared_ptr\<label\> GetLabelById (const std:: String& ID) const  |  Ottiene l'etichetta in base all'ID fornito.
-public std:: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
+public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Ottiene l'etichetta di riservatezza predefinita.
+public std:: shared_ptr \<Label\> GetLabelById (const std:: string& ID) const  |  Ottiene l'etichetta in base all'ID fornito.
+public std:: shared_ptr \<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Registra un evento specifico dell'applicazione per la pipeline di controllo.
 public const std:: String& GetTenantId () const  |  Ottiene l'ID tenant associato al motore.
 public const std:: String& GetPolicyDataXml () const  |  Ottiene i dati XML dei criteri che descrivono le impostazioni, le etichette e le regole associate a questo criterio.
 public const std:: String& GetSensitivityTypesDataXml () const  |  Ottiene i dati XML dei tipi di riservatezza che descrivono i tipi di riservatezza associati a questi criteri.
-public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene un elenco di impostazioni personalizzate.
+public const std:: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Ottiene un elenco di impostazioni personalizzate.
 public const std:: String& GetPolicyFileId () const  |  Ottiene l'ID del file di criteri.
 public const std:: String& GetSensitivityFileId () const  |  Ottiene l'ID del file di riservatezza.
 public bool HasClassificationRules () const  |  Ottiene se il criterio ha regole automatiche o di raccomandazione.
-public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetLastPolicyFetchTime () const  |  Ottiene l'ora dell'ultimo recupero dei criteri.
-public unsigned int GetWxpMetadataVersion () const  |  Ottiene la versione dei metadati WXP (Windows, Excel, PowerPoint) consigliata attualmente 0 per versione precedente 1 per la versione abilitata per la creazione di co-creazione.
+public ClassificationScheme GetClassificationScheme () const  |  Ottiene se i criteri devono essere classificati in base alla versione più recente.
+public std:: Chrono:: time_point \<std::chrono::system_clock\> GetLastPolicyFetchTime () const  |  Ottiene l'ora dell'ultimo recupero dei criteri.
+public uint32_t GetWxpMetadataVersion () const  |  Ottiene la versione dei metadati WXP (Windows, Excel, PowerPoint) consigliata attualmente 0 per versione precedente 1 per la versione abilitata per la creazione di co-creazione.
   
 ## <a name="members"></a>Members
   
@@ -149,7 +150,13 @@ Ottiene l'ID del file di riservatezza.
 Ottiene se il criterio ha regole automatiche o di raccomandazione.
 
   
-**Restituisce**un valore booleano che indica se nel criterio sono presenti regole automatiche o consigliate.
+**Restituisce** un valore booleano che indica se nel criterio sono presenti regole automatiche o consigliate.
+  
+### <a name="getclassificationscheme-function"></a>GetClassificationScheme (funzione)
+Ottiene se i criteri devono essere classificati in base alla versione più recente.
+
+  
+**Restituisce**: un tipo di motore che dirà al cliente quale motore utilizzare
   
 ### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (funzione)
 Ottiene l'ora dell'ultimo recupero dei criteri.
@@ -161,4 +168,4 @@ Ottiene l'ora dell'ultimo recupero dei criteri.
 Ottiene la versione dei metadati WXP (Windows, Excel, PowerPoint) consigliata attualmente 0 per versione precedente 1 per la versione abilitata per la creazione di co-creazione.
 
   
-**Restituisce**: unsigned int indecating la versione dei metadati supportata dal tenant per i file WXP.
+**Restituisce**: Uint32_t int indecating quale versione dei metadati supporta il tenant per i file WXP.

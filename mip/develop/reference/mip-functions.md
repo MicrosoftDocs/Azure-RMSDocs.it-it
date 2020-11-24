@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: e7d1cacde412ab4ca43256309d2f2c53771d94b0
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563706"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566579"
 ---
 # <a name="functions-c"></a>Funzioni (C++) 
 
@@ -61,9 +61,6 @@ Ottenere il nome dello stato del contenuto.
 
 Parametri  
 * **actionSource**: lo stato del contenuto su cui si sta lavorando. 
-
-
-
   
 **Returns**: rappresentazione di stringa dello stato del contenuto.
   
@@ -187,7 +184,7 @@ Operatore Xor (^) per il tipo enum Action.
 
 ## <a name="namespace-mipauditmetadatakeys"></a>spazio dei nomi MIP:: auditmetadatakeys
 
-Membri                        | Descrizioni                                
+Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: String sender ()       |  Controllare le chiavi dei metadati nella rappresentazione di stringa.
 Destinatari std:: String pubblici ()       | _Non ancora documentato._
@@ -198,20 +195,20 @@ public std:: String LastModifiedDate ()       | _Non ancora documentato._
 Controllare le chiavi dei metadati nella rappresentazione di stringa.
   
 ### <a name="recipients-function"></a>Funzione Recipients
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="lastmodifiedby-function"></a>LastModifiedBy (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
   
 ### <a name="lastmodifieddate-function"></a>LastModifiedDate (funzione)
-_Non ancora documentato._
+Non ancora documentato.
 
 
 ## <a name="namespace-miprights"></a>namespace `mip::rights` 
   
-Membri                        | Descrizioni                                
+Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Ottiene l'identificatore della stringa per il diritto "owner".
 public std::string View()       |  Ottiene l'identificatore della stringa per il diritto "view".
@@ -314,7 +311,7 @@ Ottiene un elenco di diritti che si applicano in tutti gli scenari.
 
 ## <a name="namespace-miproles"></a>namespace `mip::roles` 
   
-Membri                        | Descrizioni                                
+Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Ottiene l'identificatore della stringa per il ruolo "viewer".
 public std::string Reviewer()       |  Ottiene l'identificatore della stringa per il ruolo "reviewer".

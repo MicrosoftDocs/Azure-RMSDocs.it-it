@@ -7,29 +7,91 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: bd786925f22774c3e9173a69d88a08618da299fe
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 3e58c7efe669aa6c3405a5fd1c2056e96a933ff6
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760718"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566633"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) Software Development Kit (SDK) e criteri di supporto
 
-## <a name="servicing"></a>Manutenzione 
+## <a name="servicing"></a>Servizio
 
-Ogni versione disponibile a livello generale è supportata per sei mesi dopo il rilascio della versione GA successiva. La documentazione potrebbe non includere informazioni sulle versioni non supportate. Le correzioni e le nuove funzionalità sono applicabili solo alla versione GA più recente.
+Ogni versione disponibile a livello generale è supportata per sei mesi dopo il rilascio della prossima versione GA. La documentazione potrebbe non includere informazioni sulle versioni non supportate. Le correzioni e le nuove funzionalità sono applicabili solo alla versione GA più recente.
 
 Le versioni di anteprima non devono essere distribuite nell'ambiente di produzione. Usare invece la versione di anteprima più recente per testare nuove funzionalità o correzioni che saranno disponibili nella prossima versione GA. È supportata solo la versione di anteprima più recente.
 
 ## <a name="release-history"></a>Cronologia delle versioni
 
-Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata. La versione più recente è elencata per prima. 
+Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata. La versione più recente è elencata per prima.
 
 > [!NOTE]
 > Le correzioni minime non sono elencate, quindi se si verifica un problema con l'SDK, è consigliabile verificare se è stato risolto con la versione GA più recente. Se il problema persiste, verificare la versione di anteprima corrente.
 >  
-> Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
+> Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## <a name="version-17133"></a>Versione 1.7.133
+
+**Data di rilascio**: 23 settembre 2020
+
+### <a name="general-sdk-changes"></a>Modifiche generali dell'SDK
+
+- Anteprima pubblica disponibile per Java in Windows e Ubuntu 18,04.
+- .NET Core è ora supportato in Windows.
+- Supporto per l'anteprima pubblica per .NET Core in Ubuntu 18,04.
+- Registrazione locale migliorata per l'archivio chiavi quando il tipo di cache di archiviazione è impostato su `OnDiskEncrypted.`
+- Funzionalità di flighting abilitata per il wrapper .NET
+- Il comportamento di telemetria SDK è stato ripristinato prima di 1,6. Un set minimo di eventi di utilizzo viene ora inviato quando si opta per solo la telemetria minima.
+
+### <a name="file-sdk"></a>SDK file
+
+- Correzione della conversione del corpo UTF-16/UTF-8 in `MSGInspector` .
+- Impostare un limite di dimensioni massime del file predefinito per i file protetti da file SDK a 6 GB.
+  - Modifica apportata a causa della decrittografia dei file di grandi dimensioni che richiedono *almeno la dimensione* del file nella memoria disponibile.
+  - È possibile eseguire l'override dell'impostazione personalizzata `max_file_size_for_protection` .
+- Aggiunta del supporto per i PDF linearizzati.
+- Correzione di un bug in cui LastModifiedDate non è stato aggiornato in caso di modifica.
+- Correzione di una perdita di memoria nella creazione di PDF protetti.
+- File SDK supporta la revoca dei file rilevati.
+- `FileEngine::Settings::SetLabelFilter` è deprecato. in `ConfigureFunctionality` alternativa, usare.
+
+### <a name="policy-sdk"></a>SDK criteri
+
+- Policy SDK supporta ora le azioni di assegnazione di etichette solo per la crittografia.
+- Correzione di un bug `mip::Identity` per cui non veniva caricato correttamente dai motori memorizzati nella cache.
+- Correzione di un bug per cui i confronti GUID di classificazione fanno distinzione tra maiuscole e minuscole nell'API
+- Gli eventi di controllo sono stati arricchiti aggiungendo nuovi campi.
+
+### <a name="protection-sdk"></a>SDK di protezione
+
+- Correzione di un bug `mip::Identity` per cui non veniva caricato correttamente dai motori memorizzati nella cache.
+- Aggiunta della registrazione implicita per le licenze di pubblicazione appena create.
+- Aggiunta del supporto per gli algoritmi cyptographic usati per supportare DKE nei file di Office.
+- I `documentId` parametri e sono `owner` facoltativi.
+
+### <a name="c-apis"></a>API C
+
+- Sono state aggiunte le API DKE e Identity mancanti.
+- Spostato `AuthDelegate` dal profilo al motore in tutti gli SDK.
+- Pubblicare l'esempio di SDK dei criteri per C
+- `MIP_CC_CreateProtectionEngineSettingsWithIdentity` è stato deprecato. in `MIP_CC_CreateProtectionEngineSettingsWithIdentityAndAuthCallback` alternativa, usare.
+- `MIP_CC_CreateProtectionEngineSettingsWithEngineId` è stato deprecato. in `MIP_CC_CreateProtectionEngineSettingsWithEngineIdAndAuthCallback` alternativa, usare.
+- `MIP_CC_CreateProtectionProfileSettings` la firma è stata modificata.
+- `MIP_CC_CreatePolicyEngineSettingsWithIdentity` è stato deprecato, usare `MIP_CC_CreatePolicyEngineSettingsWithIdentityAndAuthCallback` .
+- `MIP_CC_CreatePolicyEngineSettingsWithEngineId` è stato deprecato, usare `MIP_CC_CreatePolicyEngineSettingsWithEngineIdAndAuthCallback` .
+- `MIP_CC_PolicyEngineSettings_SetLabelFilter` è stato deprecato, usare `MIP_CC_PolicyEngineSettings_ConfigureFunctionality` .
+- `MIP_CC_CreatePolicyProfileSettings` la firma è stata modificata.
+
+### <a name="breaking-changes"></a>Modifiche di rilievo
+
+#### <a name="common"></a>Comuni
+
+- `TelemetryConfiguration::isTelemetryOptedOut` è stato rinominato in `isMinimalTelemetryEnabled`. 
+
+#### <a name="c-api"></a>API C
+
+- `mip_cc_document_state` è stato aggiornato con un nuovo valore `mip_cc_metadata_version_format` contentMetadataVersionFormat
 
 ## <a name="version-16103"></a>Versione 1.6.103
 
@@ -43,7 +105,7 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 - Il componente di telemetria USA ora HttpDelegate di MIP in iOS, MacOs e Linux. (In precedenza solo Win32).
 - Miglioramento dell'indipendenza dai tipi per l'API C.
 - Il AuthDelegate è stato spostato dal profilo al motore nelle API C++, C# e Java.
-- AuthDelegate spostato dal costruttore di `Profile::Settings` a `Engine::Settings`.
+- AuthDelegate spostato dal costruttore di `Profile::Settings` a `Engine::Settings` .
 - Aggiunta della categoria a NoPolicyError per fornire altre informazioni sui motivi per cui la sincronizzazione dei criteri non è riuscita.
 - Aggiunto `PolicyEngine::GetTenantId` metodo.
 - Aggiunta del supporto per cloud sovrano esplicito.
@@ -55,29 +117,29 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 
 - Aggiunta `IFileHandler::InspectAsync` ai wrapper C# e Java
 - Nuovo supporto tramite `FileProfile::AcquirePolicyAuthToken` per l'attivazione dell'acquisizione dei token di criteri per consentire a un'applicazione di eseguire il riscaldamento della cache dei token.    
-- `MsgInspector::GetAttachments`restituisce `vector<shared_ptr<MsgAttachmentData>>` anziché`vector<unique_ptr<MsgAttachmentData>>`
-- `TelemetryConfiguration::isOptedOut`l'impostazione ora Disabilita completamente la telemetria. In precedenza è stato inviato un set di dati di telemetria minimi.
+- `MsgInspector::GetAttachments` restituisce `vector<shared_ptr<MsgAttachmentData>>` anziché `vector<unique_ptr<MsgAttachmentData>>`
+- `TelemetryConfiguration::isOptedOut` l'impostazione ora Disabilita completamente la telemetria. In precedenza è stato inviato un set di dati di telemetria minimi.
 
 ### <a name="policy-sdk"></a>SDK criteri
 
-- Nuovo supporto per l'attivazione dell'acquisizione di token per consentire a un'applicazione di eseguire il riscaldamento `PolicyProfile::AcquireAuthToken`della cache dei token tramite.
+- Nuovo supporto per l'attivazione dell'acquisizione di token per consentire a un'applicazione di eseguire il riscaldamento della cache dei token tramite `PolicyProfile::AcquireAuthToken` .
 - Per impostazione predefinita, le etichette HYOK sono filtrate.
 - I metadati associati alle etichette eliminate verranno ora rimossi.
 - In caso di mancata corrispondenza tra i criteri di etichetta memorizzati nella cache e i criteri di riservatezza, la cache dei criteri verrà ora cancellata.
 - Nuovo supporto per i metadati con versione:
   - Un formato di file può comparire la posizione o il formato dei metadati delle etichette. In tal caso, un'applicazione deve fornire MIP con tutti i metadati e MIP determinerà quali metadati sono "true".
-  - `ContentLabel::GetExtendedProperties`restituisce `vector<MetadataEntry>` ora invece di `vector<pair<string, string>>`.
-  - `MetadataAction::GetMetadataToAdd`restituisce `vector<MetadataEntry>` ora invece di `vector<pair<string, string>>`.
-  - `ExecutionState::GetContentMetadata`dovrebbe ora restituire `vector<MetadataEntry>` anziché `vector<pair<string, string>>`.
-  - `ExecutionState::GetContentMetadataVersion`deve restituire la versione più recente dei metadati riconosciuta dall'applicazione per il formato di file corrente (in genere 0).
-  - `PolicyEngine::GetWxpMetadataVersion`Restituisce la versione dei metadati per i documenti di Office configurata dall'amministratore del tenant (0 = impostazione predefinita, 1 = formato abilitato per la coautenticazione).
+  - `ContentLabel::GetExtendedProperties` restituisce ora `vector<MetadataEntry>` invece di `vector<pair<string, string>>` .
+  - `MetadataAction::GetMetadataToAdd` restituisce ora `vector<MetadataEntry>` invece di `vector<pair<string, string>>` .
+  - `ExecutionState::GetContentMetadata` dovrebbe ora restituire `vector<MetadataEntry>` anziché `vector<pair<string, string>>` .
+  - `ExecutionState::GetContentMetadataVersion` deve restituire la versione più recente dei metadati riconosciuta dall'applicazione per il formato di file corrente (in genere 0).
+  - `PolicyEngine::GetWxpMetadataVersion` Restituisce la versione dei metadati per i documenti di Office configurata dall'amministratore del tenant (0 = impostazione predefinita, 1 = formato abilitato per la coautenticazione).
   - Modifiche equivalenti nell'API C:
     - `MIP_CC_ContentLabel_GetExtendedProperties`
     - `MIP_CC_MetadataAction_GetMetadataToAdd`
     - `mip_cc_metadata_callback`
     - `mip_cc_document_state`
     - `MIP_CC_PolicyEngine_GetWxpMetadataVersion`
-- `TelemetryConfiguration::isOptedOut`l'impostazione ora Disabilita completamente la telemetria. In precedenza è stato inviato un set di dati di telemetria minimi. 
+- `TelemetryConfiguration::isOptedOut` l'impostazione ora Disabilita completamente la telemetria. In precedenza è stato inviato un set di dati di telemetria minimi. 
 
 ### <a name="protection-sdk"></a>SDK di protezione
 
@@ -85,7 +147,7 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 - Nuovo supporto per la generazione di una licenza preliminare durante la pubblicazione.
 - Certificato SSL pubblico Microsoft esposto utilizzato dal servizio di protezione.
    - `GetMsftCert` e `GetMsftCertPEM`
-   - Se un'applicazione esegue `HttpDelegate` l'override dell'interfaccia, deve considerare attendibili i certificati del server rilasciati da questa CA.
+   - Se un'applicazione esegue l'override dell' `HttpDelegate` interfaccia, deve considerare attendibili i certificati del server rilasciati da questa CA.
    - Questo requisito dovrebbe essere rimosso in ritardo nel 2020.    
 
 ## <a name="version-15124"></a>Versione 1.5.124
@@ -141,9 +203,9 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
   - MIP::P rotectionEngine:: IsFeatureSupported ()
 - Dettagli più completi durante il recupero dei modelli RMS
 - **Modifiche di rilievo**
-  - `mip::ProtectionEngine::GetTemplates()``vector<shared_ptr<string>>` valore restituito sostituito con `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
-  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()`parametro `shared_ptr<vector<string>>` di callback sostituito `vector<shared_ptr<mip::TemplateDescriptor>>` con (C++)
-  - IProtectionEngine. gettemplates | Il valore `List<string>` restituito Async () è `List<TemplateDescriptor>`stato sostituito con. (C#)
+  - `mip::ProtectionEngine::GetTemplates()``vector<shared_ptr<string>>`valore restituito sostituito con `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()``shared_ptr<vector<string>>`parametro di callback sostituito con `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - IProtectionEngine. gettemplates | Il valore restituito Async () è stato `List<string>` sostituito con `List<TemplateDescriptor>` . (C#)
   - MIP_CC_ProtectionEngine_GetTemplates () mip_cc_guid * param sostituito con mip_cc_template_descriptor * (API C)
 
 ### <a name="c-api"></a>API C
@@ -210,14 +272,14 @@ Questa versione introduce il supporto per l'SDK di protezione nel pacchetto .NET
   - dipendenze di terze parti estratte in librerie separate
     - libsqlite3. a
     - libssl. a
-- Rimosso mip_telemetry. dll (Unito in mip_core. dll)
+- Rimossi mip_telemetry.dll (Uniti in mip_core.dll)
 
 ### <a name="file-sdk"></a>SDK file
 
 - RPMSG
   - Crittografia
   - Aggiunta del supporto per la decrittografia String8
-- Comportamento dell'estensione PFILE configurabile ( <EXT>impostazione predefinita:. PFILE o P<EXT>)
+- Comportamento dell'estensione PFILE configurabile (impostazione predefinita: <EXT> . PFILE o P <EXT> )
   - ProtectionSettings::SetPFileExtensionBehavior
 
 ### <a name="policy-sdk"></a>SDK criteri
@@ -264,38 +326,38 @@ Questa versione introduce il supporto per l'SDK di protezione nel pacchetto .NET
 
 **Data di rilascio**: 22 agosto 2019
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features"></a>Nuove funzioni e caratteristiche
 
-- `mip::MipContext`è il nuovo oggetto di livello più alto.
+- `mip::MipContext` è il nuovo oggetto di livello più alto.
 - Ora è supportata la decrittografia dei file MSG protetti.
-- Il controllo dei file Message. rpmsg è supportato `mip::FileInspector` tramite `mip::FileHandler::InspectAsync()`e.
+- Il controllo dei file Message. rpmsg è supportato tramite `mip::FileInspector` e `mip::FileHandler::InspectAsync()` .
 - È ora possibile crittografare facoltativamente la cache su disco.
 - Protection SDK supporta ora il cloud sovrano Cina.
 - Supporto di Arm64 in Android.
 - Supporto di Arm64e in iOS.
 - È ora possibile disabilitare la cache del contratto di licenza con l'utente finale.
-- . la crittografia Pfile può essere disabilitata tramite`mip::FileEngine::EnablePFile`
+- . la crittografia Pfile può essere disabilitata tramite `mip::FileEngine::EnablePFile`
 - Miglioramento delle prestazioni per le operazioni di protezione mediante la riduzione del numero di chiamate HTTP
-- Rimossi i dettagli dell'identità delegata `mip::Identity` da e `DelegatedUserEmail` aggiunti `mip::FileEngine::Settings`a `mip::ProtectionSettings`, `mip::PolicyEngine::Settings`, e `mip::ProtectionHandler` `PublishingSettings` e `ConsumptionSettings`.
-- Le funzioni che in precedenza restituivano LabelId `mip::Label` ora restituiscono un oggetto.
+- Rimossi i dettagli dell'identità delegata da `mip::Identity` e aggiunti `DelegatedUserEmail` a `mip::FileEngine::Settings` , `mip::ProtectionSettings` , e e `mip::PolicyEngine::Settings` `mip::ProtectionHandler` `PublishingSettings` `ConsumptionSettings` .
+- Le funzioni che in precedenza restituivano LabelId ora restituiscono un `mip::Label` oggetto.
 
 ### <a name="changes"></a>Modifiche
 
-* Nelle versioni precedenti è necessario chiamare `mip::ReleaseAllResources`. La versione 1,3 sostituisce questa `mip::MipContext::~MipContext` operazione `mip::MipContext::Shutdown`con o.
-* Rimosso `ActionSource` da `mip::LabelingOptions` e`mip::ExecutionState::GetNewLabelActionSource`
-* Sostituito `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` con `mip::ProtectionEngine::CreateProtectionHandlerForPublishing`.
-* Sostituito `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` con `mip::ProtectionEngine::CreateProtectionHandlerForConsumption`.
+* Nelle versioni precedenti è necessario chiamare `mip::ReleaseAllResources` . La versione 1,3 sostituisce questa operazione con `mip::MipContext::~MipContext` o `mip::MipContext::Shutdown` .
+* Rimosso `ActionSource` da `mip::LabelingOptions` e `mip::ExecutionState::GetNewLabelActionSource`
+* Sostituito `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` con `mip::ProtectionEngine::CreateProtectionHandlerForPublishing` .
+* Sostituito `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` con `mip::ProtectionEngine::CreateProtectionHandlerForConsumption` .
 * Ridenominazione `mip::PublishingLicenseContext` in `mip::PublishingLicenseInfo` e aggiornata per contenere campi avanzati anziché byte serializzati non elaborati.
-* `mip::PublishingLicenseInfo`contiene i dati rilevanti per MIP dopo l'analisi di una licenza di pubblicazione (PL).
-* `mip::TemplateNotFoundError`e `mip::LabelNotFoundError` generata quando l'applicazione passa MIP un ID modello o un ID etichetta non riconosciuto.
-* Aggiunta del supporto per l'accesso condizionale basato su etichetta tramite il `AcquireToken()` parametro `mip::AuthDelegate::OAuth2Challenge()`Claims di e. Questa funzionalità non è stata ancora esposta tramite il portale del Centro sicurezza e conformità.
+* `mip::PublishingLicenseInfo` contiene i dati rilevanti per MIP dopo l'analisi di una licenza di pubblicazione (PL).
+* `mip::TemplateNotFoundError` e `mip::LabelNotFoundError` generata quando l'applicazione passa MIP un ID modello o un ID etichetta non riconosciuto.
+* Aggiunta del supporto per l'accesso condizionale basato su etichetta tramite il parametro claims di `AcquireToken()` e `mip::AuthDelegate::OAuth2Challenge()` . Questa funzionalità non è stata ancora esposta tramite il portale del Centro sicurezza e conformità.
 
 
 ## <a name="version-120"></a>Versione 1.2.0
 
 **Data di rilascio**: 15 aprile 2019
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features"></a>Nuove funzioni e caratteristiche
 
  - Il componente di telemetria USA ora lo stesso stack HTTP come il resto del MIP, anche se l'applicazione client ne ha eseguito l'override con HttpDelegate.
  - Le applicazioni client possono controllare il comportamento di threading delle attività asincrone eseguendo l'override di TaskDispatcherDelegate nei profili.
@@ -311,7 +373,7 @@ Questa versione introduce il supporto per l'SDK di protezione nel pacchetto .NET
  
 ### <a name="sdk-changes"></a>Modifiche dell'SDK
 
- - mip_common. dll viene suddivisa in mip_core. dll e mip_telemetry. dll.
+ - mip_common.dll suddivisi in mip_core.dll e mip_telemetry.dll.
  - Rinominato MIP:: ContentState in MIP::D ataState per descrivere il modo in cui un'applicazione interagisce con i dati a un livello elevato.
  - l'eccezione MIP:: AdhocProtectionRequiredError viene generata da FileHandler:: xmllabel per notificare a un'applicazione che deve prima applicare la protezione ad hoc prima di applicare un'etichetta.
  - l'eccezione MIP:: OperationCancelledError viene generata quando un'operazione è stata annullata, ad esempio a causa dell'arresto o dell'annullamento HTTP.
@@ -361,7 +423,7 @@ Questa versione introduce il supporto per le piattaforme seguenti:
   - iOS SDK (Policy SDK)
   - Android SDK (Policy SDK and Protection SDK)
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features"></a>Nuove funzioni e caratteristiche
 
 - Supporto di ADRMS
 - Le operazioni di Protection SDK sono realmente asincrone (su Win32), consentendo operazioni di crittografia/decrittografia simultanee non bloccanti

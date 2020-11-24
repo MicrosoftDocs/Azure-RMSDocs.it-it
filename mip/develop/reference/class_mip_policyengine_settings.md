@@ -1,17 +1,17 @@
 ---
 title: 'classe PolicyEngine:: Settings'
 description: "Documenta la classe PolicyEngine:: Settings dell'SDK Microsoft Information Protection (MIP)."
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5e745dd011f9626e031cfcb9c9ae0466e91e2bfe
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 1843256598f4e8c32a80fbba44323fa9eff6729e
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761081"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566678"
 ---
 # <a name="class-policyenginesettings"></a>classe PolicyEngine:: Settings 
 Definisce le impostazioni associate a un oggetto PolicyEngine.
@@ -19,8 +19,8 @@ Definisce le impostazioni associate a un oggetto PolicyEngine.
 ## <a name="summary"></a>Riepilogo
  Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const std:: String& engineId, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale, bool loadSensitivityTypes)  |  Costruttore PolicyEngine::Settings per il caricamento di un motore esistente.
-Impostazioni pubbliche (const Identity& Identity, const std:\<:\> shared_ptr AuthDelegate& AuthDelegate, const std:: String& clientData, const std:: String& locale, bool loadSensitivityTypes)  |  Costruttore PolicyEngine::Settings per la creazione di un nuovo motore.
+Impostazioni pubbliche (const std:: String& engineId, const std:: shared_ptr \<AuthDelegate\>& authDelegate, const std:: string& clientData, const std:: string& locale, bool loadSensitivityTypes)  |  Costruttore PolicyEngine::Settings per il caricamento di un motore esistente.
+Impostazioni pubbliche (const Identity& Identity, const std:: shared_ptr \<AuthDelegate\>& authDelegate, const std:: string& clientData, const std:: string& locale, bool loadSensitivityTypes)  |  Costruttore PolicyEngine::Settings per la creazione di un nuovo motore.
 public const std::string& GetEngineId() const  |  Ottiene l'ID del motore.
 public void SetEngineId(const std::string& id)  |  Imposta l'ID del motore.
 public const Identity& GetIdentity() const  |  Ottiene l'oggetto Identity.
@@ -28,8 +28,8 @@ public void SetIdentity(const Identity& identity)  |  Imposta l'oggetto Identity
 public const std::string& GetClientData() const  |  Ottiene il set di dati client configurato nelle impostazioni.
 public void SetClientData(const std::string& clientData)  |  Imposta la stringa di dati client.
 public const std::string& GetLocale() const  |  Ottiene le impostazioni locali configurate nelle impostazioni.
-public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\> \> String& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
-public const std::\<vector std::p\<Air std:: String, std::\> \> String& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
+public void SetCustomSettings (const std:: Vector \<std::pair\<std::string, std::string\> \>& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
+public const std:: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione, usato per la telemetria definita dal client.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione, un identificatore univoco.
 public bool IsLoadSensitivityTypesEnabled () const  |  Ottiene il flag che indica se sono abilitate le etichette di riservatezza di carico.
@@ -39,12 +39,16 @@ public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  | 
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
 public void SetDelegatedUserEmail (const std:: String& delegatedUserEmail)  |  Imposta l'utente delegato.
 public const std:: String& GetDelegatedUserEmail () const  |  Ottiene l'utente delegato.
-public void SetLabelFilter (const std::\<vector\> LabelFilterType& labelFilter)  |  Imposta il filtro delle etichette.
-public const std::\<vector\> LabelFilterType& GetLabelFilter () const  |  Ottiene il filtro dell'etichetta.
+public void SetLabelFilter (const std:: Vector \<LabelFilterType\>& deprecatedLabelFilters)  |  Imposta il filtro delle etichette.
+public const std:: Vector \<LabelFilterType\>& GetLabelFilter () const  |  Ottiene i filtri delle etichette impostati tramite la funzione deprecata SetLabelFilter.
+public void ConfigureFunctionality (LabelFilterType labelFilterType, bool Enabled)  |  Abilita o Disabilita la funzionalità.
+public const std:: Map \<LabelFilterType, bool\>& GetConfiguredFunctionality () const  |  Ottiene la funzionalità configurata.
+public void SetClassifierEnabled (classificatore classifierType, bool abilitato)  |  Abilita o Disabilita il supporto per i tipi di classificazione.
+public const std:: Map \<Classifier, bool\>& GetConfiguredClassifierSupport () const  |  Ottiene le sostituzioni di classificatori supportate.
 public void SetVariableTextMarkingType (VariableTextMarkingType variableTextMarkingType)  |  Imposta il tipo di contrassegno del testo della variabile.
 public VariableTextMarkingType GetVariableTextMarkingType () const  |  Ottiene il tipo di contrassegno del testo della variabile.
-public void SetAuthDelegate (const std::\<shared_ptr\> AuthDelegate& AuthDelegate)  |  Impostare il delegato di autenticazione del motore.
-public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Ottiene il delegato di autenticazione del motore.
+public void SetAuthDelegate (const std:: shared_ptr \<AuthDelegate\>& authDelegate)  |  Impostare il delegato di autenticazione del motore.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Ottiene il delegato di autenticazione del motore.
   
 ## <a name="members"></a>Members
   
@@ -229,11 +233,47 @@ Parametri
 Per impostazione predefinita, le etichette sono filtro per ambito. questa API consente di filtrare in base alle possibili azioni. Se non è impostato, HyokProtection e DoubleKeyProtection vengono filtrati.
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter (funzione)
-Ottiene il filtro dell'etichetta.
+Ottiene i filtri delle etichette impostati tramite la funzione deprecata SetLabelFilter.
 
   
 **Restituisce**: filtro etichette.
 Per impostazione predefinita, le etichette sono filtro per ambito. questa API consente di filtrare in base alle possibili azioni.
+  
+### <a name="configurefunctionality-function"></a>ConfigureFunctionality (funzione)
+Abilita o Disabilita la funzionalità.
+
+Parametri  
+* **labelFilterType**: il tipo di funzionalità. 
+
+
+* **Enabled**: true per abilitare, false per disabilitare
+
+
+HyokProtection, DoubleKeyProtection, DoubleKeyUserDefinedProtection sono disabilitati per impostazione predefinita e devono essere abilitati
+  
+### <a name="getconfiguredfunctionality-function"></a>GetConfiguredFunctionality (funzione)
+Ottiene la funzionalità configurata.
+
+  
+**Returns**: mappa dei tipi a un valore booleano che indica se è abilitata o meno.
+  
+### <a name="setclassifierenabled-function"></a>SetClassifierEnabled (funzione)
+Abilita o Disabilita il supporto per i tipi di classificazione.
+
+Parametri  
+* **classifierType**: tipo di classificatore 
+
+
+* **Enabled**: true per abilitare, false per disabilitare
+
+
+Solo SensitiveInformation classifers sono abilitati per impostazione predefinita
+  
+### <a name="getconfiguredclassifiersupport-function"></a>GetConfiguredClassifierSupport (funzione)
+Ottiene le sostituzioni di classificatori supportate.
+
+  
+**Returns**: mappa dei tipi a un valore booleano che indica se sono stati sovrascritti con il supporto
   
 ### <a name="setvariabletextmarkingtype-function"></a>SetVariableTextMarkingType (funzione)
 Imposta il tipo di contrassegno del testo della variabile.
