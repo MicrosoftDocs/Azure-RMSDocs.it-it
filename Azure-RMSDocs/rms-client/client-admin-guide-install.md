@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/30/2020
+ms.date: 11/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 468e7a5b7ef5482b1027d491adf6b6b4d8271261
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 3d16d735f6119617eb12599f110f8c22682992d4
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568142"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734998"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -79,7 +79,7 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
 
         Per PowerPoint: `MSIP.PowerPointAddin`
 
-- Il client AIP non è supportato nei computer in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) . Assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-installing-the-aip-client) prima di installare il client AIP.  
+- Il client AIP non è supportato nei computer con .NET versione 2 o 3 con [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) abilitata. Se il computer dispone di .NET versione 2 o 3, oltre a una versione di .NET 4. x sopra elencata, assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-aip-and-exploit-protection) prima di installare il client AIP.  
 
 > [!IMPORTANT]
 > L'installazione del client Azure Information Protection richiede autorizzazioni amministrative locali.
@@ -90,8 +90,8 @@ Usare una delle opzioni seguenti per installare il client per gli utenti:
 
 |Opzione di installazione  |Descrizione  |
 |---------|---------|
-|**Eseguire il file eseguibile del client (exe)**  </br></br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | È consigliabile eseguire la versione exe del client per eseguire l'installazione in modo interattivo o invisibile all'utente.</br></br> L'esecuzione del file con estensione exe presenta la massima flessibilità ed è consigliata perché controlla anche la presenza di molti prerequisiti e può anche installare eventuali prerequisiti mancanti. |
-|**Distribuire il programma di installazione di Windows (MSI) del client** </br></br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Il programma di installazione di Windows client Azure Information Protection è supportato solo per le installazioni automatiche che utilizzano un meccanismo di distribuzione centrale.</br></br> Usare, ad esempio, il file con estensione msi quando si distribuisce con criteri di gruppo, Configuration Manager e Microsoft Intune.</br></br> È necessario usare il metodo TIS per i PC Windows 10 gestiti da Intune e la gestione di dispositivi mobili (MDM) come file exe non supportati per questi computer.</br></br>**Nota:** Quando si utilizza l'installazione con estensione msi, è necessario verificare manualmente la presenza di prerequisiti e installare o disinstallare il software dipendente necessario. |
+|**Eseguire il file eseguibile del client (exe)**  <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | È consigliabile eseguire la versione exe del client per eseguire l'installazione in modo interattivo o invisibile all'utente.<br><br> L'esecuzione del file con estensione exe presenta la massima flessibilità ed è consigliata perché controlla anche la presenza di molti prerequisiti e può anche installare eventuali prerequisiti mancanti. |
+|**Distribuire il programma di installazione di Windows (MSI) del client** <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Il programma di installazione di Windows client Azure Information Protection è supportato solo per le installazioni automatiche che utilizzano un meccanismo di distribuzione centrale.<br><br> Usare, ad esempio, il file con estensione msi quando si distribuisce con criteri di gruppo, Configuration Manager e Microsoft Intune.<br><br> È necessario usare il metodo TIS per i PC Windows 10 gestiti da Intune e la gestione di dispositivi mobili (MDM) come file exe non supportati per questi computer.<br><br>**Nota:** Quando si utilizza l'installazione con estensione msi, è necessario verificare manualmente la presenza di prerequisiti e installare o disinstallare il software dipendente necessario. |
 
 Dopo aver installato il client, eseguire gli aggiornamenti ripetendo lo stesso metodo di installazione o utilizzare Windows Update per aggiornare automaticamente il client. Non è necessario disinstallare le versioni legacy del client prima di installare una nuova versione.
 

@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/05/2020
+ms.date: 11/15/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 748ca0103885226ae646b4d4fb7761ff84ae0796
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: 0a1ac4e5470df68076585d9f328b28c76377a26d
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "95568533"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95735015"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -37,11 +37,11 @@ Il visualizzatore di Azure Information Protection non supporta l'apertura di all
 
 Per altre informazioni, vedere [Guida dell'amministratore: tipi di file supportati dal client Azure Information Protection](rms-client/client-admin-guide-file-types.md).
 
-## <a name="known-issues-for-installing-the-aip-client"></a>Problemi noti per l'installazione del client AIP
+## <a name="known-issues-for-aip-and-exploit-protection"></a>Problemi noti per la protezione da AIP e exploit
 
-Il client Azure Information Protection non è supportato nei computer in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) .
+Il client Azure Information Protection non è supportato nei computer con .NET 2 o 3, in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) .
 
-Assicurarsi di disabilitare la protezione dagli exploit prima di installare AIP. 
+Se si dispone di una versione di .NET 2 o 3, oltre a una versione di .NET 4. x necessaria per il sistema, assicurarsi di disabilitare la protezione dagli exploit prima di installare AIP. 
 
 Per disabilitare la protezione dagli exploit tramite PowerShell, eseguire le operazioni seguenti:
 
@@ -49,7 +49,7 @@ Per disabilitare la protezione dagli exploit tramite PowerShell, eseguire le ope
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
 
-Per ulteriori informazioni, vedere [Azure Information Protection requirements](requirements.md).
+Per ulteriori informazioni, vedere [prerequisiti aggiuntivi per il Azure Information Protection client Unified Labeling](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>Supporto di PowerShell per il client di Azure Information Protection
 

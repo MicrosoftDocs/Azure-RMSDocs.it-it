@@ -1,10 +1,10 @@
 ---
-title: App Azure Information Protection per iOS & Android
-description: Informazioni di base sulle app Azure Information Protection (AIP) per dispositivi iOS e Android
+title: App per dispositivi mobili Azure Information Protection per iOS & Android
+description: Informazioni di base sulle app per dispositivi mobili Azure Information Protection (AIP) per dispositivi iOS e Android
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/07/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 42c74f9ffa8097768e4ab97d1dea6e75bc0aaffc
-ms.sourcegitcommit: b5043f88f9287e63b510f44a5e6ceaead9093163
+ms.openlocfilehash: 17f1efc5c5e0c01f33e638d1ef674a81b17494f8
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "95568400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734965"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Che cos'è l'app Azure Information Protection per iOS o Android?
 
 *Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-L'app per dispositivi mobili Azure Information Protection (AIP) per iOS e Android consente di visualizzare messaggi di posta elettronica, file PDF, immagini e file di testo protetti e sono utili se le normali app per questi tipi di file non supportano la protezione. 
+L'app per dispositivi mobili Azure Information Protection (AIP) per iOS e Android è un'app Viewer che consente di visualizzare messaggi di posta elettronica, file PDF, immagini e file di testo protetti e sono utili se le normali app per questi tipi di file non supportano la protezione. 
 
 Ad esempio, se i messaggi di posta elettronica protetti vengono visualizzati nell'app per dispositivi mobili di posta elettronica normale come allegati, è possibile usare l'app AIP per dispositivi mobili per visualizzare il messaggio di posta elettronica.
 

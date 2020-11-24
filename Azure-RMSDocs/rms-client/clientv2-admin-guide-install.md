@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/26/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26cb50eb6532eccee86eb28313c1cd1ac1751949
-ms.sourcegitcommit: ed3745bff0f0d4883200a310a0b63f7794149330
+ms.openlocfilehash: 0cbb554d09d24b1403c24f52fd5215fdee71ab61
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "95568418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95735049"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -36,14 +36,14 @@ I prerequisiti seguenti per il client di assegnazione unificata di AIP sono in a
 
 |Requisito  |Descrizione  |
 |---------|---------|
-|**4.6.2 Framework di Microsoft .NET**     | Per impostazione predefinita, l'installazione completa del client Azure Information Protection Unified Labeling richiede una versione minima di Microsoft .NET Framework 4.6.2. </br></br>Se questo Framework non è presente, l'installazione guidata dal programma di installazione eseguibile tenta di scaricare e installare questo prerequisito. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer.       |
-|**Microsoft .NET Framework 4.5.2**     | Se il Visualizzatore Azure Information Protection viene installato separatamente, l'applicazione Visualizzatore richiede una versione minima di Microsoft .NET Framework 4.5.2. </br></br>**Importante:** Se questo Framework è mancante per il visualizzatore, il programma di installazione eseguibile *non* lo Scarica o lo installa.        |
-|**Versione minima di Windows PowerShell 4,0**     |   Il modulo PowerShell per il client richiede una versione minima di Windows PowerShell 4,0, che potrebbe essere necessario installare in sistemi operativi precedenti. </br></br>Per altre informazioni, vedere [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Come installare Windows PowerShell 4.0). </br></br>**Importante:** Il programma di installazione *non* controlla né installa questo prerequisito. Per verificare quale versione di Windows PowerShell è in esecuzione, digitare `$PSVersionTable` in una sessione di PowerShell.      |
+|**4.6.2 Framework di Microsoft .NET**     | Per impostazione predefinita, l'installazione completa del client Azure Information Protection Unified Labeling richiede una versione minima di Microsoft .NET Framework 4.6.2. <br><br>Se questo Framework non è presente, l'installazione guidata dal programma di installazione eseguibile tenta di scaricare e installare questo prerequisito. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer.       |
+|**Microsoft .NET Framework 4.5.2**     | Se il Visualizzatore Azure Information Protection viene installato separatamente, l'applicazione Visualizzatore richiede una versione minima di Microsoft .NET Framework 4.5.2. <br><br>**Importante:** Se questo Framework è mancante per il visualizzatore, il programma di installazione eseguibile *non* lo Scarica o lo installa.        |
+|**Versione minima di Windows PowerShell 4,0**     |   Il modulo PowerShell per il client richiede una versione minima di Windows PowerShell 4,0, che potrebbe essere necessario installare in sistemi operativi precedenti. <br><br>Per altre informazioni, vedere [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Come installare Windows PowerShell 4.0). <br><br>**Importante:** Il programma di installazione *non* controlla né installa questo prerequisito. Per verificare quale versione di Windows PowerShell è in esecuzione, digitare `$PSVersionTable` in una sessione di PowerShell.      |
 |**Risoluzione dello schermo superiore a 800x600**    |     Alle risoluzioni 800x600 e inferiori non è possibile visualizzare completamente la finestra di dialogo **Classifica e proteggi - Azure Information Protection** facendo clic con il pulsante destro del mouse su un file o una cartella in Esplora file.    |
-|**Assistente per l'accesso ai Microsoft Online Services 7.250.4303.0**     |   I computer che eseguono Office 2010 richiedono l'assistente per l'accesso ai Microsoft Online Services versione 7.250.4303.0, inclusa nell'installazione del client. </br></br>Se si dispone di una versione più recente dell'assistente per l'accesso, disinstallarla prima di installare il client di Azure Information Protection Unified labeling. </br></br>Controllare, ad esempio, la versione e disinstallare l'assistente per l'accesso tramite il **Pannello di controllo**  >  **programmi e funzionalità**  >  **Disinstalla o modifica programma**.      |
-|**KB 4482887**     | Solo per Windows 10 versione 1809, per le build del sistema operativo precedenti alla build 17763.348, installare [1 marzo 2019 - KB4482887 (build sistema operativo 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) per garantire che la barra di Information Protection venga visualizzata correttamente nelle applicazioni Office. </br></br>Questo aggiornamento non è necessario se si usa Office 365 1902 o versione successiva.        |
+|**Assistente per l'accesso ai Microsoft Online Services 7.250.4303.0**     |   I computer che eseguono Office 2010 richiedono l'assistente per l'accesso ai Microsoft Online Services versione 7.250.4303.0, inclusa nell'installazione del client. <br><br>Se si dispone di una versione più recente dell'assistente per l'accesso, disinstallarla prima di installare il client di Azure Information Protection Unified labeling. <br><br>Controllare, ad esempio, la versione e disinstallare l'assistente per l'accesso tramite il **Pannello di controllo**  >  **programmi e funzionalità**  >  **Disinstalla o modifica programma**.      |
+|**KB 4482887**     | Solo per Windows 10 versione 1809, per le build del sistema operativo precedenti alla build 17763.348, installare [1 marzo 2019 - KB4482887 (build sistema operativo 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) per garantire che la barra di Information Protection venga visualizzata correttamente nelle applicazioni Office. <br><br>Questo aggiornamento non è necessario se si usa Office 365 1902 o versione successiva.        |
 |**Autorizzazioni di amministratore**| L'installazione del client Azure Information Protection Unified Labeling richiede autorizzazioni amministrative locali.| 
-|**Disabilitare la protezione dagli exploit**   |Il client AIP non è supportato nei computer in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) . Assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-installing-the-aip-client) prima di installare il client AIP.  |
+|**Disabilitare la protezione dagli exploit (solo .NET 2 o 3)**   |Il client AIP non è supportato nei computer con .NET 2 o 3 con la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) abilitata. Se il computer dispone di .NET 2 o 3, oltre a una versione di .NET 4. x sopra elencata, assicurarsi di [disabilitare la protezione dagli exploit](../known-issues.md#known-issues-for-aip-and-exploit-protection) prima di installare il client AIP.  |
 |||
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>Configurare i criteri di gruppo per impedire la disabilitazione di AIP
@@ -62,7 +62,7 @@ Specificare i seguenti identificatori programmatici (ProgID) per AIP e impostare
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
 
-## <a name="applications"></a>APPLICAZIONI
+## <a name="applications"></a>Applicazioni
 
 Il client di assegnazione di etichette unificato Azure Information Protection può etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office Word, Excel, PowerPoint e Outlook delle edizioni di Office seguenti:
 
