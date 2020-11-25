@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 ms.custom: contperfq2
 search.appverid:
 - MET150
-ms.openlocfilehash: 4a945f07532786c268886a44de23430be9a78700
-ms.sourcegitcommit: 822b23024cfd01ea41ac6ae9370489193782f078
+ms.openlocfilehash: 7ee4c5c26792a56c2637d62a67e2921df8c99a61
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634700"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924952"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -47,7 +47,7 @@ Scaricare il client dalla [pagina di download di Microsoft Azure Information Pro
     
 ## <a name="aip-on-premises-scanner"></a>Scanner locale di AIP
 
-Lo scanner locale di Azure Information Protection consente agli amministratori di analizzare le reti e i repository di file locali per individuare il contenuto sensibile che deve essere etichettato, classificato e/o protetto.
+Lo scanner locale di Azure Information Protection consente agli amministratori di analizzare i repository di file locali per individuare il contenuto sensibile che deve essere etichettato, classificato e/o protetto.
 
 Lo scanner locale viene installato usando i cmdlet di PowerShell forniti con il client di etichettatura unificata e può essere gestito con PowerShell e l'area Azure Information Protection nel portale di Azure.
 

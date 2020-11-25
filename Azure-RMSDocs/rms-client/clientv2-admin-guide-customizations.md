@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edfd5a5f309228c7f75a895e40826b65af74e1d7
-ms.sourcegitcommit: 04b9d7ee1ce8b6662ceda5a13b7b0d5630c91d28
+ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
+ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "95568539"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96034388"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -171,6 +171,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |PFileSupportedExtensions|[Modificare i tipi di file da proteggere](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
+|RemoveExternalMarkingFromCustomLayouts | [Rimuovere il contrassegno di contenuto esterno da layout personalizzati in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -462,19 +463,14 @@ Sarà necessaria almeno un'altra impostazione client avanzata, **ExternalContent
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Come configurare ExternalContentMarkingToRemove
 
-Quando si specifica il valore stringa per la chiave **ExternalContentMarkingToRemove**, sono disponibili tre opzioni che usano le espressioni regolari:
+Quando si specifica il valore stringa per la chiave **ExternalContentMarkingToRemove** , sono disponibili tre opzioni che usano le espressioni regolari. Per ognuno di questi scenari, utilizzare la sintassi illustrata nella colonna **valore di esempio** della tabella seguente:
 
-- Corrispondenza parziale per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
-
-    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere completamente le intestazioni o i piè di pagina, specificare il valore: `*TEXT*`.
-
-- Corrispondenza completa per rimuovere solo determinate parole nell'intestazione o nel piè di pagina.
-
-    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere solo la parola **TEXT**, lasciando la stringa **TO REMOVE** nell'intestazione o nel piè di pagina, specificare il valore: `TEXT `.
-
-- Corrispondenza completa per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
-
-    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere le intestazioni o i piè di pagina che contengono esattamente questa stringa, specificare il valore: `^TEXT TO REMOVE$`.
+|Opzione  |Descrizione di esempio |Valore di esempio|
+|---------|---------|---------|
+|**Corrispondenza parziale per rimuovere tutti gli elementi nell'intestazione o nel piè di pagina**     | Le intestazioni o i piè di pagina contengono il testo della stringa **da rimuovere** e si desidera rimuovere completamente tali intestazioni o piè di pagina.   |`*TEXT*`  | 
+|**Completa la corrispondenza per rimuovere solo parole specifiche nell'intestazione o nel piè di pagina**     |    Le intestazioni o i piè di pagina contengono il testo della stringa **da rimuovere** e si vuole rimuovere solo il **testo** della parola, lasciando la stringa dell'intestazione o del piè di pagina come **da rimuovere**.      |`TEXT ` |
+|**Completa la corrispondenza per rimuovere tutti gli elementi nell'intestazione o nel piè di pagina**     |Le intestazioni o i piè di pagina hanno il testo della stringa **da rimuovere**. Per rimuovere le intestazioni o i piè di pagina che contengono esattamente questa stringa,         |`^TEXT TO REMOVE$`|
+|     |         | |
 
 
 I criteri di ricerca per la stringa specificata non fanno distinzione tra maiuscole e minuscole. La lunghezza massima della stringa è di 255 caratteri e non può contenere spazi vuoti. 
@@ -495,7 +491,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="multiline-headers-or-footers"></a>Intestazioni o piè di pagina su più righe
 
-Se il testo di un'intestazione o un piè di pagina è su più righe, creare una chiave e un valore per ogni riga. Si supponga, ad esempio, di avere il piè di pagina seguente con due righe:
+Se il testo di un'intestazione o un piè di pagina è su più righe, creare una chiave e un valore per ogni riga. Ad esempio, se si ha il piè di pagina seguente con due righe:
 
 **The file is classified as Confidential**
 
@@ -517,13 +513,20 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
 
-I piè di pagina in PowerPoint vengono implementati come forme. Per evitare la rimozione di forme che contengono il testo specificato ma non sono intestazioni o piè di pagina, usare un'impostazione client avanzata aggiuntiva denominata **PowerPointShapeNameToRemove**. È consigliabile usare questa impostazione anche per evitare di controllare il testo in tutte le forme, essendo un processo a elevato utilizzo di risorse.
+Le intestazioni e i piè di pagina in PowerPoint sono implementati come forme. 
+
+Per evitare di rimuovere le forme che contengono il testo specificato ma che *non* sono intestazioni o piè di pagina, usare un'impostazione client avanzata aggiuntiva denominata **PowerPointShapeNameToRemove**. È consigliabile usare questa impostazione anche per evitare di controllare il testo in tutte le forme, essendo un processo a elevato utilizzo di risorse.
 
 - Se non si specifica questa impostazione client avanzata aggiuntiva e PowerPoint è incluso nel valore della chiave **RemoveExternalContentMarkingInApp**, il testo specificato nel valore **ExternalContentMarkingToRemove** verrà ricercato in tutte le forme. 
 
 - Se si specifica questo valore, verranno rimosse solo le forme che soddisfano i criteri del nome della forma e il testo che corrisponde alla stringa fornita con **ExternalContentMarkingToRemove** .
 
-**Per trovare il nome della forma usata come intestazione o piè di pagina:**
+Inoltre, se sono stati configurati layout personalizzati in PowerPoint, il comportamento predefinito è che le forme presenti all'interno di layout personalizzati vengono ignorate. Per rimuovere in modo esplicito i contrassegni di contenuto esterno dall'interno dei layout personalizzati, impostare la proprietà avanzata **RemoveExternalMarkingFromCustomLayouts** su **true.**
+
+> [!NOTE]
+> I tipi di forma di PowerPoint supportati per le impostazioni client avanzate descritte in questa sezione includono: **msoTextBox,** **msoTextEffect** e **msoPlaceholder**
+>
+##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>Trovare il nome della forma che si sta utilizzando come intestazione o piè di pagina
 
 1. In PowerPoint visualizzare il riquadro **Selezione**: scheda **Formato** > gruppo **Disponi** > **Riquadro di selezione**.
 
@@ -555,6 +558,22 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```
+
+##### <a name="remove-external-content-marking-from-custom-layouts-in-powerpoint"></a>Rimuovere il contrassegno di contenuto esterno da layout personalizzati in PowerPoint
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
+
+Per impostazione predefinita, la logica usata per rimuovere i contrassegni di contenuto esterni ignora i layout personalizzati configurati in PowerPoint. Per estendere questa logica ai layout personalizzati, impostare la proprietà avanzata **RemoveExternalMarkingFromCustomLayouts** su **true**.
+
+- Chiave: **RemoveExternalMarkingFromCustomLayouts**
+
+- Valore: **true**
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
 ```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Disabilitare le autorizzazioni personalizzate in Esplora file

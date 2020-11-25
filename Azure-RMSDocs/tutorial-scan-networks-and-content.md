@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: b55178f6cd0bef2fa14eb7fcf9ecaefa3ea75f7a
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 432004443bf684967849b5b91acd9052cbf07eec
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503673"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924976"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Esercitazione: Individuazione del contenuto sensibile con lo scanner di Azure Information Protection (AIP)
 
@@ -23,7 +23,7 @@ ms.locfileid: "94503673"
 >
 > *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Il client di Azure Information Protection include uno scanner locale che consente agli amministratori di sistema di analizzare le reti e i repository di file locali per individuare eventuale contenuto sensibile. 
+Il client di Azure Information Protection include uno scanner locale che consente agli amministratori di sistema di analizzare i repository di file locali per individuare eventuale contenuto sensibile. 
 
 In questa esercitazione si apprenderà come:
 
