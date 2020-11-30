@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: cfe396cea14effdd77b912b32c7c64296806b4be
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568478"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316229"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Dettagli di Bring your own key (BYOK) per Azure Information Protection
 
@@ -332,7 +332,7 @@ Usando i cmdlet di Azure RMS, eseguire i comandi seguenti:
     >
     > Usare il comando [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) in base alle esigenze per ottenere il numero di versione della chiave corrente.
     >
-    > ad esempio `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+    > Ad esempio: `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
     Per confermare che l'URL della chiave è impostato correttamente per Azure Information Protection, eseguire il comando [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) nella Azure Key Vault per visualizzare l'URL della chiave.
 

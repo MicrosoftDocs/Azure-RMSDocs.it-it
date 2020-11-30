@@ -4,7 +4,7 @@ description: Istruzioni per l'installazione e la configurazione del Azure Inform
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6e90124dfae07e4ccc02a1d047fc15627b7b35f
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: de4c71b6cb7b6836d6757c7cd74bc21e30999a38
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568479"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316569"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -221,9 +221,9 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
   
     Se si aggiunge un percorso di SharePoint per i **documenti condivisi**:
     - Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. 
-    ad esempio `http://sp2013/SharedDocuments`
+    Ad esempio: `http://sp2013/SharedDocuments`
     - Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. 
-    ad esempio `http://sp2013/Documents/SalesReports`
+    Ad esempio: `http://sp2013/Documents/SalesReports`
     - In alternativa, specificare solo il **nome di dominio completo (FQDN** ) di SharePoint, ad esempio `http://sp2013` per [individuare e analizzare tutti i siti e i siti Web di SharePoint in un URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) e sottotitoli specifici in questo URL. Concedere i diritti dell' **agente di raccolta siti** scanner per abilitare questa operazione. 
     >
 
@@ -238,6 +238,7 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
     |**Raccolta o sito secondario di SharePoint specifico**     | I tipi validi sono: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Richiede [autorizzazioni aggiuntive](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) per individuare automaticamente il contenuto della raccolta siti         |
     |**Raccolta di SharePoint specifica**     | I tipi validi sono: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Cartella di SharePoint specifica**     | `http://<SharePoint server name>/.../<folder name>`        |
+    | | |
     
 
 1. Ripetere i passaggi precedenti per aggiungere tutti i repository necessari.
@@ -262,7 +263,7 @@ Dopo aver [configurato il Azure Information Protection scanner nel portale di Az
 
 1. Eseguire il cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , specificando l'istanza di SQL Server in cui creare un database per lo scanner Azure Information Protection e il nome del cluster dello scanner specificato nella sezione precedente: 
     
-    ```
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
     
@@ -473,15 +474,17 @@ Ulteriori fattori che influiscono sulle prestazioni dello scanner includono:
 
 Questa sezione elenca i cmdlet di PowerShell supportati per lo scanner Azure Information Protection.
 
-> [!NOTE]
-> Lo scanner Azure Information Protection viene configurato dal portale di Azure. Pertanto, i cmdlet usati nelle versioni precedenti per configurare i repository dei dati e l'elenco dei tipi di file analizzati sono ora deprecati.
-> 
-
 I cmdlet supportati per lo scanner includono:
+
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)
 
 - [Export-AIPLogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
+
+- [Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)
+
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
@@ -493,6 +496,8 @@ I cmdlet supportati per lo scanner includono:
 
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
+- [Set-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
+
 - [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
@@ -503,6 +508,10 @@ I cmdlet supportati per lo scanner includono:
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
+- [Set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)
+
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
+
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
@@ -512,6 +521,10 @@ I cmdlet supportati per lo scanner includono:
 - [Start-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - [Stop-AIPScan](/powershell/module/azureinformationprotection/Stop-AIPScan)
+
+- [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 

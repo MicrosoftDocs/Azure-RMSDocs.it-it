@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 266ff1c9ff09b9b9b1a2133601f5adf44a4c7d4a
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: a1833ca3bb60030414213076f68ca78ddb5534af
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568563"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316246"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione dello scanner di etichettatura unificata di Azure Information Protection
 
@@ -163,11 +163,13 @@ Per altre informazioni, vedere:
 
 Per analizzare le cartelle e le raccolte documenti di SharePoint, verificare che il server SharePoint soddisfi i requisiti seguenti:
 
-- **Versioni supportate.** Le versioni supportate includono: SharePoint 2019, SharePoint 2016 e SharePoint 2013. Altre versioni di SharePoint non sono supportate per lo scanner.
-
-- **Versioning.** Quando si usa il [controllo delle versioni](/sharepoint/governance/versioning-content-approval-and-check-out-planning), lo scanner controlla ed etichetta l'ultima versione pubblicata. Se le etichette dello scanner sono obbligatorie per un file e l' [approvazione del contenuto](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) , è necessario approvare il file con etichetta in modo che sia disponibile per gli utenti.  
-
-- **Farm di SharePoint di grandi dimensioni.** Per le farm SharePoint di grandi dimensioni, controllare se è necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000) per lo scanner al fine di accedere a tutti i file. Per ulteriori informazioni, vedere [gestire elenchi e librerie di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+|Requisito  |Descrizione  |
+|---------|---------|
+|**Versioni supportate** | Le versioni supportate includono: SharePoint 2019, SharePoint 2016 e SharePoint 2013. <br> Altre versioni di SharePoint non sono supportate per lo scanner.     |
+|**Controllo delle versioni**     |  Quando si usa il [controllo delle versioni](/sharepoint/governance/versioning-content-approval-and-check-out-planning), lo scanner controlla ed etichetta l'ultima versione pubblicata. <br><br>Se le etichette dello scanner sono obbligatorie per un file e l' [approvazione del contenuto](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) , è necessario approvare il file con etichetta in modo che sia disponibile per gli utenti.       |
+|**Farm di SharePoint di grandi dimensioni** |Per le farm SharePoint di grandi dimensioni, controllare se è necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000) per lo scanner al fine di accedere a tutti i file. <br><br>Per ulteriori informazioni, vedere [gestire elenchi e librerie di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server). |
+|**Percorsi di file lunghi**  |Se si dispone di percorsi di file lunghi in SharePoint, verificare che il valore [httpRuntime. maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) del server SharePoint sia maggiore di quello predefinito di 260 caratteri. <br><br>Per altre informazioni, vedere [evitare i timeout dello scanner in SharePoint](rms-client/clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint). | 
+| | |
 
 ## <a name="microsoft-office-requirements"></a>Requisiti di Microsoft Office
 
@@ -243,11 +245,21 @@ Per ulteriori informazioni sulla gestione dei livelli di criteri di SharePoint, 
 
 Sebbene il client di etichettatura unificata non possa applicare la protezione senza una connessione Internet, lo scanner può comunque applicare le etichette in base ai criteri importati.
 
-Per supportare un computer disconnesso, seguire questa procedura:
+Per supportare un computer disconnesso, utilizzare uno dei metodi seguenti:
+
+- [Usa la portale di Azure](#use-the-azure-portal-with-a-disconnected-computer) (scelta consigliata quando possibile)
+
+- [Usare PowerShell](#use-powershell-with-a-disconnected-computer)
+
+#### <a name="use-the-azure-portal-with-a-disconnected-computer"></a>Usare il portale di Azure con un computer disconnesso
+
+Per supportare un computer disconnesso dalla portale di Azure, seguire questa procedura:
 
 1.  Configurare le etichette nei criteri e quindi usare la [procedura per supportare i computer disconnessi](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) per abilitare la classificazione e l'assegnazione di etichette offline.
 
-1. Abilitare la gestione offline per i processi di analisi del contenuto:
+1. Abilitare la gestione offline per i processi di analisi del contenuto e di rete come segue:
+
+    **Abilitare la gestione offline per i processi di analisi del contenuto:**
 
     1. Impostare lo scanner per il funzionamento in modalità **offline** , usando il cmdlet [set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
 
@@ -259,7 +271,7 @@ Per supportare un computer disconnesso, seguire questa procedura:
     
     I risultati per i processi di analisi del contenuto offline sono disponibili all'indirizzo: **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
     
-1. Abilitare la gestione offline dei processi di analisi di rete:
+    **Abilitare la gestione offline dei processi di analisi di rete:**
 
     1. Impostare il servizio di individuazione della rete per il funzionamento in modalità offline usando il cmdlet [set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
 
@@ -270,6 +282,37 @@ Per supportare un computer disconnesso, seguire questa procedura:
     1.  Importare il processo di analisi di rete usando il file che corrisponde al nome del cluster usando il cmdlet [Import-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) .  
     
     I risultati per i processi di analisi di rete offline sono disponibili in: **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
+
+#### <a name="use-powershell-with-a-disconnected-computer"></a>Usare PowerShell con un computer disconnesso
+
+Per supportare un computer disconnesso usando solo PowerShell, seguire questa procedura:
+
+**Gestire i processi di analisi del contenuto solo usando PowerShell:**
+
+1. Impostare lo scanner per il funzionamento in modalità **offline** , usando il cmdlet [set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) .
+
+1. Creare un nuovo processo di analisi del contenuto utilizzando il cmdlet [set-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) , assicurandosi di utilizzare il `-Enforce On` parametro obbligatorio.
+
+1. Aggiungere i repository usando il cmdlet [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) , con il percorso del repository che si vuole aggiungere.
+
+    > [!TIP]
+    > Per impedire che il repository erediti le impostazioni dal processo di analisi del contenuto, aggiungere il `OverrideContentScanJob On` parametro e i valori per le impostazioni aggiuntive.
+    >
+    > Per modificare i dettagli di un repository esistente, usare il comando [set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) .
+    >
+ 
+1. Usare i cmdlet [Get-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob) e [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository) per restituire informazioni sulle impostazioni correnti del processo di analisi del contenuto. 
+
+1. Usare il comando [set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) per aggiornare i dettagli per un repository esistente.
+
+1. Eseguire immediatamente il processo di analisi del contenuto, se necessario, usando il cmdlet [Start-AIPScan](/powershell/module/azureinformationprotection/start-aipscan) . 
+
+    I risultati per i processi di analisi del contenuto offline sono disponibili all'indirizzo: **%LocalAppData%\Microsoft\MSIP\Scanner\Reports**
+
+1. Se è necessario rimuovere un repository o un intero processo di analisi del contenuto, usare i cmdlet seguenti:
+
+    - [Remove-AIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+    - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restrizione: non è possibile concedere all'utente il ruolo Sysadmin o i database devono essere creati e configurati manualmente
 

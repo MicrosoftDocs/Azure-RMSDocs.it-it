@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
-ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
+ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96034388"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316841"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -765,12 +765,14 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Valore **\<**domain names, comma separated**>**
 
-Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
+Si immagini, ad esempio, che sia stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . 
+
+È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookBlockTrustedDomains** con **contoso.com.** Di conseguenza, un utente può inviare un messaggio di posta elettronica a `john@sales.contoso.com` quando viene etichettato come **riservato \ tutti i dipendenti**, ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
 Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
@@ -1826,6 +1828,24 @@ A partire dalla [versione 2.8.85.0](unifiedlabelingclient-version-release-histor
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+### <a name="avoid-scanner-timeouts-in-sharepoint"></a>Evitare i timeout dello scanner in SharePoint
+
+Se si dispone di percorsi di file lunghi in SharePoint versione 2013 o successiva, verificare che il valore [httpRuntime. maxUrlLength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) del server SharePoint sia maggiore di quello predefinito di 260 caratteri.
+
+Questo valore è definito nella classe **HttpRuntimeSection** della `ASP.NET` configurazione. Se è necessario aggiornare questo valore, eseguire le operazioni seguenti:
+
+1. Eseguire il backup della configurazione del **web.config** . 
+
+1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. Ad esempio:
+
+    ```c#
+    <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
+    ```
+
+1. Riavviare il server Web di SharePoint e verificare che venga caricato correttamente. 
+
+    Ad esempio, in gestione Windows Internet Information Server (IIS) selezionare il sito e quindi in **Gestisci sito Web** selezionare **Riavvia**. 
 
 ## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>Impedisci problemi di prestazioni di Outlook con messaggi di posta elettronica S/MIME
 

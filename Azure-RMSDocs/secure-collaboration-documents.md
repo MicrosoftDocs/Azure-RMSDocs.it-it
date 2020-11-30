@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbb085aa7de8555594d33bc0b2e0ea4d06034aa2
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: fcdfc020061428959e2137a46347b49b150ad73a
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568562"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316705"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -81,7 +81,7 @@ Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazi
 
 Dopo aver configurato l'etichetta, questa può essere applicata ai documenti in diversi modi, tra cui i seguenti:
 
-|Metodi diversi per l'applicazione dell'etichetta|Altre informazioni|
+|Metodi diversi per l'applicazione dell'etichetta|Ulteriori informazioni|
 |---------------|----------|
 |Un utente seleziona manualmente l'etichetta quando il documento viene creato nell'applicazione di Office.|Gli utenti selezionano l'etichetta tramite il pulsante **Proteggi** sulla barra multifunzione di Office oppure sulla barra di Azure Information Protection.|
 |Agli utenti viene richiesto di selezionare un'etichetta quando viene salvato un nuovo documento.|È stata configurata l'[impostazione di criteri](configure-policy-settings.md) di Azure Information Protection denominata **All documents and emails must have a label** (Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta).|
@@ -138,16 +138,13 @@ Anche gli scenari seguenti supportano la visualizzazione di documenti:
 
 |Piattaforme per la visualizzazione e la modifica di documenti: <br />Word, Excel, PowerPoint|Metodo di autenticazione:<br />Azure AD|Metodo di autenticazione:<br />Account Microsoft|
 |---------------|----------|-----------|-----------|
-|Windows|Sì [[1]](#footnote-1)|Sì [[2]](#footnote-2)|
-|iOS|Sì [[1]](#footnote-1)|Sì (versione 1385219 e successive) |
-|Android|Sì [[1]](#footnote-1)|Sì (versione 13029 e successive)|
-|MacOS|Sì [[1]](#footnote-1)|No|
+|Windows|Sì [[1]](#footnote-1)|Sì (solo Microsoft 365 app)|
+|iOS|Sì [[1]](#footnote-1)|Sì (versione 2,42 e successive) |
+|Android|Sì [[1]](#footnote-1)|Sì (versione 16.0.13029 e successive)|
+|MacOS|Sì [[1]](#footnote-1)|Sì (versione 16,42 e successive)|
 
 ###### <a name="footnote-1"></a>Nota 1
 Supporta account utente, gruppi abilitati per la posta elettronica e tutti i membri. Gli account utente e i gruppi abilitati per la posta elettronica possono includere account guest. Da tutti i membri sono esclusi gli account guest.
-
-###### <a name="footnote-2"></a>Nota 2
-Attualmente supportato solo da app Microsoft 365.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

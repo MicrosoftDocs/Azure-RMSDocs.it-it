@@ -13,11 +13,11 @@ ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: d22a79a3968e164e2bec8c3852c4ab0c181e5ef8
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567800"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316314"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
