@@ -1,29 +1,29 @@
 ---
 title: struct ApplicationInfo
-description: Documents Structures associati a Microsoft Information Protection (MIP) SDK.
+description: Documenta la struttura ApplicationInfo
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 09/21/2020
-ms.openlocfilehash: 4971d7cf0891308733dafd0dc64d58c02343f1e4
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: d56fdcaccf67f46b2d6632ec6586e2b140717696
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566552"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535587"
 ---
 # <a name="struct-applicationinfo"></a>struct ApplicationInfo 
 Struct che include informazioni specifiche dell'applicazione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string applicationId  |  Identificatore dell'applicazione impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
 public std::string applicationName  |  Nome dell'applicazione, (deve contenere solo caratteri ASCII validi, escluso ';')
 public std::string applicationVersion  |  Versione dell'applicazione in uso, (deve contenere solo caratteri ASCII validi, escluso ';')
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="applicationid-struct-member"></a>membro struct applicationId
 Identificatore dell'applicazione impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).

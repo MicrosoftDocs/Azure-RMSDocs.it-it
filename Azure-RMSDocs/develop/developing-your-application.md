@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 2fc3fecd33d6e461156e8c608eae91dee17dff2b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e0dedeffe2f10b1d312a865acdc64a1248144776
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568322"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536063"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
@@ -51,7 +51,7 @@ Una volta attivato il servizio saranno necessari i componenti di PowerShell per 
 >Registrare il valore BPOSId (ID tenant). Sarà necessaria nei passaggi successivi.
 
 *Example output* 
- Output ![ di esempio output cmdlet](../media/develop/output-of-Get-AadrmConfiguration.png)
+ Output ![ di esempio Output del cmdlet Get-AadrmConfiguration](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Disconnettersi dal servizio: `Disconnect-AipServiceService`
 
@@ -67,12 +67,12 @@ Per creare un'entità servizio, seguire questi passaggi:
   > Registrare la chiave simmetrica e l'ID entità applicazione per un uso futuro.
 
 *Example output* 
- Output ![ di esempio output cmdlet](../media/develop/output-of-NewMsolServicePrincipal.png)
+ Output ![ di esempio Output del cmdlet NewMsolServicePrincipal](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Aggiungere l'ID entità applicazione, la chiave simmetrica e l'ID tenant al file App.config dell'applicazione.
 
 *Esempio di file* 
- ![ di App.config output cmdlet](../media/develop/example-App.config-file.png)
+ ![ di App.config Esempio di file di App.config](../media/develop/example-App.config-file.png)
 
 - I valori *ClientID* e *RedirectUri* saranno disponibile all'utente dopo la registrazione dell'applicazione in Azure. Per altre informazioni su come registrare l'applicazione in Azure e acquisire un valore *ClientID* e *RedirectUri*, vedere [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md).
 

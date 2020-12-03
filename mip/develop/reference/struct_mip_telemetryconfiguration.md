@@ -1,23 +1,23 @@
 ---
 title: struct TelemetryConfiguration
-description: Documents Structures associati a Microsoft Information Protection (MIP) SDK.
+description: Documenta la struttura TelemetryConfiguration
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 09/21/2020
-ms.openlocfilehash: 0599dfb9fdc5d37849c19c9284b2d6fd27cec606
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: a152f604feabe66e354b0c85abd2d7cfca64e7b5
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566747"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535808"
 ---
 # <a name="struct-telemetryconfiguration"></a>struct TelemetryConfiguration 
 Impostazioni di telemetria personalizzate (non usate comunemente)
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: String hostNameOverride  |  Nome dell'istanza di telemetria host. Se non è impostato, MIP fungerà da host.
 public std:: String libraryNameOverride  |  Nome file della libreria di telemetria alternativa (DLL).
@@ -31,7 +31,7 @@ public bool isFastShutdownEnabled  |  Se impostato, nessun evento verrà caricat
 public std:: Map \<std::string, std::string\> customSettings  |  Impostazioni di telemetria personalizzate >
 public std:: Map \<std::string, std::vector\<std::string\> \> maskedProperties  |  Eventi/proprietà di telemetria che devono essere mascherati
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="hostnameoverride-struct-member"></a>membro struct hostNameOverride
 Nome dell'istanza di telemetria host. Se non è impostato, MIP fungerà da host.
