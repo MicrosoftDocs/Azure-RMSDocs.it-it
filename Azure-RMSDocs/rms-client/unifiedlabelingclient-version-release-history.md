@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce85af63a70bf6ee4119e5c5fb22a797fb27df16
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 8a37c13f9ad51e2aef03c8e6377633c72f83f063
+ms.sourcegitcommit: 6e50dc8c21be370ce22ff7cbafdbed8c9f3c988f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316790"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544641"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -121,6 +121,9 @@ Nella versione 2.9.101.0 di [Azure Information Protection scanner Unified Labeli
 - Supporto per percorsi [locali di SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) che terminano con una barra ( **/** )
 - Maggiore [velocità](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) di analisi di SharePoint
 - Supporto per [evitare un timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) durante l'analisi di un server SharePoint.
+
+### <a name="known-issues"></a>Problemi noti
+In questa versione di anteprima pubblica, l'applicazione delle etichette con la [protezione DKE](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) non è supportata dallo scanner.
 
 ## <a name="version-28850"></a>Versione 2.8.85.0
 
