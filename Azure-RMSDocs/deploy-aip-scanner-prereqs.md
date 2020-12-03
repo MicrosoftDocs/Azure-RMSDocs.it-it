@@ -4,7 +4,7 @@ description: Elenca i prerequisiti per l'installazione e la distribuzione di Azu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 12/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a1833ca3bb60030414213076f68ca78ddb5534af
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: f426f62f071885932ad436735e5a1bfe8663fa2f
+ms.sourcegitcommit: 2b9ef3b97609dca6f6d64d78aff83e44d4aafc4d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316246"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556026"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione dello scanner di etichettatura unificata di Azure Information Protection
 
@@ -26,7 +26,9 @@ ms.locfileid: "96316246"
 >[!NOTE]
 > Se si lavora con lo scanner classico, vedere [prerequisiti per l'installazione e la distribuzione del Azure Information Protection scanner classico](deploy-aip-scanner-prereqs-classic.md).
 
-Prima di installare lo scanner locale Azure Information Protection, verificare che il sistema sia conforme ai requisiti di [Azure Information Protection](requirements.md)di base, nonché i requisiti seguenti specifici per lo scanner:
+Prima di installare lo scanner locale Azure Information Protection, assicurarsi che il sistema sia conforme ai requisiti di [Azure Information Protection](requirements.md)di base.
+
+Inoltre, i requisiti seguenti sono specifici per lo scanner:
 
 - [Requisiti di Windows Server](#windows-server-requirements)
 - [Requisiti dell'account del servizio](#service-account-requirements)
@@ -38,7 +40,7 @@ Prima di installare lo scanner locale Azure Information Protection, verificare c
 - [Requisiti del percorso del file](#file-path-requirements)
 - [Requisiti statistici di utilizzo](#usage-statistics-requirements)
 
-Se non è possibile soddisfare tutti i requisiti della tabella perché non sono consentiti dai criteri dell'organizzazione, vedere la sezione [configurazioni alternative](#deploying-the-scanner-with-alternative-configurations) .
+Se non è possibile soddisfare tutti i requisiti elencati per lo scanner perché non sono consentiti dai criteri dell'organizzazione, vedere la sezione [configurazioni alternative](#deploying-the-scanner-with-alternative-configurations) .
 
 Quando si distribuisce lo scanner in produzione o si verificano le prestazioni per più scanner, vedere [requisiti di archiviazione e pianificazione della capacità per SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
