@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8a37c13f9ad51e2aef03c8e6377633c72f83f063
-ms.sourcegitcommit: 6e50dc8c21be370ce22ff7cbafdbed8c9f3c988f
+ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
+ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544641"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "96740623"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -104,6 +104,16 @@ Per ulteriori informazioni, vedere [quando il server dello scanner non può aver
 ### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Supporto per repository NFS nei processi di analisi dei contenuti
 
 È ora possibile aggiungere repository NFS ai processi di analisi del contenuto, oltre alle condivisioni file SMB e ai repository di SharePoint.
+
+Per supportare le analisi sulle condivisioni NFS, i servizi per NFS devono essere distribuiti nel computer dello scanner:
+
+1. Nel computer passare alla finestra di dialogo Impostazioni **funzionalità Windows (attiva o disattiva funzionalità Windows)** .
+
+1. Selezionare gli elementi seguenti: 
+
+    - **Servizi per NFS** 
+        - **Strumenti di amministrazione**
+        - **Client per NFS**.
 
 Per altre informazioni, vedere [creare un processo di analisi del contenuto](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 

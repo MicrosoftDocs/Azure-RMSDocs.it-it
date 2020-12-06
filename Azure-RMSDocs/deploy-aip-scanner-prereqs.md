@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f426f62f071885932ad436735e5a1bfe8663fa2f
-ms.sourcegitcommit: 2b9ef3b97609dca6f6d64d78aff83e44d4aafc4d
+ms.openlocfilehash: e9817c21662ed6a606a30b851aff97bbbc5bb863
+ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96556026"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "96740606"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Prerequisiti per l'installazione e la distribuzione dello scanner di etichettatura unificata di Azure Information Protection
 
@@ -57,7 +57,8 @@ Per eseguire lo scanner, è necessario disporre di un computer Windows Server co
 |**Spazio su disco**     |10 GB di spazio disponibile (media) per i file temporanei. </br></br>Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. </br></br>Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB.
 |**Sistema operativo**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**Nota:** A scopo di test o valutazione in un ambiente non di produzione, è anche possibile usare qualsiasi sistema operativo Windows [supportato dal client Azure Information Protection](requirements.md#client-devices).
 |**Connettività di rete**     | Il computer scanner può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. </br></br> Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere [Deploying the scanner with alternative Configurations](#deploying-the-scanner-with-alternative-configurations). </br></br>In caso contrario, verificare che il computer disponga di connettività Internet che consenta gli URL seguenti tramite HTTPS (porta 443):</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com <br />-  \*. protection.outlook.com |
-| ||
+|**Condivisioni NFS** |Per supportare le analisi sulle condivisioni NFS, i servizi per NFS devono essere distribuiti nel computer dello scanner. <br><br>Nel computer passare alla finestra di dialogo Impostazioni **funzionalità Windows (attiva o disattiva funzionalità Windows)** e selezionare gli elementi seguenti: **Servizi per**  >  **strumenti di amministrazione** NFS e **client per NFS**. |
+| | |
 
 ## <a name="service-account-requirements"></a>Requisiti dell'account del servizio
 
