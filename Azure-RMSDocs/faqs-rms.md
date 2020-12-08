@@ -1,10 +1,10 @@
 ---
 title: Domande frequenti per Azure RMS - Azure Information Protection
 description: Alcune domande frequenti relative al servizio di protezione dati, Azure Rights Management (Azure RMS), da Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d5da3848ab1791a9cfe4ac00ae28193669190435
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 46d03db1a8e66b0e1753606a4a5e152047e43d22
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567795"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849726"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dati in Azure Information Protection
 
@@ -88,14 +88,14 @@ Suggerimento: per controllare se un documento è stato protetto con un modello o
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Si ha una distribuzione ibrida di Exchange con alcuni utenti su Exchange Online e altri su Exchange Server: questa configurazione è supportata da Azure RMS?
 Assolutamente e l'aspetto interessante è che gli utenti sono in grado di proteggere e usare senza problemi messaggi di posta elettronica e allegati protetti con le due distribuzioni di Exchange. Per questa configurazione [attivare Azure RMS](activate-service.md) e [abilitare IRM per Exchange Online](/microsoft-365/enterprise/activate-rms-in-microsoft-365), quindi [distribuire e configurare il connettore RMS](deploy-rms-connector.md) per Exchange Server.
 
-## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>Se si usa questa protezione nell'ambiente di produzione, l'azienda è costretta a usare sempre questa soluzione o esiste il rischio di perdere l'accesso ai contenuti protetti con Azure RMS?
-No, si ha sempre il controllo dei dati e si può continuare ad accedervi, anche se si decide di non usare più il servizio Azure Rights Management. Per altre informazioni, vedere [rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md).
+## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Se si usa questo tipo di protezione per l'ambiente di produzione, l'azienda è bloccata in questa soluzione o rischia di perdere l'accesso ai contenuti protetti con Azure RMS?
+No, si mantiene sempre il controllo dei dati e si può continuare ad accedervi, anche se si decide di non usare più il servizio Azure Rights Management. Per altre informazioni, vedere [rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>È possibile controllare quali utenti possono usare Azure RMS per proteggere i contenuti?
 Sì, il servizio Azure Rights Management include controlli di onboarding degli utenti per questo scenario. Per ulteriori informazioni, vedere la sezione [configurazione dei controlli di onboarding per una distribuzione](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) in più fasi nell'articolo [attivazione del servizio di protezione da Azure Information Protection](activate-service.md) .
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>È possibile impedire agli utenti di condividere documenti protetti con organizzazioni specifiche?
-Uno dei vantaggi principali offerti dal servizio Azure Rights Management per la protezione dei dati è il supporto della collaborazione business-to-business senza che sia necessario configurare trust espliciti per ogni organizzazione partner, in quanto l'autenticazione viene eseguita automaticamente da Azure AD.
+Uno dei vantaggi principali dell'uso del servizio Azure Rights Management per la protezione dati è il supporto della collaborazione business-to-business senza che sia necessario configurare trust espliciti per ciascuna organizzazione partner, poiché l'autenticazione viene eseguita automaticamente da Azure AD.
 
 Non sono disponibili opzioni di amministrazione per impedire agli utenti di condividere i documenti in modo sicuro con organizzazioni specifiche. Si desidera, ad esempio, bloccare un'organizzazione che non si considera attendibile o che dispone di un'azienda concorrente. Impedire al servizio Rights Management di Azure di inviare documenti protetti agli utenti di queste organizzazioni non avrebbe senso perché gli utenti condividevano i documenti in modo non protetto, che probabilmente è l'ultima cosa che si vuole eseguire in questo scenario. Ad esempio, non sarà possibile identificare chi condivide documenti aziendali riservati con quali utenti di queste organizzazioni, che è possibile eseguire quando il documento (o messaggio di posta elettronica) è protetto dal servizio Rights Management di Azure.
 
@@ -184,6 +184,7 @@ Poiché Azure Information Protection supporta la condivisione in modo sicuro con
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Come si riottiene l'accesso ai file che sono stati protetti da un dipendente che ora ha lasciato l'organizzazione?
 Usare la [funzionalità relativa agli utenti con privilegi avanzati](configure-super-users.md), che garantisce i diritti di utilizzo Controllo completo agli utenti autorizzati per tutti i documenti e messaggi di posta elettronica che sono protetti dal tenant. Gli utenti con privilegi avanzati possono leggere sempre questi contenuti protetti e, se necessario, rimuovere la protezione o riapplicarla ai contenuti per altri utenti. Questa stessa funzionalità consente ai servizi autorizzati di indicizzare e analizzare i file, in base alle esigenze.
 
+Se il contenuto è archiviato in SharePoint o OneDrive, gli amministratori possono eseguire il cmdlet [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) per rimuovere l'etichetta di riservatezza e la crittografia. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Quando si esegue il test delle revoche nel sito di rilevamento dei documenti, viene visualizzato un messaggio che informa che gli utenti possono continuare ad accedere al documento fino a 30 giorni: è possibile configurare questo periodo di tempo?
 
 Sì. Questo messaggio riflette la [licenza d'uso](configure-usage-rights.md#rights-management-use-license) per quel file specifico.

@@ -5,19 +5,19 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: abab1e8a35b1928dd752cd287dc20aebded9bb14
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: e19400a0901c62bd00f7cd965e23ea01c36be395
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567567"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849743"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione per i client
 
@@ -38,7 +38,7 @@ Il client classico supporta inoltre un sito di rilevamento dei documenti che con
 
 Per un'installazione e una configurazione aziendali del client per Windows, vedere le guide di amministrazione seguenti:
 
-- Client per l'assegnazione di etichette unificata: [Azure Information Protection guida dell'amministratore client Unified Labeling](./rms-client/clientv2-admin-guide.md)] (./RMS-client/client-admin-guide.MD)
+- Client per l'assegnazione di etichette unificata: [Guida dell'amministratore del client Azure Information Protection Unified Labeling](./rms-client/clientv2-admin-guide.md)
 
 - Client classico: [Guida dell'amministratore del client Azure Information Protection](./rms-client/client-admin-guide.md)
 

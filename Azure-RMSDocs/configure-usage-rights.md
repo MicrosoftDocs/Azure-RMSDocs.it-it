@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 74f141054d177ccabea88f6521ebb2ba6a930be5
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568239"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849777"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configurazione dei diritti di utilizzo per Azure Information Protection
 
@@ -124,7 +124,14 @@ Un utente vuole inviare un messaggio di posta elettronica a destinatari specific
 
 Quando Exchange Online usa le nuove funzionalità per Office 365 Message Encryption, diventa disponibile una nuova opzione di posta elettronica: **Encrypt-Only (Solo crittografia)**.
 
-Questa opzione è disponibile per i tenant che usano Exchange Online e possono essere selezionati in Outlook sul Web, come un'altra opzione di protezione dei diritti per una regola di flusso di posta elettronica, come azione DLP di Office 365 e da Outlook (versione minima di [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) per app Microsoft 365 per Enterprise e versione minima 1805 quando sono disponibili [Microsoft 365 app che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). Per ulteriori informazioni sull'opzione Encrypt-Only, vedere il post di Blog seguente del team di Office: [crittografare solo il rollup in office 365 Message Encryption](https://aka.ms/omefeb2018).
+Questa opzione è disponibile per i tenant che usano Exchange Online e possono essere selezionati come indicato di seguito:
+
+- **In Outlook sul Web**
+- **Come altra opzione di protezione dei diritti** per una regola del flusso di posta
+- **Come azione DLP di Office 365**
+- **Da Outlook,** per le versioni elencate nella [tabella delle versioni supportate per le app Microsoft 365 tramite il canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), quando sono disponibili [Microsoft 365 app che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+
+Per ulteriori informazioni sull'opzione Encrypt-Only, vedere il post di Blog seguente del team di Office: [crittografare solo il rollup in office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari hanno tutti i diritti di utilizzo, a eccezione di **Salva con nome, Esporta** e **Controllo completo**. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare dal messaggio di posta elettronica, stamparlo e inoltrarlo. 
 

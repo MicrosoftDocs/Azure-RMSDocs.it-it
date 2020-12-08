@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cbb554d09d24b1403c24f52fd5215fdee71ab61
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 7fabd12e3ca0dc08f8c5617b37252ac5adc22948
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95735049"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849675"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -62,11 +62,11 @@ Specificare i seguenti identificatori programmatici (ProgID) per AIP e impostare
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
 
-## <a name="applications"></a>Applicazioni
+## <a name="applications"></a>APPLICAZIONI
 
 Il client di assegnazione di etichette unificato Azure Information Protection può etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office Word, Excel, PowerPoint e Outlook delle edizioni di Office seguenti:
 
-- App di Office versione minima 1805, Build 9330,2078 from Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente viene assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365)
+- App di Office, per le versioni elencate nella [tabella delle versioni supportate per le app Microsoft 365 tramite il canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), da Microsoft 365 app per le aziende o Microsoft 365 Business Premium, quando all'utente viene assegnata una licenza per Azure Rights Management (anche nota come Azure Information Protection per Office 365)
 - Microsoft 365 Apps for enterprise
 - Office Professional Plus 2019
 - Office Professional Plus 2016

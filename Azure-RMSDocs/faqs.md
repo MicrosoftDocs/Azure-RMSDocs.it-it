@@ -4,7 +4,7 @@ description: Alcune domande frequenti su Azure Information Protection e il relat
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 36ef25b54fed8d73f33158f2c62670434c5d2f31
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: d528c715b54c063a267694fb974ef685fe264ea3
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568526"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849760"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -182,11 +182,9 @@ Inoltre, tenere presente quanto segue quando si gestiscono ruoli e attività amm
 |---------|---------|
 |**Tipi di account supportati**     | Gli account Microsoft non sono supportati per l'amministrazione delegata di Azure Information Protection, anche se questi account sono assegnati a uno dei ruoli amministrativi elencati.         |
 |**Controlli di onboarding**     |Se i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) sono stati configurati, ciò non influisce sulla possibilità di amministrare Azure Information Protection, fatta eccezione per il connettore RMS. <br /><br />Ad esempio, se sono stati configurati controlli di onboarding in modo che la capacità di proteggere il contenuto sia limitata al gruppo *reparto it* , l'account usato per installare e configurare il connettore RMS deve essere un membro di tale gruppo.          |
-|**Rimozione della protezione**     |  Gli amministratori non possono rimuovere automaticamente la protezione da documenti o messaggi di posta elettronica protetti da Azure Information Protection. <br /><br />Solo gli utenti assegnati come utenti con privilegi avanzati possono rimuovere la protezione e solo quando la funzionalità per utenti con privilegi avanzati è abilitata. <br /><br />Tutti gli utenti con autorizzazioni amministrative per Azure Information Protection possono abilitare la funzionalità per utenti con privilegi avanzati e assegnare gli utenti come utenti con privilegi avanzati, incluso il proprio account.<br /><br />Queste azioni vengono registrate in un registro amministratore. <br /><br />Per ulteriori informazioni, vedere la sezione procedure ottimali di sicurezza in [configurazione di utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](configure-super-users.md). 
-       |
-|**Migrazione all'archivio di etichette unificato**      |  Se si esegue la migrazione delle etichette di Azure Information Protection all'archivio delle etichette unificate, assicurarsi di leggere la sezione seguente dalla documentazione relativa alla migrazione delle etichette: <br />[Ruoli amministrativi che supportano la piattaforma di assegnazione di etichette unificata](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform).
-       |
-
+|**Rimozione della protezione**     |  Gli amministratori non possono rimuovere automaticamente la protezione da documenti o messaggi di posta elettronica protetti da Azure Information Protection. <br /><br />Solo gli utenti assegnati come utenti con privilegi avanzati possono rimuovere la protezione e solo quando la funzionalità per utenti con privilegi avanzati è abilitata. <br /><br />Tutti gli utenti con autorizzazioni amministrative per Azure Information Protection possono abilitare la funzionalità per utenti con privilegi avanzati e assegnare gli utenti come utenti con privilegi avanzati, incluso il proprio account.<br /><br />Queste azioni vengono registrate in un registro amministratore. <br /><br />Per ulteriori informazioni, vedere la sezione procedure ottimali di sicurezza in [configurazione di utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](configure-super-users.md). <br><br>**Suggerimento:** Se il contenuto è archiviato in SharePoint o OneDrive, gli amministratori possono eseguire il cmdlet [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) per rimuovere l'etichetta di riservatezza e la crittografia. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document). |
+|**Migrazione all'archivio di etichette unificato**      |  Se si esegue la migrazione delle etichette di Azure Information Protection all'archivio delle etichette unificate, assicurarsi di leggere la sezione seguente dalla documentazione relativa alla migrazione delle etichette: <br />[Ruoli amministrativi che supportano la piattaforma di assegnazione di etichette unificata](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform). |
+| | |
 ### <a name="azure-information-protection-administrator"></a>Amministratore di Azure Information Protection
 
 Questo ruolo amministratore Azure Active Directory consente a un amministratore di configurare Azure Information Protection ma non altri servizi. 

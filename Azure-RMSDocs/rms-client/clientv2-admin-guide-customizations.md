@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 25dfd0eb9fe2708e90f04a3bc7203dc8ecde5bcc
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316841"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849862"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -701,6 +701,12 @@ Per un esempio di procedura dettagliata su come configurare queste impostazioni,
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
 
 Per i criteri selezionati, creare una o più delle seguenti impostazioni avanzate con le chiavi seguenti. Per i valori, specificare una o più etichette in base ai relativi GUID, separate da una virgola.
+
+> [!NOTE]
+> Le impostazioni avanzate in questa sezione sono relative al momento in cui è in uso un'etichetta *specifica* .
+> 
+> Se sono state configurate impostazioni avanzate per il contenuto senza *etichetta* , ad esempio con l'impostazione avanzata **[OutlookUnlabeledCollaborationAction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)** e si vuole personalizzare i messaggi popup per il contenuto senza etichetta, usare un file JSON per definire le impostazioni avanzate. Per altre informazioni, vedere [personalizzare i messaggi popup di Outlook](#customize-outlook-popup-messages).
+> 
 
 Valore di esempio per più GUID etichetta come stringa delimitata da virgole: 
 
