@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 63beff811a9a9d6d08cfb7d2119c976e91097109
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 65e7e70d6cd144905c37d0c20c05f5841f310c42
+ms.sourcegitcommit: 03fef7cf0a7687962bfd3f0cd221541520f4a317
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568382"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862514"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
 
@@ -57,7 +57,7 @@ L'aggiornamento della versione di luglio comprende l'incremento del numero di re
 
 - **Supporto per l'autenticazione moderna**: consente l'accesso basato su Active Directory Authentication Library (ADAL) alle app con il supporto predefinito per RMS. Abilita funzionalità di accesso come Multi-Factor Authentication (MFA), provider di identità di terze parti basati su SAML con applicazioni client RMS, autenticazione basata su smart card e certificati ed elimina la necessità per le app con il supporto predefinito per RMS di usare il protocollo di autenticazione di base.
 - **Supporto per il rilevamento dei documenti**: ora gli sviluppatori possono abilitare il rilevamento dei documenti quando attivano la protezione dei documenti nelle app.
-- Miglioramenti alle prestazioni
+- Miglioramenti delle prestazioni
 - Correzioni di bug
 
 ### <a name="december-2015-update"></a>Aggiornamento di dicembre 2015
@@ -158,7 +158,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 -   Quando si usa un'app di esempio in un dispositivo Amazon® Kindle per visualizzare allegati con estensione ptxt, è innanzitutto necessario scaricare il file prima di visualizzarlo.
 
-    **Soluzione**: si tratta di un problema noto che verrà risolto in un secondo momento.
+    **Soluzione** : si tratta di un problema noto ed è improbabile che venga risolto. È invece consigliabile esaminare [Microsoft Information Protection SDK](/information-protection/develop/) .
 
 -   Un'applicazione che usa l'SDK può arrestarsi qualora siano consentite più istanze.
 
@@ -197,13 +197,13 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 
 
-**Nota**    Le applicazioni MDI non sono supportate dall'API di iOS.
+**Nota**: le applicazioni MDI non sono supportate dall'API di iOS.
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 **Tutte le piattaforme**
 
-**D**: non è possibile visualizzare l'interfaccia utente per la selezione delle **autorizzazioni personalizzate** nel flusso di lavoro di protezione. Questo problema dipende
+**D**: non è possibile visualizzare l'interfaccia utente per la selezione delle **autorizzazioni personalizzate** nel flusso di lavoro di protezione. Perché?
 
 **R**: si tratta di un problema noto che verrà risolto in un secondo momento.
 
@@ -211,7 +211,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 **R**: per richiedere le credenziali per le organizzazioni di test di Azure AD RMS, inviare un messaggio a <rmcstbeta@microsoft.com>.
 
-**D**: nella documentazione non sono visualizzate informazioni dettagliate sulla gerarchia di test. Questo problema dipende
+**D**: nella documentazione non sono visualizzate informazioni dettagliate sulla gerarchia di test. Perché?
 
 **R**: non è presente alcun concetto di gerarchia di test nei nuovi SDK di AD RMS. Si usa sempre la gerarchia di produzione.
 
@@ -234,7 +234,7 @@ In questa sezione vengono presentate alcune informazioni sulle versioni correnti
 
 **R**: Xcode 5.0 con iOS 7 e versioni successive.
 
-**D**: è stato chiamato un metodo Cancel () su un'operazione, tuttavia viene comunque ricevuta la notifica del completamento dell'operazione. Questo problema dipende
+**D**: è stato chiamato un metodo Cancel () su un'operazione, tuttavia viene comunque ricevuta la notifica del completamento dell'operazione. Perché?
 
 **R:**: non tutte le operazioni possono essere annullate, pertanto l'operazione di annullamento viene eseguita nel miglior modo possibile.
 
