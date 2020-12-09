@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 3f74606e8f5caf4b4d0d480ba36830129249c9cf
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: cc8b2f4d969e24451110a6838ce10c8eea39abd9
+ms.sourcegitcommit: 54e742defb0b8dca35047b34498ec66e61602fa6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588309"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96577049"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione delle applicazioni client (C++) 
 
@@ -245,7 +245,6 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
 2. Rimuovere l'implementazione generata di `main()`. **Non** rimuovere le direttive del preprocessore generate da Visual Studio durante la creazione del progetto (#pragma, #include). Aggiungere il codice seguente dopo eventuali direttive del preprocessore:
 
    ```cpp
-   #include "mip/mip_init.h"
    #include "mip/mip_context.h"  
    #include "auth_delegate.h"
    #include "consent_delegate.h"
