@@ -1,18 +1,18 @@
 ---
 title: "Avvio rapido: Elencare i modelli di protezione disponibili per l'utente autenticato in un tenant di Microsoft Information Protection (MIP) usando il wrapper C# SDK di MIP"
-description: Avvio rapido che illustra come usare il wrapper C# dell'API Protezione SDK di Microsoft Information Protection per elencare i modelli di protezione disponibili per l'utente.
+description: Argomento di avvio rapido che illustra come usare il wrapper C# dell'API Protezione di Microsoft Information Protection SDK per elencare i modelli di protezione disponibili per l'utente (C#)
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: 7b9a8d916b0c3c4b8aaa006abdf27cd8c02a7f6e
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 88c385d783df55b8270740357372c6345da8701a
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588258"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535926"
 ---
 # <a name="quickstart-list-templates-c"></a>Guida introduttiva: Elencare i modelli (C#)
 

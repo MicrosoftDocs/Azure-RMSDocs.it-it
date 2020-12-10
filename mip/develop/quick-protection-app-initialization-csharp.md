@@ -1,17 +1,17 @@
 ---
 title: 'Avvio rapido: Inizializzazione delle applicazioni client - API Protezione (C#)'
-description: Avvio rapido che illustra come scrivere la logica di inizializzazione per applicazioni client di un SDK di Microsoft Information Protection (MIP) per l'API Protezione C#.
+description: Argomento di avvio rapido che illustra come scrivere la logica di inizializzazione per applicazioni client C# dell'API Protezione di Microsoft Information Protection (MIP) SDK (C#)
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 6222326e569d03fbb208d42aacd7efb7ab406a78
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 0f8ed60420b5a0c4fcc0f8264d54f696f5c439a2
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766372"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535893"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Guida introduttiva: Inizializzazione delle applicazioni client per le API Protezione (C#)
 
@@ -63,7 +63,7 @@ Se non è già implementato, seguire i passaggi elencati in[Inizializzazione del
 
 3. Il wrapper gestito include una classe statica `Microsoft.InformationProtection.MIP` usata per l'inizializzazione, la creazione di `MipContext`, il caricamento di profili e il rilascio delle risorse. Per inizializzare il wrapper per le operazioni dell'API, chiamare `MIP.Initialize()`, passando `MipComponent.Protection` per caricare le librerie necessarie per le operazioni di protezione.
 
-4. In `Main()` in *Program.cs* aggiungere quanto segue, sostituendo **\<application-id\>** con l'ID di registrazione dell'applicazione Azure AD creata in precedenza.
+4. In `Main()` in *Program.cs* aggiungere quanto segue, sostituendo **\<application-id\>** con l'ID della registrazione dell'applicazione Azure AD creata in precedenza.
 
 ```csharp
 using System;

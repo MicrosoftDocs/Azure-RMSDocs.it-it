@@ -1,17 +1,17 @@
 ---
 title: Procedura - Scenario di ripubblicazione C#
-description: Questo articolo aiuta a comprendere lo scenario di utilizzo del gestore protezione per gli scenari di ripubblicazione.
+description: Le informazioni in questo articolo sono utili per comprendere lo scenario di riutilizzo del gestore protezione per gli scenari di ripubblicazione (C#).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: c72d284363c1ca988692d18b7007a88c88d808b5
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: c3044feb585e1e3d843f906711644f2ae861b1b5
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421190"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535876"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Microsoft Information Protection SDK - Avvio rapido alla ripubblicazione dell'API File (C#)
 
@@ -106,7 +106,7 @@ if (protectionHandler.AccessCheck("Edit"))
 
 Compilare e testare l'applicazione client.
 
-1. Usare CTRL+MAIUSC+B ( **Compila soluzione** ) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 ( **Avvia debug** ) per eseguire l'applicazione.
+1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
 2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache, non verrà richiesto di accedere e visualizzare l'elenco delle etichette e quindi le informazioni sull'etichetta applicata e sul file modificato.
 

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5edca37acb2f817173142c6638775c2e95bd7439
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 44636616cf410f0976a51afa4bd110e0531de85c
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588241"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535553"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK
 
@@ -177,7 +177,7 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
 
 Al termine, la registrazione dell'applicazione e le autorizzazioni per le API dovrebbero essere simili agli esempi seguenti:
 
-   [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Autorizzazioni dell'app in Azure AD](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.
 

@@ -1,18 +1,18 @@
 ---
 title: "Avvio rapido: Elencare i modelli di protezione disponibili per l'utente autenticato in un tenant di Microsoft Information Protection (MIP) usando l'SDK C++ di MIP"
-description: Avvio rapido che illustra come usare l'API Protezione SDK C++ di Microsoft Information Protection per elencare i modelli di protezione disponibili per l'utente.
+description: Argomento di avvio rapido che illustra come usare l'API Protezione di Microsoft Information Protection C++ SDK per elencare i modelli di protezione disponibili per l'utente (C++)
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: c8af932e5210bdf2445926c6584d4680a6fb0158
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: cc38554ccd9d1ff33c41c4d9adf37b097b7b8547
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588275"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535911"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>Guida introduttiva: Elencare i modelli di protezione (C++)
 
@@ -52,7 +52,7 @@ Aggiungere la logica per elencare i modelli di protezione disponibili per un ute
     engine->GetTemplatesAsync(engineObserver, loadPromise);
     auto templates = loadFuture.get();
 
-    cout << "*** Template List: " << endl;
+    cout << "**_ Template List: " << endl;
 
     for (const auto& protectionTemplate : templates) {
         cout << "Name: " << protectionTemplate->GetName() << " : " << protectionTemplate->GetId() << endl;
@@ -84,7 +84,7 @@ Usare lo script PowerShell seguente per generare i token di accesso, richiesti d
 
 Infine, compilare e testare l'applicazione client.
 
-1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
+1. Usare CTRL+MAIUSC+B (_*Compila soluzione **) per compilare l'applicazione client. Se non si registrano errori di compilazione, usare F5 (** Avvia debug**) per eseguire l'applicazione.
 
 2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. È possibile riutilizzare un token generato in precedenza, se viene richiesto più volte e i valori necessari sono uguali:
 
@@ -112,7 +112,7 @@ Infine, compilare e testare l'applicazione client.
 4. Dopo aver incollato il token di accesso nella richiesta del passaggio 2, l'output della console indica i modelli di protezione, in modo simile all'esempio seguente:
 
    ```console
-   *** Template List:
+   **_ Template List:
    Name: Confidential \ All Employees : a74f5027-f3e3-4c55-abcd-74c2ee41b607
    Name: Highly Confidential \ All Employees : bb7ed207-046a-4caf-9826-647cff56b990
    Name: Confidential : 174bc02a-6e22-4cf2-9309-cb3d47142b05
@@ -133,7 +133,7 @@ Infine, compilare e testare l'applicazione client.
 
 | Riepilogo | Messaggio di errore | Soluzione |
 |---------|---------------|----------|
-| URI di reindirizzamento non corretto nella registrazione dell'applicazione o nello script di PowerShell (AADSTS50011) |*AADSTS50011: L'URL di risposta specificato nella richiesta non corrisponde agli URL di risposta configurati per l'applicazione: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | Verificare l'URI di reindirizzamento usato, eseguendo uno dei passaggi seguenti:<br><br><li>Aggiornare l'URI di reindirizzamento nella configurazione dell'applicazione in Azure AD, in modo che corrisponda allo script di PowerShell. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) per verificare che sia stata configurata correttamente la proprietà URI di reindirizzamento.<br><li>Aggiornare la variabile `redirectUri` nello script di PowerShell, in modo che corrisponda alla registrazione dell'applicazione. |
+| URI di reindirizzamento non corretto nella registrazione dell'applicazione o nello script di PowerShell (AADSTS50011) |_AADSTS50011: L'URL di risposta specificato nella richiesta non corrisponde agli URL di risposta configurati per l'applicazione: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | Verificare l'URI di reindirizzamento usato, eseguendo uno dei passaggi seguenti:<br><br><li>Aggiornare l'URI di reindirizzamento nella configurazione dell'applicazione in Azure AD, in modo che corrisponda allo script di PowerShell. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) per verificare che sia stata configurata correttamente la proprietà URI di reindirizzamento.<br><li>Aggiornare la variabile `redirectUri` nello script di PowerShell, in modo che corrisponda alla registrazione dell'applicazione. |
 | Account di accesso non corretto (AADSTS50020) | *AADSTS50020: L'account utente 'user@domain.com' del provider di identità 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ ' non esiste nel tenant 'nome organizzazione' e non è possibile accedere all'applicazione '0edbblll-8773-44de-b87c-b8c6276d41eb' in questo tenant.* | Eseguire una delle operazioni seguenti:<br><br><li>Eseguire nuovamente lo script di PowerShell, ma assicurarsi di usare un account dello stesso tenant in cui è registrata l'applicazione Azure AD.<br><li>Se l'account di accesso era corretto, è possibile che la sessione host di PowerShell sia già autenticata con un account diverso. In questo caso, uscire dall'host dello script e quindi riprovare a eseguirlo.<br><li>Se si usa questa guida introduttiva con un'app Web (anziché nativa) ed è necessario accedere con un account da un tenant diverso, assicurarsi che la registrazione dell'applicazione Azure AD sia abilitata per l'uso multi-tenant. È possibile eseguire questa verifica usando la funzionalità "Modifica manifesto" nella registrazione dell'applicazione e verificare che specifichi `"availableToOtherTenants": true,`. |
 | Autorizzazioni non corrette nella registrazione dell'applicazione (AADSTS65005) | *AADSTS65005: Risorsa non valida. Il client ha richiesto l'accesso a una risorsa, che non è elencata nelle autorizzazioni richieste nella registrazione dell'applicazione del client. ID app client: 0edbblll-8773-44de-b87c-b8c6276d41eb. Valore della risorsa dalla richiesta: https://syncservice.o365syncservice.com/. ID app della risorsa: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. Elenco delle risorse valide dalla registrazione dell'app: 00000002-0000-0000-c000-000000000000.* | Aggiornare le richieste di autorizzazione nella configurazione dell'applicazione Azure AD. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) per verificare di aver configurato correttamente le richieste di autorizzazione nella registrazione dell'applicazione. |
 

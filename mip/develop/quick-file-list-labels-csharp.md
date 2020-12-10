@@ -1,18 +1,18 @@
 ---
 title: 'Avvio rapido: Elencare le etichette di riservatezza in un tenant di Microsoft Information Protection (MIP) con il wrapper C# del SDK di MIP'
-description: Questa procedura di avvio rapido illustra come usare il wrapper C# del SDK di Microsoft Information Protection per elencare le etichette di riservatezza nel tenant.
+description: Argomento di avvio rapido che illustra come usare il wrapper C# di Microsoft Information Protection SDK per elencare le etichette di riservatezza nel tenant C#.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: a9e9a2d6534cc674f8bf697543e865a3596d457b
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 607e721ad941901b83e37de7e20949da2a9ab936
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972187"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535944"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C#)
 

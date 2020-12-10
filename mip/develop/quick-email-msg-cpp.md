@@ -1,17 +1,17 @@
 ---
 title: API File - Elaborare file con estensione msg di posta elettronica (C++)
-description: Le informazioni in questo articolo sono utili per comprendere come usare l'API File di MIP SDK per elaborare i file con estensione msg.
+description: Le informazioni in questo articolo sono utili per comprendere come usare l'API File di MIP SDK per elaborare i file con estensione msg (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: ef6f8db6915242a830d252eec4509fa67eecbb8c
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: ab070974fc8c03236269a40b2230862e87e19e6b
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403315"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536018"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>API File - Elaborare file con estensione msg di posta elettronica (C++)
 

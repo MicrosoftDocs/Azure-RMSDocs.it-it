@@ -1,18 +1,18 @@
 ---
 title: Guida introduttiva - Elencare le etichette di riservatezza in un tenant di Microsoft Information Protection (MIP) con MIP SDK per C++
-description: Questa guida introduttiva mostra come usare Microsoft Information Protection SDK per C++ per elencare le etichette di riservatezza nel tenant.
+description: Argomento di avvio rapido che illustra come usare Microsoft Information Protection C++ SDK per elencare le etichette di riservatezza nel tenant (C++).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 07782b754c63b4289bf5630eb41b6885b30c7c78
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: d13ddcfd2a01501a8c2428ea6cf4c3cf9e575a09
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971609"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536046"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C++)
 

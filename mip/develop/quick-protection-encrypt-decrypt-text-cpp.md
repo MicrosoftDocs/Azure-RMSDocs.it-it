@@ -1,18 +1,18 @@
 ---
 title: "Avvio rapido: Crittografare e decrittografare il testo usando l'API Protezione SDK C++ di MIP"
-description: Avvio rapido che illustra come usare l'API Protezione SDK C++ di Microsoft Information Protection per crittografare e decrittografare il testo ad hoc tramite un modello di protezione.
+description: Argomento di avvio rapido che illustra come usare l'API Protezione di Microsoft Information Protection SDK per crittografare e decrittografare il testo ad hoc tramite un modello di protezione (C++)
 services: information-protection
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 24d52a73620a7f186c425532f5132cac2a46f405
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 1258bfcd6c47611b439a29406ed0e78b644a5803
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766338"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535842"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>Guida introduttiva: Crittografare/decrittografare il testo usando l'SDK MIP (C++)
 

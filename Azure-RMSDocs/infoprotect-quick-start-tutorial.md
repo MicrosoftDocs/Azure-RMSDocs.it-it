@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c8ace8c73584cdd6eb0cfe6652d944e1b95f46d8
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 37638bfbc47a4a4d075114540ec65ea5d6372a30
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91428821"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849828"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -60,7 +60,7 @@ Per completare questa esercitazione, è necessario:
 
 4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     
-    - \- App di Office con versione minima 1805, build 9330.2078 da Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente viene assegnata una licenza per Azure Rights Management (chiamata anche Azure Information Protection per Microsoft 365).
+    - App di Office per le versioni elencate nella [tabella delle versioni supportate di Microsoft 365 App in base al canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), da Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente è assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365)
     
     - Microsoft 365 Apps for enterprise
     

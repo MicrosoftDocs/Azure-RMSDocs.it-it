@@ -1,17 +1,17 @@
 ---
 title: Procedura - Scenario di ripubblicazione C++
-description: Questo articolo aiuta a comprendere lo scenario di utilizzo del gestore protezione per gli scenari di ripubblicazione.
+description: Le informazioni in questo articolo sono utili per comprendere lo scenario di riutilizzo del gestore protezione per gli scenari di ripubblicazione (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 49fac8fb748cec60abbe3af779670c928c1608a1
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: a9edf2faf674968edf0121b677a79be39ec86cc7
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421150"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535859"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>Avvio rapido alla ripubblicazione dell'API File (C++)
 
@@ -140,7 +140,7 @@ if (protectionHandler->AccessCheck("Edit")) {
 
 Compilare e testare l'applicazione client.
 
-1. Usare CTRL+MAIUSC+B ( **Compila soluzione** ) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 ( **Avvia debug** ) per eseguire l'applicazione.
+1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
 2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. Come già fatto in precedenza nella guida di avvio rapido "Impostare/ottenere etichette di riservatezza", eseguire lo script di PowerShell per acquisire ogni volta il token usando i valori specificati per $authority e $resourceUrl.
 
