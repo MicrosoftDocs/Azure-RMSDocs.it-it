@@ -1,8 +1,8 @@
 ---
 title: Preparare l'ambiente per Azure RMS e AD RMS
 description: Linee guida per gli amministratori se Azure Rights Management con AD RMS distribuito.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
@@ -13,23 +13,25 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f4bbef451f161f40d29a7a890161592db76373a5
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 45423a4ac7fa81d5171e260d14170bae07428ad9
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "95567782"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386373"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Preparare l'ambiente per Azure Rights Management quando si dispone di AD RMS
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [Azure Information Protection Unified Labeling client e il client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!IMPORTANT]
 > Linee guida per l'uso di Active Directory Rights Management Services (AD RMS)
 
 Se il servizio Active Rights Management è attivato e si usa anche AD RMS, la combinazione dei due servizi non è compatibile. Se non vengono eseguiti altri passaggi, è possibile che all'avvio alcuni computer usino automaticamente il servizio Azure Rights Management e si connettano anche al cluster AD RMS. Questo scenario non è supportato e restituisce risultati non prevedibili, quindi è importante eseguire alcuni passaggi aggiuntivi. 
 
-**Per controllare se AD RMS è stato distribuito:**
+**Per verificare se sono state distribuite ad RMS**:
 
 1. Nonostante sia facoltativo, la maggior parte delle distribuzioni di AD RMS pubblica il punto di connessione del servizio in Active Directory in modo che i computer del dominio possano individuare il cluster AD RMS. 
     

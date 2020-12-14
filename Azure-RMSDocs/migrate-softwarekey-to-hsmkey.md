@@ -1,11 +1,11 @@
 ---
 title: Eseguire la migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM - AIP
 description: Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/18/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c654c395ee4b0f77ce0157743fa65bb6391a4ca
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: ca88715d32b3f5e7564c8382b8a63cd41d13140e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137033"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386458"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Istruzioni che fanno parte del [percorso di migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure. 
 
@@ -58,7 +59,7 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
 2. Amministratore di Azure Information Protection o di Insieme di credenziali delle chiavi di Azure: nella workstation disconnessa eseguire lo strumento TpdUtil dal [toolkit di migrazione di Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Ad esempio, se lo strumento è installato nell'unità E in cui si copia il file dei dati di configurazione denominato ContosoTPD.xml:
 
-    ```ps
+    ```PowerShell
     E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
     ```
 
@@ -130,7 +131,7 @@ Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure,
 
 Usare quindi il cmdlet [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) per autorizzare l'entità servizio Rights Management di Azure ad accedere all'insieme di credenziali delle chiavi. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
 
-Se ad esempio l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato contosorms-byok-kv e il gruppo di risorse è denominato contosorms-byok-rg, eseguire il comando seguente:
+Ad esempio, se l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato ContosoRMS-Byok-kV e il gruppo di risorse è denominato **ContosoRMS-Byok-RG**, eseguire il comando seguente:
 
 ```sh
 Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
@@ -148,13 +149,13 @@ Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi
 
     Ad esempio, usando il file di dati di configurazione C:\contoso_keyless.xml e il valore dell'URL della chiave dal passaggio precedente, eseguire prima di tutto il comando seguente per archiviare la password:
     
-    ```ps
+    ```PowerShell
     $TPD_Password = Read-Host -AsSecureString
     ```
     
    Immettere la password specificata per esportare il file di dati di configurazione. Eseguire quindi il comando seguente e confermare che si vuole eseguire questa azione:
 
-    ```ps
+    ```PowerShell
     Import-AipServiceTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
@@ -164,7 +165,7 @@ Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi
 
 4. Usare il cmdlet [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) per disconnettersi dal servizio Rights Management di Azure:
 
-    ```ps
+    ```PowerShell
     Disconnect-AipServiceService
     ```
 
