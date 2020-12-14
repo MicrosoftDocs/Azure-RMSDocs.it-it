@@ -1,11 +1,11 @@
 ---
 title: Distribuire il connettore di Rights Management - AIP
 description: Istruzioni per distribuire il connettore RMS, che fornisce il servizio di protezione dei dati per le distribuzioni locali esistenti che usano Exchange Server, SharePoint Server o Windows Server e Infrastruttura di classificazione file.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 06/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
@@ -13,21 +13,24 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7de557bcfe7cb06310abc8d662626d86271b8a4e
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: a495ea2ca1cc08da081c10496c8e2b51f7718706
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568011"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382531"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Distribuzione del connettore di Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, Windows Server 2012 R2, Windows Server 2012 *
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare queste informazioni per comprendere il funzionamento del connettore di Azure Rights Management e come distribuirlo correttamente per l'organizzazione. Questo connettore garantisce la protezione dei dati per le distribuzioni locali esistenti che usano Microsoft **Exchange Server**, **SharePoint Server** o file server che eseguono Windows Server e **infrastruttura di classificazione file** (FCI).
 
 
 ## <a name="overview-of-the-microsoft-rights-management-connector"></a>Panoramica del connettore Microsoft Rights Management
+
 Il connettore Microsoft Rights Management (RMS) consente di abilitare rapidamente server in locale esistenti in modo che usino la funzionalità Information Rights Management (IRM) con il servizio Microsoft Rights Management (Azure RMS) basati su cloud. Con questa funzionalità, il reparto IT e gli utenti possono proteggere facilmente documenti e immagini sia all'interno sia all'esterno dell'organizzazione, senza necessità di installare un'infrastruttura aggiuntiva o di stabilire relazioni di trust con altre organizzazioni. 
 
 Il connettore RMS è un servizio con footprint ridotto installato in locale, nei server che eseguono Windows Server 2016, Windows Server 2012 R2, Windows Server 2012. Oltre a eseguire il connettore in computer fisici, è possibile anche eseguirlo nelle macchine virtuali, incluse le VM IaaS di Azure. Una volta distribuito, il connettore opera come interfaccia di comunicazione (inoltro) tra i server locali e il servizio cloud come illustrato nell'immagine seguente. Le frecce indicano la direzione in cui vengono avviate le connessioni di rete.
@@ -56,6 +59,7 @@ Se si gestisce la propria chiave del tenant per Azure RMS (scenario BYOK, Bring 
 Per altre informazioni su questo scenario per la gestione della chiave del tenant, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
 ## <a name="prerequisites-for-the-rms-connector"></a>Prerequisiti per l'installazione del connettore RMS
+
 Prima di installare il connettore RMS, accertarsi che i requisiti seguenti siano soddisfatti.
 
 |Requisito|Altre informazioni|
@@ -69,21 +73,21 @@ Prima di installare il connettore RMS, accertarsi che i requisiti seguenti siano
 
 Il connettore non verifica automaticamente tutti i [prerequisiti](deploy-rms-connector.md#prerequisites-for-the-rms-connector) necessari per una corretta distribuzione, quindi assicurarsi che questi siano soddisfatti prima di iniziare. Per la distribuzione è necessario installare il connettore, configurarlo e quindi configurare i server che devono usare il connettore. 
 
--   **Passaggio 1:**  [Installazione del connettore RMS](install-configure-rms-connector.md#installing-the-rms-connector)
+-   **Passaggio 1**:  [installazione del connettore RMS](install-configure-rms-connector.md#installing-the-rms-connector)
 
--   **Passaggio 2:**  [Immissione delle credenziali](install-configure-rms-connector.md#entering-credentials)
+-   **Passaggio 2**:  [immissione delle credenziali](install-configure-rms-connector.md#entering-credentials)
 
--   **Passaggio 3:**  [Autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
+-   **Passaggio 3**:  [autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
 
--   **Passaggio 4:**  [Configurazione del bilanciamento del carico per elevati livelli di disponibilità](install-configure-rms-connector.md#configuring-load-balancing-and-high-availability)
+-   **Passaggio 4**:  [configurazione del bilanciamento del carico e disponibilità elevata](install-configure-rms-connector.md#configuring-load-balancing-and-high-availability)
 
--   Facoltativo: [Configurazione del connettore RMS per l'uso di HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)
+    -   Facoltativo: [Configurazione del connettore RMS per l'uso di HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)
 
--   Facoltativo: [Configurazione del connettore RMS per un server proxy Web](install-configure-rms-connector.md#configuring-the-rms-connector-for-a-web-proxy-server)
+    -   Facoltativo: [Configurazione del connettore RMS per un server proxy Web](install-configure-rms-connector.md#configuring-the-rms-connector-for-a-web-proxy-server)
 
--   Facoltativo: [Installazione dello strumento di amministrazione di connettore RMS su computer amministrativi](install-configure-rms-connector.md#installing-the-rms-connector-administration-tool-on-administrative-computers)
+    -   Facoltativo: [Installazione dello strumento di amministrazione di connettore RMS su computer amministrativi](install-configure-rms-connector.md#installing-the-rms-connector-administration-tool-on-administrative-computers)
 
--   **Passaggio 5:**  [Configurazione dei server per l'uso del connettore RMS](configure-servers-rms-connector.md)
+-   **Passaggio 5**:  [configurazione dei server per l'uso del connettore RMS](configure-servers-rms-connector.md)
 
     -   [Configurazione di un server di Exchange per l'uso del connettore](configure-servers-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
 

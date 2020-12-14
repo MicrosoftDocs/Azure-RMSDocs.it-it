@@ -4,8 +4,8 @@ description: Fase 3 della migrazione da AD RMS ad Azure Information Protection, 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/29/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b58710ebd4486319126bc2f33266d349d23fa888
-ms.sourcegitcommit: 2085eedf24a6f72cbafcbacad023122a04faccc9
+ms.openlocfilehash: d0c643ea787d8ef9a977930aee270af5023c89a7
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "95568449"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381528"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per la fase 3 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano il passaggio 7 della [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -85,6 +87,7 @@ Questo metodo è adatto solo per i client Windows che eseguono app desktop Micro
     |**Weight**|0|  
     |**Numero della porta**|80|  
     |**Host che offre questo servizio**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    | | |
 
 2. Impostare un'autorizzazione Deny per l'endpoint di pubblicazione AD RMS per gli utenti che eseguono app Microsoft 365 o Office 2016 (o versione successiva):
 
@@ -125,7 +128,7 @@ Lo script di configurazione client (Migrate-Client.cmd) configura le impostazion
 
 - Se l'utente dispone di privilegi di amministratore locale, usare uno script di accesso.
 
-Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Ad esempio:
+Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. ad esempio:
 
 - Usare uno script di accesso.
 

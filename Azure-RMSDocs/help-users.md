@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -13,22 +13,29 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 0954f3caa116ee100ed819f71f5be04f36392bd9
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316345"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382174"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Dopo aver distribuito e configurato Azure Information Protection per l'organizzazione, è necessario fornire indicazioni e istruzioni agli utenti, agli amministratori e agli addetti del servizio help desk:
 
 -   **Informazioni sull'utente finale**
     
-    Gli utenti devono conoscere come e quando proteggere i documenti e i messaggi di posta elettronica che contengono informazioni riservate. Quando possibile, specificare queste informazioni per i flussi di lavoro esistenti per consentire agli utenti di incorporare i passaggi aggiuntivi in un processo già noto anziché introdurre nuovi processi. Assicurarsi di comunicare loro i vantaggi (e i rischi) specifici dell'azienda nonché di fornire le istruzioni per la protezione di file e di messaggi di posta elettronica. Se sono stati configurati dei [modelli](configure-policy-templates.md), specificare le istruzioni su come selezionarne uno qualora il nome e la descrizione del modello non siano sufficienti per scegliere quello corretto.
+    Gli utenti devono conoscere come e quando proteggere i documenti e i messaggi di posta elettronica che contengono informazioni riservate. Quando possibile, specificare queste informazioni per i flussi di lavoro esistenti per consentire agli utenti di incorporare i passaggi aggiuntivi in un processo già noto anziché introdurre nuovi processi. Assicurarsi di comunicare loro i vantaggi (e i rischi) specifici dell'azienda nonché di fornire le istruzioni per la protezione di file e di messaggi di posta elettronica. 
+
+    Se si dispone del client AIP classico e sono stati configurati [modelli](configure-policy-templates.md), fornire istruzioni su quale selezionare se il nome e la descrizione del modello non sono sufficienti per scegliere quello corretto.
     
     > [!TIP]
     > Video di esempio per gli utenti finali:
@@ -43,7 +50,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
     
 -   **Informazioni sul supporto tecnico**
     
-    Se gli utenti dispongono del client Azure Information Protection, gli operatori del supporto tecnico possono chiedere loro di usare l'opzione **Guida e commenti** per informazioni, ad esempio per sapere se l'edizione di Office in uso non è in grado di supportare la protezione e l'account utente attualmente connesso. Questa opzione può essere usata anche per raccogliere i file di log e reimpostare il client. Per altre informazioni, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) della guida dell'amministratore.
+    Se gli utenti dispongono del client Azure Information Protection, gli operatori del supporto tecnico possono chiedere loro di usare l'opzione **Guida e commenti** per informazioni, ad esempio per sapere se l'edizione di Office in uso non è in grado di supportare la protezione e l'account utente attualmente connesso. Questa opzione può essere usata anche per raccogliere i file di log e reimpostare il client. Per altre informazioni, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) della guida dell'amministratore.
     
     Se sono presenti richieste legittime per ottenere diritti completi di accesso ai documenti protetti, verificare che il help desk disponga di processi per richiedere l'accesso tramite la [funzionalità Azure Information Protection utente con privilegi avanzati](configure-super-users.md). Ad esempio, le richieste potrebbero provenire dall'ufficio legale o da un responsabile dopo che un dipendente ha lasciato l'organizzazione.
     
@@ -61,10 +68,11 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
         
         Per verificare se un utente o un gruppo specifico può essere autorizzato da Azure Active Directory a proteggere o utilizzare contenuti protetti, usare i controlli di verifica presentati in [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
         
-        Se un utente indica che è in grado di aprire il contenuto protetto ma non ha i diritti necessari, il problema può essere dovuto al fatto che l'utente non è incluso nel gruppo corretto configurato per un modello di Rights Management, oppure che il [modello debba essere riconfigurato](configure-policy-templates.md) per l'utente o il gruppo. 
-        
         Se i diritti degli utenti non sono quelli previsti, controllare la relativa descrizione e l'eventuale implementazione specifica dell'applicazione nella [tabella dei diritti di utilizzo](configure-usage-rights.md#usage-rights-and-descriptions).
 
+        **Solo client classico**: se gli utenti segnalano che possono aprire contenuto protetto ma non hanno i diritti necessari, il problema potrebbe essere dovuto al fatto che l'utente non si trova nel gruppo corretto configurato per un modello di Rights Management. oppure che il [modello debba essere riconfigurato](configure-policy-templates.md) per l'utente o il gruppo. 
+        
+        
 Nelle sezioni seguenti sono disponibili informazioni specifiche delle applicazioni che consentono agli utenti di proteggere documenti e messaggi di posta elettronica.
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Protezione delle informazioni con il client Azure Information Protection
@@ -73,11 +81,12 @@ Se gli utenti usano Office 2010, il client Azure Information Protection è nece
 
 Oltre a rendere più semplice per gli utenti la protezione di documenti e messaggi di posta elettronica, il client Azure Information Protection consente di tenere traccia dei documenti protetti. I documenti rilevati possono anche essere revocati se gli utenti autorizzati in precedenza non devono più avere accesso agli stessi.
 
-Per istruzioni sull'uso di questo client per computer Windows, vedere la [Guida per l'utente del client Azure Information Protection](./rms-client/client-user-guide.md).
+Per istruzioni sull'uso di questo client per computer Windows, vedere la [Guida per l'utente del client Azure Information Protection](./rms-client/clientv2-user-guide.md).
 
 
 ## <a name="using-information-protection-with-office-365-office-2019-office-2016-or-office-2013"></a>Uso della protezione delle informazioni con Office 365, Office 2019, Office 2016 o Office 2013
-Se si sta usando il servizio Azure Rights Management e il client Azure Information Protection non è stato installato, gli utenti non vedono la barra di Azure Information Protection nelle app desktop di Office, il pulsante **Proteggi** sulla barra multifunzione o il comando **Classifica e proteggi** in Esplora file. Queste aggiunte semplificano l'applicazione della protezione a documenti e messaggi di posta elettronica. Tali utenti devono seguire istruzioni simili alle seguenti.
+
+Se si sta usando il servizio Azure Rights Management e il client Azure Information Protection non è stato installato, gli utenti non vedono la barra di Azure Information Protection nelle app desktop di Office, Non è inoltre possibile visualizzare il pulsante **sensitivity** sulla barra multifunzione o **classificare e proteggere** da Esplora file. Queste aggiunte semplificano l'applicazione della protezione a documenti e messaggi di posta elettronica. Tali utenti devono seguire istruzioni simili alle seguenti.
 
 > [!TIP]
 > Per trovare indicazioni e istruzioni specifiche dell'applicazione per adottare la protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.

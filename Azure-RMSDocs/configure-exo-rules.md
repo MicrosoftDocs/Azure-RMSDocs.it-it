@@ -5,31 +5,30 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c20580298bc49e9809a1e629dc2eae4a2716646
-ms.sourcegitcommit: 31c56584f02cf849292dbf2724c036bb5d669df1
+ms.openlocfilehash: cbb6b583c45ac735f99e4cc51ac91e0401612f88
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "95568407"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383619"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-> *Istruzioni per: [Client classico Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Se si usa il client di etichettatura unificata, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/dlp-sensitivity-label-as-condition) per informazioni dettagliate su come impedire o avvisare gli utenti sulla condivisione di file o messaggi di posta elettronica con un'etichetta di riservatezza specifica.*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [informazioni sulle etichette di riservatezza e sulle](/microsoft-365/compliance/sensitivity-labels) [etichette DLP](/microsoft-365/compliance/dlp-sensitivity-label-as-condition) dalla documentazione di Microsoft 365. *
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio:
+Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. ad esempio:
 
 - L'etichetta predefinita è **Generale**, che non applica la protezione. Per i messaggi di posta elettronica con questa etichetta inviati all'esterno, applicare l'azione di protezione aggiuntiva Non inoltrare.
 
@@ -59,7 +58,7 @@ Per gli esempi seguenti, creare una nuova regola del flusso di posta seguendo qu
 
 3. Nell'interfaccia di amministrazione di Microsoft 365 scegliere **admin Centers**  >  **Exchange**.
 
-4. Nell'interfaccia di amministrazione di Exchange: le regole del **flusso di posta**  >  **rules**  >  **+**  >  **creano una nuova regola**. 
+4. Nell'interfaccia di amministrazione di Exchange: le regole del **flusso di posta**  >    >  **+**  >  **creano una nuova regola**. 
 
 > [!TIP]
 > Se si verificano problemi con l'interfaccia utente quando si configurano le regole, provare a usare un browser diverso, ad esempio Internet Explorer.

@@ -1,10 +1,10 @@
 ---
 title: Operazioni del ciclo di vita della chiave del tenant AIP gestite dal cliente
 description: Informazioni sulle operazioni del ciclo di vita necessarie per la gestione da parte dell'utente della chiave del tenant per Azure Information Protection (scenario "bring your own key" o BYOK).
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 12/06/2019
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1e06581cb7291674d3a94c99338a9749b46f9a0
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: a8365e49bd25fc50fefdf2a0645fc5e9ac5b30c6
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567626"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381545"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Se la chiave del tenant per Azure Information Protection viene gestita dall'utente (scenario "bring your own key" o BYOK), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
 
@@ -35,6 +37,7 @@ Per revocare la chiave del tenant gestita dal cliente, in Azure Key Vault modifi
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
 
 ## <a name="rekey-your-tenant-key"></a>Reimpostare la chiave del tenant
+
 Il processo di reimpostazione della chiave è noto anche come rollover della chiave. Quando si esegue questa operazione, Azure Information Protection interrompe l'uso della chiave del tenant esistente per proteggere documenti e messaggi di posta elettronica e inizia a usare una chiave diversa. I criteri e i modelli vengono subito abbandonati, ma questo passaggio è comunque graduale per i client e i servizi esistenti che usano Azure Information Protection. Ciò significa che, per un certo periodo di tempo, parte del nuovo contenuto continua a essere protetta tramite la chiave del tenant precedente.
 
 Per reimpostare la chiave, è necessario configurare l'oggetto della chiave del tenant e specificare la chiave alternativa da usare. La chiave usata in precedenza viene quindi contrassegnata automaticamente come archiviata per Azure Information Protection. Questa configurazione assicura che il contenuto protetto tramite questa chiave rimanga accessibile.
@@ -51,9 +54,9 @@ Per reimpostare la chiave su un'altra chiave gestita, è possibile creare una nu
 
 1. Solo se la nuova chiave si trova in un insieme di credenziali delle chiavi diverso da quello già usato per Azure Information Protection: autorizzare Azure Information Protection a usare l'insieme di credenziali delle chiavi usando il cmdlet [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) .
 
-2. Se Azure Information Protection non è ancora noto alla chiave che si vuole usare, eseguire il cmdlet [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) .
+1. Se Azure Information Protection non è ancora noto alla chiave che si vuole usare, eseguire il cmdlet [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) .
 
-3. Configurare l'oggetto chiave del tenant usando il cmdlet Run [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) .
+1. Configurare l'oggetto chiave del tenant usando il cmdlet Run [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) .
 
 Per altre informazioni su ognuna di queste fasi:
 
@@ -65,6 +68,7 @@ Per altre informazioni su ognuna di queste fasi:
 - Per reimpostare la chiave, passando a una chiave gestita da Microsoft, vedere la sezione [Reimpostare la chiave del tenant](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) per le operazioni gestite da Microsoft.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
+
 L'utente che gestisce la chiave del tenant è anche responsabile del backup della chiave usata da Azure Information Protection. 
 
 Se la chiave del tenant è stata generata in locale, in un modulo di protezione hardware nCipher: per eseguire il backup della chiave, eseguire il backup del file di chiave in formato token, del file globale e delle schede amministratore. Quando la chiave viene trasferita in Azure Key Vault, il servizio salva il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questo file di chiave in formato token non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo normale della chiave da usare all'esterno di un modulo di protezione hardware nCipher, Azure Key Vault non è in grado di recuperarla perché dispone solo di una copia non recuperabile.
@@ -72,9 +76,11 @@ Se la chiave del tenant è stata generata in locale, in un modulo di protezione 
 Azure Key Vault contiene un [cmdlet di backup](/powershell/module/az.keyvault/backup-azkeyvaultkey). Scaricarlo e archiviarlo in un file per eseguire il backup di una chiave. Il contenuto scaricato è crittografato e può quindi essere usato solo in Azure Key Vault. 
 
 ## <a name="export-your-tenant-key"></a>Esportare la chiave del tenant
+
 In uno scenario BYOK non è possibile esportare la chiave del tenant da Azure Key Vault o da Azure Information Protection. La copia presente in Azure Key Vault non è recuperabile. 
 
 ## <a name="respond-to-a-breach"></a>Rispondere a una violazione di sicurezza
+
 Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nella tecnologia attuale della chiave o nella lunghezza e negli algoritmi correlati alle chiavi attuali.
 
 Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influiscono sulle risorse, Microsoft invia una notifica tramite posta elettronica agli amministratori globali del tenant.
@@ -87,3 +93,4 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La reimpostazione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nella tecnologia del moduli di protezione hardware di generazione corrente.|Microsoft deve aggiornare i moduli di protezione hardware. Se si ritiene che la vulnerabilità abbia provocato l'esposizione di chiavi, Microsoft inviterà tutti i clienti a reimpostare le proprie chiavi del tenant.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Key Vault o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a reimpostare la propria chiave del tenant.|
+| | |

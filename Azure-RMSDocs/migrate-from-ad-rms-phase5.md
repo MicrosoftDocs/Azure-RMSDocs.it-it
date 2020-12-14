@@ -1,11 +1,11 @@
 ---
 title: 'Eseguire la migrazione da AD RMS ad Azure Information Protection: fase 5'
 description: Fase 5 della migrazione da AD RMS ad Azure Information Protection che include i passaggi 10 e 12 della migrazione da AD RMS ad Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: aba2381e5cc275e3b51156b32bdf88fdae974b5e
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: abad66a1e62a4e70bc4d5a9452b47abd7dd23004
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567873"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382004"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per la fase 5 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano i passaggi 10 e 12 della [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -41,14 +42,18 @@ Per rimuovere il punto di connessione del servizio, assicurarsi di avere eseguit
 
 4. Selezionare **Rimuovi SCP corrente** e quindi fare clic su **OK**.
 
-Monitorare ora l'attività dei server AD RMS, ad esempio controllando le [richieste nel report di integrità del sistema ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221012(v=ws.10)) o la [tabella ServiceRequest](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772686(v=ws.10)) oppure [controllando l'accesso utente ai contenuti protetti](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx).
+Monitorare ora l'attività dei server AD RMS, ad esempio controllando le [richieste nel report di integrità del sistema ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221012(v=ws.10)) o la [tabella ServiceRequest](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772686(v=ws.10)) oppure [controllando l'accesso utente ai contenuti protetti](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx).
 
 Dopo aver verificato che i client RMS non comunicano più con questi server e che usano Azure Information Protection, è possibile rimuovere il ruolo del server AD RMS da questi server. Se si usano server dedicati, è possibile che si preferisca arrestare prima di tutto i server per un periodo di tempo. In questo modo si verifica che non vengano segnalati problemi che potrebbero richiederne il riavvio, così da garantire la continuità del servizio mentre si esaminano i motivi per cui i client non usano Azure Information Protection.
 
-Dopo aver effettuato il deprovisioning dei server AD RMS, è anche possibile esaminare i modelli nel portale di Azure. Ad esempio convertirli in etichette, consolidarli in modo che gli utenti abbiano un elenco ridotto oppure riconfigurarli. Potrebbe anche essere il momento opportuno per pubblicare i modelli predefiniti. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](./configure-policy-templates.md).
+Dopo aver effettuato il deprovisioning dei server di AD RMS, è possibile che si desideri esaminare il modello e le etichette. Ad esempio, convertire i modelli in etichette, consolidarli in modo che gli utenti possano scegliere o riconfigurarli. Questo è anche il momento opportuno per pubblicare i modelli predefiniti.
+
+Per le etichette di riservatezza e il client di etichettatura unificata, usare l'interfaccia di amministrazione di assegnazione di etichette, tra cui il Centro sicurezza Microsoft 365, il centro di conformità Microsoft 365 o il Microsoft 365 Security & Compliance Center. Per altre informazioni, vedere la documentazione di Microsoft 365.
+
+Se si usa il client classico, usare il portale di Azure. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](./configure-policy-templates.md).
 
 >[!IMPORTANT]
-> Alla fine della migrazione, il cluster AD RMS non può essere usato con Azure Information Protection e con l'opzione HYOK (Hold Your Own Key). Se si decide di usare l'opzione HYOK per un'etichetta di Azure Information Protection, a causa dei reindirizzamenti ora disponibili, il cluster AD RMS in uso deve avere vari URL di gestione licenze per quelli nei cluster migrati.
+> Al termine di questa migrazione, il cluster di AD RMS non può essere usato con Azure Information Protection e con l'opzione[HYOK](configure-adrms-restrictions.md)(Mantieni la chiave personalizzata). Se si usa il client classico con HYOK, a causa dei reindirizzamenti attualmente disponibili, il cluster AD RMS usato deve avere URL di licenza diversi per quelli nei cluster di cui è stata eseguita la migrazione.
 
 ### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Configurazione aggiuntiva per computer che eseguono Office 2010
 
@@ -100,12 +105,12 @@ Per rimuovere i controlli di onboarding:
 
 1. In una sessione di PowerShell, connettersi al servizio Azure Rights Management e, quando richiesto, specificare le credenziali di amministratore globale:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
 
 2. Run the following command, and enter **Y** to confirm:
 
-    ```ps
+    ```PowerShell
     Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     ```
 
@@ -113,7 +118,7 @@ Per rimuovere i controlli di onboarding:
 
 3. Verificare che i controlli di selezione non siano più impostati:
 
-    ```ps    
+    ```PowerShell    
     Get-AipServiceOnboardingControlPolicy
     ```
 
@@ -138,7 +143,7 @@ Per reimpostare la chiave del tenant di Azure Information Protection:
 - **Se la chiave del tenant è gestita da Microsoft**: eseguire il cmdlet di PowerShell [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) e specificare l'identificatore di chiave per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
 
         
-    ```ps
+    ```PowerShell
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
     ```
 
@@ -149,4 +154,4 @@ Per altre informazioni sulla gestione della chiave del tenant di Azure Informati
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver completato la migrazione, rivedere la [guida di orientamento alla distribuzione](deployment-roadmap.md) per identificare eventuali altre attività di distribuzione che può essere necessario eseguire.
+Dopo aver completato la migrazione, vedere la Guida di [orientamento per la distribuzione di AIP per la classificazione, l'assegnazione di etichette e la protezione](deployment-roadmap-classify-label-protect.md) per identificare eventuali altre attività di distribuzione che potrebbero essere necessarie.

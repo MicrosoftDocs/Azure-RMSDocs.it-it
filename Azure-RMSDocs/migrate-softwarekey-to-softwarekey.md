@@ -1,11 +1,11 @@
 ---
 title: Eseguire la migrazione da una chiave protetta tramite software a un'altra - AIP
 description: Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite software.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 236f8047aee405bea5b0c0a34d022de758048d31
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a9ef31330b5bc0039ad01f76134ebb5075edd1e6
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137020"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383738"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a un'altra
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>**Si applica a*: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite software. 
 
@@ -35,7 +36,7 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
 
 1. In una workstation connessa a Internet usare il cmdlet [Connect-AipService](/powershell/module/aipservice/connect-aipservice) per connettersi al servizio Rights Management di Azure:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
     
@@ -47,13 +48,13 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
     
     Ad esempio, eseguire prima di tutto il comando seguente per archiviare la password:
     
-    ```ps
+    ```PowerShell
     $TPD_Password = Read-Host -AsSecureString
     ```
 
     Immettere la password specificata per esportare il primo file di dati di configurazione. Usando E:\contosokey1.xml come esempio per il file di configurazione, eseguire quindi il comando seguente e confermare che si vuole eseguire questa azione:
 
-    ```ps
+    ```PowerShell
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
@@ -61,7 +62,7 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
 
 4.  Usare il cmdlet [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) per disconnettersi dal servizio Rights Management di Azure:
 
-    ```ps
+    ```PowerShell
     Disconnect-AipServiceService
     ```
 

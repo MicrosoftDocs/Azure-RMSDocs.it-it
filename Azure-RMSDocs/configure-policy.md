@@ -1,11 +1,11 @@
 ---
 title: Configurare i criteri di Azure Information Protection - AIP
-description: Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client di Azure Information Protection (versione classica), è necessario configurare i criteri di Azure Information Protection.
+description: Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client di Azure Information Protection classico, è necessario configurare i criteri di Azure Information Protection.
 author: batamig
 ms.author: bagol
 ms.date: 08/17/2020
 manager: rkarlin
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
@@ -13,24 +13,21 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35eb3d59031fb30de1c9d6b1c6cdd2745f7d7ef2
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 722d5ec64fc93da5a7da8d5cad57c679345faf01
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568245"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382973"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione di Microsoft 365. *
 
-
-> [!NOTE]
-> Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
-> 
-> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il client di Azure Information Protection.
 
@@ -68,7 +65,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 - Usare un account Azure AD con uno dei seguenti ruoli di [amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Amministratore di Azure Information Protection**
+    - **Amministratore Azure Information Protection**
     
   - **Amministratore di conformità**
     

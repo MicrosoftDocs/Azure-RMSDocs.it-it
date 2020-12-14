@@ -1,10 +1,10 @@
 ---
 title: Domande frequenti sulla classificazione e l'assegnazione di etichette - AIP
 description: Di seguito sono riportate alcune possibili domande sulle funzionalità di classificazione e assegnazione di etichette di Azure Information Protection vedere se la risposta è disponibile qui.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,33 +12,43 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d22a79a3968e164e2bec8c3852c4ab0c181e5ef8
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: d4bfec07900404c39a17a90468a726f6632078fe
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316314"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382276"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per ulteriori informazioni, vedere anche le [domande frequenti solo per il client classico](faqs-classic.md). *
 
 >[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Di seguito sono riportate alcune possibili domande sulle funzionalità di classificazione e assegnazione di etichette di Azure Information Protection  vedere se la risposta è disponibile qui. 
 
 ## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Quale client si installa per testare nuove funzionalità?
 
-Attualmente sono disponibili due client di Azure Information Protection per Windows: 
+Si consiglia di installare il **client di Azure Information Protection Unified Labeling**. Il client di etichettatura unificata Scarica le etichette e le impostazioni dei criteri da uno dei seguenti centri di amministrazione: 
 
-- Il **Azure Information Protection client di etichetta unificata** che Scarica le etichette e le impostazioni dei criteri da uno dei seguenti centri di amministrazione: Office 365 Security & Compliance center, Microsoft 365 Security center, Microsoft 365 Compliance Center. Questo client è ora disponibile a livello generale e potrebbe avere una versione di anteprima per testare funzionalità aggiuntive per una versione futura.
+- Centro sicurezza e conformità di Office 365
+- Centro sicurezza Microsoft 365
+- Centro di conformità Microsoft 365.
 
-- Il **client Azure Information Protection (classico)** che Scarica le etichette e le impostazioni dei criteri dall'portale di Azure. Questo client si basa sulle versioni di disponibilità generale precedenti del client.
+Questo client è ora disponibile a livello generale e potrebbe avere una versione di anteprima per testare funzionalità aggiuntive per una versione futura.
 
-Si consiglia di eseguire il test con il client di etichettatura unificata se il set di funzionalità e le funzionalità correnti soddisfano i requisiti aziendali. In caso contrario, o se sono state configurate etichette nel portale di Azure di cui non è ancora stata [eseguita la migrazione nell'archivio Unified Labeling](configure-policy-migrate-labels.md), usare il client classico. Per altre informazioni, inclusa una tabella per il confronto di funzioni e funzionalità, vedere [Scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Se le etichette sono ancora state configurate nel portale di Azure di cui non è ancora stata [eseguita la migrazione nell'archivio di etichette unificate](configure-policy-migrate-labels.md), usare invece il **client di Azure Information Protection classico** .
 
-Il client Azure Information Protection è supportato solo in Windows. Per classificare e proteggere documenti e messaggi di posta elettronica in iOS, Android, macOS e sul Web, usare le [app di Office che supportano l'assegnazione di etichette incorporata](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+Per altre informazioni, tra cui una tabella di confronto delle funzionalità e delle funzionalità, vedere [scegliere la soluzione per l'assegnazione di etichette Windows](rms-client/use-client.md#choose-your-windows-labeling-solution).
+
+> [!TIP]
+> Il client Azure Information Protection è supportato solo in Windows. 
+>
+> Per classificare e proteggere documenti e messaggi di posta elettronica in iOS, Android, macOS e sul Web, usare le [app di Office che supportano l'assegnazione di etichette incorporata](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+> 
 
 ## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Dove è possibile reperire informazioni sull'uso delle etichette di riservatezza per le app di Office?
 
@@ -64,7 +74,7 @@ Quando si usano etichette secondarie, non configurare contrassegni visivi, prote
 
 ## <a name="how-do-i-prevent-somebody-from-removing-or-changing-a-label"></a>Come si può impedire a un utente di rimuovere o modificare un'etichetta?
 
-Sebbene esista un' [impostazione dei criteri](configure-policy-settings.md) che richiede agli utenti di indicare perché abbassano un'etichetta di classificazione, rimuovendo un'etichetta o rimuovendo la protezione, questa impostazione non impedisce tali azioni. Per impedire agli utenti di rimuovere o modificare un'etichetta, il contenuto deve essere già protetto e le autorizzazioni di protezione non concedono all'utente il [diritto di utilizzo](configure-usage-rights.md) Esportazione o Controllo completo. 
+Per impedire agli utenti di rimuovere o modificare un'etichetta, il contenuto deve essere già protetto e le autorizzazioni di protezione non concedono all'utente il [diritto di utilizzo](configure-usage-rights.md) Esportazione o Controllo completo. 
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quando a un messaggio di posta elettronica viene applicata un'etichetta, eventuali allegati ottengono automaticamente la stessa etichetta?
 
@@ -74,36 +84,4 @@ No. Quando viene applicata un'etichetta a un messaggio di posta elettronica con 
 
 Per la classificazione, Azure Information Protection usa metadati persistenti che includono un'etichetta di testo non crittografata. Queste informazioni possono essere lette da soluzioni DLP e da altre applicazioni. 
 
-Per altre informazioni su questi metadati, vedere [Etichettare le informazioni archiviate in documenti e messaggi di posta elettronica](configure-policy.md#label-information-stored-in-emails-and-documents).
-
 Per esempi dell'uso di questi metadati con le regole del flusso di posta di Exchange Online, vedere [Configurazione delle regole del flusso di posta per le etichette di Exchange Online](configure-exo-rules.md).
-
-## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>È possibile creare un modello di documento che include automaticamente la classificazione?
-
-Sì. È possibile configurare un'etichetta per [applicare un'intestazione o un piè di pagina che include il nome dell'etichetta](configure-policy-markings.md). Tuttavia, se questo non soddisfa i requisiti, solo per il client di Azure Information Protection (classico), è possibile creare un modello di documento con la formattazione desiderata e aggiungere la classificazione come codice campo. 
-
-Ad esempio, si potrebbe usare una tabella nell'intestazione del documento che visualizza la classificazione. Oppure usare una formulazione specifica per un'introduzione che fa riferimento alla classificazione del documento.
-
-Per aggiungere questo codice di campo nel documento:
-
-1. Etichettare il documento e salvarlo. Questa azione consente di creare nuovi campi di metadati che è ora possibile usare per il codice di campo.
-
-2. Nel documento, posizionare il cursore dove si vuole aggiungere la classificazione dell'etichetta e quindi nella scheda **Inserisci** selezionare **Testo** > **Parti rapide** > **Campo**.
-
-3. Nella finestra di dialogo **Campo** selezionare **Informazioni documento** nell'elenco a discesa **Categorie**. Nell'elenco a discesa **Nome campi** selezionare quindi **DOCPROPERTY**.
-
-4. Nell'elenco a discesa **Proprietà** selezionare **Riservatezza** e selezionare **OK**.
-
-La classificazione dell'etichetta corrente viene visualizzata nel documento e questo valore verrà aggiornato automaticamente ogni volta che si apre il documento o si usa il modello. Pertanto, se l'etichetta cambia, la classificazione visualizzata per questo codice di campo viene aggiornata automaticamente nel documento.
-
-## <a name="how-is-classification-for-emails-using-azure-information-protection-different-from-exchange-message-classification"></a>In che modo la classificazione per i messaggi di posta elettronica utilizza Azure Information Protection diversa dalla classificazione dei messaggi di Exchange?
-
-La classificazione dei messaggi di Exchange è una funzionalità precedente in grado di classificare i messaggi di posta elettronica e viene implementata indipendentemente dalle etichette Azure Information Protection o dalle etichette di riservatezza che applicano
-
-Tuttavia, è possibile integrare questa funzionalità precedente con le etichette, in modo che quando gli utenti classificano un messaggio di posta elettronica usando Outlook sul Web e usando alcune applicazioni di posta elettronica per dispositivi mobili, la classificazione delle etichette e i contrassegni di etichetta corrispondenti vengono aggiunti automaticamente.
-
-È possibile applicare la stessa tecnica per usare le etichette con Outlook sul web e le applicazioni di posta elettronica per dispositivi mobili.
-
-Si noti che non è necessario eseguire questa operazione se si usa Outlook sul Web con Exchange Online, perché questa combinazione supporta l'etichettatura incorporata quando si pubblicano le etichette di riservatezza da Office 365 Security & Compliance Center, Microsoft 365 Security Center o Microsoft Compliance Center.
-
-Se non è possibile usare le etichette predefinite con Outlook sul Web, vedere la procedura di configurazione per questa soluzione alternativa: [integrazione con la classificazione dei messaggi di Exchange legacy](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)

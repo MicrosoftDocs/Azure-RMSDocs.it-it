@@ -4,7 +4,7 @@ description: Informazioni sui passaggi successivi dopo la pianificazione della g
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/21/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,27 +13,33 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1dbced335e32aa874309ead00f7c3f7a5fcc42f9
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 9756710e29c82ef953633697cb989942d1844496
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567680"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382242"
 ---
 # <a name="getting-started-with-tenant-root-keys"></a>Introduzione alle chiavi radice del tenant
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Dopo aver pianificato, creato e configurato la chiave del tenant in base alle esigenze, continuare con i passaggi seguenti:
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+
+Dopo aver [pianificato, creato e configurato la chiave del tenant](plan-implement-tenant-key.md) in base alle esigenze, continuare con i passaggi seguenti:
 
 - [Iniziare a usare la chiave del tenant](#start-using-your-tenant-key)
 - [Considerare la registrazione dell'utilizzo](#consider-usage-logging)
 
 Per altre informazioni sulle operazioni del ciclo di vita supportate per la chiave del tenant, vedere [operazioni per la chiave del tenant Azure Information Protection](./operations-tenant-key.md).
 
-> [!TIP]
-> Se l'organizzazione richiede la protezione locale per contenuti estremamente sensibili, configurare la [protezione HYOK](configure-adrms-restrictions.md) (solo per i client classici) o la [protezione DKE](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (solo client di etichetta unificata).
-> 
+Se l'organizzazione richiede la protezione locale per contenuti estremamente sensibili, configurare la [protezione DKE](plan-implement-tenant-key.md#double-key-encryption-dke) (solo per client con etichetta unificata).
+
+Se è necessaria la protezione locale e si usa il client classico, configurare invece la [protezione HYOK](configure-adrms-restrictions.md) .
+ 
 
 ## <a name="start-using-your-tenant-key"></a>Iniziare a usare la chiave del tenant
 

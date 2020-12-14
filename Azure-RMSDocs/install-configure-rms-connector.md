@@ -1,11 +1,11 @@
 ---
 title: Installazione e configurazione del connettore Azure Rights Management - AIP
 description: Informazioni che consentono di installare e configurare il connettore Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 descritti nell'articolo Distribuzione del connettore Azure Rights Management.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
@@ -13,16 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: ef3a9198af5fb44927438c66262e30acf439f2eb
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568352"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383857"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, 2012 R2 e windows Server 2012*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, 2016, 2012 R2 e Windows Server 2012 *
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per installare e configurare il connettore Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 descritti nell'articolo [Distribuzione del connettore Azure Rights Management](deploy-rms-connector.md).
 
@@ -132,7 +134,7 @@ Se è necessario disinstallare il connettore RMS, eseguire di nuovo la procedura
 
 Se si verificano problemi durante l'installazione, controllare il log di installazione: **%LocalAppData%\Temp\Microsoft Rights Management connector_ \<date and time> . log** 
 
-Ad esempio, il log di installazione potrebbe essere simile a C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
+Ad esempio, il log di installazione potrebbe essere simile a **C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352. log**
 
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorizzazione dei server all'uso del connettore RMS
 Dopo aver installato il connettore RMS in almeno due computer, è possibile autorizzare i server e i servizi desiderati nei quali usare il connettore RMS. Ad esempio, i server che eseguono Exchange Server 2013 o SharePoint Server 2013.
@@ -173,7 +175,7 @@ Per altre informazioni sui diversi ruoli dei server:
         > [!TIP]
         > Se i due account sono diversi, è consigliabile creare un singolo gruppo che contiene entrambi gli account per ridurre al minimo il sovraccarico amministrativo.
 
--   Per i file server che usano Infrastruttura di classificazione file, i servizi associati vengono eseguiti come account di sistema locale ed è quindi necessario autorizzare l'account computer per i file server (ad esempio SERVERNAME$) o un gruppo che contiene tali account.
+-   Per i file server che usano l'infrastruttura di classificazione file, i servizi associati vengono eseguiti come account di sistema locale, pertanto è necessario autorizzare l'account computer per i file server (ad esempio, **ServerName $**) o un gruppo che contiene gli account computer.
 
 Una volta completata l'aggiunta dei server all'elenco, fare clic su **Chiudi**.
 
@@ -191,13 +193,13 @@ Dopo aver creato il nome nel DNS e averlo configurato per un indirizzo IP, confi
 
 Usare le impostazioni seguenti per configurare il cluster NLB:
 
--   Porte: 80 (per HTTP) o 443 (per HTTPS)
+-   **Porte**: 80 (per http) o 443 (per HTTPS)
 
     Per altre informazioni sull'uso di HTTP o HTTPS, vedere la sezione successiva.
 
--   Gruppo di affinità: Nessuno
+-   **Affinità**: nessuna
 
--   Metodo di distribuzione: uguale
+-  **Metodo di distribuzione**: uguale a
 
 Questo nome definito per il sistema con carico bilanciato (per i server che eseguono il servizio del connettore RMS) è il nome del connettore RMS dell'organizzazione che viene usato in seguito quando si configurano i server locali per l'uso di Azure RMS.
 

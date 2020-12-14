@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e7431ebdf016b89e1750b833dc4fca2d9646b195
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 0b13ccec5c4ca4fcdad1ac145a289a727fddd38a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316722"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382021"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per la fase 4 della migrazione da AD RMS ad Azure Information Protection. Di seguito vengono illustrati i passaggi 8 e 9 dell'operazione descritta in [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -149,15 +150,15 @@ Non eseguire ancora il passaggio 5 delle istruzioni del connettore.
 
 Per tutti i server di Exchange, aggiungere i valori del Registro di sistema seguenti a LicenseServerRedirection, a seconda delle versioni di Exchange:
 
-1. Per **exchange 2013 ed exchange 2016,** aggiungere il valore del registro di sistema seguente:
+1. Per **exchange 2013 ed exchange 2016**, aggiungere il valore del registro di sistema seguente:
 
-    - **Percorso del registro di sistema:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Percorso del registro di sistema**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Tipo:** Reg_SZ
+    - **Tipo**: REG_SZ
 
-    - **Valore:** `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
+    - **Valore**: `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
 
-    - **Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+    - **Data**: uno dei seguenti, a seconda che si usi http o HTTPS da Exchange Server al connettore RMS:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
         
@@ -165,13 +166,13 @@ Per tutti i server di Exchange, aggiungere i valori del Registro di sistema segu
 
 1. Per Exchange 2013, aggiungere il seguente valore del registro di sistema aggiuntivo:
 
-    - **Percorso del registro di sistema:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
+    - **Percorso del registro di sistema**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
 
-    - **Tipo:** Reg_SZ
+    - **Tipo**: REG_SZ
 
-    - **Valore:** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/licensing
+    - **Valore**: https:// \<AD RMS Extranet Licensing URL\> /_wmcs/licensing
 
-    - **Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+    - **Data**: uno dei seguenti, a seconda che si usi http o HTTPS da Exchange Server al connettore RMS:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
 

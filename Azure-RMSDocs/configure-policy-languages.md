@@ -5,32 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f39ba64ed2702f4f994d5626697fa5185e546f2b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e6eeada66c38a9c3c0095f22165dbf0454d04290
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568166"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383262"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione Microsoft 365. Per configurare lingue diverse per le etichette di riservatezza, usare il parametro *LocaleSettings* per il cmdlet [set-label](/powershell/module/exchange/policy-and-compliance/set-label) . *
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
-
-> [!NOTE]
-> Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
-> 
-> Se si cercano informazioni per configurare lingue diverse per le etichette di riservatezza, usare Office 365 Security & Compliance PowerShell e il parametro *LocaleSettings* per [set-label](/powershell/module/exchange/policy-and-compliance/set-label).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>
 
 Anche se le etichette predefinite per Azure Information Protection supportano più lingue, è necessario configurare il supporto per i nomi di etichetta e le descrizioni specificate. Per questa configurazione è necessario:
 
@@ -89,13 +85,13 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
 
 Quando gli utenti scaricano un criterio di Azure Information Protection che supporta lingue diverse, la lingua con cui vengono visualizzati i nomi di etichetta e le descrizioni dei comandi per gli utenti è determinata dalla logica seguente:
 
-**Per le etichette e le descrizioni dei comandi che gli utenti visualizzano sulla barra di Azure Information Protection nelle applicazioni Office:**
+**Per le etichette e le descrizioni comandi visualizzate dagli utenti nella barra Azure Information Protection nelle app di Office**:
 
 - Quando è presente una corrispondenza diretta con la lingua dell'app di Office, le descrizioni e i nomi delle etichette vengono visualizzati in tale lingua.
 
 - Quando non è presente alcuna corrispondenza con la lingua dell'app di Office, le descrizioni e i nomi delle etichette vengono visualizzati nella lingua specificata per impostazione predefinita per tutti gli utenti. Tale lingua è in genere l'inglese, ovvero la lingua usata nel criterio predefinito.
 
-**Per le etichette e le descrizioni dei comandi che gli utenti visualizzano quando usano il tasto destro del mouse per classificare e proteggere i file o le cartelle:**
+**Per le etichette e le descrizioni comandi visualizzate dagli utenti quando usano il tasto destro del mouse per classificare e proteggere i file o le cartelle**:
 
 - Quando c'è una corrispondenza diretta con la lingua del sistema operativo, le descrizioni e i nomi delle etichette vengono visualizzati in tale lingua.
 

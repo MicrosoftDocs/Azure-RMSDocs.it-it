@@ -1,9 +1,9 @@
 ---
 title: Conformità e supporto per Azure Information Protection
 description: Informazioni di supporto per Azure Information Protection che includono note legali, informazioni sulla conformità e contratti di servizio.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,14 +12,21 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d811cf998b6e2d5ce04c4e3ff2208030de15e49c
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: d3de605c8427745e51df2ea1ffbee110c9106138
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567848"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383888"
 ---
-# <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
+# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
+
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection supporta altri servizi e si basa anche su altri servizi. Per informazioni correlate ad Azure Information Protection, ma non riferite alla modalità d'uso del servizio Azure Information Protection, esaminare le risorse seguenti:
 
@@ -33,10 +40,14 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 - Tutte le chiavi di crittografia usate da Azure Information Protection sono protette con una chiave radice specifica del cliente che usa RSA 2048 bit. È supportato anche RSA 1024 per compatibilità con versioni precedenti. [Altre informazioni](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Le chiavi radice specifiche del cliente sono gestite da Microsoft o sottoposte a provisioning da parte del cliente in un modulo di protezione hardware nCipher usando "[Bring your own key](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection supporta anche funzionalità limitate con una chiave locale usando il modello "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) per il contenuto a cui si applicano requisiti che indicano che non deve essere protetto con un chiave basata sul cloud.
+- Le chiavi radice specifiche del cliente sono gestite da Microsoft o sottoposte a provisioning da parte del cliente in un modulo di protezione hardware nCipher usando "Bring your own key" (BYOK). Azure Information Protection supporta anche le funzionalità per la protezione locale, per il contenuto che non può essere protetto con una chiave basata sul cloud. Per altre informazioni, vedere [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) (Pianificazione e implementazione della chiave del tenant Azure Information Protection).
 
 - Il servizio Azure Information Protection è ospitato in data center regionali in tutto il mondo. Le chiavi e i criteri di Azure Information Protection rimangono sempre nell'area di distribuzione originale.
- 
+
+    > [!NOTE]
+    > I criteri di Azure Information Protection sono rilevanti solo per il client AIP classico.
+    >
+  
 - Azure Information Protection non trasmette contenuto dei documenti dai client al servizio Azure Information Protection. Le operazioni di crittografia e decrittografia del contenuto vengono eseguite sul posto nel dispositivo client. Per il rendering basato su servizi, invece, le operazioni vengono eseguite all'interno del servizio che esegue il rendering del contenuto. [Altre informazioni](./how-does-it-work.md)
 
 ## <a name="legal-and-privacy"></a>Note legali e privacy

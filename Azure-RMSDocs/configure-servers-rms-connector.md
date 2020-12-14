@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -13,21 +13,22 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e5e5e4195f22be28bd290ab3cac9d96e6ca142e2
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 4f1dd3d2c832cebfe8cb8a994570d81e7544d8cf
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316464"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383007"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows Server 2012 R2, windows Server 2012*
-
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per configurare il server locale che sfrutterà il connettore di Azure Rights Management (RMS). Queste procedure illustrano il passaggio 5 della [distribuzione del connettore Azure Rights Management](deploy-rms-connector.md).
 
-**Prerequisiti:** Prima di iniziare, verificare di avere:
+**Prerequisiti**: prima di iniziare, verificare di avere:
     - Installato e configurato il connettore RMS
     - Verifica dei [prerequisiti](deploy-rms-connector.md#prerequisites-for-the-rms-connector) pertinenti per i server che utilizzeranno il connettore.
 
@@ -63,7 +64,7 @@ Dopo aver apportato queste modifiche alla configurazione, è sempre necessario r
 
 Modificare automaticamente le impostazioni del registro di sistema, usando lo strumento di configurazione server per il connettore Microsoft RMS.
 
-**Alcuni vantaggi:**
+I **vantaggi includono**:
 
 - Non è necessario modificare direttamente il Registro di sistema. Le modifiche necessarie vengono apportate automaticamente mediante uno script.
 
@@ -78,7 +79,7 @@ Per altre informazioni, vedere [come usare lo strumento di configurazione server
 
 I **vantaggi includono**: non è necessaria alcuna connettività a un server che esegue il connettore RMS.
 
-**Gli svantaggi includono:**
+Gli **svantaggi includono**:
 
 - Si verifica un sovraccarico amministrativo, con aumentata possibilità di errore.
 
@@ -88,7 +89,7 @@ I **vantaggi includono**: non è necessaria alcuna connettività a un server che
 
 ### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Come usare lo strumento di configurazione server per il connettore Microsoft RMS
 
-1.  Se non è stato ancora scaricato lo script per lo strumento di configurazione server per il connettore Microsoft RMS **(GenConnectorConfig.ps1),** scaricarlo dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
+1.  Se non è stato ancora scaricato lo script per lo strumento di configurazione server per il connettore Microsoft RMS **(GenConnectorConfig.ps1)**, scaricarlo dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Salvare il file di **GenConnectorConfig.ps1** nel computer in cui verrà eseguito lo strumento. 
 
@@ -215,7 +216,7 @@ Per assicurarsi che sia disponibile la versione supportata, scaricare il client 
 
 2.  Sui server di SharePoint che comunicano con il connettore RMS, effettuare una delle seguenti operazioni:
 
-    -   **Eseguire lo strumento di configurazione server per il connettore Microsoft RMS.** 
+    -   **Eseguire lo strumento di configurazione server per il connettore Microsoft RMS** 
 
         Per altre informazioni, vedere [come usare lo strumento di configurazione server per il connettore Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 
@@ -257,7 +258,7 @@ Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione
 
 2. Sui file server configurati per Infrastruttura di classificazione file e che comunicheranno con il connettore RMS, effettuare una delle seguenti operazioni:
 
-    -   **Eseguire lo strumento di configurazione server per il connettore Microsoft RMS.** 
+    -   **Eseguire lo strumento di configurazione server per il connettore Microsoft RMS** 
     
         Per altre informazioni, vedere [come usare lo strumento di configurazione server per il connettore Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 

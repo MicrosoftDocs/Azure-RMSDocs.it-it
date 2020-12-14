@@ -4,27 +4,29 @@ description: Usare questa procedura per preparare, implementare e gestire Azure 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/23/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3b81890343cd390a42e17dee24708af4367bd8a
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 594d6fed74e2a8330c2a523ddbab5da2dd3d880c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568005"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382497"
 ---
 # <a name="aip-deployment-roadmap-for-classification-labeling-and-protection"></a>Roadmap per la distribuzione di AIP per la classificazione, l'assegnazione di etichette e la protezione
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare i passaggi seguenti come consigli per la preparazione, l'implementazione e la gestione di Azure Information Protection per la propria organizzazione, quando si vogliono classificare, etichettare e proteggere i dati.
 
@@ -32,17 +34,15 @@ Questa roadmap è consigliata per tutti i clienti con una sottoscrizione di supp
 
 Le etichette possono anche applicare la protezione, semplificando questo passaggio per gli utenti. 
 
-Questa roadmap è supportata sia per le etichette AIP create con il client classico sia per le etichette di riservatezza che usano la [piattaforma di assegnazione di etichette unificata](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
-
 > [!TIP]
 > In alternativa, è possibile cercare uno degli articoli seguenti:
 > - [Guida di orientamento per AIP solo per la protezione dei dati](deployment-roadmap-protect-only.md)
 > - [Guide pratiche per scenari comuni che usano Azure Information Protection](how-to-guides.md)
->- [Roadmap della versione Azure Information Protection](information-support.md#information-about-new-releases-and-updates)
+> - [Roadmap della versione Azure Information Protection](information-support.md#information-about-new-releases-and-updates)
 
 ## <a name="deployment-process"></a>Processo di distribuzione
 
-Seguire questa procedura:
+Effettuare i passaggi seguenti:
 
 1. [Verificare la sottoscrizione e assegnare licenze utente](#confirm-your-subscription-and-assign-user-licenses)
 1. [Preparare il tenant per l'uso di Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -78,23 +78,19 @@ Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Inform
 
 ## <a name="configure-and-deploy-classification-and-labeling"></a>Configurare e distribuire le funzionalità di classificazione e assegnazione di etichette
 
-Determinare se si intende usare il client AIP classico o AIP Unified Labeling client o se sono necessari entrambi i client.
+Effettuare i passaggi seguenti:
 
-1. **Determinare quale client si desidera utilizzare.**
+1. **Analizza i file (facoltativo ma consigliato)**
 
-    Decidere quale client sarà necessario a questo punto per poter identificare il portale di gestione da usare quando si configurano le etichette e le impostazioni dei criteri.
+    [Distribuire il client di Azure Information Protection](quickstart-deploy-client.md), quindi [installare](tutorial-install-scanner.md) ed [eseguire lo scanner](tutorial-scan-networks-and-content.md) per individuare le informazioni riservate presenti negli archivi dati locali. 
 
-    Per altre informazioni, vedere [scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+    Le informazioni trovate dallo scanner possono semplificare la tassonomia di classificazione, oltre a fornire informazioni utili sulle etichette richieste e sui file che necessitano di protezione.
 
-1. **Eseguire la scansione dei file (facoltativo ma consigliato).**
-
-    [Distribuire ed eseguire lo scanner AIP](deploy-aip-scanner.md) per individuare le informazioni riservate presenti negli archivi dati locali. Le informazioni trovate dallo scanner possono semplificare la tassonomia di classificazione, oltre a fornire informazioni utili sulle etichette richieste e sui file che necessitano di protezione.
-
-    La modalità di individuazione dello scanner non richiede alcuna configurazione di etichetta o tassonomia ed è quindi adatta in questa fase iniziale della distribuzione. È anche possibile usare questa configurazione dello scanner in parallelo con i passaggi di distribuzione seguenti, fino a quando non si configurano le etichette consigliate o automatiche.
+    La modalità di **individuazione** dello scanner non richiede alcuna configurazione di etichetta o tassonomia ed è quindi adatta in questa fase iniziale della distribuzione. È anche possibile usare questa configurazione dello scanner in parallelo con i passaggi di distribuzione seguenti, fino a quando non si configurano le etichette consigliate o automatiche.
 
 1. **Personalizzare i criteri di AIP predefiniti**.
 
-    Se non si dispone ancora di una strategia di classificazione, usare i [criteri predefiniti Azure Information Protection](./configure-policy-default.md) come base per determinare quali etichette saranno necessarie per i dati. Personalizzare queste etichette secondo necessità per soddisfare le proprie esigenze.
+    Se non si dispone ancora di una strategia di classificazione, usare un criterio predefinito come base per determinare quali etichette saranno necessarie per i dati. Personalizzare queste etichette secondo necessità per soddisfare le proprie esigenze.
 
     Ad esempio, è possibile riconfigurare le etichette con i dettagli seguenti:
 
@@ -103,19 +99,13 @@ Determinare se si intende usare il client AIP classico o AIP Unified Labeling cl
     - Scrivere le linee guida per gli utenti per spiegare quale etichetta applicare a ogni scenario.
     - Se il criterio predefinito è stato creato con etichette che applicano automaticamente la protezione, potrebbe essere necessario rimuovere temporaneamente le impostazioni di protezione o disabilitare l'etichetta durante il test delle impostazioni. 
 
-    Per ulteriori informazioni sulla configurazione delle etichette e delle impostazioni dei criteri, vedere:
+    Le etichette di riservatezza e i criteri di etichettatura per il client di etichetta unificata sono configurati nel centro sicurezza Microsoft 365, nel centro di conformità Microsoft 365 o nel Microsoft 365 Security & Compliance Center. Per ulteriori informazioni, vedere informazioni [sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
-    - **Client classico:** [configurazione dei criteri di Azure Information Protection](./configure-policy.md)
-    - Client per l'assegnazione di etichette **unificata:** [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels)
-    
-1. **Distribuire il client**
+1. **Distribuire il client per gli utenti**
 
-    Una volta configurati i criteri, distribuire il Azure Information Protection client di assegnazione di etichette classico e/o unificato per gli utenti. Fornire formazione per gli utenti e istruzioni specifiche per la selezione delle etichette. 
+    Una volta configurati i criteri, distribuire il client Azure Information Protection per gli utenti. Fornire formazione per gli utenti e istruzioni specifiche per la selezione delle etichette. 
 
-    Per altre informazioni, vedere:
-
-    - **Client classico**: [Guida dell'amministratore](./rms-client/client-admin-guide.md)
-    - **Client per l'assegnazione di etichette unificata**: [Guida dell'amministratore](./rms-client/clientv2-admin-guide.md)
+    Per ulteriori informazioni, vedere la [Guida dell'amministratore client Unified Labeling](./rms-client/clientv2-admin-guide.md).
 
 1. **Introduzione a configurazioni più avanzate**
 
@@ -127,10 +117,7 @@ Determinare se si intende usare il client AIP classico o AIP Unified Labeling cl
     - Personalizzazione di intestazioni, piè di pagina o filigrane
     - Etichettatura consigliata e automatica
 
-    Per altre informazioni, vedere:
-
-    - **Client classico**: [Guida dell'amministratore: configurazioni personalizzate](rms-client/client-admin-guide-customizations.md)
-    - **Client per l'assegnazione di etichette unificata**: [Guida dell'amministratore: configurazioni personalizzate](rms-client/clientv2-admin-guide-customizations.md)
+    Per altre informazioni, vedere [Guida dell'amministratore: configurazioni personalizzate](rms-client/client-admin-guide-customizations.md).
      
     > [!TIP]
     > Se sono state configurate etichette per l'etichettatura automatica, eseguire di nuovo lo [scanner di Azure Information Protection](deploy-aip-scanner-manage.md) negli archivi dati locali in modalità di individuazione e in base ai criteri. 
@@ -147,16 +134,12 @@ Per preparare la protezione dei dati, seguire questa procedura:
 1. **Determinare come si vuole gestire la chiave del tenant**.
 
     Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). 
-
-    > [!NOTE]
-    > A seconda del client, sono disponibili ulteriori opzioni per la sicurezza aggiuntiva (HYOK) o la crittografia a chiave doppia. .
-    >
  
-    Per altre informazioni, vedere [pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md)
+    Per altre informazioni e opzioni per la protezione locale aggiuntiva, vedere [pianificazione e implementazione della chiave del tenant Azure Information Protection](plan-implement-tenant-key.md).
 
 1. **Installare PowerShell per AIP**.
 
-    Installare il modulo PowerShell per AIPService in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. 
+    Installare il modulo PowerShell per **AIPService** in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. 
 
     Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](./install-powershell.md).
 
@@ -180,21 +163,18 @@ Per preparare la protezione dei dati, seguire questa procedura:
 
 ## <a name="configure-labels-and-settings-applications-and-services-for-data-protection"></a>Configurare etichette e impostazioni, applicazioni e servizi per la protezione dei dati
 
-Seguire questa procedura:
+Effettuare i passaggi seguenti:
 
 1. **Aggiornare le etichette per applicare la protezione**
     
-    Usare una delle guide seguenti, a seconda del client:
+    Per altre informazioni, vedere [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels).
 
-    - Distribuzione classica: [come configurare un'etichetta per la protezione Rights Management](./configure-policy-protection.md)
-    - Assegnazione di etichette unificate: [limitare l'accesso al contenuto usando la crittografia in etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels)
-    
     > [!IMPORTANT]
     > Gli utenti possono applicare le etichette in Outlook che applicano la protezione Rights Management anche se Exchange non è configurato per Information Rights Management (IRM). 
     > 
     > Tuttavia, fino a quando Exchange non viene configurato per IRM o [Microsoft 365 crittografia dei messaggi con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), l'organizzazione non otterrà la funzionalità completa dell'uso della protezione Rights Management di Azure con Exchange. Questa configurazione aggiuntiva è inclusa nell'elenco seguente, 2 per Exchange Online e 5 per Exchange locale. 
     > 
-
+    
 1. **Configurare le applicazioni e i servizi di Office**
     
     Configurare le applicazioni e i servizi di Office per le funzionalità IRM (Information Rights Management) in Microsoft SharePoint o Exchange Online. 
@@ -203,7 +183,7 @@ Seguire questa procedura:
 
 1. **Configurare la funzionalità relativa agli utenti con privilegi avanzati per il ripristino dei dati**
     
-    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti anti-malware, configurare gli account di questi servizi come utenti con privilegi avanzati per Azure Rights Management. 
+    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti antimalware, configurare gli account di tali servizi come utenti con privilegi avanzati per Azure Rights Management. 
 
     Per ulteriori informazioni, vedere [configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](./configure-super-users.md).
 
@@ -211,10 +191,7 @@ Seguire questa procedura:
     
     Per gli archivi dati locali, eseguire ora lo [scanner di Azure Information Protection](deploy-aip-scanner.md) in modalità di imposizione in modo che i file vengano etichettati automaticamente.
     
-    Per i file nei PC, usare i cmdlet di PowerShell per classificare e proteggere i file. Per ulteriori informazioni, vedere le guide seguenti, a seconda del client:
-    
-    - **Client classico:** [uso di PowerShell con il client di Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
-    - **Client per l'assegnazione di etichette unificata:** [uso di PowerShell con il client di etichettatura unificato di Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md)
+    Per i file nei PC, usare i cmdlet di PowerShell per classificare e proteggere i file. Per altre informazioni, vedere [uso di PowerShell con Azure Information Protection Unified Labeling client](./rms-client/clientv2-admin-guide-powershell.md).
 
     Per gli archivi dati basati su cloud, usare [Azure Cloud App Security](/cloud-app-security). 
 
@@ -234,7 +211,6 @@ A questo punto è possibile monitorare il modo in cui l'organizzazione usa le et
 Per ulteriori informazioni, vedere i seguenti argomenti:
 
 - [Reporting centrale per Azure Information Protection](reports-aip.md) al momento in anteprima
-- [Registrazione dell'utilizzo locale con monitoraggio eventi di Windows](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) per il client di Azure Information Protection classico
 - [Registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md)
 
 ## <a name="administer-the-protection-service-for-your-tenant-account-as-needed"></a>Amministrare il servizio di protezione per l'account tenant in base alle esigenze
@@ -243,6 +219,25 @@ Quando si inizia a usare il servizio di protezione, PowerShell può essere utile
 
 Per altre informazioni, vedere [amministrazione della protezione da Azure Information Protection tramite PowerShell](./administer-powershell.md).
 
+## <a name="references-for-classic-client-environments"></a>Riferimenti per ambienti client classici
+
+**Pertinente per**: solo client di AIP classico
+
+Se si usa il client classico, usare i riferimenti seguenti anziché quelli collegati sopra:
+
+- **Distribuire ed eseguire lo scanner** fornito con il client classico. Per altre informazioni, vedere [che cos'è il Azure Information Protection scanner classico?](deploy-aip-scanner-classic.md)
+
+- **Configurare i criteri nell'portale di Azure.** Per ulteriori informazioni, vedere [Configuring Azure Information Protection Policy](./configure-policy.md) e [How to Configure an Label for Rights Management Protection](./configure-policy-protection.md).
+
+- **Distribuire il client per gli utenti** usando la [Guida dell'amministratore client classico](./rms-client/client-admin-guide.md) e le [istruzioni di configurazione personalizzate per il client classico](rms-client/client-admin-guide-customizations.md).
+
+- **Istruzioni di PowerShell**: [uso di PowerShell con il client di Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
+
+- **Monitoraggio locale**: [registrazione dell'utilizzo locale con monitoraggio eventi di Windows](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
+
+> [!TIP]
+> Potrebbe anche essere interessante la Guida di [orientamento per la distribuzione di Azure Information Protection solo per la protezione](deployment-roadmap-protect-only.md), supportata solo per il client classico.
+
 ## <a name="next-steps"></a>Passaggi successivi
 
-Quando si distribuisce Azure Information Protection, potrebbe essere utile consultare le [domande frequenti](faqs.md)e la pagina [informazioni e supporto](information-support.md) per ulteriori risorse.
+Quando si distribuisce Azure Information Protection, potrebbe risultare utile consultare le [domande frequenti](faqs.md), i [problemi noti](known-issues.md)e la pagina [informazioni e supporto](information-support.md) per ulteriori risorse.

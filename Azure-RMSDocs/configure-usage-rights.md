@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -13,23 +13,28 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849777"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382888"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configurazione dei diritti di utilizzo per Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> 
+> Per motivi di completezza, questo articolo include valori derivanti dal portale di Azure classico che è stato ritirato l'8 gennaio 2018.
 
 Quando si configurano le etichette di riservatezza o i modelli di protezione per la crittografia, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando l'etichetta o il modello viene selezionato da utenti, amministratori o servizi configurati. Nel portale di Azure è ad esempio possibile selezionare i ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure configurare i singoli diritti. In alternativa, gli utenti potrebbero selezionare e applicare i diritti di utilizzo.
 
 Usare questo articolo per configurare i diritti di utilizzo desiderati per l'applicazione in uso e comprendere come questi diritti sono progettati per essere interpretati dalle applicazioni. Tuttavia, le applicazioni possono variare in base alla modalità di implementazione dei diritti, in modo da consultare sempre la documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima della distribuzione nell'ambiente di produzione.
 
-> [!NOTE] 
-> Per motivi di completezza, questo articolo include valori derivanti dal portale di Azure classico che è stato ritirato l'8 gennaio 2018.
 
 ## <a name="usage-rights-and-descriptions"></a>Diritti di utilizzo e descrizioni
 La tabella seguente elenca e descrive i diritti di utilizzo supportati da Rights Management e illustra come vengono usati e interpretati. Sono elencati in base al **nome comune**, ovvero al nome con cui viene usato o si fa riferimento al diritto di utilizzo nella sua versione descrittiva, e non alla parola singola usata nel codice (valore in **Codifica nei criteri**). 
@@ -38,7 +43,9 @@ In questa tabella:
 
 - Il **valore costante o valore API** è il nome dell'SDK per una chiamata API MSIPC, usato quando si scrive un'applicazione che verifica la presenza di un diritto di utilizzo o aggiunge un diritto di utilizzo a un criterio.
 
-- L'interfaccia di **amministrazione di assegnazione di etichette** fa riferimento alla posizione in cui vengono configurate le etichette di riservatezza e può essere il centro di conformità Microsoft 365, il centro sicurezza Microsoft 365 o il centro sicurezza & conformità di Office 365.
+- L'interfaccia di **amministrazione di assegnazione di etichette** fa riferimento alla posizione in cui vengono configurate le etichette di riservatezza e può essere il centro di conformità Microsoft 365, il centro sicurezza Microsoft 365 o il Microsoft 365 Security & Compliance Center.
+
+    Se si dispone del client classico, configurare le etichette e i criteri di etichetta nella portale di Azure.
 
 
 |Diritto di utilizzo|Descrizione|Implementazione|
@@ -64,7 +71,7 @@ Alcune applicazioni raggruppano i diritti di utilizzo in livelli di autorizzazio
 
 Usare la tabella seguente per un elenco dei livelli di autorizzazione e per un elenco completo dei diritti di utilizzo in essi contenuti. I diritti di utilizzo sono elencati in base al [nome comune](#usage-rights-and-descriptions).
 
-|Livello di autorizzazioni|APPLICAZIONI|Diritti di utilizzo inclusi|
+|Livello di autorizzazioni|Applicazioni|Diritti di utilizzo inclusi|
 |---------------------|----------------|---------------------------------|
 |Visualizzatore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Visualizza diritti; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Consenti macro [[2]](#footnote-2)<br /><br />Nota: per i messaggi di posta elettronica, usare il diritto Revisore anziché questo livello di autorizzazione per assicurarsi che la risposta venga ricevuta come messaggio di posta e non come allegato. Il diritto Revisore è necessario anche quando si invia un messaggio di posta elettronica a un'altra organizzazione che usa il client di Outlook o Outlook Web App. Oppure, per gli utenti dell'organizzazione che sono esentati dall'uso del servizio Azure Rights Management perché sono stati implementati [controlli di onboarding](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy).|
 |Revisore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Rispondi; Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Consenti macro [[2]](#footnote-2)|
@@ -86,16 +93,6 @@ Non applicabile al client Azure Information Protection per Windows.
 
 ###### <a name="footnote-4"></a>Nota a piè di pagina 4
 Non incluso nell'interfaccia di amministrazione per l'assegnazione di etichette, il portale di Azure o il client di Azure Information Protection per Windows.
-
-## <a name="rights-included-in-the-default-templates"></a>Diritti inclusi nei modelli predefiniti
-La tabella seguente elenca i diritti di utilizzo inclusi quando vengono creati i modelli predefiniti. I diritti di utilizzo sono elencati in base al [nome comune](#usage-rights-and-descriptions).
-
-Questi modelli predefiniti vengono creati al momento dell'acquisto della sottoscrizione e i nomi e i diritti di utilizzo possono essere [modificati](configure-policy-templates.md) nella portale di Azure e con [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
-
-|Nome visualizzato del modello|Diritti di utilizzo, dal 6 ottobre 2017 alla data corrente|Diritti di utilizzo prima del 6 ottobre 2017|
-|----------------|--------------------|----------|
-|\<*organization name> -Solo visualizzazione riservata * <br /><br />oppure<br /><br /> *Riservatezza elevata \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Copia, Visualizza diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica|Visualizza, Apri, Leggi|
-|\<*organization name>Riservate <br /><br />oppure <br /><br />*Riservato \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva con nome, Esporta, Copia; Visualizza diritti; Modifica diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica; Controllo completo|Visualizza, Apri, Leggi; Salva con nome, Esporta; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
 
 ## <a name="do-not-forward-option-for-emails"></a>Opzione Non inoltrare per i messaggi di posta elettronica
 
@@ -129,7 +126,7 @@ Questa opzione è disponibile per i tenant che usano Exchange Online e possono e
 - **In Outlook sul Web**
 - **Come altra opzione di protezione dei diritti** per una regola del flusso di posta
 - **Come azione DLP di Office 365**
-- **Da Outlook,** per le versioni elencate nella [tabella delle versioni supportate per le app Microsoft 365 tramite il canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), quando sono disponibili [Microsoft 365 app che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+- **Da Outlook**, per le versioni elencate nella [tabella delle versioni supportate per le app Microsoft 365 tramite il canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), quando sono disponibili [Microsoft 365 app che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
 
 Per ulteriori informazioni sull'opzione Encrypt-Only, vedere il post di Blog seguente del team di Office: [crittografare solo il rollup in office 365 Message Encryption](https://aka.ms/omefeb2018).
 
@@ -161,7 +158,7 @@ All'emittente di Rights Management è sempre concesso il diritto di utilizzo Con
 
 - L'emittente di Rights Management può comunque aprire un documento anche dopo la sua revoca. 
 
-Per impostazione predefinita, questo account è anche il **proprietario di Rights Management** per il contenuto in questione. Questo è il caso in cui l'utente che ha creato il documento o il messaggio avvia la protezione. Esistono alcuni scenari in cui un amministratore o un servizio può proteggere il contenuto per conto degli utenti. Ad esempio:
+Per impostazione predefinita, questo account è anche il **proprietario di Rights Management** per il contenuto in questione. Questo è il caso in cui l'utente che ha creato il documento o il messaggio avvia la protezione. Esistono alcuni scenari in cui un amministratore o un servizio può proteggere il contenuto per conto degli utenti. ad esempio:
 
 - Un amministratore protegge in blocco tutti i file in una condivisione file: l'account amministratore in Azure AD protegge i documenti per gli utenti.
 
@@ -196,6 +193,19 @@ Il periodo di validità della licenza d'uso predefinito per un tenant è di 30 g
 - Quando si configura un modello usando PowerShell, il periodo di validità della licenza d'uso prende il valore dal parametro *LicenseValidityDuration* nei cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) e [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate) .
     
     Per altre informazioni e indicazioni su come configurare questa impostazione con PowerShell, vedere la Guida per ogni cmdlet.
+
+## <a name="rights-included-in-the-default-templates"></a>Diritti inclusi nei modelli predefiniti
+
+**Pertinente per**: solo client di AIP classico
+
+La tabella seguente elenca i diritti di utilizzo inclusi quando vengono creati i modelli predefiniti. I diritti di utilizzo sono elencati in base al [nome comune](#usage-rights-and-descriptions).
+
+Questi modelli predefiniti vengono creati al momento dell'acquisto della sottoscrizione e i nomi e i diritti di utilizzo possono essere [modificati](configure-policy-templates.md) nella portale di Azure e con [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty). 
+
+|Nome visualizzato del modello|Diritti di utilizzo, dal 6 ottobre 2017 alla data corrente|Diritti di utilizzo prima del 6 ottobre 2017|
+|----------------|--------------------|----------|
+|\<*organization name> -Solo visualizzazione riservata * <br /><br />oppure<br /><br /> *Riservatezza elevata \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Copia, Visualizza diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica|Visualizza, Apri, Leggi|
+|\<*organization name>Riservate <br /><br />oppure <br /><br />*Riservato \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva con nome, Esporta, Copia; Visualizza diritti; Modifica diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica; Controllo completo|Visualizza, Apri, Leggi; Salva con nome, Esporta; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
 
 ## <a name="see-also"></a>Vedere anche
 [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md)

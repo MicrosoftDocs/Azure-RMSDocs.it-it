@@ -1,11 +1,11 @@
 ---
 title: Eseguire la migrazione da una chiave protetta tramite HSM a un'altra - AIP
 description: Istruzioni che fanno parte del percorso di migrazione da AD RMS a Azure Information Protection e applicabili solo se la chiave di AD RMS è protetta tramite HSM e si vuole eseguire la migrazione a Azure Information Protection con una chiave del tenant protetta tramite HSM in Azure Key Vault.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/11/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43df572d29d98127de8cbdf594d85cd58f4db483
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 1ce00be84ddde6493c5b8851fa8473024e08dc00
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049089"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382055"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite HSM e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure. 
 
@@ -51,7 +52,7 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
 
    - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. Al contrario, identificare le chiavi usate dal server AD RMS dall'installazione di nCipher e prepararle per il trasferimento, quindi trasferirle a Azure Key Vault. 
         
-        I file di chiave crittografati per nCipher sono denominati **key_<<em>keyAppName</em>>_<<em>ID</em> > ** chiave in locale nel server. Ad esempio: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
+        I file di chiave crittografati per nCipher sono denominati **key_<<em>keyAppName</em>>_<<em>ID</em> >** chiave in locale nel server. Ad esempio: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
         
         Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. L'aspetto sarà simile a https \: //ContosoRMS-kV.Vault.Azure.NET/Keys/ContosoRMS-Byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 

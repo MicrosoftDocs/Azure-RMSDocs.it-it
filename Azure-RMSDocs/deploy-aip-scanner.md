@@ -12,20 +12,20 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35bb27bbb6cbfeb8fa4291c9442c95190b92e28b
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: a8c0d8ae4989a31029979c819ac6c59c390a8f3c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382548"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Informazioni sullo scanner di etichettatura unificata di Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Pertinente per**: [AIP Unified Labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere [che cos'è il Azure Information Protection scanner classico?](deploy-aip-scanner-classic.md)*
 
 >[!NOTE] 
-> Se si usa lo scanner classico, vedere [che cos'è il Azure Information Protection scanner classico?](deploy-aip-scanner-classic.md).
->
 > Per analizzare ed etichettare i file nei repository cloud, usare [Cloud App Security](/cloud-app-security/) invece dello scanner.
 
 Usare le informazioni contenute in questa sezione per informazioni sul Azure Information Protection scanner Unified Labeling, quindi su come installare, configurare, eseguire e, se necessario, risolverlo correttamente.
@@ -53,7 +53,7 @@ Lo scanner usa il client Azure Information Protection e può classificare e prot
 Per configurare le analisi in base alle esigenze, eseguire una delle operazioni seguenti:
 
 - **Eseguire lo scanner solo in modalità di individuazione** per creare report che verificano cosa accade quando i file vengono etichettati.
-- **Eseguire lo scanner per individuare i file con informazioni riservate,** senza configurare le etichette che applicano la classificazione automatica.
+- **Eseguire lo scanner per individuare i file con informazioni riservate**, senza configurare le etichette che applicano la classificazione automatica.
 - **Eseguire lo scanner automaticamente** per applicare le etichette come configurato. 
 - **Definire un elenco di tipi di file** per specificare i file specifici da analizzare o da escludere.
 
@@ -84,7 +84,7 @@ Lo scanner ignora automaticamente i file esclusi dalla classificazione e dalla p
 
 Lo scanner considera anche eventuali elenchi di file definiti in modo esplicito per l'analisi o l'esclusione dall'analisi. Per impostazione predefinita, gli elenchi di file si applicano a tutti i repository di dati e possono anche essere definiti solo per repository specifici.
 
-Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. Ad esempio:
+Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. ad esempio:
 
 ![Configurare i tipi di file da analizzare per lo scanner di Azure Information Protection](./media/scanner-file-types.png)
 
@@ -113,7 +113,7 @@ Per verificare se questa è la conseguenza dell'arresto dello scanner, verificar
 Per ulteriori informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo se necessario, vedere [impostazioni che possono essere modificate per migliorare le prestazioni di rete](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 > [!TIP]
-> Per le farm di SharePoint di grandi dimensioni, potrebbe essere necessario aumentare la soglia di visualizzazione elenco, il cui valore predefinito è **5.000.**
+> Per le farm di SharePoint di grandi dimensioni, potrebbe essere necessario aumentare la soglia di visualizzazione elenco, il cui valore predefinito è **5.000**.
 >
 > Per ulteriori informazioni, vedere la pagina relativa alla [gestione di elenchi di grandi dimensioni e librerie in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 >
@@ -133,7 +133,7 @@ Lo scanner AIP non può etichettare i file nelle circostanze seguenti:
 
     Quando si [modificano i tipi di file da proteggere](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect), è possibile aggiungere altri tipi di file per la protezione.
 
-**Esempio:** Dopo aver ispezionato i file con estensione txt, lo scanner non può applicare un'etichetta configurata solo per la classificazione, perché il tipo di file con estensione txt non supporta solo la classificazione. 
+**Esempio**: dopo aver ispezionato i file con estensione txt, lo scanner non può applicare un'etichetta configurata solo per la classificazione, perché il tipo di file con estensione txt non supporta solo la classificazione. 
 
 Tuttavia, se l'etichetta è configurata per la classificazione e la protezione e il tipo di file txt è incluso per la protezione dello scanner, lo scanner può etichettare il file.
 
@@ -145,12 +145,10 @@ Per ulteriori informazioni sulla distribuzione dello scanner, vedere gli articol
 - [Configurazione e installazione dello scanner AIP](deploy-aip-scanner-configure-install.md)
 - [Esecuzione di analisi mediante lo scanner AIP](deploy-aip-scanner-manage.md)
 
-**Ulteriori informazioni:**
+**Ulteriori informazioni**:
 
 - Consultare il Blog sulle procedure consigliate per lo scanner Unified Labeling: procedure consigliate [per la distribuzione e l'uso dello scanner AIP UL](https://aka.ms/AIPScannerBestPractices)
 
 - Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
 
-- Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
-
-- È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari in cui viene usato PowerShell, vedere [uso di PowerShell con il Azure Information Protection Unified Labeling client](./rms-client/clientv2-admin-guide-powershell.md)
+- È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari in cui viene usato PowerShell, vedere [uso di PowerShell con il Azure Information Protection Unified Labeling client](./rms-client/clientv2-admin-guide-powershell.md).
