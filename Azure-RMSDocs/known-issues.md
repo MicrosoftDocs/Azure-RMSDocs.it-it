@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee493790e4997f8be11244490cf6014c17e6c6fd
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 26e354c883fd2e8ef5244b77635cb3e63ba9bc8e
+ms.sourcegitcommit: d578b609ddefc2580548cdb0a54a8af0ba69fbf4
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384231"
+ms.locfileid: "97388389"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -43,7 +43,7 @@ Per altre informazioni, vedere [Guida dell'amministratore: tipi di file supporta
 
 ## <a name="known-issues-for-aip-and-exploit-protection"></a>Problemi noti per la protezione da AIP e exploit
 
-Il client Azure Information Protection non è supportato nei computer con .NET 2 o 3, in cui è abilitata la [protezione degli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) e causerà l'arresto anomalo delle app di Office.
+Il client Azure Information Protection non è supportato nei computer in cui è installato .NET 2 o 3, in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) e le app di Office si comportano in modo imprevisto.
 
 Se si dispone di una versione di .NET 2 o 3, oltre a una versione di .NET 4. x necessaria per il sistema, assicurarsi di disabilitare la protezione dagli exploit prima di installare AIP. 
 
@@ -69,7 +69,7 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problemi noti di AIP nelle applicazioni di Office
 
-|Feature  |Problemi noti  |
+|Funzionalità  |Problemi noti  |
 |---------|---------|
 |**Più versioni di Office**    | I client di Azure Information Protection, incluse le etichettature classica e unificata, non supportano più versioni di Office nello stesso computer o lo scambio degli account utente in Office.       |
 |**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office: <br><br>-È possibile che si verifichino problemi di prestazioni nelle app di Office.<br>-La barra di Azure Information Protection può sembrare mobile al centro della schermata di Office, in una o in entrambe le visualizzazioni <br><br>Per garantire prestazioni coerenti e che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e in **generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore**.    |
