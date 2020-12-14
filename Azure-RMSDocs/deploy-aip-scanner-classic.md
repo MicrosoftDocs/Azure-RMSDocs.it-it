@@ -12,23 +12,23 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c525903e8b9bca6679455ddc5767c53f28b6d69d
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 77d7ddb996a224e871a89227bd58872989bdc759
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568556"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382854"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Che cos'è il Azure Information Protection scanner classico?
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
-
->[!NOTE]
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
-> Se si usa il client Unified Labeling, vedere [che cos'è il Azure Information Protection scanner Unified Labeling?](deploy-aip-scanner.md).
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [che cos'è il Azure Information Protection scanner Unified Labeling?](deploy-aip-scanner.md). *
 
-Usare le informazioni contenute in questa sezione per informazioni sul Azure Information Protection scanner e su come installare, configurare, eseguire e, se necessario, risolverlo.
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+
+Utilizzare le informazioni contenute in questa sezione per ottenere informazioni sul Azure Information Protection scanner client classico e su come installare, configurare, eseguire e, se necessario, risolverlo correttamente.
 
 Lo scanner AIP viene eseguito come servizio in Windows Server e consente di individuare, classificare e proteggere i file negli archivi dati seguenti:
 
@@ -54,7 +54,7 @@ Lo scanner usa il client Azure Information Protection e può classificare e prot
 Per configurare le analisi in base alle esigenze, eseguire una delle operazioni seguenti:
 
 - **Eseguire lo scanner solo in modalità di individuazione** per creare report che verificano cosa accade quando i file vengono etichettati.
-- **Eseguire lo scanner per individuare i file con informazioni riservate,** senza configurare le etichette che applicano la classificazione automatica.
+- **Eseguire lo scanner per individuare i file con informazioni riservate**, senza configurare le etichette che applicano la classificazione automatica.
 - **Eseguire lo scanner automaticamente** per applicare le etichette come configurato.
 - **Definire un elenco di tipi di file** per specificare i file specifici da analizzare o da escludere.
 
@@ -80,7 +80,7 @@ Lo scanner ignora automaticamente i file esclusi dalla classificazione e dalla p
 
 Lo scanner considera anche eventuali elenchi di file definiti in modo esplicito per l'analisi o l'esclusione dall'analisi. Per impostazione predefinita, gli elenchi di file si applicano a tutti i repository di dati e possono anche essere definiti solo per repository specifici.
 
-Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. Ad esempio:
+Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. ad esempio:
 
 ![Configurare i tipi di file da analizzare per lo scanner di Azure Information Protection](./media/scanner-file-types.png)
 
@@ -112,7 +112,7 @@ Lo scanner AIP non può etichettare i file nelle circostanze seguenti:
 
     Quando si [modificano i tipi di file da proteggere](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect), è possibile aggiungere altri tipi di file per la protezione.
 
-**Esempio:** Dopo aver ispezionato i file con estensione txt, lo scanner non può applicare un'etichetta configurata solo per la classificazione, perché il tipo di file con estensione txt non supporta solo la classificazione.
+**Esempio**: dopo aver ispezionato i file con estensione txt, lo scanner non può applicare un'etichetta configurata solo per la classificazione, perché il tipo di file con estensione txt non supporta solo la classificazione.
 
 Tuttavia, se l'etichetta è configurata per la classificazione e la protezione e il tipo di file txt è incluso per la protezione dello scanner, lo scanner può etichettare il file.
 
@@ -124,10 +124,10 @@ Per ulteriori informazioni sulla distribuzione dello scanner, vedere gli articol
 - [Configurazione e installazione dello scanner AIP](deploy-aip-scanner-configure-install.md)
 - [Esecuzione di analisi mediante lo scanner AIP](deploy-aip-scanner-manage.md)
 
-**Ulteriori informazioni:**
+**Ulteriori informazioni**:
 
 - Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
 
-- Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+- Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari che usano PowerShell, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).

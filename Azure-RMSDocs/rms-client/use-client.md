@@ -12,51 +12,63 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 6ee5850d226f22159bc9a2ff72fc5dbf3a4d7ea9
-ms.sourcegitcommit: 14b6dbd8ae356fca071ac7efabdbfebf74ae8c5b
+ms.openlocfilehash: 536811aa07df108a0c5cbb44bad5ba5ff2e6f292
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "95568593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384877"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection),[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, Windows server 2012 R2, Windows Server 2012 *
+>
+>*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 
-Azure Information Protection offre una soluzione client-server che consente di proteggere i documenti e i messaggi di posta elettronica di un'organizzazione:
+Il Azure Information Protection client Unified Labeling fornisce una soluzione client-server che consente di proteggere i documenti e i messaggi di posta elettronica di un'organizzazione ed è un'alternativa alla [soluzione incorporata di assegnazione di etichette per Microsoft Office](/microsoft-365/compliance/sensitivity-labels). 
 
-- Il client può essere il client di assegnazione di etichette incorporato per Office, il client di Azure Information Protection Unified Labeling per Windows, il client di Azure Information Protection (classico) per Windows o il client di Rights Management.
+Oltre all'integrazione diretta con le applicazioni di Office, il client Unified Labeling include il supporto per Esplora file e PowerShell, in modo che sia possibile classificare e proteggere i file all'esterno di Office. I componenti aggiuntivi includono un visualizzatore per le immagini e i file PDF protetti e uno scanner per gli archivi dati locali.
+
+Il client di etichettatura unificata deve essere installato separatamente nelle app di Office.
+
+Il servizio risiede nel cloud o in locale:
+
+- Il servizio cloud è **Azure Information Protection** e usa il servizio Azure Rights Management per la protezione dei dati
+- Il servizio locale è **Active Directory Rights Management Services** (ad RMS)
+
+## <a name="choose-your-windows-labeling-solution"></a>Scegliere la soluzione Windows Labeling
+
+Le etichette rendono più semplice per gli utenti l'applicazione della protezione e forniscono anche la classificazione per poter tenere traccia e gestire i dati. 
+
+Quando si sceglie una soluzione di etichettatura di Windows, considerare le seguenti differenze di base:
+
+- **Dove vengono scaricati le etichette e i criteri delle etichette** 
+
+    La soluzione incorporata di assegnazione di etichette e il client AIP Unified Labeling usano uno dei seguenti centri di amministrazione: 
     
-    Questi client sono spesso denominati **client di etichettatura di Office**, il client di **etichettatura unificata**, il **client classico** e il **client RMS**, rispettivamente. Indipendentemente dal client utilizzato, si integra con le applicazioni eseguite su computer e dispositivi mobili.
-
-- Il servizio risiede nel cloud o in locale. Il servizio cloud è Azure Information Protection, che usa il servizio Rights Management di Azure per la protezione dei dati. Il servizio locale è Active Directory Rights Management Services, più comunemente noto come AD RMS. 
-
-Tutti questi client si integrano con le applicazioni di Office, ma il client Unified Labeling e il client classico devono essere installati separatamente e supportare funzionalità e componenti aggiuntivi. Ad esempio, questi client includono il supporto per Esplora file, pertanto è possibile classificare e proteggere i file all'esterno di Office. I componenti aggiuntivi includono un visualizzatore per documenti PDF protetti e immagini protette e uno scanner per gli archivi dati locali.
-
-Il client RMS fornisce solo la protezione. Questo client viene installato automaticamente con alcune applicazioni, ad esempio le applicazioni di Office, i client di Azure Information Protection e le applicazioni abilitate per RMS dei fornitori di software. Tuttavia, può anche essere [installato da solo](https://www.microsoft.com/download/details.aspx?id=38396), per supportare la [sincronizzazione dei file da librerie protette con IRM e OneDrive](/onedrive/deploy-on-windows)e per gli sviluppatori che desiderano integrare la protezione di Rights Management in applicazioni line-of-business.
-
-## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Scegliere il client di assegnazione di etichette da usare per i computer Windows
-
-Laddove possibile, usare uno dei client di assegnazione di etichette perché le etichette astraggono la complessità dell'applicazione della protezione per gli utenti, mentre le etichette forniscono anche la classificazione, in modo che sia possibile tenere traccia e gestire i dati.
-
-La scelta di etichettare il client per i computer Windows potrebbe essere influenzata dal portale di gestione usato:
-
-- Il client di assegnazione di etichette predefinito di Office e le impostazioni dei criteri e delle etichette di Azure Information Protection per il download dei client con etichetta unificata dai centri di amministrazione seguenti: 
-    - Centro sicurezza e conformità di Office 365
-    - Centro sicurezza Microsoft 365
+    - Centro sicurezza e conformità di Office 365 
+    - Centro sicurezza Microsoft 365 
     - Centro conformità Microsoft 365
+      
+    Se si usa il client precedente AIP classico, i criteri etichette e etichetta vengono scaricati e gestiti nella portale di Azure. 
 
-- Il client di Azure Information Protection (versione classica) Scarica le impostazioni dell'etichetta e dei criteri dal portale di Azure.
+- **Requisiti di installazione**
 
-Poiché il client di etichettatura unificata e il client classico richiedono un'installazione separata in Office, è necessario scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). 
+    La soluzione incorporata per l'assegnazione di etichette non richiede un'installazione separata.
+
+    Il client di assegnazione unificata di AIP e il client classico legacy richiedono entrambi un'installazione separata in Office. Scaricare e installare il client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).  
+
+    Se è necessario scaricare e installare il client classico legacy, contattare il supporto tecnico e aprire un ticket per accedere al file di installazione. 
 
 Usare le sezioni seguenti per determinare il client migliore per l'organizzazione:
 
-- [Client per l'assegnazione di etichette predefiniti per Office](#built-in-office-labeling-client)
+- [Soluzione predefinita di assegnazione di etichette per Office](#built-in-office-labeling-solution)
 - [Client per l'etichettatura unificata di Azure Information Protection](#azure-information-protection-unified-labeling-client)
 - [Azure Information Protection client classico](#azure-information-protection-classic-client)
 - [Uso di più client nello stesso ambiente](#using-multiple-clients-in-the-same-environment)
@@ -69,9 +81,9 @@ Per ulteriori informazioni, vedere la pagina relativa ai [confronti dettagliati 
 > Si consiglia di distribuire il client di etichettatura unificata se il set di funzionalità e le funzionalità correnti soddisfano i requisiti aziendali.
 > 
 
-### <a name="built-in-office-labeling-client"></a>Client per l'assegnazione di etichette predefiniti per Office
+### <a name="built-in-office-labeling-solution"></a>Soluzione predefinita di assegnazione di etichette per Office
 
-Il client di assegnazione di etichette incorporato per Microsoft Office:
+La soluzione di assegnazione di etichette integrata per la Microsoft Office:
 
 - Richiede un computer Windows con Microsoft 365 applicazioni, versione minima 1910
 - Consente di condividere le etichette e le impostazioni dei criteri che possono essere usate anche da macOS, iOS e Android
@@ -80,33 +92,33 @@ Il client di assegnazione di etichette incorporato per Microsoft Office:
 - Non richiede un'installazione e una manutenzione separate
 - Non disabilitabile.
 
-Se sono necessarie funzionalità disponibili solo per i client di etichettatura classica o unificata, **non usare** il client di assegnazione di etichette per Office predefinito, ad esempio la barra di Information Protection sotto la barra multifunzione. Questa barra rende più semplice la selezione e la visibilità delle etichette.
+Se sono necessarie funzionalità disponibili solo per i client di Azure Information Protection, ad esempio la barra Information Protection sotto la barra multifunzione, **non usare** il client di assegnazione di etichette di Office predefinito. Questa barra rende più semplice la selezione e la visibilità delle etichette.
 
 ### <a name="azure-information-protection-unified-labeling-client"></a>Client per l'etichettatura unificata di Azure Information Protection
 
 Il client di etichettatura unificata richiede un computer Windows e consente di condividere le etichette e le impostazioni dei criteri che possono essere usate anche da macOS, iOS e Android.
 
-**Non usare** il client di etichettatura unificata se le funzionalità di etichetta unificate correnti non soddisfano i requisiti aziendali o se sono state configurate etichette nel portale di Azure di cui non è ancora stata [eseguita la migrazione nell'archivio di etichette unificato](../configure-policy-migrate-labels.md).
+**Non usare** il client di etichettatura unificata se sono state configurate etichette nel portale di Azure di cui non è ancora stata [eseguita la migrazione nell'archivio di etichette unificato](../configure-policy-migrate-labels.md).
 
 ### <a name="azure-information-protection-classic-client"></a>Azure Information Protection client classico
 
-Client classico:
+Il client classico è il client legacy di AIP, supporta funzionalità simili a quelle del client di etichettatura unificata e deve anche essere installato separatamente nelle app di Office. 
 
-- Richiede un computer Windows
-- Consente di accedere alle funzionalità non ancora disponibili nel client di etichetta unificata, ad esempio la conservazione della chiave locale (HYOK) e la versione di disponibilità generale dello scanner per gli archivi dati locali. 
-- Consente di condividere etichette con macOS, iOS e Android
+Il client classico verrà [deprecato nel 2021 marzo](https://aka.ms/aipclassicsunset).
 
-Tuttavia, il client classico ha impostazioni di criteri diverse per macOS, iOS e Android. Pertanto, anche se si desidera utilizzare le funzionalità aggiuntive, è necessario collaborare con un portale di gestione separato e un'esperienza utente per proteggere il contenuto tra i sistemi operativi.
+Usare il client classico solo se non è ancora stata eseguita la migrazione a un'etichetta unificata. Per altre informazioni, vedere [Esercitazione: Migrazione dal client classico al client di etichettatura unificata di Azure Information Protection (AIP)](../tutorial-migrating-to-ul.md).
 
-**Non usare** il client classico se si vuole che le funzionalità più recenti siano disponibili solo nel client di etichettatura unificata o per offrire un'esperienza utente centralizzata e unificata.
+Il client classico ha impostazioni di criteri diverse per macOS, iOS e Android. Pertanto, anche se si desidera utilizzare le funzionalità aggiuntive, è necessario collaborare con un portale di gestione separato e un'esperienza utente per proteggere il contenuto tra i sistemi operativi.
+
+Laddove possibile, è consigliabile usare il client Unified Labeling anziché il client classico.
 
 ### <a name="using-multiple-clients-in-the-same-environment"></a>Uso di più client nello stesso ambiente
 
 È possibile utilizzare client diversi nello stesso ambiente per supportare requisiti aziendali diversi, come illustrato nel seguente esempio di distribuzione. In un ambiente client misto è consigliabile usare le etichette unificate in modo che i client condividano lo stesso set di etichette per semplificare l'amministrazione. Per impostazione predefinita, i nuovi clienti hanno etichette unificate, perché i tenant si trovano nella piattaforma di etichettatura unificata. Per ulteriori informazioni, vedere [come è possibile determinare se il tenant si trova nella piattaforma di etichettatura unificata?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-Quando si dispone di un computer Windows che esegue Microsoft 365 app con una versione minima 1910 e uno dei client di Azure Information Protection è installato, per impostazione predefinita il client di assegnazione di etichette incorporato è disabilitato nelle app di Office. Tuttavia, è possibile modificare questo comportamento per usare il client di assegnazione di etichette incorporato solo per le app di Office. Con questa configurazione, il client di Azure Information Protection (classica o unificata) rimane disponibile per l'assegnazione di etichette in Esplora file, PowerShell e lo scanner. Per istruzioni su come disabilitare il client Azure Information Protection nelle app Microsoft 365, vedere la sezione [client di assegnazione di etichette incorporato e il](/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) client di Azure Information Protection dalla documentazione sulla conformità Microsoft 365.
+Quando si dispone di un computer Windows che esegue Microsoft 365 app con una versione minima 1910 e uno dei client di Azure Information Protection è installato, per impostazione predefinita la soluzione incorporata di assegnazione di etichette è disabilitata nelle app di Office. Tuttavia, è possibile modificare questo comportamento per usare la soluzione di assegnazione di etichette incorporata solo per le app di Office. Con questa configurazione, il client Azure Information Protection rimane disponibile per l'assegnazione di etichette in Esplora file, PowerShell e lo scanner. Per istruzioni su come disabilitare il client Azure Information Protection nelle app Microsoft 365, vedere la sezione relativa alla [soluzione di assegnazione di etichette incorporata di Office e il client di Azure Information Protection](/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) dalla documentazione sulla conformità Microsoft 365.
 
-##### <a name="example-deployment-strategy"></a>Strategia di distribuzione di esempio:
+##### <a name="sample-deployment-strategy"></a>Strategia di distribuzione di esempio
 
 - Per la maggior parte degli utenti, si distribuisce il Azure Information Protection client Unified Labeling perché questo client soddisfa le esigenze aziendali per questi utenti. 
     
@@ -114,60 +126,70 @@ Quando si dispone di un computer Windows che esegue Microsoft 365 app con una ve
 
 - È anche possibile installare il client di assegnazione di etichette unificato per testare lo scanner Azure Information Protection.
 
-- Per un subset di utenti, si distribuisce il client classico perché questi utenti richiedono etichette che applicano la protezione HYOK (Holding your own key).
+- Per un subset di utenti, si distribuisce il client classico perché questi utenti richiedono etichette che applicano la protezione[HYOK](../configure-adrms-restrictions.md)(Holding your own key).
     
     Per questi utenti hanno un'esperienza di etichettatura leggermente diversa quando usano questo client. Ad esempio, viene visualizzato un pulsante **Proteggi** anziché un pulsante di **riservatezza** nelle app di Office. In qualità di amministratore, è necessario gestire le etichette per le impostazioni di HYOK e le impostazioni dei criteri in un centro di gestione diverso per le etichette e le impostazioni per le altre piattaforme client.
 
-- Sono presenti archivi dati locali con documenti che devono essere analizzati per ottenere informazioni riservate oppure classificati e protetti. Per l'uso in produzione, si distribuisce il client classico nei server per eseguire lo scanner Azure Information Protection.
+- Sono presenti archivi dati locali con documenti che devono essere analizzati per ottenere informazioni riservate oppure classificati e protetti. Per l'uso in produzione, si distribuisce il client di etichettatura unificata nei server per eseguire lo [scanner Azure Information Protection](../deploy-aip-scanner.md).
 
-## <a name="compare-the-labeling-clients-for-windows-computers"></a>Confrontare i client di etichettatura per i computer Windows
+#### <a name="rights-management-client"></a>Client Rights Management
 
-Usare la tabella seguente per confrontare le funzionalità supportate dai tre client di etichettatura per i computer Windows.
+Il client RMS fornisce solo la protezione e viene installato automaticamente con alcune applicazioni, incluse le applicazioni di Office, l'etichetta unificata AIP e i client classici e le applicazioni abilitate per RMS da altri fornitori di software. 
+
+È anche possibile [installare il client RMS manualmente](https://www.microsoft.com/download/details.aspx?id=38396), per supportare la [sincronizzazione dei file dalle librerie protette con IRM e OneDrive](/onedrive/deploy-on-windows)e per gli sviluppatori che desiderano integrare la protezione di Rights Management in applicazioni line-of-business.
+
+## <a name="compare-the-labeling-solutions-for-windows-computers"></a>Confrontare le soluzioni di etichettatura per i computer Windows
+
+Usare la tabella seguente per confrontare le funzionalità supportate dalle tre soluzioni di assegnazione di etichette per i computer Windows.
 
 Per confrontare le funzionalità di riservatezza predefinite di Office in diverse piattaforme del sistema operativo (Windows, macOS, iOS e Android) e per il Web, vedere la documentazione relativa alla conformità del Microsoft 365, [supporto per le funzionalità di etichetta di riservatezza nelle app](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Questa documentazione include anche i numeri di build di Office o le informazioni sul canale di aggiornamento di Office per le funzionalità supportate.
 
-|Funzionalità|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
+Per altri dettagli, vedere anche:
+- [Confronti dettagliati per i client di Azure Information Protection](#detailed-comparisons-for-the-azure-information-protection-clients)
+- [Funzionalità non previste nel client di Azure Information Protection Unified Labeling](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)
+
+|Feature|Client classico|Client di etichetta unificato|Soluzione di assegnazione di etichette incorporata di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
-|Etichettatura manuale:| **Sì** | **Sì** |**Sì** |
-|Etichetta predefinita:| **Sì** | **Sì** | **Sì** |
-|Etichettatura consigliata o automatica: <br />-Per Word, Excel, PowerPoint, Outlook| **Sì** | **Sì** | **Sì** |
-|Etichettatura obbligatoria:| **Sì** | **Sì** | No |
-|Autorizzazioni definite dall'utente per un'etichetta: <br />-Non trasmettere per i messaggi di posta elettronica| **Sì** | **Sì** | **Sì** |
-|Autorizzazioni definite dall'utente per un'etichetta: <br />-Autorizzazioni personalizzate per Word, Excel, PowerPoint| **Sì** | **Sì** | **Sì** |
-|Supporto multilingue per le etichette:| **Sì** | **Sì** |**Sì** |
-|Ereditarietà delle etichette dagli allegati di posta elettronica:| **Sì** | **Sì**  |No |
-|Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Popup dei messaggi in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| **Sì** <sup>1</sup> | **Sì** <sup>2</sup> | No |
-|Scanner per gli archivi dati locali:| **Sì** | **Sì <br />** | No |
-|Creazione di report centrale (analisi):| **Sì** | **Sì** | No |
-|Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta:| **Sì** | **Sì** <sup>3</sup>| No |
-|Barra di Information Protection nelle app Office:| **Sì** | **Sì**| No |
-|Contrassegni visivi come azione etichetta (intestazione, piè di pagina, filigrana):| **Sì** | **Sì** | **Sì**|
-|Contrassegni visivi per app:| **Sì** | **Sì** | **Sì** <sup>9</sup>|
-|Contrassegni visivi dinamici con variabili:| **Sì** | **Sì** | **Sì** <sup>9</sup>|
-|Rimuovi contrassegno contenuto esterno nell'app:| **Sì**| **Sì**| No|
-|Etichetta con Esplora file:| **Sì** | **Sì** | No |
-|Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| **Sì** | **Sì** | No|
-|Supporto di PPDF per l'applicazione di etichette:| **Sì** | No | No |
-|Cmdlet per l'assegnazione di etichette di PowerShell:| **Sì** | **Sì**  | No |
-|Supporto offline per le azioni di protezione:| **Sì** | **Sì** <sup>4</sup> | **Sì** |
-|Gestione manuale dei file di criteri per i computer disconnessi:| **Sì** |**Sì**| No |
-|Supporto HYOK:| **Sì** | No | No |
-|Registrazione dell'utilizzo in Visualizzatore eventi:| **Sì** | No |No |
-|Visualizzare il pulsante non trasmettere in Outlook:| **Sì** | No | No |
-|Traccia documentata protetta:| **Sì** | **Sì** <sup>5</sup> | No |
-|Revocare i documenti protetti:| **Sì** | No | No |
-|Modalità di sola protezione (nessuna etichetta):| **Sì** | No | No |
-|Supporto per il cambio di account:| No | No | **Sì** |
-|Supporto per Servizi Desktop remoto:| **Sì** | **Sì** | **Sì** |
-|Supporto per AD RMS:| **Sì** | N. <sup>6</sup> | No |
-|Supporto per i formati di Microsoft Office 97-2003| **Sì** | **Sì** | Nessun <sup>8</sup>|
-|Crittografia a chiave doppia:| No | **Sì** | No|
-|Cloud della community per enti pubblici: | **Sì** | **Sì** | No|
+|**Etichettatura manuale**| ![sì](../media/yes-icon.png)   | ![sì](../media/yes-icon.png)   |![sì](../media/yes-icon.png) |
+|**Etichetta predefinita**| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)|
+|**Etichettatura consigliata o automatica** <br />Per Word, Excel, PowerPoint, Outlook|![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
+|**Etichettatura obbligatoria**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
+|**Autorizzazioni definite dall'utente per un'etichetta**: <br />Non inviare i messaggi di posta elettronica| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
+|**Autorizzazioni definite dall'utente per un'etichetta**: <br />Autorizzazioni personalizzate per Word, Excel, PowerPoint| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
+|**Supporto multilingue per le etichette**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |![sì](../media/yes-icon.png) |
+|**Ereditarietà delle etichette dagli allegati di posta elettronica**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)  | ![No](../media/no-icon.png)|
+|**Personalizzazioni che includono**:<br />- Etichetta predefinita per la posta elettronica<br />-Popup dei messaggi in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| ![Sì ](../media/yes-icon.png) <sup>1</sup> | ![Sì ](../media/yes-icon.png) <sup>2</sup> |  ![No](../media/no-icon.png)|
+|**Scanner per gli archivi dati locali**| ![sì](../media/yes-icon.png) |  ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
+|**Reporting centrale (analisi)**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
+|**Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta**| ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>3</sup>|  ![No](../media/no-icon.png)|
+|**Barra di Information Protection nelle app Office**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)|  ![No](../media/no-icon.png)|
+|**Contrassegni visivi come azione etichetta**<br> (intestazione, piè di pagina, filigrana)| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)|
+|**Contrassegni visivi per app**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>9</sup>|
+|**Contrassegni visivi dinamici con variabili**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>9</sup>|
+|**Rimuovi contrassegno contenuto esterno nell'app**| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)| ![No](../media/no-icon.png)|
+|**Etichetta con Esplora file**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
+|**Un visualizzatore per i file protetti** <br> (testo, immagini, PDF, Pfile)| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![No](../media/no-icon.png)|
+|**Supporto di PPDF per l'applicazione di etichette**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
+|**Cmdlet per l'assegnazione di etichette di PowerShell**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)  |  ![No](../media/no-icon.png)|
+|**Supporto offline per le azioni di protezione**| ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>4</sup> | ![sì](../media/yes-icon.png) |
+|**Gestione manuale dei file di criteri per i computer disconnessi**| ![sì](../media/yes-icon.png) |![sì](../media/yes-icon.png)|  ![No](../media/no-icon.png)|
+|**Supporto di HYOK**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
+|**Registrazione dell'utilizzo in Visualizzatore eventi**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)| ![No](../media/no-icon.png)|
+|**Visualizzare il pulsante Non inoltrare in Outlook**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
+|**Rileva documentazione protetta**| ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>5</sup> |  ![No](../media/no-icon.png)|
+|**Revocare i documenti protetti**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
+|**Modalità di sola protezione** (nessuna etichetta)| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
+|**Supporto per il cambio di account**|  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)| ![sì](../media/yes-icon.png) |
+|**Supporto per Servizi Desktop remoto**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
+|**Supporto per AD RMS**| ![sì](../media/yes-icon.png) |  ![n. ](../media/no-icon.png) <sup>6</sup> |  ![No](../media/no-icon.png)|
+|**Supporto per i formati di Microsoft Office 97-2003**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![Nessun ](../media/no-icon.png) <sup>8</sup>|
+|**Crittografia a chiave doppia**|  ![No](../media/no-icon.png)| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
+|**Cloud della community per enti pubblici** | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
 | | | | |
 
-**Note a piè**
+**Note a piè** di pagina:
 
-<sup>1</sup> queste impostazioni e molte altre sono supportate come [Impostazioni client avanzate che è possibile configurare nel portale di Azure](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal).
+<sup>1</sup> queste impostazioni e molte altre sono supportate come [Impostazioni client avanzate che è possibile configurare nel portale di Azure](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
 
 <sup>2</sup> queste impostazioni e molte altre sono supportate come [Impostazioni avanzate configurate con PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
@@ -179,35 +201,34 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 
 <sup>6</sup> le azioni di assegnazione di etichette e protezione non sono supportate. Tuttavia, per una distribuzione AD RMS, il visualizzatore può aprire i documenti protetti quando si usa l' [estensione Active Directory Rights Management Services Mobile Device](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
-<sup>8</sup> mentre i client AIP supportano entrambi i formati di file Microsoft Office 97-2003, ad esempio **. doc,** nonché i formati XML Office aperti, ad esempio **. docx,** l'etichetta predefinita supporta solo formati Open XML.
+<sup>8</sup> mentre i client AIP supportano entrambi i formati di file Microsoft Office 97-2003, ad esempio **. doc**, nonché i formati XML Office aperti, ad esempio **. docx**, l'etichetta predefinita supporta solo formati Open XML.
 
-<sup>9</sup> per ulteriori informazioni sul supporto per i contrassegni di contenuto dinamici e per i contrassegni di contenuto per app per il client di assegnazione di etichette incorporato, vedere la [documentazione Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
+<sup>9</sup> per ulteriori informazioni sul supporto per i contrassegni di contenuto dinamici e per i contrassegni di contenuto per app per la soluzione incorporata di assegnazione di etichette, vedere la [documentazione Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables).
 
 ### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Confronti dettagliati per i client di Azure Information Protection
 
-Quando il client di Azure Information Protection (classico) e il Azure Information Protection client di etichetta unificata supportano entrambe la stessa funzionalità, usare la tabella seguente per identificare alcune differenze funzionali tra i due client.
+Quando il client di Azure Information Protection classico e il client Azure Information Protection Unified Labeling supportano entrambe la stessa funzionalità, usare gli elenchi seguenti per identificare alcune differenze funzionali tra i due client:
+
 
 |Funzionalità |Client classico|Client di etichetta unificato|
 |--------------|-----------------------------------|-----------------------------------------------------------|
-|Configurazione:| Opzione per installare i criteri demo locali | Nessun criterio demo locale|
-|Selezione e visualizzazione di etichette se applicate nelle app Office:|Dal pulsante **Proteggi** nella barra multifunzione <br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|Dal pulsante **Riservatezza** sulla barra multifunzione<br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|
-|Gestione della barra di Information Protection nelle app Office:|Per gli utenti: <br /><br />- Opzione per visualizzare o nascondere la barra dal pulsante **Proteggi** sulla barra multifunzione<br /><br />- Quando un utente seleziona l'opzione per nascondere la barra, per impostazione predefinita, la barra viene nascosta in tale app, ma continua a essere automaticamente visualizzata nelle app appena aperte <br /><br /> Per gli amministratori: <br /><br />- Impostazioni dei criteri per visualizzare o nascondere automaticamente la barra quando un'app viene aperta per la prima volta e per controllare se la barra rimane automaticamente nascosta per le app appena aperte dopo che un utente ha selezionato l'opzione per nascondere la barra|Per gli utenti: <br /><br />- Opzione per visualizzare o nascondere la barra dal pulsante **Riservatezza** sulla barra multifunzione<br /><br />- Quando un utente seleziona l'opzione per nascondere la barra, la barra viene nascosta in tale app e anche nelle app appena aperte <br /><br />Per gli amministratori: <br /><br />-Impostazione di PowerShell per gestire la barra |
-|Colore dell'etichetta: | Configurare nel portale di Azure | Conservati dopo la migrazione delle etichette e configurabili con [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
-|Le etichette supportano lingue diverse:| Configurare nel portale di Azure | Configurare tramite [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
-|Aggiornamento criteri: | Quando si apre un'app Office <br /><br /> Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br /><br />Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br /><br />Ogni 24 ore <br /><br />Per lo scanner: ogni ora e quando il servizio viene avviato e il criterio è più vecchio di un'ora| Quando si apre un'app Office <br /><br /> Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br /><br />Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br /><br />Ogni 4 ore <br /><br />Per lo scanner: ogni 4 ore|
-|Formati supportati per PDF:| Protezione: <br /><br /> - Standard ISO per la crittografia dei file PDF (impostazione predefinita) <br /><br /> - Estensione ppdf <br /><br /> Consumo: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br />- Estensione ppdf<br /><br />- Protezione IRM SharePoint| Protezione: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br /> <br /><br /> Consumo: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br />- Estensione ppdf<br /><br />- Protezione IRM SharePoint|
-|File protetti in modo generico (con estensione Pfile) aperti con il Visualizzatore:| Il file viene aperto nell'app originale, dove può essere visualizzato, modificato e salvato senza protezione | Il file viene aperto nell'app originale, dove può essere visualizzato e modificato, ma non salvato|
-|Cmdlet supportati:| Cmdlet per l'assegnazione di etichette e i cmdlet per la sola protezione | Cmdlet per l'assegnazione di etichette:<br /><br /> Set-AIPFileClassification e Set-AIPFileLabel non supportano il parametro *owner* <br /><br /> È inoltre presente un singolo commento "No label to apply" per tutti gli scenari in cui non viene applicata un'etichetta <br /><br /> Set-AIPFileClassification supporta il parametro *whatIf* , in modo che possa essere eseguito in modalità di individuazione <br /><br /> Set-AIPFileLabel non supporta il parametro *EnableTracking* <br /><br /> Get-AIPFileStatus non restituisce informazioni sulle etichette da altri tenant e non visualizza il parametro *RMSIssuedTime*<br /><br />Inoltre, il parametro *LabelingMethod* per Get-AIPFileStatus Visualizza **Privileged** o **standard** anziché **Manual** o **Automatic**. Per altre informazioni, vedere la [documentazione online](/powershell/module/azureinformationprotection/get-aipfilestatus).|
-|Richieste di giustificazione (se configurate) per ogni azione in Office: | Frequenza: per file <br /><br /> Riduzione del livello di riservatezza <br /><br /> Rimozione di un'etichetta<br /><br /> Rimozione della protezione | Frequenza: per sessione <br /><br /> Riduzione del livello di riservatezza<br /><br /> Rimozione di un'etichetta|
-|Azioni di rimozione di etichette applicate: | Viene chiesta conferma all'utente <br /><br />L'etichetta predefinita o l'etichetta automatica (se configurata) non viene applicata automaticamente alla successiva apertura del file nell'app Office  <br /><br />| Non viene chiesta conferma all'utente<br /><br /> L'etichetta predefinita o l'etichetta automatica (se configurata) viene applicata automaticamente alla successiva apertura del file nell'app Office|
-|Etichette automatiche e consigliate: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
-|Supporto degli ordini per le etichette secondarie sugli allegati: | Abilitato con un' [impostazione client avanzata](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Abilitata per impostazione predefinita, nessuna configurazione richiesta|
-|Modificare il comportamento di protezione predefinito per i tipi di file: | È possibile utilizzare le [modifiche del registro di sistema](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) per eseguire l'override delle impostazioni predefinite di protezione nativa e generica | È possibile usare [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) per modificare i tipi di file che vengono protetti|
-|Ripetizioni automatiche | Le ripetizioni complete vengono eseguite automaticamente ogni volta che lo scanner rileva una modifica nei criteri o nelle impostazioni di assegnazione di etichette | A partire dalla versione [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), gli amministratori possono scegliere di ignorare una ripetizione completa dopo avere apportato modifiche alle impostazioni del processo di analisi del contenuto o dei criteri. |
-|Individuazione della rete |Le funzionalità di individuazione di rete non sono disponibili per lo scanner classico | Gli amministratori possono individuare ulteriori repository rischiosi analizzando un intervallo o un indirizzo IP specificato.|
+|**Configurazione**| Opzione per installare i criteri demo locali | Nessun criterio demo locale|
+|**Selezione e visualizzazione delle etichette quando vengono applicate nelle app di Office**|Dal pulsante **Proteggi** nella barra multifunzione <br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|Dal pulsante **Riservatezza** sulla barra multifunzione<br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|
+|**Gestire la barra di Information Protection nelle app di Office**|**Per gli utenti**:<br />Opzione per mostrare o nascondere la barra dal pulsante **Proteggi** sulla barra multifunzione<br /><br>Quando un utente seleziona per nascondere la barra, per impostazione predefinita la barra è nascosta nell'app, ma continua a essere visualizzata automaticamente nelle app appena aperte <br /><br /> **Per gli amministratori**: <br />Impostazioni dei criteri per mostrare o nascondere automaticamente la barra quando si apre un'app e controllare se la barra rimane automaticamente nascosta per le app appena aperte dopo che un utente seleziona per nascondere la barra|**Per gli utenti**: <br />Opzione che consente di visualizzare o nascondere la barra dal pulsante **sensibilità** sulla barra multifunzione. <br><br />Quando un utente seleziona per nascondere la barra, la barra è nascosta nell'app e anche nelle app appena aperte <br /><br />**Per gli amministratori**: <br />Impostazione di PowerShell per gestire la barra |
+|**Colore etichetta**| Configurare nel portale di Azure | Conservati dopo la migrazione delle etichette e configurabili con [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
+|**Le etichette supportano lingue diverse**| Configurare nel portale di Azure | Configurare tramite [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
+|**Aggiornamento dei criteri**| -Quando si apre un'app di Office <br /> -Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br />-Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br />Ogni 24 ore <br />-Per lo scanner: ogni ora e quando il servizio viene avviato e il criterio è più vecchio di un'ora| -Quando si apre un'app di Office <br />-Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br />-Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br />Ogni 4 ore <br />-Per lo scanner: ogni 4 ore|
+|**Formati supportati per PDF**| **Protezione**: <br /> - Standard ISO per la crittografia dei file PDF (impostazione predefinita) <br /> - Estensione ppdf <br /><br> **Consumo**: <br /> - Standard ISO per la crittografia dei file PDF <br />- Estensione ppdf<br />- Protezione IRM SharePoint| **Protezione**: <br /> - Standard ISO per la crittografia dei file PDF <br /> <br /> **Consumo**: <br /> - Standard ISO per la crittografia dei file PDF <br />- Estensione ppdf<br />- Protezione IRM SharePoint|
+|**File protetti in modo generico (con estensione Pfile) aperti con il Visualizzatore**| Il file viene aperto nell'app originale, dove può essere visualizzato, modificato e salvato senza protezione | Il file viene aperto nell'app originale, dove può essere visualizzato e modificato, ma non salvato|
+|**Cmdlet supportati**| -Cmdlet per l'assegnazione di etichette <br> -Cmdlet per solo la protezione | **Cmdlet per l'assegnazione di etichette**:<br /> [Set-AIPFileClassification](/powershell/module/azureinformationprotection/get-aipfileclassification) e [set-AIPFileLabel](/powershell/module/azureinformationprotection/get-aipfilelabel) non supportano il parametro **owner** <br /> È inoltre presente un singolo commento "No label to apply" per tutti gli scenari in cui non viene applicata un'etichetta <br /><br /> [Set-AIPFileClassification](/powershell/module/azureinformationprotection/get-aipfileclassification) supporta il parametro **whatIf** , in modo che possa essere eseguito in modalità di individuazione <br /><br /> [Set-AIPFileLabel](/powershell/module/azureinformationprotection/get-aipfilelabel) non supporta il parametro *EnableTracking* <br /><br /> [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) non restituisce informazioni sulle etichette da altri tenant e non Visualizza il parametro **RMSIssuedTime**<br />Inoltre, il parametro **LabelingMethod** per [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) Visualizza **Privileged** o **standard**, anziché **Manual** o **Automatic**.|
+|**Richieste di giustificazione (se configurate) per azione in Office** | -Frequency: per file <br /> -Riduzione del livello di sensibilità <br /> -Rimozione di un'etichetta<br /> -Rimozione della protezione | -Frequency: per sessione <br /> -Riduzione del livello di sensibilità<br />-Rimozione di un'etichetta|
+|**Rimuovi azioni etichetta applicate** | Viene chiesta conferma all'utente <br /><br />L'etichetta predefinita o un'etichetta automatica (se configurata) non viene applicata automaticamente alla prossima apertura del file da parte dell'app di Office  | All'utente non viene richiesto di confermare<br /><br /> L'etichetta predefinita o un'etichetta automatica (se configurata) viene applicata automaticamente la volta successiva che l'app di Office apre il file|
+|**Etichette automatiche e consigliate** | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br />- Conteggio univoco/non univoco <br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br />- Solo conteggio univoco <br />- Conteggio minimo e massimo <br />- Supporto di AND e OR con i tipi di informazioni <br />- Dizionario di parole chiave<br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
+|**Supporto degli ordini per le etichette secondarie sugli allegati** | Abilitato con un' [impostazione client avanzata](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Abilitata per impostazione predefinita, nessuna configurazione richiesta|
+|**Modificare il comportamento di protezione predefinito per i tipi di file**| Usare le [modifiche del registro di sistema](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) per eseguire l'override delle impostazioni predefinite di protezione nativa e generica | Usare [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) per modificare i tipi di file da proteggere|
+|**Ripetizioni automatiche** | Le ripetizioni complete vengono eseguite automaticamente ogni volta che lo scanner rileva una modifica nei criteri o nelle impostazioni di assegnazione di etichette | A partire dalla versione [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), gli amministratori possono scegliere di ignorare una ripetizione completa dopo avere apportato modifiche alle impostazioni del processo di analisi del contenuto o dei criteri. |
+|**Individuazione della rete** |Le funzionalità di individuazione di rete non sono disponibili per lo scanner classico | Gli amministratori possono individuare ulteriori repository rischiosi analizzando un intervallo o un indirizzo IP specificato.|
 | | | |
-
-Per un confronto dettagliato delle differenze di comportamento per specifiche impostazioni di protezione, vedere [confronto tra il comportamento delle impostazioni di protezione per un'etichetta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
 ### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Funzionalità non previste nel client di Azure Information Protection Unified Labeling
 
@@ -232,16 +253,15 @@ Anche se il Azure Information Protection client di assegnazione unificata di eti
 
 ### <a name="parent-labels-and-their-sublabels"></a>Etichette padre ed etichette secondarie 
 
-Il client Azure Information Protection (classico) non supporta le configurazioni che specificano un'etichetta padre con etichette secondarie. Queste configurazioni includono la specifica di un'etichetta predefinita e un'etichetta per la classificazione consigliata o automatica. Quando un'etichetta ha etichette secondarie, è possibile specificare una delle etichette secondarie, ma non l'etichetta padre.
+Il client Azure Information Protection classico non supporta le configurazioni che specificano un'etichetta padre con etichette secondarie. Queste configurazioni includono la specifica di un'etichetta predefinita e un'etichetta per la classificazione consigliata o automatica. Quando un'etichetta ha etichette secondarie, è possibile specificare una delle etichette secondarie, ma non l'etichetta padre.
 
 Per motivi di parità, nemmeno il client per l'etichettatura unificata di Azure Information Protection supporta l'applicazione di etichette padre con etichette secondarie, anche se è possibile selezionare queste etichette nei centri di amministrazione. In questo scenario il client di etichettatura unificata Azure Information Protection non applicherà l'etichetta padre.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per installare e configurare i client di Azure Information Protection, utilizzare la seguente documentazione:
+Per installare e configurare il client di Azure Information Protection Unified Labeling, vedere:
 
-- [Client Azure Information Protection](AIP-client.md)
+- [Client di etichettatura unificata di Azure Information Protection: guida per gli amministratori](clientv2-admin-guide.md)
+- [Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection](clientv2-user-guide.md)
 
-- [Client per l'etichettatura unificata di Azure Information Protection](unifiedlabelingclient-version-release-history.md)
-
-Per altre informazioni sull'uso del client di assegnazione di etichette incorporato per le app Microsoft 365, vedere [etichette di riservatezza nelle app di Office](/microsoft-365/compliance/sensitivity-labels-office-apps).
+Per altre informazioni sull'uso della soluzione incorporata di assegnazione di etichette per Microsoft 365 app, vedere [etichette di riservatezza nelle app di Office](/microsoft-365/compliance/sensitivity-labels-office-apps).

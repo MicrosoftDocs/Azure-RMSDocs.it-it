@@ -5,25 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a1ed0a5b10db4ffd0a50b8738cb85cbff973eaa5
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 5454713bc942daa48fc5c33dfdb66bd1bcdec2e0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316416"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383245"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->[!NOTE]
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione di Microsoft 365. *
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>
 
 Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana.
 
@@ -64,7 +67,7 @@ Per i documenti, i contrassegni visivi vengono applicati come segue:
     L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in Microsoft SharePoint, OneDrive for Work o School oppure OneDrive per Home: quando il salvataggio automatico è on, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background.
 
 > [!NOTE]
-> Per ulteriori informazioni sul supporto per i contrassegni visivi nei client AIP e nelle funzionalità predefinite per l'assegnazione di etichette, vedere [confrontare i client di assegnazione di etichette per i computer Windows](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
+> Per ulteriori informazioni sul supporto per i contrassegni visivi nei client AIP e nelle funzionalità predefinite per l'assegnazione di etichette, vedere [scegliere la soluzione Windows Labeling](rms-client/use-client.md#choose-your-windows-labeling-solution).
 > 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
@@ -99,7 +102,7 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica, in base al nome utente connesso a Windows. Ad esempio: rsimone
 
-- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). Ad esempio: rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). ad esempio rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
@@ -107,7 +110,7 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 >Questa sintassi distingue tra maiuscole e minuscole.
 
 >[!TIP]
-> È anche possibile usare un [codice campo per inserire il nome dell'etichetta](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o in un modello.
+> È anche possibile usare un [codice campo per inserire il nome dell'etichetta](faqs-classic.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o in un modello.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Impostazione di contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook
 
@@ -124,19 +127,19 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 
 Esempi:
 
-- **Impostare il testo dell'intestazione solo per i documenti di Word:**
+- **Imposta il testo dell'intestazione solo per i documenti di Word**:
 
     `${If.App.Word}This Word document is sensitive ${If.End}`
 
     Solo nelle intestazioni dei documenti di Word, l'etichetta applica il testo dell'intestazione "Questo documento di Word è sensibile". Non viene applicato alcun testo dell'intestazione ad altre applicazioni di Office.
 
-- **Impostare il testo a piè di pagina per Word, Excel e Outlook e testo a piè di pagina diverso per PowerPoint:**
+- **Impostare il testo del piè di pagina per Word, Excel e Outlook e il testo del piè di pagina diverso per PowerPoint**:
 
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
 
     In Word, Excel e Outlook, l'etichetta applica il testo a piè di pagina "Questo contenuto è riservato". In PowerPoint,l'etichetta applica il testo a piè di pagina "Questa presentazione è riservata".
 
-- **Impostare il testo della filigrana specifico per Word e PowerPoint e quindi il testo della filigrana per Word, Excel e PowerPoint:**
+- **Impostare un testo di filigrana specifico per Word e PowerPoint, quindi il testo della filigrana per Word, Excel e PowerPoint**:
 
     `${If.App.WP}This content is ${If.End}Confidential`
 

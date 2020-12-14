@@ -1,36 +1,36 @@
 ---
-title: Usare PowerShell con il client Azure Information Protection
-description: Istruzioni e informazioni per amministratori per gestire il client Azure Information Protection tramite PowerShell.
-author: mlottner
-ms.author: mlottner
+title: Usare PowerShell con il client di Azure Information Protection classico
+description: Istruzioni e informazioni per gli amministratori per la gestione del client di Azure Information Protection classico tramite PowerShell.
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c5f2975b93e907d244db7c95975105f58ed1b94
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: c2c9829154a7efd3bb5aa340e37018d1085105ce
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568130"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386016"
 ---
-# <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
+# <a name="admin-guide-using-powershell-with-the-azure-information-protection-classic-client"></a>Guida dell'amministratore: uso di PowerShell con il client di Azure Information Protection classico
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Quando si installa il client di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
+Quando si installa il client di Azure Information Protection classico, i comandi di PowerShell vengono installati automaticamente. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio:
+I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -333,7 +333,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx
 ```
 
-Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio:
+Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. ad esempio:
 
 ```ps
 Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -350,7 +350,7 @@ InputFile                          EncryptedFile
 \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 ```
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. Ad esempio:
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. ad esempio:
 
 ```ps
 Get-RMSFileStatus -File \Server1\Documents\Test1.docx
@@ -364,7 +364,7 @@ FileName                              Status
 \Server1\Documents\Test1.docx         Protected
 ```
 
-Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per i cmdlet. Usare quindi il cmdlet Unprotect. Ad esempio:
+Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per i cmdlet. Usare quindi il cmdlet Unprotect. ad esempio:
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -471,7 +471,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx   
 ```
 
-Per proteggere tutti i file in una cartella, usare il parametro -Folder con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio:
+Per proteggere tutti i file in una cartella, usare il parametro -Folder con una lettera di unità e un percorso oppure un percorso UNC. ad esempio:
 
 ```ps
 Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -488,7 +488,7 @@ InputFile                          EncryptedFile
 \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 ```
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. Ad esempio: 
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. ad esempio: 
 
 ```ps
 Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
@@ -502,7 +502,7 @@ FileName                              Status
 \\Server1\Documents\Test1.docx        Protected
 ```
 
-Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di utilizzo di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. Ad esempio:
+Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di utilizzo di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. ad esempio:
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -594,7 +594,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 15. Selezionare **Autorizzazioni API**.
 
-16. Nel riquadro **AIPOnBehalfOf**  |  **autorizzazioni API** AIPOnBehalfOf selezionare **+ Aggiungi un'autorizzazione**.
+16. Nel riquadro   |  **autorizzazioni API** AIPOnBehalfOf selezionare **+ Aggiungi un'autorizzazione**.
 
 17. Scegliere **gestione di Azure right**, selezionare **autorizzazioni delegate** e quindi selezionare **Crea e accedi a contenuto protetto per gli utenti**.
 
@@ -663,7 +663,7 @@ Procedure generali:
 
 3. Seguendo le istruzioni nella sezione precedente modificare questo comando specificando i valori personalizzati per i parametri **WebAppId**, **WebAppkey** e **NativeAppId**. In questo momento non è disponibile il valore per il parametro **Token** che si specificherà in seguito. 
 
-    Ad esempio: 
+    ad esempio: 
 
     ```ps
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
@@ -679,7 +679,7 @@ Procedure generali:
     (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
     ```
 
-    Ad esempio: 
+    ad esempio: 
 
     ```ps
     (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
@@ -713,12 +713,12 @@ Procedure generali:
 
 1. Verificare che il token sia ora archiviato nella cartella **%LocalAppData%\Microsoft\MSIP** per il profilo dell'account del servizio. Questo valore è protetto dall'account del servizio.
 
-2. Eliminare lo script di PowerShell che contiene il valore del token, ad esempio **Aipauthentication.ps1.**
+2. Eliminare lo script di PowerShell che contiene il valore del token, ad esempio **Aipauthentication.ps1**.
 
     Facoltativamente, eliminare l'attività. Se il token scade, è necessario ripetere questa procedura; in questo caso, potrebbe essere più opportuno uscire dall'attività configurata in modo che sia pronta per una nuova esecuzione quando si copia il nuovo script di PowerShell con il nuovo valore del token.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 
+Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. ad esempio: 
 
 ```ps
 Get-Help Get-RMSTemplate -online

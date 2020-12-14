@@ -5,28 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 06/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbfa9b0d7a4257f73071f2ff611a4c5fd2394bc0
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: ca7b5c157a2c6d6d1162963053828e895fba1fe8
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568232"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382820"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Configurazione e installazione dello scanner classico Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
-
->[!NOTE]
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
-> Se si usa lo scanner Unified Labeling, vedere [installazione e configurazione del Azure Information Protection scanner Unified Labeling](deploy-aip-scanner-configure-install.md).
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [installazione e configurazione di AIP Unified Labeling scanner](deploy-aip-scanner-configure-install.md). *
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Prima di iniziare la configurazione e l'installazione del Azure Information Protection scanner, verificare che il sistema sia conforme ai [prerequisiti richiesti](deploy-aip-scanner-prereqs.md).
 
@@ -109,7 +109,7 @@ Per configurare lo scanner:
 
 1. Nel riquadro **repository** specificare il percorso per il repository dei dati e quindi selezionare **Salva**.
 
-    Ad esempio: 
+    ad esempio: 
 
     - Per una condivisione di rete, usare `\\Server\Folder` . 
     - Per una raccolta di SharePoint, usare `http://sharepoint.contoso.com/Shared%20Documents/Folder` .
@@ -153,7 +153,7 @@ Dopo aver [configurato il Azure Information Protection scanner nel portale di Az
 
 1. Eseguire il cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , specificando l'istanza di SQL Server in cui creare un database per lo scanner Azure Information Protection e il nome del cluster dello scanner specificato nella sezione precedente:
 
-    ```ps
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
 
@@ -187,15 +187,15 @@ Per ottenere un token di Azure AD:
 
     Eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) specificando i valori copiati nel passaggio precedente:
 
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
     ```
 
     Quando richiesto, specificare la password per le credenziali dell'account del servizio per Azure AD e quindi fare clic su **Accetto**.
 
-    Ad esempio:
+    ad esempio:
 
-    ```powershell
+    ```PowerShell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
     Acquired application access token on behalf of the user
     ```
@@ -234,7 +234,7 @@ Per modificare queste impostazioni, modificare il processo di analisi del conten
 
     In alternativa, eseguire il comando seguente nella sessione di PowerShell:
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -268,10 +268,10 @@ Per allineare i tipi di file supportati con il client di, in cui tutti i file ve
     ![Modifica del Registro di sistema per l'applicazione della protezione con lo scanner](./media/editregistry-scanner.png)
 
     > [!NOTE]
-    > Come file di immagine, i file TIFF supportano la protezione nativa e l'estensione del nome file risultante è **. ptiff.**
+    > Come file di immagine, i file TIFF supportano la protezione nativa e l'estensione del nome file risultante è **. ptiff**.
     >
 
-    Per i file che non supportano la protezione nativa, specificare l'estensione del nome file come nuova chiave e **PFile** per la protezione generica. L'estensione del nome file risultante per il file protetto è **. Pfile.**
+    Per i file che non supportano la protezione nativa, specificare l'estensione del nome file come nuova chiave e **PFile** per la protezione generica. L'estensione del nome file risultante per il file protetto è **. Pfile**.
 
 Per un elenco di tipi di file di testo e immagini che supportano la protezione nativa in modo analogo, ma che devono essere specificati nel registro di sistema, vedere [tipi di file supportati per la classificazione e la protezione](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
@@ -294,7 +294,7 @@ Se, ad esempio, si dispone di un nuovo tipo di file in diversi repository di dat
 
 Per apportare modifiche in blocco tra i repository:
 
-1. Nella portale di Azure nel riquadro **repository** selezionare l'opzione **Esporta** . Ad esempio:
+1. Nella portale di Azure nel riquadro **repository** selezionare l'opzione **Esporta** . ad esempio:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Esportazione delle impostazioni del repository dei dati per lo scanner":::
 
@@ -317,8 +317,8 @@ In questa configurazione tutti i file senza etichetta nel repository sono contra
 
 Configurare le seguenti impostazioni:
 
-- **Etichettare i file in base al contenuto:** Imposta su **disattivato**
-- **Etichetta predefinita:** Impostare su **personalizzato**, quindi selezionare l'etichetta da usare
+- **Etichettare i file in base al contenuto**: impostato su **disattivato**
+- **Etichetta predefinita**: impostare su **personalizzato**, quindi selezionare l'etichetta da usare
 
 ### <a name="identify-all-custom-conditions-and-known-sensitive-information-types"></a>Identificare tutte le condizioni personalizzate e i tipi di informazioni riservate note
 
@@ -345,7 +345,7 @@ Usare le opzioni e le linee guida seguenti per ottimizzare le prestazioni dello 
 |**Installare più istanze dello scanner** | Lo scanner Azure Information Protection supporta più database di configurazione nella stessa istanza di SQL Server quando si specifica un nome di cluster personalizzato (profilo) per lo scanner. |
 |**Concedere diritti specifici e disabilitare il livello di integrità basso**|Verificare che l'account di servizio che esegue lo scanner disponga solo dei diritti documentati nei [requisiti dell'account del servizio](deploy-aip-scanner-prereqs.md#service-account-requirements). </br></br>Configurare quindi l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) per disabilitare il livello di integrità basso per lo scanner.|
 |**Controllare l'utilizzo della configurazione alternativa** |L'esecuzione dello scanner è più rapida quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per applicare un'etichetta predefinita a tutti i file in quanto lo scanner non esamina i contenuti del file. <br/></br>L'esecuzione dello scanner è più lenta quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per identificare tutte le condizioni personalizzate e i tipi di informazioni riservate noti.|
-|**Riduci timeout scanner** | Ridurre i timeout dello scanner con [le impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). I timeout dello scanner ridotti forniscono frequenze di analisi migliori e un consumo di memoria inferiore. </br></br>**Nota:** Diminuendo i timeout dello scanner si significa che alcuni file potrebbero essere ignorati.
+|**Riduci timeout scanner** | Ridurre i timeout dello scanner con [le impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). I timeout dello scanner ridotti forniscono frequenze di analisi migliori e un consumo di memoria inferiore. </br></br>**Nota**: la riduzione dei timeout dello scanner indica che alcuni file possono essere ignorati.
 | | |
 
 
@@ -358,7 +358,7 @@ Ulteriori fattori che influiscono sulle prestazioni dello scanner includono:
 |**Tempi di caricamento/risposta**     |Anche i tempi di caricamento e di risposta correnti degli archivi dati che contengono i file da analizzare influiscono sulle prestazioni dello scanner.         |
 |**Modalità scanner** (individuazione/applicazione)    | La modalità di individuazione ha in genere una velocità di analisi superiore rispetto alla modalità di applicazione. </br></br>Per l'individuazione è necessaria un'azione di lettura di un singolo file, mentre la modalità di applicazione richiede azioni di lettura e scrittura.        |
 |**Modifiche dei criteri**     |Le prestazioni dello scanner potrebbero essere interessate se sono state apportate modifiche alle condizioni nei criteri di Azure Information Protection. </br></br>Il primo ciclo di analisi, quando lo scanner deve controllare tutti i file, avrà più tempo dei cicli di analisi successivi che, per impostazione predefinita, ispeziona solo i file nuovi e modificati. </br></br>Se si modificano le condizioni, tutti i file vengono nuovamente sottoposti a scansione. Per ulteriori informazioni, vedere ripetizione dell' [analisi dei file](deploy-aip-scanner-manage-classic.md#rescanning-files).|
-|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. </br></br> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. </br></br>Ad esempio: </br>-Evitare [quantificatori greedy](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Usare gruppi non di acquisizione come `(?:expression)` anziché `(expression)`    |
+|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. </br></br> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. </br></br>ad esempio: </br>-Evitare [quantificatori greedy](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Usare gruppi non di acquisizione come `(?:expression)` anziché `(expression)`    |
 |**Livello di log**     |  Le opzioni a livello di log includono **debug**, **info**, **Error** e **off** per i report dello scanner.</br></br>- **Risultati migliori** prestazioni </br>- Il **debug** rallenta notevolmente lo scanner e deve essere usato solo per la risoluzione dei problemi. </br></br>Per altre informazioni, vedere il parametro *ReportLevel* del cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**File sottoposti a scansione**     |-Ad eccezione dei file di Excel, i file di Office vengono analizzati più rapidamente rispetto ai file PDF. </br></br>-I file non protetti sono più veloci da analizzare rispetto ai file protetti. </br></br>-I file di grandi dimensioni hanno ovviamente più tempo per l'analisi di file di piccole dimensioni.         |
 | | |
@@ -401,10 +401,10 @@ Dopo aver installato e configurato lo scanner, avviare [l'analisi dei file](depl
 
 Vedere anche: [distribuzione di Azure Information Protection scanner per classificare e proteggere automaticamente i file](deploy-aip-scanner.md).
 
-**Ulteriori informazioni:**
+**Ulteriori informazioni**:
 
 Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
 
-Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari che usano PowerShell, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).

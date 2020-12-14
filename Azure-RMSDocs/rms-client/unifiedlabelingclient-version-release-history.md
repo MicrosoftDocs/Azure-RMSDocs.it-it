@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection le etichette unificate client-cronologia delle versioni & criteri di supporto
-description: Vedere le informazioni sulla versione del client per l'etichettatura unificata di Azure Information Protection per Windows.
+description: Scopri le novità per il client Unified Labeling Azure Information Protection (AIP) per Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,20 +12,20 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
-ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
+ms.openlocfilehash: 8d116c08680372e6a63a93c3c179914f9fe0e464
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "96740623"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385030"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [AIP Unified Labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [cronologia delle versioni del client classico AIP e i criteri di supporto](client-version-release-history.md). *
 
 È possibile scaricare il Azure Information Protection Unified Labeling client dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -67,7 +67,7 @@ La versione più recente di Azure Information Protection è attualmente in fase 
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
-Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Il client di etichettatura unificata sostituisce il client classico Azure Information Protection. Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare le soluzioni per l'assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 ## <a name="version-291010-public-preview"></a>Versione 2.9.101.0 (anteprima pubblica)
 
@@ -118,7 +118,7 @@ Per supportare le analisi sulle condivisioni NFS, i servizi per NFS devono esser
 Per altre informazioni, vedere [creare un processo di analisi del contenuto](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### <a name="added-support-for-sensitive-information-types"></a>Aggiunta del supporto per i tipi di informazioni riservate
-È stato aggiunto il supporto per altri tipi di informazioni riservate in Azure Information Protection, ad esempio il **numero aziendale dell'Australia,** il **numero della società Australia** o la **scheda identità austriaca.** 
+È stato aggiunto il supporto per altri tipi di informazioni riservate in Azure Information Protection, ad esempio il **numero aziendale dell'Australia**, il **numero della società Australia** o la **scheda identità austriaca**. 
 
 Per ulteriori informazioni, vedere le [definizioni di entità di tipo informazioni riservate](/microsoft-365/compliance/sensitive-information-type-entity-definitions) nella documentazione di Microsoft 365.
 ### <a name="fixes-and-improvements"></a>Correzioni e miglioramenti
@@ -133,7 +133,7 @@ Nella versione 2.9.101.0 di [Azure Information Protection scanner Unified Labeli
 - Supporto per [evitare un timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) durante l'analisi di un server SharePoint.
 
 ### <a name="known-issues"></a>Problemi noti
-In questa versione di anteprima pubblica, l'applicazione delle etichette con la [protezione DKE](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) non è supportata dallo scanner.
+In questa versione di anteprima pubblica, l'applicazione delle etichette con la [protezione DKE](../plan-implement-tenant-key.md#double-key-encryption-dke) non è supportata dallo scanner.
 
 ## <a name="version-28850"></a>Versione 2.8.85.0
 
@@ -164,7 +164,7 @@ Ignorare la ripetizione dell'analisi immediata completa e tornare in seguito per
 > [!IMPORTANT]
 > Gli amministratori che apportano modifiche ai criteri e ai processi di analisi dei contenuti devono ora comprendere gli effetti delle modifiche apportate al contenuto e determinare se è necessaria una ripetizione dell'analisi completa.
 > 
-> Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on,** assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
+> Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on**, assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
 >
 
 #### <a name="configure-sharepoint-timeouts"></a>Configurare i timeout di SharePoint
@@ -192,7 +192,7 @@ Il servizio di **individuazione della rete** aggiorna i report del **repository*
     
 1. Assicurarsi di aver abilitato Azure Information Protection Analytics. 
 
-    Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima).** 
+    Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima)**. 
 
     Per ulteriori informazioni, vedere [la pagina relativa alla creazione di report centrali per Azure Information Protection (anteprima pubblica)](../reports-aip.md).
 
@@ -295,7 +295,7 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.101.0
 
 **Rilasciato** 08/23/2020
 
-**Difficoltà**
+**Correzione**:
 
 Correzione di un problema per gli utenti di PPT, Excel e Word che causavano il blocco dei file, l'arresto anomalo o la necessità di ripetere il salvataggio che era correlato a etichette obbligatorie configurate con protezione, filigrana e/o contrassegno di contenuto.
 
@@ -305,7 +305,7 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.99.0
 
 **Rilasciato** 07/20/2020
 
-**Correzioni e miglioramenti:**
+**Correzioni e miglioramenti**:
 
 Correzione dei problemi nelle azioni di assegnazione di etichette di file per i nuovi log di controllo delle **etichette** .
 
@@ -317,7 +317,7 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.96.0
 
 **Rilasciato** 06/29/2020
 
-**Nuove funzionalità per lo scanner Unified Labeling:**
+**Nuove funzionalità per lo scanner Unified Labeling**:
 
 - [Usare lo scanner per applicare etichette in base alle condizioni consigliate](../deploy-aip-scanner-prereqs.md). I clienti AIP possono ora scegliere di implementare solo l'etichettatura automatica lato servizio. Questa funzionalità consente agli utenti finali di AIP di seguire sempre le raccomandazioni invece dello scenario precedente, che abilitava solo l'assegnazione automatica di etichette sul lato utente.
 
@@ -331,7 +331,7 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.96.0
 
 - A questo punto è possibile configurare lo scanner Unified Labeling per ignorare i file specifici a seconda degli attributi di file. Definire l'elenco degli attributi di file che attiva un file da ignorare usando la nuova impostazione avanzata di **[ScannerFSAttributesToSkip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** .
 
-**Nuove funzionalità per il client Unified Labeling:**
+**Nuove funzionalità per il client Unified Labeling**:
 
 - Sono ora visualizzati [**popup di giustificazione**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) per le modifiche apportate alle etichette predefinite nel client di etichettatura unificata.
     
@@ -391,7 +391,7 @@ Per ulteriori informazioni sui requisiti, vedere [firewall e requisiti dell'infr
 
 - Quando vengono configurati più account di Exchange e il client Azure Information Protection Outlook è abilitato, i messaggi di posta elettronica vengono inviati dall'account secondario come previsto. Per ulteriori informazioni sulla configurazione del client Unified Labeling con Outlook, vedere [prerequisiti aggiuntivi per il Azure Information Protection client Unified Labeling](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
-- Quando un documento con un'etichetta di riservatezza superiore viene trascinato e rilasciato in un messaggio di posta elettronica, il messaggio di posta elettronica riceve automaticamente l'etichetta di riservatezza superiore come previsto. Per ulteriori informazioni sull'assegnazione di etichette alle funzionalità client, vedere la [tabella di confronto dei client con etichetta](use-client.md#compare-the-labeling-clients-for-windows-computers).
+- Quando un documento con un'etichetta di riservatezza superiore viene trascinato e rilasciato in un messaggio di posta elettronica, il messaggio di posta elettronica riceve automaticamente l'etichetta di riservatezza superiore come previsto. Per ulteriori informazioni sull'assegnazione di etichette alle funzionalità client, vedere la [tabella di confronto dei client con etichetta](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 - Le autorizzazioni personalizzate vengono ora applicate ai messaggi di posta elettronica come previsto, quando gli indirizzi di posta elettronica includono un apostrofo (') e un punto (.) Per ulteriori informazioni sulla configurazione del client Unified Labeling con Outlook, vedere [prerequisiti aggiuntivi per il Azure Information Protection client Unified Labeling](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -405,7 +405,7 @@ Per ulteriori informazioni sui requisiti, vedere [firewall e requisiti dell'infr
 
 Supportato tramite 12/29/2020
 
-**Nuove funzionalità:**
+**Nuove funzionalità**:
 
 - Versione di disponibilità generale dello [scanner](../deploy-aip-scanner.md)per esaminare ed etichettare i documenti negli archivi dati locali. 
 
@@ -427,7 +427,7 @@ Supportato tramite 12/29/2020
 
 - Aggiunto il supporto per la [funzionalità di assegnazione di etichette offline](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) con le app di Office nel client Unified labeling.
 
-**Correzioni**
+**Correzioni**:
 
 - Nei casi in cui gli utenti hanno tentato di aprire i file TIFF protetti e i file TIFF creati da RightFax, i file TIFF sono ora aperti e rimangono stabili come previsto.  
 - Sono stati risolti i danneggiamenti precedenti dei file txt e PDF protetti.
@@ -439,7 +439,7 @@ Supportato tramite 12/29/2020
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se non si è certi che l'etichetta unificata sia il client giusto da installare,  Vedere [scegliere il client di assegnazione di etichette da usare per i computer Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Se non si è certi che l'etichetta unificata sia il client giusto da installare,  Vedere [scegliere la soluzione di etichettatura di Windows](use-client.md#choose-your-windows-labeling-solution).
 
 Per ulteriori informazioni sull'installazione e l'utilizzo del client Unified Labeling: 
 

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 13c63f2e96b27a31b9afb91fbc8c03b9b198f9c1
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: ee761ef8ae12d638df7e05c83a5ed5d635d25b9b
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316824"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384367"
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 della migrazione: preparazione
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per la fase 1 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano i passaggi da 1 a 3 della [migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e preparano l'ambiente per la migrazione senza influenzare il lavoro degli utenti.
 
@@ -60,7 +62,7 @@ L'URL del servizio Azure Rights Management ha il formato seguente: **{GUID}.rms.
     (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
     ```
 
-## <a name="step-2-prepare-for-client-migration"></a>Passaggio 2: Preparare la migrazione client
+## <a name="step-2-prepare-for-client-migration"></a>Passaggio 2. Preparare la migrazione client
 
 Nella maggior parte delle migrazioni, non è pratico eseguire la migrazione di tutti i client in una sola volta, è preferibile piuttosto eseguire la migrazione dei client in batch. 
 
@@ -146,13 +148,13 @@ Per ogni organizzazione di Exchange, aggiungere i valori del registro di sistema
 
 1. Se si dispone di Exchange 2013 o Exchange 2016, aggiungere il valore del registro di sistema seguente:
 
-    - **Percorso del registro di sistema:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Percorso del registro di sistema**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Tipo:** Reg_SZ
+    - **Tipo**: REG_SZ
 
-    - **Valore:** `https://\<Your Tenant URL\>/_wmcs/licensing`
+    - **Valore**: `https://\<Your Tenant URL\>/_wmcs/licensing`
 
-    - **Dati:**`https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
+    - **Dati**: `https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 
 1. Eseguire i comandi di PowerShell seguenti, uno alla volta o in uno script:
 

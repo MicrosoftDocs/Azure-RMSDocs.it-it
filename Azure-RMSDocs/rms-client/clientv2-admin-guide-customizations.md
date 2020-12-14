@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,20 +13,20 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25dfd0eb9fe2708e90f04a3bc7203dc8ecde5bcc
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 2b4f7842ddc33ae170d756fa132883ac1fe8f07a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385642"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'amministratore del client classico](client-admin-guide-customizations.md). *
 
 Usare le informazioni seguenti per le configurazioni avanzate necessarie per scenari o utenti specifici quando si gestisce il client di assegnazione unificata di AIP.
 
@@ -36,7 +36,7 @@ Usare le informazioni seguenti per le configurazioni avanzate necessarie per sce
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Security & Compliance Center PowerShell
 
-Quando si usa Office 365 Security & Compliance Center PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
+Quando si usa Office 365 Security & Compliance Center PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. ad esempio:
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un'**impostazione avanzata di criteri etichetta** _.
 - L'impostazione per specificare un colore dell'etichetta è un' _*_impostazione avanzata etichetta_*_.
@@ -524,7 +524,7 @@ Per evitare di rimuovere le forme che contengono il testo specificato ma che *no
 Inoltre, se sono stati configurati layout personalizzati in PowerPoint, il comportamento predefinito è che le forme presenti all'interno di layout personalizzati vengono ignorate. Per rimuovere in modo esplicito i contrassegni di contenuto esterno dall'interno dei layout personalizzati, impostare la proprietà avanzata **RemoveExternalMarkingFromCustomLayouts** su **true.**
 
 > [!NOTE]
-> I tipi di forma di PowerPoint supportati per le impostazioni client avanzate descritte in questa sezione includono: **msoTextBox,** **msoTextEffect** e **msoPlaceholder**
+> I tipi di forma di PowerPoint supportati per le impostazioni client avanzate descritte in questa sezione includono: **msoTextBox**, **msoTextEffect** e **msoPlaceholder**
 >
 ##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>Trovare il nome della forma che si sta utilizzando come intestazione o piè di pagina
 
@@ -534,7 +534,7 @@ Inoltre, se sono stati configurati layout personalizzati in PowerPoint, il compo
 
 Usare il nome della forma per specificare un valore stringa per la chiave **PowerPointShapeNameToRemove**. 
 
-**Esempio:** Il nome della forma è **FC**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
+**Esempio**: il nome della forma è **FC**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
 
 - Chiave: **PowerPointShapeNameToRemove**
 
@@ -696,7 +696,7 @@ Quando i messaggi popup sono per un'etichetta specifica, è possibile configurar
 Per un esempio di procedura dettagliata su come configurare queste impostazioni, vedere il video [Azure Information Protection configurazione popup di Outlook](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 > [!TIP]
-> Per assicurarsi che i popup vengano visualizzati anche quando i documenti vengono condivisi dall'esterno di Outlook **(File > condivisione > alleghino una copia),** configurare anche l'impostazione avanzata di [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) .
+> Per assicurarsi che i popup vengano visualizzati anche quando i documenti vengono condivisi dall'esterno di Outlook **(File > condivisione > alleghino una copia)**, configurare anche l'impostazione avanzata di [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
 
@@ -773,7 +773,7 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
 
 Si immagini, ad esempio, che sia stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . 
 
-È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookBlockTrustedDomains** con **contoso.com.** Di conseguenza, un utente può inviare un messaggio di posta elettronica a `john@sales.contoso.com` quando viene etichettato come **riservato \ tutti i dipendenti**, ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
+È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookBlockTrustedDomains** con **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a `john@sales.contoso.com` quando viene etichettato come **riservato \ tutti i dipendenti**, ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
 Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
 
@@ -1094,7 +1094,7 @@ Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced
 
 Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
-Ad esempio:
+ad esempio:
 
 - È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
@@ -1345,7 +1345,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Ignorare i file di sola lettura o archiviati**
 
-Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
+Per usare una logica o, eseguire più volte la stessa proprietà. ad esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1395,7 +1395,7 @@ Ad esempio, in qualità di amministratore, è consigliabile ricordare agli utent
 
 Per modificare l' **altro** testo predefinito visualizzato, usare la proprietà avanzata **JustificationTextForUserText** con il cmdlet [set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) . Impostare il valore sul testo che si desidera utilizzare.
 
-Ad esempio:
+ad esempio:
 
 ``` PowerShell
 
@@ -1416,7 +1416,7 @@ Gli amministratori di AIP possono personalizzare i messaggi popup visualizzati d
 > In ambiente di produzione è consigliabile evitare complicazioni usando la proprietà avanzata **OutlookUnlabeledCollaborationAction** per definire le regole, *o* definendo regole complesse con un file JSON come definito di seguito, ma non entrambi.
 >
 
-**Per personalizzare i messaggi popup di Outlook:**
+**Per personalizzare i messaggi popup di Outlook**:
 
 1. Creare file con **estensione JSON** , ognuno con una regola che configura il modo in cui Outlook Visualizza i messaggi popup agli utenti. Per altre informazioni, vedere la [sintassi Rule value. JSON](#rule-value-json-syntax) e il [codice di esempio di personalizzazione di popup. JSON](#sample-popup-customization-json-code).
 
@@ -1442,9 +1442,9 @@ Gli amministratori di AIP possono personalizzare i messaggi popup visualizzati d
 
    
 > [!TIP]
-> Per un'organizzazione aggiuntiva, assegnare un nome al file con la stessa stringa della chiave usata nel comando di PowerShell. Ad esempio, denominare il file **OutlookCollaborationRule_1.json,** quindi usare anche **OutlookCollaborationRule_1** come chiave.
+> Per un'organizzazione aggiuntiva, assegnare un nome al file con la stessa stringa della chiave usata nel comando di PowerShell. Ad esempio, denominare il file **OutlookCollaborationRule_1.json**, quindi usare anche **OutlookCollaborationRule_1** come chiave.
 >
-> Per assicurarsi che i popup vengano visualizzati anche quando i documenti vengono condivisi dall'esterno di Outlook **(File > condivisione > alleghino una copia),** configurare anche l'impostazione avanzata di [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) .
+> Per assicurarsi che i popup vengano visualizzati anche quando i documenti vengono condivisi dall'esterno di Outlook **(File > condivisione > alleghino una copia)**, configurare anche l'impostazione avanzata di [PostponeMandatoryBeforeSave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) .
 > 
 
 ### <a name="ordering-your-outlook-customization-rules"></a>Ordinamento delle regole di personalizzazione di Outlook
@@ -1453,7 +1453,7 @@ AIP usa il numero di serie nella chiave immessa per determinare l'ordine in cui 
 
 Quando viene trovata una corrispondenza di regola specifica, AIP interrompe l'elaborazione delle regole ed esegue l'azione associata alla regola di corrispondenza. (**Prima corrispondenza-> logica di uscita** )
     
-**Esempio:**
+**Esempio**:
 
 Si consiglia di configurare tutti i messaggi di posta elettronica **interni** con un messaggio di **avviso** specifico, ma in genere non si desidera bloccarli. Tuttavia, si desidera impedire agli utenti di inviare allegati classificati come **segreti**, anche come messaggi di posta elettronica **interni** . 
 
@@ -1487,9 +1487,9 @@ I tipi di nodo supportati includono:
 | **Or**    |Esegue *o* in tutti i nodi figlio       |
 | **Non**   | *Non* viene eseguito per il proprio figlio      |
 | **Ad eccezione**    | Restituisce *not* per il proprio elemento figlio, facendo in modo che si comporti come **tutti**        |
-| **SentTo,** seguito da **domini: listOfDomains**    |Verifica uno dei seguenti elementi: <br />-Se l'elemento padre è **Except,** controlla se **tutti** i destinatari si trovano in uno dei domini<br />-Se l'elemento padre è qualsiasi altra **eccezione,** **verifica se uno dei destinatari** si trova in uno dei domini.   |
-| **EMailLabel,** seguito da Label | I tipi validi sono:  <br />: ID etichetta <br />-null, se non con etichetta             |
-| **AttachmentLabel,** seguito da **Label** e **supportedExtensions**    | I tipi validi sono:  <br /><br />**true** <br />-Se l'elemento padre è **Except,** controlla se **tutti** gli allegati con un'estensione supportata esistono nell'etichetta<br />-Se l'elemento padre è qualsiasi altra **eccezione,** verifica se **uno degli allegati** con un'estensione supportata esiste nell'etichetta <br />-Se non è etichettato e **Label = null** <br /><br /> **false:** Per tutti gli altri casi 
+| **SentTo**, seguito da **domini: listOfDomains**    |Verifica uno dei seguenti elementi: <br />-Se l'elemento padre è **except**, controlla se **tutti** i destinatari si trovano in uno dei domini<br />-Se l'elemento padre è qualsiasi altra **eccezione**, **verifica se uno dei destinatari** si trova in uno dei domini.   |
+| **EMailLabel**, seguito da Label | I tipi validi sono:  <br />: ID etichetta <br />-null, se non con etichetta             |
+| **AttachmentLabel**, seguito da **Label** e **supportedExtensions**    | I tipi validi sono:  <br /><br />**true**: <br />-Se l'elemento padre è **except**, controlla se **tutti** gli allegati con un'estensione supportata esistono nell'etichetta<br />-Se l'elemento padre è qualsiasi altra **eccezione,** verifica se **uno degli allegati** con un'estensione supportata esiste nell'etichetta <br />-Se non è etichettato e **Label = null** <br /><br /> **false**: per tutti gli altri casi 
 | | |
 
 #### <a name="rule-action-syntax"></a>Sintassi azione regola
@@ -1512,7 +1512,7 @@ Tutti i testi supportano i parametri dinamici seguenti:
 |Parametro  |Descrizione  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Ultima corrispondenza per le condizioni di **SentTo**       |
-| `${MatchedLabelName}`      | Etichetta posta/allegato **,** con il nome localizzato del criterio               |
+| `${MatchedLabelName}`      | **Etichetta** posta/allegato, con il nome localizzato del criterio               |
 | `${MatchedAttachmentName}` | Nome dell'allegato dall'ultima corrispondenza per la condizione **AttachmentLabel** |
 | | |
 
@@ -1843,7 +1843,7 @@ Questo valore è definito nella classe **HttpRuntimeSection** della `ASP.NET` co
 
 1. Eseguire il backup della configurazione del **web.config** . 
 
-1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. Ad esempio:
+1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. ad esempio:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
@@ -1869,8 +1869,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPa
 
 Ora che è stato personalizzato il client di etichettatura Azure Information Protection Unified, vedere le risorse seguenti per altre informazioni che potrebbero essere necessarie per supportare questo client:
 
-- [File del client e registrazione dell'utilizzo](client-admin-guide-files-and-logging.md)
+- [File del client e registrazione dell'utilizzo](clientv2-admin-guide-files-and-logging.md)
 
-- [Tipi di file supportati](client-admin-guide-file-types.md)
+- [Tipi di file supportati](clientv2-admin-guide-file-types.md)
 
-- [Comandi di PowerShell](client-admin-guide-powershell.md)
+- [Comandi di PowerShell](clientv2-admin-guide-powershell.md)

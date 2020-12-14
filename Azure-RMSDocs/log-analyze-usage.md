@@ -1,10 +1,10 @@
 ---
 title: Log & analizzare l'utilizzo della protezione da Azure Information Protection
 description: Informazioni e istruzioni su come usare la registrazione dell'utilizzo per il servizio di protezione da Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,21 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc3dd9487548849d16f625092c2ff3dd121e4e54
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 06b32848bd1e2b0fa939474e74c174a674427eec
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567645"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384384"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Registrazione e analisi dell'utilizzo della protezione da Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare queste informazioni per comprendere come è possibile usare la registrazione dell'utilizzo per il servizio di protezione (Azure Rights Management) da Azure Information Protection. Questo servizio di protezione fornisce la protezione dei dati per i documenti e i messaggi di posta elettronica dell'organizzazione ed è in grado di registrare tutte le richieste. Sono esempi di richieste le azioni eseguite dagli utenti per proteggere documenti e messaggi di posta elettronica e per usare questi contenuti, le azioni eseguite dagli amministratori del servizio e le azioni eseguite da operatori Microsoft per il supporto delle distribuzioni di Azure Information Protection. 
 
@@ -46,10 +51,11 @@ Oltre alla registrazione dell'utilizzo, sono disponibili anche le opzioni di reg
 
 |Opzione di registrazione|Descrizione|
 |----------------|---------------|
-|Log amministrazione|Registra le attività amministrative per il servizio di protezione. Ad esempio, se il servizio è disattivato, quando viene abilitata la funzionalità di utente con privilegi avanzati e quando agli utenti vengono delegate autorizzazioni di amministratore per il servizio. <br /><br />Per ulteriori informazioni, vedere il cmdlet di PowerShell [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
-|Rilevamento dei documenti|Consente agli utenti di monitorare e revocare l'accesso ai documenti monitorati con il client Azure Information Protection. Gli amministratori globali possono inoltre eseguire il rilevamento di questi documenti per conto degli utenti. <br /><br />Per altre informazioni, vedere [Configurazione e uso del rilevamento dei documenti per Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
-|Registri eventi del client|Attività di utilizzo per il client Azure Information Protection, registrata nel registro eventi locale di Windows **Applicazioni e servizi**, **Azure Information Protection**. <br /><br />Per altre informazioni, vedere [Registrazione dell'utilizzo per il client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|File di log del client|Log per la risoluzione dei problemi per il client Azure Information Protection, disponibili in **%localappdata%\Microsoft\MSIP**. <br /><br />Questi file sono progettati per il supporto tecnico Microsoft.|
+|**Log amministrazione**|Registra le attività amministrative per il servizio di protezione. Ad esempio, se il servizio è disattivato, quando viene abilitata la funzionalità di utente con privilegi avanzati e quando agli utenti vengono delegate autorizzazioni di amministratore per il servizio. <br /><br />Per ulteriori informazioni, vedere il cmdlet di PowerShell [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
+|**Rilevamento dei documenti**|Consente agli utenti di monitorare e revocare l'accesso ai documenti monitorati con il client Azure Information Protection. Gli amministratori globali possono inoltre eseguire il rilevamento di questi documenti per conto degli utenti. <br /><br />Per altre informazioni, vedere [Configurazione e uso del rilevamento dei documenti per Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
+|**Registri eventi del client**|Attività di utilizzo per il client Azure Information Protection, registrata nel registro eventi locale di Windows **Applicazioni e servizi**, **Azure Information Protection**. <br /><br />Per altre informazioni, vedere [Registrazione dell'utilizzo per il client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).|
+|**File di log del client**|Log per la risoluzione dei problemi per il client Azure Information Protection, disponibili in **%localappdata%\Microsoft\MSIP**. <br /><br />Questi file sono progettati per il supporto tecnico Microsoft.|
+| | |
 
 Vengono raccolte informazioni anche dai registri d'uso del client e dallo scanner Azure Information Protection, che vengono aggregate per creare report nel portale di Azure. Per altre informazioni, vedere [Reporting per Azure Information Protection](reports-aip.md).
 
@@ -71,13 +77,13 @@ Per scaricare i log di utilizzo, si userà il modulo AIPService di PowerShell pe
 
 1.  Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il cmdlet [Connect-AipService](/powershell/module/aipservice/connect-aipservice) per connettersi a Azure Information Protection:
 
-    ```
+    ```PowerShell
     Connect-AipService
     ```
     
 2.  Eseguire il comando seguente per scaricare i log per una data specifica: 
 
-    ```
+    ```PowerShell
     Get-AipServiceUserLog -Path <location> -fordate <date>
     ```
 
@@ -122,26 +128,26 @@ La terza riga è costituita da un elenco di nomi separati da caratteri di tabula
 
 Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo stesso ordine della riga precedente e sono separati da caratteri di tabulazione. La tabella riportata di seguito consente di interpretare i campi.
 
-
-|   Nome campo   | Tipo di dati W3C |                                                                                                                                                                          Descrizione                                                                                                                                                                          |                                                            Valore di esempio                                                            |
-|----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-|      data      |     Data      |                                                                                                                     La data UTC in cui è stata gestita la richiesta.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                                     |                                                             25-06-2013                                                              |
-|      time      |     Ora      |                                                                                                            L'ora in cui è stata gestita la richiesta, in formato UTC 24 ore.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                            |                                                              21.59.28                                                               |
-|     row-id     |     Testo      |                                                                           Il GUID univoco del record di log. Se non è presente alcun valore, identificare la voce tramite il valore correlation-id.<br /><br />Questo valore è utile quando i log vengono aggregati o copiati in un altro formato.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
-|  request-type  |     Nome      |                                                                                                                                                            Il nome dell'API RMS richiesta.                                                                                                                                                            |                                                           AcquireLicense                                                            |
-|    user-id     |    string     |                                                               L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Le chiamate da una chiave del tenant gestita dall'utente (BYOK) hanno un valore **"**, che si applica anche quando i tipi di richiesta sono anonimi.                                                                |                                                          ‘joe@contoso.com’                                                          |
-|     result     |    string     |                                                                                                                  La stringa 'Success' indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.                                                                                                                   |                                                              'Operazione riuscita'                                                              |
-| correlation-id |     Testo      |                                                                                                 GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |
-|   content-id   |     Testo      |                                                                      GUID, riportato tra parentesi graffe, che identifica il contenuto protetto, ad esempio un documento.<br /><br />In questo campo è presente un valore solo se la richiesta è di tipo AcquireLicense. Per tutti gli altri tipi di richiesta il campo è vuoto.                                                                       |                                               {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                |
-|  owner-email   |    string     |                                                                                                                       Indirizzo di posta elettronica del proprietario del documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                        |                                                          alice@contoso.com                                                          |
-|     autorità di certificazione     |    string     |                                                                                                                          Indirizzo di posta elettronica del soggetto emittente il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                          |                       alice@contoso.com (oppure) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
-|  template-id   |    string     |                                                                                                                    ID del modello usato per proteggere il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                     |                                               {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                |
-|   file-name    |    string     | Nome file di un documento protetto che viene monitorato tramite il client Azure Information Protection per Windows. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess. |                                                       TopSecretDocument.docx                                                        |
-| date-published |     Data      |                                                                                                                          Data in cui è stato protetto il documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
-|     c-info     |    string     |                                                                                   Informazioni sulla piattaforma client che effettua la richiesta.<br /><br />La stringa specifica varia a seconda dell'applicazione (ad esempio, il sistema operativo o il browser).                                                                                   | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
-|      c-ip      |    Indirizzo    |                                                                                                                                                       L'indirizzo IP del client che effettua la richiesta.                                                                                                                                                        |                                                            64.51.202.144                                                            |
-|  admin-action  |     Bool      |                                                                                                                                    Indica se un amministratore ha eseguito l'accesso al sito di rilevamento dei documenti in modalità Amministratore.                                                                                                                                    |                                                                True                                                                 |
-| acting-as-user |    string     |                                                                                                                               Indirizzo di posta elettronica dell'utente per il quale un amministratore accede al sito di rilevamento dei documenti.                                                                                                                                |                                                          'joe@contoso.com'                                                          |
+| Nome campo         | Tipo di dati W3C | Descrizione                                                                                                                                                                                                                                                                                          | Valore di esempio                                                                                                                       |
+| ------------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **date**           | Data          | La data UTC in cui è stata gestita la richiesta.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                                                                                                | 25-06-2013                                                                                                                          |
+| **time**           | Ora          | L'ora in cui è stata gestita la richiesta, in formato UTC 24 ore.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                                                                              | 21.59.28                                                                                                                            |
+| **ID riga**         | Testo          | Il GUID univoco del record di log. Se non è presente alcun valore, identificare la voce tramite il valore correlation-id.<br /><br />Questo valore è utile quando i log vengono aggregati o copiati in un altro formato.                                                                                            | 1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                                                                |
+| **tipo di richiesta**  | Nome          | Il nome dell'API RMS richiesta.                                                                                                                                                                                                                                                              | AcquireLicense                                                                                                                      |
+| **ID utente**        | string        | L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Le chiamate da una chiave del tenant gestita dall'utente (BYOK) hanno un valore **"**, che si applica anche quando i tipi di richiesta sono anonimi.                                                                     | ‘joe@contoso.com’                                                                                                                   |
+| **result**         | string        | La stringa 'Success' indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.                                                                                                                                                                           | 'Operazione riuscita'                                                                                                                           |
+| **ID correlazione** | Testo          | GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.                                                                                                                                        | cab52088-8925-4371-be34-4b71a3112356                                                                                                |
+| **Content-ID**     | Testo          | GUID, riportato tra parentesi graffe, che identifica il contenuto protetto, ad esempio un documento.<br /><br />In questo campo è presente un valore solo se la richiesta è di tipo AcquireLicense. Per tutti gli altri tipi di richiesta il campo è vuoto.                                                                                   | {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                                                              |
+| **owner-email**    | string        | Indirizzo di posta elettronica del proprietario del documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                                                                                     | alice@contoso.com                                                                                                                   |
+| **emittente**         | string        | Indirizzo di posta elettronica del soggetto emittente il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                                                                                          | alice@contoso.com (oppure) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                                             |
+| **ID modello**   | string        | ID del modello usato per proteggere il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                                                                               | {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                                                              |
+| **nome file**      | string        | Nome file di un documento protetto che viene monitorato tramite il client Azure Information Protection per Windows. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess. | TopSecretDocument.docx                                                                                                              |
+| **Data di pubblicazione** | Data          | Data in cui è stato protetto il documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.                                                                                                                                                                                           | 2015-10-15T21:37:00                                                                                                                 |
+| **c-info**         | string        | Informazioni sulla piattaforma client che effettua la richiesta.<br /><br />La stringa specifica varia a seconda dell'applicazione (ad esempio, il sistema operativo o il browser).                                                                                                            | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
+| **c-IP**           | Indirizzo       | L'indirizzo IP del client che effettua la richiesta.                                                                                                                                                                                                                                                     | 64.51.202.144                                                                                                                       |
+| **admin-action**   | Bool          | Indica se un amministratore ha eseguito l'accesso al sito di rilevamento dei documenti in modalità Amministratore.                                                                                                                                                                                                              | Vero                                                                                                                                |
+| **acting-as-user** | string        | Indirizzo di posta elettronica dell'utente per il quale un amministratore accede al sito di rilevamento dei documenti.                                                                                                                                                                                                     | 'joe@contoso.com'                                                                                                                   |
+|                    |               |                                                                                                                                                                                                                                                                                                      |                                                                                                                                     |
 
 #### <a name="exceptions-for-the-user-id-field"></a>Eccezioni per il campo user-id
 Anche se nel campo user-id è in genere riportato il nome dell'utente che ha effettuato la richiesta, esistono due eccezioni in cui il valore del campo non indica un utente reale:
@@ -159,47 +165,60 @@ Sono disponibili molti tipi di richiesta per il servizio di protezione, ma nella
 
 |Tipo di richiesta|Descrizione|
 |----------------|---------------|
-|AcquireLicense|Un client da un computer basato su Windows richiede una licenza per il contenuto protetto.|
-|AcquirePreLicense|Un client, per conto dell'utente, richiede una licenza per il contenuto protetto.|
-|AcquireTemplates|È stata eseguita una chiamata per acquisire modelli in base agli ID modello.|
-|AcquireTemplateInformation|È stata eseguita una chiamata per ottenere gli ID del modello dal servizio.|
-|AddTemplate|Viene eseguita una chiamata dal portale di Azure per aggiungere un modello.|
-|AllDocsCsv|Viene eseguita una chiamata dal sito di rilevamento dei documenti per scaricare il file con estensione csv dalla pagina **Tutti i documenti**.|
-|BECreateEndUserLicenseV1|Viene eseguita una chiamata da un dispositivo mobile per creare un contratto di licenza con l'utente finale.|
-|BEGetAllTemplatesV1|Viene eseguita una chiamata da un dispositivo mobile (back-end) per ottenere tutti i modelli.|
-|Certify|Il client sta certificando l'utente per l'utilizzo e la creazione di contenuto protetto.|
-|DeleteTemplateById|Viene eseguita una chiamata dal portale di Azure per eliminare un modello in base a un ID modello.|
-|DocumentEventsCsv|Viene eseguita una chiamata dal sito di rilevamento dei documenti per scaricare il file con estensione csv per un singolo documento.|
-|ExportTemplateById|Viene eseguita una chiamata dal portale di Azure per esportare un modello in base a un ID modello.|
-|FECreateEndUserLicenseV1|Richiesta analoga ad AcquireLicense, ma inviata da dispositivi mobili.|
-|FECreatePublishingLicenseV1|Questa richiesta corrisponde a una combinazione di Certify e GetClientLicensorCert ed è inviata da client mobili.|
-|FEGetAllTemplates|Viene eseguita una chiamata da un dispositivo mobile (front-end) per ottenere i modelli.|
-|FindServiceLocationsForUser|Viene eseguita una chiamata per effettuare una query di URL, che consente di chiamare la richiesta Certify o AcquireLicense.|
-|GetAllDocs|Viene eseguita una chiamata dal sito di rilevamento dei documenti per caricare la pagina **Tutti i documenti** relativa a un utente o cercare tutti i documenti del tenant. Usare questo valore con i campi admin-action e acting-as-admin:<br /><br />- admin-action è vuoto: un utente visualizza la pagina **Tutti i documenti** relativa ai propri documenti.<br /><br />- admin-action è true e acting-as-user è vuoto: un amministratore visualizza tutti i documenti relativi al proprio tenant.<br /><br />- admin-action è true e acting-as-user non è vuoto: un amministratore visualizza la pagina **Tutti i documenti** relativa a un utente.|
-|GetAllTemplates|Viene eseguita una chiamata dal portale di Azure per aggiungere tutti i modelli.|
-|GetClientLicensorCert|Il client richiede un certificato di distribuzione, da usare in un secondo tempo per proteggere i contenuti, da un computer basato su Windows.|
-|GetConfiguration|Un cmdlet di PowerShell Azure viene chiamato per ottenere la configurazione del tenant di Azure RMS.|
-|GetConnectorAuthorizations|Viene eseguita una chiamata dai connettori RMS per ottenere la rispettiva configurazione dal cloud.|
-|GetRecipients|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione elenco di un singolo documento.|
-|GetSingle|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla pagina **Documento singolo**.|
-|GetTenantFunctionalState|Il portale di Azure controlla se il servizio di protezione (Rights Management di Azure) è attivato.|
-|GetTemplateById|Viene eseguita una chiamata dal portale di Azure per ottenere un modello specificando un ID modello.|
-|KeyVaultDecryptRequest|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant gestita dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure.|
-|KeyVaultGetKeyInfoRequest|Viene eseguita una chiamata per verificare che la chiave specificata da usare in Insieme di credenziali delle chiavi di Azure per la chiave del tenant di Azure Information Protection sia accessibile e non sia già stata usata.|
-|KeyVaultSignDigest|Viene eseguita una chiamata quando una chiave gestita dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
-|KMSPDecrypt|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant legacy gestita dal cliente (BYOK).|
-|KMSPSignDigest|Viene eseguita una chiamata quando una chiave legacy gestita dal cliente (BYOK) viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
-|LoadEventsForMap|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione mappa di un singolo documento.|
-|LoadEventsForSummary|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione sequenza temporale di un singolo documento.|
-|LoadEventsForTimeline|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione mappa di un singolo documento.|
-|ImportTemplate|Viene eseguita una chiamata dal portale di Azure per importare un modello.|
-|RevokeAccess|Viene eseguita una chiamata dal sito di rilevamento dei documenti per revocare un documento.|
-|SearchUsers |Viene eseguita una chiamata dal sito di rilevamento dei documenti per cercare tutti gli utenti in un tenant.|
-|ServerCertify|Viene eseguita una chiamata da un client abilitato per RMS, come SharePoint, per certificare il server.|
-|SetUsageLogFeatureState|Viene eseguita una chiamata per abilitare la funzionalità di registrazione dell'utilizzo.|
-|SetUsageLogStorageAccount|Viene eseguita una chiamata per specificare il percorso dei log del servizio Azure Rights Management.|
-|UpdateNotificationSettings|Viene eseguita una chiamata dal sito di rilevamento dei documenti per modificare le impostazioni di notifica di un singolo documento.|
-|UpdateTemplate|Viene eseguita una chiamata dal portale di Azure per aggiornare un modello esistente.|
+|**AcquireLicense**|Un client da un computer basato su Windows richiede una licenza per il contenuto protetto.|
+|**AcquirePreLicense**|Un client, per conto dell'utente, richiede una licenza per il contenuto protetto.|
+|**AcquireTemplates**|È stata eseguita una chiamata per acquisire modelli in base agli ID modello.|
+|**AcquireTemplateInformation**|È stata eseguita una chiamata per ottenere gli ID del modello dal servizio.|
+|**AddTemplate**|Viene eseguita una chiamata dal portale di Azure per aggiungere un modello.|
+|**AllDocsCsv**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per scaricare il file con estensione csv dalla pagina **Tutti i documenti**.|
+|**BECreateEndUserLicenseV1**|Viene eseguita una chiamata da un dispositivo mobile per creare un contratto di licenza con l'utente finale.|
+|**BEGetAllTemplatesV1**|Viene eseguita una chiamata da un dispositivo mobile (back-end) per ottenere tutti i modelli.|
+|**Certify**|Il client sta certificando l'utente per l'utilizzo e la creazione di contenuto protetto.|
+|**FECreateEndUserLicenseV1**|Richiesta analoga ad AcquireLicense, ma inviata da dispositivi mobili.|
+|**FECreatePublishingLicenseV1**|Questa richiesta corrisponde a una combinazione di Certify e GetClientLicensorCert ed è inviata da client mobili.|
+|**FEGetAllTemplates**|Viene eseguita una chiamata da un dispositivo mobile (front-end) per ottenere i modelli.|
+|**FindServiceLocationsForUser**|Viene eseguita una chiamata per effettuare una query di URL, che consente di chiamare la richiesta Certify o AcquireLicense.|
+|**GetClientLicensorCert**|Il client richiede un certificato di distribuzione, da usare in un secondo tempo per proteggere i contenuti, da un computer basato su Windows.|
+|**GetConfiguration**|Un cmdlet di PowerShell Azure viene chiamato per ottenere la configurazione del tenant di Azure RMS.|
+|**GetConnectorAuthorizations**|Viene eseguita una chiamata dai connettori RMS per ottenere la rispettiva configurazione dal cloud.|
+|**GetRecipients**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione elenco di un singolo documento.|
+|**GetTenantFunctionalState**|Il portale di Azure controlla se il servizio di protezione (Rights Management di Azure) è attivato.|
+|**KeyVaultDecryptRequest**|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant gestita dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure.|
+|**KeyVaultGetKeyInfoRequest**|Viene eseguita una chiamata per verificare che la chiave specificata da usare in Insieme di credenziali delle chiavi di Azure per la chiave del tenant di Azure Information Protection sia accessibile e non sia già stata usata.|
+|**KeyVaultSignDigest**|Viene eseguita una chiamata quando una chiave gestita dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
+|**KMSPDecrypt**|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant legacy gestita dal cliente (BYOK).|
+|**KMSPSignDigest**|Viene eseguita una chiamata quando una chiave legacy gestita dal cliente (BYOK) viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
+|**ServerCertify**|Viene eseguita una chiamata da un client abilitato per RMS, come SharePoint, per certificare il server.|
+|**SetUsageLogFeatureState**|Viene eseguita una chiamata per abilitare la funzionalità di registrazione dell'utilizzo.|
+|**SetUsageLogStorageAccount**|Viene eseguita una chiamata per specificare il percorso dei log del servizio Azure Rights Management.|
+|**UpdateTemplate**|Viene eseguita una chiamata dal portale di Azure per aggiornare un modello esistente.|
+| | | 
+
+**Solo client classico**
+
+I tipi di richiesta seguenti sono rilevanti per gli utenti con solo il client AIP classico:
+
+|Tipo di richiesta|Descrizione|
+|----------------|---------------|
+|**DeleteTemplateById**|Viene eseguita una chiamata dal portale di Azure per eliminare un modello in base a un ID modello.|
+|**DocumentEventsCsv**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per scaricare il file con estensione csv per un singolo documento.|
+|**ExportTemplateById**|Viene eseguita una chiamata dal portale di Azure per esportare un modello in base a un ID modello.|
+|**FEGetAllTemplates**|Viene eseguita una chiamata da un dispositivo mobile (front-end) per ottenere i modelli.|
+|**GetAllDocs**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per caricare la pagina **Tutti i documenti** relativa a un utente o cercare tutti i documenti del tenant. Usare questo valore con i campi admin-action e acting-as-admin:<br /><br />- admin-action è vuoto: un utente visualizza la pagina **Tutti i documenti** relativa ai propri documenti.<br /><br />- admin-action è true e acting-as-user è vuoto: un amministratore visualizza tutti i documenti relativi al proprio tenant.<br /><br />- admin-action è true e acting-as-user non è vuoto: un amministratore visualizza la pagina **Tutti i documenti** relativa a un utente.|
+|**GetAllTemplates**|Viene eseguita una chiamata dal portale di Azure per aggiungere tutti i modelli.|
+|**GetConnectorAuthorizations**|Viene eseguita una chiamata dai connettori RMS per ottenere la rispettiva configurazione dal cloud.|
+|**GetSingle**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla pagina **Documento singolo**.|
+|**GetTemplateById**|Viene eseguita una chiamata dal portale di Azure per ottenere un modello specificando un ID modello.|
+|**LoadEventsForMap**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione mappa di un singolo documento.|
+|**LoadEventsForSummary**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione sequenza temporale di un singolo documento.|
+|**LoadEventsForTimeline**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione mappa di un singolo documento.|
+|**ImportTemplate**|Viene eseguita una chiamata dal portale di Azure per importare un modello.|
+|**RevokeAccess**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per revocare un documento.|
+|**SearchUsers** |Viene eseguita una chiamata dal sito di rilevamento dei documenti per cercare tutti gli utenti in un tenant.|
+|**UpdateNotificationSettings**|Viene eseguita una chiamata dal sito di rilevamento dei documenti per modificare le impostazioni di notifica di un singolo documento.|
+|**UpdateTemplate**|Viene eseguita una chiamata dal portale di Azure per aggiornare un modello esistente.|
+| | | 
+
 
 
 ## <a name="powershell-reference"></a>Informazioni di riferimento su PowerShell

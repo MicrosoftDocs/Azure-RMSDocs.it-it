@@ -5,26 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: de4c71b6cb7b6836d6757c7cd74bc21e30999a38
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: dbbf7c0644285c56ea34b57eb0b6b6a7894bc17f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382871"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
-
->[!NOTE] 
-> Se si lavora con lo scanner classico di AIP, vedere [installazione e configurazione dello scanner classico Azure Information Protection](deploy-aip-scanner-configure-install-classic.md).
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Pertinente per**: [AIP Unified Labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per lo scanner classico, vedere [configurazione e installazione dello scanner classico Azure Information Protection](deploy-aip-scanner-configure-install-classic.md). *
 
 Prima di iniziare la configurazione e l'installazione del Azure Information Protection scanner, verificare che il sistema sia conforme ai [prerequisiti richiesti](deploy-aip-scanner-prereqs.md). 
 
@@ -106,12 +105,12 @@ A partire dalla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-rel
 |Prerequisito  |Descrizione  |
 |---------|---------|
 |**Installare il servizio di individuazione della rete**     |   Se è stato aggiornato di recente lo scanner, potrebbe essere necessario installare anche il servizio di individuazione della rete. <br /><br />Eseguire il cmdlet [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) per abilitare i processi di analisi di rete.      |
-|**Analisi Azure Information Protection**     | Assicurarsi di aver abilitato Azure Information Protection Analytics. <br /><br />Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima).** <br /><br />Per ulteriori informazioni, vedere [la pagina relativa alla creazione di report centrali per Azure Information Protection (anteprima pubblica)](reports-aip.md).|
+|**Analisi Azure Information Protection**     | Assicurarsi di aver abilitato Azure Information Protection Analytics. <br /><br />Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima)**. <br /><br />Per ulteriori informazioni, vedere [la pagina relativa alla creazione di report centrali per Azure Information Protection (anteprima pubblica)](reports-aip.md).|
 | | |
 
 #### <a name="creating-a-network-scan-job"></a>Creazione di un processo di analisi di rete
 
-1. Accedere al portale di Azure e passare a **Azure Information Protection.** Nel menu **scanner** a sinistra selezionare l'icona processi di **analisi di rete (anteprima)** ![processi di analisi di rete](media/i-network-scan-jobs.png "icona dei processi di analisi di rete").
+1. Accedere al portale di Azure e passare a **Azure Information Protection**. Nel menu **scanner** a sinistra selezionare l'icona processi di **analisi di rete (anteprima)** ![processi di analisi di rete](media/i-network-scan-jobs.png "icona dei processi di analisi di rete").
     
 1. Nel riquadro **processi di analisi di rete Azure Information Protection** selezionare **Aggiungi** ![icona](media/i-add.png "icona Aggiungi")Aggiungi.
     
@@ -121,10 +120,10 @@ A partire dalla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-rel
     |---------|---------|
     |**Nome del processo di analisi di rete**     |Immettere un nome significativo per questo processo.  Questo campo è obbligatorio.       |
     |**Descrizione**     |   Immettere una descrizione significativa.      |
-    |**Selezionare il cluster**     |Nell'elenco a discesa selezionare il cluster che si vuole usare per analizzare i percorsi di rete configurati.  <br /><br />**Suggerimento:** Quando si seleziona un cluster, assicurarsi che i nodi del cluster assegnati possano accedere agli intervalli di indirizzi IP configurati tramite SMB.      |
-    |**Configura gli intervalli IP da individuare**     |   Fare clic per definire un intervallo o un indirizzo IP. <br /><br />Nel riquadro **Scegli intervalli IP** immettere un nome facoltativo, quindi un indirizzo IP iniziale e un indirizzo IP finale per l'intervallo. <br /><br />**Suggerimento:** Per eseguire la scansione solo di un indirizzo IP specifico, immettere l'indirizzo IP identico in entrambi i campi indirizzo IP **iniziale** e indirizzo IP **finale** .      |
+    |**Selezionare il cluster**     |Nell'elenco a discesa selezionare il cluster che si vuole usare per analizzare i percorsi di rete configurati.  <br /><br />**Suggerimento**: quando si seleziona un cluster, assicurarsi che i nodi del cluster assegnati possano accedere agli intervalli di indirizzi IP configurati tramite SMB.      |
+    |**Configura gli intervalli IP da individuare**     |   Fare clic per definire un intervallo o un indirizzo IP. <br /><br />Nel riquadro **Scegli intervalli IP** immettere un nome facoltativo, quindi un indirizzo IP iniziale e un indirizzo IP finale per l'intervallo. <br /><br />**Suggerimento**: per analizzare solo un indirizzo IP specifico, immettere l'indirizzo IP identico nei campi indirizzo IP **iniziale** e indirizzo IP **finale** .      |
     |**Imposta la pianificazione**     | Definire la frequenza con cui si vuole eseguire questo processo di analisi di rete.  <br /><br />Se si seleziona **settimanale**, viene visualizzata l'impostazione **Esegui processo di analisi di rete in** . Consente di selezionare i giorni della settimana in cui si desidera eseguire il processo di analisi della rete.       |
-    |**Imposta l'ora di inizio (UTC)**     |Definire la data e l'ora in cui si vuole avviare l'esecuzione del processo di analisi di rete. Se si è scelto di eseguire il processo ogni giorno, ogni settimana o ogni mese, il processo viene eseguito all'ora definita, in corrispondenza della ricorrenza selezionata. <br /><br />**Nota**: prestare attenzione quando si imposta la data su qualsiasi giorno alla fine del mese. Se si seleziona **31,** il processo di analisi di rete non viene eseguito in un mese con un massimo di 30 giorni.    |
+    |**Imposta l'ora di inizio (UTC)**     |Definire la data e l'ora in cui si vuole avviare l'esecuzione del processo di analisi di rete. Se si è scelto di eseguire il processo ogni giorno, ogni settimana o ogni mese, il processo viene eseguito all'ora definita, in corrispondenza della ricorrenza selezionata. <br /><br />**Nota**: prestare attenzione quando si imposta la data su qualsiasi giorno alla fine del mese. Se si seleziona **31**, il processo di analisi di rete non viene eseguito in un mese con un massimo di 30 giorni.    |
     | | |
 
 1. Selezionare **Salva** ![icona](media/qs-tutor/save-icon.png "icona Salva") Salva per salvare le modifiche.
@@ -221,9 +220,9 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
   
     Se si aggiunge un percorso di SharePoint per i **documenti condivisi**:
     - Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. 
-    Ad esempio: `http://sp2013/SharedDocuments`
+    ad esempio `http://sp2013/SharedDocuments`
     - Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. 
-    Ad esempio: `http://sp2013/Documents/SalesReports`
+    ad esempio `http://sp2013/Documents/SalesReports`
     - In alternativa, specificare solo il **nome di dominio completo (FQDN** ) di SharePoint, ad esempio `http://sp2013` per [individuare e analizzare tutti i siti e i siti Web di SharePoint in un URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) e sottotitoli specifici in questo URL. Concedere i diritti dell' **agente di raccolta siti** scanner per abilitare questa operazione. 
     >
 
@@ -264,16 +263,16 @@ Dopo aver [configurato il Azure Information Protection scanner nel portale di Az
 1. Eseguire il cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , specificando l'istanza di SQL Server in cui creare un database per lo scanner Azure Information Protection e il nome del cluster dello scanner specificato nella sezione precedente: 
     
     ```PowerShell
-    Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
+    Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
     Esempi, usando il nome di profilo **Europe**:
     
-    - Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile Europe`
+    - Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
-    - Per un'istanza denominata: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile Europe`
+    - Per un'istanza denominata: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster Europe`
     
-    - Per SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile Europe`
+    - Per SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
     Quando viene richiesto, specificare le credenziali per l'account del servizio scanner ( \<domain\user name> ) e la password.
 
@@ -301,7 +300,7 @@ Per ottenere un token di Azure AD:
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
-    Ad esempio:
+    ad esempio:
 
     ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
@@ -358,13 +357,13 @@ Per un criterio etichetta applicabile all'account utente che Scarica le etichett
 
 Per uno scanner con accesso a Internet, questo account utente è l'account specificato per il parametro *DelegatedUser* con il comando Set-AIPAuthentication.
 
-**Esempio 1:**  Comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
+**Esempio 1**: comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Esempio 2:** Comando di PowerShell per lo scanner per proteggere i file con estensione XML e i file TIFF oltre ai file di Office e PDF, in cui il criterio dell'etichetta è denominato "scanner":
+**Esempio 2**: comando di PowerShell per lo scanner per proteggere i file con estensione XML e TIFF oltre ai file di Office e PDF, in cui i criteri dell'etichetta sono denominati "scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
@@ -388,7 +387,7 @@ Se, ad esempio, si dispone di un nuovo tipo di file in diversi repository di dat
 
 Per apportare modifiche in blocco tra i repository:
 
-1. Nella portale di Azure nel riquadro **repository** selezionare l'opzione **Esporta** . Ad esempio:
+1. Nella portale di Azure nel riquadro **repository** selezionare l'opzione **Esporta** . ad esempio:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Esportazione delle impostazioni del repository di dati per lo scanner Azure Information Protection":::
 
@@ -451,7 +450,7 @@ Usare le opzioni e le linee guida seguenti per ottimizzare le prestazioni dello 
 |---------|---------|
 |**Disporre di una connessione di rete ad alta velocità e affidabile tra il computer dello scanner e l'archivio dei dati analizzati**     |  Ad esempio, posizionare il computer dello scanner nella stessa LAN o preferibilmente nello stesso segmento di rete dell'archivio dati scansionato. <br /><br />La qualità della connessione di rete influiscono sulle prestazioni dello scanner perché, per esaminare i file, lo scanner trasferisce il contenuto dei file nel computer in cui è in esecuzione il servizio scanner. <br /><br />Riducendo o eliminando gli hop di rete necessari per i dati da spostare, viene ridotto anche il carico sulla rete.      |
 |**Verificare che il computer dello scanner abbia risorse del processore disponibili**     | Esaminare il contenuto del file e crittografare e decrittografare i file sono azioni che richiedono un utilizzo intensivo del processore. <br /><br />Monitorare i cicli di analisi tipici degli archivi dati specificati per identificare se le risorse del processore influiscono negativamente sulle prestazioni dello scanner.        |
-|**Installare più istanze dello scanner** | Lo scanner Azure Information Protection supporta più database di configurazione nella stessa istanza di SQL Server quando si specifica un nome di cluster personalizzato (profilo) per lo scanner. <br /><br />Più scanner possono inoltre condividere lo stesso cluster (profilo), ottenendo tempi di analisi più rapidi.|
+|**Installare più istanze dello scanner** | Lo scanner Azure Information Protection supporta più database di configurazione nella stessa istanza di SQL Server quando si specifica un nome di cluster personalizzato per lo scanner. <br /><br />Più scanner possono inoltre condividere lo stesso cluster, ottenendo tempi di analisi più rapidi.|
 |**Controllare l'utilizzo della configurazione alternativa** |L'esecuzione dello scanner è più rapida quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per applicare un'etichetta predefinita a tutti i file in quanto lo scanner non esamina i contenuti del file. <br/><br />L'esecuzione dello scanner è più lenta quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per identificare tutte le condizioni personalizzate e i tipi di informazioni riservate noti.|
 | | |
 
@@ -465,7 +464,7 @@ Ulteriori fattori che influiscono sulle prestazioni dello scanner includono:
 |**Tempi di caricamento/risposta**     |Anche i tempi di caricamento e di risposta correnti degli archivi dati che contengono i file da analizzare influiscono sulle prestazioni dello scanner.         |
 |**Modalità scanner** (individuazione/applicazione)    | La modalità di individuazione ha in genere una velocità di analisi superiore rispetto alla modalità di applicazione. <br /><br />Per l'individuazione è necessaria un'azione di lettura di un singolo file, mentre la modalità di applicazione richiede azioni di lettura e scrittura.        |
 |**Modifiche dei criteri**     |È possibile che le prestazioni dello scanner siano invariate se sono state apportate modifiche all'etichettatura automatica nei criteri etichetta. <br /><br />Il primo ciclo di analisi, quando lo scanner deve controllare tutti i file, avrà più tempo dei cicli di analisi successivi che, per impostazione predefinita, ispeziona solo i file nuovi e modificati. <br /><br />Se si modificano le condizioni o le impostazioni di etichetta automatica, tutti i file vengono nuovamente sottoposti a scansione. Per ulteriori informazioni, vedere ripetizione dell' [analisi dei file](deploy-aip-scanner-manage.md#rescanning-files).|
-|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. <br /><br /> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. <br /><br />Ad esempio: <br />-Evitare [quantificatori greedy](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Usare gruppi non di acquisizione come `(?:expression)` anziché `(expression)`    |
+|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. <br /><br /> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. <br /><br />ad esempio: <br />-Evitare [quantificatori greedy](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Usare gruppi non di acquisizione come `(?:expression)` anziché `(expression)`    |
 |**Livello di log**     |  Le opzioni a livello di log includono **debug**, **info**, **Error** e **off** per i report dello scanner.<br /><br />- **Risultati migliori** prestazioni <br />- Il **debug** rallenta notevolmente lo scanner e deve essere usato solo per la risoluzione dei problemi. <br /><br />Per altre informazioni, vedere il parametro *ReportLevel* del cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**File sottoposti a scansione**     |-Ad eccezione dei file di Excel, i file di Office vengono analizzati più rapidamente rispetto ai file PDF. <br /><br />-I file non protetti sono più veloci da analizzare rispetto ai file protetti. <br /><br />-I file di grandi dimensioni hanno ovviamente più tempo per l'analisi di file di piccole dimensioni.         |
 | | |
@@ -538,10 +537,8 @@ Dopo aver installato e configurato lo scanner, avviare [l'analisi dei file](depl
 
 Vedere anche: [distribuzione di Azure Information Protection scanner per classificare e proteggere automaticamente i file](deploy-aip-scanner.md).
 
-**Ulteriori informazioni:**
+**Ulteriori informazioni**:
 
 - Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
-
-- Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - Usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari in cui viene usato PowerShell, vedere [uso di PowerShell con il Azure Information Protection Unified Labeling client](./rms-client/clientv2-admin-guide-powershell.md).
