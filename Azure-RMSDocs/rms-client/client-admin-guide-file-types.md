@@ -1,6 +1,6 @@
 ---
-title: Tipi di file supportati-client Azure Information Protection
-description: Dettagli tecnici sui tipi di file supportati, le estensioni di file e i livelli di protezione per gli amministratori che sono responsabili del client Azure Information Protection per Windows.
+title: Tipi di file supportati-Azure Information Protection client classico
+description: Dettagli tecnici sui tipi di file supportati, le estensioni dei nomi di file e i livelli di protezione per gli amministratori responsabili del Azure Information Protection client classico per Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb1896adf9899700fe03fa1286509602e73c90bd
-ms.sourcegitcommit: c6b0b092735504fd76d74a46d024321673482098
+ms.openlocfilehash: 67d5e173b1dbc1b749c9090746c8ed0342f064cc
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "95568461"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386100"
 ---
-# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-classic-client"></a>Guida dell'amministratore: tipi di file supportati dal client di Azure Information Protection classico
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Il client Azure Information Protection permette di applicare quanto segue a documenti e messaggi di posta elettronica:
+Il client di Azure Information Protection classico può applicare quanto segue ai documenti e ai messaggi di posta elettronica:
 
 - Solo classificazione
 
@@ -95,7 +95,7 @@ La protezione dei dati può essere applicata automaticamente quando un utente se
 
 Esistono dimensioni massime dei file supportati dal client Azure Information Protection per la protezione.
 
-- **Per i file di Office:**
+- **Per i file di Office**:
 
 
   |                                                     Applicazione di Office                                                      |                                                Dimensione massima del file supportata                                                 |

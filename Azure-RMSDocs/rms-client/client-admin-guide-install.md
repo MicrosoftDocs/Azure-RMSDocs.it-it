@@ -1,11 +1,11 @@
 ---
-title: Installare il client Azure Information Protection per gli utenti
-description: Istruzioni e informazioni per gli amministratori per la distribuzione del client Azure Information Protection per Windows nelle reti aziendali.
+title: Installare il client di Azure Information Protection classico per gli utenti
+description: Istruzioni e informazioni per gli amministratori per la distribuzione di Azure Information Protection client classico per Windows nelle reti aziendali.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d16d735f6119617eb12599f110f8c22682992d4
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 64735f0a4e9343ced3839f9dcdd9f56985c0b2fa
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734998"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386050"
 ---
-# <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
+# <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Guida dell'amministratore: installare il client classico Azure Information Protection per gli utenti
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 >
-> **Per distribuire il client AIP con interfaccia classica**, aprire un ticket di supporto per ottenere l'accesso al download.
+> **Per distribuire il client AIP classico**, aprire un ticket di supporto per ottenere l'accesso al download.
 
 Prima di installare il client Azure Information Protection nella rete aziendale, verificare che nei computer siano installate le versioni del sistema operativo e le applicazioni richieste per Azure Information Protection: [Requisiti per Azure Information Protection](../requirements.md).
 
@@ -91,7 +91,7 @@ Usare una delle opzioni seguenti per installare il client per gli utenti:
 |Opzione di installazione  |Descrizione  |
 |---------|---------|
 |**Eseguire il file eseguibile del client (exe)**  <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | È consigliabile eseguire la versione exe del client per eseguire l'installazione in modo interattivo o invisibile all'utente.<br><br> L'esecuzione del file con estensione exe presenta la massima flessibilità ed è consigliata perché controlla anche la presenza di molti prerequisiti e può anche installare eventuali prerequisiti mancanti. |
-|**Distribuire il programma di installazione di Windows (MSI) del client** <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Il programma di installazione di Windows client Azure Information Protection è supportato solo per le installazioni automatiche che utilizzano un meccanismo di distribuzione centrale.<br><br> Usare, ad esempio, il file con estensione msi quando si distribuisce con criteri di gruppo, Configuration Manager e Microsoft Intune.<br><br> È necessario usare il metodo TIS per i PC Windows 10 gestiti da Intune e la gestione di dispositivi mobili (MDM) come file exe non supportati per questi computer.<br><br>**Nota:** Quando si utilizza l'installazione con estensione msi, è necessario verificare manualmente la presenza di prerequisiti e installare o disinstallare il software dipendente necessario. |
+|**Distribuire il programma di installazione di Windows (MSI) del client** <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Il programma di installazione di Windows client Azure Information Protection è supportato solo per le installazioni automatiche che utilizzano un meccanismo di distribuzione centrale.<br><br> Usare, ad esempio, il file con estensione msi quando si distribuisce con criteri di gruppo, Configuration Manager e Microsoft Intune.<br><br> È necessario usare il metodo TIS per i PC Windows 10 gestiti da Intune e la gestione di dispositivi mobili (MDM) come file exe non supportati per questi computer.<br><br>**Nota**: quando si usa l'installazione con estensione msi, è necessario verificare manualmente la presenza di prerequisiti e installare o disinstallare il software dipendente necessario. |
 
 Dopo aver installato il client, eseguire gli aggiornamenti ripetendo lo stesso metodo di installazione o utilizzare Windows Update per aggiornare automaticamente il client. Non è necessario disinstallare le versioni legacy del client prima di installare una nuova versione.
 
@@ -190,13 +190,13 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     
     |Versione di Office|Sistema operativo|Software|Azione|
     |--------------------|--------------|----------------|---------------------|
-    |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installazione|
-    |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installazione|
-    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installazione|
-    |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installazione|
-    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installazione|
+    |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installare|
+    |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installare|
+    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installare|
+    |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installare|
+    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installare|
     |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB2843630 o KB2919355|
-    |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installazione|
+    |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare|
 
 1. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection.msi /quiet`. Tuttavia, può essere necessario specificare parametri di installazione aggiuntivi, che sono documentati nelle [istruzioni del programma di installazione del file eseguibile](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).
 

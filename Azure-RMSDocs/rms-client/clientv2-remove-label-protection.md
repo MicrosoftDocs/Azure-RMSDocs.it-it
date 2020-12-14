@@ -1,8 +1,8 @@
 ---
 title: Rimuovere le etichette usando il client Azure Information Protection Unified Labeling
 description: Istruzioni su come rimuovere le etichette di riservatezza e la protezione da file e messaggi di posta elettronica usando il Azure Information Protection client Unified labeling.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
 ms.topic: how-to
@@ -12,22 +12,22 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4009de4e147bd5102602ef946f8b892ab478e542
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: fffc0099d1a018141c15feabb746e4795be18d5b
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567669"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385370"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Guida dell'utente: rimuovere etichette e protezione da file e messaggi di posta elettronica che sono stati etichettati da Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida per l'utente del client classico](client-remove-label-protection.md). *
 
-Quando il Azure Information Protection client unificato è [installato nel computer](install-client-app.md), è possibile rimuovere le etichette di riservatezza e la protezione da file e messaggi di posta elettronica.
+Quando il Azure Information Protection client unificato è [installato nel computer](install-unifiedlabelingclient-app.md), è possibile rimuovere le etichette di riservatezza e la protezione da file e messaggi di posta elettronica.
 
 Quando l'etichetta di riservatezza da rimuovere è configurata per applicare la protezione, questa azione rimuove anche la protezione dal file. Potrebbe essere richiesto di registrare il motivo della rimozione dell'etichetta.
 
@@ -72,7 +72,7 @@ Quando si usa Esplora file, è possibile rimuovere rapidamente etichette e prote
 ## <a name="other-instructions"></a>Altre istruzioni
 Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
-- [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
+- [Per saperne di più](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
 

@@ -12,19 +12,21 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 450cf34997f676e1033856e14adfc3e792fb1e04
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: 71f07f5ffb9167ab61653cef10c610968ff74786
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568521"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384197"
 ---
 # <a name="azure-information-protection-aip-labeling-classification-and-protection"></a>Azure Information Protection (AIP) assegnazione di etichette, classificazione e protezione
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> ***Pertinente per**: [Azure Information Protection Unified Labeling client e il client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection è una soluzione basata sul cloud che consente alle organizzazioni di classificare e proteggere documenti e messaggi di posta elettronica mediante l'applicazione di etichette. 
 
@@ -42,17 +44,17 @@ Le etichette possono sia [classificare](#how-labels-apply-classification-with-ai
 L'assegnazione di etichette ai contenuti con AIP include:
 
 - **Classificazione**, che può essere rilevata indipendentemente dalla posizione in cui sono archiviati i dati o da cui vengono condivisi.
-- **Contrassegni visivi**, come intestazioni, piè di pagina o filigrane.
-- I **metadati** vengono aggiunti a file e intestazioni di messaggi di posta elettronica come testo non crittografato. I metadati come testo non crittografato consentono ad altri servizi di identificare la classificazione e adottare le misure appropriate.
+- **Contrassegni visivi**, ad esempio intestazioni, piè di pagina o filigrane.
+- **Metadati**, aggiunti a file e intestazioni di posta elettronica in testo non crittografato. I metadati come testo non crittografato consentono ad altri servizi di identificare la classificazione e adottare le misure appropriate.
 
-Nell'immagine seguente, ad esempio, l'assegnazione di etichette ha classificato un messaggio di posta elettronica come *Generale*, usando il [client di etichettatura unificata](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+Nell'immagine seguente, ad esempio, l'assegnazione di etichette ha classificato un messaggio di posta elettronica come *generale*:
 
 :::image type="content" source="media/example-email-footerv2.png" alt-text="Piè di pagina e intestazioni del messaggio di posta elettronica di esempio che mostrano la classificazione di Azure Information Protection":::
 
 In questo esempio, l'etichetta:
 
-- **Aggiunge anche un piè di pagina con *Riservatezza: Generale* al messaggio di posta elettronica.** Il piè di pagina è un indicatore visivo che segnala a tutti i destinatari che il messaggio è previsto per dati aziendali generici che non devono essere inviati fuori dall'organizzazione.
-- **Metadati incorporati nelle intestazioni dei messaggi di posta elettronica.** I dati dell'intestazione consentono ai servizi di posta elettronica di ispezionare l'etichetta e, in teoria, di creare una voce di controllo o impedirne l'invio all'esterno dell'organizzazione.
+- **Aggiunta di un piè di pagina di *Sensitivity: generale* al messaggio di posta elettronica**. Il piè di pagina è un indicatore visivo che segnala a tutti i destinatari che il messaggio è previsto per dati aziendali generici che non devono essere inviati fuori dall'organizzazione.
+- **Metadati incorporati nelle intestazioni del messaggio di posta elettronica**. I dati dell'intestazione consentono ai servizi di posta elettronica di ispezionare l'etichetta e, in teoria, di creare una voce di controllo o impedirne l'invio all'esterno dell'organizzazione.
 
 Le etichette possono essere applicate automaticamente dagli amministratori usando regole e condizioni, manualmente dagli utenti o usando una combinazione in cui gli amministratori definiscono le raccomandazioni visualizzate agli utenti.
 
@@ -66,8 +68,8 @@ Azure RMS usa crittografia, identità e criteri di autorizzazione. Analogamente 
 
 Le impostazioni di protezione possono essere:
 
-- **Parte della configurazione delle etichette** in modo che gli utenti classifichino e proteggano i documenti e i messaggi di posta elettronica semplicemente applicando un'etichetta. 
-- **Usate** dalle applicazioni e dai servizi che supportano la protezione ma non l'assegnazione di etichette. 
+- **Parte della configurazione dell'etichetta**, per consentire agli utenti di classificare e proteggere i documenti e i messaggi di posta elettronica semplicemente applicando un'etichetta. 
+- **Usati autonomamente** dalle applicazioni e dai servizi che supportano la protezione senza etichettare. 
 
     Per le applicazioni e i servizi che supportano solo la protezione, le impostazioni di protezione vengono usate come [modelli di Rights Management](#rights-management-templates).
 
@@ -95,7 +97,7 @@ Per altre informazioni, vedere [Informazioni su Microsoft Azure Rights Managemen
 
 Il client AIP installa la barra di Information Protection per le applicazioni di Office e consente agli utenti finali di integrare AIP nei documenti e nei messaggi di posta elettronica.
 
-Ad esempio, usando il [client di etichettatura unificata](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) in Excel:
+Ad esempio, in Excel:
 
 ![Esempio di barra di Azure Information Protection in Excel](./media/excelproplus-infoprotect-bar.png)
 
@@ -120,7 +122,7 @@ L'uso di AIP con Exchange Online offre l'ulteriore vantaggio di poter inviare me
 
 Ad esempio, potrebbe essere necessario inviare informazioni riservate agli indirizzi di posta elettronica personali che usano un account **Gmail**, **Hotmail** o **Microsoft** o a utenti che non hanno un account in Office 365 o Azure AD. Questi messaggi di posta elettronica deve essere crittografati sia nella posizione di archiviazione che in transito e devono essere letti solo dai destinatari originali.
 
-Questo scenario richiede le [funzionalità di Crittografia messaggi di Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). Se i destinatari non possono aprire il messaggio di posta elettronica protetto nel client di posta elettronica nativo, possono usare un passcode monouso per leggere le informazioni riservate in un browser.
+Questo scenario richiede le [funzionalità di Crittografia messaggi di Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). Se i destinatari non sono in grado di aprire il messaggio di posta elettronica protetto nel client di posta elettronica predefinito, possono usare un unico codice per leggere le informazioni riservate in un browser.
 
 Ad esempio, un utente di Gmail potrebbe visualizzare la richiesta seguente in un messaggio di posta elettronica ricevuto:
 
@@ -128,7 +130,7 @@ Ad esempio, un utente di Gmail potrebbe visualizzare la richiesta seguente in un
 
 Per l'utente che invia il messaggio di posta elettronica, le azioni necessarie sono le stesse per l'invio di un messaggio di posta elettronica protetto a un utente nella propria organizzazione. Ad esempio, selezionare il pulsante **Non inoltrare** che il client AIP può aggiungere alla barra multifunzione di Outlook. 
 
-In alternativa, la funzionalità Non inoltrare può essere integrata in un'etichetta che gli utenti possono selezionare per applicare la classificazione e la protezione al messaggio di posta elettronica. Ad esempio, nel [client di etichettatura unificata](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+In alternativa, la funzionalità **non inoltrare** può essere integrata in un'etichetta che gli utenti possono selezionare per applicare la classificazione e la protezione al messaggio di posta elettronica. Ad esempio:
 
 ![Selezione di un'etichetta configurata per Non inoltrare](./media/recipients-only-label2.png)
 
@@ -153,6 +155,11 @@ Per classificare e proteggere il contenuto esistente, usare uno dei metodi segue
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Configurare e provare a usare Azure Information Protection in autonomia con l'[esercitazione introduttiva](quickstart-viewpolicy.md) e le [esercitazioni](infoprotect-quick-start-tutorial.md). 
+Configurare e visualizzare Azure Information Protection per se stessi con la Guida introduttiva e le esercitazioni:
+
+- [Avvio rapido: Distribuire il client di etichettatura unificata](quickstart-deploy-client.md)
+- [Esercitazione: Installazione dello scanner di etichettatura unificata di Azure Information Protection (AIP)](tutorial-install-scanner.md)
+- [Esercitazione: Ricerca del contenuto sensibile con lo scanner di Azure Information Protection (AIP)](tutorial-scan-networks-and-content.md)
+- [Esercitazione: Prevenzione dell'oversharing in Outlook con Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 
 Se invece si è pronti a distribuire il servizio nella propria organizzazione, vedere le [guide con le procedure](how-to-guides.md).

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.date: 11/09/2020
 manager: rkarlin
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
@@ -13,16 +13,21 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 635ab25150dd18e50da8b93b4f0ec4c145320e19
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 25ea3c8e008334ec50f81f0c5fcef15690132ef6
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316807"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386271"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare Azure Information Protection Analytics per la creazione di report centrali che consentono di tenere traccia dell'adozione delle etichette che classificano e proteggono i dati dell'organizzazione. Inoltre:
 
@@ -38,9 +43,8 @@ Usare Azure Information Protection Analytics per la creazione di report centrali
 
 I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da Microsoft Cloud App Security, da computer Windows 10 che usano Microsoft Defender Advanced Threat Protection e dai [log di utilizzo della protezione](log-analyze-usage.md). Si noti che il [Visualizzatore AIP](rms-client/clientv2-view-use-files.md) non invia log di controllo.
 
-> [!NOTE]
-> Azure Information Protection Analytics per la creazione di report centrali è attualmente in fase di anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
-> 
+Azure Information Protection Analytics per la creazione di report centrali è attualmente in fase di anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
+
 
 ## <a name="aip-reporting-data"></a>Dati di report AIP
 
@@ -51,7 +55,7 @@ Ad esempio, il Azure Information Protection Analytics per Reporting centrale Vis
 |**Report Uso**     |  Selezionare un periodo di tempo per mostrare uno dei seguenti elementi: <br /><br />     -Quali etichette vengono applicate <br /><br />-Quanti documenti e messaggi di posta elettronica vengono etichettati <br /><br />-Il numero di documenti e messaggi di posta elettronica protetti <br /><br />-Quanti utenti e quanti dispositivi sono contrassegnati da documenti e messaggi di posta elettronica <br /><br />-Quali applicazioni vengono utilizzate per l'assegnazione di etichette     |
 |**Log attività**     | Selezionare un periodo di tempo per mostrare uno dei seguenti elementi: <br /><br />      -Quali file individuati in precedenza dallo scanner sono stati eliminati dal repository analizzato <br /> <br /> -Quali azioni di etichettatura sono state eseguite da un utente specifico <br /><br /> -Quali azioni di etichettatura sono state eseguite da un dispositivo specifico<br /> <br />    -Quali utenti hanno eseguito l'accesso a un documento con etichetta specifico<br /> <br />-Quali azioni di etichettatura sono state eseguite per un percorso di file specifico<br /> <br />-Quali azioni di etichettatura sono state eseguite da un'applicazione specifica, ad esempio Esplora file e con il pulsante destro del mouse, PowerShell, lo scanner o Microsoft Cloud App Security <br /> <br />-I documenti protetti a cui è stato effettuato l'accesso dagli utenti o hanno negato l'accesso agli utenti, anche se tali utenti non hanno il client di Azure Information Protection installato o non sono all'interno dell'organizzazione <br /> <br />-Eseguire il drill-down nei file segnalati per visualizzare **i dettagli dell'attività** per altre informazioni      |
 |**Report di individuazione dati**     |      -Quali file si trovano nei repository di dati scansionati, nei computer Windows 10 o nei computer che eseguono i client di Azure Information Protection <br /><br />-Quali file sono contrassegnati e protetti e il percorso dei file in base alle etichette <br /><br />-Quali file contengono informazioni riservate per le categorie note, ad esempio dati finanziari e informazioni personali, nonché la posizione dei file in base a queste categorie       |
-|**Report raccomandazioni**     | -Identificare i file non protetti che contengono un tipo di informazioni riservate noto. Una raccomandazione consente di configurare immediatamente la condizione corrispondente a una delle etichette, per applicare l'etichettatura automatica o consigliata. **<br /> Se si segue la Raccomandazione:** la volta successiva che i file vengono aperti da un utente o analizzati dal Azure Information Protection scanner, i file possono essere classificati e protetti automaticamente. <br /><br /> : I repository di dati hanno file con informazioni riservate identificate, ma non vengono analizzati dal Azure Information Protection. Una raccomandazione consente di aggiungere immediatamente l'archivio dati identificato a uno dei profili dello scanner. <br />   **Se si segue la Raccomandazione:** Al successivo ciclo dello scanner, i file possono essere classificati e protetti automaticamente.        |
+|**Report raccomandazioni**     | -Identificare i file non protetti che contengono un tipo di informazioni riservate noto. Una raccomandazione consente di configurare immediatamente la condizione corrispondente a una delle etichette, per applicare l'etichettatura automatica o consigliata. **<br /> Se si segue la raccomandazione**: la volta successiva che i file vengono aperti da un utente o analizzati dal Azure Information Protection scanner, i file possono essere classificati e protetti automaticamente. <br /><br /> : I repository di dati hanno file con informazioni riservate identificate, ma non vengono analizzati dal Azure Information Protection. Una raccomandazione consente di aggiungere immediatamente l'archivio dati identificato a uno dei profili dello scanner. <br />   **Se si segue la raccomandazione**: al successivo ciclo dello scanner, i file possono essere classificati e protetti automaticamente.        |
  
 I report usano [Monitoraggio di Azure](/azure/log-analytics/log-analytics-overview) per archiviare i dati in un'area di lavoro di Log Analytics di proprietà dell'organizzazione. Se si ha familiarità con il linguaggio di query, è possibile modificare le query e creare nuovi report e dashboard di Power BI. L'esercitazione seguente può essere utile per comprendere il linguaggio di query: [Introduzione alle query di log di monitoraggio di Azure](/azure/azure-monitor/log-query/get-started-queries).
 
@@ -98,15 +102,21 @@ Per informazioni dettagliate, vedere:
 - [Gestire l'accesso all'area di lavoro Log Analytics usando le autorizzazioni di Azure](/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
 - [Riferimento al log di controllo Azure Information Protection](audit-logs.md)
 
-Per impedire ai client di Azure Information Protection (versione classica) di inviare questi dati, impostare l' [impostazione dei criteri](configure-policy-settings.md) **Invia dati di controllo su Azure Information Protection Analytics** su **disattivato**:
+#### <a name="prevent-the-aip-clients-from-sending-auditing-data"></a>Impedisci ai client AIP di inviare dati di controllo
 
-- Per fare in modo che la maggior parte degli utenti possa inviare questi dati e un subset di utenti non possa inviare dati di controllo: 
-    - Impostare **Invia dati di controllo a Azure Information Protection Analytics** su **disattivato** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di produzione.
+**Client per l'etichettatura unificata** 
 
-- Per fare in modo che solo un subset di utenti possa inviare dati di controllo: 
-    - Impostare **Invia dati di controllo a Azure Information Protection Analytics** su **disattivato** nei criteri **globali e in** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di test.
+Per impedire che il client con etichetta unificata di Azure Information Protection invii i dati di controllo, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)dei criteri di etichetta.
 
-Per evitare che Azure Information Protection client unificati invii questi dati, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)dei criteri di etichetta.
+**Client classico**
+
+Per impedire che il client di Azure Information Protection classico invii questi dati, impostare l' [impostazione dei criteri](configure-policy-settings.md) di **Invia dati di controllo su Azure Information Protection Analytics** su **disattivato**:
+
+|Requisito  |Istruzioni  |
+|---------|---------|
+|**Per configurare la maggior parte degli utenti per l'invio di dati, con un subset di utenti che non possono inviare dati**     |  Impostare **Invia dati di controllo a Azure Information Protection Analytics** su **disattivato** in un criterio con ambito per il subset di utenti. <br><br> Questa configurazione è tipica per gli scenari di produzione.     |
+|**Per configurare solo un subset di utenti che inviano dati**     |  Impostare **Invia dati di controllo a Azure Information Protection Analytics** su **disattivato** nei criteri **globali e in** in un criterio con ambito per il subset di utenti. <br><br>Questa configurazione è tipica per gli scenari di test.       |
+| | |
 
 #### <a name="content-matches-for-deeper-analysis"></a>Corrispondenze di contenuto per un'analisi più approfondita
 
@@ -114,11 +124,12 @@ Azure Information Protection consente di raccogliere e archiviare i dati effetti
 
 Per impostazione predefinita, i client di Azure Information Protection non inviano corrispondenze di contenuto. Per modificare questo comportamento in modo che vengano inviate le corrispondenze del contenuto:
 
-- Per il client classico, selezionare una casella di controllo come parte della [configurazione](#configure-a-log-analytics-workspace-for-the-reports) per Azure Information Protection Analytics. La casella di controllo è denominata **Abilita analisi più approfondita nei dati sensibili**.
-    
-    Se si vuole che la maggior parte degli utenti che usano questo client per inviare corrispondenze di contenuto, ma un subset di utenti non può inviare corrispondenze di contenuto, selezionare la casella di controllo e quindi configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
+|Client  |Istruzioni  |
+|---------|---------|
+|**Client per l'etichettatura unificata**      |  Configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in un criterio di etichetta.       |
+|**Client classico**      |   Selezionare una casella di controllo come parte della [configurazione](#configure-a-log-analytics-workspace-for-the-reports) per Azure Information Protection Analytics. La casella di controllo è denominata **Abilita analisi più approfondita nei dati sensibili**. <br><br> Se si vuole che la maggior parte degli utenti che usano questo client per inviare corrispondenze di contenuto, ma un subset di utenti non può inviare corrispondenze di contenuto, selezionare la casella di controllo e quindi configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.     |
+|     |         |
 
-- Per il client Unified Labeling, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in un criterio di etichetta.
 
 ## <a name="prerequisites"></a>Prerequisiti
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
@@ -137,35 +148,43 @@ Specificatamente per la funzionalità di analisi di Azure Information Protection
 
 Poiché Azure Information Protection Analytics usa il monitoraggio di Azure, il controllo degli accessi in base al ruolo (RBAC) per Azure controlla anche l'accesso all'area di lavoro. È quindi necessario un ruolo di Azure, nonché un ruolo di amministratore di Azure AD per gestire l'analisi di Azure Information Protection. Se non si ha familiarità con i ruoli di Azure, può risultare utile leggere [Differenze tra i ruoli di controllo dell'accesso in base al ruolo di Azure e i ruoli di amministratore di Azure AD](/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
-Dettagli:
+Per altre informazioni, vedere:
 
-1. Uno dei seguenti [ruoli di amministratore Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) per accedere al riquadro analisi Azure Information Protection:
-    
-    - Per creare l'area di lavoro di Log Analytics o per creare query personalizzate:
-    
-        - **Amministratore di Azure Information Protection**
-        - **Amministratore della sicurezza**
-        - **Amministratore di conformità**
-        - **Amministratore dati di conformità**
-        - **Amministratore globale**
-    
-    - Dopo aver creato l'area di lavoro, è possibile usare i ruoli seguenti con un minor numero di autorizzazioni per visualizzare i dati raccolti:
-    
-        - **Ruolo con autorizzazioni di lettura per la sicurezza**
-        - **Lettore globale**
+- [Ruoli di amministratore Azure AD obbligatori](#required-azure-ad-administrator-roles)
+- [Ruoli di Log Analytics di Azure richiesti](#required-azure-log-analytics-roles)
+- [Ruoli minimi per visualizzare i report](#minimum-roles-to-view-the-reports)
 
-2. È anche necessario uno dei [ruoli di Azure Log Analytics](/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) o dei [ruoli di Azure](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
+#### <a name="required-azure-ad-administrator-roles"></a>Ruoli di amministratore Azure AD obbligatori
+
+Per accedere al riquadro analisi Azure Information Protection, è necessario disporre di uno dei seguenti [ruoli di amministratore Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) :
+
+- Per creare l'area di lavoro di Log Analytics o per creare query personalizzate:
     
-    - Per creare l'area di lavoro o per creare query personalizzate, uno dei ruoli seguenti:
+    - **Amministratore Azure Information Protection**
+    - **Amministratore della sicurezza**
+    - **Amministratore di conformità**
+    - **Amministratore dati di conformità**
+    - **Amministratore globale**
     
-        - **Collaboratore di Log Analytics**
-        - **Collaboratore**
-        - **Proprietario**
+- Dopo aver creato l'area di lavoro, è possibile usare i ruoli seguenti con un minor numero di autorizzazioni per visualizzare i dati raccolti:
     
-    - Dopo aver creato l'area di lavoro, è possibile usare uno dei ruoli seguenti con meno autorizzazioni per visualizzare i dati raccolti:
+    - **Lettore di sicurezza**
+    - **Lettore globale**
+
+#### <a name="required-azure-log-analytics-roles"></a>Ruoli di Log Analytics di Azure richiesti
+
+Per accedere all'area di lavoro di Azure Log Analytics, è necessario disporre di uno dei seguenti ruoli di Azure [log Analytics](/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) o dei ruoli standard di [Azure](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) :
     
-        - **Lettore di Log Analytics**
-        - **Lettore**
+- Per creare l'area di lavoro o per creare query personalizzate, uno dei ruoli seguenti:
+    
+    - **Collaboratore di Log Analytics**
+    - **Collaboratore**
+    - **Proprietario**
+    
+- Dopo aver creato l'area di lavoro, è possibile usare uno dei ruoli seguenti con meno autorizzazioni per visualizzare i dati raccolti:
+    
+    - **Lettore di Log Analytics**
+    - **Lettore**
 
 #### <a name="minimum-roles-to-view-the-reports"></a>Ruoli minimi per visualizzare i report
 
@@ -196,19 +215,21 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
     
     Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
-2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
+1. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
 
-3. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una di queste operazioni:
+1. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una di queste operazioni:
     
-    - Per creare una nuova area di lavoro Log Analytics: selezionare **Crea nuova area di lavoro** e nel riquadro **area di lavoro di log Analytics** fornire le informazioni richieste.
+    - **Per creare una nuova area di lavoro log Analytics**: selezionare **Crea nuova area di lavoro** e nel riquadro **area di lavoro di log Analytics** fornire le informazioni richieste.
     
-    - Per usare un'area di lavoro di Log Analytics esistente, selezionare l'area di lavoro dall'elenco.
+    - **Per usare un'area di lavoro log Analytics esistente**: selezionare l'area di lavoro nell'elenco.
     
     Per assistenza nella creazione dell'area di lavoro di Log Analytics, vedere [Creare un'area di lavoro di Log Analytics nel portale di Azure](/azure/log-analytics/log-analytics-quick-create-workspace).
 
-4. Se si dispone di Azure Information Protection client (versione classica), selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili** se si desidera archiviare i dati effettivi identificati come tipo di informazioni riservate. Per ulteriori informazioni su questa impostazione, vedere la sezione [corrispondenze di contenuto per l'analisi più approfondita](#content-matches-for-deeper-analysis) in questa pagina.
+1. **Solo client classico AIP**: selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili** se si desidera archiviare i dati effettivi identificati come tipo di informazioni riservate. 
 
-5. Selezionare **OK**.
+    Per ulteriori informazioni su questa impostazione, vedere la sezione [corrispondenze di contenuto per l'analisi più approfondita](#content-matches-for-deeper-analysis) in questa pagina.
+
+1. Seleziona **OK**.
 
 A questo punto si è pronti per visualizzare i report.
 
@@ -216,22 +237,13 @@ A questo punto si è pronti per visualizzare i report.
 
 Dal riquadro Azure Information Protection individuare le opzioni del menu **Dashboard** e selezionare una delle opzioni seguenti:
 
-- **Report di utilizzo (anteprima)**: usare questo report per vedere come vengono usate le etichette.
-
-- **Log attività (anteprima)**: usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file. Per i documenti protetti, inoltre, è possibile visualizzare i tentativi di accesso (esito positivo o negativo) per gli utenti all'interno e all'esterno dell'organizzazione, anche se non hanno installato il client di Azure Information Protection
-    
-    Questo report contiene un'opzione **Colonne** che consente di visualizzare più informazioni sulle attività rispetto alla visualizzazione predefinita. È anche possibile accedere ad altri dettagli su un file selezionandolo per visualizzare **Dettagli attività**.
-
-- **Individuazione dati (anteprima)**: usare questo report per visualizzare le informazioni sui file con etichetta trovati dagli scanner e dagli endpoint supportati.
-    
-    Suggerimento: dalle informazioni raccolte, è possibile che gli utenti accedano a file che contengono informazioni riservate dal percorso di cui non si è a conoscenza o che non sono in corso di analisi:
-    
-    - Se le posizioni sono in locale, è consigliabile aggiungerle come ulteriori repository di dati per lo strumento di analisi di Azure Information Protection.
-    - Se le posizioni sono nel cloud, è consigliabile usare Microsoft Cloud App Security per gestirle. 
-    
-- **Raccomandazioni (anteprima)**: usare questo report per identificare i file che contengono informazioni riservate e mitigare il rischio seguendo le raccomandazioni.
-    
-    Quando si seleziona un elemento, l'opzione **Visualizza i dati** consente di visualizzare le attività di controllo che hanno attivato la raccomandazione.
+|Report  |Descrizione  |
+|---------|---------|
+|**Report sull'utilizzo (anteprima)**     |  usare questo report per vedere come vengono usate le etichette.       |
+|**Log attività (anteprima)**     |  usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file. Per i documenti protetti, inoltre, è possibile visualizzare i tentativi di accesso (esito positivo o negativo) per gli utenti all'interno e all'esterno dell'organizzazione, anche se non hanno installato il client di Azure Information Protection. <br><br>  Questo report contiene un'opzione **Colonne** che consente di visualizzare più informazioni sulle attività rispetto alla visualizzazione predefinita. È anche possibile accedere ad altri dettagli su un file selezionandolo per visualizzare **Dettagli attività**.     |
+|**Individuazione dati (anteprima)**     |    usare questo report per visualizzare informazioni sui file etichettati trovati dagli strumenti di analisi e dagli endpoint supportati.  <br><br>**Suggerimento**: dalle informazioni raccolte, è possibile che gli utenti accedano a file che contengono informazioni riservate dal percorso di cui non si è a conoscenza o che non sono in corso di analisi: <br><br>-Se i percorsi sono locali, è consigliabile aggiungere i percorsi come repository di dati aggiuntivi per lo scanner Azure Information Protection. <br>  -Se i percorsi si trovano nel cloud, provare a usare Microsoft Cloud App Security per gestirli.    |
+|**Raccomandazioni (anteprima)**     | usare questo report per identificare i file che contengono informazioni sensibili e attenuare il rischio seguendo le raccomandazioni.  <br><br> Quando si seleziona un elemento, l'opzione **Visualizza i dati** consente di visualizzare le attività di controllo che hanno attivato la raccomandazione.     |
+|     |         |
 
 
 ## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Come modificare i report e creare query personalizzate
@@ -251,42 +263,41 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 
 |Nome colonna|Descrizione|
 |-----------|-----------|
-|Tempo|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
-|Utente|Utente: Format UPN o dominio\utente|
-|ItemPath|Percorso dell'elemento completo o oggetto di posta elettronica|
-|ItemName|Nome file o oggetto posta elettronica |
-|Metodo|Metodo assegnato etichetta: manuale, automatico, consigliato, predefinito o obbligatorio|
-|Attività|Attività di controllo: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, NewCustomProtection o FileRemoved |
-|ResultStatus|Stato risultato dell'azione:<br /><br /> Succeeded o failed (segnalato solo dallo scanner AIP)|
-|ErrorMessage_s|Include i dettagli del messaggio di errore se ResultStatus = failed. Segnalato solo dallo scanner AIP|
-|Nomeetichetta|Nome etichetta (non localizzato)|
-|LabelNameBefore |Nome etichetta prima della modifica (non localizzato) |
-|ProtectionType|Tipo di protezione [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
-|ProtectionBefore|Tipo di protezione prima della modifica [JSON] |
-|MachineName |FQDN quando disponibile; nome host in caso contrario|
-|DeviceRisk|Punteggio di rischio del dispositivo da WDATP quando disponibile|
-|Piattaforma|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
-|ApplicationName|Nome descrittivo dell'applicazione|
-|AIPVersion|Versione del client di Azure Information Protection che ha eseguito l'azione di controllo |
-|TenantId|ID tenant di Azure AD |
-|AzureApplicationId|ID applicazione registrato Azure AD (GUID)|
-|ProcessName|Processo che ospita MIP SDK|
-|LabelId|GUID etichetta o null|
-|IsProtected|Se protetto: Sì/No |
-|ProtectionOwner |Proprietario Rights Management in formato UPN|
-|LabelIdBefore|GUID etichetta o null prima della modifica|
-|InformationTypesAbove55|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 55 o superiore |
-|InformationTypesAbove65|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 65 o superiore |
-|InformationTypesAbove75|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 75 o superiore |
-|InformationTypesAbove85|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 85 o superiore |
-|InformationTypesAbove95|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 95 o superiore|
-|DiscoveredInformationTypes |Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati e il relativo contenuto corrispondente (se abilitato) in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni |
-|ProtectedBefore|Se il contenuto è stato protetto prima della modifica: Sì/No |
-|ProtectionOwnerBefore|Proprietario Rights Management prima della modifica |
-|UserJustification|Giustificazione durante il downgrade o la rimozione dell'etichetta|
-|LastModifiedBy|Utente in formato UPN che ha eseguito l'ultima modifica al file. Disponibile solo per Office e SharePoint|
-|LastModifiedDate|UTC nel formato AAAA-MM-GGThh: MM: SS: disponibile solo per Office e SharePoint |
-
+|**Time**|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
+|**Utente**|Utente: Format UPN o dominio\utente|
+|**ItemPath**|Percorso dell'elemento completo o oggetto di posta elettronica|
+|**ItemName**|Nome file o oggetto posta elettronica |
+|**Metodo**|Metodo assegnato etichetta: manuale, automatico, consigliato, predefinito o obbligatorio|
+|**Attività**|Attività di controllo: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, NewCustomProtection o FileRemoved |
+|**ResultStatus**|Stato risultato dell'azione:<br /><br /> Succeeded o failed (segnalato solo dallo scanner AIP)|
+|**ErrorMessage_s**|Include i dettagli del messaggio di errore se ResultStatus = failed. Segnalato solo dallo scanner AIP|
+|**Nomeetichetta**|Nome etichetta (non localizzato)|
+|**LabelNameBefore** |Nome etichetta prima della modifica (non localizzato) |
+|**ProtectionType**|Tipo di protezione [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
+|**ProtectionBefore**|Tipo di protezione prima della modifica [JSON] |
+|**MachineName** |FQDN quando disponibile; nome host in caso contrario|
+|**DeviceRisk**|Punteggio di rischio del dispositivo da WDATP quando disponibile|
+|**Platform**|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
+|**ApplicationName**|Nome descrittivo dell'applicazione|
+|**AIPVersion**|Versione del client di Azure Information Protection che ha eseguito l'azione di controllo |
+|**TenantId**|ID tenant di Azure AD |
+|**AzureApplicationId**|ID applicazione registrato Azure AD (GUID)|
+|**ProcessName**|Processo che ospita MIP SDK|
+|**LabelId**|GUID etichetta o null|
+|**IsProtected**|Se protetto: Sì/No |
+|**ProtectionOwner** |Proprietario Rights Management in formato UPN|
+|**LabelIdBefore**|GUID etichetta o null prima della modifica|
+|**InformationTypesAbove55**|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 55 o superiore |
+|**InformationTypesAbove65**|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 65 o superiore |
+|**InformationTypesAbove75**|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 75 o superiore |
+|**InformationTypesAbove85**|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 85 o superiore |
+|**InformationTypesAbove95**|Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 95 o superiore|
+|**DiscoveredInformationTypes** |Matrice JSON di [SensitiveInformation](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati e il relativo contenuto corrispondente (se abilitato) in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni |
+|**ProtectedBefore**|Se il contenuto è stato protetto prima della modifica: Sì/No |
+|**ProtectionOwnerBefore**|Proprietario Rights Management prima della modifica |
+|**UserJustification**|Giustificazione durante il downgrade o la rimozione dell'etichetta|
+|**LastModifiedBy**|Utente in formato UPN che ha eseguito l'ultima modifica al file. Disponibile solo per Office e SharePoint|
+|**LastModifiedDate**|UTC nel formato AAAA-MM-GGThh: MM: SS: disponibile solo per Office e SharePoint |
 
 #### <a name="examples-using-informationprotectionevents"></a>Esempi di utilizzo di InformationProtectionEvents
 
@@ -328,6 +339,11 @@ In questo esempio, un'etichetta di cui è stato effettuato il downgrade viene co
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Una volta esaminate le informazioni nei report, se si utilizza il client di Azure Information Protection, è possibile decidere di apportare modifiche ai criteri di Azure Information Protection. Per istruzioni, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
+Dopo aver esaminato le informazioni nei report, se si usa il client di Azure Information Protection, è possibile decidere di apportare modifiche ai criteri di etichettatura. 
+
+- **Client per l'assegnazione di etichette unificata**: apportare modifiche ai criteri di etichettatura nell'interfaccia di amministrazione di assegnazione di etichette, tra cui il centro sicurezza Microsoft 365, il centro di conformità Microsoft 365 o il Microsoft 365 Security & Compliance Center. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/sensitivity-labels).
+
+- **Client classico**: apportare modifiche ai criteri nel portale di Azure. Per ulteriori informazioni, vedere [Configuring the Azure Information Protection Policy](configure-policy.md).
 
 Se è disponibile un abbonamento a Microsoft 365, è anche possibile visualizzare l'utilizzo delle etichette nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. Per altre informazioni, vedere [Visualizzare l'utilizzo delle etichette con Analisi delle etichette](/microsoft-365/compliance/label-analytics).
+

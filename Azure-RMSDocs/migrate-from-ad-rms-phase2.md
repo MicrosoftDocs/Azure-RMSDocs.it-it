@@ -1,11 +1,11 @@
 ---
 title: Eseguire la migrazione da AD RMS ad Azure Information Protection - Fase 2
 description: Fase 2 della migrazione da AD RMS ad Azure Information Protection, che include i passaggi da 4 a 6 della migrazione da AD RMS ad Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
@@ -13,16 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a354e9f787cf079e2c67a03fb58d330ab7785ce3
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: ad4fe6bd495bfe6a19ce897bf3ee5290c778a8ac
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567908"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386067"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le informazioni seguenti per la fase 2 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano i passaggi da 4 a 6 della [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -88,6 +90,7 @@ Usare la tabella seguente per identificare la procedura da eseguire per la migra
 |Password di protezione nel database AD RMS|Gestione del cliente (scenario BYOK)|Vedere la procedura migrazione **da una chiave protetta tramite software a una chiave HSM protetta** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Insieme di credenziali delle chiavi di Azure e quattro procedure: innanzitutto estrarre la chiave software e importarla nel modulo di protezione hardware locale, quindi trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Information Protection, successivamente trasferire i dati dell'insieme di credenziali in Azure Information Protection e infine trasferire i dati di configurazione in Azure Information Protection.|
 |Protezione con HSM tramite un modulo di protezione hardware di un fornitore diverso da nCipher |Gestione del cliente (scenario BYOK)|Contattare il fornitore del modulo di protezione hardware per istruzioni su come trasferire la chiave da questo modulo di protezione hardware a un modulo di protezione hardware nCipher nShield (HSM). Seguire quindi le istruzioni per la procedura di migrazione **da una chiave protetta tramite HSM a** un'altra dopo questa tabella.|
 |Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Contattare il fornitore del provider del servizio di crittografia per istruzioni su come trasferire la chiave a un modulo di protezione hardware nCipher nShield (HSM). Seguire quindi le istruzioni per la procedura di migrazione **da una chiave protetta tramite HSM a** un'altra dopo questa tabella.|
+| | |
 
 Se la chiave protetta tramite modulo di protezione hardware non è esportabile, è comunque possibile eseguire la migrazione ad Azure Information Protection configurando il cluster AD RMS con la modalità di sola lettura. In questa modalità è comunque possibile aprire il contenuto protetto in precedenza, ma il contenuto appena protetto usa una nuova chiave del tenant gestita dall'utente (BYOK) o gestita da Microsoft. Per altre informazioni, vedere [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to) (È disponibile un aggiornamento con cui Office supporta le migrazioni da AD RMS ad Azure RMS).
 
@@ -108,13 +111,13 @@ Aprire una sessione di PowerShell ed eseguire i comandi seguenti:
 
 1. Connettersi al servizio Azure Rights Management e, quando richiesto, specificare le credenziali di amministratore globale:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
 
 2. Attivare il servizio Azure Rights Management:
 
-    ```ps
+    ```PowerShell
     Enable-AipService
     ```
 
@@ -164,9 +167,9 @@ Per altre informazioni su questa configurazione, vedere [Come configurare un'eti
 
 Questa sezione include lo script di esempio per facilitare l'identificazione dei modelli AD RMS per i quali è definito un gruppo ANYONE, come descritto nella sezione precedente.
 
-**Dichiarazione di non responsabilità:** questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in cui si trova" senza garanzia di alcun tipo.
+**Dichiarazione** di non responsabilità: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in cui si trova" senza garanzia di alcun tipo.
 
-```ps
+```PowerShell
 import-module adrmsadmin
 
 New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force

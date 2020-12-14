@@ -11,19 +11,23 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a1ac4e5470df68076585d9f328b28c76377a26d
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: ee493790e4997f8be11244490cf6014c17e6c6fd
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95735015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384231"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
-Usare gli elenchi e le tabelle seguenti per trovare informazioni dettagliate sui problemi noti e sulle limitazioni relative alle funzionalità di Azure Information Protection.
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-> [!NOTE]
-> Questo articolo si riferisce a problemi noti nei client di etichette classici e unificati. Non si è certi della differenza tra questi client? Vedere le [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+
+Usare gli elenchi e le tabelle seguenti per trovare informazioni dettagliate sui problemi noti e sulle limitazioni relative alle funzionalità di Azure Information Protection.
 
 ## <a name="client-support-for-container-files-such-as-zip-files"></a>Supporto client per file contenitore, ad esempio file con estensione zip
 
@@ -39,7 +43,7 @@ Per altre informazioni, vedere [Guida dell'amministratore: tipi di file supporta
 
 ## <a name="known-issues-for-aip-and-exploit-protection"></a>Problemi noti per la protezione da AIP e exploit
 
-Il client Azure Information Protection non è supportato nei computer con .NET 2 o 3, in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) .
+Il client Azure Information Protection non è supportato nei computer con .NET 2 o 3, in cui è abilitata la [protezione degli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) e causerà l'arresto anomalo delle app di Office.
 
 Se si dispone di una versione di .NET 2 o 3, oltre a una versione di .NET 4. x necessaria per il sistema, assicurarsi di disabilitare la protezione dagli exploit prima di installare AIP. 
 
@@ -65,15 +69,15 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 
 ## <a name="aip-known-issues-in-office-applications"></a>Problemi noti di AIP nelle applicazioni di Office
 
-|Funzionalità  |Problemi noti  |
+|Feature  |Problemi noti  |
 |---------|---------|
 |**Più versioni di Office**    | I client di Azure Information Protection, incluse le etichettature classica e unificata, non supportano più versioni di Office nello stesso computer o lo scambio degli account utente in Office.       |
-|**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office: <br><br>-È possibile che si verifichino problemi di prestazioni nelle app di Office.<br>-La barra di Azure Information Protection può sembrare mobile al centro della schermata di Office, in una o in entrambe le visualizzazioni <br><br>Per garantire prestazioni coerenti e che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e in **generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore.**    |
+|**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office: <br><br>-È possibile che si verifichino problemi di prestazioni nelle app di Office.<br>-La barra di Azure Information Protection può sembrare mobile al centro della schermata di Office, in una o in entrambe le visualizzazioni <br><br>Per garantire prestazioni coerenti e che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e in **generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore**.    |
 |**Supporto di IRM in Office 2016**| L'impostazione del registro di sistema [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , che controlla la crittografia dei metadati in Office 2016, non è supportata per le etichette Azure Information Protection.|
 |**Contrassegni di contenuto in Word**    | I [contrassegni di contenuto](configure-policy-markings.md) AIP nelle intestazioni o nei piè di pagina di Microsoft Word possono essere spostati o posizionati in modo errato oppure possono essere nascosti completamente, quando la stessa intestazione o il piè di pagina contiene anche una tabella.<br><br>Per ulteriori informazioni, vedere [quando vengono applicati i contrassegni visivi](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**File allegati ai messaggi di posta elettronica** |A causa di una limitazione negli aggiornamenti recenti di Windows, quando [Microsoft Outlook è protetto da Azure Rights Management](office-apps-services-support.md), i file allegati ai messaggi di posta elettronica possono essere bloccati dopo l'apertura del file. |
 |**Unione posta**    |  La funzionalità di [stampa unione](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) di Office non è supportata con alcuna funzionalità di Azure Information Protection.       |
-| **Messaggi di posta elettronica S/MIME** | L'apertura di messaggi di posta elettronica S/MIME nel riquadro di lettura di Outlook può causare problemi di prestazioni. <br><br>Per evitare problemi di prestazioni con i messaggi di posta elettronica S/MIME, abilitare la proprietà avanzata [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . <br><br>**Nota:** L'abilitazione di questa proprietà impedisce la visualizzazione della barra di AIP o della classificazione dei messaggi di posta elettronica nel riquadro di lettura di Outlook. |
+| **Messaggi di posta elettronica S/MIME** | L'apertura di messaggi di posta elettronica S/MIME nel riquadro di lettura di Outlook può causare problemi di prestazioni. <br><br>Per evitare problemi di prestazioni con i messaggi di posta elettronica S/MIME, abilitare la proprietà avanzata [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . <br><br>**Nota**: l'abilitazione di questa proprietà impedisce la visualizzazione della barra di AIP o della classificazione dei messaggi di posta elettronica nel riquadro di lettura di Outlook. |
 |**Opzione Invia a Esplora file** |Se si sceglie di fare clic con il pulsante destro del mouse su un file in Esplora file e selezionare **Invia a > destinatario della posta**, il messaggio di Outlook visualizzato con il file allegato potrebbe non visualizzare la barra degli strumenti di AIP. <br><br>In tal caso, è necessario usare le opzioni della barra degli strumenti di AIP, avviare la posta elettronica da Outlook, quindi individuare e alleghiare il file che si vuole inviare.|
 | | |
 
@@ -83,7 +87,7 @@ I criteri di pubblicazione possono richiedere fino a 24 ore.
 
 ## <a name="known-issues-in-the-aip-client"></a>Problemi noti nel client AIP
 
-- **Dimensioni massime dei file. I file** di oltre 2 GB sono supportati per la protezione, ma non per la decrittografia.
+- **Dimensioni massime dei file.** di oltre 2 GB sono supportati per la protezione, ma non per la decrittografia.
 
 - **Visualizzatore AIP.** Il Visualizzatore AIP Visualizza le immagini in modalità verticale e alcune immagini di visualizzazione orizzontale possono sembrare estesi.
 
@@ -121,7 +125,7 @@ Sebbene sia possibile invitare gli utenti esterni ad attivare un account utente 
 
 È consigliabile abilitare i criteri di accesso condizionale basati su AIP solo per gli utenti interni.
 
-**Abilitare i criteri di accesso condizionale per AIP solo per gli utenti interni:**
+**Abilitare i criteri di accesso condizionale per AIP solo per gli utenti interni**:
 
 1.  Nel portale di Azure passare al pannello **accesso condizionale** e selezionare i criteri di accesso condizionale che si desidera modificare. 
 2.  In **assegnazioni** selezionare **utenti e gruppi** e quindi selezionare **tutti gli utenti**. Assicurarsi che l'opzione **tutti gli utenti guest ed External** *non* sia selezionata.
@@ -131,7 +135,7 @@ Sebbene sia possibile invitare gli utenti esterni ad attivare un account utente 
 
 Per ulteriori informazioni, vedere la [documentazione sull'accesso condizionale](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
-## <a name="more-information"></a>Altre informazioni
+## <a name="more-information"></a>Ulteriori informazioni
 
 Gli articoli aggiuntivi seguenti possono essere utili per rispondere alle domande sui problemi noti in Azure Information Protection:
 

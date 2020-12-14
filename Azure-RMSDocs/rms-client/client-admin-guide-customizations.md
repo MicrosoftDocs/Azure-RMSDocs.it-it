@@ -1,11 +1,11 @@
 ---
-title: Configurazioni personalizzate-client Azure Information Protection
-description: Informazioni sulla personalizzazione del client Azure Information Protection per Windows.
+title: Configurazioni personalizzate-Azure Information Protection client classico
+description: Informazioni sulla personalizzazione del client di Azure Information Protection classico per Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,27 +13,27 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b81566a0853776a2b06e9a731e0cb3cf11fa5ff
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: 994b4ae32424fe4994cbb8e7b77ed4acc5867bdb
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568490"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386203"
 ---
-# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
+# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-classic-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection classico
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere la [Guida dell'amministratore del client Unified Labeling](clientv2-admin-guide-customizations.md). *
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare le informazioni seguenti per le configurazioni avanzate che possono essere necessarie per scenari specifici o per un subset di utenti quando si gestisce il client di Azure Information Protection.
 
 Alcune di queste impostazioni richiedono la modifica del Registro di sistema e alcune usano impostazioni avanzate che è necessario configurare nel Portale di Azure e quindi pubblicare perché i client possano scaricarle.  
 
-### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Come configurare le impostazioni avanzate di configurazione del client nel portale
+### <a name="how-to-configure-advanced-classic-client-configuration-settings-in-the-portal"></a>Come configurare le impostazioni di configurazione avanzate del client classico nel portale
 
 1. Se non è ancora stato fatto, in una nuova finestra del browser [accedere alla portale di Azure](../configure-policy.md#signing-in-to-the-azure-portal), quindi passare al riquadro **Azure Information Protection** .
 
@@ -49,7 +49,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 6. Se l'impostazione non è più necessaria e si desidera ripristinare il comportamento predefinito: nel riquadro **Impostazioni avanzate** selezionare il menu di scelta rapida (**...**) accanto all'impostazione non più necessaria, quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
 
-#### <a name="available-advanced-client-settings"></a>Impostazioni client avanzate disponibili
+#### <a name="available-advanced-classic-client-settings"></a>Impostazioni client classiche avanzate disponibili
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
@@ -124,7 +124,7 @@ Inoltre:
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste
 
-Se l'organizzazione non dispone di licenze per Azure Information Protection, ma dispone di licenze per Microsoft 365 che includono il servizio Rights Management di Azure per la protezione dei dati, il client Azure Information Protection per Windows viene eseguito automaticamente in [modalità di sola protezione](client-protection-only-mode.md).
+Se l'organizzazione non dispone di licenze per Azure Information Protection, ma dispone di licenze per Microsoft 365 che includono il servizio Rights Management di Azure per la protezione dei dati, il client AIP classico viene eseguito automaticamente in [modalità di sola protezione](client-protection-only-mode.md).
 
 Tuttavia, se l'organizzazione ha una sottoscrizione per Azure Information Protection, tutti i computer Windows possono scaricare i criteri di Azure Information Protection per impostazione predefinita. Il client Azure Information Protection non gestisce il controllo e l'applicazione delle licenze. 
 
@@ -138,7 +138,7 @@ Controllare inoltre che in questi computer non esista un file denominato **Polic
 
 ## <a name="add-report-an-issue-for-users"></a>Aggiungere "Segnala un problema" per gli utenti
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
 Quando si specifica la seguente impostazione client avanzata, gli utenti visualizzano l'opzione **Segnala un problema**, che può essere selezionata dalla finestra di dialogo **Guida e commenti** del client. Specificare una stringa HTTP per il collegamento. Ad esempio, una pagina Web personalizzata in cui gli utenti possono segnalare i problemi o un indirizzo di posta elettronica che rimanda all'help desk. 
 
@@ -164,7 +164,7 @@ Per impostazione predefinita, il client Azure Information Protection prova autom
 
 Si noti che senza una connessione Internet, il client non può applicare la protezione (o rimuovere la protezione) usando la chiave basata sul cloud dell'organizzazione. Il client può invece usare esclusivamente le etichette che applicano solo la classificazione o la protezione che usa [HYOK](../configure-adrms-restrictions.md).
 
-È possibile evitare una richiesta di accesso al servizio Azure Information Protection tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure, per poi scaricare i criteri per i computer. In alternativa, è possibile evitare questa richiesta di accesso modificando il Registro di sistema.
+È possibile evitare una richiesta di accesso al servizio Azure Information Protection tramite un'[impostazione client avanzata](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure, per poi scaricare i criteri per i computer. In alternativa, è possibile evitare questa richiesta di accesso modificando il Registro di sistema.
 
 - Per configurare l'impostazione client avanzata:
     
@@ -204,7 +204,7 @@ Se il computer disconnesso esegue la versione corrente di GA dello scanner di Az
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
-Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
 
 Quando è configurata, questa impostazione nasconde o visualizza il pulsante **Non inoltrare** sulla barra multifunzione in Outlook. Questa impostazione non influisce sull'opzione Non inoltrare nei menu di Office.
 
@@ -216,7 +216,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate
 
-Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Make the custom permissions option available for users** (Rendi disponibile l'opzione per le autorizzazioni personalizzate). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Make the custom permissions option available for users** (Rendi disponibile l'opzione per le autorizzazioni personalizzate). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
 
 Quando si configura questa impostazione e si pubblicano i criteri per gli utenti, le opzioni per le autorizzazioni personalizzate diventano visibili per gli utenti in modo che possano selezionare impostazioni di protezione personali oppure sono nascoste e quindi gli utenti non possono selezionare impostazioni di protezione personali, se non richiesto.
 
@@ -228,7 +228,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Quando si configura l'[impostazione di criteri](../configure-policy-settings.md) **Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non possono visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
 
@@ -246,7 +246,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Nascondere in modo permanente la barra di Azure Information Protection
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
 
 Per impostazione predefinita, se un utente cancella l'opzione **Mostra barra** dalla scheda **Pagina iniziale**, il gruppo **Protezione**, il pulsante **Proteggi**, la barra di Information Protection non viene più visualizzata in quell'app Office. La barra viene tuttavia automaticamente visualizzata di nuovo alla successiva apertura di un'app Office.
 
@@ -262,7 +262,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="enable-order-support-for-sublabels-on-attachments"></a>Abilitare il supporto dell'ordinamento delle etichette secondarie per gli allegati
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Usare questa impostazione quando sono disponibili etichette secondarie ed è stata configurata l'[impostazione di criteri](../configure-policy-settings.md) seguente:
 
@@ -280,7 +280,7 @@ Con questa impostazione, al messaggio di posta elettronica viene applicata l'eti
 
 ## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Esentare i messaggi di Outlook da un'etichetta obbligatoria
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Per impostazione predefinita, quando si Abilita l' [impostazione dei criteri](../configure-policy-settings.md) **tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, a tutti i documenti salvati e ai messaggi di posta elettronica inviati deve essere applicata un'etichetta. Quando si configura l'impostazione avanzata seguente, l'impostazione dei criteri si applica solo ai documenti di Office e non ai messaggi di Outlook.
 
@@ -292,7 +292,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
 Quando si configura un'etichetta per la classificazione consigliata, agli utenti viene richiesto di accettare o ignorare l'etichetta consigliata in Word, Excel e PowerPoint. Questa impostazione estende questa indicazione per l'etichetta anche per la visualizzazione in Outlook.
 
@@ -308,7 +308,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
 
-Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure.
+Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure.
 
 Quando si creano e configurano le impostazioni client avanzate seguenti, gli utenti visualizzano messaggi popup di Outlook che possono avvertirli prima dell'invio di un messaggio di posta elettronica, chiedere di giustificare il motivo dell'invio o impedire l'invio di un messaggio di posta elettronica per uno degli scenari seguenti:
 
@@ -485,7 +485,7 @@ Se non si specifica questa impostazione client, il valore specificato per Outloo
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Impostare un'etichetta predefinita diversa per Outlook
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
 Quando si configura questa impostazione, Outlook non applica l'etichetta predefinita configurata nei criteri di Azure Information Protection per l'impostazione **Selezionare l'etichetta predefinita**. In alternativa, Outlook può applicare un'etichetta predefinita diversa o non applicare alcuna etichetta.
 
@@ -501,7 +501,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurare un'etichetta per applicare la protezione S/MIME in Outlook
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Usare questa impostazione solo se è disponibile una [distribuzione di S/MIME](/exchange/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché la protezione di Rights Management da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 
@@ -541,7 +541,7 @@ Se si vuole che l'etichetta sia visibile solo in Outlook, configurare l'etichett
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
 Se si usa l'[impostazione dei criteri](../configure-policy-settings.md)**Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, agli utenti viene richiesto di selezionare un'etichetta quando salvano per la prima volta un documento di Office e quando inviano un messaggio di posta elettronica. Per i documenti, gli utenti possono selezionare **Non ora** per chiudere temporaneamente la richiesta di selezionare un'etichetta e tornare al documento. Non possono però chiudere il documento salvato senza etichettarlo. 
 
@@ -555,7 +555,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Attivare l'esecuzione continua della classificazione in background
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.  
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.  
 
 Quando si configura questa impostazione, cambia il [comportamento predefinito](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) del client Azure Information Protection rispetto all'applicazione delle etichette automatiche e consigliate ai documenti: 
 
@@ -579,7 +579,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Non proteggere i file PDF usando lo standard ISO per la crittografia dei file PDF
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
 Quando un file PDF è protetto con l'ultima versione del client Azure Information Protection, l'estensione risultante rimane pdf ed è conforme allo standard ISO per la crittografia dei file PDF. Per altre informazioni su questo standard, vedere la sezione **7.6 Encryption** (Crittografia) del [documento derivato dalla specifica ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) e pubblicato da Adobe Systems Incorporated.
 
@@ -591,7 +591,7 @@ Se è necessario che il client ripristini il comportamento delle versioni preced
 
 Questa impostazione, ad esempio, può essere necessaria per tutti gli utenti se si usa un lettore di file PDF che non supporta lo standard ISO per la crittografia dei file PDF. Oppure può essere necessario configurare questa impostazione per alcuni utenti durante l'introduzione graduale di un lettore di file PDF che supporta il nuovo formato. Un altro possibile motivo per l'uso di questa impostazione è la necessità di aggiungere protezione a documenti PDF firmati. È possibile aggiungere ulteriore protezione ai documenti PDF con il formato con estensione ppdf, poiché questa protezione viene implementata come wrapper per i file. 
 
-Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner. Inoltre, lo scanner non proteggerà più i documenti PDF per impostazione predefinita. Se si desidera che i documenti PDF siano protetti dallo scanner quando **EnablePDFv2Protection** è impostato su **false,** è necessario [modificare il registro di sistema](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect).
+Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner. Inoltre, lo scanner non proteggerà più i documenti PDF per impostazione predefinita. Se si desidera che i documenti PDF siano protetti dallo scanner quando **EnablePDFv2Protection** è impostato su **false**, è necessario [modificare il registro di sistema](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect).
 
 Per altre informazioni sulla nuova crittografia PDF, vedere il post del blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
 
@@ -607,7 +607,7 @@ Inoltre quando l'utente usa queste istruzioni per file protetti da altri utenti,
 
 Per usare i comandi di PowerShell per convertire file con estensione ppdf esistenti in file con estensione pdf protetti che usano lo standard ISO per la crittografia PDF:
 
-1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. Ad esempio:
+1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. ad esempio:
     
     ```ps
     Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
@@ -621,13 +621,13 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
-3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. ad esempio: 
 
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
     ```
 
-4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio:
+4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. ad esempio:
     
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
@@ -662,7 +662,7 @@ In seguito a questa modifica del registro sono supportati gli scenari seguenti:
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Questa configurazione non è attualmente compatibile con il nuovo comportamento predefinito che protegge i file PDF usando lo standard ISO per la crittografia PDF. In questo scenario non è possibile aprire i file PPDF usando Esplora file, PowerShell o lo scanner. Per risolvere questo problema, usare l'impostazione client avanzata per [non usare lo standard ISO per la crittografia PDF](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
@@ -744,7 +744,7 @@ L'impostazione client avanzata è la seguente:
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
-Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. 
+Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. 
 
 Le impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina basati su testo nei documenti, quando questi contrassegni visivi sono stati applicati da un'altra soluzione di etichettatura. Ad esempio, il piè di pagina precedente contiene il nome di un'etichetta precedente di cui è stata eseguita la migrazione ad Azure Information Protection con un nuovo nome di etichetta e un proprio piè di pagina.
 
@@ -846,7 +846,7 @@ Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina v
 > [!NOTE]
 > Se si usa questa configurazione e la configurazione per [eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), l'impostazione di migrazione delle etichette ha la precedenza. 
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
 Quando si configura questa impostazione, è possibile classificare e, facoltativamente, proteggere un documento di Office quando dispone di una proprietà personalizzata esistente con un valore corrispondente a uno dei nomi di etichetta. Questa proprietà personalizzata può essere impostata da un'altra soluzione di classificazione o può essere impostata come proprietà da SharePoint.
 
@@ -874,7 +874,7 @@ A questo punto, quando un utente apre e salva uno di questi documenti di Office,
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Quando il client Azure Information Protection viene usato nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica che il client non è configurato per l'invio di informazioni di controllo, i tipi di informazioni riservate trovate (predefinite o personalizzate) vengono quindi inviati a [Azure Information Protection Analytics](../reports-aip.md). 
 
@@ -886,7 +886,7 @@ La configurazione che controlla se il client invia le informazioni di controllo 
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate all'attività di assegnazione di etichette.
 
-Ad esempio:
+ad esempio:
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso Financial.docx con etichetta **Confidential \ Sales**.
 
@@ -896,7 +896,7 @@ Ad esempio:
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Disabilitare l'invio delle corrispondenze per i tipi di informazioni per un subset di utenti
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Quando si seleziona la casella di controllo [Azure Information Protection Analytics](../reports-aip.md) che Abilita l'analisi più approfondita nei dati sensibili raccoglie le corrispondenze di contenuto per i tipi di informazioni riservate o le condizioni personalizzate, per impostazione predefinita queste informazioni vengono inviate da tutti gli utenti, inclusi gli account del servizio che eseguono lo scanner di Azure Information Protection. In presenza di utenti che non devono inviare questi dati, creare l'impostazione client avanzata seguente in un [criterio con ambito](../configure-policy-scope.md) per questi utenti: 
 
@@ -907,7 +907,7 @@ Quando si seleziona la casella di controllo [Azure Information Protection Analyt
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitare il numero di thread usati dallo scanner
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Per impostazione predefinita, lo scanner usa tutte le risorse del processore disponibili nel computer che esegue il servizio scanner. Se è necessario limitare l'utilizzo della CPU mentre questo servizio esegue l'analisi, creare la seguente impostazione avanzata. 
 
@@ -921,7 +921,7 @@ Quando si configura il valore per il test per la prima volta, è consigliabile s
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Disabilitare il livello di integrità basso per lo scanner
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Per impostazione predefinita, lo scanner di Azure Information Protection viene eseguito con un livello di integrità basso. Questa impostazione offre un maggiore isolamento di sicurezza, ma influisce negativamente sulle prestazioni. Il livello di integrità basso è appropriato se si esegue lo scanner con un account con privilegi (ad esempio un account amministratore locale) in quanto questa impostazione aiuta a proteggere il computer che esegue lo scanner.
 
@@ -937,7 +937,7 @@ Per configurare questa impostazione avanzata in modo che lo scanner venga esegui
 
 ## <a name="change-the-timeout-settings-for-the-scanner"></a>Modificare le impostazioni di timeout per lo scanner
 
-Questa configurazione USA [Impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure.
+Questa configurazione USA [Impostazioni client avanzate](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure.
 
 Per impostazione predefinita, lo scanner Azure Information Protection ha un periodo di timeout di 00:15:00 (15 minuti) per esaminare ogni file per i tipi di informazioni riservate o per le espressioni Regex configurate per le condizioni personalizzate. Quando viene raggiunto il periodo di timeout per questo processo di estrazione del contenuto, vengono restituiti tutti i risultati prima del timeout e l'ulteriore ispezione del file viene arrestata. In questo scenario, il messaggio di errore seguente viene registrato in%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (compresso se sono presenti più log): **GetContentParts non riuscito** con **l'operazione annullata** nei dettagli.
 
@@ -973,7 +973,7 @@ Per modificare il periodo di timeout per l'elaborazione dei file, configurare l'
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Per impostazione predefinita, il client Azure Information Protection scrive i file di log del client nella cartella **%localappdata%\Microsoft\MSIP**. Questi file sono destinati al supporto tecnico Microsoft per la risoluzione dei problemi.
  
@@ -995,7 +995,7 @@ Impostare il livello di registrazione su uno dei valori seguenti:
 
 - **Trace**: registrazione dettagliata (impostazione predefinita per i client). Per lo scanner, questa impostazione ha un impatto significativo sulle prestazioni e deve essere abilitata solo se richiesto dal supporto tecnico Microsoft. Se viene richiesto di impostare questo livello di registrazione per lo scanner, ricordarsi di impostare un valore diverso dopo aver raccolto i log rilevanti.
 
-Questa impostazione client avanzata non modifica le informazioni inviate ad Azure Information Protection per [reporting centralizzato](../reports-aip.md) o le informazioni scritte nel [registro eventi](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) locale.
+Questa impostazione client avanzata non modifica le informazioni inviate ad Azure Information Protection per [reporting centralizzato](../reports-aip.md) o le informazioni scritte nel [registro eventi](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client) locale.
 
 ## <a name="integration-with-the-legacy-exchange-message-classification"></a>Integrazione con la classificazione dei messaggi di Exchange legacy
 
@@ -1009,11 +1009,11 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare controllando le intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa che segue immediatamente, fino ed escludendo il punto e virgola. Ad esempio:
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare controllando le intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa che segue immediatamente, fino ed escludendo il punto e virgola. ad esempio:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4FDB-8f01-93a3e71333b8_Enabled = true**
     
-    Quindi, per l'intestazione del messaggio nella regola, specificare **msip_labels** per l'intestazione e la parte rimanente della stringa per il valore dell'intestazione. Ad esempio:
+    Quindi, per l'intestazione del messaggio nella regola, specificare **msip_labels** per l'intestazione e la parte rimanente della stringa per il valore dell'intestazione. ad esempio:
     
     ![Regola del flusso di posta di Exchange Online di esempio che imposta l'intestazione del messaggio per un'etichetta di Azure Information Protection specifica](../media/exchange-rule-for-message-header.png)
     

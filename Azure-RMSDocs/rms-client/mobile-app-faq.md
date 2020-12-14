@@ -5,23 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 17f1efc5c5e0c01f33e638d1ef674a81b17494f8
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: bd7b94caba31ddbadf1d39754a6bb609c59aea60
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734965"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385166"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Che cos'è l'app Azure Information Protection per iOS o Android?
 
-*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 L'app per dispositivi mobili Azure Information Protection (AIP) per iOS e Android è un'app Viewer che consente di visualizzare messaggi di posta elettronica, file PDF, immagini e file di testo protetti e sono utili se le normali app per questi tipi di file non supportano la protezione. 
 
@@ -65,7 +67,7 @@ Dopo aver [installato l'app per dispositivi mobili AIP](#download-and-install-th
 
     Selezionare **Condividi file tramite...** e quindi selezionare **copia in AIP Viewer.**
 
-    Ad esempio:
+    ad esempio:
 
     :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Condividi nel Visualizzatore AIP in iOS" border="false":::
 
@@ -91,9 +93,9 @@ Le app per dispositivi mobili AIP per iOS e Android supportano i tipi di file e 
 
 |Requisito  |Descrizione  |
 |---------|---------|
-|**Versioni dei sistemi operativi supportate**     | I sistemi operativi minimi per dispositivi mobili includono: </br>-iOS 11  </br>-Android 6,0 </br></br>**Nota:** Le app per dispositivi mobili AIP non sono supportate nelle CPU Intel.  |
-|**Credenziali di accesso supportate**     | Accedere alle app per dispositivi mobili AIP con una delle seguenti opzioni: </br></br>**Credenziali aziendali o dell'Istituto di istruzione.** Provare ad accedere con le credenziali aziendali o dell'Istituto di istruzione. In caso di domande, contattare l'amministratore per sapere se l'organizzazione ha AD RMS locale con l'estensione per dispositivi mobili o se usa Azure Information Protection. </br></br>**Account Microsoft**. Se l'indirizzo di posta elettronica personale è stato usato per proteggere il file, accedere con un [account Microsoft](https://signup.live.com). Se è necessario applicare una account Microsoft, è possibile usare Hotmail, Gmail o qualsiasi altro indirizzo di posta elettronica a tale scopo. </br></br>**Nota:** Non tutte le applicazioni sono in grado di aprire il contenuto protetto con un account Microsoft. Per ulteriori informazioni, vedere la pagina relativa agli [scenari supportati per l'apertura di documenti protetti](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
-|**Tipi di file supportati**     | I tipi di file supportati includono messaggi di posta elettronica protetti, file PDF, immagini e file di testo. </br></br>Ad esempio, questi file includono le seguenti estensioni: **rpmsg,** **PDF,** **Ppdf,** **pjpg,** **pjpeg,** **ptiff** **, ppng** , ptxt, pXML **,** **.pxml** </br></br>Per un elenco completo dei tipi di file supportati, vedere [la guida dell'amministratore del client AIP](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
+|**Versioni dei sistemi operativi supportate**     | I sistemi operativi minimi per dispositivi mobili includono: </br>-iOS 11  </br>-Android 6,0 </br></br>**Nota**: le app per dispositivi mobili AIP non sono supportate nelle CPU Intel.  |
+|**Credenziali di accesso supportate**     | Accedere alle app per dispositivi mobili AIP con una delle seguenti opzioni: </br></br>**Credenziali aziendali o dell'Istituto di istruzione.** Provare ad accedere con le credenziali aziendali o dell'Istituto di istruzione. In caso di domande, contattare l'amministratore per sapere se l'organizzazione ha AD RMS locale con l'estensione per dispositivi mobili o se usa Azure Information Protection. </br></br>**Account Microsoft.** Se l'indirizzo di posta elettronica personale è stato usato per proteggere il file, accedere con un [account Microsoft](https://signup.live.com). Se è necessario applicare una account Microsoft, è possibile usare Hotmail, Gmail o qualsiasi altro indirizzo di posta elettronica a tale scopo. </br></br>**Nota**: non tutte le applicazioni sono in grado di aprire il contenuto protetto con un account Microsoft. Per ulteriori informazioni, vedere la pagina relativa agli [scenari supportati per l'apertura di documenti protetti](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
+|**Tipi di file supportati**     | I tipi di file supportati includono messaggi di posta elettronica protetti, file PDF, immagini e file di testo. </br></br>Ad esempio, questi file includono le seguenti estensioni: **rpmsg**, **PDF**, **Ppdf**, **pjpg,** **pjpeg**, **ptiff** **, ppng** **, ptxt, pXML,**  </br></br>Per un elenco completo dei tipi di file supportati, vedere [la guida dell'amministratore del client AIP](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 | | |
 
 ## <a name="admins-testing-the-aip-mobile-apps"></a>Amministratori: test delle app per dispositivi mobili AIP
@@ -109,8 +111,8 @@ Se si è un amministratore di sistema che vuole testare le app per dispositivi m
     |Tipo file  |Istruzioni  |
     |---------|---------|
     |**Posta elettronica (. rpmsg)**     | Usare un altro dispositivo, ad esempio Outlook, da un computer Windows, per inviare a se stessi un messaggio di posta elettronica protetto da diritti a cui è possibile accedere dal dispositivo mobile.  |
-    |**PDF**     | 1. da un computer Windows proteggere un file PDF usando il client AIP [classico](client-classify-protect.md) o [Unified Labeling](clientv2-classify-protect.md) . </br>2. inviare manualmente il file PDF protetto oppure caricarlo in una libreria protetta da SharePoint e condividerlo con il proprio indirizzo di posta elettronica.        |
-    |**Image (. ptxt,. pjpg o. ppng)**     | 1. da un computer Windows proteggere un file di testo o di immagine usando il client AIP [classico](client-classify-protect.md) o [Unified Labeling](clientv2-classify-protect.md) . </br></br>2. inviare manualmente il file protetto oppure caricarlo in una raccolta protetta di SharePoint e condividerlo con il proprio indirizzo di posta elettronica.   |
+    |**PDF**     | 1. da un computer Windows [proteggere un file PDF](clientv2-classify-protect.md) usando il client AIP. </br>2. inviare manualmente il file PDF protetto oppure caricarlo in una libreria protetta da SharePoint e condividerlo con il proprio indirizzo di posta elettronica.        |
+    |**Image (. ptxt,. pjpg o. ppng)**     | 1. da un computer Windows [proteggere un file di testo o di immagine](clientv2-classify-protect.md) usando il client AIP. </br></br>2. inviare manualmente il file protetto oppure caricarlo in una raccolta protetta di SharePoint e condividerlo con il proprio indirizzo di posta elettronica.   |
 | | |
 
 1. Aprire il file protetto sul dispositivo mobile usando l'allegato di posta elettronica o il collegamento che è stato inviato a se stessi.

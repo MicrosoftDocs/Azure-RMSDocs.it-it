@@ -1,8 +1,8 @@
 ---
 title: Impostazioni del Registro di sistema per il connettore di Rights Management - AIP
 description: Informazioni sulle impostazioni del Registro di sistema sui server tramite il connettore RMS. Il metodo consigliato per configurare tali impostazioni è usare lo strumento di configurazione server per il connettore Microsoft RMS.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: how-to
@@ -13,17 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fb2a081b03ae8b92fa58073b37336066f087da4c
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: e9bef060e2147fe42505174493bad44af06ff28a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567716"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384860"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Impostazioni del Registro di sistema per il connettore Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows Server 2012 R2, windows Server 2012*
-
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Usare le tabelle riportate nelle sezioni seguenti solo se si desidera controllare o aggiungere manualmente impostazioni del Registro di sistema sui server che eseguono Exchange, SharePoint o Windows Server. Queste impostazioni del Registro di sistema configurano i server per usare il [connettore RMS](deploy-rms-connector.md). Il metodo consigliato per configurare i server è usare lo strumento di configurazione server per il connettore Microsoft RMS.
 
@@ -54,34 +55,34 @@ Istruzioni per l'uso delle impostazioni:
 
 ## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Impostazioni del Registro di sistema per Exchange 2016 o Exchange 2013
 
-**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** predefinito
+**Valore**: predefinito
 
-**Dati:** https:// *\<YourTenantURL>* /_wmcs/Certification
-
----
-
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
-
-**Tipo:** Reg_SZ
-
-**Valore:** predefinito
-
-**Dati:** https:// *\<YourTenantURL>* /_wmcs/licensing
+**Dati**: https:// *\<YourTenantURL>* /_wmcs/Certification
 
 ---
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\CertificationServerRedirection
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** https://*\<YourTenantURL>*
+**Valore**: predefinito
+
+**Dati**: https:// *\<YourTenantURL>* /_wmcs/licensing
+
+---
+
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\CertificationServerRedirection
+
+**Tipo**: REG_SZ
+
+**Valore**: https://*\<YourTenantURL>*
 
 
-**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Data**: uno dei seguenti, a seconda che si usi http o HTTPS da Exchange Server al connettore RMS:
 
 - http://*< \connectorfqdn>*
 
@@ -89,14 +90,14 @@ Istruzioni per l'uso delle impostazioni:
 
 ---
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** https://*<\YourTenantURL>*
+**Valore**: https://*< \yourtenanturl>*
 
 
-**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Data**: uno dei seguenti, a seconda che si usi http o HTTPS da Exchange Server al connettore RMS:
 
 - http://*< \connectorfqdn>*
 
@@ -105,33 +106,33 @@ Istruzioni per l'uso delle impostazioni:
 
 ## <a name="exchange-2010-registry-settings"></a>Impostazioni del Registro di sistema per Exchange 2010
 
-**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** predefinito
+**Valore**: predefinito
 
-**Data:** https://*< \yourtenanturl>*/_wmcs/Certification
+**Data**: https://*< \yourtenanturl>*/_wmcs/Certification
 
 ---
 
 **Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** predefinito
+**Valore**: predefinito
 
-**Dati:** https://*<\YourTenantURL>*/_wmcs/Licensing
+**Data**: https://*< \yourtenanturl>*/_wmcs/licensing
 
 ---
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** https://*<\YourTenantURL>*
+**Valore**: https://*< \yourtenanturl>*
 
-**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Data**: uno dei seguenti, a seconda che si usi http o HTTPS da Exchange Server al connettore RMS:
 
 - http://*< \connectorfqdn>*
 
@@ -139,13 +140,13 @@ Istruzioni per l'uso delle impostazioni:
 
 ---
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** https://*<\YourTenantURL>*
+**Valore**: https://*< \yourtenanturl>*
 
-**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Data**: uno dei seguenti, a seconda che si usi http o HTTPS da Exchange Server al connettore RMS:
 
 - http://*< \connectorfqdn>*
 
@@ -154,14 +155,14 @@ Istruzioni per l'uso delle impostazioni:
 
 ## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Impostazioni del Registro di sistema di SharePoint 2016 o SharePoint 2013
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** https://*<\YourTenantURL>*/_wmcs/licensing
+**Valore**: https://*< \yourtenanturl>*/_wmcs/licensing
 
 
-**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
+**Data**: uno dei seguenti, a seconda che si usi http o HTTPS dal server SharePoint al connettore RMS:
 
 - http://*< \connectorfqdn>*/_wmcs/licensing
 
@@ -169,13 +170,13 @@ Istruzioni per l'uso delle impostazioni:
 
 ---
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** predefinito
+**Valore**: predefinito
 
-**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
+**Data**: uno dei seguenti, a seconda che si usi http o HTTPS dal server SharePoint al connettore RMS:
 
 - http://*< \connectorfqdn>*/_wmcs/Certification
 
@@ -183,14 +184,14 @@ Istruzioni per l'uso delle impostazioni:
 
 ---
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** predefinito
+**Valore**: predefinito
 
 
-**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
+**Data**: uno dei seguenti, a seconda che si usi http o HTTPS dal server SharePoint al connettore RMS:
 
 - http://*< \connectorfqdn>*/_wmcs/licensing
 
@@ -201,23 +202,23 @@ Istruzioni per l'uso delle impostazioni:
 
 ## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Impostazioni del Registro di sistema per i file server e la funzionalità Infrastruttura di classificazione file
 
-**Percorso del registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** predefinito
+**Valore**: predefinito
 
-**Data:** http://*< \connectorfqdn>*/_wmcs/licensing
+**Data**: http://*< \connectorfqdn>*/_wmcs/licensing
 
 ---
 
-**Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+**Percorso del registro di sistema**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Tipo:** Reg_SZ
+**Tipo**: REG_SZ
 
-**Valore:** predefinito
+**Valore**: predefinito
 
-**Data:** http://*< \connectorfqdn>*/_wmcs/Certification
+**Data**: http://*< \connectorfqdn>*/_wmcs/Certification
 
 
 Tornare a [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md)

@@ -1,6 +1,6 @@
 ---
-title: File e registrazione dell'utilizzo del client Azure Information Protection
-description: Informazioni sui file e sulla registrazione dell'utilizzo per il client Azure Information Protection per Windows.
+title: Azure Information Protection i file client classici e la registrazione dell'utilizzo
+description: Informazioni sui file client classici e la registrazione dell'utilizzo per il client classico Azure Information Protection per Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a8ee6c5f3879786b76a8466b198b0b4040a540f
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 3188392475a9da39f4187c30014ecc189248fd28
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386118"
 ---
-# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
+# <a name="admin-guide-azure-information-protection-classic-client-files-and-client-usage-logging"></a>Guida dell'amministratore: Azure Information Protection i file client classici e la registrazione dell'utilizzo del client
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Dopo aver installato il client Azure Information Protection, potrebbe essere necessario individuare il percorso dei file e monitorare l'utilizzo del client.
+Dopo aver installato il client di Azure Information Protection classico, potrebbe essere necessario individuare il percorso dei file e monitorare la modalità di utilizzo del client.
 
 ## <a name="file-locations-for-the-azure-information-protection-client"></a>Percorsi dei file per il client Azure Information Protection
 
@@ -43,7 +43,7 @@ File di log del client e file di criteri attualmente installati:
 
 - Per i sistemi operativi a 64 e 32 bit: **%localappdata%\Microsoft\MSIP**
 
-## <a name="usage-logging-for-the-azure-information-protection-client"></a>Registrazione dell'utilizzo per il client Azure Information Protection
+## <a name="usage-logging-for-the-azure-information-protection-classic-client"></a>Registrazione dell'utilizzo per il client di Azure Information Protection classico
 
 Il client registra l'attività dell'utente nel registro eventi di Windows locale **registri applicazioni e servizi**  >  **Azure Information Protection**. Gli eventi includono le informazioni seguenti:
 
@@ -83,7 +83,7 @@ Il client registra l'attività dell'utente nel registro eventi di Windows locale
     
     - Manuale 
     
-    - Implementazione consigliata
+    - Consigliato
     
     - Automatico  
     

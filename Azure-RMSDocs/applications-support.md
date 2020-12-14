@@ -1,10 +1,10 @@
 ---
 title: Supporto di Azure Rights Management da parte delle app da AIP
 description: Informazioni sul modo in cui le applicazioni usate più di frequente, ad esempio le app di Office, e i servizi (ad esempio Exchange e SharePoint) possono usare il servizio Rights Management di Azure Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc23496dc8ceedeb463205147a076d8a98d58c75
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 5ee04997191002a9b20b97c52573834483eb8813
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746150"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383993"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Supporto del servizio Azure Rights Management da parte delle applicazioni
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). *
 
 Usare le informazioni seguenti per comprendere in che modo le applicazioni e i servizi dell'utente finale usati più di frequente possono usare il servizio Azure Rights Management da Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione. Tali applicazioni includono Word, Excel, PowerPoint e Outlook. I servizi includono Exchange e Microsoft SharePoint.
 
@@ -36,7 +38,7 @@ Nei casi in cui gli utenti debbano applicare in modo autonomo la protezione, ass
 
 Per altre informazioni sulle modalità di configurazione di queste applicazioni per il servizio Azure Rights Management di Azure Information Protection, vedere [Configurazione di applicazioni per Azure Rights Management](configure-applications.md).
 
-I servizi di ricerca si integrano con Rights Management in modi diversi. Ad esempio: 
+I servizi di ricerca si integrano con Rights Management in modi diversi. ad esempio: 
 
 - Exchange Online ed Exchange Server usano l'indicizzazione del lato del servizio per visualizzare automaticamente i messaggi di posta elettronica protetti dell'utente nei risultati delle ricerche. 
 

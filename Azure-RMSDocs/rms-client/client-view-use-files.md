@@ -1,11 +1,11 @@
 ---
-title: Visualizzare i file protetti con il Visualizzatore Azure Information Protection
-description: Istruzioni per visualizzare e usare un file protetto che richiede l'installazione del Visualizzatore Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+title: Visualizzare i file protetti con il visualizzatore client classico Azure Information Protection
+description: Istruzioni per visualizzare e usare un file protetto che richiede l'installazione del visualizzatore client classico di Azure Information Protection.
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 19ee7b67b7774420e799876e91d1889c5c788888
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 280fb2d86bf4c4c9165c1d74df6c17da69a499c0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568058"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385591"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guida dell'utente: visualizzare i file protetti con il Visualizzatore Azure Information Protection
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-classic-client-viewer"></a>Guida dell'utente: visualizzare i file protetti con il visualizzatore client classico Azure Information Protection
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere la guida per l' [utente del client Unified Labeling](clientv2-view-use-files.md). *
+
+>[!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 

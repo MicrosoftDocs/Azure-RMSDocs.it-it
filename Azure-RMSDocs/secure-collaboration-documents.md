@@ -4,8 +4,8 @@ description: Flusso di lavoro end-to-end per collaborare a documenti protetti da
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
-ms.topic: conceptual
+ms.date: 11/23/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
@@ -13,19 +13,22 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcdfc020061428959e2137a46347b49b150ad73a
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 117a943c410497cda1df9d0740ad9c91e2744e7f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384843"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione di Microsoft 365. *
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>
 
 Quando si usa Azure Information Protection, è possibile proteggere i documenti senza sacrificare la collaborazione per gli utenti autorizzati. La maggior parte dei documenti creati da un utente e quindi condivisi con altri per la visualizzazione e la modifica è costituita da documenti di Office Word, Excel e PowerPoint. Questi documenti supportano la protezione nativa, ovvero oltre alle funzionalità di protezione di autorizzazione e crittografia, supportano anche l'autorizzazione limitata per un controllo più granulare. 
 
@@ -99,7 +102,7 @@ Condividere il documento protetto allegandolo a un messaggio di posta elettronic
 
 ## <a name="opening-and-editing-the-protected-document"></a>Apertura e modifica del documento protetto
 
-Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio:
+Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. ad esempio:
 
 ![Banner informativo di esempio sulle autorizzazioni di Azure Information Protection](./media/example-restricted-access-banner.png)
 

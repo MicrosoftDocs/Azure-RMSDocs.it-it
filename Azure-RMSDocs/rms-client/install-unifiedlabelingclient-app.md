@@ -1,35 +1,34 @@
 ---
 title: Scaricare & installare il client di Azure Information Protection Unified Labeling
 description: Istruzioni per consentire agli utenti di installare il client di Azure Information Protection Unified Labeling per Windows, in modo che sia possibile classificare e proteggere i documenti e i messaggi di posta elettronica.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: b2d3c262831c39f077de3f6e06b41c5adbd077bc
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: dcb0cf2946c59868eba0226850b5c8edb9a0f08f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568028"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385081"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: scaricare e installare il client di Azure Information Protection Unified Labeling
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
-> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida per l'utente del client classico](install-client-app.md). *
 
 Se l'amministratore non installa il client di etichettatura unificato di Azure Information Protection, è possibile eseguire questa operazione manualmente. Per installare questo client è necessario essere un amministratore locale del PC in modo che sia possibile assegnare etichette a documenti e messaggi di posta elettronica e proteggerli.
 
-Inoltre:
-
-- Il client per l'etichettatura unificata di Azure Information Protection richiede Microsoft .NET Framework 4.6.2 come versione minima. Se non è disponibile, il programma di installazione prova a scaricare e installare questo prerequisito. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer.
-
+> [!NOTE]
+> Il client per l'assegnazione di etichette unificata Azure Information Protection richiede una versione minima di Microsoft .NET Framework 4.6.2. Se questo non è presente, il programma di installazione tenterà di scaricare e installare questo prerequisito. Quando questo prerequisito viene installato come parte dell'installazione del client, è necessario riavviare il computer.
+>
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Per scaricare e installare il client per l'etichettatura unificata di Azure Information Protection
 
@@ -62,7 +61,7 @@ Dopo aver installato il client per l'etichettatura unificata di Azure Informatio
 L'installazione è ora completa ed è possibile usare il client per l'etichettatura unificata di Azure Information Protection per etichettare e proteggere documenti e messaggi di posta elettronica.
 
 ## <a name="other-instructions"></a>Altre istruzioni    
-Altre istruzioni sulle procedure sono disponibili nella Azure Information Protection manuale dell'utente del client di Unified Labeling:
+Altre istruzioni sulle procedure sono disponibili nella Guida per l'utente del client di Azure Information Protection Unified labeling.
 
 - [Per saperne di più](clientv2-user-guide.md#what-do-you-want-to-do)
 

@@ -4,7 +4,7 @@ description: Confuso da una parola, una frase o un acronimo correlato a Microsof
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,19 +14,21 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f5b2dd317a6cdcf5d5d164f6431f8aa3163550da
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: af5c035a19847eca18a9686cc32895c363c0a926
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384557"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 In caso di dubbio su una parola, un'espressione o un acronimo correlato a Microsoft Azure Information Protection, è possibile trovare qui i termini e le abbreviazioni specifici di Azure Information Protection o che assumono un particolare significato se usati nel contesto di questo servizio.
 
@@ -34,7 +36,7 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 
 [Oggetto](#a)  |  [B](#b)  |  [C](#c)  |  [D](#d)  |  [E](#e)  |  [G](#g)  |  [H](#h)  |  [I](#i)  |  [K](#k)  |  [L](#l)  |  [M](#m) [N](#n)  |  [O](#o)  |  [P](#p)  |  [R](#r)  |  [S](#s)  |  [T](#t)  |  [U](#u)
 
-### <a name="a"></a>A
+### <a name="a"></a>Una
 |Termine|Definizione|
 |--------|--------------|
 |**AADRM**|Nome del primo modulo di PowerShell per il servizio di protezione (Azure Rights Management), derivato dall'abbreviazione non ufficiale di Azure Rights Management quando in precedenza era denominato (Windows) Azure Active Directory Rights Management. </br></br>Questo modulo di PowerShell è ora sostituito con il modulo AIPService.|
@@ -68,7 +70,7 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 
 |Termine|Definizione|
 |--------|--------------|
-|**consumare**|**Solo nel contesto protetto:** </br>per aprire un documento o un messaggio di posta elettronica da leggere o usare quando il contenuto è protetto dal servizio Rights Management. </br>Per un documento, l'utilizzo include la modifica e l'aggiunta di nuovo contenuto a un documento protetto. Per un messaggio di posta elettronica, l'utilizzo include la risposta a un messaggio protetto.<br /><br/>**Nel contesto di etichettatura (con o senza protezione):** </br>per leggere e potenzialmente usare le informazioni dell'etichetta archiviate nei metadati di file e messaggi di posta elettronica.|
+|**consumare**|**Solo nel contesto della protezione**: </br>per aprire un documento o un messaggio di posta elettronica da leggere o usare quando il contenuto è protetto dal servizio Rights Management. </br>Per un documento, l'utilizzo include la modifica e l'aggiunta di nuovo contenuto a un documento protetto. Per un messaggio di posta elettronica, l'utilizzo include la risposta a un messaggio protetto.<br /><br/>**Nel contesto dell'assegnazione di etichette (con o senza protezione)**: </br>per leggere e potenzialmente usare le informazioni dell'etichetta archiviate nei metadati di file e messaggi di posta elettronica.|
 |**chiave simmetrica**|Chiave univoca creata da applicazioni abilitate per RMS per ogni documento o messaggio di posta elettronica protetto tramite Rights Management che consente di limitare il rischio di diffusione delle informazioni.|
 | | |
 
@@ -151,7 +153,7 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 
 |Termine|Definizione|
 |--------|--------------|
-|**Crittografia messaggi di Office**|Spesso abbreviato in *OME*.<br /><br />Le nuove funzionalità di crittografia messaggi di Office 365 sono integrate a livello nativo con il servizio Azure Rights Management e offrono gli stessi livelli di protezione della posta elettronica per utenti interni ed esterni, aggiornamento automatico dei modelli e supporto dello scenario BYOK (Bring Your Own Key). </br></br>L'implementazione della crittografia messaggi di Office precedente supportava solo i destinatari esterni, richiedeva una regola per il flusso della posta elettronica e non supportava BYOK.|
+|**Crittografia messaggi di Office**|Spesso abbreviato in *OME*.<br /><br />Le nuove funzionalità di crittografia dei messaggi di Office 365 includono l'integrazione integrata con il servizio Rights Management di Azure per fornire la stessa protezione della posta elettronica per gli utenti interni ed esterni, l'aggiornamento automatico dei modelli e il supporto per lo scenario BYOK (Bring your own key). </br></br>L'implementazione della crittografia messaggi di Office precedente supportava solo i destinatari esterni, richiedeva una regola per il flusso della posta elettronica e non supportava BYOK.|
 | | |
 
 ### <a name="p"></a>P
@@ -201,3 +203,7 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 |**etichetta unificata**| Nota anche come *etichetta di riservatezza unificata*.<br /><br /> Etichetta che può essere applicata da app, client e servizi che supportano Microsoft Information Protection Framework, per applicare la classificazione e, facoltativamente, la protezione. </br></br>Nelle app e nei servizi di Office, le etichette unificate vengono implementate come etichette di riservatezza.|
 |**rimuovere la protezione**|Rimuovere i controlli di protezione da file o messaggi di posta elettronica, applicati tramite criteri di crittografia, identità, diritti di utilizzo e controllo di accesso per la protezione dei dati.|
 |**licenza d'uso**|Certificato associato a un documento che viene concesso a un utente che apre un file o un messaggio di posta elettronica protetto da un servizio Rights Management. </br></br>Questo certificato contiene i diritti dell'utente per il file o il messaggio e-mail e la chiave di crittografia usata per crittografare il contenuto, nonché ulteriori restrizioni di accesso definite nei criteri del documento.|
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per ulteriori informazioni sui nomi di AIP, vedere [Azure Information Protection, noto anche come...](aka.md).

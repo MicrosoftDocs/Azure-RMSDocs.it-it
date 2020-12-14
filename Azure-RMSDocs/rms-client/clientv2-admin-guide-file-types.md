@@ -4,27 +4,27 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni dei nom
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b9f8a53135407e91d04542bc53c709b82662a19a
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 754525afeee619f8f336addd5239ea15223f986c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316637"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385523"
 ---
-# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: tipi di file supportati dal client di Azure Information Protection Unified Labeling
+# <a name="file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Tipi di file supportati dal client di Azure Information Protection Unified Labeling
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*>
+>***Si applica a** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*>
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [AIP Unified Labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere [tipi di file client classici](client-admin-guide-file-types.md)*
 
 Il client Azure Information Protection Unified Labeling può applicare quanto segue ai documenti e ai messaggi di posta elettronica:
 
@@ -94,7 +94,7 @@ La protezione può essere applicata automaticamente quando un utente seleziona u
 
 Sono disponibili dimensioni massime per i file che la Azure Information Protection client Unified Labeling supporta per la protezione.
 
-- **Per i file di Office:**
+- **Per i file di Office**:
 
   |                                                     Applicazione di Office                                                      |                                                Dimensione massima del file supportata                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

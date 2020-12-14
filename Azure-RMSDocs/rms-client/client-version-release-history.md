@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection & i criteri di supporto per la cronologia delle versioni client
-description: Informazioni sugli elementi nuovi o modificati in una versione del client di Azure Information Protection per Windows e sui criteri del ciclo di vita per il supporto.
+title: Azure Information Protection la cronologia delle versioni del client classica & i criteri di supporto
+description: Vedere le novità o le modifiche apportate in una versione di Azure Information Protection client classico e comprendere i criteri del ciclo di vita per il supporto.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,27 +12,24 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 146fa9442aa5fcb05cebab27f1d4104bd33328f0
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: 4eabec082a6124689d6ef6e8c34698b73fb9162e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568472"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385727"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
+# <a name="azure-information-protection-classic-client-version-release-history-and-support-policy"></a>Azure Information Protection client classico: cronologia delle versioni e criteri di supporto
 
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di assegnazione di etichette unificata, vedere [cronologia delle versioni client unificata](unifiedlabelingclient-version-release-history.md)per l'assegnazione di etichette.
 
->[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-> [!TIP]
-> Si è interessati all'uso del client Azure Information Protection Unified Labeling, perché le etichette vengono pubblicate dal centro sicurezza & conformità di Office 365, dal centro sicurezza Microsoft 365 o da Microsoft 365 Compliance Center? Quando si scarica e si installa il client di etichettatura unificata dall'area download Microsoft, è possibile aggiornare il client di Azure Information Protection al [client Unified Labeling](unifiedlabelingclient-version-release-history.md).
-
-**Per distribuire il client AIP con interfaccia classica**, aprire un ticket di supporto per ottenere l'accesso al download.
+**Per distribuire il client AIP classico**, aprire un ticket di supporto per ottenere l'accesso al download.
 
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -67,7 +64,7 @@ Tutte le versioni client di 1.4.21.0 rilasciate 03/15/2017 supportano TLS 1,2. L
 
 ### <a name="release-history"></a>Cronologia delle versioni
 
-Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima.
+Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata di Azure Information Protection client classico per Windows. La versione più recente è elencata per prima.
 
 Si noti che Azure Information Protection funzionalità sono attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
 
@@ -94,7 +91,7 @@ Questa versione include solo correzioni.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Non si è certi che questo sia il client giusto da installare?  Vedere [scegliere il client di assegnazione di etichette da usare per i computer Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Non si è certi che questo sia il client giusto da installare?  Vedere [scegliere la soluzione di etichettatura di Windows](use-client.md#choose-your-windows-labeling-solution).
 
 Per altre informazioni sull'installazione e l'uso del client: 
 

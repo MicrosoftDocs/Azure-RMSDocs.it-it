@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
@@ -13,16 +13,18 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cfe396cea14effdd77b912b32c7c64296806b4be
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 53c5edea2593a653eec82ec5a61efed58ae76c1f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316229"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383925"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Dettagli di Bring your own key (BYOK) per Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Le organizzazioni con una sottoscrizione Azure Information Protection possono scegliere di configurare il tenant con la propria chiave, anziché una chiave predefinita generata da Microsoft. Questa configurazione è spesso definita Bring Your Own Key (BYOK).
 
@@ -30,14 +32,16 @@ BYOK e la [registrazione dell'utilizzo](log-analyze-usage.md) funzionano senza i
 
 Le applicazioni supportate includono:
 
-- **Servizi cloud,** ad esempio Microsoft SharePoint o Microsoft 365
+- **Servizi cloud**, ad esempio Microsoft SharePoint o Microsoft 365
 
 - **Servizi locali** che eseguono applicazioni Exchange e SharePoint che usano il servizio Azure Rights Management tramite il connettore RMS
 
-- **Applicazioni client,** ad esempio Office 2019, Office 2016 e Office 2013
+- **Applicazioni client**, ad esempio Office 2019, Office 2016 e Office 2013
 
 > [!TIP]
-> Se necessario, applicare ulteriore sicurezza a documenti specifici usando una chiave locale aggiuntiva. Per altre informazioni, vedere protezione [HYOK (Holding your own key](configure-adrms-restrictions.md) ) (client classico) o [protezione con crittografia a chiave doppia (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only).
+> Se necessario, applicare ulteriore sicurezza a documenti specifici usando una chiave locale aggiuntiva. Per altre informazioni, vedere [protezione con crittografia a chiave doppia (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke) (solo client di etichetta unificata).
+>
+> Se si dispone del client classico ed è necessaria una protezione aggiuntiva, locale, implementare invece la protezione della [protezione HYOK](configure-adrms-restrictions.md) .
 > 
 
 ## <a name="azure-key-vault-key-storage"></a>Archiviazione chiavi Azure Key Vault
@@ -59,7 +63,7 @@ Poiché i diversi servizi presentano requisiti di gestione delle chiavi variabil
 
 Per condividere una sottoscrizione di Azure con altri servizi che usano Azure Key Vault, assicurarsi che la sottoscrizione condivida un insieme comune di amministratori. Conferma che tutti gli amministratori che usano la sottoscrizione hanno una conoscenza approfondita di tutte le chiavi a cui possono accedere, significa che è meno probabile che configurino correttamente le chiavi.
 
-**Esempio:** Usare una sottoscrizione di Azure condivisa quando gli amministratori per la chiave del tenant Azure Information Protection sono gli stessi utenti che amministrano le chiavi per la chiave cliente di Office 365 e CRM online. Se gli amministratori chiave per questi servizi sono diversi, è consigliabile usare sottoscrizioni dedicate.
+**Esempio**: uso di una sottoscrizione di Azure condivisa quando gli amministratori per la chiave del tenant Azure Information Protection sono gli stessi utenti che amministrano le chiavi per la chiave cliente di Office 365 e CRM online. Se gli amministratori chiave per questi servizi sono diversi, è consigliabile usare sottoscrizioni dedicate.
 
 ### <a name="benefits-of-using-azure-key-vault"></a>Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
 
@@ -76,6 +80,7 @@ L'archiviazione della chiave del tenant nell'Azure Key Vault offre i vantaggi se
 |**Posizione della chiave master**| Azure Key Vault è disponibile in diverse posizioni e supporta le organizzazioni con restrizioni in cui è possibile vivere le chiavi master. <br /><br />Per altre informazioni, vedere la pagina [Prodotti disponibili in base all'area](https://azure.microsoft.com/regions/services/) nel sito di Azure.|
 |**Domini di sicurezza separati**|Azure Key Vault USA domini di sicurezza distinti per i Data Center in aree quali America del Nord, EMEA (Europa, Medio Oriente e Africa) e Asia. <br /><br />Azure Key Vault usa anche istanze diverse di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. |
 |**Esperienza unificata**| Azure Key Vault consente inoltre agli amministratori della sicurezza di archiviare, accedere e gestire i certificati e i segreti, ad esempio le password, per altri servizi che usano la crittografia. <br><br />L'uso di Azure Key Vault per le chiavi del tenant offre un'esperienza utente uniforme per gli amministratori che gestiscono tutti questi elementi.|
+| | |
 
 Per gli aggiornamenti più recenti e per informazioni sull'uso di altri servizi  [Azure Key Vault](/azure/key-vault/general/basic-concepts), visitare il [Blog del team di Azure Key Vault](/archive/blogs/kv/).
 
@@ -108,17 +113,17 @@ Se si crea la chiave in locale, è necessario trasferirla o importarla nel Key V
 
 Opzioni per creare e archiviare una chiave personalizzata:
 
-- **Creato in Azure Key Vault.** Creare e archiviare la chiave in Azure Key Vault come una chiave protetta dal modulo di protezione hardware o una chiave protetta tramite software.
+- **Creato in Azure Key Vault**. Creare e archiviare la chiave in Azure Key Vault come una chiave protetta dal modulo di protezione hardware o una chiave protetta tramite software.
 
-- **Creato in locale.** Creare la chiave in locale e trasferirla a Azure Key Vault usando una delle opzioni seguenti:
+- **Creato in locale**. Creare la chiave in locale e trasferirla a Azure Key Vault usando una delle opzioni seguenti:
 
-    - **Chiave protetta dal modulo di protezione hardware, trasferita come chiave protetta dal modulo di protezione hardware.** Metodo più comune scelto.
+    - **Chiave protetta dal modulo di protezione hardware, trasferita come chiave protetta dal modulo di protezione hardware**. Metodo più comune scelto.
 
         Sebbene questo metodo abbia il sovraccarico amministrativo, potrebbe essere necessario che l'organizzazione segua normative specifiche. I HSM usati da Azure Key Vault sono FIPS 140-2 livello 2 convalidati.
 
-    - **Chiave protetta da software convertita e trasferita a Azure Key Vault come chiave protetta dal modulo di protezione hardware.** Questo metodo è supportato solo quando si [esegue la migrazione da Active Directory Rights Management Services (ad RMS)](migrate-from-ad-rms-to-azure-rms.md).
+    - **Chiave protetta da software convertita e trasferita a Azure Key Vault come chiave protetta dal modulo di protezione hardware**. Questo metodo è supportato solo quando si [esegue la migrazione da Active Directory Rights Management Services (ad RMS)](migrate-from-ad-rms-to-azure-rms.md).
 
-    - **Creato in locale come chiave protetta tramite software e trasferito a Azure Key Vault come chiave protetta da software.** Questo metodo richiede un oggetto. File di certificato PFX.
+    - **Creato in locale come chiave protetta tramite software e trasferito a Azure Key Vault come chiave protetta da software**. Questo metodo richiede un oggetto. File di certificato PFX.
 
 Ad esempio, per usare una chiave creata in locale, eseguire le operazioni seguenti:
 
@@ -155,6 +160,7 @@ I prerequisiti di BYOK variano a seconda della configurazione del sistema. Verif
 |**Prerequisiti Azure Key Vault per BYOK** | Se si usa una chiave protetta dal modulo di protezione hardware creata in locale, assicurarsi di rispettare anche i [prerequisiti per BYOK](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) elencati nella documentazione di Azure Key Vault.         |
 |**Firmware Thales versione 11,62**    |È necessario avere una versione del firmware Thales 11,62 se si esegue la migrazione da AD RMS a Azure Information Protection usando la chiave software per la chiave hardware e si usa il firmware Thales per il modulo di protezione hardware.
 |**Bypass del firewall per i servizi Microsoft attendibili** |Se l'insieme di credenziali delle chiavi che contiene la chiave del tenant usa gli endpoint di servizio della rete virtuale per Azure Key Vault, è necessario consentire ai servizi Microsoft attendibili di ignorare il firewall. <br />Per altre informazioni, vedere [Endpoint servizio di rete virtuale per Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
+| | |
 
 #### <a name="verifying-that-you-have-a-byok-compatible-azure-subscription"></a>Verifica della presenza di una sottoscrizione di Azure compatibile con BYOK
 
@@ -190,9 +196,9 @@ Scegliere un'opzione innanzitutto per ragioni di conformità e quindi per ridurr
 
 - Tutte le chiamate crittografiche per la catena di protezione alla chiave Azure Information Protection. Pertanto, è possibile ridurre al minimo la latenza di rete richiesta dalle chiamate creando l'insieme di credenziali delle chiavi nella stessa area o istanza di Azure del tenant Azure Information Protection.
 
-Per identificare il percorso del tenant di Azure Information Protection, usare il cmdlet di PowerShell [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) e identificare l'area dagli URL. Ad esempio:
+Per identificare il percorso del tenant di Azure Information Protection, usare il cmdlet di PowerShell [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) e identificare l'area dagli URL. ad esempio:
 
-```ps
+```PowerShell
 LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 ```
     
@@ -209,6 +215,7 @@ La tabella seguente elenca le aree e le istanze di Azure consigliate per ridurre
 |rms.**govus**.aadrm.com|**Stati Uniti centrali** o **Stati Uniti orientali 2**|
 |RMS.**AADRM.US**|**US gov Virginia** o **US gov Arizona**|
 |RMS.**AADRM.cn**|**Cina orientale 2** o **Cina settentrionale 2**|
+| | |
 
 ### <a name="create-and-configure-your-key"></a>Creare e configurare la chiave
 
@@ -251,7 +258,7 @@ Per impostazione predefinita, sono consentite tutte le operazioni Key Vault.
 
 Per controllare le operazioni consentite per una chiave specifica, eseguire il comando PowerShell seguente:
 
-```ps
+```PowerShell
 (Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps
 ```
 
@@ -261,7 +268,7 @@ Se necessario, aggiungere le operazioni consentite usando [Update-AzKeyVaultKey]
 
 Le chiavi archiviate nel Azure Key Vault hanno ogni ID chiave.
 
-L'ID chiave è un URL che contiene il nome dell'insieme di credenziali delle chiavi, il contenitore delle chiavi, il nome della chiave e la versione della chiave. Ad esempio:
+L'ID chiave è un URL che contiene il nome dell'insieme di credenziali delle chiavi, il contenitore delle chiavi, il nome della chiave e la versione della chiave. ad esempio:
 
 **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**.
 
@@ -279,16 +286,16 @@ Il servizio Rights Management di Azure deve essere autorizzato a usare la chiave
 
     Il modello selezionato ha la configurazione seguente:
 
-    - Il valore dell' **entità Select** è impostato su **Microsoft Rights Management Services.**
-    - Le **autorizzazioni per chiavi** selezionate includono **Get,** **Decrypt** e **Sign.**
+    - Il valore dell' **entità Select** è impostato su **Microsoft Rights Management Services**.
+    - Le **autorizzazioni per chiavi** selezionate includono **Get**, **Decrypt** e **Sign**.
 
 ##### <a name="enabling-key-authorization-using-powershell"></a>Abilitazione dell'autorizzazione chiave tramite PowerShell
 
 Eseguire il cmdlet Key Vault PowerShell, [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy), e concedere le autorizzazioni all'entità servizio di Azure Rights Management usando il GUID **00000012-0000-0000-C000-000000000000**.
 
-Ad esempio:
+ad esempio:
 
-```ps
+```PowerShell
 Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
 
@@ -317,13 +324,14 @@ Una volta completati tutti i passaggi precedenti, si è pronti per configurare A
 Usando i cmdlet di Azure RMS, eseguire i comandi seguenti:
 
 1. Connettersi al servizio Rights Management di Azure ed eseguire l'accesso:
-    ```ps
+
+    ```PowerShell
     Connect-AipService
     ```
 
-1. Eseguire il [cmdlet Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey), specificando l'URL della chiave. Ad esempio:
+1. Eseguire il [cmdlet Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey), specificando l'URL della chiave. ad esempio:
 
-    ```ps
+    ```PowerShell
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/<key-version>"
     ```
 
@@ -332,7 +340,7 @@ Usando i cmdlet di Azure RMS, eseguire i comandi seguenti:
     >
     > Usare il comando [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) in base alle esigenze per ottenere il numero di versione della chiave corrente.
     >
-    > Ad esempio: `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+    > ad esempio `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
     Per confermare che l'URL della chiave è impostato correttamente per Azure Information Protection, eseguire il comando [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) nella Azure Key Vault per visualizzare l'URL della chiave.
 
@@ -341,4 +349,5 @@ Usando i cmdlet di Azure RMS, eseguire i comandi seguenti:
 Azure Information Protection è ora configurato per usare la chiave invece della chiave predefinita creata da Microsoft creata automaticamente per il tenant.
 
 ## <a name="next-steps"></a>Passaggi successivi
+
 Dopo aver configurato la protezione BYOK, continuare [con la chiave radice del tenant](get-started-tenant-root-keys.md) per altre informazioni sull'uso e sulla gestione della chiave.

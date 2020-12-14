@@ -1,30 +1,30 @@
 ---
 title: Visualizzare i file protetti con il client di Azure Information Protection Unified Labeling
 description: Istruzioni per visualizzare un file protetto per il quale è necessario che sia installato il Azure Information Protection visualizzatore unificato delle etichette.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 76bbfce88fb35241ee5180221267e83a121482b4
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 9c09c4229db71f93d952868cc982f51c12fe9c00
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316756"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385234"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: visualizzare i file protetti con il client di Azure Information Protection Unified Labeling
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida per l'utente del client classico](client-view-use-files.md). *
 
 Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 
@@ -75,5 +75,5 @@ Se l'organizzazione non ha un account basato sul cloud per l'uso (per Microsoft 
 ## <a name="other-instructions"></a>Altre istruzioni
 Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
-- [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
+- [Per saperne di più](clientv2-user-guide.md#what-do-you-want-to-do)
 
