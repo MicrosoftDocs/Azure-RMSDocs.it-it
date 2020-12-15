@@ -12,16 +12,18 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 1dfb6879533e4bb567f97d56a88cd1df2915e338
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 43aaafadaabbf26309c4a40926b970d90aeadc47
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386237"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Requisiti aggiuntivi di Azure AD per Azure Information Protection - AIP
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Rilevante per**: [Client di etichettatura unificata di AIP e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
 Una [directory Azure AD è un requisito](requirements.md#azure-active-directory) per l'uso di Azure Information Protection. Usare un account da una directory Azure AD per accedere al portale di Azure, in cui è possibile configurare le impostazioni di Azure Information Protection.
 
@@ -31,9 +33,16 @@ Nelle sezioni seguenti sono elencati i requisiti aggiuntivi per AIP e Azure AD p
 
 ## <a name="computers-running-office-2010"></a>Computer che eseguono Office 2010
 
-Oltre all'account Azure AD, i computer che eseguono Microsoft Office 2010 richiedono il [client di etichettatura unificata Azure Information Protection](./rms-client/aip-clientv2.md) o il [client classico di Azure Information Protection client](./rms-client/aip-client.md) per l'autenticazione in Azure Information Protection e nel relativo servizio di protezione dati, Azure Rights Management.
+Oltre a un account di Azure AD, i computer che eseguono Microsoft 2010 devono disporre del client di Azure Information Protection per Windows per autenticarsi per Azure Information Protection e il relativo servizio di protezione dei dati, Azure Rights Management. 
 
 Gli account utente federati, ad esempio AD FS, devono usare l'Autenticazione integrata di Windows nei loro computer. In questo scenario l'autenticazione basata su moduli non riesce ad autenticare gli utenti per Azure Information Protection.
+
+Si consiglia di distribuire il client di etichettatura unificata di Azure Information Protection. Se non è ancora stato eseguito l'aggiornamento, è possibile che nel sistema sia ancora distribuito il [client classico di Azure Information Protection](./rms-client/aip-client.md). Per altre informazioni, vedere [Lato client di Azure Information Protection](rms-client/use-client.md).
+
+> [!NOTE]
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. 
+>
+> In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection potranno eseguire la transizione alla soluzione di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>Supporto dell'autenticazione basata sui certificati
 
@@ -92,7 +101,7 @@ Per altre informazioni, vedere:
 
 Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 
-## <a name="authenticating-on-premises-using-adfs-or-another-authentication-provider"></a>Autenticazione locale con AD FS o un altro provider di autenticazione
+## <a name="authenticating-on-premises-using-ad-fs-or-another-authentication-provider"></a>Autenticazione locale con AD FS o un altro provider di autenticazione
 
 Se si usa un dispositivo mobile o un computer Mac che esegue l'autenticazione in locale con AD FS o un provider di autenticazione equivalente, è necessario usare AD FS in una delle configurazioni seguenti:
 

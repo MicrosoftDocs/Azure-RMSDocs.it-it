@@ -1,6 +1,6 @@
 ---
 title: Supporto delle applicazioni per la protezione dei dati RMS per Azure Information Protection
-description: Identificare le applicazioni e le soluzioni con supporto nativo per il servizio Azure Rights Management (Azure RMS). Azure RMS offre la protezione dei dati per Azure Information Protection.
+description: Identificare le applicazioni e le soluzioni con supporto predefinito per il servizio Azure Rights Management (Azure RMS). Azure RMS offre la protezione dei dati per Azure Information Protection.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,18 +13,21 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f25b020a72a48e79b24840a597aefd4cc9e594af
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 0c86d31ef5dbfe3afd7e901bc43758c61ee0ba67
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849704"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386254"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Rilevante per**: [Client di etichettatura unificata di AIP e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
-Le applicazioni e le soluzioni elencate in questa pagina supportano a livello nativo il servizio Azure Rights Management (Azure RMS), che garantisce la protezione dei dati per Azure Information Protection.
+
+Le applicazioni e le soluzioni elencate in questa pagina includono il supporto predefinito per il servizio Azure Rights Management (Azure RMS), che garantisce la protezione dei dati per Azure Information Protection.
 
 Queste applicazioni e soluzioni sono dette "abilitate per RMS" e il supporto di Rights Management e delle [restrizioni di utilizzo](configure-usage-rights.md) è perfettamente integrato mediante l'uso delle API di Rights Management.
 
@@ -40,7 +43,7 @@ Queste applicazioni e soluzioni sono dette "abilitate per RMS" e il supporto di 
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Microsoft 365 Apps](#microsoft-365-app-support) <br />- Office 2010 <br />- Office 2013<br />- Office 2016 <br />- Office 2019 <br />- [Office per il Web (visualizzazione di documenti protetti)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web browser](#web-browser-support)        |
 |[**E-mail**](#viewing-protected-content-in-email-clients)      |   - Outlook 2010<br />- Outlook 2013<br />- Outlook 2016 <br />- Outlook 2019 <br />- Outlook di Microsoft 365 Apps for enterprise<br />- [Web browser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
-|[**Altri tipi di file**](#supported-text-and-image-file-types)    |  -Visio di Microsoft 365 Apps, Office 2019 e Office 2016: **.vsdm,** **.vsdx,** **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Client Azure Information Protection per Windows: Testo, immagini, **pfile** <br />- Plug-in SealPath RMS per AutoCAD: **.dwg**       |
+|[**Altri tipi di file**](#supported-text-and-image-file-types)    |  - Visio di Microsoft 365 Apps, Office 2019 e Office 2016: **.vsdm**, **.vsdx**, **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />- Client Azure Information Protection per Windows: Testo, immagini, **pfile** <br />- Plug-in SealPath RMS per AutoCAD: **.dwg**       |
 | | |
 
 ## <a name="macos-rms-enlightened-applications"></a>Applicazioni macOS abilitate per RMS
@@ -207,7 +210,7 @@ Le famiglie di prodotti client di Office seguenti supportano la protezione dei f
 Tutte le edizioni di Office per Mac 2019 e Office for Mac 2016 supportano l'utilizzo di contenuto protetto.
 
 > [!TIP]
-> per iniziare a proteggere i documenti usando Office per Mac può essere utile leggere la sezione [Come configurare un computer Mac per proteggere e tracciare i documenti?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents) delle domande frequenti.
+> Se si usa il client classico in un computer Mac, le domande frequenti seguenti possono risultare utili: [Come configurare un computer Mac per proteggere e tracciare i documenti?](faqs-classic.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents) delle domande frequenti.
 > 
 ## <a name="azure-information-protection-apps-for-ios-and-android"></a>App Azure Information Protection per iOS e Android
 
@@ -219,21 +222,34 @@ Per altre informazioni su come usare l'app, vedere [Domande frequenti sull'app A
 
 ## <a name="the-azure-information-protection-client-for-windows"></a>Client Azure Information Protection per Windows
 
-Il client Azure Information Protection (AIP) include due versioni, con guide per dell'amministratore e dell'utente per ogni versione:
+Per usare Azure Information Protection, è necessario distribuire il client di AIP nel sistema. 
 
-- **Client di etichettatura unificata**:
-    - [Guida dell'amministratore](./rms-client/clientv2-admin-guide.md)
-    - [Manuale dell'utente](./rms-client/clientv2-user-guide.md)
+Scaricare l'installazione del client di etichettatura unificata dalla [pagina di Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). 
 
-- **Client classico**:
-    - [Guida dell'amministratore](./rms-client/client-admin-guide.md)
-    - [Manuale dell'utente](./rms-client/client-user-guide.md)
+Per altre informazioni, vedere:
 
-Scaricare l'app desiderata dalla [pagina di Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
+- [Lato client di Azure Information Protection](rms-client/use-client.md)
+- [Guida dell'amministratore per il client di etichettatura unificata](./rms-client/clientv2-admin-guide.md)
+- [Manuale dell'utente per il client di etichettatura unificata](./rms-client/clientv2-user-guide.md)
+
+### <a name="aips-classic-client"></a>Client classico di AIP
+
+Se non è ancora stato eseguito l'aggiornamento, è possibile che sia ancora distribuito il [client classico di Azure Information Protection](./rms-client/aip-client.md) legacy.
+
+Per altre informazioni sulla distribuzione e sull'uso del client classico, vedere:
+
+- [Client classico di AIP](./rms-client/aip-client.md)
+- [Guida dell'amministratore per il client classico](./rms-client/client-admin-guide.md)
+- [Manuale dell'utente per il client classico](./rms-client/client-user-guide.md).
 
 > [!NOTE]
-> Non si è certi delle differenze tra queste due versioni? Vedere le [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) in merito.
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. 
+>
+> In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection potranno eseguire la transizione alla soluzione di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+>
 > 
+>
+
 ## <a name="rights-management-sharing-app"></a>Applicazione di condivisione Rights Management
 
 Per i computer Mac, l'app di condivisione Rights Management offre un visualizzatore per file PDF protetti (con estensione **ppdf**), immagini con testo protetto e file protetti in modo generico. Consente anche di proteggere i file di immagine, ma non altri file. Per proteggere i file di Office in questi computer, usare Office per Mac oppure Microsoft 365 Apps for enterprise. 
