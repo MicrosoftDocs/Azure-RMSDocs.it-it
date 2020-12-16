@@ -1,9 +1,12 @@
 - name: Documentazione di Azure Information Protection
   href: index.yml
 - name: Panoramica
+  expanded: true
   items:
     - name: Che cos'è Azure Information Protection?
       href: what-is-information-protection.md
+    - name: Novità di AIP
+      href: ./rms-client/unifiedlabelingclient-version-release-history.md
     - name: Requisiti per AIP
       items:
         - name: Panoramica
@@ -12,10 +15,13 @@
           href: requirements-azure-ad.md
         - name: Supporto di applicazioni per la protezione
           href: requirements-applications.md
+        - name: Tipi di file supportati
+          href: ./rms-client/clientv2-admin-guide-file-types.md
+        - name: Requisiti dello scanner locale
+          href: deploy-aip-scanner-prereqs.md
     - name: AIP è noto anche come ...
       href: aka.md
 - name: Guide introduttive
-  expanded: true
   items:
     - name: Distribuzione del client
       href: quickstart-deploy-client.md
@@ -33,10 +39,10 @@
   items:
     - name: Classificazione e protezione di AIP
       href: aip-classification-and-protection.md
-    - name: Gestione dei diritti di Azure Information Protection
-      href: what-is-azure-rms.md
-    - name: Protezione di Rights Management
+    - name: Azure Rights Management
       items:
+        - name: Panoramica
+          href: what-is-azure-rms.md
         - name: Come funziona la protezione di Rights Management
           href: how-does-it-work.md
         - name: Supporto della protezione Azure Rights Management da parte delle applicazioni
@@ -45,25 +51,47 @@
               href: applications-support.md
             - name: Applicazioni e servizi Office
               href: office-apps-services-support.md
-            - name: File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file
-              href: file-server-support.md
             - name: Altre applicazioni che supportano le API RMS
               href: api-support.md
-    - name: RMS per utenti singoli e Azure Information Protection
-      href: rms-for-individuals.md
-    - name: Azure Information Protection e AD RMS
-      items:
-        - name: Confronto tra locale e AD RMS
+        - name: RMS per utenti singoli e Azure Information Protection
+          href: rms-for-individuals.md
+        - name: Azure Information Protection e AD RMS
           href: compare-on-premise.md
+        - name: Note sulla distribuzione del client RMS
+          href: ./rms-client/client-deployment-notes.md
+    - name: Chiave del tenant di Azure Information Protection
+      href: plan-implement-tenant-key.md
+- name: Guide pratiche
+  items:
+    - name: Procedure per scenari comuni
+      href: how-to-guides.md
+    - name: Pianificazione e preparativi per il servizio
+      items:
+        - name: Guida di orientamento per la distribuzione
+          href: deployment-roadmap-classify-label-protect.md
+        - name: Configurare la protezione Bring Your Own Key (BYOK)
+          href: byok-price-restrictions.md
+        - name: Introduzione alle chiavi radice del tenant
+          href: get-started-tenant-root-keys.md
+        - name: Operazioni per la chiave del tenant
+          items:
+            - name: Panoramica
+              href: operations-tenant-key.md
+            - name: Gestione di Microsoft
+              href: operations-microsoft-managed-tenant-key.md
+            - name: Gestione del cliente
+              href: operations-customer-managed-tenant-key.md
+        - name: Preparazione di utenti e gruppi
+          href: prepare.md
         - name: Gestire le estensioni per dispositivi mobili di Active Directory
           href: active-directory-rights-manage-mobile-device.md
         - name: Migrazione da AD RMS
           items:
             - name: Panoramica
               href: migrate-from-ad-rms-to-azure-rms.md
-            - name: Preparazione
+            - name: 'Fase 1: preparazione'
               href: migrate-from-ad-rms-phase1.md
-            - name: Configurazione lato server
+            - name: 'Fase 2: configurazione lato server'
               items:
                 - name: Panoramica
                   href: migrate-from-ad-rms-phase2.md
@@ -73,44 +101,12 @@
                   href: migrate-hsmkey-to-hsmkey.md
                 - name: Da chiave del software a chiave HSM
                   href: migrate-softwarekey-to-hsmkey.md
-            - name: Configurazione lato client
+            - name: 'Fase 3: configurazione lato client'
               href: migrate-from-ad-rms-phase3.md
-            - name: Supporto della configurazione dei servizi
+            - name: 'Fase 4: configurazione di servizi di supporto'
               href: migrate-from-ad-rms-phase4.md
-            - name: Attività post-migrazione
+            - name: 'Fase 5: attività post-migrazione'
               href: migrate-from-ad-rms-phase5.md
-    - name: Criteri di Azure Information Protection
-      href: overview-policy.md
-    - name: Sicurezza
-      items:
-        - name: Baseline di sicurezza
-          href: security-baseline.md
-- name: Guide pratiche
-  items:
-    - name: Procedure per scenari comuni
-      href: how-to-guides.md
-    - name: Pianificazione e preparativi per il servizio
-      items:
-        - name: Guida di orientamento per la distribuzione
-          items:
-            - name: Panoramica
-              href: deployment-roadmap.md
-            - name: 'Guida di orientamento per la classificazione, l''assegnazione di etichette e la protezione'
-              href: deployment-roadmap-classify-label-protect.md
-            - name: Guida di orientamento solo per la protezione (client classico)
-              href: deployment-roadmap-protect-only.md
-        - name: Pianificazione e implementazione della chiave del tenant
-          items:
-            - name: Tipi di chiave supportati
-              href: plan-implement-tenant-key.md
-            - name: Configurare la protezione Bring Your Own Key (BYOK)
-              href: byok-price-restrictions.md
-            - name: Configurare la protezione Hold Your Own Key (HYOK)
-              href: configure-adrms-restrictions.md
-            - name: Introduzione alle chiavi radice del tenant
-              href: get-started-tenant-root-keys.md
-        - name: Preparazione di utenti e gruppi
-          href: prepare.md
     - name: Configurare e usare il servizio
       items:
         - name: Attivazione della protezione
@@ -135,9 +131,91 @@
           href: configure-usage-rights.md
         - name: Configurazione di utenti con privilegi avanzati per i servizi di individuazione o il ripristino dei dati
           href: configure-super-users.md
-        - name: Configurazione dei criteri di Azure Information Protection
+        - name: Distribuzione dello scanner di etichettatura unificata locale
           items:
             - name: Panoramica
+              href: deploy-aip-scanner.md
+            - name: Configurare e installare lo scanner di etichettatura unificata
+              href: deploy-aip-scanner-configure-install.md
+            - name: Eseguire lo scanner di etichettatura unificata
+              href: deploy-aip-scanner-manage.md
+        - name: Distribuzione del connettore RMS
+          items:
+            - name: Panoramica
+              href: deploy-rms-connector.md
+            - name: Installare e configurare il connettore
+              href: install-configure-rms-connector.md
+            - name: Configurazione di server
+              items:
+                - name: Panoramica
+                  href: configure-servers-rms-connector.md
+                - name: Impostazioni del Registro di sistema
+                  href: rms-connector-registry-settings.md
+            - name: Monitorare il connettore
+              href: monitor-rms-connector.md
+        - name: Verifica del servizio Azure Rights Management
+          href: verify.md
+        - name: Uso dei report di Azure Information Protection
+          href: reports-aip.md
+        - name: Consentire agli utenti di proteggere i file
+          href: help-users.md
+        - name: Registrazione e analisi dell'utilizzo
+          href: log-analyze-usage.md
+        - name: Gestire i dati personali per Azure Information Protection
+          href: manage-personal-data.md
+        - name: Rimozione delle autorizzazioni e disattivazione
+          href: decommission-deactivate.md
+        - name: Amministrazione con PowerShell
+          items:
+            - name: Panoramica
+              href: administer-powershell.md
+            - name: Installazione del modulo PowerShell AIPService
+              href: install-powershell.md
+    - name: Distribuire e usare il client
+      items:
+        - name: Panoramica
+          href: ./rms-client/use-client.md
+        - name: Guida dell'amministratore del client di etichettatura unificata
+          items:
+            - name: Panoramica
+              href: ./rms-client/clientv2-admin-guide.md
+            - name: Installare il client per gli utenti
+              href: ./rms-client/clientv2-admin-guide-install.md
+            - name: Personalizzazioni
+              href: ./rms-client/clientv2-admin-guide-customizations.md
+            - name: File del client e registrazione dell'utilizzo
+              href: ./rms-client/clientv2-admin-guide-files-and-logging.md
+            - name: Comandi di PowerShell
+              href: ./rms-client/clientv2-admin-guide-powershell.md
+        - name: Manuale dell'utente per il client di etichettatura unificata
+          items:
+            - name: Panoramica
+              href: ./rms-client/clientv2-user-guide.md
+            - name: Scaricare e installare il client
+              href: ./rms-client/install-unifiedlabelingclient-app.md
+            - name: Classificare un file o un messaggio di posta elettronica
+              href: ./rms-client/clientv2-classify.md
+            - name: Classificare e proteggere un file o un messaggio di posta elettronica
+              href: ./rms-client/clientv2-classify-protect.md
+            - name: Aprire i file che sono stati protetti
+              href: ./rms-client/clientv2-view-use-files.md
+            - name: Rimuovere le etichette e la protezione
+              href: ./rms-client/clientv2-remove-label-protection.md
+        - name: App Azure Information Protection per iOS e Android
+          href: ./rms-client/mobile-app-faq.md
+        - name: Lettori PDF protetti
+          href: ./rms-client/protected-pdf-readers.md
+    - name: Procedure per scenari client classici
+      items:
+        - name: Roadmap solo per la protezione
+          href: deployment-roadmap-protect-only.md
+        - name: Configurare la protezione Hold Your Own Key (HYOK)
+          href: configure-adrms-restrictions.md
+        - name: Configurazione dei criteri di Azure Information Protection
+          items:
+            - name: Informazioni sui criteri di AIP
+              href: overview-policy.md
+            - name: Panoramica della configurazione dei criteri
               href: configure-policy.md
             - name: Criterio predefinito
               href: configure-policy-default.md
@@ -177,16 +255,6 @@
           href: secure-collaboration-documents.md
         - name: Configurazione delle regole del flusso di posta per le etichette di Azure Information Protection
           href: configure-exo-rules.md
-        - name: Scanner di etichettatura unificata di Azure Information Protection
-          items:
-            - name: Panoramica
-              href: deploy-aip-scanner.md
-            - name: Prerequisiti dello scanner di etichettatura unificata
-              href: deploy-aip-scanner-prereqs.md
-            - name: Configurare e installare lo scanner di etichettatura unificata
-              href: deploy-aip-scanner-configure-install.md
-            - name: Eseguire lo scanner di etichettatura unificata
-              href: deploy-aip-scanner-manage.md
         - name: Scanner classico di Azure Information Protection
           items:
             - name: Panoramica
@@ -197,137 +265,55 @@
               href: deploy-aip-scanner-configure-install-classic.md
             - name: Eseguire lo scanner classico
               href: deploy-aip-scanner-manage-classic.md
-        - name: Creazione di report per Azure Information Protection
-          href: reports-aip.md
-        - name: Distribuzione del connettore RMS
+            - name: Scanner di Azure Information Protection (versioni precedenti)
+              href: deploy-aip-scanner-previousversions.md
+        - name: Client classico di Azure Information Protection
           items:
             - name: Panoramica
-              href: deploy-rms-connector.md
-            - name: Installare e configurare il connettore
-              href: install-configure-rms-connector.md
-            - name: Configurazione di server
+              href: ./rms-client/aip-client.md
+            - name: Cronologia delle versioni
+              href: ./rms-client/client-version-release-history.md
+            - name: Guida dell'amministratore
               items:
                 - name: Panoramica
-                  href: configure-servers-rms-connector.md
-                - name: Impostazioni del Registro di sistema
-                  href: rms-connector-registry-settings.md
-            - name: Monitorare il connettore
-              href: monitor-rms-connector.md
-        - name: Verifica del servizio Azure Rights Management
-          href: verify.md
-        - name: Consentire agli utenti di proteggere i file
-          href: help-users.md
-        - name: Registrazione e analisi dell'utilizzo
-          href: log-analyze-usage.md
-        - name: Operazioni per la chiave del tenant
-          items:
-            - name: Panoramica
-              href: operations-tenant-key.md
-            - name: Gestione di Microsoft
-              href: operations-microsoft-managed-tenant-key.md
-            - name: Gestione del cliente
-              href: operations-customer-managed-tenant-key.md
-        - name: Gestire i dati personali per Azure Information Protection
-          href: manage-personal-data.md
-        - name: Rimozione delle autorizzazioni e disattivazione
-          href: decommission-deactivate.md
-        - name: Amministrazione con PowerShell
-          items:
-            - name: Panoramica
-              href: administer-powershell.md
-            - name: Installazione del modulo PowerShell AIPService
-              href: install-powershell.md
-    - name: Distribuire e usare il client
-      items:
-        - name: Soluzioni di distribuzione client
-          items:
-            - name: Panoramica
-              href: ./rms-client/use-client.md
-            - name: Client per l'etichettatura unificata di Azure Information Protection
+                  href: ./rms-client/client-admin-guide.md
+                - name: Installare il client per gli utenti
+                  href: ./rms-client/client-admin-guide-install.md
+                - name: Personalizzazioni
+                  href: ./rms-client/client-admin-guide-customizations.md
+                - name: File del client e registrazione dell'utilizzo
+                  href: ./rms-client/client-admin-guide-files-and-logging.md
+                - name: Rilevamento dei documenti
+                  href: ./rms-client/client-admin-guide-document-tracking.md
+                - name: Tipi di file supportati
+                  href: ./rms-client/client-admin-guide-file-types.md
+                - name: Comandi di PowerShell
+                  href: ./rms-client/client-admin-guide-powershell.md
+            - name: Manuale dell'utente
               items:
                 - name: Panoramica
-                  href: ./rms-client/aip-clientv2.md
-                - name: Cronologia delle versioni
-                  href: ./rms-client/unifiedlabelingclient-version-release-history.md
-                - name: Guida dell'amministratore
-                  items:
-                    - name: Panoramica
-                      href: ./rms-client/clientv2-admin-guide.md
-                    - name: Installare il client per gli utenti
-                      href: ./rms-client/clientv2-admin-guide-install.md
-                    - name: Personalizzazioni
-                      href: ./rms-client/clientv2-admin-guide-customizations.md
-                    - name: File del client e registrazione dell'utilizzo
-                      href: ./rms-client/clientv2-admin-guide-files-and-logging.md
-                    - name: Tipi di file supportati
-                      href: ./rms-client/clientv2-admin-guide-file-types.md
-                    - name: Comandi di PowerShell
-                      href: ./rms-client/clientv2-admin-guide-powershell.md
-                - name: Manuale dell'utente
-                  items:
-                    - name: Panoramica
-                      href: ./rms-client/clientv2-user-guide.md
-                    - name: Scaricare e installare il client
-                      href: ./rms-client/install-unifiedlabelingclient-app.md
-                    - name: Classificare un file o un messaggio di posta elettronica
-                      href: ./rms-client/clientv2-classify.md
-                    - name: Classificare e proteggere un file o un messaggio di posta elettronica
-                      href: ./rms-client/clientv2-classify-protect.md
-                    - name: Aprire i file che sono stati protetti
-                      href: ./rms-client/clientv2-view-use-files.md
-                    - name: Rimuovere le etichette e la protezione
-                      href: ./rms-client/clientv2-remove-label-protection.md
-            - name: Client Azure Information Protection (classico)
-              items:
-                - name: Panoramica
-                  href: ./rms-client/aip-client.md
-                - name: Cronologia delle versioni
-                  href: ./rms-client/client-version-release-history.md
-                - name: Guida dell'amministratore
-                  items:
-                    - name: Panoramica
-                      href: ./rms-client/client-admin-guide.md
-                    - name: Installare il client per gli utenti
-                      href: ./rms-client/client-admin-guide-install.md
-                    - name: Personalizzazioni
-                      href: ./rms-client/client-admin-guide-customizations.md
-                    - name: File del client e registrazione dell'utilizzo
-                      href: ./rms-client/client-admin-guide-files-and-logging.md
-                    - name: Rilevamento dei documenti
-                      href: ./rms-client/client-admin-guide-document-tracking.md
-                    - name: Tipi di file supportati
-                      href: ./rms-client/client-admin-guide-file-types.md
-                    - name: Comandi di PowerShell
-                      href: ./rms-client/client-admin-guide-powershell.md
-                - name: Manuale dell'utente
-                  items:
-                    - name: Panoramica
-                      href: ./rms-client/client-user-guide.md
-                    - name: Scaricare e installare il client
-                      href: ./rms-client/install-client-app.md
-                    - name: Classificare un file o un messaggio di posta elettronica
-                      href: ./rms-client/client-classify.md
-                    - name: Classificare e proteggere un file o un messaggio di posta elettronica
-                      href: ./rms-client/client-classify-protect.md
-                    - name: Tenere traccia e revocare i documenti
-                      href: ./rms-client/client-track-revoke.md
-                    - name: Aprire i file che sono stati protetti
-                      href: ./rms-client/client-view-use-files.md
-                    - name: Rimuovere le etichette e la protezione
-                      href: ./rms-client/client-remove-label-protection.md
-                    - name: Modalità di sola protezione
-                      href: ./rms-client/client-protection-only-mode.md
-                    - name: Attività eseguite in precedenza con l'applicazione RMS sharing
-                      href: ./rms-client/upgrade-client-app.md
-        - name: App per dispositivi mobili Azure Information Protection per iOS e Android
-          href: ./rms-client/mobile-app-faq.md
-        - name: Lettori PDF protetti
-          href: ./rms-client/protected-pdf-readers.md
-        - name: Note sulla distribuzione del client RMS
-          href: ./rms-client/client-deployment-notes.md
+                  href: ./rms-client/client-user-guide.md
+                - name: Scaricare e installare il client
+                  href: ./rms-client/install-client-app.md
+                - name: Classificare un file o un messaggio di posta elettronica
+                  href: ./rms-client/client-classify.md
+                - name: Classificare e proteggere un file o un messaggio di posta elettronica
+                  href: ./rms-client/client-classify-protect.md
+                - name: Tenere traccia e revocare i documenti
+                  href: ./rms-client/client-track-revoke.md
+                - name: Aprire i file che sono stati protetti
+                  href: ./rms-client/client-view-use-files.md
+                - name: Rimuovere le etichette e la protezione
+                  href: ./rms-client/client-remove-label-protection.md
+                - name: Modalità di sola protezione
+                  href: ./rms-client/client-protection-only-mode.md
+                - name: Attività eseguite in precedenza con l'applicazione RMS sharing
+                  href: ./rms-client/upgrade-client-app.md
         - name: Protezione di Azure RMS con l'infrastruttura di classificazione file per Windows Server
           items:
-            - name: Panoramica
+            - name: File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file
+              href: file-server-support.md
+            - name: Configurazione dell'infrastruttura di classificazione file
               href: ./rms-client/configure-fci.md
             - name: Script PowerShell
               href: ./rms-client/fci-script.md
@@ -481,6 +467,8 @@
           href: faqs-infoprotect.md
         - name: Domande frequenti - Protezione dei dati
           href: faqs-rms.md
+        - name: Domane frequenti - Solo client classico
+          href: faqs-classic.md
     - name: Problemi noti
       href: known-issues.md
     - name: Informazioni e supporto
