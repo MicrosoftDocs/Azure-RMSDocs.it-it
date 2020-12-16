@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/23/2020
+ms.date: 12/14/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2b4f7842ddc33ae170d756fa132883ac1fe8f07a
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: cbaeca78592e0f5626b183d521644fea6d77084f
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385642"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583456"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -36,7 +36,7 @@ Usare le informazioni seguenti per le configurazioni avanzate necessarie per sce
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Security & Compliance Center PowerShell
 
-Quando si usa Office 365 Security & Compliance Center PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. ad esempio:
+Quando si usa Office 365 Security & Compliance Center PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un'**impostazione avanzata di criteri etichetta** _.
 - L'impostazione per specificare un colore dell'etichetta è un' _*_impostazione avanzata etichetta_*_.
@@ -130,12 +130,14 @@ Usando uno dei centri di amministrazione in cui si gestiscono le etichette di ri
 
 Quando per un utente sono configurati più criteri di etichetta, ognuno con impostazioni di criteri potenzialmente diverse, l'ultima impostazione dei criteri viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione. Per ulteriori informazioni, vedere [priorità dei criteri delle etichette (ordine degli ordini)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
-Le impostazioni avanzate dei criteri di etichetta vengono applicate usando la stessa logica, usando l'ultima impostazione dei criteri. 
+Le impostazioni avanzate dei criteri di etichetta vengono applicate usando la stessa logica, usando l'ultima impostazione dei criteri.
 
 > [!NOTE]
-> Esiste attualmente un'eccezione per l'impostazione dei criteri di etichetta avanzata [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) , che consente di impostare un'etichetta predefinita diversa per Outlook.
+> Nella versione corrente di GA, esiste un'eccezione per l'impostazione dei criteri Advanced label [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) , che consente di impostare un'etichetta predefinita diversa per Outlook.
 > 
-> Se si verificano conflitti per l'impostazione OutlookDefaultLabel, la configurazione viene ricavata dalla *prima* impostazione dei criteri, in base all'ordine dei criteri nell'interfaccia di amministrazione.
+> Se si verificano conflitti per l'impostazione [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) , la configurazione viene ricavata dalla prima impostazione dei criteri, in base all'ordine dei criteri nell'interfaccia di amministrazione. 
+>
+> Questa eccezione è stata rimossa come parte dell'anteprima pubblica di [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) .
 
 #### <a name="available-advanced-settings-for-label-policies"></a>Impostazioni avanzate disponibili per i criteri delle etichette
 
@@ -153,6 +155,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |EnableCustomPermissionsForCustomProtectedFiles|[Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+| EnableOutlookDistributionListExpansion | [Implementare i messaggi di blocco per i destinatari all'interno di una lista di distribuzione di Outlook](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |HideBarByDefault|[Visualizza la barra di Information Protection nelle app Office](#display-the-information-protection-bar-in-office-apps)|
 |JustificationTextForUserText | [Personalizzare i testi della richiesta di giustificazione per le etichette modificate](#customize-justification-prompt-texts-for-modified-labels) |
 |LogMatchedContent|[Invia corrispondenze del tipo di informazioni a Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
@@ -160,6 +163,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |OutlookBlockUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookCollaborationRule| [Personalizzare i messaggi popup di Outlook](#customize-outlook-popup-messages)|
 |OutlookDefaultLabel|[Impostare un'etichetta predefinita diversa per Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookGetEmailAddressesTimeOutMSProperty | [Modificare il timeout per l'espansione di una lista di distribuzione in Outlook quando si implementano messaggi di blocco per i destinatari nelle liste di distribuzione](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |OutlookJustifyTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Abilitare la classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)|
@@ -170,8 +174,10 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |OutlookWarnUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PFileSupportedExtensions|[Modificare i tipi di file da proteggere](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+| PowerPointRemoveAllShapesByShapeName|[Rimuovere tutte le forme di un nome di forma specifico dalle intestazioni e dai piè di pagina, anziché rimuovere forme per testo all'interno della forma](#remove-all-shapes-of-a-specific-shape-name) |
+|PowerPointShapeNameToRemove |[Evitare di rimuovere forme da PowerPoint che contengono testo specificato e non sono intestazioni/piè di pagina](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) |
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
-|RemoveExternalMarkingFromCustomLayouts | [Rimuovere il contrassegno di contenuto esterno da layout personalizzati in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
+|RemoveExternalMarkingFromCustomLayouts|[Rimuovere in modo esplicito i contrassegni di contenuto esterno dall'interno dei layout personalizzati di PowerPoint](#extend-external-marking-removal-to-custom-layouts) |
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -179,6 +185,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |SharepointWebRequestTimeout| [Configurare i timeout di SharePoint](#configure-sharepoint-timeouts)|
 |SharepointFileWebRequestTimeout |[Configurare i timeout di SharePoint](#configure-sharepoint-timeouts)|
 |UseCopyAndPreserveNTFSOwner | [Mantieni proprietari NTFS durante l'assegnazione di etichette](#preserve-ntfs-owners-during-labeling-public-preview)
+| | |
 
 Esempio di comando di PowerShell per verificare le impostazioni dei criteri di etichetta attive per un criterio etichetta denominato "globale":
 
@@ -409,7 +416,7 @@ Per usare questa proprietà avanzata, è necessario trovare il nome della forma 
 
 Evitare di rimuovere le forme che contengono il testo che si desidera ignorare, definendo il nome di tutte le forme da rimuovere ed evitando di controllare il testo in tutte le forme, ovvero un processo che richiede un utilizzo intensivo delle risorse.
 
-Se non si specificano le forme parola in questa impostazione aggiuntiva di proprietà avanzata e Word viene incluso nel valore della chiave **RemoveExternalContentMarkingInApp** , verranno controllate tutte le forme per il testo specificato nel valore **ExternalContentMarkingToRemove** . 
+Se non si specificano le forme parola in questa impostazione aggiuntiva di proprietà avanzata e Word viene incluso nel valore della chiave **RemoveExternalContentMarkingInApp** , verranno controllate tutte le forme per il testo specificato nel valore [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) . 
 
 Per trovare il nome della forma che si sta utilizzando e si desidera escludere:
 
@@ -459,7 +466,7 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 ```
 
-Sarà necessaria almeno un'altra impostazione client avanzata, **ExternalContentMarkingToRemove**, per specificare il contenuto dell'intestazione o del piè di pagina e il modo in cui rimuoverlo o sostituirlo.
+Sarà necessaria almeno un'altra impostazione client avanzata, [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove), per specificare il contenuto dell'intestazione o del piè di pagina e il modo in cui rimuoverlo o sostituirlo.
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Come configurare ExternalContentMarkingToRemove
 
@@ -513,19 +520,66 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
 
-Le intestazioni e i piè di pagina in PowerPoint sono implementati come forme. 
+Le intestazioni e i piè di pagina in PowerPoint sono implementati come forme. Per i tipi di forma **msoTextBox**, **msoTextEffect**, **msoPlaceholder** e **msoAutoShape** , le impostazioni avanzate seguenti forniscono ottimizzazioni aggiuntive:
 
-Per evitare di rimuovere le forme che contengono il testo specificato ma che *non* sono intestazioni o piè di pagina, usare un'impostazione client avanzata aggiuntiva denominata **PowerPointShapeNameToRemove**. È consigliabile usare questa impostazione anche per evitare di controllare il testo in tutte le forme, essendo un processo a elevato utilizzo di risorse.
+- [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)
+- [RemoveExternalMarkingFromCustomLayouts](#extend-external-marking-removal-to-custom-layouts)
 
-- Se non si specifica questa impostazione client avanzata aggiuntiva e PowerPoint è incluso nel valore della chiave **RemoveExternalContentMarkingInApp**, il testo specificato nel valore **ExternalContentMarkingToRemove** verrà ricercato in tutte le forme. 
+Inoltre, [PowerPointRemoveAllShapesByShapeName](#remove-all-shapes-of-a-specific-shape-name) può rimuovere qualsiasi tipo di forma, in base al nome della forma.
 
-- Se si specifica questo valore, verranno rimosse solo le forme che soddisfano i criteri del nome della forma e il testo che corrisponde alla stringa fornita con **ExternalContentMarkingToRemove** .
+Per ulteriori informazioni, vedere [trovare il nome della forma che si sta utilizzando come intestazione o piè di](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer)pagina.
 
-Inoltre, se sono stati configurati layout personalizzati in PowerPoint, il comportamento predefinito è che le forme presenti all'interno di layout personalizzati vengono ignorate. Per rimuovere in modo esplicito i contrassegni di contenuto esterno dall'interno dei layout personalizzati, impostare la proprietà avanzata **RemoveExternalMarkingFromCustomLayouts** su **true.**
+##### <a name="avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers"></a>Evitare di rimuovere forme da PowerPoint che contengono testo specificato e non sono intestazioni/piè di pagina
+
+Per evitare di rimuovere le forme che contengono il testo specificato, ma non le intestazioni o i piè di pagina, usare un'impostazione client avanzata aggiuntiva denominata **PowerPointShapeNameToRemove.** 
+
+È consigliabile usare questa impostazione anche per evitare di controllare il testo in tutte le forme, essendo un processo a elevato utilizzo di risorse. 
+
+- Se non si specifica questa impostazione client avanzata aggiuntiva e PowerPoint è incluso nel valore della chiave [RemoveExternalContentMarkingInApp](#remove-headers-and-footers-from-other-labeling-solutions), il testo specificato nel valore [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) verrà ricercato in tutte le forme. 
+
+- Se si specifica questo valore, verranno rimosse solo le forme che soddisfano i criteri del nome della forma e il testo che corrisponde alla stringa fornita con [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) .
+
+Ad esempio:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```
+
+##### <a name="extend-external-marking-removal-to-custom-layouts"></a>Estendi la rimozione del contrassegno esterno ai layout personalizzati
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
+
+Per impostazione predefinita, la logica usata per rimuovere i contrassegni di contenuto esterni ignora i layout personalizzati configurati in PowerPoint. Per estendere questa logica ai layout personalizzati, impostare la proprietà avanzata **RemoveExternalMarkingFromCustomLayouts** su **true**.
+
+- Chiave: **RemoveExternalMarkingFromCustomLayouts**
+
+- Valore: **true**
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
+```
+
+##### <a name="remove-all-shapes-of-a-specific-shape-name"></a>Rimuovere tutte le forme di un nome di forma specifico
+
+Se si usano layout personalizzati di PowerPoint e si desidera rimuovere tutte le forme di un nome di forma specifico dalle intestazioni e dai piè di pagina, usare l'impostazione avanzata **PowerPointRemoveAllShapesByShapeName** con il nome della forma che si vuole rimuovere.
+
+Se si utilizza l'impostazione **PowerPointRemoveAllShapesByShapeName** , il testo all'interno delle forme viene ignorato e viene utilizzato il nome della forma per identificare le forme che si desidera rimuovere.
+
+Ad esempio:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
+```
 
 > [!NOTE]
-> I tipi di forma di PowerPoint supportati per le impostazioni client avanzate descritte in questa sezione includono: **msoTextBox**, **msoTextEffect** e **msoPlaceholder**
+> Per definire l'impostazione **PowerPointRemoveAllShapesByShapeName** , è necessario attualmente definire anche l'impostazione [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) , anche se non è necessaria la funzionalità fornita da **ExternalContentMarkingToRemove**.
 >
+> Se si desidera definire **PowerPointRemoveAllShapesByShapeName**, è consigliabile definire sia [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) che [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) per evitare di rimuovere più forme di quelle desiderate.
+>
+
+
 ##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>Trovare il nome della forma che si sta utilizzando come intestazione o piè di pagina
 
 1. In PowerPoint visualizzare il riquadro **Selezione**: scheda **Formato** > gruppo **Disponi** > **Riquadro di selezione**.
@@ -560,21 +614,6 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 ```
 
-##### <a name="remove-external-content-marking-from-custom-layouts-in-powerpoint"></a>Rimuovere il contrassegno di contenuto esterno da layout personalizzati in PowerPoint
-
-Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
-
-Per impostazione predefinita, la logica usata per rimuovere i contrassegni di contenuto esterni ignora i layout personalizzati configurati in PowerPoint. Per estendere questa logica ai layout personalizzati, impostare la proprietà avanzata **RemoveExternalMarkingFromCustomLayouts** su **true**.
-
-- Chiave: **RemoveExternalMarkingFromCustomLayouts**
-
-- Valore: **true**
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
-```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Disabilitare le autorizzazioni personalizzate in Esplora file
 
@@ -743,6 +782,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedColl
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 ```
 
+> [!NOTE]
+> Per assicurarsi che i messaggi di blocco vengano visualizzati in base alle esigenze, anche per un destinatario che si trova all'interno di una lista di distribuzione di Outlook, assicurarsi di aggiungere l'impostazione avanzata [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) .
+>
+
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
 
 Per le etichette specificate con questi messaggi popup, è possibile esentare i nomi di dominio specifici in modo che gli utenti non visualizzino i messaggi per i destinatari che hanno il nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
@@ -782,6 +825,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains=
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
+
+> [!NOTE]
+> Per assicurarsi che i messaggi di blocco vengano visualizzati in base alle esigenze, anche per un destinatario che si trova all'interno di una lista di distribuzione di Outlook, assicurarsi di aggiungere l'impostazione avanzata [EnableOutlookDistributionListExpansion](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) .
+>
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per i messaggi di posta elettronica o gli allegati senza etichetta:
 
@@ -876,6 +923,28 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```
+
+### <a name="to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview"></a>Per implementare i messaggi di blocco per i destinatari all'interno di una lista di distribuzione di Outlook (anteprima pubblica)
+
+Per impostazione predefinita, le impostazioni avanzate [OutlookBlockTrustedDomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) e [OutlookBlockUntrustedCollaborationLabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) si applicano solo ai messaggi di posta elettronica all'esterno di una lista di distribuzione. 
+
+Per estendere il supporto per questi messaggi di blocco ai destinatari all'interno delle liste di distribuzione di Outlook, impostare l'impostazione avanzata **EnableOutlookDistributionListExpansion** su **true**:
+
+- Chiave: **EnableOutlookDistributionListExpansion**
+- Valore: **true**
+
+Questa proprietà avanzata consente a Outlook di espandere la lista di distribuzione allo scopo di garantire che venga visualizzato un messaggio di blocco in base alle esigenze. Il timeout predefinito per l'espansione della lista di distribuzione è di **2000** secondi.
+
+Per modificare questo timeout, creare l'impostazione avanzata seguente per i criteri selezionati:
+
+- Chiave: **OutlookGetEmailAddressesTimeOutMSProperty**
+- Valore: *Integer, in secondi*
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableOutlookDistributionListExpansion="true"} @{OutlookGetEmailAddressesTimeOutMSProperty="3000"}
 ```
 
 ## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Disabilitare l'invio di dati di controllo a Azure Information Protection Analytics
@@ -1094,7 +1163,7 @@ Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced
 
 Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
-ad esempio:
+Ad esempio:
 
 - È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
@@ -1206,7 +1275,8 @@ Quando si configura questa impostazione, viene modificato il comportamento prede
 Per Word, Excel e PowerPoint, la classificazione automatica viene eseguita in modo continuo in background.
 
 Il comportamento rimane invariato per Outlook.
-Quando il client di assegnazione di etichette unificato di Azure Information Protection controlla periodicamente i documenti per le regole di condizione specificate, questo comportamento Abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in SharePoint. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite.
+
+Quando il client di assegnazione di etichette unificato di Azure Information Protection controlla periodicamente i documenti per le regole di condizione specificate, questo comportamento Abilita la classificazione automatica e consigliata e la protezione per i documenti di Office archiviati in SharePoint o OneDrive, purché sia attivato il salvataggio automatico. Anche i file di grandi dimensioni sono stati salvati più rapidamente perché le regole di condizione sono già state eseguite.
 
 Le regole di condizione non vengono eseguite in tempo reale durante la digitazione. Vengono eseguite periodicamente come attività in background se il documento viene modificato.
 
@@ -1345,7 +1415,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Ignorare i file di sola lettura o archiviati**
 
-Per usare una logica o, eseguire più volte la stessa proprietà. ad esempio:
+Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1395,7 +1465,7 @@ Ad esempio, in qualità di amministratore, è consigliabile ricordare agli utent
 
 Per modificare l' **altro** testo predefinito visualizzato, usare la proprietà avanzata **JustificationTextForUserText** con il cmdlet [set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) . Impostare il valore sul testo che si desidera utilizzare.
 
-ad esempio:
+Ad esempio:
 
 ``` PowerShell
 
@@ -1487,9 +1557,9 @@ I tipi di nodo supportati includono:
 | **Or**    |Esegue *o* in tutti i nodi figlio       |
 | **Non**   | *Non* viene eseguito per il proprio figlio      |
 | **Ad eccezione**    | Restituisce *not* per il proprio elemento figlio, facendo in modo che si comporti come **tutti**        |
-| **SentTo**, seguito da **domini: listOfDomains**    |Verifica uno dei seguenti elementi: <br />-Se l'elemento padre è **except**, controlla se **tutti** i destinatari si trovano in uno dei domini<br />-Se l'elemento padre è qualsiasi altra **eccezione**, **verifica se uno dei destinatari** si trova in uno dei domini.   |
-| **EMailLabel**, seguito da Label | I tipi validi sono:  <br />: ID etichetta <br />-null, se non con etichetta             |
-| **AttachmentLabel**, seguito da **Label** e **supportedExtensions**    | I tipi validi sono:  <br /><br />**true**: <br />-Se l'elemento padre è **except**, controlla se **tutti** gli allegati con un'estensione supportata esistono nell'etichetta<br />-Se l'elemento padre è qualsiasi altra **eccezione,** verifica se **uno degli allegati** con un'estensione supportata esiste nell'etichetta <br />-Se non è etichettato e **Label = null** <br /><br /> **false**: per tutti gli altri casi 
+| **SentTo**, seguito da **domini: listOfDomains**    |Verifica uno dei seguenti elementi: <br>-Se l'elemento padre è **except**, controlla se **tutti** i destinatari si trovano in uno dei domini<br>-Se l'elemento padre è qualsiasi altra **eccezione**, **verifica se uno dei destinatari** si trova in uno dei domini.   |
+| **EMailLabel**, seguito da Label | I tipi validi sono:  <br>: ID etichetta <br>-null, se non con etichetta             |
+| **AttachmentLabel**, seguito da **Label** ed **estensioni** supportate   | I tipi validi sono:  <br><br>**true** <br>-Se l'elemento padre è **except**, controlla se **tutti** gli allegati con un'estensione supportata esistono nell'etichetta<br>-Se l'elemento padre è qualsiasi altra **eccezione**, verifica se **uno degli allegati** con un'estensione supportata esiste nell'etichetta <br>-Se non è etichettato e **Label = null** <br><br> **false:** Per tutti gli altri casi <br><br>**Nota**: se la proprietà **Extensions** è vuota o mancante, nella regola vengono inclusi tutti i tipi di file supportati (estensioni).
 | | |
 
 #### <a name="rule-action-syntax"></a>Sintassi azione regola
@@ -1540,7 +1610,9 @@ Il codice **JSON** seguente bloccherà i messaggi di posta elettronica o gli all
 
 In questo esempio, **89a453df-5df4-4976-8191-259d0cf9560a** è l'ID dell'etichetta **interna** e i domini interni includono **contoso.com** e **Microsoft.com**.
 
-```powershell
+Poiché non è specificata alcuna estensione specifica, vengono inclusi tutti i tipi di file supportati.
+
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1590,7 +1662,7 @@ Il codice **JSON** seguente blocca l'invio di messaggi di posta elettronica o al
 
 Nell'esempio seguente, l'elenco degli allegati che richiede l'assegnazione di etichette è: **. doc,. docm,. docx,. dot,. dotm,. dotx, potm, potx, PPS, ppsm, PPSX, PPT, pptm, pptx, VDW, VSD, vsdm, vsdx, VSS, vssm,. VST,. vstm,. vssx,. vstx,. xls,. xlsb,. xlt,. xlsm,. xlsx,. xltm,. xltx**
 
-```powershell
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1674,7 +1746,9 @@ Nell'esempio seguente Outlook visualizza un messaggio che avvisa l'utente che st
 
 Questo tipo di messaggio di avviso viene tecnicamente considerato una giustificazione, in quanto l'utente deve **selezionare Accetto**.
 
-``` powershell
+Poiché non è specificata alcuna estensione specifica, vengono inclusi tutti i tipi di file supportati.
+
+``` PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1729,11 +1803,11 @@ Questo tipo di messaggio di avviso viene tecnicamente considerato una giustifica
 
 Il **codice JSON** seguente fa in modo che Outlook avvisi l'utente quando invia un messaggio di posta elettronica interno senza etichetta, con un allegato con un'etichetta specifica. 
 
-In questo esempio, **bcbef25a-c4db-446b-9496-1b558d9edd0e** è l'ID dell'etichetta dell'allegato.
+In questo esempio, **bcbef25a-c4db-446b-9496-1b558d9edd0e** è l'ID dell'etichetta dell'allegato e la regola si applica ai file con estensione docx, xlsx e PPTX.
 
 Per impostazione predefinita, i messaggi di posta elettronica con allegati con etichetta non ricevono automaticamente la stessa etichetta.
 
-```powershell
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1766,6 +1840,8 @@ Per impostazione predefinita, i messaggi di posta elettronica con allegati con e
 #### <a name="example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option"></a>Esempio 5: richiedere una giustificazione, con due opzioni predefinite e un'opzione aggiuntiva per il testo libero
 
 Il codice **JSON** seguente causa la richiesta da parte di Outlook all'utente di una giustificazione per l'azione. Il testo della giustificazione include due opzioni predefinite, oltre a una terza opzione di testo libero.
+
+Poiché non è specificata alcuna estensione specifica, vengono inclusi tutti i tipi di file supportati.
 
 ```PowerShell
 {   
@@ -1843,7 +1919,7 @@ Questo valore è definito nella classe **HttpRuntimeSection** della `ASP.NET` co
 
 1. Eseguire il backup della configurazione del **web.config** . 
 
-1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. ad esempio:
+1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. Ad esempio:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />

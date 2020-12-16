@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: c02e7195d9edf93401b601e4d7ca243e6a14b702
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2e82b7c4cd99b5e880cc59db77a5a844d0e28030
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383821"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583609"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Details Your Own Key (HYOK) per Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "97383821"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [crittografia a chiave doppia](plan-implement-tenant-key.md#double-key-encryption-dke). *
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Le configurazioni HYOK (Holding your own key) consentono ai clienti di AIP con il client classico di proteggere il contenuto altamente sensibile mantenendo al tempo stesso il controllo completo della chiave. HYOK usa una chiave aggiuntiva, inclusa nel cliente, archiviata in locale per contenuti estremamente sensibili, insieme alla protezione predefinita basata sul cloud usata per altro contenuto. 
 
@@ -157,7 +157,7 @@ Una distribuzione AD RMS deve soddisfare i requisiti seguenti per fornire la pro
 |**Configurazione di AD RMS**     |Il sistema di AD RMS deve essere configurato in modi specifici per supportare HYOK. Per ulteriori informazioni, vedere di [seguito](#ad-rms-configuration-requirements).          |
 |**Sincronizzazione delle directory**     |La sincronizzazione della directory deve essere configurata tra la Active Directory locale e la Azure Active Directory. </br></br>Gli utenti che utilizzeranno le etichette di protezione HYOK devono essere configurati per l'accesso Single Sign-on.         |
 |**Configurazione per i trust definiti in modo esplicito**     |Se si condivide il contenuto protetto con HYOK con altri utenti esterni all'organizzazione, è necessario configurare AD RMS per i trust definiti in modo esplicito in una relazione punto a punto diretta con altre organizzazioni. </br></br>A tale scopo, utilizzare domini utente trusted (TUD) o trust federativi creati utilizzando Active Directory Federation Services (AD FS).         |
-|**Microsoft Office versione supportata**     | Gli utenti che proteggono o utilizzano contenuti protetti da HYOK devono disporre di: </br></br>-Una versione di Office che supporta Information Rights Management (IRM) </br>-Microsoft Office Professional Plus versione 2013 o successiva con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. </br>-Per l'edizione basata su Office 2016 Microsoft Installer (MSI), è necessario disporre dell' [aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Nota**: Office 2010 e Office 2007 non sono supportati.        |
+|**Microsoft Office versione supportata**     | Gli utenti che proteggono o utilizzano contenuti protetti da HYOK devono disporre di: </br></br>-Una versione di Office che supporta Information Rights Management (IRM) </br>-Microsoft Office Professional Plus versione 2013 o successiva con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. </br>-Per l'edizione basata su Office 2016 Microsoft Installer (MSI), è necessario disporre dell' [aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Nota**: Office 2010 e Office 2007 non sono supportati.  Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).      |
 
 > [!IMPORTANT]
 > Per soddisfare la garanzia elevata offerta dalla protezione HYOK, è consigliabile:
@@ -234,4 +234,4 @@ Per esempio: **https://rmscluster.contoso.com**
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Al termine della configurazione del sistema per il supporto di HYOK, continuare con la configurazione delle etichette per la protezione HYOK. Per ulteriori informazioni, vedere [come configurare un'etichetta per la protezione Rights Management](configure-policy-protection.md).
+Al termine della configurazione del sistema per il supporto di HYOK, continuare con la configurazione delle etichette per la protezione HYOK. Per altre informazioni, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md).

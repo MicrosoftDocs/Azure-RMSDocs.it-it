@@ -12,12 +12,12 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca4dfed92aafb690da28e5164496b924c9c3fe7e
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2da5d348f497a74e88c0bf11da023be6e3cb0152
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383602"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583541"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione per i client
 
@@ -26,14 +26,17 @@ ms.locfileid: "97383602"
 >***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-I computer che eseguono Office 2010 richiedono che il client di Azure Information Protection esegua l'autenticazione al servizio di Azure Information Protection.
+Il client AIP Unified Labeling è consigliato per tutti i computer Windows, perché installa un componente aggiuntivo di Office che consente agli utenti di etichettare e proteggere facilmente i documenti direttamente dalla barra multifunzione di Office. 
 
-Il client AIP Unified Labeling è consigliato per tutti i computer Windows, perché installano un componente aggiuntivo di Office che consente agli utenti di etichettare e proteggere facilmente i documenti direttamente dalla barra multifunzione di Office. Il client offre anche l'assegnazione di etichette e la protezione per i tipi di file che non sono supportati dal servizio di protezione incorporato (Azure Rights Management), nonché da un visualizzatore per i file protetti che non possono essere aperti dalle app di Office. È disponibile un visualizzatore simile per iOS e Android.
+Il client offre anche:
 
-Se è installato il client AIP classico, si dispone anche di un sito di rilevamento dei documenti per consentire agli utenti di rilevare e revocare i file protetti.
+- Assegnazione di etichette e protezione per i tipi di file che non sono supportati dal servizio di protezione incorporato (Rights Management di Azure).
+- Un visualizzatore per i file protetti che non possono essere aperti dalle app di Office. È disponibile un visualizzatore simile per iOS e Android.
+- Funzionalità per il rilevamento e la revoca dell'accesso ai file protetti.
 
+I computer che eseguono Office 2010 richiedono che il client di Azure Information Protection esegua l'autenticazione al servizio di Azure Information Protection. Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 ## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Client Azure Information Protection per Windows: installazione e configurazione
 
 Per un'installazione e una configurazione aziendali del client di per Windows, vedere la [Guida dell'amministratore del client Azure Information Protection Unified Labeling](./rms-client/clientv2-admin-guide.md).

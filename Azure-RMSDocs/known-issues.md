@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26e354c883fd2e8ef5244b77635cb3e63ba9bc8e
-ms.sourcegitcommit: d578b609ddefc2580548cdb0a54a8af0ba69fbf4
+ms.openlocfilehash: e18c18322783a4f953c898cb96232ab35b642dca
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97388389"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583626"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "97388389"
 >***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare gli elenchi e le tabelle seguenti per trovare informazioni dettagliate sui problemi noti e sulle limitazioni relative alle funzionalità di Azure Information Protection.
 
@@ -87,19 +87,55 @@ I criteri di pubblicazione possono richiedere fino a 24 ore.
 
 ## <a name="known-issues-in-the-aip-client"></a>Problemi noti nel client AIP
 
-- **Dimensioni massime dei file.** di oltre 2 GB sono supportati per la protezione, ma non per la decrittografia.
+- [Dimensioni massime file](#maximum-file-sizes)
+- [Visualizzatore AIP](#aip-viewer)
+- [Rilevamento e revoca dell'accesso ai documenti](#tracking-and-revoking-document-access-public-preview)
 
-- **Visualizzatore AIP.** Il Visualizzatore AIP Visualizza le immagini in modalità verticale e alcune immagini di visualizzazione orizzontale possono sembrare estesi.
+### <a name="maximum-file-sizes"></a>Dimensioni massime file
 
-    Ad esempio, un'immagine originale viene visualizzata sotto a sinistra, con una versione con estensione verticale nel Visualizzatore AIP a destra. 
+I file di oltre 2 GB sono supportati per la protezione, ma non per la decrittografia.
+
+### <a name="aip-viewer"></a>Visualizzatore AIP
+
+Il Visualizzatore AIP Visualizza le immagini in modalità verticale e alcune immagini di visualizzazione orizzontale possono sembrare estesi.
+
+Ad esempio, un'immagine originale viene visualizzata sotto a sinistra, con una versione con estensione verticale nel Visualizzatore AIP a destra. 
     
-    :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Immagine estesa nel visualizzatore client":::
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Immagine estesa nel visualizzatore client":::
     
-    Per altre informazioni, vedere:
+Per altre informazioni, vedere:
 
-    - [**Client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md)
-    - [**Client classico**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/client-view-use-files.md)
+- [**Client classico**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/client-view-use-files.md)
+- [**Client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md)
 
+### <a name="tracking-and-revoking-document-access-public-preview"></a>Rilevamento e revoca dell'accesso ai documenti (anteprima pubblica)
+
+Il rilevamento e la revoca dell'accesso ai documenti mediante il client Unified Labeling presenta i seguenti problemi noti:
+
+- [Più allegati in un messaggio di posta elettronica protetto](#multiple-attachments-in-a-protected-email)
+- [Documenti a cui si accede tramite SharePoint](#documents-accessed-via-sharepoint)
+
+Per altre informazioni, vedere [Guida dell'amministratore: tenere traccia e revocare l'accesso ai documenti con Azure Information Protection](rms-client/track-and-revoke-admin.md) e la [Guida dell'utente: revocare l'accesso ai documenti con Azure Information Protection](rms-client/revoke-access-user.md).
+
+#### <a name="multiple-attachments-in-a-protected-email"></a>Più allegati in un messaggio di posta elettronica protetto
+
+Se si collegano più documenti a un messaggio di posta elettronica e quindi si proteggono i messaggi di posta elettronica e li si invia, ogni allegato otterrà lo stesso valore ContentID. 
+
+Il valore di ContentID verrà restituito solo con il primo file aperto. Se si cerca gli altri allegati, il valore ContentID richiesto per ottenere i dati di rilevamento non viene restituito.      
+
+Inoltre, la revoca dell'accesso per uno degli allegati revoca anche l'accesso per gli altri allegati nello stesso indirizzo di posta elettronica protetto.
+
+#### <a name="documents-accessed-via-sharepoint"></a>Documenti a cui si accede tramite SharePoint
+    
+- I documenti protetti caricati in SharePoint perdono il relativo valore ContentID. 
+
+    Ciò significa che i dati non vengono rilevati e la revoca dell'accesso non verrà applicata per il file archiviato in SharePoint.
+
+- Se un utente Scarica il file da SharePoint e lo accede dal computer locale, al documento viene applicato un nuovo ContentID quando viene aperto localmente. 
+    
+    Se si usa il valore ContentID originale per tenere traccia dei dati, non sarà incluso alcun accesso eseguito per il file scaricato dall'utente. Inoltre, la revoca dell'accesso in base al valore ContentID originale non revoca l'accesso per nessuno dei file scaricati.
+
+    In questi casi, gli amministratori potrebbero essere in grado di individuare i file scaricati usando PowerShell per trovare i nuovi valori ContentID per rilevare o revocare l'accesso.
 
 ## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP per versioni di Windows e Office nel supporto esteso
 
@@ -135,7 +171,7 @@ Sebbene sia possibile invitare gli utenti esterni ad attivare un account utente 
 
 Per ulteriori informazioni, vedere la [documentazione sull'accesso condizionale](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
-## <a name="more-information"></a>Ulteriori informazioni
+## <a name="more-information"></a>Altre informazioni
 
 Gli articoli aggiuntivi seguenti possono essere utili per rispondere alle domande sui problemi noti in Azure Information Protection:
 

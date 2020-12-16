@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dcb0cf2946c59868eba0226850b5c8edb9a0f08f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 8d4e19358fd9286eda3c7dcd1f65606d761c068b
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385081"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583405"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: scaricare e installare il client di Azure Information Protection Unified Labeling
 
@@ -44,9 +44,9 @@ Prima di installare il client Azure Information Protection Unified Labeling, ver
 
 6. Fare clic su **Close**. Prima di iniziare a usare il client per l'etichettatura unificata di Azure Information Protection:
 
-    - Se il computer esegue Office 2010, riavviare il computer e quindi passare alla sezione successiva per il passaggio finale.    
+    - **Se il computer esegue Office 2010**, riavviare il computer e passare alla sezione successiva per il passaggio finale.    
         
-    - Per le altre versioni di Office, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. L'installazione è ora completa ed è possibile usare il client per applicare etichette e protezione a documenti e messaggi di posta elettronica.
+    - **Per le altre versioni di Office**, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. L'installazione è ora completa ed è possibile usare il client per applicare etichette e protezione a documenti e messaggi di posta elettronica.
 
 ### <a name="installing-the-azure-information-protection-unified-labeling-client-with-office-2010"></a>Installazione del client per l'etichettatura unificata di Azure Information Protection con Office 2010
 
@@ -59,6 +59,8 @@ Dopo aver installato il client per l'etichettatura unificata di Azure Informatio
 3. Se viene visualizzata una finestra di dialogo di **Controllo di accesso utente**, fare clic su **Sì** in modo che il client di Azure Information Protection possa aggiornare il Registro di sistema.
 
 L'installazione è ora completa ed è possibile usare il client per l'etichettatura unificata di Azure Information Protection per etichettare e proteggere documenti e messaggi di posta elettronica.
+
+Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## <a name="other-instructions"></a>Altre istruzioni    
 Altre istruzioni sulle procedure sono disponibili nella Guida per l'utente del client di Azure Information Protection Unified labeling.

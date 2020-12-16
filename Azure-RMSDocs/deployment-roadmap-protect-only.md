@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 63de1f09defa880d7b639e62a3100b007831bdf7
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 40303d80ef0e1e9274d8b2258b4e400616dd875a
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382480"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583643"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Guida di orientamento per la distribuzione di Azure Information Protection solo per la protezione
 
@@ -26,7 +26,7 @@ ms.locfileid: "97382480"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 > [!TIP]
 > In alternativa, è possibile cercare uno degli articoli seguenti:
@@ -99,7 +99,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
     Considerare la possibilità di configurare una delle funzionalità seguenti, ora o versione successiva.
     
-    |Feature  |Descrizione  |
+    |Funzionalità  |Descrizione  |
     |---------|---------|
     |**Modelli personalizzati per le impostazioni di protezione**     |  Se i modelli predefiniti non sono sufficienti per l'organizzazione, configurare i modelli personalizzati. </br>Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](./configure-policy-templates.md).       |
     |**Registrazione dell'utilizzo**     | Configurare la registrazione dell'utilizzo per monitorare il modo in cui l'organizzazione usa il servizio di protezione. </br>Per ulteriori informazioni, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).        |
@@ -113,7 +113,7 @@ Effettuare i passaggi seguenti:
     
     Installare il client classico affinché gli utenti supportino Office 2010, per proteggere i file diversi da documenti e messaggi di posta elettronica di Office e per tenere traccia dei documenti protetti e fornire la formazione degli utenti per questo client. 
 
-    Per ulteriori informazioni, vedere [Azure Information Protection client classico per Windows](./rms-client/aip-client.md).
+    Per ulteriori informazioni, vedere [Azure Information Protection client classico per Windows](./rms-client/aip-client.md) e [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 2. **Configurare le applicazioni e i servizi di Office**
     

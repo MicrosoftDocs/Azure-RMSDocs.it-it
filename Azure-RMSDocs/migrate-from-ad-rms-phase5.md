@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: abad66a1e62a4e70bc4d5a9452b47abd7dd23004
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f4ae6c5addbea7293192b085bade9f17b798c23c
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382004"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583592"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -55,9 +55,9 @@ Se si usa il client classico, usare il portale di Azure. Per altre informazioni,
 >[!IMPORTANT]
 > Al termine di questa migrazione, il cluster di AD RMS non può essere usato con Azure Information Protection e con l'opzione[HYOK](configure-adrms-restrictions.md)(Mantieni la chiave personalizzata). Se si usa il client classico con HYOK, a causa dei reindirizzamenti attualmente disponibili, il cluster AD RMS usato deve avere URL di licenza diversi per quelli nei cluster di cui è stata eseguita la migrazione.
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Configurazione aggiuntiva per computer che eseguono Office 2010
+### <a name="additional-configuration-for-computers-that-run-office-2010"></a>Configurazione aggiuntiva per computer che eseguono Office 2010
 
-Se i client migrati eseguono Office 2010, gli utenti potrebbero riscontrare ritardi nell'apertura di contenuti protetti dopo il deprovisioning dei server AD RMS. In alternativa, gli utenti potrebbero visualizzare messaggi che non dispongono di credenziali per aprire il contenuto protetto. Per risolvere questi problemi, creare un reindirizzamento di rete per questi computer, che reindirizza il nome FQDN dell'URL AD RMS all'indirizzo IP locale del computer (127.0.0.1). È possibile eseguire questa operazione configurando il file hosts locale in ogni computer o usando DNS.
+Se i client migrati eseguono Office 2010, gli utenti potrebbero riscontrare ritardi nell'apertura di contenuti protetti dopo il deprovisioning dei server di AD RMS. In alternativa, gli utenti potrebbero visualizzare messaggi che non dispongono di credenziali per aprire il contenuto protetto. Per risolvere questi problemi, creare un reindirizzamento di rete per questi computer, che reindirizza il nome FQDN dell'URL AD RMS all'indirizzo IP locale del computer (127.0.0.1). È possibile eseguire questa operazione configurando il file hosts locale in ogni computer o usando DNS.
 
 Reindirizzamento tramite il file hosts locale:
 
@@ -71,6 +71,7 @@ Reindirizzamento tramite DNS:
 
 - Creare un nuovo record host (A) per il nome FQDN dell'URL AD RMS, che ha l'indirizzo IP 127.0.0.1.
 
+Per ulteriori informazioni su AIP e Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 ## <a name="step-11-complete-client-migration-tasks"></a>Passaggio 11. Completare le attività di migrazione dei client
 
 Per client dispositivo mobili e computer MAC: rimuovere i record DNS SRV creati al momento della distribuzione dell'[estensione per dispositivo mobile di AD RMS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
@@ -124,7 +125,11 @@ Per rimuovere i controlli di onboarding:
 
     Nell'output, **License** deve includere **False** e non c'è nessun GUID visualizzato in **SecurityGroupOjbectId**
 
-Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata) nella libreria dell'Utilità di pianificazione di Windows, disabilitare questa attività perché non viene usata dal client Azure Information Protection. Questa attività viene in genere abilitata tramite Criteri di gruppo e supporta una distribuzione AD RMS. È possibile trovare questa attività nel percorso seguente: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management Services client**
+Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata) nella libreria dell'Utilità di pianificazione di Windows, disabilitare questa attività perché non viene usata dal client Azure Information Protection. 
+
+Questa attività viene in genere abilitata tramite Criteri di gruppo e supporta una distribuzione AD RMS. È possibile trovare questa attività nel percorso seguente: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management Services client**. 
+
+Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passaggio 12. Reimpostare la chiave del tenant di Azure Information Protection
 

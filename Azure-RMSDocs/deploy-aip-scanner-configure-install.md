@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbbf7c0644285c56ea34b57eb0b6b6a7894bc17f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e17e42850904590df6a0c223032fd07306e0815b
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382871"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583711"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -166,18 +166,20 @@ Se è stato [definito un processo di analisi di rete](#create-a-network-scan-job
 
 I repository in cui si trova **l'accesso pubblico** hanno funzionalità di **lettura** o di **lettura/scrittura** possono includere contenuti sensibili che devono essere protetti. Se l' **accesso pubblico** è false, il repository non è accessibile dal pubblico.
 
-L'accesso pubblico a un repository viene segnalato solo se è stato impostato un account vulnerabile nel parametro **StandardDomainsUserAccount** del cmdlet [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) .
+L'accesso pubblico a un repository viene segnalato solo se è stato impostato un account debole nel parametro **StandardDomainsUserAccount** dei cmdlet [**Install-MIPNetworkDiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) o [**set-MIPNetworkDiscoveryConfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration) .
 
 - Gli account definiti in questi parametri vengono usati per simulare l'accesso di un utente debole al repository. Se l'utente debole definito può accedere al repository, significa che è possibile accedere pubblicamente al repository. 
 
 - Per assicurarsi che l'accesso pubblico venga segnalato correttamente, assicurarsi che l'utente specificato in questi parametri sia un membro del gruppo **Domain Users** .
-       
+
 ### <a name="create-a-content-scan-job"></a>Creazione di un processo di analisi del contenuto
 
 Approfondimento sui contenuti per analizzare i repository specifici per il contenuto sensibile. 
 
 Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di analisi di rete per analizzare i repository nella rete, ma può anche definire autonomamente i repository.
- 
+
+**Per creare il processo di analisi del contenuto nel portale di Azure:**
+
 1. Nel menu **scanner** a sinistra selezionare **processi di analisi del contenuto**. 
    
 1. Nel riquadro **processi di analisi del Azure Information Protection di contenuto** selezionare **Aggiungi** ![icona](media/i-add.png "icona Salva")Aggiungi.
@@ -255,18 +257,20 @@ Dopo aver [configurato il Azure Information Protection scanner nel portale di Az
 1. Accedere al computer Windows Server che eseguirà lo scanner. Usare un account con diritti di amministratore locale e con le autorizzazioni per scrivere nel database master di SQL Server.
 
     > [!IMPORTANT]
+    > Prima di installare lo scanner è necessario che nel computer sia installato il client AIP Unified labeling. 
+    >
     > Per ulteriori informazioni, vedere [prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner](deploy-aip-scanner-prereqs.md).
     >
  
 1. Aprire una sessione di Windows PowerShell con l'opzione **Esegui come amministratore**.
 
-1. Eseguire il cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , specificando l'istanza di SQL Server in cui creare un database per lo scanner Azure Information Protection e il nome del cluster dello scanner specificato nella sezione precedente: 
+1. Eseguire il cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) , specificando l'istanza di SQL Server in cui creare un database per lo scanner Azure Information Protection e il nome del cluster dello scanner [specificato nella sezione precedente](#create-a-scanner-cluster): 
     
     ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
-    Esempi, usando il nome di profilo **Europe**:
+    Esempi, usando il nome del cluster dello scanner **Europe**:
     
     - Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
@@ -274,7 +278,9 @@ Dopo aver [configurato il Azure Information Protection scanner nel portale di Az
     
     - Per SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
-    Quando viene richiesto, specificare le credenziali per l'account del servizio scanner ( \<domain\user name> ) e la password.
+    Quando viene richiesto, specificare le credenziali Active Directory per l'account del servizio scanner.
+
+    Utilizzare la sintassi seguente: `\<domain\user name>` . ad esempio `contoso\scanneraccount`
 
 1. Verificare che il servizio sia ora installato utilizzando **strumenti di amministrazione**  >  **Servizi**. 
     
@@ -300,7 +306,7 @@ Per ottenere un token di Azure AD:
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
-    ad esempio:
+    Ad esempio:
 
     ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
@@ -387,7 +393,7 @@ Se, ad esempio, si dispone di un nuovo tipo di file in diversi repository di dat
 
 Per apportare modifiche in blocco tra i repository:
 
-1. Nella portale di Azure nel riquadro **repository** selezionare l'opzione **Esporta** . ad esempio:
+1. Nella portale di Azure nel riquadro **repository** selezionare l'opzione **Esporta** . Ad esempio:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Esportazione delle impostazioni del repository di dati per lo scanner Azure Information Protection":::
 
@@ -404,6 +410,7 @@ Negli scenari seguenti, lo scanner Azure Information Protection è anche in grad
 - [Applicare un'etichetta predefinita a tutti i file in un repository di dati](#apply-a-default-label-to-all-files-in-a-data-repository)
 - [Rimuovere le etichette esistenti da tutti i file in un repository di dati](#remove-existing-labels-from-all-files-in-a-data-repository)
 - [Identificare tutte le condizioni personalizzate e i tipi di informazioni riservate note](#identify-all-custom-conditions-and-known-sensitive-information-types)
+
 ### <a name="apply-a-default-label-to-all-files-in-a-data-repository"></a>Applicare un'etichetta predefinita a tutti i file in un repository di dati
 
 In questa configurazione tutti i file senza etichetta nel repository sono contrassegnati con l'etichetta predefinita specificata per il repository o il processo di analisi del contenuto. I file sono contrassegnati senza ispezione. 
@@ -464,7 +471,7 @@ Ulteriori fattori che influiscono sulle prestazioni dello scanner includono:
 |**Tempi di caricamento/risposta**     |Anche i tempi di caricamento e di risposta correnti degli archivi dati che contengono i file da analizzare influiscono sulle prestazioni dello scanner.         |
 |**Modalità scanner** (individuazione/applicazione)    | La modalità di individuazione ha in genere una velocità di analisi superiore rispetto alla modalità di applicazione. <br /><br />Per l'individuazione è necessaria un'azione di lettura di un singolo file, mentre la modalità di applicazione richiede azioni di lettura e scrittura.        |
 |**Modifiche dei criteri**     |È possibile che le prestazioni dello scanner siano invariate se sono state apportate modifiche all'etichettatura automatica nei criteri etichetta. <br /><br />Il primo ciclo di analisi, quando lo scanner deve controllare tutti i file, avrà più tempo dei cicli di analisi successivi che, per impostazione predefinita, ispeziona solo i file nuovi e modificati. <br /><br />Se si modificano le condizioni o le impostazioni di etichetta automatica, tutti i file vengono nuovamente sottoposti a scansione. Per ulteriori informazioni, vedere ripetizione dell' [analisi dei file](deploy-aip-scanner-manage.md#rescanning-files).|
-|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. <br /><br /> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. <br /><br />ad esempio: <br />-Evitare [quantificatori greedy](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Usare gruppi non di acquisizione come `(?:expression)` anziché `(expression)`    |
+|**Costruzioni Regex**    | Le prestazioni dello scanner sono influenzate dal modo in cui vengono costruite le espressioni Regex per le condizioni personalizzate. <br /><br /> Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. <br /><br />Ad esempio: <br />-Evitare [quantificatori greedy](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Usare gruppi non di acquisizione come `(?:expression)` anziché `(expression)`    |
 |**Livello di log**     |  Le opzioni a livello di log includono **debug**, **info**, **Error** e **off** per i report dello scanner.<br /><br />- **Risultati migliori** prestazioni <br />- Il **debug** rallenta notevolmente lo scanner e deve essere usato solo per la risoluzione dei problemi. <br /><br />Per altre informazioni, vedere il parametro *ReportLevel* del cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**File sottoposti a scansione**     |-Ad eccezione dei file di Excel, i file di Office vengono analizzati più rapidamente rispetto ai file PDF. <br /><br />-I file non protetti sono più veloci da analizzare rispetto ai file protetti. <br /><br />-I file di grandi dimensioni hanno ovviamente più tempo per l'analisi di file di piccole dimensioni.         |
 | | |
@@ -493,6 +500,10 @@ I cmdlet supportati per lo scanner includono:
 
 - [Get-MIPNetworkDiscoveryStatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
+- [Get-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+
+- [Get-MIPScannerRepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+
 - [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Set-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
@@ -503,6 +514,10 @@ I cmdlet supportati per lo scanner includono:
 
 - [Install-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
+- [Remove-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+
+- [Remove-MIPScannerRepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
@@ -512,6 +527,10 @@ I cmdlet supportati per lo scanner includono:
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
 - [Set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+
+- [Set-MIPScannerContentScanJob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+
+- [Set-MIPScannerRepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
@@ -530,6 +549,7 @@ I cmdlet supportati per lo scanner includono:
 - [Uninstall-MIPNetworkDiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 

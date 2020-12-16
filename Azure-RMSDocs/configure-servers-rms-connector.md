@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f1dd3d2c832cebfe8cb8a994570d81e7544d8cf
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 43e9731197231c8bccf2c5d00aec81b20ab3c889
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383007"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583558"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -134,10 +134,13 @@ Nelle sezioni seguenti sono disponibili informazioni specifiche per ciascun tipo
 
 Dopo aver configurato questi server per l'uso del connettore, è possibile che le applicazioni client installate in locale su tali server non siano in grado di funzionare con RMS. Questo inconveniente si verifica perché le applicazioni tentano di usare il connettore anziché usare direttamente RMS.
 
-Inoltre, se Office 2010 è installato localmente in un server Exchange, le funzionalità IRM dell'app client potrebbero funzionare da tale computer dopo che il server è stato configurato per l'uso del connettore, ma questa operazione non è supportata.
+Inoltre, se Office 2010 è installato localmente in un server Exchange, le funzionalità IRM dell'app client potrebbero funzionare da tale computer dopo che il server è stato configurato per l'uso del connettore, ma questa operazione non è supportata. 
 
 In entrambi gli scenari, è necessario installare le applicazioni client in computer separati non configurati per l'uso del connettore. Tali computer useranno quindi RMS direttamente.
 
+> [!NOTE]
+> Per ulteriori informazioni su AIP e Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configurazione di un server di Exchange per l'uso del connettore
 I seguenti ruoli di Exchange comunicano con il connettore RMS:
 

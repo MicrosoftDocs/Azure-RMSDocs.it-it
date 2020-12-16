@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: bd7b94caba31ddbadf1d39754a6bb609c59aea60
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 69a0f87bd47e164f709dee4159a810141515a343
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385166"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583694"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Che cos'è l'app Azure Information Protection per iOS o Android?
 
@@ -67,7 +67,7 @@ Dopo aver [installato l'app per dispositivi mobili AIP](#download-and-install-th
 
     Selezionare **Condividi file tramite...** e quindi selezionare **copia in AIP Viewer.**
 
-    ad esempio:
+    Ad esempio:
 
     :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Condividi nel Visualizzatore AIP in iOS" border="false":::
 
@@ -95,7 +95,7 @@ Le app per dispositivi mobili AIP per iOS e Android supportano i tipi di file e 
 |---------|---------|
 |**Versioni dei sistemi operativi supportate**     | I sistemi operativi minimi per dispositivi mobili includono: </br>-iOS 11  </br>-Android 6,0 </br></br>**Nota**: le app per dispositivi mobili AIP non sono supportate nelle CPU Intel.  |
 |**Credenziali di accesso supportate**     | Accedere alle app per dispositivi mobili AIP con una delle seguenti opzioni: </br></br>**Credenziali aziendali o dell'Istituto di istruzione.** Provare ad accedere con le credenziali aziendali o dell'Istituto di istruzione. In caso di domande, contattare l'amministratore per sapere se l'organizzazione ha AD RMS locale con l'estensione per dispositivi mobili o se usa Azure Information Protection. </br></br>**Account Microsoft.** Se l'indirizzo di posta elettronica personale è stato usato per proteggere il file, accedere con un [account Microsoft](https://signup.live.com). Se è necessario applicare una account Microsoft, è possibile usare Hotmail, Gmail o qualsiasi altro indirizzo di posta elettronica a tale scopo. </br></br>**Nota**: non tutte le applicazioni sono in grado di aprire il contenuto protetto con un account Microsoft. Per ulteriori informazioni, vedere la pagina relativa agli [scenari supportati per l'apertura di documenti protetti](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
-|**Tipi di file supportati**     | I tipi di file supportati includono messaggi di posta elettronica protetti, file PDF, immagini e file di testo. </br></br>Ad esempio, questi file includono le seguenti estensioni: **rpmsg**, **PDF**, **Ppdf**, **pjpg,** **pjpeg**, **ptiff** **, ppng** **, ptxt, pXML,**  </br></br>Per un elenco completo dei tipi di file supportati, vedere [la guida dell'amministratore del client AIP](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
+|**Tipi di file supportati**     | I tipi di file supportati includono messaggi di posta elettronica protetti, file PDF, immagini e file di testo. </br></br>Ad esempio, questi file includono le seguenti estensioni: **rpmsg**, **PDF**, **Ppdf**, **pjpg** **,** **pjpeg**, **ptiff** **, ppng** **, ptxt, pXML,** </br></br>Per un elenco completo dei tipi di file supportati, vedere [la guida dell'amministratore del client AIP](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 | | |
 
 ## <a name="admins-testing-the-aip-mobile-apps"></a>Amministratori: test delle app per dispositivi mobili AIP

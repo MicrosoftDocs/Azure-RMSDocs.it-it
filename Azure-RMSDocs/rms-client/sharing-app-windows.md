@@ -11,15 +11,15 @@ ms.service: information-protection
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 478292fb51babed58ac8d6e619fc155cb4a1c13d
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 8b2fe2b7029e2f730358d3d2efb1d2e5478419d6
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384996"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97582997"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Applicazione di condivisione Rights Management per Windows
 
->***Si applica a**: s Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 **Notifica di fine supporto**: l'applicazione di condivisione Rights Management per Windows viene ora sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente è terminato il 31 gennaio 2019.
