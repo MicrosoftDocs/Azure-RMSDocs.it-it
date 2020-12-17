@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 432004443bf684967849b5b91acd9052cbf07eec
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 17ee31a93e21314d9881af14feafc81ddb550092
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924976"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384639"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Esercitazione: Individuazione del contenuto sensibile con lo scanner di Azure Information Protection (AIP)
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Rilevante per**: [Client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Il client di Azure Information Protection include uno scanner locale che consente agli amministratori di sistema di analizzare i repository di file locali per individuare eventuale contenuto sensibile. 
 
@@ -38,7 +38,7 @@ In questa esercitazione si apprenderà come:
 > Se questa versione del client e dello scanner non è installata, controllare i [prerequisiti dell'esercitazione](#tutorial-prerequisites) e quindi passare direttamente a [Definire ed eseguire il processo di analisi dei contenuti](#define-and-run-your-content-scan-job).
 
 
-**Tempo necessario:** è possibile completare questa configurazione in 15 minuti.
+**Tempo necessario**: è possibile completare questa configurazione in 15 minuti.
 
 ## <a name="tutorial-prerequisites"></a>Prerequisiti per l'esercitazione
 
@@ -64,7 +64,7 @@ Creare un processo di analisi della rete per analizzare un indirizzo IP o un int
 > Questa funzionalità è disponibile solo a partire dalla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) ed è attualmente in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
 > 
 
-**Per creare un processo di analisi della rete:**
+**Per creare un processo di analisi della rete**:
 
 1. Accedere al [portale di Azure](https://portal.azure.com/) come [amministratore supportato](#tutorial-prerequisites) e passare all'area **Azure Information Protection**.
         
@@ -177,7 +177,7 @@ Ad esempio:
 > [!TIP]
 > Se i risultati sono vuoti e si vuole eseguire un'analisi significativa, creare un file denominato **Info di pagamento** in uno dei repository inclusi nel processo di analisi dei contenuti. Salvare il file con il contenuto seguente:
 > 
-> **Credit card:** 2384 2328 5436 3489
+> **Carta di credito**: 2384 2328 5436 3489
 >
 > Eseguire di nuovo l'analisi per visualizzare la differenza nei risultati.
 > 
@@ -201,7 +201,7 @@ Per altre esercitazioni, vedere:
 - [Esercitazione: Prevenzione dell'oversharing con Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 - [Esercitazione: Migrazione dal client classico al client di etichettatura unificata di Azure Information Protection (AIP)](tutorial-migrating-to-ul.md)
 
-**Vedere anche:**
+**Vedere anche**:
 
 - [Informazioni sullo scanner di etichettatura unificata di Azure Information Protection](deploy-aip-scanner.md)
 - [Prerequisiti per l'installazione e la distribuzione dello scanner di etichettatura unificata di Azure Information Protection](deploy-aip-scanner-prereqs.md)

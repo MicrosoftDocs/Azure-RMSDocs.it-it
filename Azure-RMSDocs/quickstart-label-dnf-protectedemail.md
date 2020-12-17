@@ -10,21 +10,21 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e21a19d44c287de326c7bcd2425b94bba9b984ef
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 7a0c53a2801b16b35a97b569753341012b854891
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386322"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client classico Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Rilevante per**: [Client classico Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 In questo avvio rapido si configurerà un'etichetta di Azure Information Protection esistente per l'applicazione automatica dell'impostazione di protezione **Non inoltrare**.
 
@@ -36,7 +36,7 @@ Gli attuali criteri di Azure Information Protection contengono già due etichett
 
 Tuttavia, se i criteri personali sono precedenti o se non è stata attivata la protezione nel momento in cui sono stati creati i criteri dell'organizzazione, queste etichette non sono disponibili.
 
-**Ora obbligatoria:** È possibile completare questa configurazione in 5 minuti.
+**Tempo necessario**: È possibile completare questa configurazione in 5 minuti.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -48,7 +48,7 @@ Per completare questa guida introduttiva, è necessario:
 |**AIP aggiunto al portale di Azure**    |  Aver aggiunto il riquadro Azure Information Protection al portale di Azure e aver verificato che il servizio di protezione sia attivato. <br><br>Per altre informazioni, vedere [Avvio rapido: Attività iniziali nel portale di Azure](quickstart-viewpolicy.md).       |
 |**Un'etichetta esistente di Azure Information Protection da configurare**     | Usare una delle etichette predefinite o un'etichetta creata. Per altre informazioni, vedere [Avvio rapido: Creare una nuova etichetta di Azure Information Protection per utenti specifici](quickstart-label-specificusers.md). |
 |**Client classico installato**    |   Per testare la nuova etichetta, è necessario che il client classico sia installato nel computer. <br><br>Il client classico Azure Information Protection verrà deprecato nel marzo 2021. Per distribuire il client classico AIP, aprire un ticket di supporto per ottenere l'accesso al download.  |
-|**Un computer Windows, connesso alle app di Office** |Per testare la nuova etichetta, è necessario un computer che esegue Windows (almeno Windows 7 con Service Pack 1). <br><br>In questo computer accedere a una delle seguenti versioni delle app di Office: <br><br>- **App di Office** per le versioni elencate nella [tabella delle versioni supportate di Microsoft 365 App in base al canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), da Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente è assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365). <br>- **Microsoft 365 Apps for enterprise.** <br>- **Office Professional Plus 2019.** <br>- **Office Professional Plus 2016**.<br>- **Office Professional Plus 2013 con Service Pack 1**. <br>- **Office Professional Plus 2010 con Service Pack 2**.|
+|**Un computer Windows, connesso alle app di Office** |Per testare la nuova etichetta, è necessario un computer che esegue Windows (almeno Windows 7 con Service Pack 1). <br><br>In questo computer accedere a una delle seguenti versioni delle app di Office: <br><br>- **App di Office** per le versioni elencate nella [tabella delle versioni supportate di Microsoft 365 Apps in base al canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), da Microsoft 365 Apps for business o Microsoft 365 Business Premium quando all'utente è assegnata una licenza per Azure Rights Management (noto anche come Azure Information Protection per Office 365). <br>- **Microsoft 365 Apps for enterprise** <br>- **Office Professional Plus 2019** <br>- **Office Professional Plus 2016**<br>- **Office Professional Plus 2013 con Service Pack 1**<br>- **Office Professional Plus 2010 con Service Pack 2**|
 | | |
 
 Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).

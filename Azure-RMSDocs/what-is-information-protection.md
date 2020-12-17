@@ -9,19 +9,21 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: 7ee4c5c26792a56c2637d62a67e2921df8c99a61
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: aa41b20152df55f7153f4c8cedd013041460b596
+ms.sourcegitcommit: ad2b3e0b6f438f9ffc0bca975653bd13f1b7d131
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924952"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514924"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection (AIP) è una soluzione basata sul cloud che consente alle organizzazioni di individuare, classificare e proteggere documenti e messaggi di posta elettronica mediante l'applicazione di etichette al contenuto.
 
@@ -65,19 +67,19 @@ Scaricare l'installazione dello scanner insieme al client dalla [pagina di downl
 
 ## <a name="microsoft-information-protection-sdk"></a>Microsoft Information Protection SDK
 
-Microsoft Information Protection SDK estende le etichette di riservatezza ad app e servizi di terze parti. Gli sviluppatori possono usare l'SDK per creare il supporto nativo per l'applicazione di etichette e della protezione ai file.
+Microsoft Information Protection SDK estende le etichette di riservatezza ad app e servizi di terze parti. Gli sviluppatori possono usare l'SDK per creare il supporto incorporato per l'applicazione di etichette e della protezione ai file.
 
 Ad esempio, è possibile usare MIP SDK per:
 
 - Un'applicazione line-of-business che applica etichette di classificazione ai file durante l'esportazione.
-- Un'applicazione di progettazione CAD/CAM che fornisce il supporto nativo per l'etichettatura di Microsoft Information Protection.
+- Un'applicazione di progettazione CAD/CAM che offre il supporto incorporato per l'etichettatura di Microsoft Information Protection.
 - Un CASB (Cloud Access Security Broker) o una soluzione di prevenzione della perdita dei dati che prende decisioni programmatiche per i dati crittografati con Azure Information Protection.
 
 Per altre informazioni, vedere la [Panoramica di Microsoft Information Protection SDK](/information-protection/develop/overview).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-**Per iniziare a usare AIP,** scaricare e installare il client e lo scanner di etichettatura unificata.
+**Per iniziare a usare AIP**, scaricare e installare il client e lo scanner di etichettatura unificata.
 
 - [Iscriversi per una versione di valutazione gratuita](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) (Enterprise Mobility + Security E5)
 - [Scaricare il client](https://www.microsoft.com/download/details.aspx?id=53018)
@@ -101,10 +103,20 @@ Per altre informazioni, vedere la [Panoramica di Microsoft Information Protectio
 |**Domande frequenti e problemi noti**     | [Domande frequenti su Azure Information Protection](faqs.md) </br> [Problemi noti - Azure Information Protection](known-issues.md)       |
 |**Opzioni di supporto**     | [Opzioni di supporto per Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
-|**Ignite 2020**     |  - [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments ](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476) (Potenziare la governance e la protezione delle informazioni in ambienti cloud, locali, endpoint e di lavoro remoto)</br>- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87) (Diventare un eroe della gestione dei rischi con soluzioni intelligenti per la protezione dati e la conformità)</br>- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f) (Conoscere i dati, proteggerli e prevenirne la perdita con Microsoft Information Protection)</br>- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d) (Chiedi all'esperto - Domande sulla conformità Microsoft: protezione e governance delle informazioni, rischi interni, gestione della conformità e altro ancora)       |
 |**Novità**     | Per le nuove funzionalità correlate a AIP, vedere l'interfaccia di amministrazione di Microsoft 365 e SharePoint:   </br>- [Novità dell'interfaccia di amministrazione di Microsoft 365](/microsoft-365/admin/whats-new-in-preview) </br>- [Novità dell'interfaccia di amministrazione di SharePoint](/sharepoint/what-s-new-in-admin-center)     |
 |     |         |
 
+#### <a name="top-ignite-sessions"></a>Principali sessioni Ignite
+
+Vedere le sessioni seguenti registrate da Ignite 2020:
+
+- [Supercharge information protection and governance across cloud, on-premise, endpoints and remote work environments](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476) (Potenziare la governance e la protezione delle informazioni in ambienti cloud, locali, endpoint e di lavoro remoto)
+
+- [Be a risk management hero with intelligent data protection and compliance solutions](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87) (Diventare un eroe della gestione dei rischi con soluzioni intelligenti per la protezione dati e la conformità)
+
+- [Know your data, protect your data and prevent data loss with Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f) (Conoscere i dati, proteggerli e prevenirne la perdita con Microsoft Information Protection)
+
+- [Ask the Expert: Ask anything about Microsoft Compliance: information protection & governance, insider risks, Compliance Management, and more](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d) (Chiedi all'esperto - Domande sulla conformità Microsoft: protezione e governance delle informazioni, rischi interni, gestione della conformità e altro ancora)
 ## <a name="aips-classic-client"></a>Client classico di AIP
 
 Il client classico di Azure Information Protection è la versione precedente di AIP e consente agli amministratori di gestire le etichette di classificazione direttamente nel portale di Azure.
@@ -114,6 +126,6 @@ Le etichette di AIP gestite nel portale di Azure *non* sono supportate dalla pia
 È consigliabile eseguire la migrazione al client di etichettatura unificata per supportare queste funzionalità, oltre a SharePoint, Microsoft 365 Apps, Outlook per il Web e i dispositivi mobili, la protezione dei dati di Power BI e altro ancora. Per altre informazioni, vedere [Esercitazione: Migrazione dal client classico al client di etichettatura unificata di Azure Information Protection (AIP)](tutorial-migrating-to-ul.md).
 
 >[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. 
 >
 > In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare all'etichettatura unificata usando la soluzione di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).

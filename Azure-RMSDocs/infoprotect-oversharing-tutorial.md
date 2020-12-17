@@ -10,23 +10,23 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6bb35700a025105b584b93b5a38219b567dbe99c
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: ff00e9731041344aac8a11b990f990efb113074e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381817"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [solo per client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 >
-> **Per distribuire il client AIP con interfaccia classica**, aprire un ticket di supporto per ottenere l'accesso al download.
+> **Per distribuire il client classico di AIP**, aprire un ticket di supporto per ottenere l'accesso al download.
 
 In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
@@ -55,7 +55,7 @@ Per completare questa esercitazione, è necessario:
 
 1. Un computer con Windows (almeno Windows 7 con Service Pack 1) in cui sia possibile accedere ad Outlook. Prepararsi a riavviare Outlook più volte durante questa esercitazione.
 
-1. Avere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
+1. Aver installato il client classico di Azure Information Protection nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
 
 > [!TIP]
 > Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
@@ -118,7 +118,7 @@ Per questo passaggio dell'esercitazione, verranno specificate le seguenti impost
 
 ### <a name="create-the-advanced-client-setting-to-warn-users-if-an-email-or-attachment-has-the-general-label"></a>Creare l'impostazione avanzata del client per avvisare gli utenti se un messaggio di posta elettronica o un allegato ha l'etichetta General
 
-Usando il criterio con ambito appena creato, verrà aggiunta una nuova impostazione avanzata del client denominata **OutlookWarnUntrustedCollaborationLabel** con l'ID dell'etichetta**General**: 
+Usando il criterio con ambito appena creato, verrà aggiunta una nuova impostazione avanzata del client denominata **OutlookWarnUntrustedCollaborationLabel** con l'ID dell'etichetta **General**: 
 
 1. Tornare al riquadro **Azure Information Protection - Criteri** e selezionare il menu di scelta rapida (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
@@ -440,4 +440,4 @@ Riavviare Outlook in modo che non sia più configurato per le impostazioni che s
 
 Per test più rapidi, questa esercitazione ha usato un messaggio di posta elettronica per un singolo destinatario e senza allegati. È tuttavia possibile applicare lo stesso metodo a più destinatari e più etichette e applicare la stessa logica anche agli allegati di posta elettronica il cui stato di etichettatura è spesso meno evidente per gli utenti. Ad esempio, il messaggio di posta elettronica in sé è etichettato come Public, ma la presentazione di PowerPoint allegata ha l'etichetta General. Per altre informazioni sulle opzioni di configurazione, vedere la sezione seguente dalla guida dell'amministratore: [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
-La Guida dell'amministratore contiene anche informazioni su altre impostazioni avanzate del client che è possibile usare per personalizzare il comportamento del client. Per un elenco completo, vedere [Impostazioni client avanzate disponibili](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).
+La Guida dell'amministratore contiene anche informazioni su altre impostazioni avanzate del client che è possibile usare per personalizzare il comportamento del client. Per un elenco completo, vedere [Impostazioni client avanzate disponibili](./rms-client/client-admin-guide-customizations.md#available-advanced-classic-client-settings).

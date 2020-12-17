@@ -10,22 +10,22 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: a645e8e6cbda725a167f789481579be070e3c99c
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 73bcb5e636b8a5e4456ad80f8435a27dfc898339
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503690"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384775"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Esercitazione: Installazione dello scanner di etichettatura unificata di Azure Information Protection (AIP)
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per il [client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Rilevante per**: [Client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Questa esercitazione descrive come installare lo scanner locale di Azure Information Protection (AIP). Lo scanner consente agli amministratori di AIP di analizzare le reti e le condivisioni di contenuto per individuare eventuali dati sensibili e di applicare le etichette di classificazione e protezione in base ai criteri dell'organizzazione configurati.
 
-**Tempo necessario:** è possibile completare questa esercitazione in 30 minuti.
+**Tempo necessario**: è possibile completare questa esercitazione in 30 minuti.
 
 ## <a name="tutorial-prerequisites"></a>Prerequisiti per l'esercitazione
 
@@ -36,7 +36,7 @@ Per installare lo scanner di etichettatura unificata e completare questa esercit
 |**Una sottoscrizione di supporto**     |  Sarà necessaria una sottoscrizione che includa [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />In assenza di una di queste sottoscrizioni, creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
 |**Accesso amministrativo al portale di Azure** |Assicurarsi di poter accedere al [portale di Azure](https://portal.azure.com/) con uno degli account amministratore seguenti: <br /><br />- **Amministratore di conformità**<br />- **Amministratore dati di conformità**<br />- **Amministratore della sicurezza**<br />- **Amministratore globale** |
 |**Client installato**    |   Installare il client di etichettatura unificata di AIP nel computer per accedere all'installazione dello scanner. <br /><br />Scaricare ed eseguire il file **AzInfoProtection_UL.exe** dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). <br /><br />Al termine dell'installazione potrebbe essere richiesto di riavviare il computer o il software di Office. Riavviare come richiesto per continuare. <br /><br />Per altre informazioni, vedere [Avvio rapido: Distribuzione del client di etichettatura unificata di Azure Information Protection (AIP)](quickstart-deploy-client.md).|
-|**SQL Server**     | Per eseguire lo scanner, è necessario SQL Server installato nel computer dello scanner. <br /><br /> Per eseguire l'installazione, accedere alla [pagina di download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) e selezionare **Scarica ora** per l'opzione di installazione desiderata. Nel programma di installazione selezionare il tipo di installazione **Basic**. <br /><br />**Nota**: si consiglia di installare SQL Server Enterprise per gli ambienti di produzione ed Express solo per gli ambienti di test.       |
+|**SQL Server**     | Per eseguire lo scanner, è necessario SQL Server installato nel computer dello scanner. <br /><br /> Per eseguire l'installazione, passare alla [pagina di download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) e selezionare **Scarica ora** per l'opzione di installazione desiderata. Nel programma di installazione selezionare il tipo di installazione **Basic**. <br /><br />**Nota**: si consiglia di installare SQL Server Enterprise per gli ambienti di produzione ed Express solo per gli ambienti di test.       |
 |**Account di Azure Active Directory**     |  Quando si lavora in un ambiente standard e connesso al cloud, l'account del servizio del dominio che si vuole usare per lo scanner deve essere sincronizzato con [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). Ciò non è necessario se si lavora offline. <br /><br />In caso di dubbi per il proprio account, contattare uno degli amministratori di sistema per verificare lo stato di sincronizzazione.   |
 |**Etichette di riservatezza e criteri pubblicati** |È necessario avere creato etichette di riservatezza e aver pubblicato criteri con almeno un'etichetta nell'interfaccia di amministrazione dell'etichettatura per l'account del servizio scanner. <br /><br />Configurare le etichette di riservatezza nell'interfaccia di amministrazione dell'etichettatura, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365. Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
 | | |
@@ -99,7 +99,7 @@ Preparare le impostazioni iniziali dello scanner nel portale di Azure prima di i
 
     :::image type="content" source="media/qs-tutor/qs-add-new-cluster.png" alt-text="Aggiungere un nuovo cluster per l'esercitazione":::
 
-1. Creare un processo di analisi dei contenuti iniziale. Nel menu **Scanner** a sinistra, selezionare :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Processi di analisi dei contenuti** e quindi selezionare :::image type="icon" source="media/i-add.PNG" border="false"::: **Aggiungi**.
+1. Creare un processo di analisi dei contenuti iniziale. Nel menu **Scanner** a sinistra selezionare :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Processi di analisi dei contenuti** e quindi selezionare :::image type="icon" source="media/i-add.PNG" border="false"::: **Aggiungi**.
 
 1. Nel riquadro **Aggiungi un nuovo processo di analisi dei contenuti** immettere un nome significativo per il processo di analisi dei contenuti e una descrizione facoltativa.
 
@@ -154,7 +154,7 @@ Questa procedura non è necessaria se si lavora solo offline.
 
 Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-**Per ottenere un token di Azure AD per lo scanner:**
+**Per ottenere un token di Azure AD per lo scanner**:
 
 1. Nel portale di Azure creare un'applicazione di Azure AD per specificare un token di accesso per l'autenticazione.
 
@@ -176,7 +176,7 @@ Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non 
     ``` 
 
     > [!TIP]
-    > Se non è possibile concedere il diritto **Accesso locale** per l'installazione all'account del servizio scanner, usare il parametro **OnBehalfOf** con **Set-AIPAuthentication** invece del parametro **DelegatedUser**.
+    > Se non è possibile concedere il diritto di **accesso locale** per l'installazione all'account del servizio scanner, usare il parametro **OnBehalfOf** con **Set-AIPAuthentication** invece del parametro **DelegatedUser**.
 
 Lo scanner dispone ora di un token per l'autenticazione in Azure AD. Questo token è valido per il tempo configurato in Azure Active Directory. È necessario ripetere questa procedura alla scadenza del token.
 
@@ -193,7 +193,7 @@ Ad esempio, se si trova un repository con accesso pubblico sia in lettura che in
 > [!NOTE]
 > Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
 
-**Per installare il servizio di individuazione della rete:**
+**Per installare il servizio di individuazione della rete**:
 
 1. Nel computer dello scanner aprire una sessione di PowerShell come amministratore.
 
@@ -247,7 +247,7 @@ Per altre informazioni, vedere [Esercitazione: Individuazione del contenuto sens
 >Per analizzare i repository rischiosi per individuare eventuali dati sensibili e quindi classificare e proteggere i dati dagli utenti esterni, aggiornare il processo di analisi dei contenuti con i dettagli dei repository trovati.
 >
 
-**Vedere anche:**
+**Vedere anche**:
 
 - [Informazioni sullo scanner di etichettatura unificata di Azure Information Protection](deploy-aip-scanner.md)
 - [Prerequisiti per l'installazione e la distribuzione dello scanner di etichettatura unificata di Azure Information Protection](deploy-aip-scanner-prereqs.md)

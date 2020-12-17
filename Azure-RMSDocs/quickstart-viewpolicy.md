@@ -10,22 +10,25 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: b0128abb8d75418596459ac142a49dbbfa06b646
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: b9d9e559a3d007bb0242525fa93bb5b62338b467
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503622"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386084"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client classico Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Rilevante per**: [Client classico Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-In questa guida di avvio rapido si aggiungerà Azure Information Protection al portale di Azure, si verificherà che il servizio di protezione sia attivato, si creeranno le etichette predefinite, se non sono già disponibili, e si visualizzeranno le impostazioni dei criteri per il client Azure Information Protection (versione classica).
+>[!NOTE]
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-**Ora obbligatoria:** È possibile completare questa guida di avvio rapido in meno di 10 minuti.
+In questa guida di avvio rapido si aggiungerà Azure Information Protection al portale di Azure, si verificherà che il servizio di protezione sia attivato, si creeranno le etichette predefinite, se non sono già disponibili, e si visualizzeranno le impostazioni dei criteri per il client classico di Azure Information Protection.
+
+**Tempo necessario**: È possibile completare questa guida di avvio rapido in meno di 10 minuti.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -131,7 +134,7 @@ La prima volta che ci si connette al servizio Azure Information Protection dal p
 
     Per altre informazioni, vedere [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) nella documentazione di Microsoft 365.
 
-**Istruzioni per il client classico:**
+**Istruzioni per il client classico**:
 
 Per visualizzare le impostazioni dei criteri predefinite di Azure Information Protection per la versione classica del client:
 
@@ -147,12 +150,12 @@ Per visualizzare le impostazioni dei criteri predefinite di Azure Information Pr
 
 I passaggi successivi variano a seconda che si utilizzi un client classico o un client di etichettatura unificata. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
 
-**Se si usa il client classico:**
+**Se si usa il client classico**:
 
 - l'esercitazione seguente può risultare utile come passaggio successivo: [Modificare i criteri e creare una nuova etichetta per Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 - In alternativa, per istruzioni dettagliate per la configurazione di tutti gli aspetti dei criteri di Azure Information Protection, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
-**Se si usa il client di etichettatura unificata:**
+**Se si usa il client di etichettatura unificata**:
 
 Vedere [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) nella documentazione sulla conformità di Microsoft 365.
