@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2b621f78610d411a7ab980429fcb1dd960cbebff
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: b5e64f9537ee9c8f7f684e708c5de35ec28f3400
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386220"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583371"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti per Azure Information Protection
 
@@ -69,10 +69,11 @@ Per supportare l'autenticazione e l'autorizzazione per Azure Information Protect
 
 L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altre informazioni, vedere: [Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Per scenari specifici sono necessari altri prerequisiti, ad esempio quando si usa Office 2010, l'autenticazione basata su certificato o a più fattori, oppure quando i valori UPN non corrispondono agli indirizzi di posta elettronica degli utenti. Per altre informazioni, vedere [Requisiti aggiuntivi di Azure AD per Azure Information Protection](requirements-azure-ad.md).
+Per scenari specifici sono necessari altri prerequisiti, ad esempio quando si usa l'autenticazione basata su certificato o a più fattori, quando i valori UPN non corrispondono agli indirizzi di posta elettronica degli utenti o quando si usa [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 Per altre informazioni, vedere:
 
+- [Requisiti aggiuntivi di Azure AD per Azure Information Protection](requirements-azure-ad.md).
 - [Che cos'è una directory di Azure AD?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrare i domini di Active Directory locali con Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
@@ -154,7 +155,7 @@ Con le altre edizioni di Office non è possibile proteggere i documenti e i mess
 
 Le etichette vengono visualizzate in una barra nella parte superiore del documento di Office, accessibile tramite il pulsante **Riservatezza** nel client di etichettatura unificata o il pulsante **Proteggi** nel client classico.
 
-Per altre informazioni, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](requirements-applications.md).
+Per altre informazioni, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](requirements-applications.md) e [AIP per versioni di Windows e di Office con supporto "Extended"](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Funzionalità e capacità di Office non supportate
 
