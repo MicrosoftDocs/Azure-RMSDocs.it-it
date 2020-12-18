@@ -181,6 +181,8 @@
               href: ./rms-client/clientv2-admin-guide.md
             - name: Installare il client per gli utenti
               href: ./rms-client/clientv2-admin-guide-install.md
+            - name: Tenere traccia dell'accesso e revocarlo
+              href: ./rms-client/track-and-revoke-admin.md
             - name: Personalizzazioni
               href: ./rms-client/clientv2-admin-guide-customizations.md
             - name: File del client e registrazione dell'utilizzo
@@ -201,6 +203,8 @@
               href: ./rms-client/clientv2-view-use-files.md
             - name: Rimuovere le etichette e la protezione
               href: ./rms-client/clientv2-remove-label-protection.md
+            - name: Revocare l'accesso ai documenti
+              href: ./rms-client/revoke-access-user.md
         - name: App Azure Information Protection per iOS e Android
           href: ./rms-client/mobile-app-faq.md
         - name: Lettori PDF protetti
