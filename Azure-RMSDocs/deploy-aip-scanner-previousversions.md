@@ -8,16 +8,17 @@ ms.date: 03/16/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 085fac334348e0d13381571c9622b64a2b20e172
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 514eaf2f935d4ec454b57dbaf2ce1c97c029c4b8
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382735"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806244"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-classic-client-scanner"></a>Distribuzione di versioni precedenti dello scanner client di Azure Information Protection classico
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382735"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per lo scanner dal client senza stato di etichetta, vedere [che cos'è AIP Unified Labeling scanner?](deploy-aip-scanner.md). *
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 >
 > Questo articolo è per le versioni di Azure Information Protection scanner precedenti alla versione **1.48.204.0** ma ancora in supporto. Per aggiornare le versioni precedenti alla versione corrente, vedere [aggiornamento dello scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
@@ -148,7 +149,7 @@ Se i criteri dell'organizzazione non consentono il diritto **Log on locally** (A
     Install-AIPScanner -SqlServerInstance <name>
     ```
 
-    ad esempio:
+    Ad esempio:
 
     - Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
 
@@ -425,7 +426,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - La costruzione di espressioni regex per condizioni personalizzate
 
-    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. ad esempio:
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
 
     - Evitare [quantificatori greedy](/dotnet/standard/base-types/quantifiers-in-regular-expressions)
 

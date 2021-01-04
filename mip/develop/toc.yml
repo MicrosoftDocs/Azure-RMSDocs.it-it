@@ -91,8 +91,6 @@
           href: concept-authentication-cpp.md
         - name: Implementazione di un delegato di autenticazione (C++)
           href: concept-authentication-delegate-cpp.md
-        - name: Acquisizione di un token di accesso (PowerShell)
-          href: concept-authentication-acquire-token-ps.md
         - name: Acquisizione di un token di accesso (Python)
           href: concept-authentication-acquire-token-py.md
     - name: Consenso

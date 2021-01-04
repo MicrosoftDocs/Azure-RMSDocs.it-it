@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 3e58c7efe669aa6c3405a5fd1c2056e96a933ff6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: fe246ceb2f54d24318373b95c36733a977b560dc
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566633"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701731"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) Software Development Kit (SDK) e criteri di supporto
 
 ## <a name="servicing"></a>Servizio
 
-Ogni versione disponibile a livello generale è supportata per sei mesi dopo il rilascio della prossima versione GA. La documentazione potrebbe non includere informazioni sulle versioni non supportate. Le correzioni e le nuove funzionalità sono applicabili solo alla versione GA più recente.
+Ogni versione disponibile a livello generale è supportata per un anno dopo il rilascio della prossima versione GA. La documentazione potrebbe non includere informazioni sulle versioni non supportate. Le correzioni e le nuove funzionalità sono applicabili solo alla versione GA più recente.
 
 Le versioni di anteprima non devono essere distribuite nell'ambiente di produzione. Usare invece la versione di anteprima più recente per testare nuove funzionalità o correzioni che saranno disponibili nella prossima versione GA. È supportata solo la versione di anteprima più recente.
 
@@ -27,9 +27,25 @@ Le versioni di anteprima non devono essere distribuite nell'ambiente di produzio
 Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata. La versione più recente è elencata per prima.
 
 > [!NOTE]
-> Le correzioni minime non sono elencate, quindi se si verifica un problema con l'SDK, è consigliabile verificare se è stato risolto con la versione GA più recente. Se il problema persiste, verificare la versione di anteprima corrente.
+> Le correzioni minime non sono elencate. Se si verifica un problema con l'SDK, è consigliabile verificare se è stato risolto con la versione GA più recente. Se il problema persiste, verificare la versione di anteprima corrente.
 >  
 > Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## <a name="version-17147"></a>Versione 1.7.147
+
+### <a name="file-sdk"></a>SDK file
+
+- Correzione di bug secondari per il formato di file PBIX.
+
+## <a name="version-17145"></a>Versione 1.7.145
+
+**Data di rilascio:** 13 novembre, 2020
+
+### <a name="general-changes"></a>Modifiche generali
+
+- Aggiornamento del pacchetto NuGet per la copia delle dipendenze solo in aggiornamento anziché sempre.
+- La configurazione di debug in .NET utilizzerà la versione di rilascio delle librerie native. È stato rilevato che i clienti che distribuiscono soluzioni .NET in modalità di debug a server remoti sono necessari per installare il runtime di debug di VC + +, operazione non semplice. Se è necessario eseguire il debug nelle librerie native, copiare le dll da SDK Redistributable nella cartella del progetto (https://ala.ms/mipsdkbins)
+- Correzione di un bug che generava avvisi per i progetti .NET Core.
 
 ## <a name="version-17133"></a>Versione 1.7.133
 

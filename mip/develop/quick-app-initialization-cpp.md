@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: cc8b2f4d969e24451110a6838ce10c8eea39abd9
-ms.sourcegitcommit: 54e742defb0b8dca35047b34498ec66e61602fa6
+ms.openlocfilehash: 688fe04d993ae1d286458fa9d41b0915838e6406
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96577049"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701680"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione delle applicazioni client (C++) 
 
@@ -350,13 +350,6 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
 
 4. Eseguire ora la compilazione finale dell'applicazione e risolvere gli eventuali errori. Il codice dovrebbe essere compilato correttamente, ma non verrà eseguito correttamente fino al completamento della guida introduttiva successiva. Se si esegue l'applicazione viene visualizzato un output simile al seguente. Il token di accesso da specificare sarà disponibile solo dopo il completamento della guida introduttiva successiva.
 
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account:
-   Enter access token:
-   ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 

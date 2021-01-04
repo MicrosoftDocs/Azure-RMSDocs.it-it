@@ -4,25 +4,25 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 12/29/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e18c18322783a4f953c898cb96232ab35b642dca
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 1ee51978452a4f420478f2938020578166f49335
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583626"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805989"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -45,15 +45,15 @@ Per altre informazioni, vedere [Guida dell'amministratore: tipi di file supporta
 
 Il client Azure Information Protection non è supportato nei computer in cui è installato .NET 2 o 3, in cui è abilitata la [protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) e le app di Office si comportano in modo imprevisto.
 
-Se si dispone di una versione di .NET 2 o 3, oltre a una versione di .NET 4. x necessaria per il sistema, assicurarsi di disabilitare la protezione dagli exploit prima di installare AIP. 
+In questi casi, è consigliabile aggiornare la versione di .NET. Per ulteriori informazioni, vedere [Microsoft .NET Framework requirements](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
+
+Se è necessario lasciare .NET versione 2 o 3, assicurarsi di disabilitare la protezione dagli exploit prima di installare AIP. 
 
 Per disabilitare la protezione dagli exploit tramite PowerShell, eseguire le operazioni seguenti:
 
 ```PowerShell
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
-
-Per ulteriori informazioni, vedere [prerequisiti aggiuntivi per il Azure Information Protection client Unified Labeling](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>Supporto di PowerShell per il client di Azure Information Protection
 
@@ -85,17 +85,11 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 
 I criteri di pubblicazione possono richiedere fino a 24 ore.
 
-## <a name="known-issues-in-the-aip-client"></a>Problemi noti nel client AIP
-
-- [Dimensioni massime file](#maximum-file-sizes)
-- [Visualizzatore AIP](#aip-viewer)
-- [Rilevamento e revoca dell'accesso ai documenti](#tracking-and-revoking-document-access-public-preview)
-
-### <a name="maximum-file-sizes"></a>Dimensioni massime file
+## <a name="maximum-file-sizes"></a>Dimensioni massime file
 
 I file di oltre 2 GB sono supportati per la protezione, ma non per la decrittografia.
 
-### <a name="aip-viewer"></a>Visualizzatore AIP
+## <a name="known-issues-for-the-aip-viewer"></a>Problemi noti per il Visualizzatore AIP
 
 Il Visualizzatore AIP Visualizza le immagini in modalità verticale e alcune immagini di visualizzazione orizzontale possono sembrare estesi.
 
@@ -108,7 +102,7 @@ Per altre informazioni, vedere:
 - [**Client classico**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/client-view-use-files.md)
 - [**Client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md)
 
-### <a name="tracking-and-revoking-document-access-public-preview"></a>Rilevamento e revoca dell'accesso ai documenti (anteprima pubblica)
+## <a name="known-issues-for-track-and-revoke-features-public-preview"></a>Problemi noti per le funzionalità di rilevamento e revoca (anteprima pubblica)
 
 Il rilevamento e la revoca dell'accesso ai documenti mediante il client Unified Labeling presenta i seguenti problemi noti:
 
@@ -127,30 +121,35 @@ Inoltre, la revoca dell'accesso per uno degli allegati revoca anche l'accesso pe
 
 #### <a name="documents-accessed-via-sharepoint"></a>Documenti a cui si accede tramite SharePoint
     
-- I documenti protetti caricati in SharePoint perdono il relativo valore ContentID. 
+- I documenti protetti caricati in SharePoint perdono il valore di **ContentID** e non è possibile rilevare o revocare l'accesso.
 
-    Ciò significa che i dati non vengono rilevati e la revoca dell'accesso non verrà applicata per il file archiviato in SharePoint.
-
-- Se un utente Scarica il file da SharePoint e lo accede dal computer locale, al documento viene applicato un nuovo ContentID quando viene aperto localmente. 
+- Se un utente Scarica il file da SharePoint e lo accede dal computer locale, al documento viene applicato un nuovo **ContentID** quando viene aperto localmente. 
     
-    Se si usa il valore ContentID originale per tenere traccia dei dati, non sarà incluso alcun accesso eseguito per il file scaricato dall'utente. Inoltre, la revoca dell'accesso in base al valore ContentID originale non revoca l'accesso per nessuno dei file scaricati.
+    Se si usa il valore **ContentID** originale per tenere traccia dei dati, non sarà incluso alcun accesso eseguito per il file scaricato dall'utente. Inoltre, la revoca dell'accesso in base al valore **ContentID** originale non revoca l'accesso per nessuno dei file scaricati.
 
-    In questi casi, gli amministratori potrebbero essere in grado di individuare i file scaricati usando PowerShell per trovare i nuovi valori ContentID per rilevare o revocare l'accesso.
+    In questi casi, gli amministratori potrebbero essere in grado di individuare i file scaricati usando PowerShell per trovare i nuovi valori **ContentID** per rilevare o revocare l'accesso.
 
+### <a name="knowns-issues-for-the-aip-client-and-onedrive"></a>Problemi noti per il client AIP e OneDrive
+
+Se sono presenti documenti archiviati in OneDrive con un'etichetta di riservatezza applicata e un amministratore modifica l'etichetta nel criterio di etichettatura per aggiungere la protezione, la protezione appena applicata non viene applicata automaticamente al documento con etichetta. 
+
+In questi casi, rietichettare manualmente il documento per applicare la protezione in base alle esigenze.
 ## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP per versioni di Windows e Office nel supporto esteso
 
 - [**Windows 7 Extended supported è terminato il 14 gennaio 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 
-    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Windows 10. Tuttavia, se sono presenti aggiornamenti della sicurezza estesi e un contratto di supporto, è disponibile il supporto per AIP per continuare a mantenere i sistemi Windows 7 protetti.
+    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Windows 10. 
+
+    Tuttavia, se sono presenti aggiornamenti della sicurezza estesi e un contratto di supporto, è disponibile il supporto per AIP per continuare a mantenere i sistemi Windows 7 protetti.
 
     Per ulteriori informazioni, consultare il contatto del supporto tecnico.
 
-- [**Office 2010 è attualmente in supporto esteso**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
 
-    Il supporto terminerà il 13 ottobre 2020 e non verrà esteso. Inoltre, l'unità di gestione delle attività non verrà offerta per Office 2010 e si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Office 365. 
+    Questo supporto non verrà esteso e l'unità di servizio non verrà offerta per Office 2010. 
+
+    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Office 365. 
     
-    Per i clienti che eseguono attualmente Office 2010 nel supporto esteso, il supporto per AIP è disponibile fino al 13 ottobre 2020. 
-
     Per ulteriori informazioni, consultare il contatto del supporto tecnico.
 
 ## <a name="aip-based-conditional-access-policies"></a>Criteri di accesso condizionale basati su AIP
@@ -171,7 +170,7 @@ Sebbene sia possibile invitare gli utenti esterni ad attivare un account utente 
 
 Per ulteriori informazioni, vedere la [documentazione sull'accesso condizionale](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
-## <a name="more-information"></a>Altre informazioni
+## <a name="more-information"></a>Ulteriori informazioni
 
 Gli articoli aggiuntivi seguenti possono essere utili per rispondere alle domande sui problemi noti in Azure Information Protection:
 

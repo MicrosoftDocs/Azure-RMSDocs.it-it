@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e4f734560c4d3942995f7547f41648bd765bb1b1
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 9cc8d3b874e4971907770ee18508f331acf1ea2d
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555841"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701629"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - Concetti relativi all'autenticazione
 
@@ -24,12 +24,12 @@ L'autenticazione in MIP SDK viene eseguita estendendo la classe `mip::AuthDelega
 `mip::AuthDelegate::AcquireOAuth2Token` accetta i parametri seguenti e restituisce un valore booleano che indica se l'acquisizione del token ha avuto esito positivo:
 
 - `mip::Identity`: l'identità dell'utente o del servizio da autenticare, se nota.
-- `mip::AuthDelegate::OAuth2Challenge`: accetta quattro parametri, **Authority**, **Resource**, **Claims**e **Scopes**. **Authority** è il servizio per cui verrà generato il token. **Resource** è il servizio a cui si tenta di accedere. L'SDK gestirà il passaggio di questi parametri al delegato quando viene chiamato. Le **attestazioni** sono le attestazioni specifiche dell'etichetta richieste dal servizio di protezione. Gli **ambiti** sono gli ambiti di autorizzazione Azure ad necessari per accedere alla risorsa. 
+- `mip::AuthDelegate::OAuth2Challenge`: Accetta quattro parametri, **Authority**, **Resource**, **Claims** e **Scopes**. **Authority** è il servizio per cui verrà generato il token. **Resource** è il servizio a cui si tenta di accedere. L'SDK gestirà il passaggio di questi parametri al delegato quando viene chiamato. Le **attestazioni** sono le attestazioni specifiche dell'etichetta richieste dal servizio di protezione. Gli **ambiti** sono gli ambiti di autorizzazione Azure ad necessari per accedere alla risorsa. 
 - `mip::AuthDelegate::OAuth2Token`: Il risultato del token viene scritto in questo oggetto. Verrà utilizzato dall'SDK quando viene caricato il motore. Al di fuori di questa implementazione dell'autenticazione non dovrebbe essere necessario ottenere o impostare questo valore in altre posizioni.
 
 **Importante:** le applicazioni non chiamano `AcquireOAuth2Token` direttamente. L'SDK chiamerà questa funzione quando necessario.
 
-## <a name="consent"></a>Consent
+## <a name="consent"></a>Consenso
 
 Azure AD richiede di dare il consenso per un'applicazione, prima che le venga concessa l'autorizzazione per accedere alle risorse/API protette con l'identità di un account. Il consenso viene registrato come riconoscimento permanente dell'autorizzazione nel tenant dell'account, per l'account specifico (consenso dell'utente) o per tutti gli account (consenso dell'amministratore). Gli scenari per il consenso sono vari, a seconda dell'API a cui si accede e delle autorizzazioni che cerca l'applicazione, nonché dell'account usato per l'accesso: 
 
@@ -101,7 +101,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-A scopo di test e sviluppo, è possibile implementare un semplice `ConsentDelegate` simile al seguente:
+A scopo di test e sviluppo, è `ConsentDelegate` possibile implementare un semplice aspetto simile al seguente:
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -115,5 +115,4 @@ Tuttavia, nel codice di produzione è possibile che l'utente debba presentare un
 
 Per semplicità, gli esempi dimostrativi del delegato implementeranno l'acquisizione del token tramite la chiamata di uno script esterno. Questo script può essere sostituito da qualsiasi altro tipo di script, una libreria OAuth2 open source o una libreria OAuth2 personalizzata.
 
-- [Acquisire un token di accesso con PowerShell](concept-authentication-acquire-token-ps.md)
 - [Acquisire un token di accesso con Python](concept-authentication-acquire-token-py.md)
