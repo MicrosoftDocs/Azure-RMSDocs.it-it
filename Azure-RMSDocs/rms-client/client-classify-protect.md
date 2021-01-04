@@ -9,22 +9,23 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 0230c561d415fd653b87703c5b398be6bd034093
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 852c63d8b877d8571a7b4c82b28881a4387faf6a
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583490"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807366"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-classic-client"></a>Guida dell'utente: classificare e proteggere con il client di Azure Information Protection classico
 
 >***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
->***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client classico Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).

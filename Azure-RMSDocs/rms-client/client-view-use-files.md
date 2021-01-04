@@ -9,16 +9,17 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 280fb2d86bf4c4c9165c1d74df6c17da69a499c0
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 5a0bbc3160784259f3bf6799135b6cb82fb64693
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385591"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807043"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-classic-client-viewer"></a>Guida dell'utente: visualizzare i file protetti con il visualizzatore client classico Azure Information Protection
 
@@ -27,7 +28,7 @@ ms.locfileid: "97385591"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere la guida per l' [utente del client Unified Labeling](clientv2-view-use-files.md). *
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 

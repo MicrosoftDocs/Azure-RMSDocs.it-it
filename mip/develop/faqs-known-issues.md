@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9b0f9e3fa619762e08d32fb17da576d58f92071d
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 0fbb704024a87cbee30016a2f5130d788609cea3
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567831"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701561"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 
@@ -19,13 +19,19 @@ In questo articolo vengono fornite le risposte alle domande comuni e informazion
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti 
 
+### <a name="file-parsing"></a>Analisi dei file
+
+**Domanda**: è possibile scrivere nello stesso file che sto attualmente leggendo con il file SDK?
+
+L'SDK MIP non supporta la lettura e la scrittura simultanee dello stesso file. Tutti i file con etichetta comporteranno una *copia* del file di input con le azioni etichetta applicate. L'applicazione deve sostituire l'originale con il file con etichetta. 
+
 ### <a name="sdk-string-handling"></a>Gestione delle stringhe SDK
 
 **Domanda**: in che modo l'SDK gestisce le stringhe e il tipo di stringa da usare nel codice?
 
 L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transformation Format - 8 bit)](https://wikipedia.org/wiki/UTF-8) per la gestione delle stringhe. Le linee guida specifiche dipendono dalla piattaforma in uso:
 
-| Piattaforma | Indicazioni |
+| Piattaforma | Materiale sussidiario |
 |-|-|
 | Nativa Windows | Per i client SDK C++, il tipo di libreria standard C++ [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) viene usato per passare stringhe da e verso le funzioni API. La conversione da e verso UTF-8 viene gestita internamente da MIP SDK. Quando l'API restituisce `std::string`, è necessario aspettarsi la codifica UTF-8 e gestire di conseguenza l'eventuale conversione della stringa. In alcuni casi, viene restituita una stringa come parte di un vettore `uint8_t`(ad esempio, una licenza di pubblicazione), ma deve essere trattata come un BLOB opaco.<br><br>Per ulteriori informazioni ed esempi, vedere:<ul><li>[Funzione WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) per assistenza con la conversione di stringhe di caratteri wide a più byte, ad esempio UTF-8.<li>I file di esempio seguenti inclusi nel [download dell'SDK](setup-configure-mip.md#configure-your-client-workstation):<ul><li>Le funzioni di utilità per le stringhe di esempio `file\samples\common\string_utils.cpp`, per la conversione da e verso stringhe UTF-8 wide.<li>Un'implementazione di `wmain(int argc, wchar_t *argv[])` in `file\samples\file\main.cpp`, che usa le funzioni di conversione stringa precedenti.</li></ul></ul>|
 | .NET | Per i client .NET dell'SDK, tutte le stringhe usano la codifica predefinita UTF-16 e non è necessaria alcuna conversione speciale. La conversione da e verso UTF-16 viene gestita internamente da MIP SDK. |
@@ -72,9 +78,3 @@ L'applicazione non dispone del runtime necessario o non è stata compilata come 
 > "ProxyAuthenticatonError: autenticazione proxy non supportata"
 
 Il MIP SDK non supporta l'uso di proxy autenticati. Per correggere questo messaggio, gli amministratori del proxy devono impostare gli endpoint di servizio di Microsoft Information Protection per ignorare il proxy. Un elenco di tali endpoint è disponibile nella pagina [URL e intervalli di indirizzi IP di Office 365](/office365/enterprise/urls-and-ip-address-ranges) . Per MIP SDK è necessario che `*.protection.outlook.com` (riga 9) e gli endpoint servizio Azure Information Protection (riga 73) ignorino l'autenticazione proxy.
-
-### <a name="issues-in-net-core"></a>Problemi in .NET Core
-
-**Domanda**: il pacchetto NuGet funziona in .NET Core? 
-
-Il pacchetto NuGet verrà installato in un progetto .NET Core, ma non verrà eseguito. Stiamo lavorando per correggere questa operazione per Windows, ma non abbiamo una sequenza temporale per supportare altre piattaforme.

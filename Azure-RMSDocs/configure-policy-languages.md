@@ -9,14 +9,15 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e6eeada66c38a9c3c0095f22165dbf0454d04290
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e2767a97e84634a9faffec1e8776311dc826e17f
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383262"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806601"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
@@ -25,7 +26,7 @@ ms.locfileid: "97383262"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione Microsoft 365. Per configurare lingue diverse per le etichette di riservatezza, usare il parametro *LocaleSettings* per il cmdlet [set-label](/powershell/module/exchange/policy-and-compliance/set-label) . *
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 >
 
 Anche se le etichette predefinite per Azure Information Protection supportano più lingue, è necessario configurare il supporto per i nomi di etichetta e le descrizioni specificate. Per questa configurazione è necessario:

@@ -4,7 +4,7 @@ description: Elenca i prerequisiti per l'installazione e la distribuzione di Azu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/03/2020
+ms.date: 12/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49c614e4d124e7001a446c784a816b42ec91e111
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: a3b4f110b1958ec055720da218c52cce4c3fc0f4
+ms.sourcegitcommit: f944025b6c026906f0010c9e7f9d8d54f20a6be7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382582"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97705718"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Requisiti per l'installazione e la distribuzione del Azure Information Protection scanner per l'assegnazione di etichette unificata
 
@@ -318,62 +318,80 @@ Per supportare un computer disconnesso usando solo PowerShell, seguire questa pr
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restrizione: non è possibile concedere all'utente il ruolo Sysadmin o i database devono essere creati e configurati manualmente
 
+Utilizzare le procedure seguenti per creare manualmente i database e concedere il ruolo **db_owner** , in base alle esigenze.
+
+- [Procedura per il database scanner](#manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights)
+- [Procedura per il database di individuazione della rete](#manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights)
+
 Se è possibile concedere *temporaneamente* il ruolo sysadmin per installare lo scanner, è possibile rimuovere questo ruolo quando l'installazione dello scanner è stata completata.
 
 Eseguire una delle operazioni seguenti, a seconda dei requisiti dell'organizzazione:
 
-- **È possibile avere temporaneamente il ruolo sysadmin.** Se si dispone temporaneamente del ruolo sysadmin, il database viene creato automaticamente e all'account di servizio per lo scanner vengono concesse automaticamente le autorizzazioni necessarie.
-
-    Tuttavia, l'account utente che configura lo scanner richiede ancora il ruolo **db_owner** per il database di configurazione dello scanner. Se si ha il ruolo sysadmin solo fino al completamento dell'installazione dello scanner, [concedere manualmente il ruolo db_owner all'account utente](#create-a-user-and-grant-db_owner-rights-manually).
-
-- **Non è possibile avere il ruolo sysadmin**. Se non è possibile concedere il ruolo sysadmin anche temporaneamente, è necessario richiedere un utente con diritti sysadmin per creare manualmente un database prima di installare lo scanner.
-
-    Per questa configurazione, è necessario assegnare il ruolo **db_owner** ai seguenti account:
-
-    - Account del servizio per lo scanner
-    - Account utente per l'installazione dello scanner
-    - Account utente per la configurazione dello scanner
-
-    In genere, si usa lo stesso account utente per installare e configurare lo scanner, Se si usano account diversi, entrambi richiedono il ruolo db_owner per il database di configurazione dello scanner. Creare l'utente e i diritti in base alle esigenze. Se si specifica il nome del proprio cluster, il database di configurazione viene denominato **AIPScannerUL_<cluster_name>**.
+|Restrizione  |Descrizione  |
+|---------|---------|
+|**È possibile avere temporaneamente il ruolo sysadmin**     |  Se si dispone temporaneamente del ruolo sysadmin, il database viene creato automaticamente e all'account di servizio per lo scanner vengono concesse automaticamente le autorizzazioni necessarie. <br><br>Tuttavia, l'account utente che configura lo scanner richiede ancora il ruolo **db_owner** per il database di configurazione dello scanner. Se si ha il ruolo sysadmin solo fino al completamento dell'installazione dello scanner, concedere manualmente il ruolo **db_owner** all'account utente.       |
+|**Non è possibile avere il ruolo sysadmin**     |  Se non è possibile concedere il ruolo sysadmin anche temporaneamente, è necessario richiedere un utente con diritti sysadmin per creare manualmente un database prima di installare lo scanner. <br><br>Per questa configurazione, è necessario assegnare il ruolo **db_owner** ai seguenti account: <br>-Account del servizio per lo scanner<br>-Account utente per l'installazione dello scanner<br>-Account utente per la configurazione dello scanner <br><br>In genere, si usa lo stesso account utente per installare e configurare lo scanner, Se si usano account diversi, entrambi richiedono il ruolo **db_owner** per il database di configurazione dello scanner. Creare l'utente e i diritti in base alle esigenze. Se si specifica il nome del proprio cluster, il database di configurazione viene denominato **AIPScannerUL_<cluster_name>**.  |
+| | |
 
 Inoltre:
 
 - È necessario essere un amministratore locale nel server che eseguirà lo scanner
 - All'account del servizio che eseguirà lo scanner devono essere concesse le autorizzazioni controllo completo per le chiavi del registro di sistema seguenti:
 
-    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
-    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server`
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server`
 
 Se, dopo aver configurato queste autorizzazioni, viene visualizzato un errore durante l'installazione dello scanner, l'errore può essere ignorato ed è possibile avviare manualmente il servizio scanner.
 
-#### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>Creare un utente e concedere i diritti di db_owner manualmente
+#### <a name="manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights"></a>Creazione manuale di un database e di un utente per lo scanner e concessione dei diritti db_owner
 
-Per creare un utente e concedere diritti di db_owner per il database, rivolgersi al sysadmin per eseguire i passaggi seguenti:
+Se è necessario creare manualmente il database dello scanner e/o creare un utente e concedere diritti di **db_owner** per il database, richiedere all'amministratore di sistema di eseguire i passaggi seguenti:
 
 1. Creare un database per lo scanner:
 
-    ```cli
+    ```sql
     **CREATE DATABASE AIPScannerUL_[clustername]**
 
     **ALTER DATABASE AIPScannerUL_[clustername] SET TRUSTWORTHY ON**
     ```
 
-2. Concedere i diritti all'utente che esegue il comando di installazione e viene usato per eseguire i comandi di gestione dello scanner.
-
-    Script SQL:
+2. Concedere i diritti all'utente che esegue il comando di installazione e viene usato per eseguire i comandi di gestione dello scanner. Usare lo script seguente:
 
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
     ```
 
-3. Concedere i diritti per l'account del servizio scanner.
+3. Concedere i diritti per l'account del servizio scanner. Usare lo script seguente:
 
-    Script SQL:
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
+#### <a name="manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights"></a>Creazione manuale di un database e di un utente per il servizio di individuazione della rete e concessione dei diritti di db_owner
+
+Se è necessario creare manualmente il database di [individuazione della rete](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) e/o creare un utente e concedere diritti di **db_owner** per il database, richiedere all'amministratore di sistema di eseguire i passaggi seguenti:
+
+1. Creare un database per il servizio di individuazione della rete:
+
+    ```sql
+    **CREATE DATABASE AIPNetworkDiscovery_[clustername]**
+
+    **ALTER DATABASE AIPNetworkDiscovery_[clustername] SET TRUSTWORTHY ON**
+    ```
+
+2. Concedere i diritti all'utente che esegue il comando di installazione e viene usato per eseguire i comandi di gestione dello scanner. Usare lo script seguente:
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+    ```
+
+3. Concedere i diritti per l'account del servizio scanner. Usare lo script seguente:
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    ```
 ### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restrizione: all'account del servizio per lo scanner non può essere concesso il diritto **Log on locally** (Accesso locale)
 
 Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** per gli account del servizio, usare il parametro *OnBehalfOf* con set-AIPAuthentication.

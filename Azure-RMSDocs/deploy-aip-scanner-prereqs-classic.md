@@ -8,16 +8,17 @@ ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 71dd1d8119af741bbafb8173c63622f4e99146d4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e68879b51d53862744cdeebbae587c5db7b74daa
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382633"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806176"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner classico
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382633"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per lo scanner Unified Labeling, vedere [Prerequisiti dello scanner per l'assegnazione di etichette unificata](deploy-aip-scanner-prereqs.md) .*
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Prima di installare lo scanner locale Azure Information Protection, verificare che il sistema sia conforme ai requisiti di [Azure Information Protection](requirements.md)di base, nonché i requisiti seguenti specifici per lo scanner:
 

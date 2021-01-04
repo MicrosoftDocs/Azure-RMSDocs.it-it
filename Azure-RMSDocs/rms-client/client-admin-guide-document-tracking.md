@@ -9,25 +9,26 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
+ROBOTS: NOINDEX
 ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ea1a6494384827d240f47068ecce6addee84035
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 5cc94944405b00139f472a2ab962706dd1f76dd8
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386186"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807434"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection-using-the-classic-client"></a>Guida dell'amministratore: configurazione e uso del rilevamento dei documenti per Azure Information Protection usando il client classico
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client classico Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Se si dispone di una [sottoscrizione che supporta il rilevamento dei documenti](https://www.microsoft.com/cloud-platform/azure-information-protection-features) e il client AIP classico, il sito di rilevamento dei documenti è abilitato per impostazione predefinita per tutti gli utenti dell'organizzazione. Il rilevamento dei documenti fornisce informazioni, per utenti e amministratori, su quando si è verificato l'accesso a un documento protetto; se necessario, è possibile revocare un documento rilevato.
 
@@ -107,7 +108,7 @@ Per istruzioni su come usare il sito di rilevamento dei documenti, vedere [Rilev
 
 Per poter rilevare e revocare un documento, è prima necessario registrarlo nel sito di rilevamento dei documenti. Questa azione si verifica quando gli utenti selezionano l'opzione **Rileva e revoca** da Esplora file o dalle app di Office quando usano il client Azure Information Protection.
 
-Se si etichettano e proteggono i file per gli utenti usando il cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), è possibile usare il parametro *EnableTracking* per registrare il file nel sito di rilevamento dei documenti. ad esempio:
+Se si etichettano e proteggono i file per gli utenti usando il cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), è possibile usare il parametro *EnableTracking* per registrare il file nel sito di rilevamento dei documenti. Ad esempio:
 
 ```ps
 Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking

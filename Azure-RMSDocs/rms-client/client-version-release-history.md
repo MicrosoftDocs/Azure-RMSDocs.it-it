@@ -8,16 +8,17 @@ ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4eabec082a6124689d6ef6e8c34698b73fb9162e
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: def8ba403e961f6e64b0bd34eb5c7ac5bd50632a
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385727"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807075"
 ---
 # <a name="azure-information-protection-classic-client-version-release-history-and-support-policy"></a>Azure Information Protection client classico: cronologia delle versioni e criteri di supporto
 
@@ -27,9 +28,9 @@ ms.locfileid: "97385727"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di assegnazione di etichette unificata, vedere [cronologia delle versioni client unificata](unifiedlabelingclient-version-release-history.md)per l'assegnazione di etichette.
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-**Per distribuire il client AIP classico**, aprire un ticket di supporto per ottenere l'accesso al download.
+**Per distribuire il client classico di AIP**, aprire un ticket di supporto per ottenere l'accesso al download.
 
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 

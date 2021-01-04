@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 5f21c837c1bcd48fe23f3df2647d401390ee81f5
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: e1b21d78f45d1040766d2b4e13b98ba638770106
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556232"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701578"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Microsoft Information Protection SDK - Implementazione di un delegato di autenticazione (C++)
 
@@ -113,5 +113,4 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 
 Per completare l'implementazione dell'autenticazione, è necessario sviluppare il codice dietro la funzione `AcquireToken()`. Gli esempi seguenti illustrano alcuni modi per acquisire il token.
 
-- [Esempio di acquisizione del token semplice con PowerShell](concept-authentication-acquire-token-ps.md)
 - [Esempio di acquisizione del token con Python](concept-authentication-acquire-token-py.md)

@@ -4,7 +4,7 @@ description: Scopri le novità per il client Unified Labeling Azure Information 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/15/2020
+ms.date: 12/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7da6699fb2640791f78972f4271a6d846405731a
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: e4193a0345708d4c90e3469df8b1102d45a85af7
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583677"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805955"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -45,6 +45,7 @@ Si noti che Azure Information Protection funzionalità sono attualmente in antep
 
 |Versione client|Data di rilascio|
 |--------------|-------------|
+|2.6.111.0 | 03/09/2020|
 |2.5.33.0 |23/10/2019|
 |2.2.21.0|09/03/2019|
 |2.2.19.0|08/06/2019|
@@ -131,7 +132,7 @@ Per altre informazioni, vedere [creare un processo di analisi del contenuto](../
 
 ### <a name="added-support-for-additional-sensitive-information-types"></a>Aggiunta del supporto per altri tipi di informazioni riservate
 
-È stato aggiunto il supporto per altri tipi di informazioni riservate in Azure Information Protection, ad esempio il **numero aziendale dell'Australia**, il **numero della società Australia** o la **scheda identità austriaca.**
+È stato aggiunto il supporto per altri tipi di informazioni riservate in Azure Information Protection, ad esempio il **numero aziendale dell'Australia**, il **numero della società Australia** o la **scheda identità austriaca**.
 
 Per ulteriori informazioni, vedere le [definizioni di entità di tipo informazioni riservate](/microsoft-365/compliance/sensitive-information-type-entity-definitions) nella documentazione di Microsoft 365.
 
@@ -147,7 +148,15 @@ Per altre informazioni, vedere:
 
 - [Guida dell'amministratore: rilevare e revocare l'accesso ai documenti con Azure Information Protection](track-and-revoke-admin.md)
 - [Guida dell'utente: revocare l'accesso ai documenti con Azure Information Protection](revoke-access-user.md)
-- [Problemi noti per il rilevamento e la revoca dell'accesso ai documenti](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Problemi noti per il rilevamento e la revoca dell'accesso ai documenti](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+
+Se nella propria organizzazione o regione sono presenti requisiti sulla privacy che richiedono la disattivazione delle funzionalità di rilevamento dei documenti, vedere le [procedure per tenere traccia e revocare l'amministratore](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
+
+**Aggiornamenti dal client classico**
+
+Il client di AIP classico supporta le funzionalità di rilevamento e revoca tramite il [portale di rilevamento Microsoft](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered). Questo portale di rilevamento non è pertinente quando si usa il client di etichetta unificata.
+ 
+Per visualizzare i dati di rilevamento con il client di etichettatura unificata, usare solo i comandi di PowerShell, come descritto nella [Guida dell'amministratore](track-and-revoke-admin.md).
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-scanner"></a>Correzioni e miglioramenti per lo scanner Unified Labeling
 
@@ -171,11 +180,11 @@ Nella versione 2.9.109.0 di [Azure Information Protection scanner Unified Labeli
 
 - La modalità anteprima di Outlook genera ora [i log di controllo per gli eventi di individuazione](../audit-logs.md#discover-audit-logs)
 
-- Le etichette e le [filigrane](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) [consigliate](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) vengono applicate come previsto in Outlook. 
+- Le etichette e il [contrassegno visivo](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) [consigliati](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) vengono applicati come previsto in Outlook. 
 
-- Aggiunta del supporto per le impostazioni [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) e [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) per i contatti nelle liste di distribuzione.
+- Aggiunta del supporto per la [ricerca di destinatari nelle liste di distribuzione di Outlook](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview), ad esempio quando sono configurate le impostazioni [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) e [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) .
 
-    Per configurare questa impostazione, impostare il valore [EnableOutlookDistributionListExpansion](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) su **true**. Potrebbe anche essere necessario aumentare il valore di timeout predefinito, come definito nell'impostazione [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) .
+    Quando si attiva questa funzionalità, è consigliabile anche aumentare il valore di timeout predefinito, come definito nell'impostazione [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) .
 
 - Aggiornamenti dell' [ordine di precedenza](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) utilizzato quando per un utente sono configurati più criteri di etichetta, ognuno con impostazioni avanzate in conflitto.
 
@@ -251,7 +260,7 @@ Il servizio di **individuazione della rete** aggiorna i report del **repository*
 
 1. Assicurarsi di aver abilitato Azure Information Protection Analytics.
 
-    Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima).**
+    Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima)**.
 
     Per ulteriori informazioni, vedere [la pagina relativa alla creazione di report centrali per Azure Information Protection (anteprima pubblica)](../reports-aip.md).
 
@@ -379,7 +388,7 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.96.0
 
 - [Ottenere i report dallo scanner negli errori per applicare gli eventi di azione](../reports-aip.md#friendly-schema-reference-for-event-functions). Usare i report per ottenere informazioni sugli eventi di azione non riusciti e individuare modi per evitare future occorrenze.
 
-- Introduzione dello strumento Analizzatore diagnostica di AIP scanner per il rilevamento e l'analisi degli errori comuni del scanner. Per iniziare a usare la diagnostica dello scanner AIP, [eseguire il nuovo cmdlet **Start-AIPScannerDiagnostics**](../deploy-aip-scanner-manage.md#troubleshooting-using-the-scanner-diagnostic-tool).
+- Introduzione dello strumento Analizzatore diagnostica di AIP scanner per il rilevamento e l'analisi degli errori comuni del scanner. Per iniziare a usare la diagnostica dello scanner AIP, [eseguire il cmdlet **Start-AIPScannerDiagnostics**](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool).
 
 - È ora possibile gestire e limitare l'utilizzo massimo della CPU nel computer dello scanner. Informazioni su come impedire il 100% di utilizzo della CPU e gestire l'utilizzo della CPU con [due nuove impostazioni avanzate **ScannerMaxCPU** e **ScannerMinCPU**](./clientv2-admin-guide-customizations.md#limit-cpu-consumption).
 
@@ -444,53 +453,16 @@ Per ulteriori informazioni sui requisiti, vedere [firewall e requisiti dell'infr
 
 - Si è verificato un problema per cui solo la prima pagina di contenuto di un file PDF veniva utilizzata per l'applicazione delle regole di classificazione e la classificazione autoclassificazione basata su tutto il contenuto del file PDF ora procede come previsto. Per ulteriori informazioni sulla classificazione e l'assegnazione di etichette, vedere [domande frequenti sulla classificazione e l'assegnazione di etichette](../faqs-infoprotect.md).
 
-- Quando vengono configurati più account di Exchange e il client Azure Information Protection Outlook è abilitato, i messaggi di posta elettronica vengono inviati dall'account secondario come previsto. Per ulteriori informazioni sulla configurazione del client Unified Labeling con Outlook, vedere [prerequisiti aggiuntivi per il Azure Information Protection client Unified Labeling](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+- Quando vengono configurati più account di Exchange e il client Azure Information Protection Outlook è abilitato, i messaggi di posta elettronica vengono inviati dall'account secondario come previsto. Per altre informazioni sulla configurazione del client Unified Labeling con Outlook, vedere [configurare i criteri di gruppo per impedire la disabilitazione di AIP](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
 
 - Quando un documento con un'etichetta di riservatezza superiore viene trascinato e rilasciato in un messaggio di posta elettronica, il messaggio di posta elettronica riceve automaticamente l'etichetta di riservatezza superiore come previsto. Per ulteriori informazioni sull'assegnazione di etichette alle funzionalità client, vedere la [tabella di confronto dei client con etichetta](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-- Le autorizzazioni personalizzate vengono ora applicate ai messaggi di posta elettronica come previsto, quando gli indirizzi di posta elettronica includono un apostrofo (') e un punto (.) Per ulteriori informazioni sulla configurazione del client Unified Labeling con Outlook, vedere [prerequisiti aggiuntivi per il Azure Information Protection client Unified Labeling](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+- Le autorizzazioni personalizzate vengono ora applicate ai messaggi di posta elettronica come previsto, quando gli indirizzi di posta elettronica includono un apostrofo (') e un punto (.) Per altre informazioni sulla configurazione del client Unified Labeling con Outlook, vedere [configurare i criteri di gruppo per impedire la disabilitazione di AIP](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
+
 
 - Per impostazione predefinita, il proprietario NTFS di un file viene perso quando il file viene identificato dallo scanner di etichette unificato, da PowerShell o dall'estensione di Esplora file. A questo punto è possibile configurare il sistema per la conservazione del proprietario NTFS del file impostando la nuova impostazione avanzata **[UseCopyAndPreserveNTFSOwner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** su **true**.
 
     L'impostazione avanzata **UseCopyAndPreserveNTFSOwner** richiede una connessione di rete affidabile e a bassa latenza tra lo scanner e il repository analizzato.
-
-## <a name="version-261110"></a>Versione 2.6.111.0
-
-**Rilasciato** 03/09/2020
-
-Supportato tramite 12/29/2020
-
-### <a name="new-features-version-261110"></a>Nuove funzionalità, versione 2.6.111.0
-
-- Versione di disponibilità generale dello [scanner](../deploy-aip-scanner.md)per esaminare ed etichettare i documenti negli archivi dati locali.
-
-- Correlate allo [scanner](../deploy-aip-scanner.md) :
-    - [Individuazione più semplice in locale e nel sito secondario di SharePoint](../quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). L'impostazione di ciascun sito specifico non è più necessaria.
-    - Proprietà avanzata per il [ridimensionamento del blocco SQL](../deploy-aip-scanner-prereqs.md#storage-requirements-and-capacity-planning-for-sql-server) aggiunto.
-    - Gli amministratori hanno ora la possibilità di [arrestare le analisi esistenti ed eseguire una ripetizione dell'analisi](../deploy-aip-scanner-manage.md#stopping-a-scan) se è stata apportata una modifica all'etichetta predefinita.
-    - Per impostazione predefinita, lo scanner ora imposta la telemetria minima per le analisi più veloci e le dimensioni ridotte del log e i tipi di informazioni sono ora memorizzati nella cache nel database Altre informazioni sull' [ottimizzazione dello scanner](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
-    - Lo scanner supporta ora distribuzioni separate per il database e il servizio, mentre i diritti **sysadmin** sono necessari solo per la distribuzione del database.
-    - Miglioramenti apportati alle prestazioni dello scanner.
-
-- Modifica del cmdlet di [PowerShell](./clientv2-admin-guide-powershell.md) **set-AIPFileLabel** per abilitare la rimozione della protezione dai file PST, rar, 7zip e msg. Questa funzionalità è disabilitata per impostazione predefinita e deve essere attivata usando il cmdlet [set-LabelPolicy](./clientv2-admin-guide-customizations.md) , come descritto [qui](./clientv2-admin-guide-customizations.md#enable-removal-of-protection-from-compressed-files).  
-
-- È stata aggiunta la possibilità per gli amministratori di Azure Information Protection di controllare quando vengono usate le estensioni. Pfile per i file. Altre informazioni sulla [modifica dei tipi di file protetti](./clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
-
-- Aggiunto supporto del contrassegno visivo dinamico per le applicazioni e le variabili. Altre informazioni su come [configurare le etichette per i contrassegni visivi](../configure-policy-markings.md).
-
-- Miglioramenti apportati ai [Suggerimenti per i criteri personalizzabili per le etichette automatiche e consigliate](use-client.md).
-
-- Aggiunto il supporto per la [funzionalità di assegnazione di etichette offline](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) con le app di Office nel client Unified labeling.
-
-### <a name="fixes-and-improvements-version-261110"></a>Correzioni e miglioramenti, versione 2.6.111.0
-
-- Nei casi in cui gli utenti hanno tentato di aprire i file TIFF protetti e i file TIFF creati da RightFax, i file TIFF sono ora aperti e rimangono stabili come previsto.  
-- Sono stati risolti i danneggiamenti precedenti dei file txt e PDF protetti.
-- È stata corretta l'assegnazione di etichette incoerenti tra **automatico** e **manuale** in log Analytics.
-- Sono stati risolti problemi di ereditarietà imprevisti identificati tra i nuovi messaggi di posta elettronica e l'ultimo messaggio di posta elettronica aperto.  
-- La protezione dei file con **estensione msg** come **. msg. Pfile** ora funziona come previsto.
-- Le autorizzazioni di comproprietario aggiunte dalle impostazioni definite dall'utente di Office sono ora applicate come previsto.
-- Quando si immette la giustificazione del downgrade delle autorizzazioni, non è più possibile immettere il testo quando sono già selezionate altre opzioni.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

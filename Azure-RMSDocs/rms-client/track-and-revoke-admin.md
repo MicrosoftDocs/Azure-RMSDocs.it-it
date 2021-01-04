@@ -4,7 +4,7 @@ description: Viene descritto come gli amministratori possono tenere traccia dell
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/08/2020
+ms.date: 12/24/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: ac4e506d3c3a6f582975a435a7e9f1e327068ac2
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 6c83aa89c06dbf7c6cab5ac014db72eed5e91f06
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97592746"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764136"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Guida dell'amministratore: rilevare e revocare l'accesso ai documenti con Azure Information Protection (anteprima pubblica)
 
@@ -28,13 +28,13 @@ ms.locfileid: "97592746"
 
 Se è stato eseguito l'aggiornamento alla [versione 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) o successiva, eventuali documenti protetti non ancora registrati per il rilevamento vengono registrati automaticamente alla successiva apertura tramite il client di assegnazione unificata di AIP.
 
-La registrazione di un documento per il rilevamento consente agli amministratori globali AIP di tenere traccia dei dettagli di accesso, inclusi gli eventi di accesso riusciti e i tentativi negati, nonché di revocare l'accesso, se necessario. 
+La registrazione di un documento per il rilevamento consente [Microsoft 365 agli amministratori globali](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) di tenere traccia dei dettagli di accesso, inclusi gli eventi di accesso riusciti e i tentativi negati, nonché di revocare l'accesso, se necessario. 
 
 Le funzionalità rileva e revoca per il client Unified Labeling sono attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
 
 ## <a name="track-document-access"></a>Tenere traccia dell'accesso ai documenti
 
-Gli amministratori possono tenere traccia dell'accesso per i documenti protetti tramite PowerShell usando il ContentID generato per il documento protetto durante la registrazione.
+Gli amministratori globali possono tenere traccia dell'accesso per i documenti protetti tramite PowerShell usando il **ContentID** generato per il documento protetto durante la registrazione.
 
 **Per visualizzare i dettagli di accesso ai documenti**:
 
@@ -47,7 +47,7 @@ Usare i cmdlet seguenti per trovare i dettagli del documento di cui si vuole ten
     ad esempio:
         
     ```PowerShell
-    PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
+    Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
  
     Questo comando restituisce **ContentID** per tutti i documenti protetti corrispondenti, registrati per il rilevamento.
@@ -60,31 +60,31 @@ Usare i cmdlet seguenti per trovare i dettagli del documento di cui si vuole ten
     Ad esempio:
     
     ```PowerShell
-    PS C:\>Get-Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
+    Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
     ```
 
     Vengono restituiti i dati di rilevamento, inclusi i messaggi di posta elettronica degli utenti che hanno tentato di accedere, la concessione o la negazione dell'accesso, l'ora e la data del tentativo e il dominio e la posizione in cui ha avuto origine il tentativo di accesso.
 
 ## <a name="revoke-document-access-from-powershell"></a>Revocare l'accesso ai documenti da PowerShell
 
-Gli amministratori possono revocare l'accesso per qualsiasi documento protetto archiviato nelle proprie condivisioni di contenuto locali, usando il cmdlet [set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) . 
+Gli amministratori globali possono revocare l'accesso per qualsiasi documento protetto archiviato nelle rispettive condivisioni di contenuto locali, usando il cmdlet [set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) .
 
-1. Individuare il valore ContentID per il documento per cui si desidera revocare l'accesso.
+1. Individuare il valore **ContentID** per il documento per cui si desidera revocare l'accesso.
     
     Usare [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) per cercare un documento usando il nome file e/o l'indirizzo di posta elettronica dell'utente che ha applicato la protezione.
     
-    ad esempio:
+    Ad esempio:
         
     ```PowerShell
-    PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
+    Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
 
     I dati restituiti includono il valore ContentID per il documento.
 
     > [!TIP]
-    > Solo i documenti che sono stati protetti e registrati per il rilevamento hanno un valore ContentID. 
+    > Solo i documenti che sono stati protetti e registrati per il rilevamento hanno un valore **ContentID** . 
     >
-    > Se il documento non contiene ContentID, aprirlo in un computer in cui è installato il client di etichettatura unificato per registrare il file per il rilevamento.
+    > Se il documento non contiene **ContentID**, aprirlo in un computer in cui è installato il client di etichettatura unificato per registrare il file per il rilevamento.
 
 1. Usare [set-AIPServiceDocumentRevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) con il ContentId del documento per revocare l'accesso.
 
@@ -94,6 +94,10 @@ Gli amministratori possono revocare l'accesso per qualsiasi documento protetto a
     Set-AipServiceDocumentRevoked -ContentId 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
     ```
 
+> [!NOTE]
+> Se è consentito l' [accesso offline](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) , gli utenti continueranno a essere in grado di accedere ai documenti revocati fino alla scadenza del periodo di criteri offline. 
+> 
+
 > [!TIP]
 > Gli utenti possono anche revocare l'accesso per tutti i documenti in cui è stata applicata la protezione direttamente dal menu di **riservatezza** nelle app di Office. Per altre informazioni, vedere [Guida dell'utente: revocare l'accesso ai documenti con Azure Information Protection](revoke-access-user.md)
 
@@ -101,7 +105,7 @@ Gli amministratori possono revocare l'accesso per qualsiasi documento protetto a
 
 Se è stato revocato accidentalmente l'accesso a un documento specifico, usare lo stesso valore di **ContentID** con il cmdlet [Clear-AipServiceDocumentRevoke](/powershell/module/aipservice/clear-aipservicedocumentrevoke) per annullare la revoca dell'accesso. 
 
-Ad esempio: 
+Ad esempio:
 
 ```PowerShell
 Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
@@ -109,10 +113,27 @@ Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 
 L'accesso ai documenti viene concesso all'utente definito nel parametro **IssuerName** .
 
+## <a name="turn-off-track-and-revoke-features-for-your-tenant"></a>Disattivare le funzionalità di rilevamento e revoca per il tenant
+
+Se è necessario disattivare le funzionalità di rilevamento e revoca per il tenant, ad esempio per i requisiti di privacy nell'organizzazione o nell'area, eseguire entrambi i passaggi seguenti:
+
+1. Eseguire il cmdlet [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) .
+
+1. Impostare l'impostazione client avanzata [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) su **false**. 
+
+Il rilevamento dei documenti e le opzioni per revocare l'accesso sono disattivati per il tenant:
+
+- L'apertura di documenti protetti con il client AIP Unified Labeling non registra più i documenti per Track and Revoke.
+- I log di accesso non vengono archiviati quando vengono aperti i documenti protetti che sono già registrati. I log di accesso archiviati prima della disattivazione di queste funzionalità sono ancora disponibili. 
+- Gli amministratori non saranno in grado di rilevare o revocare l'accesso tramite PowerShell e gli utenti finali non visualizzeranno più l'opzione di menu [**Revoke**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) nelle app di Office.
+
+> [!NOTE]
+> Per attivare di nuovo Tracking e REVOKE, impostare [EnableTrackAndRevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) su **true** ed eseguire anche il cmdlet [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) .
+>
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni, vedere:
 
 - [Guida dell'utente del client per l'assegnazione unificata di AIP](clientv2-user-guide.md)
 - [Guida dell'amministratore client per l'assegnazione unificata di AIP](clientv2-admin-guide.md)
-- [Problemi noti per il rilevamento e la revoca dell'accesso ai documenti](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Problemi noti per le funzionalità di rilevamento e revoca](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)

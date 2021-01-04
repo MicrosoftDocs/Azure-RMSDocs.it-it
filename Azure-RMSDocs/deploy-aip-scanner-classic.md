@@ -8,16 +8,17 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 77d7ddb996a224e871a89227bd58872989bdc759
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 20eeef7115e4426f08b2cdb62a5086c140add6a5
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382854"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806278"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Che cos'è il Azure Information Protection scanner classico?
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382854"
 >***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere [che cos'è il Azure Information Protection scanner Unified Labeling?](deploy-aip-scanner.md). *
 
 > [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Utilizzare le informazioni contenute in questa sezione per ottenere informazioni sul Azure Information Protection scanner client classico e su come installare, configurare, eseguire e, se necessario, risolverlo correttamente.
 
@@ -80,7 +81,7 @@ Lo scanner ignora automaticamente i file esclusi dalla classificazione e dalla p
 
 Lo scanner considera anche eventuali elenchi di file definiti in modo esplicito per l'analisi o l'esclusione dall'analisi. Per impostazione predefinita, gli elenchi di file si applicano a tutti i repository di dati e possono anche essere definiti solo per repository specifici.
 
-Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. ad esempio:
+Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. Ad esempio:
 
 ![Configurare i tipi di file da analizzare per lo scanner di Azure Information Protection](./media/scanner-file-types.png)
 

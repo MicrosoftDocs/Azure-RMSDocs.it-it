@@ -9,16 +9,17 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
+ROBOTS: NOINDEX
 ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e3410c4daa148bed163e9ab45d2449864716c926
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: c96fa834e53c044c88393fc9ba2000be89c6a112
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583507"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807417"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -35,7 +36,7 @@ Quando si usa il servizio Rights Management di Azure da Azure Information Protec
 |Applicazione o servizio|Modalità di aggiornamento dei modelli dopo le modifiche|
 |--------------------------|---------------------------------------------|
 |**Exchange Online**<br /><br />Applicabile per regole di trasporto e Outlook Web App |Vengono aggiornati automaticamente in un'ora e non sono necessari altri passaggi.|
-|**Azure Information Protection client classico**|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché questo client è strettamente integrato con Office, verranno aggiornati anche tutti i modelli aggiornati per le app Microsoft 365, Office 2019, Office 2016 o Office 2013 per il client di Azure Information Protection.|
+|**Client classico di Azure Information Protection**|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché questo client è strettamente integrato con Office, verranno aggiornati anche tutti i modelli aggiornati per le app Microsoft 365, Office 2019, Office 2016 o Office 2013 per il client di Azure Information Protection.|
 |**Client per l'etichettatura unificata di Azure Information Protection**|Per le app di Office, i modelli vengono aggiornati automaticamente ogni volta che l'app viene aperta.<br /><br /> Inoltre, poiché questo client è strettamente integrato con Office, tutti i modelli aggiornati per le app Microsoft 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati per il client di Azure Information Protection Unified labeling.<br /><br /> Per Esplora file, PowerShell e lo scanner, il client non Scarica i modelli ma li accede online senza ulteriori passaggi necessari.|
 |**App Microsoft 365, Office 2019, Office 2016 e Office 2013**|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />- Per le versioni più recenti di Office: l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per forzare un aggiornamento prima della pianificazione, vedere la sezione seguente, [Microsoft 365 app, office 2019, office 2016 e office 2013: How to Force a refresh for templates](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |**Office 2010**|I modelli vengono aggiornati automaticamente quando gli utenti si disconnettono da Windows, eseguono nuovamente l'accesso e attendono al massimo un'ora. <br><br>Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).|

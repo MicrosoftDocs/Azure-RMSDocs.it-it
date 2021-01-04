@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: abb96719d51658226211653b4ab4d171fcaa6b2e
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97592745"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764102"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>Guida dell'utente: revocare l'accesso ai documenti con Azure Information Protection (anteprima pubblica)
 
@@ -51,7 +51,7 @@ Per revocare l'accesso da Word, Excel o PowerPoint:
  
 1. Nel messaggio di conferma visualizzato, fare clic su **Sì** per continuare.
 
-L'accesso viene revocato e gli altri utenti non potranno più accedere al documento.
+L'accesso viene revocato e gli altri utenti non potranno più accedere al documento. Se è consentito l' [accesso offline](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) , gli utenti continueranno a essere in grado di accedere ai documenti revocati fino alla scadenza del periodo di criteri offline. 
 
 ### <a name="dont-see-the-revoke-access-option"></a>Non viene visualizzata l'opzione REVOKE Access?
 
@@ -64,6 +64,8 @@ Se non viene visualizzata l'opzione per **revocare l'accesso** nel menu **Sensit
 - Potrebbe non essere installata la versione più recente di AIP Unified Labeling client o potrebbe essere necessario riavviare le app di Office o il computer dopo l'installazione. 
 
     Per ulteriori informazioni, vedere [Guida dell'utente: scaricare e installare il client di Azure Information Protection](install-client-app.md).
+
+- È possibile che l'amministratore abbia [disattivato le funzionalità di rilevamento](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant) nell'organizzazione.
 
 ## <a name="revoking-access-where-the-document-protection-has-been-changed-on-a-copy"></a>Revoca dell'accesso in cui la protezione dei documenti è stata modificata in una copia
 
@@ -80,4 +82,4 @@ Per altre informazioni, vedere:
 
 - [Guida dell'utente del client per l'assegnazione unificata di AIP](clientv2-user-guide.md)
 - [Guida dell'amministratore client per l'assegnazione unificata di AIP](clientv2-admin-guide.md)
-- [Problemi noti per il rilevamento e la revoca dell'accesso ai documenti](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Problemi noti per le funzionalità di rilevamento e revoca](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
