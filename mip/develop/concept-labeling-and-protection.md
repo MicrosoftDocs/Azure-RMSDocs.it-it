@@ -1,17 +1,17 @@
 ---
 title: Assegnazione di etichette e protezione-Microsoft Information Protection SDK
 description: Operazioni di Microsoft Information Protection Software Development Kit.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: 22cea33a439d8d0ca014095f3f2b7144f112fd93
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: 2e18b9ae65a4915807fdcb8fc37dd18396270fee
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566741"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865011"
 ---
 # <a name="labeling-and-pre-existing-protection-in-microsoft-information-protection-sdk"></a>Assegnazione di etichette e protezione preesistente in Microsoft Information Protection SDK
 

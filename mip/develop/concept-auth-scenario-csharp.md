@@ -1,17 +1,17 @@
 ---
 title: Concetti-scenari di autenticazione per i client C# Microsoft Information Protection (MIP) SDK
 description: Dettagli tecnici sugli scenari di autenticazione per le applicazioni client C# Microsoft Information Protection SDK.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: 10d6f5ce615373f0955c42f2573b7ddd59629734
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 7a22bc297b3330b3cdb738ff16e013d0d1f0dc87
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567920"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865332"
 ---
 # <a name="quickstart-public-and-confidential-clients-c"></a>Guida introduttiva: client pubblici e riservati (C#)
 
