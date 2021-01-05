@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to extend Microsoft 365's labeling 
 ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: aa41b20152df55f7153f4c8cedd013041460b596
-ms.sourcegitcommit: ad2b3e0b6f438f9ffc0bca975653bd13f1b7d131
+ms.openlocfilehash: 6bebd942d24029288d0ca0602fd32901e2685abc
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97514924"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97582929"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 

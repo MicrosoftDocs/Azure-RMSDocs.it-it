@@ -17,6 +17,8 @@
           href: requirements-applications.md
         - name: Tipi di file supportati
           href: ./rms-client/clientv2-admin-guide-file-types.md
+        - name: Requisiti per il client di etichettatura unificata
+          href: ./rms-client/reqs-ul-client.md
         - name: Requisiti dello scanner locale
           href: deploy-aip-scanner-prereqs.md
     - name: AIP è noto anche come ...
@@ -139,6 +141,8 @@
               href: deploy-aip-scanner-configure-install.md
             - name: Eseguire lo scanner di etichettatura unificata
               href: deploy-aip-scanner-manage.md
+            - name: Risolvere i problemi dello scanner
+              href: deploy-aip-scanner-tsg.md
         - name: Distribuzione del connettore RMS
           items:
             - name: Panoramica
