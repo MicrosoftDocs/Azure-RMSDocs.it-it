@@ -9,14 +9,15 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
+ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 2e82b7c4cd99b5e880cc59db77a5a844d0e28030
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 4f96e1f19d38df201aab9b05cd046e8f49a16c2e
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583609"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805836"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Details Your Own Key (HYOK) per Azure Information Protection
 
@@ -115,23 +116,23 @@ Le tabelle seguenti elencano gli scenari supportati per la protezione e l'utiliz
 
 |Applicazione|Protezione|Consumo|
 |----------------------|----------|-----------|
-|Office per Mac: </br>Word, Excel, PowerPoint, Outlook|![No](media/no-icon.png)|![sì](media/yes-icon.png)|
+|Office per Mac: </br>Word, Excel, PowerPoint, Outlook|![no](media/no-icon.png)|![sì](media/yes-icon.png)|
 | | | |
 
 ### <a name="ios-application-support-for-hyok"></a>supporto delle applicazioni iOS per HYOK
 
 |Applicazione|Protezione|Consumo|
 |----------------------|----------|-----------|
-|Office Mobile: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)| ![sì](media/yes-icon.png)|
-|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![No](media/no-icon.png)|
+|Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
+|Office Mobile: </br>Solo Outlook|![no](media/no-icon.png)|![no](media/no-icon.png)|
 |Visualizzatore di Azure Information Protection|Non applicabile|![sì](media/yes-icon.png)|
 
 ### <a name="android-application-support-for-hyok"></a>Supporto delle applicazioni Android per HYOK
 
 |Applicazione|Protezione|Consumo|
 |----------------------|----------|-----------|
-|Office Mobile: </br>Word, Excel, PowerPoint|![No](media/no-icon.png)| ![sì](media/yes-icon.png)|
-|Office Mobile: </br>Solo Outlook|![No](media/no-icon.png)|![No](media/no-icon.png)|
+|Office Mobile: </br>Word, Excel, PowerPoint|![no](media/no-icon.png)| ![sì](media/yes-icon.png)|
+|Office Mobile: </br>Solo Outlook|![no](media/no-icon.png)|![no](media/no-icon.png)|
 |Visualizzatore di Azure Information Protection|Non applicabile| ![sì](media/yes-icon.png)|
 
 

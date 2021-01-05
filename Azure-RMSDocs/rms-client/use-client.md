@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 536811aa07df108a0c5cbb44bad5ba5ff2e6f292
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 37d626fc3cf907191aed9760d1452082d732044f
+ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384877"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97747138"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -25,10 +25,10 @@ ms.locfileid: "97384877"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 
 Il Azure Information Protection client Unified Labeling fornisce una soluzione client-server che consente di proteggere i documenti e i messaggi di posta elettronica di un'organizzazione ed è un'alternativa alla [soluzione incorporata di assegnazione di etichette per Microsoft Office](/microsoft-365/compliance/sensitivity-labels). 
@@ -42,7 +42,7 @@ Il servizio risiede nel cloud o in locale:
 - Il servizio cloud è **Azure Information Protection** e usa il servizio Azure Rights Management per la protezione dei dati
 - Il servizio locale è **Active Directory Rights Management Services** (ad RMS)
 
-## <a name="choose-your-windows-labeling-solution"></a>Scegliere la soluzione Windows Labeling
+## <a name="choose-your-windows-labeling-solution"></a>Scegliere la soluzione di etichettatura di Windows
 
 Le etichette rendono più semplice per gli utenti l'applicazione della protezione e forniscono anche la classificazione per poter tenere traccia e gestire i dati. 
 
@@ -70,7 +70,7 @@ Usare le sezioni seguenti per determinare il client migliore per l'organizzazion
 
 - [Soluzione predefinita di assegnazione di etichette per Office](#built-in-office-labeling-solution)
 - [Client per l'etichettatura unificata di Azure Information Protection](#azure-information-protection-unified-labeling-client)
-- [Azure Information Protection client classico](#azure-information-protection-classic-client)
+- [Client classico di Azure Information Protection](#azure-information-protection-classic-client)
 - [Uso di più client nello stesso ambiente](#using-multiple-clients-in-the-same-environment)
 
 Per ulteriori informazioni, vedere la pagina relativa ai [confronti dettagliati per i client e le funzionalità AIP](#detailed-comparisons-for-the-azure-information-protection-clients) [non pianificati per il client di etichettatura unificata](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client).
@@ -100,7 +100,7 @@ Il client di etichettatura unificata richiede un computer Windows e consente di 
 
 **Non usare** il client di etichettatura unificata se sono state configurate etichette nel portale di Azure di cui non è ancora stata [eseguita la migrazione nell'archivio di etichette unificato](../configure-policy-migrate-labels.md).
 
-### <a name="azure-information-protection-classic-client"></a>Azure Information Protection client classico
+### <a name="azure-information-protection-classic-client"></a>Client classico di Azure Information Protection
 
 Il client classico è il client legacy di AIP, supporta funzionalità simili a quelle del client di etichettatura unificata e deve anche essere installato separatamente nelle app di Office. 
 
@@ -148,56 +148,56 @@ Per altri dettagli, vedere anche:
 - [Confronti dettagliati per i client di Azure Information Protection](#detailed-comparisons-for-the-azure-information-protection-clients)
 - [Funzionalità non previste nel client di Azure Information Protection Unified Labeling](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)
 
-|Feature|Client classico|Client di etichetta unificato|Soluzione di assegnazione di etichette incorporata di Office|
+|Funzionalità|Client classico|Client di etichetta unificato|Soluzione di assegnazione di etichette incorporata di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |**Etichettatura manuale**| ![sì](../media/yes-icon.png)   | ![sì](../media/yes-icon.png)   |![sì](../media/yes-icon.png) |
 |**Etichetta predefinita**| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)|
 |**Etichettatura consigliata o automatica** <br />Per Word, Excel, PowerPoint, Outlook|![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
-|**Etichettatura obbligatoria**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
+|**Etichettatura obbligatoria**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 |**Autorizzazioni definite dall'utente per un'etichetta**: <br />Non inviare i messaggi di posta elettronica| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
 |**Autorizzazioni definite dall'utente per un'etichetta**: <br />Autorizzazioni personalizzate per Word, Excel, PowerPoint| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
 |**Supporto multilingue per le etichette**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |![sì](../media/yes-icon.png) |
-|**Ereditarietà delle etichette dagli allegati di posta elettronica**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)  | ![No](../media/no-icon.png)|
-|**Personalizzazioni che includono**:<br />- Etichetta predefinita per la posta elettronica<br />-Popup dei messaggi in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| ![Sì ](../media/yes-icon.png) <sup>1</sup> | ![Sì ](../media/yes-icon.png) <sup>2</sup> |  ![No](../media/no-icon.png)|
-|**Scanner per gli archivi dati locali**| ![sì](../media/yes-icon.png) |  ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
-|**Reporting centrale (analisi)**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
-|**Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta**| ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>3</sup>|  ![No](../media/no-icon.png)|
-|**Barra di Information Protection nelle app Office**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)|  ![No](../media/no-icon.png)|
+|**Ereditarietà delle etichette dagli allegati di posta elettronica**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)  | ![no](../media/no-icon.png)|
+|**Personalizzazioni che includono**:<br />- Etichetta predefinita per la posta elettronica<br />-Popup dei messaggi in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| ![Sì ](../media/yes-icon.png) <sup>1</sup> | ![Sì ](../media/yes-icon.png) <sup>2</sup> |  ![no](../media/no-icon.png)|
+|**Scanner per gli archivi dati locali**| ![sì](../media/yes-icon.png) |  ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Reporting centrale (analisi)**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta**| ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>3</sup>|  ![no](../media/no-icon.png)|
+|**Barra di Information Protection nelle app Office**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
 |**Contrassegni visivi come azione etichetta**<br> (intestazione, piè di pagina, filigrana)| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)|
 |**Contrassegni visivi per app**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>9</sup>|
 |**Contrassegni visivi dinamici con variabili**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>9</sup>|
-|**Rimuovi contrassegno contenuto esterno nell'app**| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)| ![No](../media/no-icon.png)|
-|**Etichetta con Esplora file**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
-|**Un visualizzatore per i file protetti** <br> (testo, immagini, PDF, Pfile)| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![No](../media/no-icon.png)|
-|**Supporto di PPDF per l'applicazione di etichette**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
-|**Cmdlet per l'assegnazione di etichette di PowerShell**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)  |  ![No](../media/no-icon.png)|
+|**Rimuovi contrassegno contenuto esterno nell'app**| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)| ![no](../media/no-icon.png)|
+|**Etichetta con Esplora file**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Un visualizzatore per i file protetti** <br> (testo, immagini, PDF, Pfile)| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![no](../media/no-icon.png)|
+|**Supporto di PPDF per l'applicazione di etichette**| ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**Cmdlet per l'assegnazione di etichette di PowerShell**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)  |  ![no](../media/no-icon.png)|
 |**Supporto offline per le azioni di protezione**| ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>4</sup> | ![sì](../media/yes-icon.png) |
-|**Gestione manuale dei file di criteri per i computer disconnessi**| ![sì](../media/yes-icon.png) |![sì](../media/yes-icon.png)|  ![No](../media/no-icon.png)|
-|**Supporto di HYOK**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
-|**Registrazione dell'utilizzo in Visualizzatore eventi**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)| ![No](../media/no-icon.png)|
-|**Visualizzare il pulsante Non inoltrare in Outlook**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
-|**Rileva documentazione protetta**| ![sì](../media/yes-icon.png) | ![Sì ](../media/yes-icon.png) <sup>5</sup> |  ![No](../media/no-icon.png)|
-|**Revocare i documenti protetti**| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
-|**Modalità di sola protezione** (nessuna etichetta)| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)|
-|**Supporto per il cambio di account**|  ![No](../media/no-icon.png)|  ![No](../media/no-icon.png)| ![sì](../media/yes-icon.png) |
+|**Gestione manuale dei file di criteri per i computer disconnessi**| ![sì](../media/yes-icon.png) |![sì](../media/yes-icon.png)|  ![no](../media/no-icon.png)|
+|**Supporto di HYOK**| ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**Registrazione dell'utilizzo in Visualizzatore eventi**| ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)| ![no](../media/no-icon.png)|
+|**Visualizzare il pulsante Non inoltrare in Outlook**| ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**Tenere traccia dei documenti protetti**| ![Sì ](../media/yes-icon.png) <sup>5</sup> | ![Sì ](../media/yes-icon.png) <sup>5</sup> |  ![no](../media/no-icon.png)|
+|**Revocare i documenti protetti**| ![Sì ](../media/yes-icon.png) <sup>5</sup> |  ![Sì ](../media/yes-icon.png) <sup>5</sup>|  ![no](../media/no-icon.png)|
+|**Modalità di sola protezione** (nessuna etichetta)| ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)|
+|**Supporto per il cambio di account**|  ![no](../media/no-icon.png)|  ![no](../media/no-icon.png)| ![sì](../media/yes-icon.png) |
 |**Supporto per Servizi Desktop remoto**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
-|**Supporto per AD RMS**| ![sì](../media/yes-icon.png) |  ![n. ](../media/no-icon.png) <sup>6</sup> |  ![No](../media/no-icon.png)|
+|**Supporto per AD RMS**| ![sì](../media/yes-icon.png) |  ![n. ](../media/no-icon.png) <sup>6</sup> |  ![no](../media/no-icon.png)|
 |**Supporto per i formati di Microsoft Office 97-2003**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![Nessun ](../media/no-icon.png) <sup>8</sup>|
-|**Crittografia a chiave doppia**|  ![No](../media/no-icon.png)| ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
-|**Cloud della community per enti pubblici** | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![No](../media/no-icon.png)|
+|**Crittografia a chiave doppia**|  ![no](../media/no-icon.png)| ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Cloud della community per enti pubblici** | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
 | | | | |
 
 **Note a piè** di pagina:
 
 <sup>1</sup> queste impostazioni e molte altre sono supportate come [Impostazioni client avanzate che è possibile configurare nel portale di Azure](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
 
-<sup>2</sup> queste impostazioni e molte altre sono supportate come [Impostazioni avanzate configurate con PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+<sup>2</sup> queste impostazioni e molte altre sono supportate come [Impostazioni avanzate configurate con PowerShell](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
 <sup>3</sup> supportato da Esplora file e PowerShell. Nelle app di Office, gli utenti possono selezionare **file info**  >  **Proteggi documento**  >  **limita accesso**.
 
 <sup>4</sup> per i comandi di Esplora file e PowerShell, l'utente deve essere connesso a Internet per proteggere i file.
 
-<sup>5</sup> il sito di rilevamento dei documenti supportato dal client classico non è supportato dal client di etichettatura unificata. Tuttavia, senza la necessità di registrare il documento per il rilevamento, gli amministratori possono utilizzare la funzionalità di [creazione di rapporti centrale](../reports-aip.md) per identificare se l'accesso a documenti protetti viene eseguito da computer Windows e se l'accesso è stato concesso o negato. 
+<sup>5</sup> per ulteriori informazioni, vedere la guida dell'utente per l' **assegnazione di etichette unificata client**: [Guida dell'amministratore (anteprima pubblica](track-and-revoke-admin.md))  |   [(anteprima pubblica)](revoke-access-user.md). Il rilevamento è supportato solo per gli amministratori globali. **Client classico**: [](client-admin-guide-document-tracking.md)manuale  |  [dell'utente](client-track-revoke.md)della Guida dell'amministratore. Gli amministratori possono inoltre utilizzare la funzionalità di [creazione rapporti centrale](../reports-aip.md) per identificare se i documenti protetti sono accessibili dai computer Windows e se l'accesso è stato concesso o negato.
 
 <sup>6</sup> le azioni di assegnazione di etichette e protezione non sono supportate. Tuttavia, per una distribuzione AD RMS, il visualizzatore può aprire i documenti protetti quando si usa l' [estensione Active Directory Rights Management Services Mobile Device](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
