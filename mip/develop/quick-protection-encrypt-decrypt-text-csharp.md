@@ -2,18 +2,18 @@
 title: "Avvio rapido: Crittografare e decrittografare il testo usando l'API Protezione SDK C# di MIP"
 description: Argomento di avvio rapido che illustra come usare il wrapper . NET di Microsoft Information Protection SDK per crittografare e decrittografare il testo ad hoc usando un modello di protezione (C#)
 services: information-protection
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
+ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5fae5837ab26c4fce20ac120293eff3823dd9b70
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 6b0ff0faabe8ebb1776cb95e411fe6ee08d39c9f
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535825"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864993"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>Guida introduttiva: Crittografare/decrittografare il testo usando SDK MIP (C#)
 

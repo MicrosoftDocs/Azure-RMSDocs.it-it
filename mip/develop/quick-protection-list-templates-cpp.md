@@ -1,18 +1,18 @@
 ---
 title: "Avvio rapido: Elencare i modelli di protezione disponibili per l'utente autenticato in un tenant di Microsoft Information Protection (MIP) usando l'SDK C++ di MIP"
 description: Argomento di avvio rapido che illustra come usare l'API Protezione di Microsoft Information Protection C++ SDK per elencare i modelli di protezione disponibili per l'utente (C++)
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
-ms.author: v-anikep
+ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: d319af8e65e2eae958ef215d30dfa84c09ae7145
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.openlocfilehash: 62f694248da10c7663c551240b204711b52163d5
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701646"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865072"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>Guida introduttiva: Elencare i modelli di protezione (C++)
 

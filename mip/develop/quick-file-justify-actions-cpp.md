@@ -1,17 +1,17 @@
 ---
 title: Procedura - Eseguire il downgrade o la rimozione di un'etichetta che richiede una giustificazione (C++)
-description: Le informazioni in questo articolo sono utili per comprendere come effettuare il downgrade o la rimozione di un'etichetta che richiede una giustificazione (C++).
-author: Pathak-Aniket
+description: Le informazioni in questo articolo sono utili per comprendere come effettuare il downgrade o la rimozione di un'etichetta che richiede una giustificazione.
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
-ms.author: v-anikep
-ms.openlocfilehash: dd02fe709c0fc946ba7bb5d0c5fec82a0688540c
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: d6ffccc19a5d2343fdb175b3c59ec52be5c7ad0f
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536025"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865281"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>API File di Microsoft Information Protection SDK - Giustificazione dell'azione per abbassare un'etichetta di riservatezza per un file (C++)
 
@@ -164,16 +164,9 @@ Compilare e testare l'applicazione client.
 
 1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. Come già fatto in precedenza nella guida di avvio rapido "Impostare/ottenere le etichette di riservatezza", eseguire lo script di PowerShell per acquisire ogni volta il token usando i valori specificati per $authority e $resourceUrl.
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. 
 
-  ```console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+  ```console   
     Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
     Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
     General : f42a3342-8706-4288-bd31-ebb85995028z
@@ -184,12 +177,6 @@ Compilare e testare l'applicazione client.
     Applying Label ID f55c2dea-db0f-47cd-8520-a52e1590fb6z to c:\Test\Test.docx
     Committing changes
 
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
 
     Label committed to file: c:\Test\Test.docx
     Press any key to continue . . .
@@ -204,7 +191,7 @@ Compilare e testare l'applicazione client.
     Getting the label committed to file: c:\Test\Test_labeled.docx
     Name: Highly Confidential
     Id: f55c2dea-db0f-47cd-8520-a52e1590fb6z
-    Press any key to continue . . .
+    Press any key to continue . . . 
 
     Applying new Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test_labeled.docx
     Please provide justification for downgrading a label:

@@ -1,17 +1,17 @@
 ---
 title: API File - Elaborare file con estensione msg di posta elettronica (C#)
 description: Le informazioni in questo articolo sono utili per comprendere come usare l'API File di MIP SDK per elaborare i file con estensione msg (C#).
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
-ms.author: v-anikep
-ms.openlocfilehash: 04fc40fcf5e638c6b86723c90a3880f421af8025
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: da7679c1d736cb6d732c417c3c38b2fbfd46eff0
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535995"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865298"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>API File - Elaborare file con estensione msg di posta elettronica (C#)
 

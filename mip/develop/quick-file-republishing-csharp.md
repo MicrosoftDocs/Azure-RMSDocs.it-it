@@ -1,17 +1,17 @@
 ---
 title: Procedura - Scenario di ripubblicazione C#
 description: Le informazioni in questo articolo sono utili per comprendere lo scenario di riutilizzo del gestore protezione per gli scenari di ripubblicazione (C#).
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: c3044feb585e1e3d843f906711644f2ae861b1b5
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: 45855aac47210e434315b31b6284251e25f3318d
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535876"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865196"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Microsoft Information Protection SDK - Avvio rapido alla ripubblicazione dell'API File (C#)
 

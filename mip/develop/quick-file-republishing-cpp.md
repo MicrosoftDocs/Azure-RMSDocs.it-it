@@ -1,17 +1,17 @@
 ---
 title: Procedura - Scenario di ripubblicazione C++
 description: Le informazioni in questo articolo sono utili per comprendere lo scenario di riutilizzo del gestore protezione per gli scenari di ripubblicazione (C++).
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: e71b4c59c15f0c4435f72187006de1ecdc2bffb2
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.author: mbaldwin
+ms.openlocfilehash: 657a8a3e7650b8afb8c4d8384fc078e48eb64f36
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701748"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865230"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>Avvio rapido alla ripubblicazione dell'API File (C++)
 
