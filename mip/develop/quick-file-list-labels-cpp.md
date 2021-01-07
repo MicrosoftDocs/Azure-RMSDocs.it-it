@@ -1,18 +1,18 @@
 ---
 title: Guida introduttiva - Elencare le etichette di riservatezza in un tenant di Microsoft Information Protection (MIP) con MIP SDK per C++
-description: Argomento di avvio rapido che illustra come usare Microsoft Information Protection C++ SDK per elencare le etichette di riservatezza nel tenant (C++).
+description: Questa guida introduttiva mostra come usare Microsoft Information Protection SDK per C++ per elencare le etichette di riservatezza nel tenant.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: d13ddcfd2a01501a8c2428ea6cf4c3cf9e575a09
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 14b36ecee7fc49c5b50d627e6ef1ab95d436d7ee
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536046"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865264"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C++)
 
@@ -83,21 +83,11 @@ Infine, compilare e testare l'applicazione client.
 
 1. Usare F6 (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. È possibile riutilizzare un token generato in precedenza, se viene richiesto più volte e i valori necessari sono uguali:
-
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token:
-   ```
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. È possibile riutilizzare un token generato in precedenza, se viene richiesto più volte e i valori necessari sono uguali.
 
 3. Per generare un token di accesso per il prompt tornare allo script di PowerShell e:
 
    - Aggiornare le variabili `$authority` e `$resourceUrl`. Devono corrispondere ai valori specificati nell'output della console nel passaggio 2. Questi valori vengono forniti da MIP SDK nel parametro `challenge` di `AcquireOAuth2Token()`:
-     - `$authority` deve essere `https://login.windows.net/common/oauth2/authorize`
-     - `$resourceUrl` deve essere `https://syncservice.o365syncservice.com/` o `https://aadrm.com`
    - Eseguire lo script di PowerShell. Il cmdlet `Get-ADALToken` attiva una richiesta di autenticazione di Azure AD simile all'esempio seguente. Specificare lo stesso account specificato nell'output della console nel passaggio 2. Dopo l'accesso, il token di accesso verrà inserito negli Appunti.
 
      [![Accesso per l'acquisizione del token in Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
@@ -122,15 +112,6 @@ Infine, compilare e testare l'applicazione client.
    > Copiare e salvare l'ID di una o più delle etichette di riservatezza (ad esempio, `f42a3342-8706-4288-bd31-ebb85995028z`), perché verranno usati nella guida introduttiva successiva.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
-
-### <a name="problems-during-execution-of-powershell-script"></a>Problemi durante l'esecuzione dello script di PowerShell
-
-| Riepilogo | Messaggio di errore | Soluzione |
-|---------|---------------|----------|
-| URI di reindirizzamento non corretto nella registrazione dell'applicazione o nello script di PowerShell (AADSTS50011) |*AADSTS50011: L'URL di risposta specificato nella richiesta non corrisponde agli URL di risposta configurati per l'applicazione: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | Verificare l'URI di reindirizzamento usato, eseguendo uno dei passaggi seguenti:<br><br><li>Aggiornare l'URI di reindirizzamento nella configurazione dell'applicazione in Azure AD, in modo che corrisponda allo script di PowerShell. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) per verificare che sia stata configurata correttamente la proprietà URI di reindirizzamento.<br><li>Aggiornare la variabile `redirectUri` nello script di PowerShell, in modo che corrisponda alla registrazione dell'applicazione. |
-| Account di accesso non corretto (AADSTS50020) | *AADSTS50020: L'account utente 'user@domain.com' del provider di identità 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ ' non esiste nel tenant 'nome organizzazione' e non è possibile accedere all'applicazione '0edbblll-8773-44de-b87c-b8c6276d41eb' in questo tenant.* | Eseguire una delle operazioni seguenti:<br><br><li>Eseguire nuovamente lo script di PowerShell, ma assicurarsi di usare un account dello stesso tenant in cui è registrata l'applicazione Azure AD.<br><li>Se l'account di accesso era corretto, è possibile che la sessione host di PowerShell sia già autenticata con un account diverso. In questo caso, uscire dall'host dello script e quindi riprovare a eseguirlo.<br><li>Se si usa questa guida introduttiva con un'app Web (anziché nativa) ed è necessario accedere con un account da un tenant diverso, assicurarsi che la registrazione dell'applicazione Azure AD sia abilitata per l'uso multi-tenant. È possibile eseguire questa verifica usando la funzionalità "Modifica manifesto" nella registrazione dell'applicazione e verificare che specifichi `"availableToOtherTenants": true,`. |
-| Autorizzazioni non corrette nella registrazione dell'applicazione (AADSTS65005) | *AADSTS65005: Risorsa non valida. Il client ha richiesto l'accesso a una risorsa, che non è elencata nelle autorizzazioni richieste nella registrazione dell'applicazione del client. ID app client: 0edbblll-8773-44de-b87c-b8c6276d41eb. Valore della risorsa dalla richiesta: https://syncservice.o365syncservice.com/. ID app della risorsa: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. Elenco delle risorse valide dalla registrazione dell'app: 00000002-0000-0000-c000-000000000000.* | Aggiornare le richieste di autorizzazione nella configurazione dell'applicazione Azure AD. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) per verificare di aver configurato correttamente le richieste di autorizzazione nella registrazione dell'applicazione. |
-
 ### <a name="problems-during-execution-of-c-application"></a>Problemi durante l'esecuzione dell'applicazione C++
 
 | Riepilogo | Messaggio di errore | Soluzione |
