@@ -4,19 +4,19 @@ description: Informazioni per gli amministratori che devono comprendere i requis
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c93b0a338f25b058e517c4c2bb746ccaa6e41a69
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: dbd9d86e1ce2103f144e51314950cf67be31eef6
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792314"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164386"
 ---
 # <a name="additional-requirements-for-installing-the-unified-labeling-client-on-enterprise-networks"></a>Requisiti aggiuntivi per l'installazione del client Unified Labeling nelle reti aziendali
 
@@ -24,7 +24,7 @@ ms.locfileid: "97792314"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Istruzioni per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'amministratore del client classico](client-admin-guide-install.md). *
+>***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'amministratore del client classico](client-admin-guide-install.md). *
 
 Prima di installare il client Azure Information Protection Unified Labeling nella rete aziendale, verificare che i computer dispongano delle versioni e delle applicazioni del sistema operativo necessarie per Azure Information Protection: [requisiti per Azure Information Protection](../requirements.md). 
 
@@ -100,7 +100,6 @@ Specificare i seguenti identificatori programmatici (ProgID) per AIP e impostare
 |PowerPoint     |   `MSIP.PowerPointAddin`      |
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
-    
 
 ## <a name="next-steps"></a>Passaggi successivi
 

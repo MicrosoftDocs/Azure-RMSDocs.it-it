@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 3718c6b93fba7abb08dcbe08675f361b0b666c0d
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f5096aa3eaf9b51bd929b25bdf69d42dbcaea50c
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385404"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164488"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guida dell'utente: classificare un file o un messaggio di posta elettronica usando il client di etichettatura unificato di Azure Information Protection per Windows
 
@@ -24,7 +24,7 @@ ms.locfileid: "97385404"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Istruzioni per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida per l'utente del client classico](client-classify.md). *
+>***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida per l'utente del client classico](client-classify.md). *
 
 > [!NOTE]
 > Usare queste istruzioni per classificare senza proteggere i documenti e i messaggi di posta elettronica. Se è necessario proteggere i documenti e i messaggi di posta elettronica, vedere le [istruzioni per classificare e proteggere](clientv2-classify-protect.md). Se non si sa quali istruzioni usare, rivolgersi al proprio amministratore o al supporto tecnico.
@@ -35,11 +35,11 @@ Tuttavia, è anche possibile classificare i file usando **Esplora file**. Questo
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Uso delle app di Office per classificare documenti e messaggi di posta elettronica
 
-Nella scheda **Home** selezionare il pulsante **sensibilità** sulla barra multifunzione e quindi selezionare una delle etichette configurate. ad esempio:
+Nella scheda **Home** selezionare il pulsante **sensibilità** sulla barra multifunzione e quindi selezionare una delle etichette configurate. Ad esempio:
 
 ![Esempio di pulsante Sensitivity](../media/sensitivity-not-set-callout.png)
 
-In alternativa, se è stata selezionata l'opzione **Mostra barra** dal pulsante **sensibilità** , è possibile selezionare un'etichetta dalla barra Azure Information Protection. ad esempio:
+In alternativa, se è stata selezionata l'opzione **Mostra barra** dal pulsante **sensibilità** , è possibile selezionare un'etichetta dalla barra Azure Information Protection. Ad esempio:
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
@@ -88,7 +88,7 @@ La guida dell'amministratore include l'elenco completo dei tipi di file che supp
 
 2. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** usare le etichette in modo analogo a un'applicazione di Office che consente di impostare la classificazione definita dall'amministratore. 
     
-    Se non è possibile selezionare alcuna etichetta (sono tutte visualizzate in grigio) significa che il file selezionato non supporta la classificazione. ad esempio:
+    Se non è possibile selezionare alcuna etichetta (sono tutte visualizzate in grigio) significa che il file selezionato non supporta la classificazione. Ad esempio:
     
     ![Nessuna etichetta disponibile nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/v2info-protect-dialog-labels-dimmed.png)
 

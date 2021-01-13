@@ -12,12 +12,12 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 4f96e1f19d38df201aab9b05cd046e8f49a16c2e
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 9b608b8f38c157320558cf5ae5011ef601773b2e
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805836"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164233"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Details Your Own Key (HYOK) per Azure Information Protection
 
@@ -81,7 +81,7 @@ Per assicurarsi che solo gli utenti che devono applicare la protezione HYOK veda
 
 Microsoft 365 Services e altri Servizi online non possono decrittografare il contenuto protetto da HYOK.
 
-Per i messaggi di posta elettronica, questa perdita di funzionalità include scanner di malware, Encrypt-Only Protection, soluzioni di prevenzione della perdita dei dati, regole di routing della posta elettronica, journaling, eDiscovery, soluzioni di archiviazione ed Exchange ActiveSync.
+Per i messaggi di posta elettronica, questa perdita di funzionalità include scanner di malware, protezione solo crittografia, soluzioni di prevenzione della perdita dei dati, regole di routing della posta elettronica, journaling, eDiscovery, soluzioni di archiviazione ed Exchange ActiveSync.
 
 Gli utenti potrebbero non comprendere il motivo per cui alcuni dispositivi non sono in grado di aprire messaggi di posta elettronica protetti da HYOK, ottenendo chiamate aggiuntive al help desk. Tenere presente queste limitazioni gravi quando si configura la protezione HYOK con i messaggi di posta elettronica.
 

@@ -13,21 +13,21 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 39fedde68cfe771d29e9fda1be4a9f2883cf1ede
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382888"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164250"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configurazione dei diritti di utilizzo per Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 > 
 > Per motivi di completezza, questo articolo include valori derivanti dal portale di Azure classico che è stato ritirato l'8 gennaio 2018.
 
@@ -117,9 +117,9 @@ Un utente vuole inviare un messaggio di posta elettronica a destinatari specific
 > [!NOTE] 
 > Usare l'opzione **Non inoltrare** quando è essenziale che solo i destinatari scelti dal mittente possano visualizzare le informazioni contenute nel messaggio. Usare un modello per i messaggi di posta elettronica per limitare i diritti di un gruppo di persone specificate anticipatamente dall'amministratore, indipendentemente dai destinatari scelti dal mittente.
 
-## <a name="encrypt-only-option-for-emails"></a>Opzione Encrypt-Only (Solo crittografia) per i messaggi di posta elettronica
+## <a name="encrypt-only-option-for-emails"></a>Opzione di sola crittografia per i messaggi di posta elettronica
 
-Quando Exchange Online usa le nuove funzionalità per Office 365 Message Encryption, diventa disponibile una nuova opzione di posta elettronica: **Encrypt-Only (Solo crittografia)**.
+Quando Exchange Online USA le nuove funzionalità per la crittografia dei messaggi di Office 365, diventa disponibile una nuova opzione **Encrypt** email per crittografare i dati senza restrizioni aggiuntive.
 
 Questa opzione è disponibile per i tenant che usano Exchange Online e possono essere selezionati come indicato di seguito:
 
@@ -128,7 +128,7 @@ Questa opzione è disponibile per i tenant che usano Exchange Online e possono e
 - **Come azione DLP di Office 365**
 - **Da Outlook**, per le versioni elencate nella [tabella delle versioni supportate per le app Microsoft 365 tramite il canale di aggiornamento](/officeupdates/update-history-microsoft365-apps-by-date), quando sono disponibili [Microsoft 365 app che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
 
-Per ulteriori informazioni sull'opzione Encrypt-Only, vedere il post di Blog seguente del team di Office: [crittografare solo il rollup in office 365 Message Encryption](https://aka.ms/omefeb2018).
+Per ulteriori informazioni sull'opzione solo crittografia, vedere il post di Blog seguente del team di Office: [crittografare solo il rollup in office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari hanno tutti i diritti di utilizzo, a eccezione di **Salva con nome, Esporta** e **Controllo completo**. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare dal messaggio di posta elettronica, stamparlo e inoltrarlo. 
 
@@ -158,7 +158,7 @@ All'emittente di Rights Management è sempre concesso il diritto di utilizzo Con
 
 - L'emittente di Rights Management può comunque aprire un documento anche dopo la sua revoca. 
 
-Per impostazione predefinita, questo account è anche il **proprietario di Rights Management** per il contenuto in questione. Questo è il caso in cui l'utente che ha creato il documento o il messaggio avvia la protezione. Esistono alcuni scenari in cui un amministratore o un servizio può proteggere il contenuto per conto degli utenti. ad esempio:
+Per impostazione predefinita, questo account è anche il **proprietario di Rights Management** per il contenuto in questione. Questo è il caso in cui l'utente che ha creato il documento o il messaggio avvia la protezione. Esistono alcuni scenari in cui un amministratore o un servizio può proteggere il contenuto per conto degli utenti. Ad esempio:
 
 - Un amministratore protegge in blocco tutti i file in una condivisione file: l'account amministratore in Azure AD protegge i documenti per gli utenti.
 

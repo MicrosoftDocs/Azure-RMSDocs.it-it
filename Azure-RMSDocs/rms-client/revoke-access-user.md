@@ -4,7 +4,7 @@ description: Descrive in che modo gli utenti finali possono usare il client AIP 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 294d93666eed55616bbe033215abef0e9dcf62b7
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764102"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163774"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>Guida dell'utente: revocare l'accesso ai documenti con Azure Information Protection (anteprima pubblica)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764102"
 >
 >***Pertinente per**: [AIP Unified Labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'utente: tenere traccia dei documenti e revocarli quando si usa il client AIP classico](client-track-revoke.md). *
 
-Questo articolo descrive come revocare l'accesso per i documenti protetti da Microsoft Office.
+Questo articolo descrive come revocare l'accesso per i documenti protetti da Microsoft Office. I documenti protetti sono supportati per Track and Revoke, anche se non sono etichettati.
 
 La revoca dell'accesso per un documento protetto impedisce ad altri utenti di accedere al documento, anche se è già stato concesso loro l'accesso. Per altre informazioni, vedere [Guida dell'utente: classificare e proteggere con la Azure Information Protection Unified Labeling client](clientv2-classify-protect.md).
 

@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c4b88b2c0e2bbdff7f77d4eb36256a771dc9f5b6
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 03a1f0d7d28db24614bb92fa78de41fdd11a12f9
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806329"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163689"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -42,7 +42,7 @@ I modelli di protezione, noti anche come modelli di Rights Management, sono un r
 - I modelli per il tenant vengono visualizzati nella sezione **modelli di protezione** nel riquadro **etichette Azure Information Protection** . Per passare a questo riquadro, selezionare l'opzione di menu **classificazioni**  >  **etichette** . Non viene visualizzata alcuna etichetta. Sono visualizzate anche le impostazioni di configurazione specifiche per la classificazione e assegnazione di etichette, ma tali impostazioni non hanno alcun effetto sui modelli o non possono essere configurate. 
 
 >[!NOTE]
->In alcuni servizi e applicazioni, possono essere visualizzati i modelli [Non inoltrare](configure-usage-rights.md#do-not-forward-option-for-emails) ed [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (Solo crittografia) o **Crittografa**. Questi non sono modelli che è possibile modificare o eliminare, ma opzioni disponibili per impostazione predefinita con il servizio Exchange.
+>In alcune [applicazioni e servizi](configure-usage-rights.md#encrypt-only-option-for-emails) , è possibile che venga visualizzato non eseguire l' [invio](configure-usage-rights.md#do-not-forward-option-for-emails) e la crittografia (**Encrypt**) come modello. Questi non sono modelli che è possibile modificare o eliminare, ma opzioni disponibili per impostazione predefinita con il servizio Exchange.
 
 ## <a name="default-templates"></a>Modelli predefiniti
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 016dfba5d945c0411b3c6858922a2e919282e94e
-ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
+ms.openlocfilehash: 69cf01252a95476a41ac5f82f7d0546afe285041
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762350"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164505"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -24,7 +24,7 @@ ms.locfileid: "97762350"
 >
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Istruzioni per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'amministratore del client classico](client-admin-guide-install.md). *
+>***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'amministratore del client classico](client-admin-guide-install.md). *
 
 Prima di installare il client Azure Information Protection Unified Labeling nella rete aziendale, verificare che i computer dispongano delle versioni e delle applicazioni del sistema operativo necessarie per Azure Information Protection: [requisiti per Azure Information Protection](../requirements.md) e [requisiti aggiuntivi per l'installazione del client Unified Labeling nelle reti aziendali](reqs-ul-client.md).
 
@@ -51,7 +51,7 @@ Per ulteriori informazioni, vedere la pagina relativa ai [problemi noti di AIP n
 
 Sono disponibili due opzioni per l'installazione del client per gli utenti:
 
-|Opzione  |Descrizione  | I
+|Opzione  |Description  | I
 |---------|---------|
 |**Eseguire la versione eseguibile (con estensione exe) del client**     |   il metodo di installazione consigliato che è possibile usare in modo interattivo o automatico. <br><br>Questo metodo offre la massima flessibilità ed è consigliato perché il programma di installazione verifica la maggior parte dei prerequisiti ed è in grado di installare automaticamente i prerequisiti mancanti. <br><br>Per altre informazioni, vedere [installare AIP Unified Labeling client usando il programma di installazione eseguibile](#install-the-aip-unified-labeling-client-using-the-executable-installer).|
 |**Distribuire la versione di Windows Installer (MSI) del client**     |     metodo supportato solo per le installazioni invisibili all'utente che usano un meccanismo di distribuzione centrale, ad esempio criteri di gruppo, Configuration Manager e Microsoft Intune. <br><br>Questo metodo è necessario per i PC Windows 10 gestiti da Intune e dalla gestione dispositivi mobili (MDM) poiché per questi computer, i file eseguibili non sono supportati per l'installazione. <br><br> Tuttavia, quando si usa questo metodo di installazione, è necessario verificare e installare o disinstallare manualmente il software dipendente che il programma di installazione eseguirebbe in ogni computer per il file eseguibile. <br><br>Per altre informazioni, vedere [installare il client Unified Labeling usando il programma di installazione MSI](#install-the-unified-labeling-client-using-the-msi-installer). |
@@ -85,7 +85,7 @@ Usare le istruzioni seguenti per installare il client di quando *non* si usa il 
     
     Nella schermata della Guida non sono elencati i parametri seguenti:
         
-    |Parametro  |Descrizione  |
+    |Parametro  |Description  |
     |---------|---------|
     |**AllowTelemetry = 0**     |    usare questo parametro per disabilitare l'opzione di installazione **Invia le statistiche di utilizzo a Microsoft per contribuire a migliorare Azure Information Protection**.     |
     |**ServiceLocation**     |  usare questo parametro se si installa il client in computer che eseguono Office 2010 e gli utenti non sono amministratori locali dei rispettivi computer o non si vuole che vengano visualizzati messaggi di richiesta. <br><br>Per altre informazioni, vedere: <br>- [Ulteriori informazioni sul parametro di installazione **ServiceLocation**](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP per versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |

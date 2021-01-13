@@ -4,7 +4,7 @@ description: Viene descritto come gli amministratori possono tenere traccia dell
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/24/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6c83aa89c06dbf7c6cab5ac014db72eed5e91f06
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 7b60438ad3d1e8a971c58a7f29b2f8b41dd84c91
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764136"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163740"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Guida dell'amministratore: rilevare e revocare l'accesso ai documenti con Azure Information Protection (anteprima pubblica)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764136"
 >
 >***Pertinente per**: [AIP Unified Labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere [Guida dell'amministratore: configurazione e uso del rilevamento dei documenti per AIP usando il client classico](client-admin-guide-document-tracking.md). *
 
-Se è stato eseguito l'aggiornamento alla [versione 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) o successiva, eventuali documenti protetti non ancora registrati per il rilevamento vengono registrati automaticamente alla successiva apertura tramite il client di assegnazione unificata di AIP.
+Se è stato eseguito l'aggiornamento alla [versione 2.9.111.0](unifiedlabelingclient-version-release-history.md#version-291110) o successiva, eventuali documenti protetti non ancora registrati per il rilevamento vengono registrati automaticamente alla successiva apertura tramite il client di assegnazione unificata di AIP. I documenti protetti sono supportati per Track and Revoke, anche se non sono etichettati.
 
 La registrazione di un documento per il rilevamento consente [Microsoft 365 agli amministratori globali](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) di tenere traccia dei dettagli di accesso, inclusi gli eventi di accesso riusciti e i tentativi negati, nonché di revocare l'accesso, se necessario. 
 

@@ -13,18 +13,18 @@ ROBOTS: NOINDEX
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 873d000a7ce6ce67588f82b98f2ed570d55805ad
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 293ed29ba70ae5f4adff5530d782ecb661a6f9dd
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806006"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164114"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Guida di orientamento per la distribuzione di Azure Information Protection solo per la protezione
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Rilevante per**: [Client classico Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client Unified Labeling, vedere la Guida [di orientamento per la distribuzione di AIP per la classificazione, l'assegnazione di etichette e la protezione](deployment-roadmap-classify-label-protect.md). *
 
 > [!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -41,7 +41,7 @@ Questa roadmap è consigliata per i clienti con una sottoscrizione che non suppo
 
 ## <a name="deployment-process"></a>Processo di distribuzione
 
-Effettuare i passaggi seguenti:
+Eseguire la procedura seguente:
 
 1. [Verificare di disporre di una sottoscrizione che includa il servizio di protezione AIP](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Preparare il tenant per l'uso di Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -100,7 +100,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
     Considerare la possibilità di configurare una delle funzionalità seguenti, ora o versione successiva.
     
-    |Funzionalità  |Descrizione  |
+    |Funzionalità  |Description  |
     |---------|---------|
     |**Modelli personalizzati per le impostazioni di protezione**     |  Se i modelli predefiniti non sono sufficienti per l'organizzazione, configurare i modelli personalizzati. </br>Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](./configure-policy-templates.md).       |
     |**Registrazione dell'utilizzo**     | Configurare la registrazione dell'utilizzo per monitorare il modo in cui l'organizzazione usa il servizio di protezione. </br>Per ulteriori informazioni, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).        |
@@ -108,7 +108,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
 ## <a name="install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management"></a>Installare le applicazioni e i servizi di Azure Information Protection classico e client per Rights Management
 
-Effettuare i passaggi seguenti:
+Eseguire la procedura seguente:
 
 1. **Distribuire il client di Azure Information Protection classico**
     

@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ee51978452a4f420478f2938020578166f49335
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 5a512bd03a627fb80503f07b98e4340d8ea9fce4
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805989"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164352"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -74,6 +74,7 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 |**Più versioni di Office**    | I client di Azure Information Protection, incluse le etichettature classica e unificata, non supportano più versioni di Office nello stesso computer o lo scambio degli account utente in Office.       |
 |**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office: <br><br>-È possibile che si verifichino problemi di prestazioni nelle app di Office.<br>-La barra di Azure Information Protection può sembrare mobile al centro della schermata di Office, in una o in entrambe le visualizzazioni <br><br>Per garantire prestazioni coerenti e che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e in **generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore**.    |
 |**Supporto di IRM in Office 2016**| L'impostazione del registro di sistema [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , che controlla la crittografia dei metadati in Office 2016, non è supportata per le etichette Azure Information Protection.|
+|**Accesso al modello a oggetti di Outlook** | -L'impostazione del registro di sistema [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) , che controlla i prompt che vengono visualizzati quando si accede alle rubriche tramite il modello a oggetti di Outlook, non è supportata con le etichette Azure Information Protection. <br><br>-L'impostazione del registro di sistema [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) , che controlla le richieste visualizzate quando un programma legge le informazioni sull'indirizzo, non è supportata per le etichette Azure Information Protection.|
 |**Contrassegni di contenuto in Word**    | I [contrassegni di contenuto](configure-policy-markings.md) AIP nelle intestazioni o nei piè di pagina di Microsoft Word possono essere spostati o posizionati in modo errato oppure possono essere nascosti completamente, quando la stessa intestazione o il piè di pagina contiene anche una tabella.<br><br>Per ulteriori informazioni, vedere [quando vengono applicati i contrassegni visivi](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**File allegati ai messaggi di posta elettronica** |A causa di una limitazione negli aggiornamenti recenti di Windows, quando [Microsoft Outlook è protetto da Azure Rights Management](office-apps-services-support.md), i file allegati ai messaggi di posta elettronica possono essere bloccati dopo l'apertura del file. |
 |**Unione posta**    |  La funzionalità di [stampa unione](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) di Office non è supportata con alcuna funzionalità di Azure Information Protection.       |

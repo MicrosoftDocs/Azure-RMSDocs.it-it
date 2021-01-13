@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca365962d470d009411e4e02de885acd2e7fb043
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 7c76e7e79acb0cd12bfcbe2d71a1fee3ce78b1ba
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806924"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164284"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
@@ -33,9 +33,9 @@ Usare le informazioni seguenti per configurare le regole del flusso di posta in 
 
 - L'etichetta predefinita è **Generale**, che non applica la protezione. Per i messaggi di posta elettronica con questa etichetta inviati all'esterno, applicare l'azione di protezione aggiuntiva Non inoltrare.
 
-- Se un allegato con un'etichetta **Riservato\Partner** viene inviato tramite posta elettronica a qualcuno all'esterno dell'organizzazione e il messaggio di posta elettronica non è protetto, applicare l'azione di protezione aggiuntiva Encrypt-Only (Solo crittografia).
+- Se un allegato con un'etichetta **Confidential \ partner** viene inviato tramite posta elettronica a utenti esterni all'organizzazione e il messaggio di posta elettronica non è protetto, applicare l'azione di protezione aggiuntiva di sola crittografia.
 
-Le regole del flusso di posta che applicano la protezione come azione vengono ignorate se il messaggio di posta elettronica è già protetto. Ad esempio, un messaggio di posta elettronica protetto da Non inoltrare non può essere modificato da una regola del flusso di posta di Exchange per usare l'opzione Encrypt-Only (Solo crittografia).  
+Le regole del flusso di posta che applicano la protezione come azione vengono ignorate se il messaggio di posta elettronica è già protetto. Un messaggio di posta elettronica protetto da, ad esempio, non può essere modificato da una regola del flusso di posta di Exchange per utilizzare l'opzione di sola crittografia.  
 
 È possibile estendere questi esempi e anche modificarli, ad esempio aggiungendo altre condizioni. Per altre informazioni sulla configurazione delle regole del flusso di posta, vedere [Regole del flusso (regole di trasporto) di posta in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) nella documentazione di Exchange Online.
 
@@ -95,7 +95,7 @@ Nel criterio Azure Information Protection questa etichetta è stata configurata 
 
 Per altre informazioni sull'opzione Non inoltrare, vedere [Opzione Non inoltrare per i messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Esempio 2: Regola che applica l'opzione Encrypt-Only (Solo crittografia) ai messaggi di posta elettronica quando contengono allegati con l'etichetta **Riservato\Partner** e vengono inviati all'esterno dell'organizzazione
+### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Esempio 2: regola che applica l'opzione di sola crittografia ai messaggi di posta elettronica quando hanno allegati con etichetta **Confidential \ Partners** e questi messaggi di posta elettronica vengono inviati all'esterno dell'organizzazione
 
 In questo esempio l'etichetta secondaria **Riservato\Partner** ha il GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Sostituire il GUID della propria etichetta o etichetta secondaria da usare con questa regola. 
 
@@ -123,7 +123,7 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
 
 6. Selezionare **Salva** 
 
-Per altre informazioni sull'opzione Crittografa, vedere [Opzione Encrypt-Only (Solo crittografia) per i messaggi di posta elettronica](configure-usage-rights.md#encrypt-only-option-for-emails).
+Per ulteriori informazioni sull'opzione encrypt, vedere l' [opzione encrypt-only per i messaggi di posta elettronica](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 
 ## <a name="next-steps"></a>Passaggi successivi

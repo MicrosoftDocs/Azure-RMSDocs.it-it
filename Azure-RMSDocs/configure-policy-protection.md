@@ -12,12 +12,12 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 85932860538bbdbc073c49aa12e241b6adad3c09
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: fc02a679cfbc389cb4f09e72018f0b96a30a8b0a
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806652"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164319"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -275,7 +275,7 @@ Se si specificano gli utenti esterni che non hanno un account in Azure AD:
 
 
 > [!NOTE]
-> Exchange Online sta distribuendo una nuova opzione: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (Solo crittografia). Questa opzione non è disponibile per la configurazione delle etichette. È tuttavia possibile, quando si conoscono i destinatari, usare questo esempio per configurare un'etichetta con lo stesso set di diritti di utilizzo. 
+> Exchange Online sta implementando una nuova opzione, [solo crittografia](configure-usage-rights.md#encrypt-only-option-for-emails). Questa opzione non è disponibile per la configurazione delle etichette. È tuttavia possibile, quando si conoscono i destinatari, usare questo esempio per configurare un'etichetta con lo stesso set di diritti di utilizzo. 
 
 Quando gli utenti specificano gli indirizzi di posta elettronica nella casella **A** gli indirizzi devono essere quelli degli utenti specificati per questa configurazione di etichetta. Dal momento che gli utenti possono appartenere a gruppi e avere più di un indirizzo di posta elettronica, l'indirizzo di posta elettronica che specificano non dovrà corrispondere esattamente a quello specificato per le autorizzazioni, anche se questo è il modo più semplice per garantire che il destinatario venga autorizzato. Per altre informazioni sull'applicazione delle autorizzazioni agli utenti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). 
 
@@ -291,7 +291,7 @@ Quando gli utenti specificano gli indirizzi di posta elettronica nella casella *
     
     Nota: non selezionare **Visualizzatore** per i messaggi di posta elettronica. Se si seleziona **Personalizzate** assicurarsi di includere l'opzione **Modifica e salva**.
     
-    Per selezionare le stesse autorizzazioni corrispondenti alla nuova opzione **Encrypt-Only** (Solo crittografia) di Exchange Online, selezionare **Personalizzate**. Selezionare quindi tutte le autorizzazioni tranne **Salva con nome, Esporta (EXPORT)** e **Controllo completo (OWNER)**.
+    Per selezionare le stesse autorizzazioni che corrispondono all'opzione **Encrypt** di Exchange Online, che applica la crittografia senza restrizioni aggiuntive, selezionare **personalizzata**. Selezionare quindi tutte le autorizzazioni tranne **Salva con nome, Esporta (EXPORT)** e **Controllo completo (OWNER)**.
 
 5. Ripetere i passaggi 3 e 4 per specificare altri utenti con autorizzazioni diverse.
 

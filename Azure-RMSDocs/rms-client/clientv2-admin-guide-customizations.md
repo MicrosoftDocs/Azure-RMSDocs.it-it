@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3deab3f361667a79905ab91842361d270b4323d7
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: ccedda605f736647766a0a5b2465e9ef90f2dbcc
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764170"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164148"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -159,13 +159,6 @@ Quando per un utente sono configurati più criteri di etichetta, ognuno con impo
 
 Le impostazioni avanzate dei criteri di etichetta vengono applicate usando la stessa logica, usando l'ultima impostazione dei criteri.
 
-> [!NOTE]
-> Nella versione corrente di GA, esiste un'eccezione per l'impostazione dei criteri Advanced label [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) , che consente di impostare un'etichetta predefinita diversa per Outlook.
-> 
-> Se si verificano conflitti per l'impostazione [OutlookDefaultLabel](#set-a-different-default-label-for-outlook) , la configurazione viene ricavata dalla prima impostazione dei criteri, in base all'ordine dei criteri nell'interfaccia di amministrazione. 
->
-> Questa eccezione è stata rimossa come parte dell'anteprima pubblica di [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) .
-
 ## <a name="advanced-setting-references"></a>Riferimenti a impostazioni avanzate
 
 Le sezioni seguenti illustrano le impostazioni avanzate disponibili per le etichette e i criteri di etichetta:
@@ -179,7 +172,7 @@ Le sezioni seguenti elencano le impostazioni avanzate descritte in questa pagina
 
 |Funzionalità  |Impostazioni avanzate  |
 |---------|---------|
-|**Impostazioni di Outlook e posta elettronica**     | - [Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Personalizzare i messaggi popup di Outlook](#customize-outlook-popup-messages) <br>- [Abilita classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)<br> - [Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Per i messaggi di posta elettronica con allegati, applicare un'etichetta che corrisponda alla classificazione più elevata di tali allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Espandi elenchi di distribuzione di Outlook durante la ricerca di destinatari di posta elettronica](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) <br>- [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Impedisci problemi di prestazioni di Outlook con messaggi di posta elettronica S/MIME](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Imposta un'etichetta predefinita diversa per Outlook](#set-a-different-default-label-for-outlook) |
+|**Impostazioni di Outlook e posta elettronica**     | - [Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Personalizzare i messaggi popup di Outlook](#customize-outlook-popup-messages) <br>- [Abilita classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)<br> - [Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Per i messaggi di posta elettronica con allegati, applicare un'etichetta che corrisponda alla classificazione più elevata di tali allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Espandi elenchi di distribuzione di Outlook durante la ricerca di destinatari di posta elettronica](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Impedisci problemi di prestazioni di Outlook con messaggi di posta elettronica S/MIME](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Imposta un'etichetta predefinita diversa per Outlook](#set-a-different-default-label-for-outlook)     |
 |**Impostazioni di PowerPoint** | - [Evitare di rimuovere forme da PowerPoint che contengono testo specificato e non sono intestazioni/piè di pagina](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [Rimuovere in modo esplicito i contrassegni di contenuto esterno dall'interno dei layout personalizzati di PowerPoint](#extend-external-marking-removal-to-custom-layouts)<br>- [Rimuovere tutte le forme di un nome di forma specifico dalle intestazioni e dai piè di pagina, anziché rimuovere forme per testo all'interno della forma](#remove-all-shapes-of-a-specific-shape-name)  |
 |**Impostazioni di Esplora file**     | - [Visualizza sempre le autorizzazioni personalizzate per gli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Disabilitare le autorizzazioni personalizzate in Esplora file](#disable-custom-permissions-in-file-explorer)      |
 |**Impostazioni di miglioramento delle prestazioni**     | - [Limita utilizzo CPU](#limit-cpu-consumption) <br>- [Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Impedisci problemi di prestazioni di Outlook con messaggi di posta elettronica S/MIME](#prevent-outlook-performance-issues-with-smime-emails)        |
@@ -205,7 +198,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |**EnableCustomPermissionsForCustomProtectedFiles**|[Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**EnableLabelByMailHeader**|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**EnableLabelBySharePointProperties**|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-| **EnableOutlookDistributionListExpansion** | [Espandi elenchi di distribuzione di Outlook durante la ricerca di destinatari di posta elettronica](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+| **EnableOutlookDistributionListExpansion** | [Espandi elenchi di distribuzione di Outlook durante la ricerca di destinatari di posta elettronica](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
 | **EnableTrackAndRevoke** | [Disattiva le funzionalità di rilevamento dei documenti (anteprima pubblica)](#turn-off-document-tracking-features-public-preview) |
 |**HideBarByDefault**|[Visualizza la barra di Information Protection nelle app Office](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Personalizzare i testi della richiesta di giustificazione per le etichette modificate](#customize-justification-prompt-texts-for-modified-labels) |
@@ -214,7 +207,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |**OutlookBlockUntrustedCollaborationLabel**|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookCollaborationRule**| [Personalizzare i messaggi popup di Outlook](#customize-outlook-popup-messages)|
 |**OutlookDefaultLabel**|[Impostare un'etichetta predefinita diversa per Outlook](#set-a-different-default-label-for-outlook)|
-|**OutlookGetEmailAddressesTimeOutMSProperty** | [Modificare il timeout per l'espansione di una lista di distribuzione in Outlook quando si implementano messaggi di blocco per i destinatari negli elenchi di distribuzione](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+|**OutlookGetEmailAddressesTimeOutMSProperty** | [Modificare il timeout per l'espansione di una lista di distribuzione in Outlook quando si implementano messaggi di blocco per i destinatari negli elenchi di distribuzione](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
 |**OutlookJustifyTrustedDomains**|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookJustifyUntrustedCollaborationLabel**|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookRecommendationEnabled**|[Abilitare la classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)|
@@ -816,7 +809,7 @@ Quando si creano e configurano le impostazioni client avanzate seguenti, gli ute
 
 Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio popup con una delle azioni seguenti:
 
-|Type  |Descrizione  |
+|Tipo  |Description  |
 |---------|---------|
 |**Avvertire**     | l'utente può confermare e inviare oppure annullare.        |
 |**Giustificare**     |  All'utente viene richiesta la giustificazione (opzioni predefinite o formato libero) e l'utente può quindi inviare o annullare il messaggio. <br>Il testo della giustificazione viene scritto nell'intestazione x del messaggio di posta elettronica, in modo che possa essere letto da altri sistemi, ad esempio i servizi di prevenzione della perdita dei dati (DLP).       |
@@ -874,7 +867,7 @@ Per ulteriori personalizzazioni, è anche possibile [esentare i nomi di dominio 
 >Per altre informazioni, vedere [personalizzare i messaggi popup di Outlook](#customize-outlook-popup-messages).
 > 
 > [!TIP]
-> Per assicurarsi che i messaggi di blocco vengano visualizzati in base alle esigenze, anche per un destinatario che si trova all'interno di una lista di distribuzione di Outlook, assicurarsi di aggiungere l'impostazione avanzata [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) .
+> Per assicurarsi che i messaggi di blocco vengano visualizzati in base alle esigenze, anche per un destinatario che si trova all'interno di una lista di distribuzione di Outlook, assicurarsi di aggiungere l'impostazione avanzata [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients) .
 >
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
@@ -908,7 +901,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomain
 ```
 
 > [!NOTE]
-> Per assicurarsi che i messaggi di blocco vengano visualizzati in base alle esigenze, anche per un destinatario che si trova all'interno di una lista di distribuzione di Outlook, assicurarsi di aggiungere l'impostazione avanzata [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) .
+> Per assicurarsi che i messaggi di blocco vengano visualizzati in base alle esigenze, anche per un destinatario che si trova all'interno di una lista di distribuzione di Outlook, assicurarsi di aggiungere l'impostazione avanzata [EnableOutlookDistributionListExpansion](#expand-outlook-distribution-lists-when-searching-for-email-recipients) .
 >
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Per implementare l'avviso, giustificare o bloccare i messaggi popup per i messaggi di posta elettronica o gli allegati che non hanno un'etichetta
@@ -984,7 +977,7 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
-## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview"></a>Espandi elenchi di distribuzione di Outlook durante la ricerca di destinatari di posta elettronica (anteprima pubblica)
+## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients"></a>Espandi elenchi di distribuzione di Outlook durante la ricerca di destinatari di posta elettronica
 
 Questa configurazione usa un' [impostazione avanzata](#configuring-advanced-settings-for-the-client-via-powershell) dei criteri che è necessario configurare usando Office 365 Security & Compliance Center PowerShell.
 
@@ -1137,7 +1130,7 @@ Per ulteriori personalizzazioni, vedere:
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -1157,7 +1150,7 @@ Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Se
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -1177,7 +1170,7 @@ Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomPrope
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
 
-Esempio:
+In questo esempio:
 
 - Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
@@ -1255,7 +1248,7 @@ Per i documenti di Office e i messaggi di posta elettronica di Outlook che gli u
 
 In seguito a questa opzione di configurazione, tutte le proprietà personalizzate aggiuntive vengono applicate dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-|Ambiente  | Descrizione  |
+|Ambiente  | Description  |
 |---------|---------|
 |**Documenti di Office**    | Quando il documento viene etichettato nell'app desktop, le proprietà personalizzate aggiuntive vengono applicate quando il documento viene salvato.        |
 |**Messaggi di posta elettronica di Outlook**     |    Quando il messaggio di posta elettronica viene contrassegnato in Outlook, le proprietà aggiuntive vengono applicate all'intestazione x quando viene inviato il messaggio di posta elettronica.     |
@@ -1281,7 +1274,7 @@ Ad esempio:
 
 Requisito: i documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di riservatezza è denominata **Confidential** e crea una proprietà personalizzata denominata **classificazione** con il valore **Secret**.
 
@@ -1663,7 +1656,7 @@ Se per un'azione non viene specificato alcun parametro, i popup avranno il testo
 
 Tutti i testi supportano i parametri dinamici seguenti: 
 
-|Parametro  |Descrizione  |
+|Parametro  |Description  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Ultima corrispondenza per le condizioni di **SentTo**       |
 | `${MatchedLabelName}`      | **Etichetta** posta/allegato, con il nome localizzato del criterio               |

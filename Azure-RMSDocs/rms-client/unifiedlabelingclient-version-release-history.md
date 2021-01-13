@@ -4,7 +4,7 @@ description: Scopri le novità per il client Unified Labeling Azure Information 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e4193a0345708d4c90e3469df8b1102d45a85af7
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805955"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164403"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -69,33 +69,33 @@ La versione più recente di Azure Information Protection è attualmente in fase 
 
 Il client di etichettatura unificata sostituisce il client classico Azure Information Protection. Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare le soluzioni per l'assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## <a name="version-291090-public-preview"></a>Versione 2.9.109.0 (anteprima pubblica)
+## <a name="version-291110"></a>Versione 2.9.111.0
 
-Scanner unificato per l'assegnazione di etichette e versione client 2.9.109.0
+Scanner unificato per l'assegnazione di etichette e versione client 2.9.111.0
 
-**Versione** 12/16/2020
+**Versione** 1/13/2021
 
 Questa versione include le nuove funzionalità, le correzioni e i miglioramenti seguenti per lo scanner e il client di Unified Labeling:
 
 - **Nuove funzionalità per lo scanner**:
 
     - [Supporto di PowerShell per server scanner disconnessi](#powershell-support-for-disconnected-scanner-servers)
-    - [Supporto per repository NFS nei processi di analisi dei contenuti](#support-for-nfs-repositories-in-content-scan-jobs)
+    - [Supporto per repository NFS nei processi di analisi dei contenuti](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
     - [Aggiunta del supporto per altri tipi di informazioni riservate](#added-support-for-additional-sensitive-information-types)
 
 - **Nuove funzionalità per il client**:
 
-    - [Tenere traccia dell'accesso ai documenti e revocare l'accesso](#track-document-access-and-revoke-access)
+    - [Tenere traccia dell'accesso ai documenti e revocare l'accesso](#track-document-access-and-revoke-access-public-preview)
     - [Aggiunta del supporto per altri tipi di informazioni riservate](#added-support-for-additional-sensitive-information-types)
 
-- **Correzioni e miglioramenti:**
+- **Correzioni e miglioramenti**:
 
     - [Correzioni e miglioramenti per lo scanner Unified Labeling](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Correzioni e miglioramenti per il client Unified Labeling](#fixes-and-improvements-for-the-unified-labeling-client)
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>Supporto di PowerShell per server scanner disconnessi
 
-Lo [scanner locale Azure Information Protection](../deploy-aip-scanner.md) supporta ora la gestione dei processi di analisi del contenuto, per i server scanner che non possono connettersi a Internet tramite PowerShell.
+Lo [scanner locale Azure Information Protection](../deploy-aip-scanner.md) supporta ora la gestione dei processi di analisi del contenuto in PowerShell per i server scanner che non possono connettersi a Internet, ad esempio con un [server di scanner 21ViaNet di Azure China](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
 Per supportare i server scanner disconnessi, sono stati aggiunti i nuovi cmdlet seguenti:
 
@@ -114,7 +114,7 @@ Per supportare i server scanner disconnessi, sono stati aggiunti i nuovi cmdlet 
 
 Per ulteriori informazioni, vedere [quando il server dello scanner non può avere la connettività Internet](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) e [configurare lo scanner](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
-### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Supporto per repository NFS nei processi di analisi dei contenuti
+### <a name="support-for-nfs-repositories-in-content-scan-jobs-public-preview"></a>Supporto per repository NFS nei processi di analisi dei contenuti (anteprima pubblica)
 
 È ora possibile aggiungere repository NFS ai processi di analisi del contenuto, oltre alle condivisioni file SMB e ai repository di SharePoint.
 
@@ -136,9 +136,9 @@ Per altre informazioni, vedere [creare un processo di analisi del contenuto](../
 
 Per ulteriori informazioni, vedere le [definizioni di entità di tipo informazioni riservate](/microsoft-365/compliance/sensitive-information-type-entity-definitions) nella documentazione di Microsoft 365.
 
-### <a name="track-document-access-and-revoke-access"></a>Tenere traccia dell'accesso ai documenti e revocare l'accesso
+### <a name="track-document-access-and-revoke-access-public-preview"></a>Tenere traccia dell'accesso ai documenti e revocare l'accesso (anteprima pubblica)
 
-Una volta eseguito l'aggiornamento alla versione 2.9.109.0, tutti i documenti non ancora registrati per il rilevamento vengono registrati alla successiva apertura in un computer con il client AIP Unified Labeling installato.
+Una volta eseguito l'aggiornamento alla versione 2.9.111.0, i documenti protetti non ancora registrati per il rilevamento vengono registrati alla successiva apertura in un computer in cui è installato il client AIP Unified labeling. I documenti protetti sono supportati per Track and Revoke, anche se non sono etichettati.
 
 La registrazione dei documenti per il rilevamento consente agli amministratori di usare PowerShell per tenere traccia dell'accesso ai documenti e revocare l'accesso, se necessario.
 
@@ -160,14 +160,13 @@ Per visualizzare i dati di rilevamento con il client di etichettatura unificata,
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-scanner"></a>Correzioni e miglioramenti per lo scanner Unified Labeling
 
-Nella versione 2.9.109.0 di [Azure Information Protection scanner Unified Labeling](../deploy-aip-scanner.md)sono state fornite le correzioni seguenti:
+Nella versione 2.9.111.0 di [Azure Information Protection scanner Unified Labeling](../deploy-aip-scanner.md)sono state fornite le correzioni seguenti:
 
 - Aggiunta del supporto per i trattini ( **-** ) nei nomi di [database dello scanner](../deploy-aip-scanner-prereqs.md)
 - Aggiornamenti nei report per quando l'opzione **[file etichetta basata su contenuto](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** è impostata su **off**
 - [Miglioramento dell'utilizzo della memoria](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) per un numero elevato di corrispondenze di tipo informazioni
 - Supporto per percorsi [locali di SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) che terminano con una barra ( **/** )
 - Maggiore [velocità](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) di analisi di SharePoint
-
 - Supporto per [evitare un timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) durante l'analisi di un server SharePoint.
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-client"></a>Correzioni e miglioramenti per il client Unified Labeling
@@ -182,9 +181,9 @@ Nella versione 2.9.109.0 di [Azure Information Protection scanner Unified Labeli
 
 - Le etichette e il [contrassegno visivo](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) [consigliati](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) vengono applicati come previsto in Outlook. 
 
-- Aggiunta del supporto per la [ricerca di destinatari nelle liste di distribuzione di Outlook](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview), ad esempio quando sono configurate le impostazioni [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) e [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) .
+- Aggiunta del supporto per la [ricerca di destinatari nelle liste di distribuzione di Outlook](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients), ad esempio quando sono configurate le impostazioni [OutlookBlockTrustedDomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) e [OutlookBlockUntrustedCollaborationLabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) .
 
-    Quando si attiva questa funzionalità, è consigliabile anche aumentare il valore di timeout predefinito, come definito nell'impostazione [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) .
+    Quando si attiva questa funzionalità, è consigliabile anche aumentare il valore di timeout predefinito, come definito nell'impostazione [OutlookGetEmailAddressesTimeOutMSProperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients) .
 
 - Aggiornamenti dell' [ordine di precedenza](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) utilizzato quando per un utente sono configurati più criteri di etichetta, ognuno con impostazioni avanzate in conflitto.
 

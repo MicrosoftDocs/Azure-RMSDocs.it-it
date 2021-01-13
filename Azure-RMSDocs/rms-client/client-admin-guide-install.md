@@ -14,18 +14,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a4545fdf75cdf6a9516887210f75e36ca8255f36
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 2efab361e4ea1b74fdedf6cc6cc9735338d3633b
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807315"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164097"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Guida dell'amministratore: installare il client classico Azure Information Protection per gli utenti
 
 >***Si applica a**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->***Rilevante per**: [Client classico Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Pertinente per**: [Azure Information Protection client classico per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client di etichettatura unificata, vedere la [Guida dell'amministratore del client Unified Labeling](clientv2-admin-guide-install.md). *
 
 > [!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
@@ -96,7 +96,7 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
 
 Usare una delle opzioni seguenti per installare il client per gli utenti:
 
-|Opzione di installazione  |Descrizione  |
+|Opzione di installazione  |Description  |
 |---------|---------|
 |**Eseguire il file eseguibile del client (exe)**  <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | È consigliabile eseguire la versione exe del client per eseguire l'installazione in modo interattivo o invisibile all'utente.<br><br> L'esecuzione del file con estensione exe presenta la massima flessibilità ed è consigliata perché controlla anche la presenza di molti prerequisiti e può anche installare eventuali prerequisiti mancanti. |
 |**Distribuire il programma di installazione di Windows (MSI) del client** <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Il programma di installazione di Windows client Azure Information Protection è supportato solo per le installazioni automatiche che utilizzano un meccanismo di distribuzione centrale.<br><br> Usare, ad esempio, il file con estensione msi quando si distribuisce con criteri di gruppo, Configuration Manager e Microsoft Intune.<br><br> È necessario usare questo metodo per i PC Windows 10 gestiti da Intune e la gestione di dispositivi mobili (MDM) come file con estensione exe non supportati per questi computer.<br><br>**Nota**: quando si usa l'installazione con estensione msi, è necessario verificare manualmente la presenza di prerequisiti e installare o disinstallare il software dipendente necessario. |
@@ -191,7 +191,7 @@ Per il supporto degli aggiornamenti automatici tramite Windows Update e per l'in
 
 Se l'installazione di questa versione più recente di Microsoft .NET Framework non è una soluzione efficace, è possibile installare il client con il parametro **DowngradeDotNetRequirement=True**, in modo da ignorare questo requisito se è installato Microsoft .NET Framework versione 4.5.1.
 
-ad esempio `AzInfoProtection.exe DowngradeDotNetRequirement=True`
+Ad esempio: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 È consigliabile usare questo parametro con cautela, tenendo presente che sono stati segnalati problemi di blocco delle applicazioni di Office quando il client Azure Information Protection viene usato con questa versione precedente di Microsoft .NET Framework. Se si riscontrano problemi di blocco delle applicazioni, eseguire l'aggiornamento alla versione consigliata prima di provare altre soluzioni. 
 
