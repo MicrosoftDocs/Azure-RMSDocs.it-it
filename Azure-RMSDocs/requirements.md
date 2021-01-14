@@ -4,7 +4,7 @@ description: Identificare i prerequisiti necessari per distribuire Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 229b67b152845cfb1e0499f1df9eb08ba28b49df
-ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
+ms.openlocfilehash: dda6d51f6130ab0fd34f2bcf0a72600898603f48
+ms.sourcegitcommit: 4381c7cf2a87002caba5eb0cab3046466a2f293e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762309"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98124394"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti per Azure Information Protection
 
@@ -224,13 +224,18 @@ Se si usa un endpoint Azure e un gruppo di sicurezza di rete, assicurarsi di con
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-In questo caso il servizio Azure Information Protection dipende anche da due indirizzi IP specifici:
+In questo caso il servizio Azure Information Protection dipende anche dagli indirizzi IP e dalla porta seguenti:
 
+ - **13.107.9.198**
+ - **13.107.6.198**
+ - **2620:1ec:4::198**
+ - **2620:1ec:a92::198**
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Porta 443** per il traffico HTTPS
 
 Assicurarsi di creare regole per consentire l'accesso in uscita a questi indirizzi IP specifici e tramite questa porta.
+
 
 ## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Server locali supportati per la protezione dati di Azure Rights Management
 
