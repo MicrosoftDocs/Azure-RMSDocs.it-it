@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 3e5a34268b2b0144c49c7ce6150d725b642184e5
+ms.sourcegitcommit: d68537b88ac6b43846d574359938fb45277cb850
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164403"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195416"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -80,12 +80,12 @@ Questa versione include le nuove funzionalità, le correzioni e i miglioramenti 
 - **Nuove funzionalità per lo scanner**:
 
     - [Supporto di PowerShell per server scanner disconnessi](#powershell-support-for-disconnected-scanner-servers)
-    - [Supporto per repository NFS nei processi di analisi dei contenuti](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
+    - [Supporto per repository NFS nei processi di analisi dei contenuti](#support-for-nfs-repositories-in-content-scan-jobs-public-preview) (anteprima pubblica)
     - [Aggiunta del supporto per altri tipi di informazioni riservate](#added-support-for-additional-sensitive-information-types)
 
 - **Nuove funzionalità per il client**:
 
-    - [Tenere traccia dell'accesso ai documenti e revocare l'accesso](#track-document-access-and-revoke-access-public-preview)
+    - [Tenere traccia dell'accesso ai documenti e revocare l'accesso](#track-document-access-and-revoke-access-public-preview) (anteprima pubblica)
     - [Aggiunta del supporto per altri tipi di informazioni riservate](#added-support-for-additional-sensitive-information-types)
 
 - **Correzioni e miglioramenti**:
@@ -95,9 +95,9 @@ Questa versione include le nuove funzionalità, le correzioni e i miglioramenti 
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>Supporto di PowerShell per server scanner disconnessi
 
-Lo [scanner locale Azure Information Protection](../deploy-aip-scanner.md) supporta ora la gestione dei processi di analisi del contenuto in PowerShell per i server scanner che non possono connettersi a Internet, ad esempio con un [server di scanner 21ViaNet di Azure China](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
+Lo [scanner locale Azure Information Protection](../deploy-aip-scanner.md) supporta ora la gestione dei processi di analisi del contenuto su PowerShell, per i server scanner che non possono connettersi a Internet o per gli scanner in un [ambiente 21ViaNet di Azure Cina (Cina sovrana)](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
-Per supportare i server scanner disconnessi, sono stati aggiunti i nuovi cmdlet seguenti:
+Per supportare i server di scanner disconnessi o Azure Cina 21Vianet, sono stati aggiunti i nuovi cmdlet seguenti:
 
 |Cmdlet  |Descrizione  |
 |---------|---------|
@@ -198,6 +198,8 @@ Nella versione 2.9.111.0 di [Azure Information Protection scanner Unified Labeli
 Scanner unificato per l'assegnazione di etichette e versione client 2.8.85.0
 
 **Rilasciato** 09/22/2020
+
+**Supportato tramite** 7/13/2021
 
 Questa versione include le nuove funzionalità, le correzioni e i miglioramenti seguenti per lo scanner e il client di Unified Labeling:
 
@@ -352,6 +354,8 @@ Scanner unificato per l'assegnazione di etichette e versione client 2.7.101.0
 
 **Rilasciato** 08/23/2020
 
+**Supportato tramite** 3/22/2021
+
 **Correzione**:
 
 Correzione di un problema per gli utenti di PPT, Excel e Word che causavano il blocco dei file, l'arresto anomalo o la necessità di ripetere il salvataggio che era correlato a etichette obbligatorie configurate con protezione, filigrana e/o contrassegno di contenuto.
@@ -361,6 +365,8 @@ Correzione di un problema per gli utenti di PPT, Excel e Word che causavano il b
 Scanner unificato per l'assegnazione di etichette e versione client 2.7.99.0
 
 **Rilasciato** 07/20/2020
+
+**Supportato tramite** 2/23/2021
 
 **Correzioni e miglioramenti**:
 
@@ -373,6 +379,8 @@ Per ulteriori informazioni, vedere la pagina relativa alla [versione 2.7.96.0](#
 Scanner unificato per l'assegnazione di etichette e versione client 2.7.96.0
 
 **Rilasciato** 06/29/2020
+
+**Supportato tramite** 1/20/2021
 
 - [Nuove funzionalità per Unified Labeling client, versione 2.7.96.0](#new-features-for-the-unified-labeling-client-version-27960)
 - [Nuove funzionalità per lo scanner Unified Labeling, versione 2.7.96.0](#new-features-for-the-unified-labeling-scanner-version-27960)
