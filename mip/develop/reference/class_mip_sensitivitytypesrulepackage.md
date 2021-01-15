@@ -1,27 +1,27 @@
 ---
 title: Classe SensitivityTypesRulePackage
 description: 'Documenta la classe sensitivitytypesrulepackage:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 85157a29eac123a849c3b167b1c32cbd15875653
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: be3c4bffba1f3aa996a8e4968628db8b7b710d25
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566639"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212995"
 ---
 # <a name="class-sensitivitytypesrulepackage"></a>Classe SensitivityTypesRulePackage 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std:: String& GetRulePackageId () const  |  Ottenere l'ID del pacchetto di regole.
 public const std:: String& GetRulePackage () const  |  Ottenere il pacchetto di regole.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId (funzione)
 Ottenere l'ID del pacchetto di regole.

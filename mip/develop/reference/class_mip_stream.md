@@ -1,23 +1,23 @@
 ---
 title: Flusso di classi
 description: 'Documenta la classe Stream:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: a370d6917306f2865c1d91eb7fa90c2880497a04
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 0027c2dd3e66734f80dcce75ef8026202eb96e69
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566624"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212927"
 ---
 # <a name="class-stream"></a>Flusso di classi 
 Classe che definisce l'interfaccia tra Microsoft Information Protection SDK e il contenuto basato su flusso.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Legge in un buffer dal flusso.
 public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Scrive nel flusso da un buffer.
@@ -29,7 +29,7 @@ public int64_t Position()  |  Ottiene la posizione corrente all'interno del flus
 public int64_t Size()  |  Ottiene le dimensioni del contenuto all'interno del flusso.
 public void Size(int64_t value)  |  Imposta le dimensioni del flusso.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="read-function"></a>Read (funzione)
 Legge in un buffer dal flusso.

@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: c3973488cb8c3ec109a5a11dea1e540f09db92d4
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 732ca5e87b83f578dad3b40f842e31ea29e95c08
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555705"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212723"
 ---
 # <a name="implement-executionstate"></a>Implementare ExecutionState
 
@@ -27,7 +27,7 @@ Il passaggio di informazioni a Microsoft Information Protection SDK per calcolar
 
 `ExecutionState` espone i membri virtuali seguenti. Ognuno di essi specifica un contesto per il motore dei criteri per restituire le informazioni sulle azioni che devono essere eseguite dall'applicazione. Inoltre, queste informazioni possono essere usate per specificare informazioni di controllo per la funzionalità di reporting di Azure Information Protection.
 
-| Membro                                                                             | Returns                                                                                                              |
+| Membro                                                                             | Restituisce                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Restituisce l'etichetta da applicare all'oggetto.                                                                       |
 | `mip::DataState GetDataState()`                                                    | Restituisce il MIP::D ataState dell'oggetto.                                                                            |
@@ -38,7 +38,7 @@ Il passaggio di informazioni a Microsoft Information Protection SDK per calcolar
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Restituisce un std::vector di std::pairs di stringa contenente i metadati personalizzati che verranno applicati al documento. |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Restituisce un std::vector di std::pairs di stringa contenente i metadati di contenuto correnti.                               |
 | `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | Restituisce un puntatore a un mip::ProtectionDescriptor                                                                     |
-| `mip::ContentFormat GetContentFormat()`                                            | Restituisce mip::ContentFormat                                                                                           |
+| `std::string GetContentFormat()`                                            | Restituisce una stringa                                                                                           |
 | `mip::ActionType GetSupportedActions()`                                            | Restituisce mip::ActionTypes per l'etichetta.                                                                              |
 | `std::shared_ptr<mip::ClassificationResults>`                                      | Restituisce un elenco di risultati di classificazione, se implementato.                                                            |
 
@@ -57,7 +57,7 @@ struct ExecutionStateOptions {
     bool isDowngradeJustified = false;
     std::string downgradeJustification;
     std::string templateId;
-    mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    std::string contentFormat = mip::GetFileContentFormat();
     mip::ActionType supportedActions;
     bool generateAuditEvent;
 };

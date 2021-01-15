@@ -1,29 +1,29 @@
 ---
 title: Concetti-scenari di autenticazione per i client C# Microsoft Information Protection (MIP) SDK
 description: Dettagli tecnici sugli scenari di autenticazione per le applicazioni client C# Microsoft Information Protection SDK.
-author: msmbaldwin
-ms.author: mbaldwin
+author: Pathak-Aniket
+ms.author: v-anikep
 ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: 7a22bc297b3330b3cdb738ff16e013d0d1f0dc87
-ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
+ms.openlocfilehash: bee7cb6854aa58f6d5c3c6781984875c8ee347a1
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865332"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212621"
 ---
 # <a name="quickstart-public-and-confidential-clients-c"></a>Guida introduttiva: client pubblici e riservati (C#)
 
-Esistono due scenari comuni usati per la compilazione di applicazioni con l'SDK MIP. Uno scenario prevede che l'utente esegua l'autenticazione direttamente rispetto a Azure AD, dove, come nell'altra, l'autenticazione dell'applicazione usa una chiave o un certificato dell'entità servizio segreta.
+Esistono due scenari comuni usati per la compilazione di applicazioni con l'SDK MIP. Il primo scenario rileva che l'utente esegue l'autenticazione direttamente rispetto a Azure AD. Nel secondo, l'applicazione esegue l'autenticazione usando un certificato o una chiave dell'entità servizio segreta.
 
 ## <a name="public-client-applications"></a>Applicazioni client pubbliche
 
-Si tratta in genere di applicazioni desktop o per dispositivi mobili in cui l'applicazione in esecuzione nel dispositivo richiederà all'utente di eseguire l'autenticazione e l'utente si connette direttamente ai servizi MIP back-end. In questo scenario, le librerie di autenticazione devono essere usate per assicurarsi che l'utente sia in grado di accedere a Azure AD, che soddisfi tutti i requisiti di accesso condizionale o a più fattori e ottenga un token OAuth2 per la risorsa appropriata.
+Queste applicazioni sono applicazioni desktop o per dispositivi mobili in cui l'applicazione in esecuzione nel dispositivo richiederà all'utente di eseguire l'autenticazione. L'utente si connette direttamente ai servizi MIP di back-end. In questo scenario, le librerie di autenticazione devono essere usate per assicurarsi che l'utente possa accedere a Azure AD, che soddisfi tutti i requisiti di accesso condizionale o a più fattori e ottenga un token OAuth2 per la risorsa appropriata.
 
-Per ulteriori informazioni, vedere la [documentazione di Azure ad flusso di autenticazione client pubblico](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-public-client-application-from-configuration-options)
+Per ulteriori informazioni, vedere la [documentazione relativa al flusso di autenticazione client pubblico](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-public-client-application-from-configuration-options)
 
-Di seguito è riportato un rapido codice snip che illustra il flusso di autenticazione client pubblico per l'applicazione client Microsoft Information Protection SDK usando Microsoft Authentication Library (MSAL).
+Di seguito è riportato un rapido codice snip che illustra il flusso di autenticazione client pubblico per l'applicazione client Microsoft Information Protection SDK utilizzando Microsoft Authentication Library (MSAL).
 
 ```csharp
 
@@ -45,15 +45,28 @@ public string AcquireToken(Identity identity, string authority, string resource,
 }
 ```
 
-Tenant-GUID rappresenta il GUID del tenant per il tenant di Azure AD, mentre Application-ID è l'ID applicazione nella registrazione dell'applicazione nel portale di Azure AD.
+**Tenant-GUID** è il GUID univoco del tenant per il tenant Azure ad.
+**Application-ID** è l'ID applicazione nella registrazione dell'applicazione nel portale di Azure ad.
 
 ## <a name="confidential-client-applications"></a>Applicazioni client riservate
 
-Si tratta in genere di applicazioni basate su cloud o sui servizi in cui l'utente non si connette direttamente ai servizi MIP di back-end, ma il servizio deve etichettare, proteggere o rimuovere la protezione del contenuto abilitato per MIP. In questo scenario, l'applicazione deve archiviare un certificato o un segreto dell'applicazione da usare per l'autenticazione per Azure AD e usare tale segreto per recuperare i token per i servizi MIP back-end. Il licenziatario potrà quindi utilizzare le funzionalità di delega dell'SDK MIP per proteggere o utilizzare il contenuto per conto dell'utente autenticato.
+Queste applicazioni sono applicazioni basate su cloud o sui servizi in cui l'utente non si connette direttamente ai servizi MIP di back-end. Il servizio ha la necessità di etichettare, proteggere o rimuovere la protezione del contenuto abilitato per MIP. In questo scenario, l'applicazione deve archiviare un certificato o un segreto dell'applicazione. Questi segreti verranno usati per l'autenticazione Azure AD e useranno il segreto per recuperare i token per i servizi MIP di back-end. Il licenziatario potrà quindi utilizzare le funzionalità di delega dell'SDK MIP per proteggere o utilizzare il contenuto per conto dell'utente autenticato.
 
-Per ulteriori informazioni, vedere la [documentazione relativa al flusso di autenticazione client Azure ad riservata](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)
+L'integrazione di MIP SDK con le applicazioni basate su servizi richiede l'uso del flusso di concessione delle credenziali client. Microsoft Authentication Library (MSAL) può essere usato per implementarlo in un modello simile a quello che verrebbe visualizzato in un'applicazione client pubblica. Questo articolo illustra brevemente come aggiornare il MIP SDK `IAuthDelegate` in .NET per eseguire l'autenticazione per le applicazioni basate su servizi che usano questo flusso. Al momento della pubblicazione non è disponibile una versione di MSAL per C++, tuttavia è possibile implementare questo flusso tramite [chiamate REST dirette](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token).
 
-Di seguito è riportato un rapido codice snip che illustra il flusso di autenticazione client riservato per l'applicazione client Microsoft Information Protection SDK usando Microsoft Authentication Library (MSAL). Un'applicazione può eseguire l'autenticazione usando il certificato di Active Directory o il segreto client.
+Per ulteriori informazioni, vedere la [documentazione relativa al flusso di autenticazione client riservata](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)
+
+Di seguito è riportato un rapido codice snip che illustra il flusso di autenticazione client riservato per l'applicazione client Microsoft Information Protection SDK utilizzando Microsoft Authentication Library (MSAL). Un'applicazione può eseguire l'autenticazione usando il certificato di Active Directory o il segreto client.
+
+> [!NOTE]
+> Prestare particolare attenzione a questa riga nell'esempio seguente. 
+>
+> ```csharp
+> string[] scopes = new string[] { resource[resource.Length - 1].Equals('/') ? $"{resource}.default" : $"{resource}/.default" };
+> ```
+> Questo costrutti gli ambiti MSAL dalla risorsa fornita al `AcquireToken()` metodo. 
+
+### <a name="msal-confidential-client-example"></a>Esempio di client riservato MSAL
 
 ```csharp
 public string AcquireToken(Identity identity, string authority, string resource, string claim)
@@ -99,5 +112,5 @@ public string AcquireToken(Identity identity, string authority, string resource,
 }
 
 ```
-
-Tenant-GUID rappresenta il GUID del tenant per il tenant di Azure AD, mentre Application-ID è l'ID applicazione nella registrazione dell'applicazione nel portale di Azure AD.
+**Tenant-GUID** è il GUID univoco del tenant per il tenant Azure ad.
+**Application-ID** è l'ID applicazione nella registrazione dell'applicazione nel portale di Azure ad.

@@ -1,24 +1,24 @@
 ---
 title: Classe fileprofile
 description: 'Documents The fileprofile:: undefined Class of the Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 6a7ed521ce5a277a72e8b151c8331d537484c86a
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 10c5656328377a3ced0e24de22d957d016adf396
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566928"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211601"
 ---
 # <a name="class-fileprofile"></a>Classe fileprofile 
 FileProfile è la classe radice per l'uso delle operazioni di Microsoft Information Protection.
 Un'applicazione comune richiede un solo profilo.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Restituisce le impostazioni del profilo.
 public std:: shared_ptr \<AsyncControl\> ListEnginesAsync (const std:: shared_ptr \<void\>& context)  |  Avvia l'operazione di elenco motori.
@@ -27,7 +27,7 @@ public std:: shared_ptr \<AsyncControl\> AddEngineAsync (const fileengine:: sett
 public std:: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std:: string& ID, const std:: shared_ptr \<void\>& context)  |  Avvia l'eliminazione del motore di file con l'ID specificato. Tutti i dati per il profilo specificato verranno eliminati.
 public void AcquirePolicyAuthToken (Cloud Cloud, const std:: shared_ptr \<AuthDelegate\>& authDelegate) const  |  Attivare un callback di autenticazione per i criteri.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
 Restituisce le impostazioni del profilo.

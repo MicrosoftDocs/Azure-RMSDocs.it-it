@@ -1,23 +1,23 @@
 ---
 title: Classe PublishingLicenseInfo
 description: 'Documenta la classe publishinglicenseinfo:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 362a5fe810a5244feef723563dfed910d0c88e62
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: b16c58d7faeea7b91ced99f0a1fc786701ad12a2
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567075"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213284"
 ---
 # <a name="class-publishinglicenseinfo"></a>Classe PublishingLicenseInfo 
 Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public PublishingLicenseInfo (const std:: Vector \<uint8_t\>& serializedPublishingLicense)  | _Non ancora documentato._
 public PublishingLicenseInfo (const std:: Vector \<uint8_t\>& serializedPreLicense, const std:: vector \<uint8_t\>& serializedPublishingLicense)  | _Non ancora documentato._
@@ -35,63 +35,63 @@ public bool GetIsDoubleKeyLicense () const  | _Non ancora documentato._
 public const std:: String& GetDoubleKeyAlgorithm () const  | _Non ancora documentato._
 public const std:: Map \<std::string, std::string\>& GetDoubleKeyApplicationData () const  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="publishinglicenseinfo-function"></a>PublishingLicenseInfo (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="publishinglicenseinfo-function"></a>PublishingLicenseInfo (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="setparseddata-function"></a>SetParsedData (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="setdoublekeydata-function"></a>SetDoubleKeyData (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getprelicense-function"></a>GetPreLicense (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getdomains-function"></a>Funzione getdomains
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getserverpubliccertificate-function"></a>GetServerPublicCertificate (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getissuerid-function"></a>GetIssuerId (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getcontentid-function"></a>GetContentId (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="islicenseparsed-function"></a>IsLicenseParsed (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="hasprelicense-function"></a>HasPreLicense (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getisdoublekeylicense-function"></a>GetIsDoubleKeyLicense (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getdoublekeyalgorithm-function"></a>GetDoubleKeyAlgorithm (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getdoublekeyapplicationdata-function"></a>GetDoubleKeyApplicationData (funzione)
-Non ancora documentato.
+_Non ancora documentato._

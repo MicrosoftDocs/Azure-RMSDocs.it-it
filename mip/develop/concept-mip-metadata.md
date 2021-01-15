@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 6713ba0d8b6727f3ed10e4b3846cbe2bb1b43f6e
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 1e211cf19c5d90f4c1e6e60c808bb38d701720bf
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555688"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212638"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-metadati
 
@@ -33,34 +33,34 @@ Il GUID è un identificatore univoco per ogni etichetta in un'organizzazione.
 
 L'SDK MIP applica il seguente set di metadati.
 
-| Attributo | Tipo o valore                 | Description                                                                                                                                                                                                                                        | Obbligatorio |
-|-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Attivata**   | True o False                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento dati. In genere, i prodotti DLP convalidano l'esistenza di questa chiave per identificare l'etichetta di classificazione. | sì       |
-| **SiteId**    | GUID                          | ID tenant Azure Active Directory                                                                                                                                                                                                                   | sì       |
-| **ActionId**  | GUID                          | ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno sia vecchi che nuovi actionID per consentire il concatenamento dell'attività di assegnazione di etichette all'elemento di dati.                                                                                 | sì       |
-| **Metodo**    | Standard o con privilegi        | Impostare tramite [MIP:: AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard implica che l'etichetta venga applicata per impostazione predefinita o automaticamente. Privileged implica che l'etichetta è stata selezionata manualmente.                                                                                                                                                                                                                 | No        |
-| **SetDate**   | Formato data ISO 8601 esteso | Timestamp del momento in cui è stata impostata l'etichetta.                                                                                                                                                                                                              | No        |
-| **Nome**      | stringa                        | Etichetta nome univoco all'interno del tenant. Non corrisponde necessariamente al nome visualizzato.                                                                                                                                                              | No      |
-| **ContentBits** | integer | Maschera di maschera che descrive i tipi di contrassegno del contenuto da applicare a un file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
- | No |
+| Attributo                                       | Tipo o valore                 | Descrizione                                                                                                                                                                                                                  | Obbligatorio |
+| ----------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| **Enabled**                                     | true o false                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento dati. In genere, i prodotti DLP convalidano l'esistenza di questa chiave per identificare l'etichetta di classificazione. | Sì       |
+| **SiteId**                                      | GUID                          | ID tenant Azure Active Directory                                                                                                                                                                                             | Sì       |
+| **ActionId** (rimosso in MIP SDK 1,8 e versioni successive) | GUID                          | ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno sia vecchi che nuovi actionID per consentire il concatenamento dell'attività di assegnazione di etichette all'elemento di dati.                                                                     | Sì       |
+| **Metodo**                                      | Standard o con privilegi        | Impostare tramite [MIP:: AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard implica che l'etichetta venga applicata per impostazione predefinita o automaticamente. Privileged implica che l'etichetta è stata selezionata manualmente.  | No        |
+| **SetDate**                                     | Formato data ISO 8601 esteso | Timestamp del momento in cui è stata impostata l'etichetta.                                                                                                                                                                                        | No        |
+| **Nome**                                        | string                        | Etichetta nome univoco all'interno del tenant. Non corrisponde necessariamente al nome visualizzato.                                                                                                                                      | No        |
+| **ContentBits**                                 | integer                       | Maschera di maschera che descrive i tipi di contrassegno del contenuto da applicare a un file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8                                                             |
+| No                                              |
 
 Quando viene applicato a un file, il risultato è simile alla tabella seguente.
 
-| Codice                                                         | Value                                |
-|-------------------------------------------------------------|--------------------------------------|
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | True                                 |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
+| Chiave                                                         | Valore                                |
+| ----------------------------------------------------------- | ------------------------------------ |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Enabled     | true                                 |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
 | MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Method      | Con privilegi                           |
-| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Name        | Confidential (Riservato)                         |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits | 2                                    |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Name        | Riservato                         |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_ContentBits | 2                                    |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 
 ## <a name="extending-metadata-with-custom-attributes"></a>Estensione di metadati con attributi personalizzati
 
-I metadati personalizzati possono essere accodati tramite l'API di file e criteri. Gli attributi personalizzati devono mantenere il prefisso `MSIP_Label_GUID` di base. 
+I metadati personalizzati possono essere accodati tramite l'API di file e criteri. Gli attributi personalizzati devono mantenere il `MSIP_Label_GUID` prefisso di base.
 
-Ad esempio, un'applicazione scritta da Contoso Corporation deve applicare i metadati indicanti il sistema che ha generato un file con etichetta. L'applicazione può creare una nuova etichetta con prefisso `MSIP_Label_GUID`. Il nome del fornitore del software e l'attributo personalizzato vengono aggiunti al prefisso per generare i metadati personalizzati.
+Ad esempio, un'applicazione scritta da Contoso Corporation deve applicare i metadati indicanti il sistema che ha generato un file con etichetta. L'applicazione può creare una nuova etichetta con prefisso `MSIP_Label_GUID` . Il nome del fornitore del software e l'attributo personalizzato vengono aggiunti al prefisso per generare i metadati personalizzati.
 
 ```
 MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRReportingSystem
@@ -69,7 +69,7 @@ MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRRepo
 > [!Note]
 > Per mantenere la compatibilità tra applicazioni comuni, la lunghezza massima per ogni chiave e un valore è di 255 caratteri.
 
-## <a name="versioning"></a>Controllo versioni
+## <a name="versioning"></a>Controllo delle versioni
 
 Nel corso del tempo, gli attributi verranno introdotti, modificati o ritirati. Si prevede che le applicazioni continuino a gestire questi attributi obsoleti o ritirati, in quanto la sostituzione del valore in un'organizzazione potrebbe richiedere anni.
 
@@ -77,7 +77,7 @@ Quando si sostituisce un attributo con una versione più recente, è necessario 
 
 `MSIP_Label_GUID_EnabledV2 = True | False | Condition`
 
-## <a name="email"></a>Posta elettronica
+## <a name="email"></a>E-mail
 
 I metadati applicati alla posta elettronica mantengono un formato di coppia chiave/valore simile a quello dei documenti. La differenza principale consiste nel fatto che tutti gli attributi vengono serializzati in una singola intestazione di messaggio di posta elettronica denominata **MSIP_Labels**. Le coppie chiave/valore sono delimitate da un punto e virgola e da uno spazio vuoto e inserite nella nuova intestazione.
 

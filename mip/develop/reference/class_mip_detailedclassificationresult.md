@@ -1,28 +1,28 @@
 ---
 title: Classe DetailedClassificationResult
 description: 'Documenta la classe detailedclassificationresult:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d43b75c232d6bfe60f1b7124c66c007d021dd2ee
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 9b1921c046867207d6b1d9a67df46f442fb95977
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567024"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211636"
 ---
 # <a name="class-detailedclassificationresult"></a>Classe DetailedClassificationResult 
 Classe contenente il risultato di una chiamata di classificazione sullo stato di esecuzione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public int GetConfidenceLevel() const  |  Ottiene l'attendibilità del risultato.
 public int GetCount() const  |  Ottiene il numero di istanze.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getconfidencelevel-function"></a>GetConfidenceLevel (funzione)
 Ottiene l'attendibilità del risultato.

@@ -1,23 +1,23 @@
 ---
 title: 'Classe PolicyProfile:: Settings'
 description: "Documenta la classe policyprofile:: Settings dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2ec38a34f2522448704f1be91d03c62761cafdf6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 49cff6afb3f42b427e656f886eef82fff6bde51e
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566660"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213352"
 ---
 # <a name="class-policyprofilesettings"></a>Classe PolicyProfile:: Settings 
 Oggetto Settings usato da PolicyProfile durante la creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Impostazioni pubbliche (const std:: shared_ptr \<MipContext\>& mipContext, cacheStorageType CacheStorageType, const std:: shared_ptr \<PolicyProfile::Observer\>& Observer)  |  Interfaccia per la configurazione del profilo.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
@@ -33,7 +33,7 @@ public void SetCustomSettings (const std:: Vector \<std::pair\<std::string, std:
 public const std:: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 public ~Settings()  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="settings-function"></a>Funzione Settings
 Interfaccia per la configurazione del profilo.
@@ -97,11 +97,11 @@ Parametri
 le attività possono fare riferimento a oggetti del profilo che ne impediscono la distruzione come risultato taskdispatcher le code non devono essere condivise.
   
 ### <a name="setsessionid-function"></a>Funzione SessionId
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getsessionid-function"></a>Funzione GetSessionID
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="setcustomsettings-function"></a>SetCustomSettings (funzione)
@@ -119,4 +119,4 @@ Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle 
 **Restituisce:**: elenco di coppie nome/valore.
   
 ### <a name="settings-function"></a>~ Settings (funzione)
-Non ancora documentato.
+_Non ancora documentato._

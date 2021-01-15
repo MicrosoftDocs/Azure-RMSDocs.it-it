@@ -1,23 +1,23 @@
 ---
 title: 'Classe AuthDelegate:: OAuth2Token'
 description: 'Documenta la classe authdelegate:: oauth2token di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: a8532e1950977e421fa25b426fa4e4061e610d8d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 4db3d2fbb2299b30b85516047ec237d2f23d7cd9
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567261"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212043"
 ---
 # <a name="class-authdelegateoauth2token"></a>Classe AuthDelegate:: OAuth2Token 
 Classe che contiene le informazioni sul token di accesso fornite da un'applicazione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public OAuth2Token ()  |  Costruisce un nuovo oggetto OAuth2Token.
 public OAuth2Token (const std:: String& accessToken)  |  Costruire un nuovo oggetto OAuth2Token dal token di accesso JWT.
@@ -26,7 +26,7 @@ public void SetAccessToken (const std:: String& accessToken)  |  Impostare la st
 public const std:: String& GetErrorMessage () const  |  Ottenere il messaggio di errore, se presente.
 public void SetErrorMessage (const std:: String& errorMessage)  |  Imposta il messaggio di errore.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="oauth2token-function"></a>OAuth2Token (funzione)
 Costruisce un nuovo oggetto OAuth2Token.

@@ -1,24 +1,24 @@
 ---
 title: Azione della classe
 description: 'Documenta la classe Action:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5a5f6bdf2784b7f07023b5945f27c3f4c511c11b
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 89bdb22e1eb721f19d1fa6cf0a6f32463fb1ac4b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567333"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212570"
 ---
 # <a name="class-action"></a>Azione della classe 
 Interfaccia per un'azione. Ogni azione viene convertita in un passaggio che deve essere eseguito dall'applicazione per applicare l'etichetta (definita nei criteri)
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
-Non ancora documentato.
+## <a name="members"></a>Membri
+_Non ancora documentato._

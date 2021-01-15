@@ -1,41 +1,41 @@
 ---
 title: Classe RulePackageData
 description: 'Documenta la classe rulepackagedata:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 4f2106518bb2837d85eb5874307fad2639df5d90
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 709db83f046380b898606a6c7967110da0a84f82
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566654"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213114"
 ---
 # <a name="class-rulepackagedata"></a>Classe RulePackageData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Public Const PolicyRuleData * GetRuleData () const  | _Non ancora documentato._
 public const std::p Air \<std::string, std::string\>& GetLabelToTemplateId () const  | _Non ancora documentato._
 public const std::p Air \<std::string, std::shared_ptr\<ProtectionActionData\> \>& GetLabelToProtectionType () const  | _Non ancora documentato._
 public virtual ~ RulePackageData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getruledata-function"></a>GetRuleData (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getlabeltotemplateid-function"></a>GetLabelToTemplateId (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getlabeltoprotectiontype-function"></a>GetLabelToProtectionType (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="rulepackagedata-function"></a>~ RulePackageData (funzione)
-Non ancora documentato.
+_Non ancora documentato._

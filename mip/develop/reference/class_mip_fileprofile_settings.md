@@ -1,23 +1,23 @@
 ---
 title: 'Classe fileprofile:: Settings'
 description: "Documenta la classe fileprofile:: Settings dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5ab95e72c1b6198b8619f1fe6b0f850562ff00df
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 052aef83e44fa1f804464feee968d80c84221a24
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566912"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211432"
 ---
 # <a name="class-fileprofilesettings"></a>Classe fileprofile:: Settings 
 Oggetto Settings usato da FileProfile durante la creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Impostazioni pubbliche (const std:: shared_ptr \<MipContext\>& mipContext, cacheStorageType CacheStorageType, std:: shared_ptr \<ConsentDelegate\> consentDelegate, std:: shared_ptr \<Observer\> Observer)  |  Costruttore FileProfile::Settings.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
@@ -33,7 +33,7 @@ public const std::string& GetSessionId() const  |  Ottiene l'ID sessione.
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configura se le licenze dell'utente finale (contratti) verranno memorizzate nella cache locale.
 public bool CanCacheLicenses () const  |  Ottiene un valore che indica se le licenze dell'utente finale (contratti) sono memorizzate nella cache locale.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="settings-function"></a>Funzione Settings
 Costruttore FileProfile::Settings.

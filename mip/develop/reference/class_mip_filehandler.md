@@ -1,29 +1,29 @@
 ---
 title: Gestore della classe
 description: 'Documents The FileHandler:: undefined Class of the Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: bf3866fb1ec06156ebf40b2efed8c44f8af4a4ce
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 77b94fdd79334b842cc2ad1f19cf9a17ddc04439
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566960"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211499"
 ---
 # <a name="class-filehandler"></a>Gestore della classe 
 Interfaccia per tutte le funzioni di gestione file.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: shared_ptr \<ContentLabel\> GetLabel ()  |  Avvia il recupero dell'etichetta di riservatezza dal file.
 public std:: Vector \<std::pair\<std::string, std::string\> \> GetProperties (versione uint32_t)  |  Recupera il file propertries in base alla versione.
 public std:: shared_ptr \<ProtectionHandler\> getprotection ()  |  Avvia il recupero dei criteri di protezione dal file.
-public std:: shared_ptr \<AsyncControl\> RegisterContentForTrackingAndRevocationAsync (bool isOwnerNotificationEnabled, const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Parametri # # # #
-public std:: shared_ptr \<AsyncControl\> RevokeContentAsync (const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Eseguire la revoca per il contenuto.
+public void RegisterContentForTrackingAndRevocationAsync (bool isOwnerNotificationEnabled, const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Parametri # # # #
+public void RevokeContentAsync (const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Eseguire la revoca per il contenuto.
 public void ClassifyAsync (const std:: shared_ptr \<void\>& context)  |  Esegue le regole nel gestore e restituisce l'elenco di azioni da eseguire.
 public void InspectAsync (const std:: shared_ptr \<void\>& context)  |  Creare un oggetto Inspector di file, utilizzato per recuperare il contenuto del file da formati di file compatibili.
 public void selabel (const std:: shared_ptr \<Label\>& Label, const LabelingOptions& LabelingOptions, const ProtectionSettings& ProtectionSettings)  |  Imposta l'etichetta di riservatezza per il file.
@@ -39,7 +39,7 @@ public void GetDecryptedTemporaryStreamAsync (const std:: shared_ptr \<void\>& c
 public void NotifyCommitSuccessful (const std:: String& actualFilePath)  |  Da chiamare quando è stato eseguito il commit delle modifiche su disco.
 public std::string GetOutputFileName()  |  Calcola il nome e l'estensione del file di output in base al nome file originale e alle modifiche accumulate.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getlabel-function"></a>Funzione GetLabel
 Avvia il recupero dell'etichetta di riservatezza dal file.

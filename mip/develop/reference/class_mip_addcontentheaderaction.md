@@ -1,23 +1,23 @@
 ---
 title: Classe AddContentHeaderAction
 description: 'Documenta la classe addcontentheaderaction:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 090bf4e1ad70238d6023a914fba4786a97a25a0d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: e5a2993af705855dde94f5be37e22f1e9ab87c99
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567326"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212452"
 ---
 # <a name="class-addcontentheaderaction"></a>Classe AddContentHeaderAction 
 Classe di azione che specifica l'aggiunta di un'intestazione contenuto.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  API usata per contrassegnare l'elemento di intestazione contenuto.
 public const std::string& GetText() const  |  Ottiene il testo destinato a essere inserito nell'intestazione contenuto.
@@ -27,7 +27,7 @@ public const std::string& GetFontColor() const  |  Ottiene il colore del caratte
 public ContentMarkAlignment GetAlignment() const  |  Ottiene l'allineamento dell'intestazione.
 public int GetMargin() const  |  Ottiene il margine dell'intestazione a partire dal basso.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getuielementname-function"></a>Funzione getuielementname
 API usata per contrassegnare l'elemento di intestazione contenuto.

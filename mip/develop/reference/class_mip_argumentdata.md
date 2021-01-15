@@ -1,41 +1,41 @@
 ---
 title: Classe ArgumentData
 description: 'Documenta la classe argumentdata:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: a3a27af60b02c65cfaef0a14b95f90e45586ea42
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 08f45a9d008e219ebee32a222df102204b4e267b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567278"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212230"
 ---
 # <a name="class-argumentdata"></a>Classe ArgumentData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std:: String& GetValue () const  | _Non ancora documentato._
 public const std:: String& GetKey () const  | _Non ancora documentato._
 public const std:: Vector \<std::string\>& GetValues () const  | _Non ancora documentato._
 public virtual ~ ArgumentData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getvalue-function"></a>Funzione GetValue
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getkey-function"></a>GetKey (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getvalues-function"></a>GetValues (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="argumentdata-function"></a>~ ArgumentData (funzione)
-Non ancora documentato.
+_Non ancora documentato._
