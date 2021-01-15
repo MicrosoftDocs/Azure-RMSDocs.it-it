@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 71f07f5ffb9167ab61653cef10c610968ff74786
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3465bdb2eaf1efce3524d2f28332b094ba31db5d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384197"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240853"
 ---
 # <a name="azure-information-protection-aip-labeling-classification-and-protection"></a>Azure Information Protection (AIP) assegnazione di etichette, classificazione e protezione
 
@@ -26,7 +26,7 @@ ms.locfileid: "97384197"
 > ***Pertinente per**: [Azure Information Protection Unified Labeling client e il client classico per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection è una soluzione basata sul cloud che consente alle organizzazioni di classificare e proteggere documenti e messaggi di posta elettronica mediante l'applicazione di etichette. 
 
@@ -110,7 +110,7 @@ Inoltre, il client AIP consente agli utenti di classificare e proteggere altri t
 L'opzione di menu **Classifica e proteggi** funziona in modo analogo alla barra di Information Protection nelle applicazioni di Office, consentendo agli utenti di selezionare un'etichetta o impostare autorizzazioni personalizzate.
 
 > [!TIP]
-> Gli utenti esperti o gli amministratori potrebbero trovare più comodi i comandi di PowerShell per gestire e impostare la classificazione e la protezione per più file. I [comandi di PowerShell pertinenti](https://docs.microsoft.com/powershell/module/azureinformationprotection) sono inclusi nel client e possono anche essere installati separatamente.
+> Gli utenti esperti o gli amministratori potrebbero trovare più comodi i comandi di PowerShell per gestire e impostare la classificazione e la protezione per più file. I [comandi di PowerShell pertinenti](/powershell/module/azureinformationprotection) sono inclusi nel client e possono anche essere installati separatamente.
 
 Gli utenti e gli amministratori possono usare siti di rilevamento dei documenti per monitorare i documenti protetti, controllare chi vi accede e quando. Se sospettano un uso improprio, possono anche revocare l'accesso ai documenti. Ad esempio:
 
@@ -150,7 +150,7 @@ Per classificare e proteggere il contenuto esistente, usare uno dei metodi segue
 
     In alternativa, usare lo scanner per applicare un'etichetta predefinita a tutti i documenti in un archivio dati senza esaminare il contenuto dei file. Usare lo scanner in modalità solo report, per individuare informazioni sensibili che potrebbero non essere note.
 
-- **Archiviazione dei dati nel cloud**: usare [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration) per applicare le etichette ai documenti in Box, SharePoint e OneDrive. Per un'esercitazione, vedere [Applicare automaticamente etichette di classificazione di Azure Information Protection](https://docs.microsoft.com/cloud-app-security/use-case-information-protection) 
+- **Archiviazione dei dati nel cloud**: usare [Microsoft Cloud App Security](/cloud-app-security/azip-integration) per applicare le etichette ai documenti in Box, SharePoint e OneDrive. Per un'esercitazione, vedere [Applicare automaticamente etichette di classificazione di Azure Information Protection](/cloud-app-security/use-case-information-protection) 
 
 
 ## <a name="next-steps"></a>Passaggi successivi
