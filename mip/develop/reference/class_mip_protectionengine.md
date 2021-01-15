@@ -1,23 +1,23 @@
 ---
 title: Classe ProtectionEngine
 description: 'Documenta la classe protectionengine:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f87b65f85693850ea3344aa2b1340f9fc4de4e73
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6df50823102c7cf897dceb2d6d576384431ccfc6
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567152"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214678"
 ---
 # <a name="class-protectionengine"></a>Classe ProtectionEngine 
 Gestisce azioni correlate alla protezione relative a un'identità specifica.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ottiene le impostazioni del motore.
 public std:: shared_ptr \<AsyncControl\> GetTemplatesAsync (const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Ottiene la raccolta di modelli disponibili per un utente.
@@ -35,8 +35,10 @@ public void RegisterContentForTrackingAndRevocation (const std:: Vector \<uint8_
 public std:: shared_ptr \<AsyncControl\> RegisterContentForTrackingAndRevocationAsync (const std:: vector \<uint8_t\>& serializedPublishingLicense, const std:: String& ContentName, bool isOwnerNotificationEnabled, const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Registrare la licenza di pubblicazione (PL) per il rilevamento dei documenti & revoca.
 public void RevokeContent (const std:: Vector \<uint8_t\>& serializedPublishingLicense, const std:: shared_ptr \<void\>& context)  |  Eseguire la revoca per il contenuto.
 public std:: shared_ptr \<AsyncControl\> RevokeContentAsync (const std:: vector \<uint8_t\>& serializedPublishingLicense, const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Eseguire la revoca per il contenuto.
+public std:: Vector \<std::shared_ptr\<DelegationLicense\> \> CreateDelegationLicenses (const DelegationLicenseSettings& Settings, const std:: shared_ptr \<void\>& context)  |  Crea una licenza delegata.
+public std:: shared_ptr \<AsyncControl\> CreateDelegationLicensesAsync (const DelegationLicenseSettings& Settings, const std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, const std:: shared_ptr \<void\>& context)  |  Crea una licenza delegata.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
 Ottiene le impostazioni del motore.
@@ -280,3 +282,35 @@ Parametri
 
   
 **Restituisce**: oggetto controllo asincrono.
+  
+### <a name="createdelegationlicenses-function"></a>CreateDelegationLicenses (funzione)
+Crea una licenza delegata.
+
+Parametri  
+* **Impostazioni**: impostazioni di delega 
+
+
+* **contesto**: contesto client che verrà inviato in modo opaco agli osservatori e HttpDelegate facoltativi
+
+
+
+  
+**Restituisce**: un vettore delle licenze di delega usa questo metodo per creare licenze per un elenco di utenti
+  
+### <a name="createdelegationlicensesasync-function"></a>CreateDelegationLicensesAsync (funzione)
+Crea una licenza delegata.
+
+Parametri  
+* **Impostazioni**: impostazioni di delega 
+
+
+* **observer**: classe che implementa l'interfaccia ProtectionHandler::Observer 
+
+
+* **contesto**: contesto client che verrà inviato in modo opaco agli osservatori e HttpDelegate facoltativi
+
+
+
+  
+**Restituisce**: oggetto controllo asincrono.
+Utilizzare questo metodo per creare licenze per un elenco di utenti. Ricevere il vettore DelegationLicense negli errori di callback OnCreateDelegatedLicensesSuccess vengono inviati in OnCreateDelegatedLicensesFailure

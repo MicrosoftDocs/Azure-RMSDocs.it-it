@@ -1,29 +1,29 @@
 ---
 title: Classe UserRoles
 description: 'Documenta la classe UserRoles:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: fc6e5f77c68ecde2582cfd622624c0c6b986500b
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: ef881f184fd370665006c8fb4d73138b7c5e2f3c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566621"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214134"
 ---
 # <a name="class-userroles"></a>Classe UserRoles 
 Un gruppo di utenti e i ruoli ad essi associati.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public UserRoles (const std:: Vector \<std::string\>& Users, const std:: vector \<std::string\>& Roles)  |  Costruttore UserRoles.
 public const std:: Vector \<std::string\>& Users () const  |  Ottiene gli utenti associati a un set di ruoli.
 public const std:: Vector \<std::string\>& Roles () const  |  Ottiene i ruoli associati a un gruppo di utenti.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="userroles-function"></a>UserRoles (funzione)
 Costruttore UserRoles.

@@ -1,24 +1,24 @@
 ---
 title: 'Classe ProtectionProfile:: Observer'
 description: "Documenta la classe protectionprofile:: Observer dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d72a5a7d5818ee4482b2f25f8df45f6a2152f898
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 38f578991ed9409aed6ea87622d8db79dcd78b06
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567104"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214440"
 ---
 # <a name="class-protectionprofileobserver"></a>Classe ProtectionProfile:: Observer 
 Interfaccia che riceve le notifiche correlate a ProtectionProfile.
 Questa interfaccia deve essere implementata dalle applicazioni che usano l'SDK di protezione
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public virtual void OnLoadSuccess(const std::shared_ptr\<ProtectionProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
 public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
@@ -29,7 +29,7 @@ public virtual void OnAddEngineFailure(const std::exception_ptr& error, const st
 public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Viene chiamato quando un motore è stato eliminato correttamente.
 public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando l'eliminazione di un motore ha restituito un errore.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="onloadsuccess-function"></a>OnLoadSuccess (funzione)
 Viene chiamato quando il profilo è stato caricato correttamente.

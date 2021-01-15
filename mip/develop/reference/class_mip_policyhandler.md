@@ -1,29 +1,29 @@
 ---
 title: Classe PolicyHandler
 description: 'Documenta la classe PolicyHandler:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: b70643c9db84cef329b64e515bef5c7c47801718
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 0ddf8e9f7dec4b3655ba793b8ee8997e0a3f7af5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567380"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213420"
 ---
 # <a name="class-policyhandler"></a>Classe PolicyHandler 
 Questa classe fornisce un'interfaccia per tutte le funzioni del gestore dei criteri in un file.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetSensitivityLabel(const ExecutionState& state)  |  Ottiene l'etichetta di riservatezza dal contenuto esistente.
 public std:: Vector \<std::shared_ptr\<Action\> \> ComputeActions (const ExecutionState& state)  |  Esegue le regole nel gestore in base allo stato specificato e restituisce l'elenco di azioni da eseguire.
 public void NotifyCommittedActions(const ExecutionState& state)  |  Viene chiamato dopo che sono state applicate le operazioni calcolate ed è stato eseguito il commit dei dati su disco.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel (funzione)
 Ottiene l'etichetta di riservatezza dal contenuto esistente.

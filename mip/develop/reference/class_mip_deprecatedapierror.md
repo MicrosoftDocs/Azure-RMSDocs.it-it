@@ -1,24 +1,24 @@
 ---
 title: Classe DeprecatedApiError
 description: 'Documenta la classe deprecatedapierror:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5abb33068fe2849c839673acb3665c9ea31467a6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: eb89ec5e14cc293bd7222a9235f777390f75c147
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567019"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215358"
 ---
 # <a name="class-deprecatedapierror"></a>Classe DeprecatedApiError 
 Il chiamante ha richiamato un'API deprecata.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
-Non ancora documentato.
+## <a name="members"></a>Membri
+_Non ancora documentato._

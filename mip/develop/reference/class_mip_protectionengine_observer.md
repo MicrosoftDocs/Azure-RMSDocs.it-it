@@ -1,24 +1,24 @@
 ---
 title: 'Classe ProtectionEngine:: Observer'
 description: "Documenta la classe protectionengine:: Observer dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 7a576882376caa8cc5f9c5c1b3d3036ee7e57b21
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: b9243a1b7d9addaceaec907a368f7e651c99fbd5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567147"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214627"
 ---
 # <a name="class-protectionengineobserver"></a>Classe ProtectionEngine:: Observer 
 Interfaccia che riceve le notifiche correlate a ProtectionEngine.
 Questa interfaccia deve essere implementata dalle applicazioni che usano l'SDK di protezione
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public virtual void OnGetTemplatesSuccess (const std:: Vector \<std::shared_ptr\<TemplateDescriptor\> \>& templateDescriptors, const std:: shared_ptr \<void\>& context)  |  Viene chiamato quando i modelli vengono recuperati correttamente.
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il recupero dei modelli genera un errore.
@@ -30,8 +30,10 @@ public virtual void OnRegisterContentForTrackingAndRevocationSuccess (const std:
 public virtual void OnRegisterContentForTrackingAndRevocationFailure (const std:: exception_ptr& Error, const std:: shared_ptr \<void\>& context)  |  Chiamato quando la registrazione del contenuto per il rilevamento & la revoca ha esito negativo.
 public virtual void OnRevokeContentSuccess (const std:: shared_ptr \<void\>& context)  |  Chiamato quando la revoca di ha esito positivo.
 public virtual void OnRevokeContentFailure (const std:: exception_ptr& Error, const std:: shared_ptr \<void\>& context)  |  Chiamato quando la revoca del contenuto non riesce.
+public virtual void OnCreateDelegatedLicensesSuccess (STD:: Vector \<std::shared_ptr\<DelegationLicense\> \> delegatedLicenses, const std:: shared_ptr \<void\>& context)  |  Chiamato quando la creazione della licenza delegata ha esito positivo.
+public virtual void OnCreateDelegatedLicensesFailure (const std:: exception_ptr& Error, const std:: shared_ptr \<void\>& context)  |  Chiamato quando la creazione della licenza delegata ha esito negativo.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="ongettemplatessuccess-function"></a>OnGetTemplatesSuccess (funzione)
 Viene chiamato quando i modelli vengono recuperati correttamente.
@@ -143,3 +145,24 @@ Parametri
 
 
 Un'applicazione può passare qualsiasi tipo di contesto (ad esempio, std::p romise, std:: Function) a ProtectionEngine:: RevokeContentAsync e lo stesso contesto verrà inoltrato così com'è a ProtectionEngine:: Observer:: OnRevokeContentSuccess o ProtectionEngine:: Observer:: OnRevokeContentFailure
+  
+### <a name="oncreatedelegatedlicensessuccess-function"></a>OnCreateDelegatedLicensesSuccess (funzione)
+Chiamato quando la creazione della licenza delegata ha esito positivo.
+
+Parametri  
+* **context**: lo stesso contesto passato a ProtectionEngine:: CreateDelegationLicensesAsync.
+
+
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio, std::p romise, std:: Function) a ProtectionEngine:: CreateDelegationLicensesAsync e lo stesso contesto verrà inoltrato così com'è a ProtectionEngine:: Observer:: OnCreateDelegatedLicensesSuccess o ProtectionEngine:: Observer:: OnCreateDelegatedLicensesFailure.
+  
+### <a name="oncreatedelegatedlicensesfailure-function"></a>OnCreateDelegatedLicensesFailure (funzione)
+Chiamato quando la creazione della licenza delegata ha esito negativo.
+
+Parametri  
+* **errore**: si è verificato un errore 
+
+
+* **context**: lo stesso contesto passato a ProtectionEngine:: CreateDelegationLicensesAsync
+
+
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio, std::p romise, std:: Function) a ProtectionEngine:: CreateDelegationLicensesAsync e lo stesso contesto verrà inoltrato così com'è a ProtectionEngine:: Observer:: OnCreateDelegatedLicensesSuccess o ProtectionEngine:: Observer:: OnCreateDelegatedLicensesFailure

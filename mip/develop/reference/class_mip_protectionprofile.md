@@ -1,24 +1,24 @@
 ---
 title: Classe ProtectionProfile
 description: 'Documenta la classe protectionprofile:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: a783a90b64d5829632e2104ff2706fd86a0d9e68
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 89ec101a26a0d1a25e0707ae41a866a059381019
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567107"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214474"
 ---
 # <a name="class-protectionprofile"></a>Classe ProtectionProfile 
 ProtectionProfile è la classe radice per l'esecuzione di operazioni di protezione.
 Un'applicazione deve creare un oggetto ProtectionProfile prima di eseguire qualsiasi operazione di protezione
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ottiene le impostazioni usate da ProtectionProfile durante l'inizializzazione e per tutta la sua durata.
 public std:: shared_ptr \<AsyncControl\> ListEnginesAsync (const std:: shared_ptr \<void\>& context)  |  Avvia l'operazione di elenco motori.
@@ -28,7 +28,7 @@ public std::shared_ptr\<ProtectionEngine\> AddEngine(const ProtectionEngine::Set
 public std:: shared_ptr \<AsyncControl\> DeleteEngineAsync (const std:: string& engineId, const std:: shared_ptr \<void\>& context)  |  Avvia l'eliminazione del motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
 public void DeleteEngine(const std::string& engineId)  |  Elimina il motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
 Ottiene le impostazioni usate da ProtectionProfile durante l'inizializzazione e per tutta la sua durata.

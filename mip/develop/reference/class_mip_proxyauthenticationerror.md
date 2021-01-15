@@ -1,29 +1,29 @@
 ---
 title: Classe ProxyAuthenticationError
 description: 'Documenta la classe proxyauthenticationerror:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d4468fe243f7120630d0a34d453ff4e9a5bf6527
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 04915e74cc09f271a2ca3bb256b906bc442bb3fd
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567080"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214304"
 ---
 # <a name="class-proxyauthenticationerror"></a>Classe ProxyAuthenticationError 
 Errore di autenticazione del proxy.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public Category GetCategory () const  |  Ottiene la categoria di errore di rete.
 public int32_t GetResponseStatusCode () const  |  Ottiene il codice di stato della risposta HTTP.
 Categoria enum  |  Categoria di errore di rete.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getcategory-function"></a>GetCategory (funzione)
 Ottiene la categoria di errore di rete.
@@ -39,6 +39,8 @@ Ottiene il codice di stato della risposta HTTP.
   
 ### <a name="category-enum"></a>Enum categoria
 
+Categoria di errore di rete.
+
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 Sconosciuto            | Errore di rete sconosciuto
@@ -52,5 +54,3 @@ Timeout            | Timeout della connessione
 Offline            | Per l'operazione è necessaria la connettività di rete
 Sospensione causata dal servizio Microsoft FullText            | Operazione HTTP non riuscita a causa della limitazione del traffico del server
 Operazione annullata            | L'operazione HTTP è stata annullata dall'applicazione
-
-Categoria di errore di rete.

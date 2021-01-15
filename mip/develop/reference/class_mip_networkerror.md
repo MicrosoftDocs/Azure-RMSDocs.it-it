@@ -1,24 +1,24 @@
 ---
 title: Classe NetworkError
 description: 'Documenta la classe networkerror:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d9a997047441630e37b35448a710f2dfb369cdde
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 76fee2f08c904123a220edb6516ee0c8b8db4d64
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566723"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213590"
 ---
 # <a name="class-networkerror"></a>Classe NetworkError 
 Errore di rete. Causato da un comportamento imprevisto quando si effettuano chiamate di rete agli endpoint di servizio.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
-Non ancora documentato.
+## <a name="members"></a>Membri
+_Non ancora documentato._

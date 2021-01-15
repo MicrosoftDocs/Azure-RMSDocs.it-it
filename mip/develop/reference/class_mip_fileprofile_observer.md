@@ -1,24 +1,24 @@
 ---
 title: 'Classe fileprofile:: Observer'
 description: 'Documenta la classe fileprofile:: Observer di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 62e578f8f3527a4749fedfc88a2b32de5c6e95db
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 56bad4dfc1fde5f6cfe2d390fef1555ba0afe6d7
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566936"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215273"
 ---
 # <a name="class-fileprofileobserver"></a>Classe fileprofile:: Observer 
 Interfaccia Observer per il recupero delle notifiche degli eventi correlati al profilo da parte dei client.
 Tutti gli errori ereditano da mip::Error. I client non devono eseguire il callback del motore sul thread che chiama l'observer.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public virtual ~Observer()  | _Non ancora documentato._
 public virtual void OnLoadSuccess(const std::shared_ptr\<mip::FileProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
@@ -35,10 +35,10 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  Viene chiam
 public virtual void OnAddPolicyEngineStarting (bool requiresPolicyFetch)  |  Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore dei criteri devono essere recuperati dal server o se possono essere creati da dati memorizzati localmente nella cache.
 protected Observer()  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="observer-function"></a>~ Observer (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="onloadsuccess-function"></a>OnLoadSuccess (funzione)
@@ -84,4 +84,4 @@ Parametri
 Questo callback facoltativo può essere utilizzato da un'applicazione per essere informati se un'operazione AddEngineAsync richiede un'operazione HTTP (con il ritardo associato) per il completamento.
   
 ### <a name="observer-function"></a>Funzione Observer
-Non ancora documentato.
+_Non ancora documentato._

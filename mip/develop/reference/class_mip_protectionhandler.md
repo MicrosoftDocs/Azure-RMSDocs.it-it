@@ -1,23 +1,23 @@
 ---
 title: Classe ProtectionHandler
 description: 'Documenta la classe protectionhandler:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e38aaf0e4dfee1d10f67f175eb50119fe3aa484d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: d70e32793ede4a1184672f3f8755112766ba571b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567129"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214610"
 ---
 # <a name="class-protectionhandler"></a>Classe ProtectionHandler 
 Gestisce azioni correlate alla protezione per una configurazione di protezione specifica.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Crittografa un buffer.
@@ -38,7 +38,7 @@ public const std:: Vector \<uint8_t\>& GetSerializedPreLicense (formato PreLicen
 public CipherMode GetCipherMode () const  |  Ottiene la modalità di crittografia del gestore di protezione.
 PreLicenseFormat enum  |  Formato di pre-licenza.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="createprotectedstream-function"></a>CreateProtectedStream (funzione)
 Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
@@ -213,9 +213,9 @@ Ottiene la modalità di crittografia del gestore di protezione.
   
 ### <a name="prelicenseformat-enum"></a>Enumerazione PreLicenseFormat
 
+Formato di pre-licenza.
+
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 Xml            | Formato XML/SOAP legacy utilizzato da MSIPC
 Json            | Formato JSON/REST usato da MIP SDK e RMS SDK
-
-Formato di pre-licenza.

@@ -1,23 +1,23 @@
 ---
 title: Classe ProtectionDescriptorBuilder
 description: 'Documenta la classe protectiondescriptorbuilder:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2e5573a896ef0935c33e85a2ed7f73451ced8e7c
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 388e8b46aa125e3de2429098ec6a59b0ddb9fffc
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567153"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214712"
 ---
 # <a name="class-protectiondescriptorbuilder"></a>Classe ProtectionDescriptorBuilder 
 Costruisce un ProtectionDescriptor che descrive la protezione associata a una parte del contenuto.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Crea una classe ProtectionDescriptor le cui autorizzazioni di accesso vengono definite da questa istanza di ProtectionDescriptorBuilder.
 public void SetName(const std::string& value)  |  Imposta il nome dei criteri di protezione.
@@ -29,7 +29,7 @@ public void SetEncryptedAppData (const std:: Map \<std::string, std::string\>& v
 public void SetSignedAppData (const std:: Map \<std::string, std::string\>& valore)  |  Imposta i dati specifici dell'app da firmare.
 public void SetDoubleKeyUrl (const std:: String& doubleKeyUrl)  |  Imposta l'URL della chiave doppia da utilizzare per la protezione personalizzata.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="build-function"></a>Funzione di compilazione
 Crea una classe ProtectionDescriptor le cui autorizzazioni di accesso vengono definite da questa istanza di ProtectionDescriptorBuilder.

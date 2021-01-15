@@ -1,66 +1,66 @@
 ---
 title: Classe ProtectionActionData
 description: 'Documenta la classe protectionactiondata:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5d378300fa0a8f6d6b821e40d13f4f95305e6aa4
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: a164cf1587430e2a47d98626520db7a68c6b9c41
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567165"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214763"
 ---
 # <a name="class-protectionactiondata"></a>Classe ProtectionActionData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public ProtectionActionType GetProtectionType () const  | _Non ancora documentato._
 public const std::string& GetTemplateId() const  | _Non ancora documentato._
 public const std:: String& GetDoubleKeyEncryptionUrl () const  | _Non ancora documentato._
 public virtual ~ ProtectionActionData ()  | _Non ancora documentato._
 public ActionDataType GetType () const  | _Non ancora documentato._
-public const std:: Map \<std::string, std::string\>& GetProperties () const  | _Non ancora documentato._
+public const std:: Map \<std::string, std::string, CaseInsensitiveComparator\>& GetProperties () const  | _Non ancora documentato._
 public std:: String GetArgumentValue (const std:: String& Key) const  | _Non ancora documentato._
 public const std::string& GetName() const  | _Non ancora documentato._
 public std:: Vector \<std::pair\<std::string, std::string\> \> GetArguments () const  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getprotectiontype-function"></a>GetProtectionType (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="gettemplateid-function"></a>GetTemplateId (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getdoublekeyencryptionurl-function"></a>GetDoubleKeyEncryptionUrl (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="protectionactiondata-function"></a>~ ProtectionActionData (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="gettype-function"></a>Funzione GetType
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getproperties-function"></a>GetProperties (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getargumentvalue-function"></a>GetArgumentValue (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getname-function"></a>GetName (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getarguments-function"></a>Funzione GetArguments
-Non ancora documentato.
+_Non ancora documentato._

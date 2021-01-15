@@ -1,32 +1,32 @@
 ---
 title: classe PolicyEngine
 description: 'Documenta la classe PolicyEngine:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 733e1ced7a1f5ca1ec8d47709ef4c364c04e37a5
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 10f913029af2be9f0430c55b8296269eb04beb7b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566672"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213437"
 ---
 # <a name="class-policyengine"></a>classe PolicyEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ottiene Settings del motore dei criteri.
-public const std:: Vector \<std::shared_ptr\<Label\> \>& ListSensitivityLabels ()  |  Elenca le etichette di riservatezza associate al motore dei criteri.
+public const std:: Vector \<std::shared_ptr\<Label\> \> ListSensitivityLabels (const std:: Vector \<std::string\>& contentFormats)  |  elenca le etichette di riservatezza associate al motore dei criteri in base al contentFormats fornito.
 public const std:: Vector \<std::shared_ptr\<SensitivityTypesRulePackage\> \>& ListSensitivityTypes () const  |  elencare i tipi di riservatezza associati al motore dei criteri.
 public const std::string& GetMoreInfoUrl() const  |  Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
-public bool IsLabelingRequired() const  |  Controlla se il criterio determina che un documento deve essere o meno etichettato.
-public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Ottiene l'etichetta di riservatezza predefinita.
+public bool IsLabelingRequired (const std:: String& contentFormat) const  |  Verifica se i criteri stabiliscono che un contenuto deve essere etichettato o meno in base al contentFormat fornito.
+public const std:: shared_ptr \<Label\> GetDefaultSensitivityLabel (const std:: string& contentFormat) const  |  Ottiene l'etichetta di riservatezza predefinita in base all'oggetto contentFormat specificato.
 public std:: shared_ptr \<Label\> GetLabelById (const std:: string& ID) const  |  Ottiene l'etichetta in base all'ID fornito.
-public std:: shared_ptr \<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
+public std:: shared_ptr \<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled, bool isGetSensitivityLabelAuditDiscoveryEnabled)  |  Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Registra un evento specifico dell'applicazione per la pipeline di controllo.
 public const std:: String& GetTenantId () const  |  Ottiene l'ID tenant associato al motore.
 public const std:: String& GetPolicyDataXml () const  |  Ottiene i dati XML dei criteri che descrivono le impostazioni, le etichette e le regole associate a questo criterio.
@@ -34,12 +34,11 @@ public const std:: String& GetSensitivityTypesDataXml () const  |  Ottiene i dat
 public const std:: Vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  Ottiene un elenco di impostazioni personalizzate.
 public const std:: String& GetPolicyFileId () const  |  Ottiene l'ID del file di criteri.
 public const std:: String& GetSensitivityFileId () const  |  Ottiene l'ID del file di riservatezza.
-public bool HasClassificationRules () const  |  Ottiene se il criterio ha regole automatiche o di raccomandazione.
-public ClassificationScheme GetClassificationScheme () const  |  Ottiene se i criteri devono essere classificati in base alla versione più recente.
+public bool HasClassificationRules (const std:: Vector \<std::string\>& contentFormats) const  |  Ottiene se il criterio ha regole automatiche o consigliate in base al contentFormats fornito.
 public std:: Chrono:: time_point \<std::chrono::system_clock\> GetLastPolicyFetchTime () const  |  Ottiene l'ora dell'ultimo recupero dei criteri.
-public uint32_t GetWxpMetadataVersion () const  |  Ottiene la versione dei metadati WXP (Windows, Excel, PowerPoint) consigliata attualmente 0 per versione precedente 1 per la versione abilitata per la creazione di co-creazione.
+public uint32_t GetWxpMetadataVersion () const  |  Ottiene la versione dei metadati WXP (Word, Excel, PowerPoint) consigliata, attualmente 0 per la versione precedente di versione 1 per la versione abilitata per la creazione di co-creazione.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
 Ottiene Settings del motore dei criteri.
@@ -50,7 +49,12 @@ Ottiene Settings del motore dei criteri.
 **Vedere anche**: mip::P olicyengine:: Settings
   
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (funzione)
-Elenca le etichette di riservatezza associate al motore dei criteri.
+elenca le etichette di riservatezza associate al motore dei criteri in base al contentFormats fornito.
+
+Parametri  
+* **contentFormats**: contentFormats Vector of formats per filtrare le etichette di riservatezza, ad esempio "file", "email" e così via. Impostare contentFormats su un vettore vuoto per filtrare le etichette di riservatezza in base ai formati predefiniti.
+
+
 
   
 **Restituisce**: elenco di etichette di riservatezza.
@@ -70,25 +74,43 @@ Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
 **Restituisce**: URL in formato stringa.
   
 ### <a name="islabelingrequired-function"></a>IsLabelingRequired (funzione)
-Controlla se il criterio determina che un documento deve essere o meno etichettato.
+Verifica se i criteri stabiliscono che un contenuto deve essere etichettato o meno in base al contentFormat fornito.
+
+Parametri  
+* **contentFormat**: formato in base al quale filtrare quando si determina se un'etichetta è obbligatoria, ad esempio "file", "email" e così via. Impostare contentFormat su una stringa vuota per determinare se è necessaria l'etichettatura per il formato predefinito.
+
+
 
   
 **Restituisce**: true se l'assegnazione di etichette è obbligatoria, in caso contrario false.
   
 ### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel (funzione)
-Ottiene l'etichetta di riservatezza predefinita.
+Ottiene l'etichetta di riservatezza predefinita in base all'oggetto contentFormat specificato.
+
+Parametri  
+* **contentFormat**: formato in base al quale filtrare durante il recupero dell'etichetta di riservatezza predefinita, ad esempio "file", "email" e così via. Impostare contentFormat su una stringa vuota per recuperare l'etichetta di riservatezza predefinita per il formato predefinito.
+
+
 
   
 **Restituisce**: etichetta di riservatezza predefinita se esistente, nullptr se non è impostata un'etichetta predefinita.
   
 ### <a name="getlabelbyid-function"></a>GetLabelById (funzione)
 Ottiene l'etichetta in base all'ID fornito.
+
+Parametri  
+* **ID**: identificatore per l'etichetta.
+
+
+
+  
+**Restituisce**: etichetta
   
 ### <a name="createpolicyhandler-function"></a>CreatePolicyHandler (funzione)
 Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
 
 Parametri  
-* **R**: bool che indica se l'individuazione del controllo è abilitata o meno.
+* **isAuditDiscoveryEnabled**: descrive se l'individuazione del controllo è abilitata o meno.
 
 
 
@@ -147,16 +169,15 @@ Ottiene l'ID del file di riservatezza.
 **Restituisce**: stringa che rappresenta l'ID del file di criteri
   
 ### <a name="hasclassificationrules-function"></a>HasClassificationRules (funzione)
-Ottiene se il criterio ha regole automatiche o di raccomandazione.
+Ottiene se il criterio ha regole automatiche o consigliate in base al contentFormats fornito.
+
+Parametri  
+* **contentFormat**: vettore di formati da considerare quando si determina se una regola è definita per qualsiasi formato fornito. Imposta contentFormats su un vettore vuoto indica che i contentFormats specificati sono formati predefiniti.
+
+
 
   
 **Restituisce** un valore booleano che indica se nel criterio sono presenti regole automatiche o consigliate.
-  
-### <a name="getclassificationscheme-function"></a>GetClassificationScheme (funzione)
-Ottiene se i criteri devono essere classificati in base alla versione più recente.
-
-  
-**Restituisce**: un tipo di motore che dirà al cliente quale motore utilizzare
   
 ### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (funzione)
 Ottiene l'ora dell'ultimo recupero dei criteri.
@@ -165,7 +186,7 @@ Ottiene l'ora dell'ultimo recupero dei criteri.
 **Restituisce**: l'ora dell'ultimo recupero dei criteri
   
 ### <a name="getwxpmetadataversion-function"></a>GetWxpMetadataVersion (funzione)
-Ottiene la versione dei metadati WXP (Windows, Excel, PowerPoint) consigliata attualmente 0 per versione precedente 1 per la versione abilitata per la creazione di co-creazione.
+Ottiene la versione dei metadati WXP (Word, Excel, PowerPoint) consigliata, attualmente 0 per la versione precedente di versione 1 per la versione abilitata per la creazione di co-creazione.
 
   
 **Restituisce**: Uint32_t int indecating quale versione dei metadati supporta il tenant per i file WXP.

@@ -1,24 +1,24 @@
 ---
 title: 'Classe PolicyProfile:: Observer'
 description: "Documenta la classe policyprofile:: Observer dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 35768afacc22202721fb093c91e4a28a02a99d65
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 978597bcc90386a53ca35271cb862b9f0f0465a7
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567374"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215069"
 ---
 # <a name="class-policyprofileobserver"></a>Classe PolicyProfile:: Observer 
 Interfaccia Observer per il recupero delle notifiche degli eventi correlati al profilo da parte dei client.
 Tutti gli errori ereditano da mip::Error. I client non devono eseguire il callback del motore sul thread che chiama l'observer.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public virtual void OnLoadSuccess(const std::shared_ptr\<PolicyProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
 public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
@@ -33,7 +33,7 @@ public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context
 public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Viene chiamato quando i criteri vengono modificati per il motore con l'ID specificato o quando i tipi di riservatezza personalizzati caricati sono stati modificati.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="onloadsuccess-function"></a>OnLoadSuccess (funzione)
 Viene chiamato quando il profilo è stato caricato correttamente.

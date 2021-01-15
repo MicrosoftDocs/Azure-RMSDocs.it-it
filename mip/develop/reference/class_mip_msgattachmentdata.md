@@ -1,22 +1,22 @@
 ---
 title: Classe MsgAttachmentData
 description: 'Documenta la classe msgattachmentdata:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: c729b2907878aa383b058689c55072e53541a595
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6082b96649e32e282c544ac5ec46773e7b4be901
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566753"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213624"
 ---
 # <a name="class-msgattachmentdata"></a>Classe MsgAttachmentData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std:: Vector \<uint8_t\>& GetBytes ()  |  Ottenere un allegato come vettore di byte binario.
 public std:: shared_ptr \<Stream\> GetStream () const  |  Ottenere un allegato come flusso binario.
@@ -25,7 +25,7 @@ public const std:: String& getlongname () const  |  Ottenere il nome lungo dell'
 public const std::string& GetPath() const  |  Ottenere il nome del percorso dell'allegato sotto forma di stringa. Se il percorso non è vuoto, fare riferimento all'allegato.
 public const std:: String& GetLongPath () const  |  Ottiene il nome del percorso lungo dell'allegato sotto forma di stringa. Se il percorso non è vuoto, fare riferimento all'allegato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getbytes-function"></a>Funzione GetBytes
 Ottenere un allegato come vettore di byte binario.

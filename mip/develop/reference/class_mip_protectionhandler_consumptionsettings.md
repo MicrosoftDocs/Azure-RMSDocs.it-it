@@ -1,23 +1,23 @@
 ---
 title: 'Classe ProtectionHandler:: ConsumptionSettings'
 description: 'Documenta la classe protectionhandler:: consumptionsettings di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 627845405fc0d4fc2523e958e2226d343d0013cc
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 8ac0e4d3067528d6e860244abca2d70f0cf6a530
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566576"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214593"
 ---
 # <a name="class-protectionhandlerconsumptionsettings"></a>Classe ProtectionHandler:: ConsumptionSettings 
 Impostazioni utilizzate per creare un ProtectionHandler per utilizzare il contenuto esistente.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public ConsumptionSettings (const std:: Vector \<uint8_t\>& serializedPublishingLicense)  |  Costruttore ProtectionHandler:: ConsumptionSettings per la creazione di un nuovo gestore.
 public ConsumptionSettings (const std:: Vector \<uint8_t\>& serializedPreLicense, const std:: vector \<uint8_t\>& serializedPublishingLicense)  |  Costruttore ProtectionHandler:: ConsumptionSettings per la creazione di un nuovo gestore.
@@ -30,7 +30,7 @@ public void filecontentname (const std:: String& ContentName)  | _Non ancora doc
 public const std:: String& GetDelegatedUserEmail () const  |  Ottiene l'utente delegato.
 public const std:: String& getcontename () const  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="consumptionsettings-function"></a>ConsumptionSettings (funzione)
 Costruttore ProtectionHandler:: ConsumptionSettings per la creazione di un nuovo gestore.
@@ -91,7 +91,7 @@ Parametri
 Un utente delegato viene specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente
   
 ### <a name="setcontentname-function"></a>Funzione filecontentname
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getdelegateduseremail-function"></a>GetDelegatedUserEmail (funzione)
@@ -101,4 +101,4 @@ Ottiene l'utente delegato.
 **Returns**: utente delegato specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente
   
 ### <a name="getcontentname-function"></a>Getcontename (funzione)
-Non ancora documentato.
+_Non ancora documentato._

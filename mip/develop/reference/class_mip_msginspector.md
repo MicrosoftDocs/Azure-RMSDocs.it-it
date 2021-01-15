@@ -1,22 +1,22 @@
 ---
 title: Classe MsgInspector
 description: 'Documenta la classe msginspector:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 9f19c53a2c6eca82cdf1469c63436ad56112dc52
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: aaf9cc6803e0111cd37960f356d8a6bb19fd60a5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567944"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215171"
 ---
 # <a name="class-msginspector"></a>Classe MsgInspector 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std:: Vector \<uint8_t\>& GetBody () const  |  Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
 public unsigned int GetCodePage () const  |  Ottenere la tabella codici di codifica del corpo, pertinente per txt, formati HTML del corpo.
@@ -25,7 +25,7 @@ public const std:: Vector \<std::shared_ptr\<MsgAttachmentData\> \>& GetAttribut
 public InspectorType GetInspectorType () const  |  Ottenere i tipi di file.
 public std:: shared_ptr \<Stream\> GetFileStream () const  |  Ottenere il flusso di file.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getbody-function"></a>Funzione GetBody
 Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
@@ -39,7 +39,7 @@ Ottenere la tabella codici di codifica del corpo, pertinente per txt, formati HT
   
 **Returns**: tabella codici senza segno. 
   
-**Vedere anche**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
+**Vedere anche**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
   
 ### <a name="getbodytype-function"></a>GetBodyType (funzione)
 Ottiene il tipo di corpo.

@@ -1,23 +1,23 @@
 ---
 title: Classe LabelingOptions
 description: 'Documenta la classe labelingoptions:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e0cb9e8aba27c27feb67c660d61743851460988e
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6527ebcade57088db51f46d25321f0783b56b878
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566803"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213794"
 ---
 # <a name="class-labelingoptions"></a>Classe LabelingOptions 
 Interfaccia per la configurazione delle opzioni delle etichette per i metodi SetLabel/DeleteLabel.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public LabelingOptions (metodo AssignmentMethod)  | _Non ancora documentato._
 public AssignmentMethod GetAssignmentMethod() const  | _Non ancora documentato._
@@ -27,31 +27,31 @@ public const std:: Vector \<std::pair\<std::string, std::string\> \>& getextende
 public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Non ancora documentato._
 public void ExtendedProperty (const std:: Vector \<std::pair\<std::string, std::string\> \>& ExtendedProperties)  | _Non ancora documentato._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="labelingoptions-function"></a>LabelingOptions (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getassignmentmethod-function"></a>GetAssignmentMethod (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="isdowngradejustified-function"></a>IsDowngradeJustified (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getjustificationmessage-function"></a>GetJustificationMessage (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="getextendedproperties-function"></a>Funzione getextendedproperties
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="setdowngradejustification-function"></a>SetDowngradeJustification (funzione)
-Non ancora documentato.
+_Non ancora documentato._
 
   
 ### <a name="setextendedproperties-function"></a>Funzione seextendedpropertys
-Non ancora documentato.
+_Non ancora documentato._

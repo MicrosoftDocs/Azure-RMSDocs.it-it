@@ -1,23 +1,23 @@
 ---
 title: Classe ProtectionDescriptor
 description: 'Documenta la classe protectiondescriptor:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 16095a9183fb0dd89306a4769cd21499afc09d55
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: ad643c235f322a32239d702aa4ecafd3f0e36792
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567158"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214695"
 ---
 # <a name="class-protectiondescriptor"></a>Classe ProtectionDescriptor 
 Descrizione della protezione associata a una parte del contenuto.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public ProtectionType GetProtectionType() const  |  Ottiene il tipo di protezione, indipendentemente dal fatto che abbia avuto origine da un modello di SDK di protezione o meno.
 public std::string GetOwner() const  |  Ottiene il proprietario per la protezione.
@@ -36,7 +36,7 @@ public std:: Map \<std::string, std::string\> GetEncryptedAppData () const  |  O
 public std:: Map \<std::string, std::string\> GetSignedAppData () const  |  Ottiene i dati specifici dell'app che sono stati firmati.
 public std:: String GetDoubleKeyUrl () const  |  Ottiene l'URL della chiave doppia da utilizzare per la protezione personalizzata.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getprotectiontype-function"></a>GetProtectionType (funzione)
 Ottiene il tipo di protezione, indipendentemente dal fatto che abbia avuto origine da un modello di SDK di protezione o meno.
