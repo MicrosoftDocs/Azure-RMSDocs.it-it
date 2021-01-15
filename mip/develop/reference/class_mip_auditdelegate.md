@@ -1,20 +1,20 @@
 ---
-title: Classe InsufficientBufferError
-description: 'Documenta la classe insufficientbuffererror:: undefined di Microsoft Information Protection (MIP) SDK.'
+title: Classe AuditDelegate
+description: 'Documenta la classe AuditDelegate:: undefined di Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
 ms.date: 01/13/2021
-ms.openlocfilehash: 3ac58601b4030c8dd10e2fb327cfe2da59d0c45a
+ms.openlocfilehash: e283f6b0cbde22d3a9bf2506d883b97d4ff673d6
 ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/14/2021
-ms.locfileid: "98215409"
+ms.locfileid: "98224938"
 ---
-# <a name="class-insufficientbuffererror"></a>Classe InsufficientBufferError 
-Errore buffer insufficiente.
+# <a name="class-auditdelegate"></a>Classe AuditDelegate 
+Classe che definisce l'interfaccia per le notifiche di controllo di MIP SDK.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                

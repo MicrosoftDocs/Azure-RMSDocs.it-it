@@ -1,28 +1,28 @@
 ---
 title: Classe ConsentDelegate
 description: 'Documenta la classe consentdelegate:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5f31be6cfd6b9c15bda74a731f0774f786d97f5f
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 62ea631159a2658432a1b62ff47c635c05f63fcf
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567207"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215494"
 ---
 # <a name="class-consentdelegate"></a>Classe ConsentDelegate 
 Delegato per le operazioni relative al consenso.
 Questo delegato viene implementato da un'applicazione client per sapere quando è necessario mostrare all'utente una notifica di una richiesta di consenso.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public Consent GetUserConsent(const std::string& url)  |  Viene chiamato quando l'SDK richiede il consenso dell'utente per connettersi a un endpoint di servizio.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getuserconsent-function"></a>GetUserConsent (funzione)
 Viene chiamato quando l'SDK richiede il consenso dell'utente per connettersi a un endpoint di servizio.

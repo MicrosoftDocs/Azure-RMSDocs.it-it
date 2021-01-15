@@ -1,24 +1,24 @@
 ---
 title: Classe ExecutionState
 description: 'Documenta la classe ExecutionState:: undefined di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f73c3e366f1be0647d2c9a7de78f37b6a9a95549
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 543b46f8ceb731e7ea7c4e513f1a42c25a080521
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566992"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215460"
 ---
 # <a name="class-executionstate"></a>Classe ExecutionState 
 Interfaccia per tutti gli stati necessari per eseguire il motore.
 I client dovrebbero chiamare i metodi solo per ottenere lo stato necessario. Di conseguenza, per motivi di efficienza, è consigliabile che i client implementino questa interfaccia in modo che lo stato corrispondente sia calcolato in modo dinamico anziché in anticipo.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: shared_ptr \<Label\> GetNewLabel () const  |  Ottiene l'ID dell'etichetta di riservatezza da applicare al documento.
 public std::string GetContentIdentifier() const  |  Ottiene la descrizione del contenuto che descrive il documento. esempio per un file: [percorso\nomefile] esempio per un messaggio di posta elettronica: [Subject: sender].
@@ -28,13 +28,13 @@ public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ottiene il metod
 public virtual std:: Vector \<std::pair\<std::string, std::string\> \> GetNewLabelExtendedProperties () const  |  Restituisce le proprietà estese della nuova etichetta.
 public std:: Vector \<MetadataEntry\> GetContentMetadata (const std:: vector \<std::string\>& names, const std:: Vector \<std::string\>& namePrefixes) const  |  Ottiene gli elementi dei metadati dal contenuto.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Ottiene il descrittore di protezione.
-public ContentFormat GetContentFormat() const  |  Ottiene il formato del contenuto.
+public std:: String GetContentFormat () const  |  Ottiene il formato del contenuto.
 public virtual MetadataVersion GetContentMetadataVersion () const  |  Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.
 public ActionType GetSupportedActions() const  |  Ottiene un'enumerazione mascherata che descrive tutti i tipi di azioni supportati.
 public virtual std:: shared_ptr \<ClassificationResults\> GetClassificationResults (const std:: vector \<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Restituisce una mappa dei risultati della classificazione.
 public virtual std:: Map \<std::string, std::string\> GetAuditMetadata () const  |  Restituisce una mappa delle coppie chiave-valore di controllo specifiche dell'applicazione.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getnewlabel-function"></a>GetNewLabel (funzione)
 Ottiene l'ID dell'etichetta di riservatezza da applicare al documento.
@@ -93,9 +93,7 @@ Ottiene il descrittore di protezione.
 Ottiene il formato del contenuto.
 
   
-**Restituisce**: DEFAULT, EMAIL 
-  
-**Vedere anche**: mip::ContentFormat
+**Restituisce**: formato contenuto
   
 ### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion (funzione)
 Ottiene la versione dei metadati più elevata supportata dall'applicazione per il tenant.

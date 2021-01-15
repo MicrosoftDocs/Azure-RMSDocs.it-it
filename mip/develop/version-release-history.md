@@ -6,13 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-manager: barbkess
-ms.openlocfilehash: fe246ceb2f54d24318373b95c36733a977b560dc
-ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
+ms.openlocfilehash: 3e3d32dd5e66ee6948567bc43ebd5ecfa16154b6
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97701731"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215511"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) Software Development Kit (SDK) e criteri di supporto
 
@@ -31,11 +30,70 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 >  
 > Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## <a name="version-1886"></a>Versione 1.8.86
+
+**Data di rilascio:** 13 gennaio, 2021
+
+### <a name="general-changes"></a>Modifiche generali
+
+- Aggiunta del supporto per Mac su ARM.
+- Firma di tutti i file dylib per Mac.
+- Tutti i cloud sono completamente supportati in tutti e tre gli SDK.
+- Rinominare `TelemetryConfiguration` con `DiagnosticConfiguration`.
+- Aggiornato `MipContext` per accettare `DiagnosticConfiguration` anziché `TelemetryConfiguration` .
+- Nuovi `TelemetryDelegate` e esposti `AuditDelegate` .
+- Il nome di diverse impostazioni personalizzate è stato modificato e verrà rimosso nella versione 1,9. Che continueranno a funzionare in parallelo con i nomi degli aggiornamenti nella versione 1,8. 
+
+| Nuovo nome          | Nome precedente                   |
+| ----------------- | -------------------------- |
+| is_debug_audit    | is_debug_telemetry         |
+| is_audit_disabled | is_built_in_audit_disabled |
+
+### <a name="file-sdk"></a>SDK file
+
+- Aggiunta del supporto per le etichette definite dall'utente con crittografia a chiave doppia.
+- Aggiunta di un'API `MsgInspector.BodyType` per esporre il tipo di codifica del corpo per i file msg.
+- Sono state aggiunte API per supportare la crittografia a chiave doppia con autorizzazioni User-Defined.
+- Aggiunta del flag per `mip::FileHandler` che consente al chiamante di disabilitare l'invio di eventi di individuazione del controllo. Questo consente di correggere uno scenario in cui l'uso dell' `ClassifyAsync()` API genera eventi di individuazione duplicati.
+- Correzione dei bug nei casi seguenti: 
+  - L'impostazione della protezione nel file XPS non riesce.
+  - Non è possibile aprire un file dopo il caricamento/download da SharePoint Online e la rimozione delle autorizzazioni personalizzate.
+  - `RemoveProtection()` la funzione accetterebbe un input Message. rpmsg. Ora accetta solo i file MSG.
+  - Arresto anomalo che si è verificato durante il tentativo di rilevare o revocare i file non protetti.
+
+### <a name="policy-sdk"></a>SDK criteri
+
+- Rimosso `ActionId` dalle proprietà predefinite dei metadati per garantire la coerenza tra Microsoft Office e i documenti con etichetta SharePoint Online.
+- Aggiunta del supporto per le etichette specifiche di Azure per le competenze.
+- Aggiunta la possibilità di eseguire l'override dei dati di telemetria e del controllo tramite delegati per ogni
+  - Il delegato di controllo offre la possibilità di inviare eventi di controllo AIP a una destinazione diversa da AIP Analytics o in aggiunta a AIP Analytics.
+- Aggiunta del flag per `mip::PolicyHandler` che consentirà al chiamante di individuare l'invio dell'evento di individuazione del controllo. Questo consente di correggere uno scenario in cui l'uso dell' `ClassifyAsync()` API genera eventi di individuazione duplicati.
+- Correzione di un bug in cui non è stato possibile aprire il database dei criteri crittografati in determinati scenari.
+- Esposto nuovo `AuditDelegate` che consente agli sviluppatori di eseguire l'override della pipeline di controllo predefinita MIP SDK e di inviare eventi alla propria infrastruttura. 
+- `mip::ClassifierUniqueIdsAndContentFormats` e `GetContentFormat()` ora restituiscono `std::string` anziché `mip::ContentFormat` . Questa modifica viene replicata nei wrapper .NET e Java. 
+- `ContentFormat.Default` è ora `ContentFormat.File` .
+
+### <a name="protection-sdk"></a>SDK di protezione
+
+- Aggiunta di una `ProtectionEngineSettings.SetAllowCloudServiceOnly` proprietà che vieterà le connessioni ai cluster Active Directory Rights Management Services se true. Verranno utilizzati solo gli ambienti cloud.
+- Aggiunta del supporto per l'acquisizione delle licenze di delega.
+  - Le licenze di delega consentono ai servizi di recuperare una licenza per il contenuto per conto di un utente.
+  - Questo consente al servizio di visualizzare i dati sui diritti e di decrittografare per conto dell'utente senza ulteriori chiamate al servizio.  
+
+### <a name="java-wrapper-public-preview"></a>Wrapper Java (anteprima pubblica)
+
+- Aggiunta del supporto per Track and Revoke to Java wrapper.
+- Aggiunta del supporto del flusso al wrapper Java
+
+### <a name="c-api"></a>API C
+
+- Rimosso **MIP_FLIGHTING_FEATURE_KEEP_PDF_LINEARIZATION** flag dall'API C.
+
 ## <a name="version-17147"></a>Versione 1.7.147
 
 ### <a name="file-sdk"></a>SDK file
 
-- Correzione di bug secondari per il formato di file PBIX.
+- Correzione di bug secondari per il formato di file PBIX. 
 
 ## <a name="version-17145"></a>Versione 1.7.145
 
@@ -76,14 +134,14 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 
 - Policy SDK supporta ora le azioni di assegnazione di etichette solo per la crittografia.
 - Correzione di un bug `mip::Identity` per cui non veniva caricato correttamente dai motori memorizzati nella cache.
-- Correzione di un bug per cui i confronti GUID di classificazione fanno distinzione tra maiuscole e minuscole nell'API
+- Correzione di un bug per cui i confronti dei GUID di classificazione fanno distinzione tra maiuscole e minuscole nell'API
 - Gli eventi di controllo sono stati arricchiti aggiungendo nuovi campi.
 
 ### <a name="protection-sdk"></a>SDK di protezione
 
 - Correzione di un bug `mip::Identity` per cui non veniva caricato correttamente dai motori memorizzati nella cache.
 - Aggiunta della registrazione implicita per le licenze di pubblicazione appena create.
-- Aggiunta del supporto per gli algoritmi cyptographic usati per supportare DKE nei file di Office.
+- Aggiunta del supporto per gli algoritmi di crittografia usati per supportare DKE nei file di Office.
 - I `documentId` parametri e sono `owner` facoltativi.
 
 ### <a name="c-apis"></a>API C
@@ -116,15 +174,15 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 ### <a name="general-sdk-changes"></a>Modifiche generali dell'SDK
 
 - TLS 1,2 applicato per tutte le comunicazioni HTTP non ADRMS.
-- Implementazione HTTP iOS/MacOS di cui è stata eseguita la migrazione da NSURLConnection a NSURLSession.
+- Implementazione HTTP iOS/macOS di cui è stata eseguita la migrazione da NSURLConnection a NSURLSession.
 - Componente di telemetria iOS migrato da aria SDK a 1DS SDK.
-- Il componente di telemetria USA ora HttpDelegate di MIP in iOS, MacOs e Linux. (In precedenza solo Win32).
+- Il componente di telemetria USA ora HttpDelegate di MIP in iOS, macOs e Linux. (In precedenza solo Win32).
 - Miglioramento dell'indipendenza dai tipi per l'API C.
 - Il AuthDelegate è stato spostato dal profilo al motore nelle API C++, C# e Java.
 - AuthDelegate spostato dal costruttore di `Profile::Settings` a `Engine::Settings` .
 - Aggiunta della categoria a NoPolicyError per fornire altre informazioni sui motivi per cui la sincronizzazione dei criteri non è riuscita.
 - Aggiunto `PolicyEngine::GetTenantId` metodo.
-- Aggiunta del supporto per cloud sovrano esplicito.
+- Aggiunta del supporto esplicito per tutti i cloud.
   - Nuovo `Engine::Settings::SetCloud` metodo per impostare il cloud di destinazione (GCC High, 21-Viani e così via).
   - La `Engine::Settings::SetCloudEndpointBaseUrl` chiamata al metodo esistente non è più necessaria per i cloud riconosciuti.
 - Abilitazione di bitcode per i file binari iOS.
@@ -161,7 +219,7 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 
 - Nuovo supporto per la registrazione e la revoca per il rilevamento dei documenti.
 - Nuovo supporto per la generazione di una licenza preliminare durante la pubblicazione.
-- Certificato SSL pubblico Microsoft esposto utilizzato dal servizio di protezione.
+- Certificato Microsoft TLS pubblico esposto utilizzato dal servizio di protezione.
    - `GetMsftCert` e `GetMsftCertPEM`
    - Se un'applicazione esegue l'override dell' `HttpDelegate` interfaccia, deve considerare attendibili i certificati del server rilasciati da questa CA.
    - Questo requisito dovrebbe essere rimosso in ritardo nel 2020.    
@@ -276,7 +334,7 @@ Questa versione introduce il supporto per l'SDK di protezione nel pacchetto .NET
 - Miglioramenti delle prestazioni e correzioni di bug
 - Enumerazione StorageType rinominata in CacheStorageType
 - Collegamenti Android a libc + + anziché gnustl
-- API previouslydeprecated rimosse
+- Sono state rimosse le API deprecate in precedenza
   - File/criteri/profilo:: le impostazioni devono essere inizializzate con un MipContext
   - File/criteri/profilo:: impostazioni, percorso, informazioni sull'applicazione, delegato del logger, telemetria e getter/setter del livello di log sono stati rimossi. Queste proprietà sono gestite da MipContext
 - Migliore supporto della libreria statica sulle piattaforme Apple
@@ -306,7 +364,7 @@ Questa versione introduce il supporto per l'SDK di protezione nel pacchetto .NET
 
 ### <a name="protection-sdk"></a>SDK di protezione
 
-- API previouslydeprecated rimosse
+- Sono state rimosse le API deprecate in precedenza
   - Rimozione di ProtectionEngine:: CreateProtectionHandlerFromDescriptor [async] (usare ProtectionEngine:: CreateProtectionHandlerForPublishing [async])
   - Rimozione di ProtectionEngine:: CreateProtectionHandlerFromPublishingLicense [async] (usare ProtectionEngine:: CreateProtectionHandlerForConsumption [async])
 - Completa API C#
@@ -348,7 +406,7 @@ Questa versione introduce il supporto per l'SDK di protezione nel pacchetto .NET
 - Ora è supportata la decrittografia dei file MSG protetti.
 - Il controllo dei file Message. rpmsg è supportato tramite `mip::FileInspector` e `mip::FileHandler::InspectAsync()` .
 - È ora possibile crittografare facoltativamente la cache su disco.
-- Protection SDK supporta ora il cloud sovrano Cina.
+- Protection SDK supporta ora i clienti cloud cinesi.
 - Supporto di Arm64 in Android.
 - Supporto di Arm64e in iOS.
 - È ora possibile disabilitare la cache del contratto di licenza con l'utente finale.
