@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e17e42850904590df6a0c223032fd07306e0815b
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 8cc4a6123a9b292212f573c75f2807905c646675
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583711"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540207"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -222,9 +222,9 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
   
     Se si aggiunge un percorso di SharePoint per i **documenti condivisi**:
     - Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. 
-    ad esempio `http://sp2013/SharedDocuments`
+    Ad esempio: `http://sp2013/SharedDocuments`
     - Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. 
-    ad esempio `http://sp2013/Documents/SalesReports`
+    Ad esempio: `http://sp2013/Documents/SalesReports`
     - In alternativa, specificare solo il **nome di dominio completo (FQDN** ) di SharePoint, ad esempio `http://sp2013` per [individuare e analizzare tutti i siti e i siti Web di SharePoint in un URL](deploy-aip-scanner-prereqs.md#discover-and-scan-all-sharepoint-sites-and-subsites-under-a-specific-url) e sottotitoli specifici in questo URL. Concedere i diritti dell' **agente di raccolta siti** scanner per abilitare questa operazione. 
     >
 
@@ -280,7 +280,7 @@ Dopo aver [configurato il Azure Information Protection scanner nel portale di Az
     
     Quando viene richiesto, specificare le credenziali Active Directory per l'account del servizio scanner.
 
-    Utilizzare la sintassi seguente: `\<domain\user name>` . ad esempio `contoso\scanneraccount`
+    Utilizzare la sintassi seguente: `\<domain\user name>` . Ad esempio: `contoso\scanneraccount`
 
 1. Verificare che il servizio sia ora installato utilizzando **strumenti di amministrazione**  >  **Servizi**. 
     
@@ -325,6 +325,8 @@ Si è ora pronti per eseguire la prima analisi in modalità di individuazione. P
 
 Dopo aver eseguito l'analisi iniziale dell'individuazione, continuare con [configurare lo scanner per applicare la classificazione e la protezione](#configure-the-scanner-to-apply-classification-and-protection).
 
+> [!NOTE]
+> Per ulteriori informazioni, vedere [come etichettare i file in modo non interattivo per Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurare lo scanner per applicare la classificazione e la protezione
 
 Le impostazioni predefinite consentono di configurare lo scanner affinché venga eseguito una sola volta e in modalità di sola segnalazione.

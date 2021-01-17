@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 69cf01252a95476a41ac5f82f7d0546afe285041
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8c2441a9272e62577fcaf88c14fb7e6bb6cdbdde
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164505"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540176"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -51,7 +51,7 @@ Per ulteriori informazioni, vedere la pagina relativa ai [problemi noti di AIP n
 
 Sono disponibili due opzioni per l'installazione del client per gli utenti:
 
-|Opzione  |Description  | I
+|Opzione  |Descrizione  | I
 |---------|---------|
 |**Eseguire la versione eseguibile (con estensione exe) del client**     |   il metodo di installazione consigliato che è possibile usare in modo interattivo o automatico. <br><br>Questo metodo offre la massima flessibilità ed è consigliato perché il programma di installazione verifica la maggior parte dei prerequisiti ed è in grado di installare automaticamente i prerequisiti mancanti. <br><br>Per altre informazioni, vedere [installare AIP Unified Labeling client usando il programma di installazione eseguibile](#install-the-aip-unified-labeling-client-using-the-executable-installer).|
 |**Distribuire la versione di Windows Installer (MSI) del client**     |     metodo supportato solo per le installazioni invisibili all'utente che usano un meccanismo di distribuzione centrale, ad esempio criteri di gruppo, Configuration Manager e Microsoft Intune. <br><br>Questo metodo è necessario per i PC Windows 10 gestiti da Intune e dalla gestione dispositivi mobili (MDM) poiché per questi computer, i file eseguibili non sono supportati per l'installazione. <br><br> Tuttavia, quando si usa questo metodo di installazione, è necessario verificare e installare o disinstallare manualmente il software dipendente che il programma di installazione eseguirebbe in ogni computer per il file eseguibile. <br><br>Per altre informazioni, vedere [installare il client Unified Labeling usando il programma di installazione MSI](#install-the-unified-labeling-client-using-the-msi-installer). |
@@ -85,11 +85,10 @@ Usare le istruzioni seguenti per installare il client di quando *non* si usa il 
     
     Nella schermata della Guida non sono elencati i parametri seguenti:
         
-    |Parametro  |Description  |
+    |Parametro  |Descrizione  |
     |---------|---------|
     |**AllowTelemetry = 0**     |    usare questo parametro per disabilitare l'opzione di installazione **Invia le statistiche di utilizzo a Microsoft per contribuire a migliorare Azure Information Protection**.     |
     |**ServiceLocation**     |  usare questo parametro se si installa il client in computer che eseguono Office 2010 e gli utenti non sono amministratori locali dei rispettivi computer o non si vuole che vengano visualizzati messaggi di richiesta. <br><br>Per altre informazioni, vedere: <br>- [Ulteriori informazioni sul parametro di installazione **ServiceLocation**](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP per versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
-
     | | |
 
 1. Per completare l'installazione: 
@@ -167,7 +166,7 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
 
     Ad esempio, creare un pacchetto con la versione **MSI** del client o distribuirla solo nei computer che soddisfano le dipendenze seguenti:
     
-    |Versione di Office|Sistema operativo|Software|Azione|
+    |Versione di Office|Sistema operativo|Software|Action|
     |--------------------|--------------|----------------|---------------------|
     |**Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva**|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installazione|
     |**Office 2016**|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installazione|

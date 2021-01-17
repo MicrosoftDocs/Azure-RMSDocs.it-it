@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d9eadd907059bd128ac08c761128e0f1926c9f81
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792297"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540105"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>Risoluzione dei problemi di distribuzione dello scanner locale con etichetta unificata
 
@@ -90,7 +90,7 @@ Usare le sezioni seguenti per comprendere i messaggi di errore specifici generat
 
 Se il comando [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) ha esito negativo, assicurarsi di definire correttamente le autorizzazioni nel portale di Azure.
 
-Per altre informazioni, vedere [creare e configurare le applicazioni Azure ad per set-AIPAuthentication](rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication).
+Per altre informazioni, vedere [creare e configurare applicazioni Azure ad per set-AIPAuthentication](rms-client/clientv2-admin-guide-powershell.md#create-and-configure-azure-ad-applications-for-set-aipauthentication).
 
 ### <a name="authentication-token-missing"></a>Token di autenticazione mancante
 
