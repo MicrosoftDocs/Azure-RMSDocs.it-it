@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5a512bd03a627fb80503f07b98e4340d8ea9fce4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8064138db9d3d8356c9b12eef769bebabfd5a556
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164352"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559643"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -135,7 +135,7 @@ Inoltre, la revoca dell'accesso per uno degli allegati revoca anche l'accesso pe
 Se sono presenti documenti archiviati in OneDrive con un'etichetta di riservatezza applicata e un amministratore modifica l'etichetta nel criterio di etichettatura per aggiungere la protezione, la protezione appena applicata non viene applicata automaticamente al documento con etichetta. 
 
 In questi casi, rietichettare manualmente il documento per applicare la protezione in base alle esigenze.
-## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP per versioni di Windows e Office nel supporto esteso
+## <a name="aip-and-legacy-windows-and-office-versions"></a>AIP e versioni legacy di Windows e Office
 
 - [**Windows 7 Extended supported è terminato il 14 gennaio 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 

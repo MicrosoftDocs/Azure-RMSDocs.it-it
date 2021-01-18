@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fa5b1bb2d88691e7862de0c678c746ff327ad820
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: df5328b94112342276028e2a74da02de14170418
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805972"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560240"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-classic-client"></a>Guida dell'utente: scaricare e installare il client di Azure Information Protection classico
 
@@ -52,13 +52,19 @@ Per distribuire il client classico AIP, aprire un ticket di supporto per ottener
 
 1. Se viene richiesto di continuare, fare clic su **Sì** e attendere il completamento dell'installazione.    
 
-1. Fare clic su **Close**. Prima di iniziare a usare il client di Azure Information Protection:    
+1. Fare clic su **Close**. 
 
-    - **Se il computer esegue Office 2010**, riavviare il computer e passare alla [sezione successiva](#installing-the-azure-information-protection-client-with-office-2010) per il passaggio finale.  
-        
-    - **Per le altre versioni di Office**, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. L'installazione è ora completa ed è possibile usare il client per applicare etichette e protezione a documenti e messaggi di posta elettronica.    
+    Prima di iniziare a usare il client di Azure Information Protection, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. L'installazione è ora completa ed è possibile usare il client per applicare etichette e protezione a documenti e messaggi di posta elettronica.
 
-### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Installazione del client di Azure Information Protection con Office 2010    
+    > [!NOTE]
+    > Se il computer esegue Office 2010, riavviare il computer e passare alla [sezione successiva](#installing-the-azure-information-protection-client-with-office-2010) per il passaggio finale.  
+
+### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Installazione del client di Azure Information Protection con Office 2010
+
+> [!IMPORTANT]
+> Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
+
 Dopo aver installato il client di Azure Information Protection con le istruzioni precedenti:    
 
 1. Aprire Microsoft Word. La prima volta che si esegue un'applicazione di Office 2010 dopo aver installato il client di Azure Information Protection, viene visualizzata la finestra di dialogo **Microsoft Azure Information Protection**. Questa finestra di dialogo indica che sono necessarie le credenziali dell'amministratore per completare il processo di accesso.
@@ -68,8 +74,6 @@ Dopo aver installato il client di Azure Information Protection con le istruzioni
 3. Se viene visualizzata una finestra di dialogo di **Controllo di accesso utente**, fare clic su **Sì** in modo che il client di Azure Information Protection possa aggiornare il Registro di sistema.
 
 L'installazione è ora completa ed è possibile usare il client di Azure Information Protection per etichettare e proteggere documenti e messaggi di posta elettronica.
-
-Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## <a name="other-instructions"></a>Altre istruzioni    
 Ulteriori procedure nella Guida per l'utente di Azure Information Protection:

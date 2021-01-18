@@ -12,12 +12,12 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 9b608b8f38c157320558cf5ae5011ef601773b2e
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 129c07876106d02174b1bab1d4eea82205160b69
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164233"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559575"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Details Your Own Key (HYOK) per Azure Information Protection
 
@@ -158,7 +158,7 @@ Una distribuzione AD RMS deve soddisfare i requisiti seguenti per fornire la pro
 |**Configurazione di AD RMS**     |Il sistema di AD RMS deve essere configurato in modi specifici per supportare HYOK. Per ulteriori informazioni, vedere di [seguito](#ad-rms-configuration-requirements).          |
 |**Sincronizzazione delle directory**     |La sincronizzazione della directory deve essere configurata tra la Active Directory locale e la Azure Active Directory. </br></br>Gli utenti che utilizzeranno le etichette di protezione HYOK devono essere configurati per l'accesso Single Sign-on.         |
 |**Configurazione per i trust definiti in modo esplicito**     |Se si condivide il contenuto protetto con HYOK con altri utenti esterni all'organizzazione, è necessario configurare AD RMS per i trust definiti in modo esplicito in una relazione punto a punto diretta con altre organizzazioni. </br></br>A tale scopo, utilizzare domini utente trusted (TUD) o trust federativi creati utilizzando Active Directory Federation Services (AD FS).         |
-|**Microsoft Office versione supportata**     | Gli utenti che proteggono o utilizzano contenuti protetti da HYOK devono disporre di: </br></br>-Una versione di Office che supporta Information Rights Management (IRM) </br>-Microsoft Office Professional Plus versione 2013 o successiva con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. </br>-Per l'edizione basata su Office 2016 Microsoft Installer (MSI), è necessario disporre dell' [aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Nota**: Office 2010 e Office 2007 non sono supportati.  Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).      |
+|**Microsoft Office versione supportata**     | Gli utenti che proteggono o utilizzano contenuti protetti da HYOK devono disporre di: </br></br>-Una versione di Office che supporta Information Rights Management (IRM) </br>-Microsoft Office Professional Plus versione 2013 o successiva con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. </br>-Per l'edizione basata su Office 2016 Microsoft Installer (MSI), è necessario disporre dell' [aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Nota**: Office 2010 e Office 2007 non sono supportati.  Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](known-issues.md#aip-and-legacy-windows-and-office-versions).      |
 
 > [!IMPORTANT]
 > Per soddisfare la garanzia elevata offerta dalla protezione HYOK, è consigliabile:

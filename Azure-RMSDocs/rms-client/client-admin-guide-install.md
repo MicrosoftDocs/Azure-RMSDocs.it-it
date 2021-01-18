@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2efab361e4ea1b74fdedf6cc6cc9735338d3633b
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 5eab2eee3fb0117bc3efd21c2605fc8d0293178d
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164097"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560374"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Guida dell'amministratore: installare il client classico Azure Information Protection per gli utenti
 
@@ -62,8 +62,9 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
 
     Se si usa una versione successiva dell'Assistente per l'accesso, disinstallarla prima di installare il client Azure Information Protection. Controllare, ad esempio, la versione e disinstallare l'assistente per l'accesso tramite il **Pannello di controllo**  >  **programmi e funzionalità**  >  **Disinstalla o modifica programma**.
 
-    Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
+    > [!IMPORTANT]
+    > Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    >
 
 - **KB 4482887**
 
@@ -96,7 +97,7 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
 
 Usare una delle opzioni seguenti per installare il client per gli utenti:
 
-|Opzione di installazione  |Description  |
+|Opzione di installazione  |Descrizione  |
 |---------|---------|
 |**Eseguire il file eseguibile del client (exe)**  <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | È consigliabile eseguire la versione exe del client per eseguire l'installazione in modo interattivo o invisibile all'utente.<br><br> L'esecuzione del file con estensione exe presenta la massima flessibilità ed è consigliata perché controlla anche la presenza di molti prerequisiti e può anche installare eventuali prerequisiti mancanti. |
 |**Distribuire il programma di installazione di Windows (MSI) del client** <br><br> [Istruzioni](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Il programma di installazione di Windows client Azure Information Protection è supportato solo per le installazioni automatiche che utilizzano un meccanismo di distribuzione centrale.<br><br> Usare, ad esempio, il file con estensione msi quando si distribuisce con criteri di gruppo, Configuration Manager e Microsoft Intune.<br><br> È necessario usare questo metodo per i PC Windows 10 gestiti da Intune e la gestione di dispositivi mobili (MDM) come file con estensione exe non supportati per questi computer.<br><br>**Nota**: quando si usa l'installazione con estensione msi, è necessario verificare manualmente la presenza di prerequisiti e installare o disinstallare il software dipendente necessario. |
@@ -121,27 +122,23 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
     Esempio per installare automaticamente solo i cmdlet di PowerShell: `AzInfoProtection.exe  PowerShellOnly=true /quiet`
 
     Nella schermata della Guida non sono elencati i parametri seguenti:
-
-    - **ServiceLocation**: usare questo parametro se si installa il client in computer che eseguono Office 2010 e gli utenti non sono amministratori locali dei rispettivi computer o non si vuole che vengano visualizzati messaggi di richiesta. 
-    
-        Per ulteriori informazioni, vedere [altre informazioni sul parametro di installazione ServiceLocation](#more-information-about-the-servicelocation-installation-parameter) e [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
+ 
     - **DowngradeDotNetRequirement**: usare questo parametro per ignorare il requisito relativo a Microsoft .NET Framework versione 4.6.2. [Altre informazioni](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
 
     - **AllowTelemetry = 0**: usare questo parametro per disabilitare l'opzione di installazione **Invia le statistiche di utilizzo a Microsoft per contribuire a migliorare Azure Information Protection**.
 
+    - **ServiceLocation**: usare questo parametro se si installa il client in computer che eseguono Office 2010 e gli utenti non sono amministratori locali dei rispettivi computer o non si vuole che vengano visualizzati messaggi di richiesta.  Per ulteriori informazioni, vedere [altre informazioni sul parametro di installazione ServiceLocation](#more-information-about-the-servicelocation-installation-parameter). 
+    
+        > [!IMPORTANT]
+        > Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+        >
+
 1. Se si installa in modo interattivo, selezionare l'opzione per l'installazione di un **criterio demo** se non si riesce a connettersi a Microsoft 365 o Azure Active Directory, ma si vuole vedere e provare il lato client di Azure Information Protection usando un criterio locale a scopo dimostrativo. Quando il client si connette a un servizio di Azure Information Protection, questo criterio demo viene sostituito dai criteri di Azure Information Protection dell'organizzazione.
 
-1. Per completare l'installazione:
+1. Per completare l'installazione, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file.
 
-    - **Se il computer esegue Office 2010**, riavviare il computer.
-
-        Se il client non è stato installato con il parametro **ServiceLocation** , quando si apre per la prima volta una delle applicazioni di Office che usano la barra Azure Information Protection (ad esempio, Word), è necessario confermare le richieste di aggiornamento del registro di sistema per il primo utilizzo. Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](client-deployment-notes.md#rms-service-discovery).
-
-        Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
-
-    - **Per le altre versioni di Office**, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file.
+    **Solo office 2010**: se il computer esegue [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions), riavviare il computer. Se il client non è stato installato con il parametro **ServiceLocation** , quando si apre per la prima volta una delle applicazioni di Office che usano la barra Azure Information Protection (ad esempio, Word), è necessario confermare le richieste di aggiornamento del registro di sistema per il primo utilizzo. Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](client-deployment-notes.md#rms-service-discovery).
+    
 
 1. È possibile verificare se l'installazione è stata completata controllando il file di log di installazione, che per impostazione predefinita viene creato nella cartella %temp%. È possibile modificare questo percorso con il parametro di installazione **/log**.
 
@@ -153,7 +150,14 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
 
 #### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Altre informazioni sul parametro di installazione ServiceLocation
 
-Quando si installa il client per gli utenti che hanno Office 2010 e non hanno autorizzazioni amministrative locali, specificare il parametro **ServiceLocation** e l'URL per il servizio Rights Management di Azure. Questo parametro e il relativo valore consentono di creare e impostare le chiavi del Registro di sistema seguenti:
+Quando si installa il client per gli utenti che hanno Office 2010 e non hanno autorizzazioni amministrative locali, specificare il parametro **ServiceLocation** e l'URL per il servizio Rights Management di Azure. 
+
+    
+> [!IMPORTANT]
+> Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
+
+Questo parametro e il relativo valore consentono di creare e impostare le chiavi del Registro di sistema seguenti:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation`
 
@@ -164,8 +168,6 @@ Quando si installa il client per gli utenti che hanno Office 2010 e non hanno au
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
 Utilizzare la [procedura seguente](#to-identify-the-value-to-specify-for-the-servicelocation-parameter) per identificare il valore da specificare per il parametro **ServiceLocation** .
-
-Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>Per identificare il valore da specificare per il parametro ServiceLocation
 
@@ -181,7 +183,7 @@ Per ulteriori informazioni, vedere [AIP per le versioni di Windows e Office nel 
 
     La stringa rimanente è il valore da specificare per il parametro **ServiceLocation** .
 
-Esempio per installare il client in modalità invisibile all'utente per [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) e Azure RMS: 
+Esempio per installare il client in modalità invisibile all'utente per [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) e Azure RMS: 
 
 `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
@@ -215,12 +217,14 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     |**Office 2010**|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB2843630 o KB2919355|
     |**Office 2010**|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installazione|
     | | | | |
-
-    Per ulteriori informazioni su AIP e Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+    
+    > [!IMPORTANT]
+    > Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    >
 
 1. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection.msi /quiet`. Tuttavia, può essere necessario specificare parametri di installazione aggiuntivi, che sono documentati nelle [istruzioni del programma di installazione del file eseguibile](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).
 
-    > [!NOTE]
+    > [!TIP]
     > Per impostazione predefinita, l'opzione **migliora Azure Information Protection inviando le statistiche di utilizzo all'** opzione di installazione Microsoft è abilitata. Per disabilitare questa opzione, assicurarsi di eseguire una delle operazioni seguenti:
     >
     >- Durante l'installazione, specificare **AllowTelemetry = 0**

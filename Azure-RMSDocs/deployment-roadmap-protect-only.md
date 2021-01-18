@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 293ed29ba70ae5f4adff5530d782ecb661a6f9dd
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 404e3d9db620011befb1a5d9a79f8186a8721cb7
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164114"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559422"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Guida di orientamento per la distribuzione di Azure Information Protection solo per la protezione
 
@@ -100,7 +100,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
     Considerare la possibilità di configurare una delle funzionalità seguenti, ora o versione successiva.
     
-    |Funzionalità  |Description  |
+    |Funzionalità  |Descrizione  |
     |---------|---------|
     |**Modelli personalizzati per le impostazioni di protezione**     |  Se i modelli predefiniti non sono sufficienti per l'organizzazione, configurare i modelli personalizzati. </br>Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](./configure-policy-templates.md).       |
     |**Registrazione dell'utilizzo**     | Configurare la registrazione dell'utilizzo per monitorare il modo in cui l'organizzazione usa il servizio di protezione. </br>Per ulteriori informazioni, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).        |
@@ -112,10 +112,8 @@ Eseguire la procedura seguente:
 
 1. **Distribuire il client di Azure Information Protection classico**
     
-    Installare il client classico affinché gli utenti supportino Office 2010, per proteggere i file diversi da documenti e messaggi di posta elettronica di Office e per tenere traccia dei documenti protetti e fornire la formazione degli utenti per questo client. 
-
-    Per ulteriori informazioni, vedere [Azure Information Protection client classico per Windows](./rms-client/aip-client.md) e [AIP per le versioni di Windows e Office nel supporto esteso](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
+    Installare il client classico per consentire agli utenti di proteggere i file diversi da documenti e messaggi di posta elettronica di Office e di tenere traccia dei documenti protetti e fornire la formazione degli utenti per questo client. Per ulteriori informazioni, vedere [Azure Information Protection client classico per Windows](./rms-client/aip-client.md).
+ 
 2. **Configurare le applicazioni e i servizi di Office**
     
     Configurare le applicazioni e i servizi di Office per le funzionalità IRM (Information Rights Management) in SharePoint o in Exchange Online. 

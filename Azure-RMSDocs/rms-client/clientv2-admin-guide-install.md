@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8c2441a9272e62577fcaf88c14fb7e6bb6cdbdde
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: f818a94e954b245d329a2cdb2dc1ce419e83c4ce
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540176"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560102"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Se si dispone di Windows 7 o Office 2010, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'amministratore del client classico](client-admin-guide-install.md). *
 
@@ -45,7 +45,8 @@ Di conseguenza, le etichette che applicano la protezione non vengono visualizzat
 
 Per informazioni sulle edizioni di Office che supportano il servizio di protezione, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](../requirements-applications.md).
 
-Per ulteriori informazioni, vedere la pagina relativa ai [problemi noti di AIP nelle applicazioni di Office](../known-issues.md#aip-known-issues-in-office-applications).
+> [!IMPORTANT]
+> Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## <a name="unified-labeling-client-installation-options"></a>Opzioni di installazione client per l'assegnazione di etichette unificate
 
@@ -88,18 +89,18 @@ Usare le istruzioni seguenti per installare il client di quando *non* si usa il 
     |Parametro  |Descrizione  |
     |---------|---------|
     |**AllowTelemetry = 0**     |    usare questo parametro per disabilitare l'opzione di installazione **Invia le statistiche di utilizzo a Microsoft per contribuire a migliorare Azure Information Protection**.     |
-    |**ServiceLocation**     |  usare questo parametro se si installa il client in computer che eseguono Office 2010 e gli utenti non sono amministratori locali dei rispettivi computer o non si vuole che vengano visualizzati messaggi di richiesta. <br><br>Per altre informazioni, vedere: <br>- [Ulteriori informazioni sul parametro di installazione **ServiceLocation**](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP per versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
+    |**ServiceLocation**     |  usare questo parametro se si installa il client in computer che eseguono Office 2010 e gli utenti non sono amministratori locali dei rispettivi computer o non si vuole che vengano visualizzati messaggi di richiesta. <br><br>**Importante**: il supporto esteso di Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions). |
     | | |
 
-1. Per completare l'installazione: 
+1. Per completare l'installazione, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. 
 
-    - **Se il computer esegue [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)**, riavviare il computer. 
-        
-        Se il client non è stato installato con il parametro **ServiceLocation** , quando si apre per la prima volta una delle applicazioni di Office che usano il client unificato di Azure Information Protection (ad esempio, Word), è necessario confermare le richieste di aggiornamento del registro di sistema per il primo utilizzo. 
-
-        Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](client-deployment-notes.md#rms-service-discovery). 
-    
-    - **Per le altre versioni di Office**, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. 
+    > [!NOTE]
+    > Se il computer esegue [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions), riavviare il computer. 
+    >
+    > Se il client non è stato installato con il parametro **ServiceLocation** , quando si apre per la prima volta una delle applicazioni di Office che usano il client unificato di Azure Information Protection (ad esempio, Word), è necessario confermare le richieste di aggiornamento del registro di sistema per il primo utilizzo. 
+    >
+    > Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](client-deployment-notes.md#rms-service-discovery). 
+    > 
         
 1. Verificare che l'installazione abbia avuto esito positivo controllando il file di log di installazione, che per impostazione predefinita viene creato nella cartella **% Temp%** . 
 
@@ -114,7 +115,11 @@ Usare le istruzioni seguenti per installare il client di quando *non* si usa il 
     >  
 ### <a name="more-information-about-the-servicelocation-installation-parameter"></a>Altre informazioni sul parametro di installazione ServiceLocation
 
-Quando si installa il client per gli utenti che hanno [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) e non hanno autorizzazioni amministrative locali, specificare il parametro **SERVICELOCATION** e l'URL per il servizio Rights Management di Azure. 
+Quando si installa il client per gli utenti che hanno [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) e non hanno autorizzazioni amministrative locali, specificare il parametro **SERVICELOCATION** e l'URL per il servizio Rights Management di Azure. 
+    
+> [!IMPORTANT]
+> Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+>
 
 Questo parametro e il relativo valore consentono di creare e impostare le chiavi del Registro di sistema seguenti:
 
@@ -127,7 +132,7 @@ Questo parametro e il relativo valore consentono di creare e impostare le chiavi
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation`
 
 
-**Per identificare il valore da specificare per il parametro ServiceLocation:**
+**Per identificare il valore da specificare per il parametro ServiceLocation**:
 
 1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AipService](/powershell/module/aipservice/connect-aipservice) e specificare le credenziali di amministratore per connettersi al servizio Rights Management di Azure. Quindi eseguire [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration). 
  
@@ -141,7 +146,7 @@ Questo parametro e il relativo valore consentono di creare e impostare le chiavi
 
     La stringa rimanente è il valore da specificare per il parametro ServiceLocation.
 
-Ad esempio, per installare il client in modalità invisibile all'utente per [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) e Azure RMS:
+Ad esempio, per installare il client in modalità invisibile all'utente per [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) e Azure RMS:
 
 ```powershell
 AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
@@ -166,15 +171,19 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
 
     Ad esempio, creare un pacchetto con la versione **MSI** del client o distribuirla solo nei computer che soddisfano le dipendenze seguenti:
     
-    |Versione di Office|Sistema operativo|Software|Action|
+    |Versione di Office|Sistema operativo|Software|Azione|
     |--------------------|--------------|----------------|---------------------|
     |**Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva**|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installazione|
     |**Office 2016**|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installazione|
     |**Office 2013**|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installazione|
-    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installazione|
-    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB2843630 o KB2919355|
-    |[**Office 2010**](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installazione|
+    |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installazione|
+    |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB2843630 o KB2919355|
+    |[**Office 2010**](../known-issues.md#aip-and-legacy-windows-and-office-versions)|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installazione|
     | | | | |
+
+    > [!IMPORTANT]
+    > Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    >
 
 1. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection_UL.msi /quiet`.
 

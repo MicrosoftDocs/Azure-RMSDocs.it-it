@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 775eca70267f2caa70599dd3b1d8a33020121a74
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 73ed28791e0a4bde8349e4e500f7e5b40fad5918
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583473"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560000"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: classificare e proteggere con la Azure Information Protection Unified Labeling client
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
->*Se si dispone di Windows 7 o Office 2010, vedere [AIP per le versioni di Windows e Office nel supporto esteso](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Se si dispone di Windows 7 o Office 2010, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida per l'utente del client classico](client-classify-protect.md). *
 
@@ -126,15 +126,13 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
 4. Se si seleziona l'opzione per le autorizzazioni personalizzate, specificare le informazioni seguenti:
 
-   - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
-    
-   - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. 
-    
-     In alternativa, è possibile usare l'icona a forma di rubrica per selezionare utenti o gruppi dalla Rubrica di Outlook.
-        
-    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file sensibili al tempo, in modo che gli utenti specificati non possano aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file.
-    
-     Si noti che se questa impostazione è stata configurata in precedenza usando autorizzazioni personalizzate da un'app di [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) , la data di scadenza specificata non viene visualizzata in questa finestra di dialogo, ma la data di scadenza è ancora impostata. Questo è un problema di visualizzazione che riguarda solo la data di scadenza configurata in Office 2010.
+    |Opzione  |Descrizione  |
+    |---------|---------|
+    |**Selezionare le autorizzazioni**     | selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.        |
+    |**Seleziona utenti, gruppi o organizzazioni**     |  specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. <br><br>In alternativa, è possibile usare l'icona a forma di rubrica per selezionare utenti o gruppi dalla Rubrica di Outlook.       |
+    |**Scadenza dell'accesso**     |  Selezionare questa opzione solo per i file sensibili al tempo, in modo che gli utenti specificati non possano aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file. <br><br>**Nota**: se questa impostazione è stata configurata in precedenza usando autorizzazioni personalizzate da un'app di Office 2010, la data di scadenza specificata non viene visualizzata in questa finestra di dialogo, ma la data di scadenza è ancora impostata. Questo è un problema di visualizzazione che riguarda solo la data di scadenza configurata in Office 2010.<br><br>   **Importante**: il supporto esteso di Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).       |
+    |     |         |
+
 
 5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
 
