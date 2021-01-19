@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/23/2020
+ms.date: 01/18/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9f4cc024066769c750f2fef946d9c5581cb99314
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 553646119c5e83bbc475d77ab35a83ce5866e858
+ms.sourcegitcommit: d2fdba748daf47ee9aeadbdf3ce154ef399eadaf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560340"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98569096"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -40,6 +40,8 @@ Usare le informazioni seguenti per le configurazioni avanzate necessarie per sce
 > Per queste impostazioni è necessario modificare il registro di sistema o specificare impostazioni avanzate. Le impostazioni avanzate usano [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 > 
 
+
+
 ## <a name="configuring-advanced-settings-for-the-client-via-powershell"></a>Configurazione delle impostazioni avanzate per il client tramite PowerShell
 
 Usare il Microsoft 365 Security & Compliance Center PowerShell per configurare le impostazioni avanzate per la personalizzazione dei criteri etichette e delle etichette. 
@@ -53,13 +55,14 @@ Per rimuovere un'impostazione avanzata, usare la stessa sintassi del parametro *
 
 Per altre informazioni, vedere:
 
-- [Sintassi delle impostazioni avanzate dei criteri etichette](#label-policy-advanced-settings)
-- [Etichetta sintassi impostazioni avanzate](#label-advanced-settings)
+- [Sintassi delle impostazioni avanzate dei criteri etichette](#label-policy-advanced-settings-syntax)
+- [Etichetta sintassi impostazioni avanzate](#label-advanced-settings-syntax)
+- [Verifica delle impostazioni avanzate correnti](#checking-your-current-advanced-settings)
 - [Esempi per l'impostazione di impostazioni avanzate](#examples-for-setting-advanced-settings)
 - [Specifica del criterio etichetta o dell'identità dell'etichetta](#specifying-the-label-policy-or-label-identity)
 - [Ordine di precedenza-come vengono risolte le impostazioni in conflitto](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [Riferimenti a impostazioni avanzate](#advanced-setting-references)
-### <a name="label-policy-advanced-settings"></a>Impostazioni avanzate dei criteri etichette
+### <a name="label-policy-advanced-settings-syntax"></a>Sintassi delle impostazioni avanzate dei criteri etichette
 
 Un esempio di impostazione avanzata dei criteri di etichetta è l'impostazione per visualizzare la barra di Information Protection nelle app di Office.
 
@@ -75,7 +78,7 @@ Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-### <a name="label-advanced-settings"></a>Etichetta impostazioni avanzate
+### <a name="label-advanced-settings-syntax"></a>Etichetta sintassi impostazioni avanzate
 
 Un esempio di impostazione avanzata etichetta è l'impostazione per specificare il colore di un'etichetta.
 
@@ -91,27 +94,49 @@ Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
+
+
+### <a name="checking-your-current-advanced-settings"></a>Verifica delle impostazioni avanzate correnti
+
+Per verificare che le impostazioni avanzate correnti siano attive, eseguire i comandi seguenti:
+
+**Per verificare le impostazioni avanzate dei *criteri di etichetta***, usare la sintassi seguente:
+
+Per un criterio etichetta denominato **globale**:
+
+```PowerShell
+(Get-LabelPolicy -Identity Global).settings
+```
+
+**Per controllare le impostazioni avanzate dell' *etichetta***, usare la sintassi seguente:
+
+Per un'etichetta denominata **public**:
+
+```powershell
+(Get-Label -Identity Public).settings
+```
+
 ### <a name="examples-for-setting-advanced-settings"></a>Esempi per l'impostazione di impostazioni avanzate
 
-**Esempio 1:** Impostare un'impostazione avanzata dei criteri per le etichette per un valore stringa singolo:
+**Esempio 1**: impostare un'impostazione avanzata dei criteri per le etichette per un singolo valore stringa:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-**Esempio 2:** Impostare un'impostazione avanzata etichetta per un valore stringa singolo:
+**Esempio 2**: impostare un'impostazione avanzata etichetta per un valore stringa singolo:
 
 ```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
-**Esempio 3:** Impostare un'impostazione avanzata etichetta per più valori stringa:
+**Esempio 3**: impostare un'impostazione avanzata etichetta per più valori stringa:
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
-**Esempio 4:** Rimuovere un'impostazione avanzata dei criteri di etichetta specificando un valore stringa null:
+**Esempio 4**: rimuovere un'impostazione avanzata dei criteri di etichetta specificando un valore stringa null:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
@@ -233,12 +258,6 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](/powershell/module/e
 |**UseCopyAndPreserveNTFSOwner** | [Mantieni proprietari NTFS durante l'assegnazione di etichette](#preserve-ntfs-owners-during-labeling-public-preview)
 | | |
 
-#### <a name="check-label-policy-settings"></a>Controllare le impostazioni dei criteri dell'etichetta
-Esempio di comando di PowerShell per verificare le impostazioni dei criteri di etichetta attive per un criterio etichetta denominato "globale":
-
-```PowerShell
-(Get-LabelPolicy -Identity Global).settings
-```
 
 ### <a name="label-advanced-setting-reference"></a>Riferimento alle impostazioni avanzate etichetta
 
@@ -253,13 +272,6 @@ Usare il parametro *AdvancedSettings* con [New-Label](/powershell/module/exchang
 |**SMimeEncrypt**|[Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**SMimeSign**|[Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-#### <a name="check-label-settings"></a>Controlla impostazioni etichetta
-
-Esempio di comando di PowerShell per verificare le impostazioni dell'etichetta attive per un'etichetta denominata "public":
-
-```PowerShell
-(Get-Label -Identity Public).settings
-```
 
 ## <a name="display-the-information-protection-bar-in-office-apps"></a>Visualizza la barra di Information Protection nelle app Office
 
@@ -371,13 +383,13 @@ Usare la tabella seguente per identificare il valore stringa da specificare:
 |ConvertTo-JSON (". jpg", ". png")|Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate | Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate
 | | | |
 
-**Esempio 1:**  Comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
+**Esempio 1**: comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Esempio 2:** Comando di PowerShell per lo scanner per proteggere i file con estensione txt e CSV, oltre ai file di Office e PDF, in cui il criterio dell'etichetta è denominato "scanner":
+**Esempio 2**: comando di PowerShell per lo scanner per proteggere i file con estensione txt e CSV, oltre ai file di Office e PDF, in cui il criterio dell'etichetta è denominato "scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -401,23 +413,23 @@ Usare la tabella seguente per identificare il valore stringa da specificare:
 |\<null value>| Il valore predefinito si comporta come il valore di protezione predefinito.|
 |ConvertTo-JSON (". dwg", ". zip")|Oltre all'elenco precedente, ". dwg" e ". zip" diventano P\<EXT>| 
 
-Con questa impostazione, le estensioni seguenti diventano sempre **P \<EXT> :** ". txt", ". xml", ". bmp", ". JT", ". jpg", ". jpeg", ". jpe", ". jif", ". JFIF", ". JFI", ". png", ". TIF", ". TIFF", ". gif"). Un'esclusione rilevante è che "ptxt" non diventa "txt. Pfile". 
+Con questa impostazione, le estensioni seguenti diventano sempre **P \<EXT>**: ". txt", ". xml", ". bmp", ". JT", ". jpg", ". jpeg", ". jpe", ". jif", ". JFIF", ". JFI", ". png", ". TIF", ". TIFF", ". gif"). Un'esclusione rilevante è che "ptxt" non diventa "txt. Pfile". 
 
 **AdditionalPPrefixExtensions** funziona solo se è abilitata la protezione di Pfile con la proprietà avanzata- [**PFileSupportedExtension**](#pfilesupportedextension) . 
 
-**Esempio 1:** Comando di PowerShell per comportarsi come il comportamento predefinito in cui Protect ". dwg" diventa ". dwg. Pfile":
+**Esempio 1**: comando di PowerShell per comportarsi come il comportamento predefinito in cui Protect ". dwg" diventa ". dwg. Pfile":
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**Esempio 2:**  Comando di PowerShell per modificare tutte le estensioni PFile dalla protezione generica (DWG. Pfile) alla protezione nativa (con estensione pdwg) quando i file sono protetti:
+**Esempio 2**: comando di PowerShell per modificare tutte le estensioni Pfile dalla protezione generica (DWG. Pfile) alla protezione nativa (. pdwg) quando i file sono protetti:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
-**Esempio 3:** Comando di PowerShell per impostare ". dwg" su ". pdwg" quando si usa questo servizio per proteggere questo file:
+**Esempio 3**: comando di PowerShell per impostare ". dwg" su ". pdwg" quando si usa questo servizio per proteggere questo file:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
@@ -478,7 +490,7 @@ Evitare di rimuovere le forme che contengono il testo che si desidera ignorare, 
 > Se non si specificano le forme parola in questa impostazione aggiuntiva di proprietà avanzata e Word viene incluso nel valore della chiave **RemoveExternalContentMarkingInApp** , verranno controllate tutte le forme per il testo specificato nel valore [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) . 
 >
 
-**Per trovare il nome della forma che si sta utilizzando e si desidera escludere:**
+**Per trovare il nome della forma che si sta utilizzando e si desidera escludere**:
 
 1. In Word visualizzare il riquadro di **selezione** : **scheda Home** > gruppo di **modifica** > **selezionare** l'opzione > riquadro di **selezione**.
 
@@ -605,7 +617,7 @@ Per evitare di rimuovere le forme che contengono il testo specificato, ma non le
 
 - Se si specifica questo valore, verranno rimosse solo le forme che soddisfano i criteri del nome della forma e il testo che corrisponde alla stringa fornita con [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) .
 
-Ad esempio:
+Esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
@@ -633,7 +645,7 @@ Se si usano layout personalizzati di PowerPoint e si desidera rimuovere tutte le
 
 Se si utilizza l'impostazione **PowerPointRemoveAllShapesByShapeName** , il testo all'interno delle forme viene ignorato e viene utilizzato il nome della forma per identificare le forme che si desidera rimuovere.
 
-Ad esempio:
+Esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
@@ -809,7 +821,7 @@ Quando si creano e configurano le impostazioni client avanzate seguenti, gli ute
 
 Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio popup con una delle azioni seguenti:
 
-|Type  |Descrizione  |
+|Type  |Description  |
 |---------|---------|
 |**Avvertire**     | l'utente può confermare e inviare oppure annullare.        |
 |**Giustificare**     |  All'utente viene richiesta la giustificazione (opzioni predefinite o formato libero) e l'utente può quindi inviare o annullare il messaggio. <br>Il testo della giustificazione viene scritto nell'intestazione x del messaggio di posta elettronica, in modo che possa essere letto da altri sistemi, ad esempio i servizi di prevenzione della perdita dei dati (DLP).       |
@@ -1098,11 +1110,11 @@ Per i documenti di Office etichettati con le isole sicure, è possibile rietiche
 
 In seguito a questa opzione di configurazione, la nuova etichetta di riservatezza viene applicata dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-- **Per i documenti di Office:** Quando il documento viene aperto nell'app desktop, la nuova etichetta di riservatezza viene visualizzata come impostata e viene applicata quando il documento viene salvato.
+- **Per i documenti di Office**: quando il documento viene aperto nell'app desktop, la nuova etichetta di riservatezza viene visualizzata come impostata e viene applicata quando il documento viene salvato.
 
-- **Per PowerShell:** [set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) possono applicare la nuova etichetta di riservatezza.
+- **Per PowerShell**: [set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) possono applicare la nuova etichetta di riservatezza.
 
-- **Per Esplora file:** Nella finestra di dialogo Azure Information Protection, la nuova etichetta di riservatezza viene visualizzata ma non è impostata.
+- **Per Esplora file**: nella finestra di dialogo Azure Information Protection, la nuova etichetta di riservatezza viene visualizzata ma non è impostata.
 
 Per questa configurazione è necessario specificare un'impostazione avanzata denominata **labelByCustomProperties** per ogni etichetta di riservatezza di cui si vuole eseguire il mapping all'etichetta precedente. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
@@ -1238,7 +1250,7 @@ Questa configurazione usa un' [impostazione avanzata](#configuring-advanced-sett
 
 Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
-Ad esempio:
+Esempio:
 
 - È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
@@ -1248,7 +1260,7 @@ Per i documenti di Office e i messaggi di posta elettronica di Outlook che gli u
 
 In seguito a questa opzione di configurazione, tutte le proprietà personalizzate aggiuntive vengono applicate dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-|Ambiente  | Descrizione  |
+|Ambiente  | Description  |
 |---------|---------|
 |**Documenti di Office**    | Quando il documento viene etichettato nell'app desktop, le proprietà personalizzate aggiuntive vengono applicate quando il documento viene salvato.        |
 |**Messaggi di posta elettronica di Outlook**     |    Quando il messaggio di posta elettronica viene contrassegnato in Outlook, le proprietà aggiuntive vengono applicate all'intestazione x quando viene inviato il messaggio di posta elettronica.     |
@@ -1266,7 +1278,7 @@ Per questa configurazione è necessario specificare un'impostazione avanzata den
 > [!IMPORTANT]
 > L'uso di spazi vuoti nella stringa impedisce l'applicazione delle etichette.
 
-Ad esempio:
+Esempio:
 
 - [Esempio 1: aggiungere un'unica proprietà personalizzata per un'etichetta](#example-1-add-a-single-custom-property-for-a-label)
 - [Esempio 2: aggiungere più proprietà personalizzate per un'etichetta](#example-2-add-multiple-custom-properties-for-a-label)
@@ -1424,7 +1436,7 @@ Per impostazione predefinita, il client di Azure Information Protection Unified 
 
 Se si dispone di computer che non possono connettersi a Internet per un certo periodo di tempo, è possibile esportare e copiare i file che gestiscono manualmente i criteri per il client di etichettatura unificata.
 
-**Per supportare i computer disconnessi dal client Unified Labeling:**
+**Per supportare i computer disconnessi dal client Unified Labeling**:
 
 1. Scegliere o creare un account utente in Azure AD che si utilizzerà per scaricare le etichette e le impostazioni dei criteri che si desidera utilizzare nel computer disconnesso.
 
@@ -1492,7 +1504,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Ignorare i file di sola lettura o archiviati**
 
-Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
+Per usare una logica o, eseguire più volte la stessa proprietà. Esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1636,7 +1648,7 @@ I tipi di nodo supportati includono:
 | **Ad eccezione**    | Restituisce *not* per il proprio elemento figlio, facendo in modo che si comporti come **tutti**        |
 | **SentTo**, seguito da **domini: listOfDomains**    |Verifica uno dei seguenti elementi: <br>-Se l'elemento padre è **except**, controlla se **tutti** i destinatari si trovano in uno dei domini<br>-Se l'elemento padre è qualsiasi altra **eccezione**, **verifica se uno dei destinatari** si trova in uno dei domini.   |
 | **EMailLabel**, seguito da Label | I tipi validi sono:  <br>: ID etichetta <br>-null, se non con etichetta             |
-| **AttachmentLabel**, seguito da **Label** ed **estensioni** supportate   | I tipi validi sono:  <br><br>**true** <br>-Se l'elemento padre è **except**, controlla se **tutti** gli allegati con un'estensione supportata esistono nell'etichetta<br>-Se l'elemento padre è qualsiasi altra **eccezione**, verifica se **uno degli allegati** con un'estensione supportata esiste nell'etichetta <br>-Se non è etichettato e **Label = null** <br><br> **false:** Per tutti gli altri casi <br><br>**Nota**: se la proprietà **Extensions** è vuota o mancante, nella regola vengono inclusi tutti i tipi di file supportati (estensioni).
+| **AttachmentLabel**, seguito da **Label** ed **estensioni** supportate   | I tipi validi sono:  <br><br>**true**: <br>-Se l'elemento padre è **except**, controlla se **tutti** gli allegati con un'estensione supportata esistono nell'etichetta<br>-Se l'elemento padre è qualsiasi altra **eccezione**, verifica se **uno degli allegati** con un'estensione supportata esiste nell'etichetta <br>-Se non è etichettato e **Label = null** <br><br> **false**: per tutti gli altri casi <br><br>**Nota**: se la proprietà **Extensions** è vuota o mancante, nella regola vengono inclusi tutti i tipi di file supportati (estensioni).
 | | |
 
 #### <a name="rule-action-syntax"></a>Sintassi azione regola
@@ -1656,7 +1668,7 @@ Se per un'azione non viene specificato alcun parametro, i popup avranno il testo
 
 Tutti i testi supportano i parametri dinamici seguenti: 
 
-|Parametro  |Descrizione  |
+|Parametro  |Description  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Ultima corrispondenza per le condizioni di **SentTo**       |
 | `${MatchedLabelName}`      | **Etichetta** posta/allegato, con il nome localizzato del criterio               |
@@ -1994,11 +2006,11 @@ Se si dispone di percorsi di file lunghi in SharePoint versione 2013 o successiv
 
 Questo valore è definito nella classe **HttpRuntimeSection** della `ASP.NET` configurazione. 
 
-**Per aggiornare la classe HttpRuntimeSection** : * *
+**Per aggiornare la classe HttpRuntimeSection**:
 
 1. Eseguire il backup della configurazione del **web.config** . 
 
-1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. Ad esempio:
+1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. Esempio:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
