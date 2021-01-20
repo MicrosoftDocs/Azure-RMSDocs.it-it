@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 17ee31a93e21314d9881af14feafc81ddb550092
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e3b8c14c63c3ac6300c84349212db0e177a0dd7d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384639"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240887"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Esercitazione: Individuazione del contenuto sensibile con lo scanner di Azure Information Protection (AIP)
 
@@ -50,7 +50,7 @@ In questa esercitazione si apprenderà come:
 |**Un processo di analisi dei contenuti** | Assicurarsi di avere a disposizione un processo di analisi dei contenuti di base che è possibile usare per i test. È possibile che ne sia stato creato uno al momento dell'[installazione dello scanner](tutorial-install-scanner.md).<br /><br />Se è necessario crearne uno ora, è possibile usare le istruzioni riportate in [Configurare Azure Information Protection nel portale di Azure](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). Quando è disponibile un processo di analisi dei contenuti di base, tornare qui per completare questa esercitazione. |
 |**SQL Server**     | Per eseguire lo scanner, è necessario SQL Server installato nel computer dello scanner. <br /><br /> Per eseguire l'installazione, passare alla [pagina di download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) e selezionare **Scarica ora** per l'opzione di installazione desiderata. Nel programma di installazione selezionare il tipo di installazione **Basic**. <br /><br />**Nota**: Si consiglia di installare SQL Server Enterprise per gli ambienti di produzione ed Express solo per i test.    |
 |**Account di Azure Active Directory**     |  Quando si lavora in un ambiente standard e connesso al cloud, l'account di dominio deve essere sincronizzato con [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). Ciò non è necessario se si lavora offline. <br /><br />In caso di dubbi per il proprio account, contattare uno degli amministratori di sistema per verificare lo stato di sincronizzazione. Per altre informazioni, vedere [Distribuzione dello scanner con configurazioni alternative](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
-|**Etichette di riservatezza e criteri pubblicati** |È necessario avere creato etichette di riservatezza e aver pubblicato criteri con almeno un'etichetta nell'interfaccia di amministrazione dell'etichettatura per l'account del servizio scanner. <br /><br />Configurare le etichette di riservatezza nell'interfaccia di amministrazione dell'etichettatura, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365. Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
+|**Etichette di riservatezza e criteri pubblicati** |È necessario avere creato etichette di riservatezza e aver pubblicato criteri con almeno un'etichetta nell'interfaccia di amministrazione dell'etichettatura per l'account del servizio scanner. <br /><br />Configurare le etichette di riservatezza nell'interfaccia di amministrazione dell'etichettatura, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels). |
 | | | 
 
 

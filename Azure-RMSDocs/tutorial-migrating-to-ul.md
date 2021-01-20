@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 746e1a8763c94a3193b7719d5af9326c2d274347
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 177c877cc1963d40be336bf8ec979a03b7e890c1
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805921"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240836"
 ---
 # <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-unified-labeling-solution"></a>Esercitazione: migrazione dal client classico alla soluzione di etichettatura unificata di Azure Information Protection (AIP)
 
@@ -29,7 +29,7 @@ ms.locfileid: "97805921"
 > In questo intervallo di tempo tutti i clienti correnti del client classico di Azure Information Protection potranno passare all'etichettatura unificata di AIP che usa la soluzione di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 >
 
-Questa esercitazione illustra come eseguire la migrazione della distribuzione di Azure Information Protection dell'organizzazione, nonché delle etichette e della gestione dei criteri di etichettatura nel portale di Azure, dal client classico alla soluzione di etichettatura unificata e alle [etichette di riservatezza di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+Questa esercitazione illustra come eseguire la migrazione della distribuzione di Azure Information Protection dell'organizzazione, nonché delle etichette e della gestione dei criteri di etichettatura nel portale di Azure, dal client classico alla soluzione di etichettatura unificata e alle [etichette di riservatezza di Microsoft 365](/microsoft-365/compliance/sensitivity-labels).
 
 **Tempo necessario**: il tempo necessario per completare una migrazione dipende dalla complessità dei criteri e dalle funzionalità AIP usate. È possibile continuare a lavorare con il client classico mentre si esegue la migrazione in background.
 
@@ -63,7 +63,7 @@ Sebbene la maggior parte delle funzionalità disponibili per il client classico 
 
 Leggere gli articoli seguenti per comprendere il modo in cui le funzionalità di Information Protection usate possono essere diverse nel client di etichettatura unificata:
 
-- [Informazioni sulle funzionalità di etichettatura predefinite in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Informazioni sulle funzionalità di etichettatura predefinite in Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps)
 - [Confrontare le soluzioni di etichettatura per i computer Windows](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Informazioni su come gestire le impostazioni delle etichette non supportate per impostazione predefinita nelle interfacce di amministrazione dell'etichettatura unificata](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
@@ -137,7 +137,7 @@ Copiare tutti i criteri archiviati nel portale di Azure che si vuole siano dispo
 Questa funzionalità è attualmente disponibile in ANTEPRIMA. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
 
 > [!NOTE]
-> La copia dei criteri presenta alcune limitazioni. È anche possibile iniziare da zero e creare i criteri manualmente nell'interfaccia di amministrazione dell'etichettatura. Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+> La copia dei criteri presenta alcune limitazioni. È anche possibile iniziare da zero e creare i criteri manualmente nell'interfaccia di amministrazione dell'etichettatura. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 > 
 
 **Per copiare i criteri**: 
@@ -184,7 +184,7 @@ Per altre informazioni, vedere:
 
 ### <a name="configure-advanced-labeling-settings-in-powershell"></a>Configurare le impostazioni di etichettatura avanzate in PowerShell
 
-1. Connettersi al modulo di PowerShell per Centro sicurezza e conformità di Office 365. Per altre informazioni, vedere la [documentazione di PowerShell per il Centro sicurezza e conformità](https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell).
+1. Connettersi al modulo di PowerShell per Centro sicurezza e conformità di Office 365. Per altre informazioni, vedere la [documentazione di PowerShell per il Centro sicurezza e conformità](/powershell/exchange/connect-to-scc-powershell).
 
 1. Per definire un'impostazione di etichetta avanzata, usare il cmdlet **Set-Label** specificando il parametro **AdvancedSettings**, l'etichetta a cui si vuole applicare l'impostazione, nonché le coppie chiave/valore per definire l'impostazione.
     
@@ -205,7 +205,7 @@ Per altre informazioni, vedere:
     - [Specificare un'etichetta secondaria predefinita per un'etichetta padre](rms-client/clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Configurare un'etichetta per applicare la protezione S/MIME in Outlook](rms-client/clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
     - [Definire le etichette usando proprietà personalizzate](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions) 
-    - [Definire traduzioni per le etichette](https://docs.microsoft.com/powershell/module/exchange/set-label). 
+    - [Definire traduzioni per le etichette](/powershell/module/exchange/set-label). 
 
     Per altre informazioni sulle configurazioni avanzate disponibili, vedere [Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection](rms-client/clientv2-admin-guide-customizations.md).
 
@@ -225,10 +225,10 @@ Per sfruttare la funzionalità per le condizioni di etichettatura unificata, cre
 - Centro sicurezza di Microsoft 365
 - Centro sicurezza e conformità di Microsoft 365
 
-Per altre informazioni, vedere [Operazioni eseguibili dalle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) nella documentazione di Microsoft 365.
+Per altre informazioni, vedere [Operazioni eseguibili dalle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) nella documentazione di Microsoft 365.
 
 > [!TIP]
-> Se sono stati creati tipi di informazioni sensibili personalizzati per l'uso con Office 365 DLP o Microsoft Cloud App Security, applicarli senza modifiche all'etichettatura unificata. Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically).
+> Se sono stati creati tipi di informazioni sensibili personalizzati per l'uso con Office 365 DLP o Microsoft Cloud App Security, applicarli senza modifiche all'etichettatura unificata. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 >  
 
 ## <a name="deploy-a-unified-labeling-client"></a>Distribuire un client di etichettatura unificata
@@ -294,7 +294,7 @@ Ad esempio:
  
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver eseguito la migrazione delle etichette, dei criteri e dei client distribuiti in base alle esigenze, continuare [gestendo le etichette e i criteri di etichettatura solo nell'interfaccia di amministrazione dell'etichettatura](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels), ovvero nel Centro conformità di Microsoft 365, nel Centro sicurezza di Microsoft 365 o nel Centro sicurezza e conformità di Microsoft 365.
+Dopo aver eseguito la migrazione delle etichette, dei criteri e dei client distribuiti in base alle esigenze, continuare [gestendo le etichette e i criteri di etichettatura solo nell'interfaccia di amministrazione dell'etichettatura](/microsoft-365/compliance/create-sensitivity-labels), ovvero nel Centro conformità di Microsoft 365, nel Centro sicurezza di Microsoft 365 o nel Centro sicurezza e conformità di Microsoft 365.
 
 Con la piattaforma di etichettatura unificata sarà necessario tornare all'area Azure Information Protection nel portale di Azure per:
 

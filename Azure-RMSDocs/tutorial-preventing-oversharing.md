@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 10f142fb09d8ad65b773f5e02f03233b454da240
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 6936402c9b58bf46b94e71ab597ce04c0391f59d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384537"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240819"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Esercitazione: Prevenzione dell'oversharing in Outlook con Azure Information Protection (AIP)
 
@@ -41,7 +41,7 @@ Prima di iniziare questa esercitazione, assicurarsi di disporre dei requisiti di
 |---------|---------|
 |**Requisiti per il computer**     | Verificare quanto segue: <br /><br />- Disponibilità di un computer Windows con il client di etichettatura unificata di Azure Information Protection installato. Per altre informazioni, vedere [Avvio rapido: Distribuzione del client di etichettatura unificata di Azure Information Protection (AIP)](quickstart-deploy-client.md). <br /><br />- Disponibilità di PowerShell installato e possibilità di eseguire PowerShell come amministratore. <br /><br />- Possibilità di accedere a Outlook. Prepararsi a riavviare Outlook più volte durante questa esercitazione.     |
 |**Sottoscrizione di Azure Information Protection**     |   Sarà necessaria una sottoscrizione che includa [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />In assenza di una di queste sottoscrizioni, creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
-|**Etichette di riservatezza e criteri di test**     |  Un etichetta di riservatezza **Generale** configurata nei criteri. <br /><br />Configurare le etichette di riservatezza nell'interfaccia di amministrazione dell'etichettatura, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365. Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Si consiglia di usare criteri di test per questa esercitazione, per evitare effetti sui criteri attivi. <br />Assicurarsi di avere a portata di mano il nome del criterio, nonché il GUID per l'etichetta **Generale**.   |
+|**Etichette di riservatezza e criteri di test**     |  Un etichetta di riservatezza **Generale** configurata nei criteri. <br /><br />Configurare le etichette di riservatezza nell'interfaccia di amministrazione dell'etichettatura, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Si consiglia di usare criteri di test per questa esercitazione, per evitare effetti sui criteri attivi. <br />Assicurarsi di avere a portata di mano il nome del criterio, nonché il GUID per l'etichetta **Generale**.   |
 | | |
 
 È possibile iniziare subito. 
@@ -399,7 +399,7 @@ Al termine di questa esercitazione è possibile conservare i criteri di test per
 
 Se si vogliono eliminare i criteri, farlo nell'interfaccia di amministrazione in cui sono stati creati, ovvero il Centro conformità di Microsoft 365, il Centro sicurezza di Microsoft 365 o il Centro sicurezza e conformità di Microsoft 365.
 
-Per altre informazioni, vedere la [documentazione di Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
+Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)
 
 Dopo l'eliminazione, riavviare Outlook nel computer client in modo che non sia più configurato con le impostazioni definite in questa esercitazione.
 

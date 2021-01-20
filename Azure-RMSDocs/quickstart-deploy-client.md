@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 468cbe031b22ba07127b75295da98ee9a081048a
-ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
+ms.openlocfilehash: 74999f960b13c64cd16891060f373d669ac90bab
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762333"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240801"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Guida introduttiva: Distribuzione del client di etichettatura unificata di Azure Information Protection (AIP)
 
@@ -23,7 +23,7 @@ ms.locfileid: "97762333"
 >
 > ***Rilevante per**: [Client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Il client di etichettatura unificata di Azure Information Protection (AIP) fa parte della soluzione [Microsoft Information Protection](https://aka.ms/MIPdocs) ed estende le funzionalità predefinite per l'assegnazione di etichette di riservatezza fornite da Microsoft 365. 
+Il client di etichettatura unificata di Azure Information Protection (AIP) fa parte della soluzione [Microsoft Information Protection](/microsoft-365/compliance/information-protection) ed estende le funzionalità predefinite per l'assegnazione di etichette di riservatezza fornite da Microsoft 365. 
 
 Il client offre supporto all'utente finale per l'etichettatura e la protezione in Esplora file e PowerShell, oltre che nelle applicazioni Office. Lo scanner incluso nel client di etichettatura unificata consente agli amministratori di analizzare le reti e le condivisioni di contenuto per individuare eventuale contenuto sensibile. 
 
@@ -69,4 +69,3 @@ Per iniziare a usare il client di Azure Information Protection, vedere le guide 
 - [Problemi noti - Azure Information Protection](known-issues.md) 
 - [Domande frequenti su Azure Information Protection](faqs.md) 
 - [Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection](rms-client/clientv2-admin-guide-customizations.md)        
-    
