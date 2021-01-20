@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c001f032281e323c6a4ca72530b1f005c3a1c268
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 50f8a118327f5a04748c4327175298694b0c84f4
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164573"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560272"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti per Azure Information Protection
 
@@ -69,7 +69,7 @@ Per supportare l'autenticazione e l'autorizzazione per Azure Information Protect
 
 L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altre informazioni, vedere: [Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Per scenari specifici sono necessari altri prerequisiti, ad esempio quando si usa l'autenticazione basata su certificato o a più fattori, quando i valori UPN non corrispondono agli indirizzi di posta elettronica degli utenti o quando si usa [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+Per scenari specifici sono necessari altri prerequisiti, ad esempio quando si usa l'autenticazione a più fattori o basata sui certificati oppure quando i valori UPN non corrispondono agli indirizzi di posta elettronica degli utenti.
 
 Per altre informazioni, vedere:
 
@@ -155,7 +155,11 @@ Con le altre edizioni di Office non è possibile proteggere i documenti e i mess
 
 Le etichette vengono visualizzate in una barra nella parte superiore del documento di Office, accessibile tramite il pulsante **Riservatezza** nel client di etichettatura unificata o il pulsante **Proteggi** nel client classico.
 
-Per altre informazioni, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](requirements-applications.md) e [AIP per versioni di Windows e di Office con supporto "Extended"](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+Per altre informazioni, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](requirements-applications.md).
+
+> [!IMPORTANT]
+> Supporto "Extended" per Office 2010 terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Funzionalità e capacità di Office non supportate
 

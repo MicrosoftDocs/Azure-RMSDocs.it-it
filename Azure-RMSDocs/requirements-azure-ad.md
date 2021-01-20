@@ -1,6 +1,6 @@
 ---
 title: Altri prerequisiti per Azure AD e Azure Information Protection
-description: Informazioni sui prerequisiti aggiuntivi di Azure AD per Azure Information Protection in scenari specifici, ad esempio l'autenticazione a più fattori o basata su certificati oppure i computer che usano Office 2010 e altro ancora.
+description: Informazioni su prerequisiti aggiuntivi di Azure AD per Azure Information Protection in scenari specifici, ad esempio l'autenticazione a più fattori o basata sui certificati e altro ancora.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 7ac67d72d329f9782a80c434f936cadad3e13882
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 7ba843beac002261cd1ada865767b414e22560ae
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583354"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560391"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Requisiti aggiuntivi di Azure AD per Azure Information Protection - AIP
 
@@ -25,26 +25,16 @@ ms.locfileid: "97583354"
 >
 >***Rilevante per**: [Client di etichettatura unificata di AIP e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).*
 
+> [!NOTE]
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. 
+>
+> In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection potranno eseguire la transizione alla soluzione di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+
 Una [directory Azure AD è un requisito](requirements.md#azure-active-directory) per l'uso di Azure Information Protection. Usare un account da una directory Azure AD per accedere al portale di Azure, in cui è possibile configurare le impostazioni di Azure Information Protection.
 
 Se si ha una sottoscrizione che include Azure Information Protection o Azure Rights Management, la directory di Azure AD viene creata automaticamente se necessario.
 
 Nelle sezioni seguenti sono elencati i requisiti aggiuntivi per AIP e Azure AD per scenari specifici. 
-
-## <a name="computers-running-office-2010"></a>Computer che eseguono Office 2010
-
-Oltre a un account di Azure AD, i computer che eseguono Microsoft 2010 devono disporre del client di Azure Information Protection per Windows per autenticarsi per Azure Information Protection e il relativo servizio di protezione dei dati, Azure Rights Management. 
-
-Gli account utente federati, ad esempio AD FS, devono usare l'Autenticazione integrata di Windows nei loro computer. In questo scenario l'autenticazione basata su moduli non riesce ad autenticare gli utenti per Azure Information Protection.
-
-Si consiglia di distribuire il client di etichettatura unificata di Azure Information Protection. Se non è ancora stato eseguito l'aggiornamento, è possibile che nel sistema sia ancora distribuito il [client classico di Azure Information Protection](./rms-client/aip-client.md). 
-
-Per altre informazioni, vedere [Lato client di Azure Information Protection](rms-client/use-client.md) e [AIP per versioni di Windows e Office con supporto "Extended"](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
-> [!NOTE]
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. 
->
-> In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection potranno eseguire la transizione alla soluzione di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>Supporto dell'autenticazione basata sui certificati
 
@@ -110,5 +100,18 @@ Se si usa un dispositivo mobile o un computer Mac che esegue l'autenticazione in
 - Versione minima del server **Windows Server 2012 R2**
 - Un provider di autenticazione alternativo che supporta il protocollo OAuth 2.0
 
+## <a name="computers-running-office-2010"></a>Computer che eseguono Office 2010
+
+> [!IMPORTANT]
+> Supporto "Extended" per Office 2010 terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
+
+Oltre a un account di Azure AD, i computer che eseguono Microsoft 2010 devono disporre del client di Azure Information Protection per Windows per autenticarsi per Azure Information Protection e il relativo servizio di protezione dei dati, Azure Rights Management. 
+
+Gli account utente federati, ad esempio AD FS, devono usare l'Autenticazione integrata di Windows nei loro computer. In questo scenario l'autenticazione basata su moduli non riesce ad autenticare gli utenti per Azure Information Protection.
+
+Si consiglia di distribuire il client di etichettatura unificata di Azure Information Protection. Se non è ancora stato eseguito l'aggiornamento, è possibile che nel sistema sia ancora distribuito il [client classico di Azure Information Protection](./rms-client/aip-client.md). 
+
+Per altre informazioni, vedere [Lato client di Azure Information Protection](rms-client/use-client.md).
 ## <a name="next-steps"></a>Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements.md).
