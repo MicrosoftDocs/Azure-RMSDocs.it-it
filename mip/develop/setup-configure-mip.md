@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 44636616cf410f0976a51afa4bd110e0531de85c
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 5daada951fb888fc7aa01071236af751ec38e002
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535553"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215528"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK
 
@@ -102,7 +102,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
    **Download Tar.gz/.Zip**
 
-   I download Tar.gz e .Zip contengono file compressi aggiuntivi, uno per ogni API. I file compressi sono denominati nel modo seguente, dove \<API\> = `file`, `protection` o `upe` e \<OS\> = la piattaforma: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Ad esempio, il file per i file binari e le intestazioni dell'API di protezione per la piattaforma Debian è denominato `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Ogni file con estensione tar.gz o zip completo è suddiviso in tre directory:
+   I download Tar.gz e .Zip contengono file compressi, uno per ogni API. I file compressi sono denominati nel modo seguente, dove \<API\> = `file`, `protection` o `upe` e \<OS\> = la piattaforma: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Ad esempio, il file per i file binari e le intestazioni dell'API di protezione per la piattaforma Debian è denominato `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Ogni file con estensione tar.gz o zip completo è suddiviso in tre directory:
 
    - **Bins:** file binari compilati per ogni architettura di piattaforma, dove applicabile.
    - **Include:** file di intestazione (C++).
@@ -155,7 +155,7 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
 
 1. Seguire la procedura indicata in [Registrare un'app con Azure AD, sezione Registrare una nuova applicazione](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida:
     - **Tipi di account supportati**: selezionare "Account solo in questa directory organizzativa".
-    - **URI di reindirizzamento**: impostare il tipo di URI di reindirizzamento su "Client pubblico (per dispositivi mobili e desktop)". Dato che l'SDK usa applicazioni client console semplici, usare un URI nel formato `<app-name>://authorize`.
+    - **URI di reindirizzamento**: impostare il tipo di URI di reindirizzamento su "Client pubblico (per dispositivi mobili e desktop)". Se l'applicazione usa Microsoft Authentication Library (MSAL), servirsi di `http://localhost`. In caso contrario, usare un elemento nel formato `<app-name>://authorize`.
 
 2. Al termine, si tornerà alla pagina **App registrata** per la registrazione della nuova applicazione. Copiare e salvare il GUID nel campo **ID applicazione (client)** , perché sarà necessario per le guide introduttive.
 
@@ -164,7 +164,7 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
 4. A questo punto si aggiungeranno le API e le autorizzazioni MIP che verranno richieste dall'applicazione in fase di esecuzione:
    - Nella pagina **Selezionare un'API** fare clic su **Azure Rights Management Services**.
    - Nella pagina dell'API **Azure Rights Management Services** fare clic su **Autorizzazioni delegate**.
-   - Nella sezione **Selezionare le autorizzazioni** selezionare l'autorizzazione **user_impersonation**. Ciò consente all'applicazione di creare e accedere al contenuto protetto per conto di un utente.
+   - Nella sezione **Selezionare le autorizzazioni** selezionare l'autorizzazione **user_impersonation**. Questo diritto consente all'applicazione di creare e accedere al contenuto protetto per conto di un utente.
    - Fare clic su **Aggiungi autorizzazioni** per salvare.
 
 5. Ripetere il passaggio 4, ma questa volta quando si raggiunge la pagina **Selezionare un'API** sarà necessario cercare l'API.
@@ -177,7 +177,7 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
 
 Al termine, la registrazione dell'applicazione e le autorizzazioni per le API dovrebbero essere simili agli esempi seguenti:
 
-   [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Autorizzazioni dell'app in Azure AD](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Registrazione dell'app in Azure AD](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.
 
@@ -194,7 +194,7 @@ Prima di poter rilasciare un'applicazione sviluppata con MIP, è necessario rich
    - Nome e cognome del richiedente
    - Indirizzo di posta elettronica del richiedente
 
-2. In seguito alla ricezione della richiesta del contratto, Microsoft invierà un modulo in forma di documento di Word. Leggere i termini e le condizioni del contratto di integrazione di Information Protection e restituire il modulo all'indirizzo [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) con le informazioni seguenti:
+2. Dopo aver ricevuto la richiesta del contratto, Microsoft invierà un modulo come documento Word. Leggere i termini e le condizioni del contratto di integrazione di Information Protection e restituire il modulo all'indirizzo [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) con le informazioni seguenti:
 
    - Ragione sociale dell'azienda
    - Stato/provincia (Stati Uniti o Canada) o paese di costituzione
