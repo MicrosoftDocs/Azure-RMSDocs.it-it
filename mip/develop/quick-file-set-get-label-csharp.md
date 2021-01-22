@@ -1,6 +1,6 @@
 ---
 title: "Avvio rapido: Impostare e ottenere un'etichetta di riservatezza su un file mediante il SDK C# di MIP"
-description: Questo Avvio rapido illustra come usare il wrapper .NET del SDK Microsoft Information Protection per impostare e ottenere un'etichetta di riservatezza su un file.
+description: Guida introduttiva che illustra come usare il wrapper .NET di Microsoft Information Protection SDK per impostare e ottenere un'etichetta di riservatezza in un file (C#)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: dc26f9c1f75157d81b160790e53bc27fd2c2b059
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
-ms.translationtype: HT
+ms.openlocfilehash: aaa7857146bc2dbc806e20097657831445e48949
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972170"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659035"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C#)
 

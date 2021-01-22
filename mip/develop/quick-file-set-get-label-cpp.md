@@ -1,18 +1,18 @@
 ---
 title: Avvio rapido - Impostare e ottenere un'etichetta di riservatezza su un file mediante il SDK C++ di MIP
-description: Questo Avvio rapido illustra come usare il SDK C++ di Microsoft Information Protection per impostare e ottenere un'etichetta di riservatezza su un file.
+description: Guida introduttiva che illustra come usare Microsoft Information Protection C++ SDK per impostare e ottenere un'etichetta di riservatezza su un file (C++)
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 41c91ed1453b0819be727d333e15987ee9b3da3a
-ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
-ms.translationtype: HT
+ms.openlocfilehash: 101e99790c09acb52841d81e139802b039adb710
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865162"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659171"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Avvio rapido: Impostare e ottenere un'etichetta di riservatezza (C++)
 
@@ -220,7 +220,7 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    | Segnaposto | Valore |
    |:----------- |:----- |
    | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Identificatore leggibile per il contenuto. Esempio: <ul><li>per un file, prendere in considerazione path\filename: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione subject:sender: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | Identificatore leggibile per il contenuto. Ad esempio: <ul><li>per un file, prendere in considerazione path\filename: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione subject:sender: `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | ID etichetta di riservatezza, copiato dalla console di output nell'Avvio rapido precedente, ad esempio: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Percorso completo del file di output, che è una copia con etichetta del file di input, ad esempio: `"c:\\Test\\Test_labeled.docx"`. |
 
