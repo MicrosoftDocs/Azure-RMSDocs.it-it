@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2020
+ms.date: 01/20/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0019699301b68df2d6ee4fd05d29a0e64734fc6e
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: fcd21a58dabe65f1de88694f97dc57975bc19450
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559864"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659069"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -184,7 +184,7 @@ Per altri dettagli, vedere anche:
 |**Supporto per AD RMS**| ![sì](../media/yes-icon.png) |  ![n. ](../media/no-icon.png) <sup>6</sup> |  ![no](../media/no-icon.png)|
 |**Supporto per i formati di Microsoft Office 97-2003**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![Nessun ](../media/no-icon.png) <sup>8</sup>|
 |**Crittografia a chiave doppia**|  ![no](../media/no-icon.png)| ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
-|**Cloud della community per enti pubblici** | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Cloud della community per enti pubblici** | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png)|
 | | | | |
 
 **Note a piè** di pagina:

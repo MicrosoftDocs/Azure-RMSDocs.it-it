@@ -4,7 +4,7 @@ description: Informazioni su come monitorare il connettore e l'uso da parte dell
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 01/20/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a440f075e8bbcd4d8c2d8ee8050ef0ab1d203b54
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 49b74533f745906ee919173884c8bc4bafdb52fa
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381834"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659103"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Dopo aver installato e configurato il connettore RMS, è possibile usare i metodi e le informazioni seguenti per monitorare più facilmente il connettore e l'uso da parte dell'organizzazione del servizio Azure Rights Management da Azure Information Protection.
 
@@ -179,21 +179,25 @@ La registrazione dei dati relativi all'utilizzo consente di identificare i casi 
 
 Per ulteriori informazioni sulla registrazione dell'utilizzo, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](log-analyze-usage.md).
 
-Se occorre una registrazione più dettagliata per scopi di diagnosi, è possibile usare [DebugView](/sysinternals/downloads/debugview) da Windows Sysinternals. Abilitare la traccia per il connettore RMS modificando il file web.config per il sito predefinito in IIS:
+Se è necessaria una registrazione più dettagliata a scopo di diagnostica, usare [DebugView](/sysinternals/downloads/debugview) da Windows Sysinternals per inviare i log a una pipe di debug. 
 
-1. Individuare il file web.config da **%programfiles%\Microsoft Rights Management connector\Web Service**.
+1. Avviare DebugView come amministratore e quindi selezionare **Acquisisci**  >  **Acquisisci Win32 globale**.
 
-1. Individuare la riga seguente:
+1. Abilitare la traccia per il connettore RMS modificando il file di **web.config** per il sito predefinito in IIS:
 
-    ```sh
-    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Individuare il file di **web.config** nella cartella **%Programmi%\Microsoft Rights Management connector\Web Service** .
 
-1. Sostituire la riga con il testo seguente:
-    ```sh
-    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Individuare la riga seguente:
+
+        ```sh
+        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
+
+    1. Sostituire la riga con il testo seguente:
+        ```sh
+        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
 
 1.  Arrestare e riavviare IIS per attivare la traccia. 
 
-1.  Una volta acquisite le tracce necessarie, ripristinare la riga nel passaggio 3, quindi arrestare e riavviare IIS.
+1.  Quando sono state acquisite le tracce in DebugView necessarie, ripristinare la riga nel passaggio 3 e arrestare e avviare di nuovo IIS.

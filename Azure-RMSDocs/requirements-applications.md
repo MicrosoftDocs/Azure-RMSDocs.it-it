@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0c86d31ef5dbfe3afd7e901bc43758c61ee0ba67
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 13454e0642cfaf60ed3bd742050cd3eb0d3a38dc
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386254"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659137"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -263,8 +263,6 @@ Scaricare l'app di condivisione Rights Management per computer Mac dalla [pagina
 Oltre alle applicazioni elencate in precedenza, tutte le applicazioni che supportano le API per il servizio Azure Rights Management possono essere integrate con Azure Information Protection. 
 
 Esempi possono includere applicazioni line-of-business scritte internamente oppure applicazioni di fornitori di software scritte usando gli SDK di RSM.
-
-Per altre informazioni, vedere la [Guida per gli sviluppatori di Azure Information Protection](./develop/developers-guide.md).
 
 ## <a name="applications-that-are-not-supported-by-azure-rms"></a>Applicazioni non supportate da Azure RMS
 

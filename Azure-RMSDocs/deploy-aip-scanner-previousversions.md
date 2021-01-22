@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 514eaf2f935d4ec454b57dbaf2ce1c97c029c4b8
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 6dffbe4480d5b6d1c2a01813d982e2a36ce81933
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806244"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659154"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-classic-client-scanner"></a>Distribuzione di versioni precedenti dello scanner client di Azure Information Protection classico
 
@@ -199,7 +199,7 @@ Versioni supportate per SharePoint: SharePoint Server 2019, SharePoint Server 20
     Add-AIPScannerRepository -Path <path>
     ```
 
-    Ad esempio, usare `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Ad esempio: `Add-AIPScannerRepository -Path \\NAS\Documents`
 
     Per altri esempi, utilizzare il comando della Guida `Get-Help Add-AIPScannerRepository -examples` di PowerShell per questo cmdlet.
 
@@ -340,7 +340,7 @@ Come nel passaggio precedente, lo scanner non è in grado di contrassegnare i fi
 
 ### <a name="editing-the-registry-for-the-scanner"></a>Modifica del Registro di sistema per lo scanner
 
-Per modificare il comportamento predefinito dello scanner per la protezione di tipi di file diversi dai file di Office e i file PDF, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere e il tipo di protezione (nativa o generica). Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
+Per modificare il comportamento predefinito dello scanner per la protezione di tipi di file diversi dai file di Office e i file PDF, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere e il tipo di protezione (nativa o generica). Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
 
 - Lo scanner presenta un comportamento predefinito: solo i formati di file di Office e i documenti PDF sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno etichettati né protetti dallo scanner.
 

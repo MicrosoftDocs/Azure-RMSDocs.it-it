@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d376446354e591f9a5742d415b7b7cba75bf887
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 31202876b035f7b5266abd006cfcd943e8eb6690
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382259"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659018"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dati in Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "97382259"
 >***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per ulteriori informazioni, vedere anche le [domande frequenti solo per il client classico](faqs-classic.md). *
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 In caso di domande relative al servizio di protezione dati, Azure Rights Management, da Azure Information Protection, vedere se la risposta è disponibile qui.
 
@@ -50,7 +50,7 @@ Per altre informazioni su questa modifica, vedere l'annuncio sul blog [Office 36
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Dove è possibile trovare informazioni sulle soluzioni di terze parti integrabili con Azure RMS?
 
-Molti fornitori di software hanno già o stanno implementando soluzioni che si integrano con Azure Rights Management e l'elenco è in rapida crescita. Potrebbe risultare utile controllare gli elenchi di [applicazioni abilitate per RMS](requirements-applications.md#) e ottenere gli aggiornamenti più recenti da [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) su Twitter. Controllare inoltre la [Guida per gli sviluppatori](./develop/developers-guide.md) e pubblicare eventuali domande specifiche sull'integrazione sul [sito Yammer](https://www.yammer.com/AskIPTeam) di Azure Information Protection.
+Molti fornitori di software hanno già o stanno implementando soluzioni che si integrano con Azure Rights Management e l'elenco è in rapida crescita. Potrebbe risultare utile controllare gli elenchi di [applicazioni abilitate per RMS](requirements-applications.md#) e ottenere gli aggiornamenti più recenti da [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) su Twitter. È possibile e inviare eventuali domande di integrazione specifiche nel [sito Azure Information Protection Yammer](https://www.yammer.com/AskIPTeam).
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Esiste un Management Pack o un meccanismo di monitoraggio simile per il connettore RMS?
 

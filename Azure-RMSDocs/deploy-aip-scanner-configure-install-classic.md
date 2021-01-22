@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9a139aaa4e36a45d23821ae71b27262c5b8c3f89
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 112593d0d26deca85dad62d580c73553f4a26107
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806295"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659188"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Configurazione e installazione dello scanner classico Azure Information Protection
 
@@ -252,7 +252,7 @@ Per impostazione predefinita, lo scanner AIP protegge solo i tipi di file di Off
 - Specificare i tipi di file aggiuntivi che si desidera proteggere
 - Specificare il tipo di protezione che si vuole applicare (nativo o generico)
 
-Per altre informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile".
+Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile".
 
 Per allineare i tipi di file supportati con il client di, in cui tutti i file vengono protetti automaticamente con la protezione nativa o generica:
 
