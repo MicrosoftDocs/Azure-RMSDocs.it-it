@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fcd21a58dabe65f1de88694f97dc57975bc19450
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: e715ca9f5131095e38e0fb9589494924ae36210f
+ms.sourcegitcommit: b82640b2af14b383a3d4d73692f3da907dc0f191
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659069"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711870"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -153,7 +153,7 @@ Per altri dettagli, vedere anche:
 |**Etichettatura manuale**| ![sì](../media/yes-icon.png)   | ![sì](../media/yes-icon.png)   |![sì](../media/yes-icon.png) |
 |**Etichetta predefinita**| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)| ![sì](../media/yes-icon.png)|
 |**Etichettatura consigliata o automatica** <br />Per Word, Excel, PowerPoint, Outlook|![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
-|**Etichettatura obbligatoria**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![no](../media/no-icon.png)|
+|**Etichettatura obbligatoria**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |  ![sì](../media/yes-icon.png)|
 |**Autorizzazioni definite dall'utente per un'etichetta**: <br />Non inviare i messaggi di posta elettronica| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
 |**Autorizzazioni definite dall'utente per un'etichetta**: <br />Autorizzazioni personalizzate per Word, Excel, PowerPoint| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |
 |**Supporto multilingue per le etichette**| ![sì](../media/yes-icon.png) | ![sì](../media/yes-icon.png) |![sì](../media/yes-icon.png) |
