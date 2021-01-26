@@ -5,25 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cb8120f710c3c88b12f539e265bb620f4eae981
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 5f63b23bd6f4e6fdf1198d12e235991f4a692495
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386356"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809368"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Prima di distribuire Azure Information Protection per l'organizzazione, assicurarsi di avere gli account per utenti e gruppi in Azure AD per il tenant dell'organizzazione.
 
@@ -157,7 +157,7 @@ Controllare quindi se la colonna **ProxyAddresses** è popolata. In caso afferma
 
 Se la colonna **ProxyAddresses** non è popolata, l'autorizzazione dell'utente per il servizio Azure Rights Management viene effettuata con il valore presente in **UserPrincipalName**.
 
-ad esempio:
+Ad esempio:
 
 
 |  Nome visualizzato   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -165,7 +165,7 @@ ad esempio:
 | Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
 |    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com} |
 
-Esempio:
+In questo esempio:
 
 - L'account utente per Jagannath Reddy sarà autorizzato da <strong>jagannathreddy@contoso.com</strong> .
 
