@@ -5,18 +5,18 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/19/2020
-ms.topic: quickstart
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 31a4b4151d692a7bcb25516081b70de57a96ee16
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
-ms.translationtype: HT
+ms.openlocfilehash: a66b6809047e8d1bd4b8147ea869a87b50e9e912
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807468"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809334"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 

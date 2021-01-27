@@ -5,24 +5,24 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/28/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 874a73480e8d15380d9e69a532a1b8ff39d38eb7
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3fca14f82db5cd78727b14cc417517921baa0f7b
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384163"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808593"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Estensione di Active Directory Rights Management Services per dispositivi mobili
 
 >***Si applica a**: Windows Server 2019, 2016, 2012 R2 e 2012 *
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 È possibile scaricare l'estensione Active Directory Rights Management Services (AD RMS) Mobile Device dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=43738) e installare questa estensione in una distribuzione di ad RMS esistente. In questo modo gli utenti possono proteggere e utilizzare dati sensibili quando il dispositivo supporta le più recenti app abilitate per l'API. Ad esempio, gli utenti possono eseguire le operazioni seguenti:
 - Usare l'app Azure Information Protection per utilizzare file di testo protetti in formati diversi, ad esempio con estensione txt, CSV e XML.
@@ -228,7 +228,7 @@ Se si usa il ruolo server DNS in Windows Server, usare le tabelle seguenti come 
 |Protocollo|_http
 |Priorità|0
 |Peso|0
-|Numero porta|443
+|Numero della porta|443
 |Host che offre questo servizio|_rmsserver. contoso. com
 
 |Campo|Valore|
@@ -238,7 +238,7 @@ Se si usa il ruolo server DNS in Windows Server, usare le tabelle seguenti come 
 |Protocollo|_http
 |Priorità|0
 |Peso|0
-|Numero porta|443
+|Numero della porta|443
 |Host che offre questo servizio|_rmsserver. contoso. com|
 | | |
 
@@ -255,7 +255,7 @@ Se si usa il ruolo server DNS in Windows Server, usare la tabella seguente come 
 |Protocollo|_http
 |Priorità|0
 |Peso|0
-|Numero porta|443
+|Numero della porta|443
 |Host che offre questo servizio|_rmsserver. contoso. com|
 | | |
 

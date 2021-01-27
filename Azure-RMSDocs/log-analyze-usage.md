@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/11/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
@@ -13,21 +13,21 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 06b32848bd1e2b0fa939474e74c174a674427eec
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: fb948fcfabd9456aa77f96465c59b572869ab10e
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384384"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809477"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Registrazione e analisi dell'utilizzo della protezione da Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare queste informazioni per comprendere come è possibile usare la registrazione dell'utilizzo per il servizio di protezione (Azure Rights Management) da Azure Information Protection. Questo servizio di protezione fornisce la protezione dei dati per i documenti e i messaggi di posta elettronica dell'organizzazione ed è in grado di registrare tutte le richieste. Sono esempi di richieste le azioni eseguite dagli utenti per proteggere documenti e messaggi di posta elettronica e per usare questi contenuti, le azioni eseguite dagli amministratori del servizio e le azioni eseguite da operatori Microsoft per il supporto delle distribuzioni di Azure Information Protection. 
 
@@ -128,10 +128,10 @@ La terza riga è costituita da un elenco di nomi separati da caratteri di tabula
 
 Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo stesso ordine della riga precedente e sono separati da caratteri di tabulazione. La tabella riportata di seguito consente di interpretare i campi.
 
-| Nome campo         | Tipo di dati W3C | Descrizione                                                                                                                                                                                                                                                                                          | Valore di esempio                                                                                                                       |
+| Nome del campo         | Tipo di dati W3C | Descrizione                                                                                                                                                                                                                                                                                          | Valore di esempio                                                                                                                       |
 | ------------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **date**           | Data          | La data UTC in cui è stata gestita la richiesta.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                                                                                                | 25-06-2013                                                                                                                          |
-| **time**           | Ora          | L'ora in cui è stata gestita la richiesta, in formato UTC 24 ore.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                                                                              | 21.59.28                                                                                                                            |
+| **time**           | Tempo          | L'ora in cui è stata gestita la richiesta, in formato UTC 24 ore.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                                                                              | 21.59.28                                                                                                                            |
 | **ID riga**         | Testo          | Il GUID univoco del record di log. Se non è presente alcun valore, identificare la voce tramite il valore correlation-id.<br /><br />Questo valore è utile quando i log vengono aggregati o copiati in un altro formato.                                                                                            | 1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                                                                |
 | **tipo di richiesta**  | Nome          | Il nome dell'API RMS richiesta.                                                                                                                                                                                                                                                              | AcquireLicense                                                                                                                      |
 | **ID utente**        | string        | L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Le chiamate da una chiave del tenant gestita dall'utente (BYOK) hanno un valore **"**, che si applica anche quando i tipi di richiesta sono anonimi.                                                                     | ‘joe@contoso.com’                                                                                                                   |

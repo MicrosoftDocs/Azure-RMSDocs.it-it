@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/29/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
@@ -14,21 +14,21 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: f6ebddb276cdf77c977acc516cf1b6c3d2bbc7b4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 16623f1182b248647ef0018ec6b4b21a2cf6f329
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385115"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809872"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Quali lettori PDF sono supportati per i PDF protetti?
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 I lettori PDF per i file PDF classificati e/o protetti consentono di aprire i file PDF crittografati che contengono informazioni riservate.
 
@@ -121,7 +121,7 @@ Per aprire un documento PDF protetto sul computer desktop, si consiglia di insta
 
 1. Se viene richiesta l'approvazione dell'amministratore, chiedere all'amministratore di autorizzare il plug-in.
 
-    ad esempio:
+    Ad esempio:
     
     :::image type="content" source="../media/admin-approval-for-mip-in-adobe-reader.png" alt-text="Approvazione dell'amministratore necessaria per installare il plug-in MIP per Acrobat e Acrobat Reader":::
     

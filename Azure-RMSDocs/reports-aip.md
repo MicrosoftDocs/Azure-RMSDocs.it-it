@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 ms.date: 11/09/2020
 manager: rkarlin
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
@@ -13,21 +13,21 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25ea3c8e008334ec50f81f0c5fcef15690132ef6
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 99c1fa6379f346477431caa884b687d39d500b7a
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386271"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808806"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare Azure Information Protection Analytics per la creazione di report centrali che consentono di tenere traccia dell'adozione delle etichette che classificano e proteggono i dati dell'organizzazione. Inoltre:
 
@@ -168,7 +168,7 @@ Per accedere al riquadro analisi Azure Information Protection, è necessario dis
     
 - Dopo aver creato l'area di lavoro, è possibile usare i ruoli seguenti con un minor numero di autorizzazioni per visualizzare i dati raccolti:
     
-    - **Lettore di sicurezza**
+    - **Ruolo con autorizzazioni di lettura per la sicurezza**
     - **Lettore globale**
 
 #### <a name="required-azure-log-analytics-roles"></a>Ruoli di Log Analytics di Azure richiesti
@@ -217,7 +217,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
     
 1. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
 
-1. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una di queste operazioni:
+1. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Eseguire una delle operazioni seguenti:
     
     - **Per creare una nuova area di lavoro log Analytics**: selezionare **Crea nuova area di lavoro** e nel riquadro **area di lavoro di log Analytics** fornire le informazioni richieste.
     
@@ -229,7 +229,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
     Per ulteriori informazioni su questa impostazione, vedere la sezione [corrispondenze di contenuto per l'analisi più approfondita](#content-matches-for-deeper-analysis) in questa pagina.
 
-1. Seleziona **OK**.
+1. Selezionare **OK**.
 
 A questo punto si è pronti per visualizzare i report.
 
@@ -277,7 +277,7 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 |**ProtectionBefore**|Tipo di protezione prima della modifica [JSON] |
 |**MachineName** |FQDN quando disponibile; nome host in caso contrario|
 |**DeviceRisk**|Punteggio di rischio del dispositivo da WDATP quando disponibile|
-|**Platform**|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
+|**Piattaforma**|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
 |**ApplicationName**|Nome descrittivo dell'applicazione|
 |**AIPVersion**|Versione del client di Azure Information Protection che ha eseguito l'azione di controllo |
 |**TenantId**|ID tenant di Azure AD |

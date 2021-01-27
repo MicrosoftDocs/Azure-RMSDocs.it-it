@@ -5,28 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/11/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 594d6fed74e2a8330c2a523ddbab5da2dd3d880c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 6612500a86f8a84c5f5762e91933c3f9cf743678
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382497"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809532"
 ---
 # <a name="aip-deployment-roadmap-for-classification-labeling-and-protection"></a>Roadmap per la distribuzione di AIP per la classificazione, l'assegnazione di etichette e la protezione
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare i passaggi seguenti come consigli per la preparazione, l'implementazione e la gestione di Azure Information Protection per la propria organizzazione, quando si vogliono classificare, etichettare e proteggere i dati.
 
@@ -42,7 +42,7 @@ Le etichette possono anche applicare la protezione, semplificando questo passagg
 
 ## <a name="deployment-process"></a>Processo di distribuzione
 
-Effettuare i passaggi seguenti:
+Eseguire la procedura seguente:
 
 1. [Verificare la sottoscrizione e assegnare licenze utente](#confirm-your-subscription-and-assign-user-licenses)
 1. [Preparare il tenant per l'uso di Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
@@ -78,7 +78,7 @@ Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Inform
 
 ## <a name="configure-and-deploy-classification-and-labeling"></a>Configurare e distribuire le funzionalità di classificazione e assegnazione di etichette
 
-Effettuare i passaggi seguenti:
+Eseguire la procedura seguente:
 
 1. **Analizza i file (facoltativo ma consigliato)**
 
@@ -163,7 +163,7 @@ Per preparare la protezione dei dati, seguire questa procedura:
 
 ## <a name="configure-labels-and-settings-applications-and-services-for-data-protection"></a>Configurare etichette e impostazioni, applicazioni e servizi per la protezione dei dati
 
-Effettuare i passaggi seguenti:
+Eseguire la procedura seguente:
 
 1. **Aggiornare le etichette per applicare la protezione**
     

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 01/18/2021
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 553646119c5e83bbc475d77ab35a83ce5866e858
-ms.sourcegitcommit: d2fdba748daf47ee9aeadbdf3ce154ef399eadaf
+ms.openlocfilehash: 925ef5dda1f470dbba6f173df427d4672b853167
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98569096"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809940"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -617,7 +617,7 @@ Per evitare di rimuovere le forme che contengono il testo specificato, ma non le
 
 - Se si specifica questo valore, verranno rimosse solo le forme che soddisfano i criteri del nome della forma e il testo che corrisponde alla stringa fornita con [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) .
 
-Esempio:
+Ad esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
@@ -645,7 +645,7 @@ Se si usano layout personalizzati di PowerPoint e si desidera rimuovere tutte le
 
 Se si utilizza l'impostazione **PowerPointRemoveAllShapesByShapeName** , il testo all'interno delle forme viene ignorato e viene utilizzato il nome della forma per identificare le forme che si desidera rimuovere.
 
-Esempio:
+Ad esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
@@ -821,7 +821,7 @@ Quando si creano e configurano le impostazioni client avanzate seguenti, gli ute
 
 Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio popup con una delle azioni seguenti:
 
-|Type  |Description  |
+|Tipo  |Descrizione  |
 |---------|---------|
 |**Avvertire**     | l'utente può confermare e inviare oppure annullare.        |
 |**Giustificare**     |  All'utente viene richiesta la giustificazione (opzioni predefinite o formato libero) e l'utente può quindi inviare o annullare il messaggio. <br>Il testo della giustificazione viene scritto nell'intestazione x del messaggio di posta elettronica, in modo che possa essere letto da altri sistemi, ad esempio i servizi di prevenzione della perdita dei dati (DLP).       |
@@ -1250,7 +1250,7 @@ Questa configurazione usa un' [impostazione avanzata](#configuring-advanced-sett
 
 Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
-Esempio:
+Ad esempio:
 
 - È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
@@ -1260,7 +1260,7 @@ Per i documenti di Office e i messaggi di posta elettronica di Outlook che gli u
 
 In seguito a questa opzione di configurazione, tutte le proprietà personalizzate aggiuntive vengono applicate dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-|Ambiente  | Description  |
+|Ambiente  | Descrizione  |
 |---------|---------|
 |**Documenti di Office**    | Quando il documento viene etichettato nell'app desktop, le proprietà personalizzate aggiuntive vengono applicate quando il documento viene salvato.        |
 |**Messaggi di posta elettronica di Outlook**     |    Quando il messaggio di posta elettronica viene contrassegnato in Outlook, le proprietà aggiuntive vengono applicate all'intestazione x quando viene inviato il messaggio di posta elettronica.     |
@@ -1278,7 +1278,7 @@ Per questa configurazione è necessario specificare un'impostazione avanzata den
 > [!IMPORTANT]
 > L'uso di spazi vuoti nella stringa impedisce l'applicazione delle etichette.
 
-Esempio:
+Ad esempio:
 
 - [Esempio 1: aggiungere un'unica proprietà personalizzata per un'etichetta](#example-1-add-a-single-custom-property-for-a-label)
 - [Esempio 2: aggiungere più proprietà personalizzate per un'etichetta](#example-2-add-multiple-custom-properties-for-a-label)
@@ -1504,7 +1504,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Ignorare i file di sola lettura o archiviati**
 
-Per usare una logica o, eseguire più volte la stessa proprietà. Esempio:
+Per usare una logica o, eseguire più volte la stessa proprietà. Ad esempio:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1668,7 +1668,7 @@ Se per un'azione non viene specificato alcun parametro, i popup avranno il testo
 
 Tutti i testi supportano i parametri dinamici seguenti: 
 
-|Parametro  |Description  |
+|Parametro  |Descrizione  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Ultima corrispondenza per le condizioni di **SentTo**       |
 | `${MatchedLabelName}`      | **Etichetta** posta/allegato, con il nome localizzato del criterio               |
@@ -2010,7 +2010,7 @@ Questo valore è definito nella classe **HttpRuntimeSection** della `ASP.NET` co
 
 1. Eseguire il backup della configurazione del **web.config** . 
 
-1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. Esempio:
+1. Aggiornare il valore di **maxUrlLength** in base alle esigenze. Ad esempio:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />

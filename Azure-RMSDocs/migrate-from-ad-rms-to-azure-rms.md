@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/11/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 80a1a42642ab0d611c64da34e3bf5a86a219f447
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 04534d6bce6c0db554a30b3690957c8aeeae433d
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560408"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809437"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -91,7 +91,7 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
     Se si dispone di computer che eseguono Office 2010, è necessario installare il [client di Azure Information Protection](rms-client/use-client.md) per offrire la possibilità di autenticare gli utenti per i servizi cloud. 
 
     > [!IMPORTANT]
-    > Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Supporto "Extended" per Office 2010 terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
     >  
     
 
@@ -233,7 +233,7 @@ I controlli di onboarding configurati durante la fase di preparazione non sono p
 Se i computer Windows eseguono Office 2010, verificare se è necessario disabilitare l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata).
 
 > [!IMPORTANT]
-> Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Supporto "Extended" per Office 2010 terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 **Passaggio 12: rekey la chiave del tenant Azure Information Protection**
 

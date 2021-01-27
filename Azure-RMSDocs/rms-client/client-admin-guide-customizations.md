@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3c7105d93f396380c47711611b83d24909431cbc
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: f35a486291b3e13bc415d5bbbc80b9019b6e0075
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807485"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808944"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-classic-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection classico
 
@@ -694,7 +694,7 @@ Specificare un nome di regola di migrazione a propria scelta. Usare un nome desc
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservato** e ha l'ID etichetta **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -703,7 +703,7 @@ Esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|valore|
+|Nome|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "L'etichetta Secure Islands è Riservato",Classificazione,Riservato|
 
@@ -711,7 +711,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservatezza elevata** e ha l'ID etichetta **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -720,7 +720,7 @@ Esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|valore|
+|Nome|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "L'etichetta Secure Islands è Sensibile",Classificazione,Sensibile|
 
@@ -729,7 +729,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "generale" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Generale** e ha l'ID etichetta **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -738,7 +738,7 @@ Esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|valore|
+|Nome|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"L'etichetta Secure Islands contiene Interno",Classificazione,.\*Interno.\*|
 
