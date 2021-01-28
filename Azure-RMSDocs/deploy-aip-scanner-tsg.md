@@ -4,7 +4,7 @@ description: Istruzioni per la risoluzione dei problemi relativi alla distribuzi
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/26/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: 46a994c5191e82d68f318e4900e0a5d45c1e176b
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540105"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958075"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>Risoluzione dei problemi di distribuzione dello scanner locale con etichetta unificata
 
@@ -74,7 +74,7 @@ Usare le sezioni seguenti per comprendere i messaggi di errore specifici generat
 |**Errori di autenticazione**     |  - [Il token di autenticazione non è accettato](#authentication-token-not-accepted) <br>  - [Token di autenticazione mancante](#authentication-token-missing)|
 |**Errori dei criteri**     |  - [Criteri mancanti](#policy-missing) <br>- [Il criterio non include alcuna condizione di etichetta automatica](#policy-doesnt-include-any-automatic-labeling-condition)      |
 |**Errori di database/schema**     |  - [Errori di database](#database-errors) <br> - [Schema non corrispondente o obsoleto](#mismatched-or-outdated-schema)  |
-|**Altri errori**     |  - [Processi di scanner bloccati](#stuck-scanner-processes) <br>- [Impossibile connettersi al server remoto](#unable-to-connect-to-remote-server) <br>- [Si è verificato un errore durante l'invio della richiesta](#error-occurred-while-sending-the-request) <br>- [Profilo o processo di analisi del contenuto mancante](#missing-content-scan-job-or-profile) <br>- [Nessun repository configurato](#no-repositories-configured) <br>- [Non sono stati trovati cluster](#no-cluster-found)   |
+|**Altri errori**     |  - [Connessione sottostante chiusa](#underlying-connection-was-closed) <br> - [Processi di scanner bloccati](#stuck-scanner-processes) <br>- [Impossibile connettersi al server remoto](#unable-to-connect-to-remote-server) <br>- [Si è verificato un errore durante l'invio della richiesta](#error-occurred-while-sending-the-request) <br>- [Profilo o processo di analisi del contenuto mancante](#missing-content-scan-job-or-profile) <br>- [Nessun repository configurato](#no-repositories-configured) <br>- [Non sono stati trovati cluster](#no-cluster-found)   |
 |     |         |
 
 
@@ -193,6 +193,20 @@ Eseguire il comando [Update-AIPScanner](/powershell/module/azureinformationprote
 
 
 <!--Other errors-->
+
+### <a name="underlying-connection-was-closed"></a>Connessione sottostante chiusa
+
+**Messaggio di errore**
+
+`System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Authentication failed because the remote party has closed the transport stream.`
+
+**Soluzione**
+
+Questo errore indica in genere che TLS 1,2 non è abilitato.
+
+Per ulteriori informazioni, vedere [firewall e infrastruttura di rete](requirements.md#firewalls-and-network-infrastructure). 
+
+Per abilitare TLS 1,2, vedere [How to Enable tls 1,2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) nella documentazione di Enterprise Mobility + Security.
 
 ### <a name="stuck-scanner-processes"></a>Processi di scanner bloccati
 

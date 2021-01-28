@@ -4,7 +4,7 @@ description: Elenca i prerequisiti per l'installazione e la distribuzione di Azu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/17/2020
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3f0093e2877ffe15232ed5704dcf2567b8ed99c4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164182"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958092"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Requisiti per l'installazione e la distribuzione del Azure Information Protection scanner per l'assegnazione di etichette unificata
 
@@ -37,7 +37,6 @@ Inoltre, i requisiti seguenti sono specifici per lo scanner:
 - [Requisiti di SharePoint](#sharepoint-requirements)
 - [Requisiti di Microsoft Office](#microsoft-office-requirements)
 - [Requisiti del percorso del file](#file-path-requirements)
-- [Requisiti statistici di utilizzo](#usage-statistics-requirements)
 
 Se non è possibile soddisfare tutti i requisiti elencati per lo scanner perché non sono consentiti dai criteri dell'organizzazione, vedere la sezione [configurazioni alternative](#deploying-the-scanner-with-alternative-configurations) .
 
@@ -188,20 +187,13 @@ Per impostazione predefinita, per analizzare i file, i percorsi dei file devono 
 
 Per analizzare i file con percorsi di file di più di 260 caratteri, installare lo scanner in un computer con una delle seguenti versioni di Windows e configurare il computer in base alle esigenze:
 
-|Versione di Windows  |Description  |
+|Versione di Windows  |Descrizione  |
 |---------|---------|
 |**Windows 2016 o versione successiva**     |   Configurare il computer per supportare percorsi lunghi      |
 |**Windows 10 o Windows Server 2016**     | Definire la seguente [impostazione di criteri di gruppo](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): Configurazione computer **criteri computer locale**  >    >  **modelli amministrativi**  >  **tutte le impostazioni**  >  **Abilita percorsi lunghi Win32**.    </br></br>Per ulteriori informazioni sul supporto dei percorsi di file lunghi in queste versioni, vedere la sezione [limitazione della lunghezza massima del percorso](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dalla documentazione per gli sviluppatori di Windows 10.    |
 |**Windows 10, versione 1607 o successiva**     |  Acconsentire esplicitamente alla funzionalità di **MAX_PATH** aggiornata. Per ulteriori informazioni, vedere [Enable Long paths in Windows 10 versioni 1607 e versioni successive](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later).      |
 | | |
 
-## <a name="usage-statistics-requirements"></a>Requisiti statistici di utilizzo
-
-Disabilitare le statistiche di utilizzo usando uno dei metodi seguenti:
-
-- Impostazione del parametro [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) su 0
-
-- Assicurarsi che l'opzione migliora Azure Information Protection inviando le **statistiche di utilizzo a Microsoft** rimanga deselezionata durante il processo di installazione dello scanner.
 
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>Distribuzione dello scanner con configurazioni alternative
 
@@ -331,7 +323,7 @@ Se è possibile concedere *temporaneamente* il ruolo sysadmin per installare lo 
 
 Eseguire una delle operazioni seguenti, a seconda dei requisiti dell'organizzazione:
 
-|Restrizione  |Description  |
+|Restrizione  |Descrizione  |
 |---------|---------|
 |**È possibile avere temporaneamente il ruolo sysadmin**     |  Se si dispone temporaneamente del ruolo sysadmin, il database viene creato automaticamente e all'account di servizio per lo scanner vengono concesse automaticamente le autorizzazioni necessarie. <br><br>Tuttavia, l'account utente che configura lo scanner richiede ancora il ruolo **db_owner** per il database di configurazione dello scanner. Se si ha il ruolo sysadmin solo fino al completamento dell'installazione dello scanner, concedere manualmente il ruolo **db_owner** all'account utente.       |
 |**Non è possibile avere il ruolo sysadmin**     |  Se non è possibile concedere il ruolo sysadmin anche temporaneamente, è necessario richiedere un utente con diritti sysadmin per creare manualmente un database prima di installare lo scanner. <br><br>Per questa configurazione, è necessario assegnare il ruolo **db_owner** ai seguenti account: <br>-Account del servizio per lo scanner<br>-Account utente per l'installazione dello scanner<br>-Account utente per la configurazione dello scanner <br><br>In genere, si usa lo stesso account utente per installare e configurare lo scanner, Se si usano account diversi, entrambi richiedono il ruolo **db_owner** per il database di configurazione dello scanner. Creare l'utente e i diritti in base alle esigenze. Se si specifica il nome del proprio cluster, il database di configurazione viene denominato **AIPScannerUL_<cluster_name>**.  |
@@ -414,7 +406,7 @@ Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non 
 
 Se le etichette non hanno condizioni di etichetta automatica, pianificare l'uso di una delle opzioni seguenti durante la configurazione dello scanner:
 
-|Opzione  |Description  |
+|Opzione  |Descrizione  |
 |---------|---------|
 |**Individua tutti i tipi di informazioni**     |  Nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)impostare l'opzione **tipi di informazioni su individua** su **tutti**. </br></br>Questa opzione imposta il processo di analisi del contenuto per l'analisi del contenuto per tutti i tipi di informazioni riservate.      |
 |**Usa l'etichettatura consigliata**     |  Nel [processo di analisi del contenuto](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)impostare l'opzione considera l' **etichetta consigliata come automatica** **su on**.</br></br> Questa impostazione configura lo scanner in modo da applicare automaticamente tutte le etichette consigliate al contenuto.      |

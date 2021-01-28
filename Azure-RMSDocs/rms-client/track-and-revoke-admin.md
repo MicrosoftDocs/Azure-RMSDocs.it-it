@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: e3d9c81c42c202fc09dd6ab11559c915bdfeafef
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: fc9b1f4f3e23302832c55eea4c871a27d11b6813
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809844"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958109"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Guida dell'amministratore: rilevare e revocare l'accesso ai documenti con Azure Information Protection (anteprima pubblica)
 
@@ -105,9 +105,12 @@ Gli amministratori globali possono revocare l'accesso per qualsiasi documento pr
 
 Se è stato revocato accidentalmente l'accesso a un documento specifico, usare lo stesso valore di **ContentID** con il cmdlet [Clear-AipServiceDocumentRevoked](/powershell/module/aipservice/clear-aipservicedocumentrevoked) per annullare la revoca dell'accesso. 
 
+Per usare il cmdlet **Clear-AipServiceDocumentRevoked** , è necessario innanzitutto caricare il **AipService.dll**.
+
 Ad esempio:
 
 ```PowerShell
+Import-Module -Name "C:\Program Files\WindowsPowerShell\Modules\AIPService\1.0.0.4\AipService.dll"
 Clear-AipServiceDocumentRevoked -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
 ```
 

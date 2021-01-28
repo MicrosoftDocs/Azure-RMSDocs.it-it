@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8064138db9d3d8356c9b12eef769bebabfd5a556
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 675f0a3f9a8ef3c3614bb1c59e0508ee028cbae8
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559643"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958126"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -107,11 +107,15 @@ Per altre informazioni, vedere:
 
 Il rilevamento e la revoca dell'accesso ai documenti mediante il client Unified Labeling presenta i seguenti problemi noti:
 
+- [Documenti protetti da password](#password-protected-documents)
 - [Più allegati in un messaggio di posta elettronica protetto](#multiple-attachments-in-a-protected-email)
 - [Documenti a cui si accede tramite SharePoint](#documents-accessed-via-sharepoint)
 
-Per altre informazioni, vedere [Guida dell'amministratore: tenere traccia e revocare l'accesso ai documenti con Azure Information Protection](rms-client/track-and-revoke-admin.md) e la [Guida dell'utente: revocare l'accesso ai documenti con Azure Information Protection](rms-client/revoke-access-user.md).
+Per ulteriori informazioni, vedere la [Guida dell'amministratore](rms-client/track-and-revoke-admin.md) e le procedure per la [Guida dell'utente](rms-client/revoke-access-user.md) .
 
+#### <a name="password-protected-documents"></a>Documenti protetti da password
+
+I documenti protetti da password non sono supportati dalle funzionalità di rilevamento e revoca.
 #### <a name="multiple-attachments-in-a-protected-email"></a>Più allegati in un messaggio di posta elettronica protetto
 
 Se si collegano più documenti a un messaggio di posta elettronica e quindi si proteggono i messaggi di posta elettronica e li si invia, ogni allegato otterrà lo stesso valore ContentID. 
@@ -130,7 +134,7 @@ Inoltre, la revoca dell'accesso per uno degli allegati revoca anche l'accesso pe
 
     In questi casi, gli amministratori potrebbero essere in grado di individuare i file scaricati usando PowerShell per trovare i nuovi valori **ContentID** per rilevare o revocare l'accesso.
 
-### <a name="knowns-issues-for-the-aip-client-and-onedrive"></a>Problemi noti per il client AIP e OneDrive
+### <a name="known-issues-for-the-aip-client-and-onedrive"></a>Problemi noti per il client AIP e OneDrive
 
 Se sono presenti documenti archiviati in OneDrive con un'etichetta di riservatezza applicata e un amministratore modifica l'etichetta nel criterio di etichettatura per aggiungere la protezione, la protezione appena applicata non viene applicata automaticamente al documento con etichetta. 
 
