@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 767438db1703c60a545f0b38234f4d7c57b9b569
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958092"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473005"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Requisiti per l'installazione e la distribuzione del Azure Information Protection scanner per l'assegnazione di etichette unificata
 
@@ -267,7 +267,7 @@ Per supportare un computer disconnesso dalla portale di Azure, seguire questa pr
     
     **Abilitare la gestione offline dei processi di analisi di rete**:
 
-    1. Impostare il servizio di individuazione della rete per il funzionamento in modalità offline usando il cmdlet [set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
+    1. Impostare il servizio di individuazione della rete (anteprima pubblica) per il funzionamento in modalità offline usando il cmdlet [set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
 
     1. Configurare il processo di analisi di rete nel portale di Azure. Per ulteriori informazioni, vedere [creazione di un processo di analisi di rete](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
     

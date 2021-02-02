@@ -4,7 +4,7 @@ description: Scopri le novità per il client Unified Labeling Azure Information 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/27/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 30ed80c43494db6b9ad8c33827d138d3c7ae2065
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 065007e14f96c0d4cfddf4ea93a680c5e6bdf138
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958143"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473022"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -93,6 +93,14 @@ Questa versione include le nuove funzionalità, le correzioni e i miglioramenti 
 
     - [Correzioni e miglioramenti per lo scanner Unified Labeling](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Correzioni e miglioramenti per il client Unified Labeling](#fixes-and-improvements-for-the-unified-labeling-client)
+
+- **Problema noto**: è stato rilevato un problema nella versione GA più recente (2.9.111), in cui alcuni utenti non sono in grado di visualizzare i file protetti negli scenari seguenti:
+    
+    - Quando i file protetti sono condivisi con utenti che non dispongono di un criterio AIP configurato, ad esempio utenti esterni. Questo problema si verifica solo con l' [app visualizzatore AIP](clientv2-view-use-files.md).
+
+    - Quando il contenuto con un'etichetta con ambito viene condiviso con utenti o gruppi non inclusi nell'ambito dell'etichetta. Questo problema si verifica sia con l' [app visualizzatore AIP](clientv2-view-use-files.md) che durante la visualizzazione o la classificazione del contenuto condiviso tramite [Esplora file](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
+    
+    Stiamo lavorando attivamente a questo problema e a un piano di recapito aggiornato per la correzione.
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>Supporto di PowerShell per server scanner disconnessi
 
@@ -208,7 +216,7 @@ Questa versione include le nuove funzionalità, le correzioni e i miglioramenti 
 
     - [Ripetizioni complete facoltative per le modifiche rilevate](#optional-full-rescans-for-changes-detected)
     - [Configurare i timeout di SharePoint](#configure-sharepoint-timeouts)
-    - [Supporto per l'individuazione della rete](#network-discovery-support)
+    - [Supporto](#network-discovery-support-public-preview) per l'individuazione della rete (anteprima pubblica)
 
 - **Nuove funzionalità per il client**:
 
@@ -245,14 +253,14 @@ Gli amministratori AIP possono ora configurare anche i timeout di SharePoint, se
 
 Per altre informazioni, vedere [configurare i timeout di SharePoint](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-### <a name="network-discovery-support"></a>Supporto per l'individuazione della rete
+### <a name="network-discovery-support-public-preview"></a>Supporto per l'individuazione della rete (anteprima pubblica)
 
 Lo scanner Unified Labeling include ora un nuovo servizio di **individuazione della rete** , che consente di analizzare gli indirizzi IP o gli intervalli specificati per le condivisioni file di rete che possono avere contenuto sensibile.
 
 Il servizio di **individuazione della rete** aggiorna i report del **repository** con un elenco di percorsi di condivisione che potrebbero essere a rischio, in base alle autorizzazioni individuate e ai diritti di accesso. Controllare i report del **repository** aggiornati per assicurarsi che i processi di analisi dei contenuti includano tutti i repository che devono essere analizzati.
 
 > [!TIP]
-> Per ulteriori informazioni, vedere [cmdlet di individuazione della rete](#network-discovery-cmdlets).
+> Per ulteriori informazioni, vedere [cmdlet di individuazione della rete](#network-discovery-cmdlets-public-preview).
 
 **Per utilizzare il servizio di individuazione della rete**
 
@@ -277,7 +285,7 @@ Il servizio di **individuazione della rete** aggiorna i report del **repository*
 
 1. Usare i report generati nel nuovo riquadro [**repository**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) per trovare altre condivisioni file di rete che potrebbero essere a rischio. Aggiungere qualsiasi condivisione file rischiosa ai [processi di analisi del contenuto](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) per analizzare i repository aggiunti per il contenuto sensibile.
 
-#### <a name="network-discovery-cmdlets"></a>Cmdlet di individuazione della rete
+#### <a name="network-discovery-cmdlets-public-preview"></a>Cmdlet di individuazione della rete (anteprima pubblica)
 
 I cmdlet di PowerShell aggiunti per l'individuazione della rete includono:
 

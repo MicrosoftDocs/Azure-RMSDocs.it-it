@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: e3b8c14c63c3ac6300c84349212db0e177a0dd7d
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
-ms.translationtype: HT
+ms.openlocfilehash: db57d4cdcf0d9153af2c6c1310019e8d1700e96c
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240887"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473073"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Esercitazione: Individuazione del contenuto sensibile con lo scanner di Azure Information Protection (AIP)
 
@@ -46,7 +46,7 @@ In questa esercitazione si apprenderà come:
 |---------|---------|
 |**Una sottoscrizione di supporto**     |  Sarà necessaria una sottoscrizione di Azure che includa [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). <br /><br />In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.       |
 |**Accesso amministrativo al portale di Azure** |Verificare che sia possibile accedere al [portale di Azure](https://portal.azure.com/) con un account amministratore supportato e che la protezione sia abilitata. Gli account amministratore supportati includono: <br /><br />- **Amministratore di conformità**<br />- **Amministratore dati di conformità**<br />- **Amministratore della sicurezza**<br />- **Amministratore globale**   |
-|**Client e scanner di AIP e servizio di individuazione della rete**   |   Per completare questa esercitazione, è necessario aver installato il client e lo scanner di etichettatura unificata di Azure Information Protection, nonché il servizio di individuazione della rete (anteprima pubblica). <br /><br />Per altre informazioni, vedere: <br /><br />- [Avvio rapido: Distribuzione del client di etichettatura unificata di Azure Information Protection (AIP)](quickstart-deploy-client.md) <br />- [Esercitazione: Installazione dello scanner di etichettatura unificata di Azure Information Protection (AIP)](tutorial-install-scanner.md) |
+|**Client e scanner di AIP e servizio di individuazione della rete**   |   Per completare questa esercitazione, è necessario aver installato il client e lo scanner di Azure Information Protection Unified Labeling, nonché il servizio di individuazione della rete (anteprima pubblica). <br /><br />Per altre informazioni, vedere: <br /><br />- [Avvio rapido: Distribuzione del client di etichettatura unificata di Azure Information Protection (AIP)](quickstart-deploy-client.md) <br />- [Esercitazione: Installazione dello scanner di etichettatura unificata di Azure Information Protection (AIP)](tutorial-install-scanner.md) |
 |**Un processo di analisi dei contenuti** | Assicurarsi di avere a disposizione un processo di analisi dei contenuti di base che è possibile usare per i test. È possibile che ne sia stato creato uno al momento dell'[installazione dello scanner](tutorial-install-scanner.md).<br /><br />Se è necessario crearne uno ora, è possibile usare le istruzioni riportate in [Configurare Azure Information Protection nel portale di Azure](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). Quando è disponibile un processo di analisi dei contenuti di base, tornare qui per completare questa esercitazione. |
 |**SQL Server**     | Per eseguire lo scanner, è necessario SQL Server installato nel computer dello scanner. <br /><br /> Per eseguire l'installazione, passare alla [pagina di download di SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) e selezionare **Scarica ora** per l'opzione di installazione desiderata. Nel programma di installazione selezionare il tipo di installazione **Basic**. <br /><br />**Nota**: Si consiglia di installare SQL Server Enterprise per gli ambienti di produzione ed Express solo per i test.    |
 |**Account di Azure Active Directory**     |  Quando si lavora in un ambiente standard e connesso al cloud, l'account di dominio deve essere sincronizzato con [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). Ciò non è necessario se si lavora offline. <br /><br />In caso di dubbi per il proprio account, contattare uno degli amministratori di sistema per verificare lo stato di sincronizzazione. Per altre informazioni, vedere [Distribuzione dello scanner con configurazioni alternative](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
@@ -94,7 +94,7 @@ I dati della griglia vengono aggiornati al termine dell'analisi. Ad esempio:
 :::image type="content" source="media/qs-tutor/scanned-network.png" alt-text="Processi di analisi della rete aggiornati":::
 
 > [!TIP]
-> Se il processo di analisi della rete non viene eseguito, verificare che il [servizio di individuazione della rete sia installato correttamente](tutorial-install-scanner.md#install-the-network-discovery-service) nel computer dello scanner.
+> Se il processo di analisi della rete non viene eseguito, verificare che il [servizio di individuazione della rete sia installato correttamente](tutorial-install-scanner.md#install-the-network-discovery-service-public-preview) nel computer dello scanner.
 
 Continuare con [Aggiungere i repository rischiosi a un processo di analisi dei contenuti](#add-risky-repositories-to-a-content-scan-job).
 

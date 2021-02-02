@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e715ca9f5131095e38e0fb9589494924ae36210f
-ms.sourcegitcommit: b82640b2af14b383a3d4d73692f3da907dc0f191
+ms.openlocfilehash: fd76ce1c8efa79050869a93a311f0ae80d59d0b4
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711870"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473039"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -227,7 +227,7 @@ Quando il client di Azure Information Protection classico e il client Azure Info
 |**Supporto degli ordini per le etichette secondarie sugli allegati** | Abilitato con un' [impostazione client avanzata](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Abilitata per impostazione predefinita, nessuna configurazione richiesta|
 |**Modificare il comportamento di protezione predefinito per i tipi di file**| Usare le [modifiche del registro di sistema](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) per eseguire l'override delle impostazioni predefinite di protezione nativa e generica | Usare [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) per modificare i tipi di file da proteggere|
 |**Ripetizioni automatiche** | Le ripetizioni complete vengono eseguite automaticamente ogni volta che lo scanner rileva una modifica nei criteri o nelle impostazioni di assegnazione di etichette | A partire dalla versione [2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850), gli amministratori possono scegliere di ignorare una ripetizione completa dopo avere apportato modifiche alle impostazioni del processo di analisi del contenuto o dei criteri. |
-|**Individuazione di rete** |Le funzionalità di individuazione di rete non sono disponibili per lo scanner classico | Gli amministratori possono individuare ulteriori repository rischiosi analizzando un intervallo o un indirizzo IP specificato.|
+|**Individuazione della rete** (anteprima pubblica) |Le funzionalità di individuazione di rete non sono disponibili per lo scanner classico | Gli amministratori possono individuare ulteriori repository rischiosi analizzando un intervallo o un indirizzo IP specificato.|
 | | | |
 
 ### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Funzionalità non previste nel client di Azure Information Protection Unified Labeling

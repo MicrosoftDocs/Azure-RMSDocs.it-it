@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 54bb64810e2dc71f6356dfe60c0443dccfb87315
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
-ms.translationtype: HT
+ms.openlocfilehash: e9c6769781c81e03c6ed47f12b62eb3afefb40a7
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240870"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473056"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Esercitazione: Installazione dello scanner di etichettatura unificata di Azure Information Protection (AIP)
 
@@ -180,9 +180,9 @@ Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non 
 
 Lo scanner dispone ora di un token per l'autenticazione in Azure AD. Questo token è valido per il tempo configurato in Azure Active Directory. È necessario ripetere questa procedura alla scadenza del token.
 
-Continuare con l'[installazione del servizio di individuazione della rete facoltativo](#install-the-network-discovery-service), che consente di analizzare i repository di rete per individuare l'eventuale contenuto a rischio e quindi aggiungere tali repository a un processo di analisi dei contenuti.
+Continuare con l'[installazione del servizio di individuazione della rete facoltativo](#install-the-network-discovery-service-public-preview), che consente di analizzare i repository di rete per individuare l'eventuale contenuto a rischio e quindi aggiungere tali repository a un processo di analisi dei contenuti.
 
-## <a name="install-the-network-discovery-service"></a>Installare il servizio di individuazione della rete
+## <a name="install-the-network-discovery-service-public-preview"></a>Installare il servizio di individuazione della rete (anteprima pubblica)
 
 A partire dalla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) del client di etichettatura unificata di AIP, gli amministratori possono usare lo scanner di AIP per analizzare i repository di rete e quindi aggiungere tutti i repository che risultano rischiosi a un processo di analisi dei contenuti.
 
