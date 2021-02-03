@@ -4,7 +4,7 @@ description: Elenca i prerequisiti per l'installazione e la distribuzione di Azu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/27/2020
+ms.date: 02/03/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e68879b51d53862744cdeebbae587c5db7b74daa
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: fb1d7a7ce57eb6ae8659b7e268726143d4ca4028
+ms.sourcegitcommit: 1aba7f2d5c15f2657d1db293118f6670bf99323d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806176"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505272"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Prerequisiti per l'installazione e la distribuzione di Azure Information Protection scanner classico
 
@@ -34,12 +34,11 @@ Prima di installare lo scanner locale Azure Information Protection, verificare c
 - [Requisiti di Windows Server](#windows-server-requirements)
 - [Requisiti dell'account del servizio](#service-account-requirements)
 - [Requisiti di SQL Server](#sql-server-requirements)
-- [Requisiti del client Azure Information Protection](#azure-information-protection-client-requirements)
+- [Requisiti per il client di Azure Information Protection](#azure-information-protection-client-requirements)
 - [Requisiti di configurazione delle etichette](#label-configuration-requirements)
 - [Requisiti di SharePoint](#sharepoint-requirements)
 - [Requisiti di Microsoft Office](#microsoft-office-requirements)
 - [Requisiti del percorso del file](#file-path-requirements)
-- [Requisiti statistici di utilizzo](#usage-statistics-requirements)
 
 Se non è possibile soddisfare tutti i requisiti della tabella perché non sono consentiti dai criteri dell'organizzazione, vedere la sezione [configurazioni alternative](#deploying-the-scanner-with-alternative-configurations) .
 
@@ -121,7 +120,7 @@ Per ogni scanner usare:
 - 4 processori Core
 - 8 GB di RAM (minimo 4 GB)
 
-## <a name="azure-information-protection-client-requirements"></a>Requisiti del client Azure Information Protection
+## <a name="azure-information-protection-client-requirements"></a>Requisiti per il client di Azure Information Protection
 
 È necessario che il client di Azure Information Protection sia installato nel computer Windows Server.
 
@@ -174,15 +173,6 @@ Per analizzare i file, i percorsi dei file devono avere un massimo di 260 caratt
 Windows 10 e Windows Server 2016 supportano lunghezze di percorso maggiori di 260 caratteri con le seguenti impostazioni di [criteri di gruppo](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): Configurazione computer **criteri computer locale**  >    >  **modelli amministrativi**  >  **tutte le impostazioni**  >  **Abilita percorsi lunghi Win32**
 
 Per altre informazioni sul supporto dei percorsi di file lunghi, vedere la sezione [Maximum Path Length Limitation](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) nella documentazione per sviluppatori di Windows 10.
-
-## <a name="usage-statistics-requirements"></a>Requisiti statistici di utilizzo
-
-Disabilitare le statistiche di utilizzo usando uno dei metodi seguenti:
-
-- Impostazione del parametro [AllowTelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) su 0
-
-- Assicurarsi che l'opzione migliora Azure Information Protection inviando le **statistiche di utilizzo a Microsoft** rimanga deselezionata durante il processo di installazione dello scanner.
-
 
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>Distribuzione dello scanner con configurazioni alternative
 
