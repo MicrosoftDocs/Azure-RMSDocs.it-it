@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 02/08/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 675f0a3f9a8ef3c3614bb1c59e0508ee028cbae8
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 87ed3e51e063baa864d0e58f391777aa9b4426ee
+ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958126"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99817823"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -109,7 +109,7 @@ Il rilevamento e la revoca dell'accesso ai documenti mediante il client Unified 
 
 - [Documenti protetti da password](#password-protected-documents)
 - [Più allegati in un messaggio di posta elettronica protetto](#multiple-attachments-in-a-protected-email)
-- [Documenti a cui si accede tramite SharePoint](#documents-accessed-via-sharepoint)
+- [Documenti a cui si accede tramite SharePoint o OneDrive](#documents-accessed-via-sharepoint-or-onedrive)
 
 Per ulteriori informazioni, vedere la [Guida dell'amministratore](rms-client/track-and-revoke-admin.md) e le procedure per la [Guida dell'utente](rms-client/revoke-access-user.md) .
 
@@ -124,11 +124,11 @@ Il valore di ContentID verrà restituito solo con il primo file aperto. Se si ce
 
 Inoltre, la revoca dell'accesso per uno degli allegati revoca anche l'accesso per gli altri allegati nello stesso indirizzo di posta elettronica protetto.
 
-#### <a name="documents-accessed-via-sharepoint"></a>Documenti a cui si accede tramite SharePoint
+#### <a name="documents-accessed-via-sharepoint-or-onedrive"></a>Documenti a cui si accede tramite SharePoint o OneDrive
     
-- I documenti protetti caricati in SharePoint perdono il valore di **ContentID** e non è possibile rilevare o revocare l'accesso.
+- I documenti protetti caricati in SharePoint o OneDrive perdono il valore **ContentID** e non è possibile rilevare o revocare l'accesso.
 
-- Se un utente Scarica il file da SharePoint e lo accede dal computer locale, al documento viene applicato un nuovo **ContentID** quando viene aperto localmente. 
+- Se un utente Scarica il file da SharePoint o OneDrive e lo accede dal computer locale, al documento viene applicato un nuovo **ContentID** quando viene aperto localmente. 
     
     Se si usa il valore **ContentID** originale per tenere traccia dei dati, non sarà incluso alcun accesso eseguito per il file scaricato dall'utente. Inoltre, la revoca dell'accesso in base al valore **ContentID** originale non revoca l'accesso per nessuno dei file scaricati.
 

@@ -4,7 +4,7 @@ description: Scopri le novità per il client Unified Labeling Azure Information 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/02/2021
+ms.date: 02/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 065007e14f96c0d4cfddf4ea93a680c5e6bdf138
-ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.openlocfilehash: 3bfd20785f1af97352a6e8094f224a3647474ba6
+ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99473022"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99817806"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -65,16 +65,31 @@ La versione più recente di Azure Information Protection è attualmente in fase 
 
 > [!NOTE]
 > Le correzioni secondarie non sono elencate, quindi se si verifica un problema con il client di etichettatura unificata, è consigliabile verificare se è stato risolto con la versione GA più recente. Se il problema persiste, controllare la versione di anteprima corrente (se disponibile).
->  
+>
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
 Il client di etichettatura unificata sostituisce il client classico Azure Information Protection. Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare le soluzioni per l'assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## <a name="version-29116"></a>Versione 2.9.116 
+
+Scanner unificato per l'assegnazione di etichette e versione client 2.9.116 
+
+**Rilasciato** 02/08/2021
+
+**Problemi risolti** Gli utenti possono ora visualizzare i file protetti come previsto negli scenari seguenti:
+
+- Quando i file protetti sono condivisi con utenti che non dispongono di un criterio AIP configurato, ad esempio utenti esterni. Questo problema si è verificato solo con l' [app visualizzatore AIP](clientv2-view-use-files.md).
+
+- Quando il contenuto con un'etichetta con ambito viene condiviso con utenti o gruppi non inclusi nell'ambito dell'etichetta. Questo problema si è verificato sia con l' [app AIP Viewer](clientv2-view-use-files.md) che durante la visualizzazione o la classificazione del contenuto condiviso tramite [Esplora file](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
+
+Per ulteriori informazioni, vedere la [Guida dell'utente di AIP Unified Labeling client](clientv2-user-guide.md).
 ## <a name="version-291110"></a>Versione 2.9.111.0
 
 Scanner unificato per l'assegnazione di etichette e versione client 2.9.111.0
 
-**Versione** 1/13/2021
+**Rilasciato** 01/13/2021
+
+**Supportato tramite** 08/08/2021
 
 Questa versione include le nuove funzionalità, le correzioni e i miglioramenti seguenti per lo scanner e il client di Unified Labeling:
 
@@ -94,13 +109,11 @@ Questa versione include le nuove funzionalità, le correzioni e i miglioramenti 
     - [Correzioni e miglioramenti per lo scanner Unified Labeling](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Correzioni e miglioramenti per il client Unified Labeling](#fixes-and-improvements-for-the-unified-labeling-client)
 
-- **Problema noto**: è stato rilevato un problema nella versione GA più recente (2.9.111), in cui alcuni utenti non sono in grado di visualizzare i file protetti negli scenari seguenti:
-    
+- **Problema noto**: è stato rilevato un problema nella versione GA più recente (2.9.111), in cui alcuni utenti non erano in grado di visualizzare i file protetti negli scenari seguenti:
+
     - Quando i file protetti sono condivisi con utenti che non dispongono di un criterio AIP configurato, ad esempio utenti esterni. Questo problema si verifica solo con l' [app visualizzatore AIP](clientv2-view-use-files.md).
 
     - Quando il contenuto con un'etichetta con ambito viene condiviso con utenti o gruppi non inclusi nell'ambito dell'etichetta. Questo problema si verifica sia con l' [app visualizzatore AIP](clientv2-view-use-files.md) che durante la visualizzazione o la classificazione del contenuto condiviso tramite [Esplora file](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files).
-    
-    Stiamo lavorando attivamente a questo problema e a un piano di recapito aggiornato per la correzione.
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>Supporto di PowerShell per server scanner disconnessi
 
