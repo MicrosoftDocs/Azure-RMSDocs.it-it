@@ -4,7 +4,7 @@ description: Alcune domande frequenti relative al servizio di protezione dati, A
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/02/2020
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 31202876b035f7b5266abd006cfcd943e8eb6690
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: 31da35a9dc1f726cba86897e45f3ee6537efa0fa
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659018"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105284"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dati in Azure Information Protection
 
@@ -162,7 +162,7 @@ Usare la [funzionalità relativa agli utenti con privilegi avanzati](configure-s
 Se il contenuto è archiviato in SharePoint o OneDrive, gli amministratori possono eseguire il cmdlet [Unlock-SensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) per rimuovere l'etichetta di riservatezza e la crittografia. Per altre informazioni, vedere la [documentazione di Microsoft 365](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management può impedire l'acquisizione di schermate?
-Non concedendo **Copia come** [diritto di utilizzo](configure-usage-rights.md), Rights Management può impedire l'acquisizione di schermate dagli strumenti più usati per l'acquisizione di schermate nelle piattaforme Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) e Android. Tuttavia, i dispositivi iOS e Mac non consentono alle app di impedire l'acquisizione di schermate. Inoltre, i browser su qualsiasi dispositivo non possono impedire l'acquisizione di schermate. L'uso del browser include Outlook sul Web e Office per il Web.
+Senza concedere il diritto di  [utilizzo](configure-usage-rights.md)della copia, Rights Management possibile impedire l'acquisizione di schermate da molti degli strumenti di acquisizione di schermate di uso comune nelle piattaforme Windows (Windows 7, Windows 8.1, Windows 10 e Windows 10 Mobile). I dispositivi iOS, Mac e Android, tuttavia, non consentono ad alcuna app di impedire l'acquisizione di schermate. Inoltre, i browser su qualsiasi dispositivo non possono impedire l'acquisizione di schermate. L'uso del browser include Outlook sul Web e Office per il Web.
 
 Impedire l'acquisizione di schermate consente di evitare la diffusione accidentale o non appropriata di informazioni riservate o sensibili. Tuttavia, esistono molti modi in cui un utente può condividere i dati visualizzati in una schermata e l'acquisizione di una schermata è solo un metodo. Ad esempio, un utente che desidera condividere informazioni visualizzate può scattare una foto usando la fotocamera del telefono, digitare nuovamente i dati o semplicemente comunicarli verbalmente a qualcuno.
 

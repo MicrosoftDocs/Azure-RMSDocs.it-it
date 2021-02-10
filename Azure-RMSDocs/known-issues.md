@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 87ed3e51e063baa864d0e58f391777aa9b4426ee
-ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
+ms.openlocfilehash: 1b90b0df202719f6cadab0671db9f118be58ad72
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99817823"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105250"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -92,16 +92,27 @@ I file di oltre 2 GB sono supportati per la protezione, ma non per la decrittogr
 
 ## <a name="known-issues-for-the-aip-viewer"></a>Problemi noti per il Visualizzatore AIP
 
+- [Viste orizzontali](#landscape-views-in-the-aip-viewer)
+- [Utenti esterni](#external-users-and-the-aip-viewer)
+
+Per altre informazioni, vedere [ **client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md).
+### <a name="landscape-views-in-the-aip-viewer"></a>Viste orizzontali nel Visualizzatore AIP
+
 Il Visualizzatore AIP Visualizza le immagini in modalità verticale e alcune immagini di visualizzazione orizzontale possono sembrare estesi.
 
 Ad esempio, un'immagine originale viene visualizzata sotto a sinistra, con una versione con estensione verticale nel Visualizzatore AIP a destra. 
-    
-:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Immagine estesa nel visualizzatore client":::
-    
-Per altre informazioni, vedere:
 
-- [**Client classico**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/client-view-use-files.md)
-- [**Client con etichetta unificata**: visualizzare i file protetti con il Visualizzatore Azure Information Protection](rms-client/clientv2-view-use-files.md)
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Immagine estesa nel visualizzatore client":::
+
+### <a name="external-users-and-the-aip-viewer"></a>Utenti esterni e Visualizzatore AIP 
+
+Se un utente esterno dispone già di un account Guest in Azure AD, il Visualizzatore AIP potrebbe visualizzare un errore quando l'utente apre un documento protetto, indicando che non è possibile eseguire l'accesso con un account personale.
+
+Se viene visualizzato un errore di questo tipo, l'utente deve installare [Adobe Acrobat DC con l'estensione MIP](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) per poter aprire il documento protetto.
+
+Quando si apre il documento protetto dopo l'installazione di Adobe Acrobat DC con l'estensione MIP, l'utente può comunque visualizzare un errore che indica che l'account utente selezionato non esiste nel tenant e richiede di selezionare un account. 
+
+Si tratta di un errore previsto. Nella finestra del prompt dei comandi selezionare **indietro** per continuare ad aprire il documento protetto.
 
 ## <a name="known-issues-for-track-and-revoke-features-public-preview"></a>Problemi noti per le funzionalità di rilevamento e revoca (anteprima pubblica)
 
