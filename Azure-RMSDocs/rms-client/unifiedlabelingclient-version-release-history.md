@@ -4,7 +4,7 @@ description: Scopri le novità per il client Unified Labeling Azure Information 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/08/2021
+ms.date: 02/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3bfd20785f1af97352a6e8094f224a3647474ba6
-ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
+ms.openlocfilehash: bbb3d8789ddd94ee1cb9e7eb948475b559d632fc
+ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99817806"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521311"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -330,6 +330,8 @@ Per altre informazioni, vedere [personalizzare i messaggi di richiesta di giusti
 ### <a name="audit-log-updates"></a>Aggiornamenti dei log di controllo
 
 I log di controllo per gli eventi di accesso dal client Unified Labeling vengono ora inviati solo quando gli utenti aprono file con etichetta o protetti, offrendo un'indicazione più chiara dell'accesso degli utenti.
+
+I tipi di informazioni non vengono più inviati dai [log di controllo per gli eventi di accesso](../audit-logs.md#access-audit-logs)e vengono ora inviati solo con [i log di controllo per gli eventi di individuazione](../audit-logs.md#discover-audit-logs).
 
 Per altre informazioni, vedere [accedere ai log di controllo](../audit-logs.md#access-audit-logs).
 

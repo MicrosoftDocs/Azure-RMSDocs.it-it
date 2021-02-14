@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dec2d96f05f419c0a0f13f50210ed59d0bf67213
-ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
+ms.openlocfilehash: dc8d5d5eb1bb69287439e541f1f03327394b4861
+ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100105301"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521328"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di etichettatura unificata di Azure Information Protection
 
@@ -1157,6 +1157,10 @@ Per ulteriori personalizzazioni, vedere:
 
 - [Estendi le regole di migrazione delle etichette ai messaggi di posta elettronica](#extend-your-label-migration-rules-to-emails)
 - [Estendere le regole di migrazione delle etichette alle proprietà di SharePoint](#extend-your-label-migration-rules-to-sharepoint-properties)
+
+> [!NOTE]
+> Se si esegue la migrazione dalle etichette tra i tenant, ad esempio dopo una fusione aziendale, è consigliabile leggere il post di [Blog sui merger e spin-off](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) per altre informazioni.
+>
 
 #### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Esempio 1: Mapping uno-a-uno con lo stesso nome di etichetta
 

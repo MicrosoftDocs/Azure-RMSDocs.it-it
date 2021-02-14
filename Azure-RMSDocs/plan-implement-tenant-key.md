@@ -4,7 +4,7 @@ description: Anziché Microsoft gestire la chiave radice per Azure Information P
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 02/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,25 +13,26 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35c898ded852970e380c8061ba8f97d040860017
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: cf9c6dd8cfee0c800289fddf6cbb46c909d23a6d
+ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386390"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521294"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 La chiave del tenant di Azure Information Protection è una chiave radice per l'organizzazione. È possibile derivare altre chiavi da questa chiave radice, inclusi chiavi utente, chiavi computer o chiavi di crittografia del documento. Ogni volta che Azure Information Protection usa queste chiavi per l'organizzazione, vengono concatenate in modo crittografico alla chiave del tenant Azure Information Protection radice.
 
 Oltre alla chiave radice del tenant, è possibile che l'organizzazione richieda una sicurezza locale per documenti specifici. La protezione della chiave locale è in genere necessaria solo per una piccola quantità di contenuto e pertanto viene configurata insieme a una chiave radice del tenant.
+
 
 ## <a name="azure-information-protection-key-types"></a>Tipi di chiavi di Azure Information Protection
 
@@ -109,3 +110,14 @@ Il contenuto può essere crittografato con la protezione HYOK solo se si dispone
 
 Per ulteriori informazioni, vedere la pagina relativa ai [Dettagli HYOK](configure-adrms-restrictions.md).
 
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per ulteriori informazioni sui tipi di chiavi specifici, vedere gli articoli seguenti:
+
+- [Introduzione alle chiavi radice del tenant](get-started-tenant-root-keys.md)
+- [Dettagli di Bring your own key (BYOK) per Azure Information Protection](byok-price-restrictions.md)
+- [Crittografia a chiave doppia per Microsoft 365](/microsoft-365/compliance/double-key-encryption)
+
+
+Se si esegue la migrazione tra tenant, ad esempio dopo una fusione aziendale, è consigliabile leggere il post di [Blog sui merger e spin-off](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) per altre informazioni.
