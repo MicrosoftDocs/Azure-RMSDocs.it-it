@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 3e3d32dd5e66ee6948567bc43ebd5ecfa16154b6
-ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
+ms.openlocfilehash: 52e43c9c0960ca5dadcd581db53bad2be2323b25
+ms.sourcegitcommit: 0f694bf6c7ea9c7709954bfb5dbd1c5f009b85a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98215511"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100360348"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) Software Development Kit (SDK) e criteri di supporto
 
@@ -29,6 +29,15 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 > Le correzioni minime non sono elencate. Se si verifica un problema con l'SDK, è consigliabile verificare se è stato risolto con la versione GA più recente. Se il problema persiste, verificare la versione di anteprima corrente.
 >  
 > Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## <a name="version-1894"></a>Versione 1.8.94
+
+**Data di rilascio:** 8 febbraio 2021
+
+- Correzione del bug nel pacchetto NuGet in cui la configurazione di debug per i progetti C++ distribuiva i binari della versione. 
+- Correzione di un bug per cui il motore dei criteri era necessario per rimuovere la protezione. 
+  - Se non è possibile caricare il motore dei criteri e i metadati delle etichette sono presenti, verranno eliminati se la protezione viene rimossa. 
+- Correzione di un bug `labelInfo.xml` in cui è stato generato Empty se il file è stato modificato in un'altra etichetta protetta. 
 
 ## <a name="version-1886"></a>Versione 1.8.86
 
