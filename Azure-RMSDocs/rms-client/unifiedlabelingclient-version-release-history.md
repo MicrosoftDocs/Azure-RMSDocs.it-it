@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbb3d8789ddd94ee1cb9e7eb948475b559d632fc
-ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
+ms.openlocfilehash: afe860e878df27b7081c4f12a9b4612cab845db9
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100521311"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524796"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -255,7 +255,7 @@ Ignorare la ripetizione dell'analisi immediata completa e tornare in seguito per
 > [!IMPORTANT]
 > Gli amministratori che apportano modifiche ai criteri e ai processi di analisi dei contenuti devono ora comprendere gli effetti delle modifiche apportate al contenuto e determinare se è necessaria una ripetizione dell'analisi completa.
 >
-> Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on**, assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
+> Se, ad esempio, sono state modificate le impostazioni dei **criteri di riservatezza** da **Imponi = off** per applicare **= on**, assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
 >
 
 ### <a name="configure-sharepoint-timeouts"></a>Configurare i timeout di SharePoint
@@ -335,6 +335,7 @@ I tipi di informazioni non vengono più inviati dai [log di controllo per gli ev
 
 Per altre informazioni, vedere [accedere ai log di controllo](../audit-logs.md#access-audit-logs).
 
+Per ulteriori informazioni, vedere [Azure Information Protection riferimento al log di controllo](../audit-logs.md).
 ### <a name="dke-template-based-labeling-updates"></a>Aggiornamenti delle etichette basate sul modello DKE
 
 Azure Information Protection supporta ora l'assegnazione di etichette basate su modelli DKE (Double Key Encryption) nello scanner, nonché l'uso di Esplora file e PowerShell.

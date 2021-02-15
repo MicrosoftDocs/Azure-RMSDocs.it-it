@@ -4,7 +4,7 @@ description: Istruzioni per l'installazione e la configurazione del Azure Inform
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/29/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ba1c39f50e6861b134d09b3ba0ec2de870437962
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 0c3aa35877ed657f81c955af0d674bde3d22a079
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809605"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524830"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -189,7 +189,7 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
     |Impostazione  |Descrizione  |
     |---------|---------|
     |**Impostazioni del processo di analisi del contenuto**     |    - **Pianificazione**: Mantieni il valore predefinito **manuale** <br />- **Tipi di informazioni da** individuare: modificare **solo i criteri** <br />- **Configurare i repository**: non configurare in questo momento perché è necessario salvare prima il processo di analisi del contenuto.         |
-    |**Applicazione dei criteri**     | - **Imponi**: seleziona **disattivato** <br />- **Etichettare i file in base al contenuto**: Mantieni il valore predefinito **in** <br />- **Etichetta predefinita**: Mantieni il valore predefinito dei **criteri predefiniti** <br />- Modifica **etichette file**: Mantieni il valore predefinito **off**        |
+    |**Criteri di riservatezza**     | - **Imponi**: seleziona **disattivato** <br />- **Etichettare i file in base al contenuto**: Mantieni il valore predefinito **in** <br />- **Etichetta predefinita**: Mantieni il valore predefinito dei **criteri predefiniti** <br />- Modifica **etichette file**: Mantieni il valore predefinito **off**        |
     |**Configurare le impostazioni del file**     | - **Mantieni "Data modifica", "Ultima modifica" e "modificato da"**: Mantieni il valore predefinito **in** <br />- **Tipi di file da analizzare**: Mantieni i tipi di file predefiniti per l' **esclusione** <br />- **Proprietario predefinito**: Mantieni il valore predefinito dell' **account scanner**        |
     | | |
 
@@ -338,7 +338,7 @@ Per modificare queste impostazioni, modificare il processo di analisi del conten
 2. Nel riquadro del processo di analisi del contenuto modificare gli elementi seguenti e quindi selezionare **Salva**:
     
    - Nella sezione del **processo di analisi del contenuto** modificare la **pianificazione** in **Always** .
-   - Dalla sezione relativa all' **applicazione dei criteri** : modificare **applica** a **attivato**
+   - Nella sezione **criteri di riservatezza** : modificare **applica** a **on**
     
     > [!TIP]
     > Potrebbe essere necessario modificare le altre impostazioni in questo riquadro, ad esempio se gli attributi del file vengono modificati e se lo scanner è in grado di rietichettare i file. Usare la Guida con informazioni popup per altre informazioni sulle singole impostazioni di configurazione.

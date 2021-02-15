@@ -4,7 +4,7 @@ description: Istruzioni per l'esecuzione del Azure Information Protection scanne
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/25/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9815969701e1dee352d2b2ad5d2874de6c8df204
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 13484ad0301ec8d7404c4127ff78720df81d8eb5
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809569"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524779"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Esecuzione dello scanner di Azure Information Protection
 
@@ -132,7 +132,7 @@ Se sono state modificate anche le impostazioni di protezione per le etichette, a
 > [!IMPORTANT]
 > Se è stato eseguito l'aggiornamento alla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) o successiva, AIP ignora la ripetizione dell'analisi completa per le impostazioni aggiornate per garantire prestazioni coerenti. Se è stato eseguito l'aggiornamento, assicurarsi di [eseguire una ripetizione dell'analisi completa manualmente](#rescanning-files) , se necessario. 
 >
-> Se, ad esempio, sono state modificate le impostazioni di **imposizione dei criteri** da **enforce = off** a **Imponi = on**, assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
+> Se, ad esempio, sono state modificate le impostazioni dei **criteri di riservatezza** da **Imponi = off** per applicare **= on**, assicurarsi di eseguire una ripetizione dell'analisi completa per applicare le etichette nel contenuto.
 > 
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -4,19 +4,19 @@ description: Usare lo scanner di Azure Information Protection per trovare le inf
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ROBOTS: NOINDEX
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 19070e1e661718c70b21cd16d76130afed91b17f
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 61a31c458ced8f28f62de35204db180dcc785ee2
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809392"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524813"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -92,7 +92,7 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
 
     Facoltativamente, specificare una descrizione per scopi amministrativi, per facilitare l'identificazione del nome di profilo dello scanner.
 
-1. Individuare la sezione **Applicazione dei criteri** in cui, per questo avvio rapido, selezionare solo un'impostazione: In **Applica** selezionare **Disattivato**. Selezionare quindi **Salva**, ma non chiudere il riquadro.
+1. Individuare la sezione **criteri di riservatezza** , dove per questa Guida introduttiva selezionare solo un'impostazione: per **Imponi**, selezionare **disattivato**. Selezionare quindi **Salva**, ma non chiudere il riquadro.
 
     Le impostazioni configurano lo scanner per eseguire un'individuazione una tantum di tutti i file nei repository di dati specificati. Questa analisi individua tutti i tipi noti di informazioni riservate e non richiede la configurazione preliminare delle etichette o delle impostazioni dei criteri di Azure Information Protection.
 

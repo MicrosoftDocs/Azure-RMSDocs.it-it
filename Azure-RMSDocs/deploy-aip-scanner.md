@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a8c0d8ae4989a31029979c819ac6c59c390a8f3c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f674cd162131b0a45dbefbe70e617296695d6126
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382548"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524745"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Informazioni sullo scanner di etichettatura unificata di Azure Information Protection
 
@@ -84,7 +84,7 @@ Lo scanner ignora automaticamente i file esclusi dalla classificazione e dalla p
 
 Lo scanner considera anche eventuali elenchi di file definiti in modo esplicito per l'analisi o l'esclusione dall'analisi. Per impostazione predefinita, gli elenchi di file si applicano a tutti i repository di dati e possono anche essere definiti solo per repository specifici.
 
-Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. ad esempio:
+Per definire gli elenchi di file per l'analisi o l'esclusione, usare l'impostazione **tipi di file da analizzare** nel processo di analisi del contenuto. Ad esempio:
 
 ![Configurare i tipi di file da analizzare per lo scanner di Azure Information Protection](./media/scanner-file-types.png)
 
@@ -146,6 +146,8 @@ Per ulteriori informazioni sulla distribuzione dello scanner, vedere gli articol
 - [Esecuzione di analisi mediante lo scanner AIP](deploy-aip-scanner-manage.md)
 
 **Ulteriori informazioni**:
+
+- [Guarda il video sulla distribuzione.](https://techcommunity.microsoft.com/t5/microsoft-security-and/mip-scanner-deployment-watch-our-video/ba-p/2023277) Guarda una demo dettagliata sull'installazione e sulla configurazione dello scanner locale per l'assegnazione di etichette unificata.
 
 - Consultare il Blog sulle procedure consigliate per lo scanner Unified Labeling: procedure consigliate [per la distribuzione e l'uso dello scanner AIP UL](https://aka.ms/AIPScannerBestPractices)
 
