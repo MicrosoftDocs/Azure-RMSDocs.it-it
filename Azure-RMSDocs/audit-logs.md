@@ -4,7 +4,7 @@ description: Informazioni sui log di controllo generati da Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 02/18/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,21 +12,21 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e48c3a32527ea214d952725a4935c566a60d208f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3019f0d6886f5de79f51f14262094e2be1f7ee40
+ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383942"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101090546"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection riferimento al log di controllo (anteprima pubblica)
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 La funzionalità del log di controllo Azure Information Protection è attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
 
@@ -44,9 +44,6 @@ Microsoft Azure Information Protection genera log di controllo negli eventi di a
 * [Rimuovere la protezione](#remove-protection-audit-logs)
 * [Aggiorna etichetta](#upgrade-label-audit-logs)
 
-> [!NOTE]
-> Il [Visualizzatore AIP](rms-client/clientv2-view-use-files.md) non invia i log di controllo. 
->
 ## <a name="access-audit-logs"></a>Accedere ai log di controllo
 
 I log di controllo di **accesso** vengono generati per le attività seguenti:
@@ -88,6 +85,7 @@ Vengono generati i log di controllo della **protezione delle modifiche** per le 
 |---------|---------|---------|---------|
 |Azure Information Protection: <br />-Scanner classico <br />-Scanner di etichette unificato | Windows        | Office        |Generato ogni volta che un file viene sottoposta a scansione dallo scanner AIP.<br>Il log include i dettagli seguenti:<br>-Tipi di informazioni corrispondenti<br>-Etichette |
 |SDK di Microsoft Information Protection (MIP) | Qualsiasi | Applicazioni di terze parti | Generato ogni volta che un file viene sottoposta a scansione da un'applicazione di terze parti che la supporta. <br />Il log include i dettagli seguenti:<br />-Tipi di informazioni corrispondenti<br />-Etichette|
+|Visualizzatore di etichette unificato Azure Information Protection |Windows |Visualizzatore Unified Labeling per AIP  | Generato ogni volta che viene aperto un file con etichetta o protetto.|
 | | | | |
 
 ## <a name="downgrade-label-audit-logs"></a>Downgrade log di controllo etichetta

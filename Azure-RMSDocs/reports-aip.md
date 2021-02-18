@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: batamig
 ms.author: bagol
-ms.date: 11/09/2020
+ms.date: 02/18/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 99c1fa6379f346477431caa884b687d39d500b7a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 19c6b2d4e2e7d06c7fa5552f592f69359dc039de
+ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98808806"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101090562"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
@@ -41,7 +41,7 @@ Usare Azure Information Protection Analytics per la creazione di report centrali
 
 - Individuare i casi in cui l'accesso ai documenti protetti viene eseguito da utenti interni o esterni da computer Windows e se l'accesso è stato concesso o negato.
 
-I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da Microsoft Cloud App Security, da computer Windows 10 che usano Microsoft Defender Advanced Threat Protection e dai [log di utilizzo della protezione](log-analyze-usage.md). Si noti che il [Visualizzatore AIP](rms-client/clientv2-view-use-files.md) non invia log di controllo.
+I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da Microsoft Cloud App Security, da computer Windows 10 che usano Microsoft Defender Advanced Threat Protection e dai [log di utilizzo della protezione](log-analyze-usage.md). 
 
 Azure Information Protection Analytics per la creazione di report centrali è attualmente in fase di anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
 
