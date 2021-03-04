@@ -4,19 +4,19 @@ description: Eseguire ricerche ed esaminare i problemi noti e le limitazioni per
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/09/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b90b0df202719f6cadab0671db9f118be58ad72
-ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
+ms.openlocfilehash: c6fc0880904658b76ff774de33030ce0ca8e3048
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100105250"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844354"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -71,7 +71,7 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 
 |Funzionalità  |Problemi noti  |
 |---------|---------|
-|**Più versioni di Office**    | I client di Azure Information Protection, incluse le etichettature classica e unificata, non supportano più versioni di Office nello stesso computer o lo scambio degli account utente in Office.       |
+|**Più versioni di Office <br> <br> più account Office**    | I client di Azure Information Protection, incluse le etichette classiche e unificate, non supportano:  <br><br>-Più versioni di Office nello stesso computer <br>-Più account di Office o cambio di account utente in Office <br>-Cassette postali condivise     |
 |**Più visualizzazioni** |Se si usano più visualizzazioni e si apre un'applicazione di Office: <br><br>-È possibile che si verifichino problemi di prestazioni nelle app di Office.<br>-La barra di Azure Information Protection può sembrare mobile al centro della schermata di Office, in una o in entrambe le visualizzazioni <br><br>Per garantire prestazioni coerenti e che la barra rimanga nella posizione corretta, aprire la finestra di dialogo **Opzioni** per l'applicazione di Office e in **generale** Selezionare **Ottimizza per compatibilità** anziché **Ottimizza per l'aspetto migliore**.    |
 |**Supporto di IRM in Office 2016**| L'impostazione del registro di sistema [DRMEncryptProperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) , che controlla la crittografia dei metadati in Office 2016, non è supportata per le etichette Azure Information Protection.|
 |**Accesso al modello a oggetti di Outlook** | -L'impostazione del registro di sistema [PromptOOMAddressBookAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) , che controlla i prompt che vengono visualizzati quando si accede alle rubriche tramite il modello a oggetti di Outlook, non è supportata con le etichette Azure Information Protection. <br><br>-L'impostazione del registro di sistema [PromptOOMAddressInformationAccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) , che controlla le richieste visualizzate quando un programma legge le informazioni sull'indirizzo, non è supportata per le etichette Azure Information Protection.|
@@ -80,7 +80,68 @@ Per altre informazioni, vedere [Guida dell'amministratore: uso di PowerShell con
 |**Unione posta**    |  La funzionalità di [stampa unione](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) di Office non è supportata con alcuna funzionalità di Azure Information Protection.       |
 | **Messaggi di posta elettronica S/MIME** | L'apertura di messaggi di posta elettronica S/MIME nel riquadro di lettura di Outlook può causare problemi di prestazioni. <br><br>Per evitare problemi di prestazioni con i messaggi di posta elettronica S/MIME, abilitare la proprietà avanzata [**OutlookSkipSmimeOnReadingPaneEnabled**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) . <br><br>**Nota**: l'abilitazione di questa proprietà impedisce la visualizzazione della barra di AIP o della classificazione dei messaggi di posta elettronica nel riquadro di lettura di Outlook. |
 |**Opzione Invia a Esplora file** |Se si sceglie di fare clic con il pulsante destro del mouse su un file in Esplora file e selezionare **Invia a > destinatario della posta**, il messaggio di Outlook visualizzato con il file allegato potrebbe non visualizzare la barra degli strumenti di AIP. <br><br>In tal caso, è necessario usare le opzioni della barra degli strumenti di AIP, avviare la posta elettronica da Outlook, quindi individuare e alleghiare il file che si vuole inviare.|
+|**Creazione condivisa** |Il supporto per la creazione di co-authoring viene fornito da un' [installazione dedicata](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) del client di Azure Information Protection ed è attualmente disponibile in anteprima pubblica. <br><br>Per ulteriori informazioni, vedere [problemi noti per la creazione condivisa (anteprima pubblica)](#known-issues-for-co-authoring-public-preview). |
 | | |
+
+### <a name="known-issues-for-co-authoring-public-preview"></a>Problemi noti per la creazione condivisa (anteprima pubblica)
+
+- [Usare solo in ambienti di testing](#use-in-testing-environments-only)
+- [Versioni supportate per la creazione di condivisioni e le etichette di riservatezza](#supported-versions-for-co-authoring-and-sensitivity-labels)
+- [Aggiornamenti dei criteri](#policy-updates)
+- [Log di controllo e analisi AIP](#aip-analytics-and-audit-logs)
+- [Etichette con autorizzazioni definite dall'utente](#labels-with-user-defined-permissions)
+- [Funzionalità non supportate per la creazione condivisa](#unsupported-features-for-co-authoring)
+
+> [!IMPORTANT]
+> Le etichette di creazione e modifica non possono essere distribuite solo ad alcuni utenti, perché le nuove etichette non saranno visibili agli utenti con una versione precedente del client di Office.
+> 
+Per ulteriori informazioni sul supporto della creazione condivisa, incluse le limitazioni e i problemi noti per l'anteprima pubblica, vedere la [documentazione Microsoft 365](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+
+#### <a name="use-in-testing-environments-only"></a>Usare solo in ambienti di testing
+
+Per evitare conflitti tra i file con etichetta, non è possibile disattivare la creazione condivisa senza richiedere assistenza al supporto tecnico durante il periodo di anteprima pubblica.
+
+Per questo motivo, è consigliabile attivare la co-authoring solo per il sistema in ambienti di testing.
+
+#### <a name="supported-versions-for-co-authoring-and-sensitivity-labels"></a>Versioni supportate per la creazione di condivisioni e le etichette di riservatezza
+
+Tutte le app, i servizi e gli strumenti per le operazioni nel tenant devono supportare la creazione di coauto.
+
+Prima di iniziare, verificare che il sistema sia conforme ai requisiti di versione elencati nel [Microsoft 365 prerequisiti per la creazione di co-creazione](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
+
+> [!NOTE]
+> Mentre le etichette di riservatezza possono essere applicate ai file nei formati Office 97-2003, ad esempio  **. doc**, **. ppt** e **. xls**, la creazione condivisa per questi tipi di file non è supportata. Una volta che un'etichetta viene applicata a un file appena creato o un file nel formato di file avanzato, ad esempio **docx**, **pptx** e **xlsx**, il salvataggio del file in un formato Office 97-2003 comporterà la rimozione dell'etichetta.
+> 
+
+#### <a name="policy-updates"></a>Aggiornamenti dei criteri
+
+Se il criterio di etichettatura è stato aggiornato mentre un'applicazione di Office è stata aperta con Azure Information Protection, vengono visualizzate tutte le nuove etichette, ma l'applicazione genera un errore. 
+
+In tal caso, chiudere e riaprire l'applicazione di Office per poter applicare le etichette.
+
+#### <a name="aip-analytics-and-audit-logs"></a>Log di controllo e analisi AIP
+
+Quando è abilitata la creazione condivisa, il client Azure Information Protection non invia alcun [log di controllo](audit-logs.md).
+
+#### <a name="labels-with-user-defined-permissions"></a>Etichette con autorizzazioni definite dall'utente
+
+In Microsoft Word, Excel e PowerPoint le etichette con autorizzazioni definite dall'utente sono ancora disponibili e possono essere applicate ai documenti, ma non sono supportate per le funzionalità di co-authoring. 
+
+Ciò significa che l'applicazione di un'etichetta con le autorizzazioni definite dall'utente non consentirà di lavorare sul documento con altri utenti nello stesso momento.
+
+#### <a name="unsupported-features-for-co-authoring"></a>Funzionalità non supportate per la creazione condivisa
+
+Le funzionalità seguenti non sono supportate quando si utilizzano le etichette di co-authoring e di riservatezza:
+
+- **Modelli DKE e proprietà definite dall'utente DKE**. Per ulteriori informazioni, vedere [crittografia a chiave doppia (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
+
+- **Rimozione del contrassegno di contenuto esterno nelle app**. Per altre informazioni, vedere [Lato client di Azure Information Protection](rms-client/use-client.md).
+
+- Le impostazioni avanzate seguenti:
+
+    - **customPropertiesByLabel**. Per ulteriori informazioni, vedere [applicazione di una proprietà personalizzata quando viene applicata un'etichetta](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
+
+    - **labelByCustomProperties** e **EnableLabelBySharePointProperties**. Per altre informazioni, vedere [eseguire la migrazione di etichette da isole sicure e altre soluzioni](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)per l'assegnazione di etichette.
 
 ## <a name="known-issues-in-policies"></a>Problemi noti dei criteri
 

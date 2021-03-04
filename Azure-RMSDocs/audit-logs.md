@@ -4,7 +4,7 @@ description: Informazioni sui log di controllo generati da Azure Information Pro
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/18/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3019f0d6886f5de79f51f14262094e2be1f7ee40
-ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
+ms.openlocfilehash: fc51c360e4cded259b87eee7bedcaf0829e0b717
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101090546"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844269"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection riferimento al log di controllo (anteprima pubblica)
 
@@ -28,7 +28,7 @@ ms.locfileid: "101090546"
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-La funzionalità del log di controllo Azure Information Protection è attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
+La funzionalità del log di controllo Azure Information Protection è attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
 
 Microsoft Azure Information Protection genera log di controllo negli eventi di attività seguenti:
 
@@ -166,4 +166,10 @@ Vengono generati i log di controllo dell' **etichetta di aggiornamento** per le 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sulla registrazione di controllo, vedere [Central Reporting per Azure Information Protection (Public Preview)](reports-aip.md).
+I log di controllo AIP vengono inviati anche a Microsoft 365 Activity Explorer, dove possono essere visualizzati con nomi diversi.
+
+Per altre informazioni, vedere:
+
+- [Anteprima pubblica: log di controllo AIP in Esplora attività](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
+- [Introduzione ad Esplora attività](/microsoft-365/compliance/data-classification-activity-explorer)
+- [Reporting centrale per Azure Information Protection (anteprima pubblica)](reports-aip.md)

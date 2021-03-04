@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 02/02/2021
 ms.author: tommos
-ms.openlocfilehash: 27d17b14ed34ae72fafdf1084d277d3389a1790c
-ms.sourcegitcommit: 314f8109920a706bd1000dd4e63ba9cdd12cd671
+ms.openlocfilehash: 47939a37616173c456d1588e95e36f8a978ed32d
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99566657"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844184"
 ---
 # <a name="microsoft-information-protection-sdk---user-defined-permissions"></a>Microsoft Information Protection SDK-autorizzazioni definite dall'utente
 
@@ -94,4 +94,4 @@ Questo processo può essere utilizzato anche per impostare solo la protezione im
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Esaminare la configurazione della crittografia delle etichette nella documentazione di Microsoft 365.](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#understand-how-the-encryption-works)
+- [Esaminare la configurazione della crittografia delle etichette nella documentazione di Microsoft 365.](/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#understand-how-the-encryption-works)

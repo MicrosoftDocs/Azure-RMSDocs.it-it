@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: batamig
 ms.author: bagol
-ms.date: 02/18/2021
+ms.date: 03/01/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 19c6b2d4e2e7d06c7fa5552f592f69359dc039de
-ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
+ms.openlocfilehash: 4c42dccc21235fe403f3c491491e0a03e015c890
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101090562"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844337"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
 
@@ -56,7 +56,8 @@ Ad esempio, il Azure Information Protection Analytics per Reporting centrale Vis
 |**Log attività**     | Selezionare un periodo di tempo per mostrare uno dei seguenti elementi: <br /><br />      -Quali file individuati in precedenza dallo scanner sono stati eliminati dal repository analizzato <br /> <br /> -Quali azioni di etichettatura sono state eseguite da un utente specifico <br /><br /> -Quali azioni di etichettatura sono state eseguite da un dispositivo specifico<br /> <br />    -Quali utenti hanno eseguito l'accesso a un documento con etichetta specifico<br /> <br />-Quali azioni di etichettatura sono state eseguite per un percorso di file specifico<br /> <br />-Quali azioni di etichettatura sono state eseguite da un'applicazione specifica, ad esempio Esplora file e con il pulsante destro del mouse, PowerShell, lo scanner o Microsoft Cloud App Security <br /> <br />-I documenti protetti a cui è stato effettuato l'accesso dagli utenti o hanno negato l'accesso agli utenti, anche se tali utenti non hanno il client di Azure Information Protection installato o non sono all'interno dell'organizzazione <br /> <br />-Eseguire il drill-down nei file segnalati per visualizzare **i dettagli dell'attività** per altre informazioni      |
 |**Report di individuazione dati**     |      -Quali file si trovano nei repository di dati scansionati, nei computer Windows 10 o nei computer che eseguono i client di Azure Information Protection <br /><br />-Quali file sono contrassegnati e protetti e il percorso dei file in base alle etichette <br /><br />-Quali file contengono informazioni riservate per le categorie note, ad esempio dati finanziari e informazioni personali, nonché la posizione dei file in base a queste categorie       |
 |**Report raccomandazioni**     | -Identificare i file non protetti che contengono un tipo di informazioni riservate noto. Una raccomandazione consente di configurare immediatamente la condizione corrispondente a una delle etichette, per applicare l'etichettatura automatica o consigliata. **<br /> Se si segue la raccomandazione**: la volta successiva che i file vengono aperti da un utente o analizzati dal Azure Information Protection scanner, i file possono essere classificati e protetti automaticamente. <br /><br /> : I repository di dati hanno file con informazioni riservate identificate, ma non vengono analizzati dal Azure Information Protection. Una raccomandazione consente di aggiungere immediatamente l'archivio dati identificato a uno dei profili dello scanner. <br />   **Se si segue la raccomandazione**: al successivo ciclo dello scanner, i file possono essere classificati e protetti automaticamente.        |
- 
+| | |
+
 I report usano [Monitoraggio di Azure](/azure/log-analytics/log-analytics-overview) per archiviare i dati in un'area di lavoro di Log Analytics di proprietà dell'organizzazione. Se si ha familiarità con il linguaggio di query, è possibile modificare le query e creare nuovi report e dashboard di Power BI. L'esercitazione seguente può essere utile per comprendere il linguaggio di query: [Introduzione alle query di log di monitoraggio di Azure](/azure/azure-monitor/log-query/get-started-queries).
 
 Per altre informazioni, vedere i seguenti post di blog: 
@@ -141,6 +142,7 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |Per informazioni sulla creazione di report da archivi dati basati sul cloud: <br /><br />-Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](/cloud-app-security/azip-integration).|
 |Per informazioni sulla creazione di report da archivi dati locali: <br /><br />-Azure Information Protection scanner |Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). |
 |Per informazioni sulla creazione di report da computer Windows 10:  <br /><br />-Compilazione minima di 1809 con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|È necessario abilitare la funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center. Per altre informazioni, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
+| | |
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection
 
@@ -298,7 +300,7 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 |**UserJustification**|Giustificazione durante il downgrade o la rimozione dell'etichetta|
 |**LastModifiedBy**|Utente in formato UPN che ha eseguito l'ultima modifica al file. Disponibile solo per Office e SharePoint|
 |**LastModifiedDate**|UTC nel formato AAAA-MM-GGThh: MM: SS: disponibile solo per Office e SharePoint |
-
+| | |
 #### <a name="examples-using-informationprotectionevents"></a>Esempi di utilizzo di InformationProtectionEvents
 
 Gli esempi seguenti mostrano come è possibile usare lo schema descrittivo per creare query personalizzate.
@@ -347,3 +349,7 @@ Dopo aver esaminato le informazioni nei report, se si usa il client di Azure Inf
 
 Se è disponibile un abbonamento a Microsoft 365, è anche possibile visualizzare l'utilizzo delle etichette nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. Per altre informazioni, vedere [Visualizzare l'utilizzo delle etichette con Analisi delle etichette](/microsoft-365/compliance/label-analytics).
 
+I log di controllo AIP vengono inviati anche a Microsoft 365 Activity Explorer, dove possono essere visualizzati con nomi diversi. Per altre informazioni, vedere:
+
+- [Anteprima pubblica: log di controllo AIP in Esplora attività](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
+- [Introduzione ad Esplora attività](/microsoft-365/compliance/data-classification-activity-explorer).

@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 52e43c9c0960ca5dadcd581db53bad2be2323b25
-ms.sourcegitcommit: 0f694bf6c7ea9c7709954bfb5dbd1c5f009b85a7
+ms.openlocfilehash: 1b34606abcf9093bc082d11b576d5d521e4d7777
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100360348"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844201"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) Software Development Kit (SDK) e criteri di supporto
 
@@ -30,11 +30,18 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 >  
 > Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## <a name="version-1897"></a>Versione 1.8.97
+
+**Data di rilascio:** 24 febbraio 2021
+
+- Correzione di un bug in cui le etichette figlio non venivano filtrate correttamente e includevano tutti i tipi di etichette, anche se non sono state richieste. 
+- Correzione di un bug in cui le etichette non venivano gestite `RemoveProtection()` se i metadati dell'etichetta erano incompleti. 
+
 ## <a name="version-1894"></a>Versione 1.8.94
 
 **Data di rilascio:** 8 febbraio 2021
 
-- Correzione del bug nel pacchetto NuGet in cui la configurazione di debug per i progetti C++ distribuiva i binari della versione. 
+- Correzione del bug nel pacchetto NuGet in cui la configurazione di debug per i progetti C++ distribuiva i binari della versione. La versione 1.8.86 può causare un arresto anomalo con le app C++ native. Assicurarsi di eseguire l'aggiornamento a 1.8.94 o versione successiva.
 - Correzione di un bug per cui il motore dei criteri era necessario per rimuovere la protezione. 
   - Se non è possibile caricare il motore dei criteri e i metadati delle etichette sono presenti, verranno eliminati se la protezione viene rimossa. 
 - Correzione di un bug `labelInfo.xml` in cui è stato generato Empty se il file è stato modificato in un'altra etichetta protetta. 
@@ -50,7 +57,7 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 - Tutti i cloud sono completamente supportati in tutti e tre gli SDK.
 - Rinominare `TelemetryConfiguration` con `DiagnosticConfiguration`.
 - Aggiornato `MipContext` per accettare `DiagnosticConfiguration` anziché `TelemetryConfiguration` .
-- Nuovi `TelemetryDelegate` e esposti `AuditDelegate` .
+- Esposto nuovo `AuditDelegate` .
 - Il nome di diverse impostazioni personalizzate è stato modificato e verrà rimosso nella versione 1,9. Che continueranno a funzionare in parallelo con i nomi degli aggiornamenti nella versione 1,8. 
 
 | Nuovo nome          | Nome precedente                   |
@@ -185,7 +192,7 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 - TLS 1,2 applicato per tutte le comunicazioni HTTP non ADRMS.
 - Implementazione HTTP iOS/macOS di cui è stata eseguita la migrazione da NSURLConnection a NSURLSession.
 - Componente di telemetria iOS migrato da aria SDK a 1DS SDK.
-- Il componente di telemetria USA ora HttpDelegate di MIP in iOS, macOs e Linux. (In precedenza solo Win32).
+- Il componente di telemetria USA ora HttpDelegate di MIP in iOS, macOS e Linux. (In precedenza solo Win32).
 - Miglioramento dell'indipendenza dai tipi per l'API C.
 - Il AuthDelegate è stato spostato dal profilo al motore nelle API C++, C# e Java.
 - AuthDelegate spostato dal costruttore di `Profile::Settings` a `Engine::Settings` .

@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: da1e3f26ca4c2a0326b6ae8dfee7a13a1855044a
-ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
+ms.openlocfilehash: 0f7fd7ebceb38700953d8b3e33daf5385176afa0
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98212604"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844286"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 
@@ -43,7 +43,7 @@ Recentemente è stato [annunciato](https://aka.ms/mipsdkmetadata) che è stata a
 
 **Domanda**: i metadati esistenti archiviati come proprietà personalizzate in *custom.xml* essere mantenuti aggiornati?
 
-- No. La prima volta che il documento viene salvato dopo l'abilitazione del nuovo percorso di archiviazione, i metadati dell'etichetta verranno spostati nella nuova posizione. I metadati scritti tramite [`LabelingOptions.ExtendedProperties`](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) rimarranno in *custom.xml*.
+- No. La prima volta che il documento viene salvato dopo l'abilitazione del nuovo percorso di archiviazione, i metadati dell'etichetta verranno spostati nella nuova posizione. I metadati scritti tramite [`LabelingOptions.ExtendedProperties`](/dotnet/api/microsoft.informationprotection.file.labelingoptions.extendedproperties?view=mipsdk-dotnet-1.7#Microsoft_InformationProtection_File_LabelingOptions_ExtendedProperties) rimarranno in *custom.xml*.
 
 **Domanda**: è possibile leggere i metadati delle etichette senza l'SDK MIP? 
 
@@ -51,7 +51,7 @@ Recentemente è stato [annunciato](https://aka.ms/mipsdkmetadata) che è stata a
 
 **Domanda**: attualmente è facile "leggere" l'etichetta estraendo le stringhe di coppie chiave/valore dal file. La lettura sarà ancora possibile in questo modo? 
 
-- Sì, i metadati sono ancora disponibili nel file XML di Office per la lettura. Tuttavia, si noti che l'applicazione deve comprendere se il nuovo set di funzionalità è abilitato per sapere quale sezione è autorevole (custom.xml e labelinfo.xml). Esaminare [MS-OFFCRYPTO: LabelInfo anziché le proprietà personalizzate del documento | Microsoft Docs.](https://docs.microsoft.com/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) per informazioni dettagliate sull'implementazione.
+- Sì, i metadati sono ancora disponibili nel file XML di Office per la lettura. Tuttavia, si noti che l'applicazione deve comprendere se il nuovo set di funzionalità è abilitato per sapere quale sezione è autorevole (custom.xml e labelinfo.xml). Esaminare [MS-OFFCRYPTO: LabelInfo anziché le proprietà personalizzate del documento | Microsoft Docs.](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341) per informazioni dettagliate sull'implementazione.
   
 **Domanda**: come è possibile individuare se le nuove funzionalità sono abilitate? 
 

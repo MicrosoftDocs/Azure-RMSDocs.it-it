@@ -6,12 +6,12 @@ ms.author: v-anikep
 ms.date: 09/02/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: bee7cb6854aa58f6d5c3c6781984875c8ee347a1
-ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
+ms.openlocfilehash: 8d210d74ecfd4ebdc50ec618415191894431fcdc
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98212621"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844320"
 ---
 # <a name="quickstart-public-and-confidential-clients-c"></a>Guida introduttiva: client pubblici e riservati (C#)
 
@@ -52,7 +52,7 @@ public string AcquireToken(Identity identity, string authority, string resource,
 
 Queste applicazioni sono applicazioni basate su cloud o sui servizi in cui l'utente non si connette direttamente ai servizi MIP di back-end. Il servizio ha la necessità di etichettare, proteggere o rimuovere la protezione del contenuto abilitato per MIP. In questo scenario, l'applicazione deve archiviare un certificato o un segreto dell'applicazione. Questi segreti verranno usati per l'autenticazione Azure AD e useranno il segreto per recuperare i token per i servizi MIP di back-end. Il licenziatario potrà quindi utilizzare le funzionalità di delega dell'SDK MIP per proteggere o utilizzare il contenuto per conto dell'utente autenticato.
 
-L'integrazione di MIP SDK con le applicazioni basate su servizi richiede l'uso del flusso di concessione delle credenziali client. Microsoft Authentication Library (MSAL) può essere usato per implementarlo in un modello simile a quello che verrebbe visualizzato in un'applicazione client pubblica. Questo articolo illustra brevemente come aggiornare il MIP SDK `IAuthDelegate` in .NET per eseguire l'autenticazione per le applicazioni basate su servizi che usano questo flusso. Al momento della pubblicazione non è disponibile una versione di MSAL per C++, tuttavia è possibile implementare questo flusso tramite [chiamate REST dirette](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token).
+L'integrazione di MIP SDK con le applicazioni basate su servizi richiede l'uso del flusso di concessione delle credenziali client. Microsoft Authentication Library (MSAL) può essere usato per implementarlo in un modello simile a quello che verrebbe visualizzato in un'applicazione client pubblica. Questo articolo illustra brevemente come aggiornare il MIP SDK `IAuthDelegate` in .NET per eseguire l'autenticazione per le applicazioni basate su servizi che usano questo flusso. Al momento della pubblicazione non è disponibile una versione di MSAL per C++, tuttavia è possibile implementare questo flusso tramite [chiamate REST dirette](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow#get-a-token).
 
 Per ulteriori informazioni, vedere la [documentazione relativa al flusso di autenticazione client riservata](/azure/active-directory/develop/msal-net-initializing-client-applications#initializing-a-confidential-client-application-from-code)
 

@@ -4,7 +4,7 @@ description: Istruzioni per l'installazione e la configurazione del Azure Inform
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0c3aa35877ed657f81c955af0d674bde3d22a079
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 98cadb555919ecd6e95e3328ad489b29e3f5c0ef
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524830"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844388"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
 
@@ -189,10 +189,12 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
     |Impostazione  |Descrizione  |
     |---------|---------|
     |**Impostazioni del processo di analisi del contenuto**     |    - **Pianificazione**: Mantieni il valore predefinito **manuale** <br />- **Tipi di informazioni da** individuare: modificare **solo i criteri** <br />- **Configurare i repository**: non configurare in questo momento perché è necessario salvare prima il processo di analisi del contenuto.         |
+    |**Criteri DLP** | Se si usa una Microsoft 365 criteri di prevenzione della perdita dei dati (DLP), impostare **Abilita regole DLP** **su on**. Per altre informazioni, vedere [usare un criterio DLP](#use-a-dlp-policy-public-preview). |
     |**Criteri di riservatezza**     | - **Imponi**: seleziona **disattivato** <br />- **Etichettare i file in base al contenuto**: Mantieni il valore predefinito **in** <br />- **Etichetta predefinita**: Mantieni il valore predefinito dei **criteri predefiniti** <br />- Modifica **etichette file**: Mantieni il valore predefinito **off**        |
-    |**Configurare le impostazioni del file**     | - **Mantieni "Data modifica", "Ultima modifica" e "modificato da"**: Mantieni il valore predefinito **in** <br />- **Tipi di file da analizzare**: Mantieni i tipi di file predefiniti per l' **esclusione** <br />- **Proprietario predefinito**: Mantieni il valore predefinito dell' **account scanner**        |
+    |**Configurare le impostazioni del file**     | - **Mantieni "Data modifica", "Ultima modifica" e "modificato da"**: Mantieni il valore predefinito **in** <br />- **Tipi di file da analizzare**: Mantieni i tipi di file predefiniti per l' **esclusione** <br />- **Proprietario predefinito**: Mantieni il valore predefinito dell' **account scanner**  <br /> - **Imposta proprietario repository**: usare questa opzione solo quando si [Usa un criterio DLP](#use-a-dlp-policy-public-preview). |
     | | |
 
+   
 1. Ora che il processo di analisi del contenuto viene creato e salvato, si è pronti per tornare all'opzione **Configura repository** per specificare gli archivi dati da analizzare. 
 
     Specificare i percorsi UNC e gli URL di SharePoint Server per le cartelle e le raccolte documenti locali di SharePoint. 
@@ -354,6 +356,44 @@ Per modificare queste impostazioni, modificare il processo di analisi del conten
     ```
 
 Lo scanner è ora pianificato per l'esecuzione continua. Quando lo scanner funziona in tutti i file configurati, avvia automaticamente un nuovo ciclo in modo che vengano individuati tutti i file nuovi e modificati.
+
+## <a name="use-a-dlp-policy-public-preview"></a>Usare un criterio DLP (anteprima pubblica)
+
+L'uso di Microsoft 365 un criterio di prevenzione della perdita dei dati (DLP, Data Loss Prevention) consente allo scanner di rilevare potenziali perdite di dati mediante la corrispondenza tra le regole DLP e i file archiviati in condivisioni file e SharePoint Server.
+
+- **Abilitare le regole DLP nel processo di analisi del contenuto** per ridurre l'esposizione di tutti i file che corrispondono ai criteri DLP. Quando le regole DLP sono abilitate, lo scanner può ridurre l'accesso ai file solo ai proprietari di dati o ridurre l'esposizione a gruppi a livello di rete, ad esempio **tutti** gli **utenti autenticati** o **gli utenti di dominio**. 
+
+- **Nel Microsoft 365 etichettare l'interfaccia di amministrazione**, determinare se si sta solo testando il criterio DLP o se si desidera applicare le regole e le autorizzazioni file sono state modificate in base a tali regole. Per altre informazioni, vedere [attivare un criterio DLP](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+> [!TIP]
+> L'analisi dei file, anche quando si esegue solo il test del criterio DLP, crea anche report sulle autorizzazioni per i file. Eseguire una query su questi report per analizzare le esposizioni specifiche dei file o per esplorare l'esposizione di un utente specifico ai file analizzati.
+> 
+
+I criteri DLP sono configurati nell'interfaccia di amministrazione dell'etichetta, ad esempio il centro di conformità Microsoft 365 e sono supportati in Azure Information Protection a partire dalla versione [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview). 
+
+Per altre informazioni sulla gestione delle licenze DLP, vedere [Introduzione allo scanner locale per la prevenzione della perdita dei dati](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
+
+**Per usare un criterio DLP con lo scanner**:
+
+1. Nella portale di Azure passare al processo di analisi del contenuto. Per altre informazioni, vedere [creare un processo di analisi del contenuto](#create-a-content-scan-job).
+
+1. In **criterio DLP** impostare **Abilita regole DLP** **su on**.
+
+    > [!IMPORTANT]
+    > Non impostare **Abilita regole DLP** **su on** , a meno che non si disponga effettivamente di un criterio DLP configurato in Microsoft 365. 
+    >
+    >Se si attiva questa funzionalità senza un criterio DLP, lo scanner genererà errori.
+1. Opzionale In **Configura impostazioni file** impostare il **proprietario del repository** **su on** e definire un utente specifico come proprietario del repository.  
+
+    Questa opzione consente allo scanner di ridurre l'esposizione di tutti i file presenti in questo repository, che corrispondono ai criteri DLP, al proprietario del repository definito.
+
+### <a name="dlp-policies-and-make-private-actions"></a>Criteri DLP e *creare azioni private*
+
+Se si usa un criterio DLP con un'azione di *creazione privata* e si prevede anche di usare lo scanner per etichettare automaticamente i file, è consigliabile definire anche l'impostazione avanzata [**UseCopyAndPreserveNTFSOwner**](rms-client/clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview) del client di etichettatura unificata. 
+
+Questa impostazione garantisce che i proprietari originali mantengano l'accesso ai file.
+
+Per altre informazioni, vedere [creare un processo di analisi del contenuto](#create-a-content-scan-job) e  [applicare automaticamente un'etichetta di riservatezza al contenuto](/microsoft-365/compliance/apply-sensitivity-label-automatically) nella documentazione di Microsoft 365. 
 
 ## <a name="change-which-file-types-to-protect"></a>Modificare i tipi di file da proteggere
 

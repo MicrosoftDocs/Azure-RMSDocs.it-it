@@ -4,7 +4,7 @@ description: Scopri le novità per il client Unified Labeling Azure Information 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/14/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: afe860e878df27b7081c4f12a9b4612cab845db9
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 6f77220e6321f8a601c936fec9a5ea4812539f01
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524796"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844371"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -39,8 +39,6 @@ Per altre informazioni, vedere [upgradeing and maintaining the Azure Information
 
 Ogni versione disponibile a livello generale del client Azure Information Protection Unified Labeling è supportata per un massimo di sei mesi dopo il rilascio della versione GA successiva. La documentazione non include informazioni sulle versioni non supportate del client. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
 
-Si noti che Azure Information Protection funzionalità sono attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
-
 ### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versioni di disponibilità generale non più supportate
 
 |Versione client|Data di rilascio|
@@ -61,7 +59,7 @@ Il formato della data usato in questa pagina è *mese/giorno/anno*.
 
 Usare le informazioni seguenti per visualizzare le novità o le modifiche apportate a una versione supportata del client Azure Information Protection Unified Labeling per Windows. La versione più recente è elencata per prima. Il formato della data usato in questa pagina è *mese/giorno/anno*.
 
-La versione più recente di Azure Information Protection è attualmente in fase di anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
+Si noti che Azure Information Protection funzionalità sono attualmente in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale.
 
 > [!NOTE]
 > Le correzioni secondarie non sono elencate, quindi se si verifica un problema con il client di etichettatura unificata, è consigliabile verificare se è stato risolto con la versione GA più recente. Se il problema persiste, controllare la versione di anteprima corrente (se disponibile).
@@ -69,6 +67,56 @@ La versione più recente di Azure Information Protection è attualmente in fase 
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
 Il client di etichettatura unificata sostituisce il client classico Azure Information Protection. Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare le soluzioni per l'assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-solutions-for-windows-computers).
+
+## <a name="version-210460-for-co-authoring-public-preview"></a>Versione 2.10.46.0 per la creazione condivisa (anteprima pubblica)
+
+Versione client con etichetta unificata 2.10.46.0
+
+**Versione** 03/02/2021
+
+Questa versione dedicata di Azure Information Protection offre un'anteprima pubblica delle funzionalità di co-authoring appena supportate nel Microsoft 365.
+
+La creazione condivisa per le app di Office consente a più utenti di modificare i documenti etichettati e crittografati con le [etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
+
+> [!IMPORTANT]
+> Per sfruttare le funzionalità di creazione condivisa in anteprima pubblica, è necessario scaricare e installare il file di installazione dedicato per questa versione. Nel [sito di download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018)scaricare e installare il `AzInfoProtection_2.10.46_CoAuthoring_PublicPreview.exe`  file.
+>
+> Il sistema deve inoltre essere conforme ai requisiti di versione elencati nel [Microsoft 365 prerequisiti per la creazione di co-autore](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites).
+>
+
+Prima di iniziare, è consigliabile esaminare tutti i prerequisiti e le limitazioni correlati. Per altre informazioni, vedere:
+
+- [Abilitare la creazione condivisa per i file crittografati con le etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels-coauthoring) nella documentazione di Microsoft 365.
+- [Problemi noti per la creazione condivisa in AIP](../known-issues.md#known-issues-for-co-authoring-public-preview)
+## <a name="version-210430-for-dlp-policies-public-preview"></a>Versione 2.10.43.0 per i criteri DLP (anteprima pubblica)
+
+Versione dello scanner Unified Labeling 2.10.43.0
+
+**Versione** 03/02/2021
+
+Questa versione dedicata di Azure Information Protection fornisce un'anteprima pubblica del supporto per i criteri di prevenzione della perdita dei dati (DLP) supportati da Microsoft 365. 
+
+- L' **uso di un criterio DLP** consente allo scanner di rilevare potenziali perdite di dati associando le regole DLP ai file archiviati nelle condivisioni file e in SharePoint Server. 
+
+- [**Abilitare le regole DLP nel processo di analisi del contenuto**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) per ridurre l'esposizione di tutti i file che corrispondono ai criteri DLP. 
+
+    Lo scanner può ridurre l'accesso ai file solo ai proprietari di dati o ridurre l'esposizione a gruppi a livello di rete, ad esempio **tutti** gli utenti, **utenti autenticati** o **utenti di dominio**.
+
+- **L'analisi dei file con le regole DLP abilitate consente inoltre di creare report sulle autorizzazioni per i file**. Eseguire una query su questi report per analizzare le esposizioni specifiche dei file o per esplorare l'esposizione di un utente specifico ai file analizzati.
+
+Le impostazioni per l'applicazione o il test dei criteri DLP sono configurate nel [centro di conformità Microsoft 365](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+> [!IMPORTANT]
+> Per sfruttare il supporto DLP nell'anteprima pubblica, è necessario scaricare e installare il file di installazione dedicato per questa versione. Nel [sito di download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018)scaricare e installare il `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` file.
+> 
+Per ulteriori informazioni, inclusi i requisiti di licenza, vedere:
+
+- [Configurare un criterio DLP nello scanner AIP](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
+- Informazioni sul [Microsoft 365 scanner locale per la prevenzione della perdita dei dati](/microsoft-365/compliance/dlp-on-premises-scanner-learn), nella documentazione di Microsoft 365
+- [Inizia a usare lo scanner locale per la prevenzione della perdita dei dati](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
+- [Usare il Microsoft 365 scanner locale per la prevenzione della perdita dei dati](/microsoft-365/compliance/dlp-on-premises-scanner-use)
+
+
 
 ## <a name="version-29116"></a>Versione 2.9.116 
 
