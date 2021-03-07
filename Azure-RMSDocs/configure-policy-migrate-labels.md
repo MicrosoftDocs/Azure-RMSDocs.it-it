@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1751368b74d6ed2800bfd2e7432a4ce4a5844f0a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 1243d62932a2cda0c6ead806e1b322324e974a9f
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809769"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415212"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza unificate
 
@@ -39,9 +39,9 @@ Prima di leggere le istruzioni per eseguire la migrazione delle etichette, è po
 
 - [Qual è la differenza tra le etichette nelle Microsoft 365 ed etichette Azure Information Protection?](faqs.md#whats-the-difference-between-labels-in-microsoft-365-and-labels-in-azure-information-protection)
 
-- [Quando è il momento giusto per eseguire la migrazione delle etichette?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
+- [Quando è il momento giusto per eseguire la migrazione delle etichette all'etichetta unificata?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-unified-labeling)
 
-- [Dopo aver eseguito la migrazione delle etichette, qual è il portale di gestione da usare?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
+- [Dopo aver eseguito la migrazione delle etichette all'etichetta unificata, il portale di gestione da usare?](faqs.md#after-ive-migrated-my-labels-to-unified-labeling-which-management-portal-do-i-use)
 
 ### <a name="administrative-roles-that-support-the-unified-labeling-platform"></a>Ruoli amministrativi che supportano la piattaforma di assegnazione di etichette unificata
 

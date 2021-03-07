@@ -1,5 +1,5 @@
 ---
-title: Configurare i diritti di utilizzo per Azure Information Protection
+title: Configurare i diritti di utilizzo per Azure Information Protection (AIP)
 description: Comprendere e identificare i diritti specifici usati quando si proteggono i file o i messaggi di posta elettronica usando Rights Management la protezione da Azure Information Protection.
 author: batamig
 ms.author: bagol
@@ -13,14 +13,14 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 16cc8ae0424f307ae7f0ed864ca36f1a91230977
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 13263b8d11829104bb0175b4ca91d023637dd1f5
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809635"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415280"
 ---
-# <a name="configuring-usage-rights-for-azure-information-protection"></a>Configurazione dei diritti di utilizzo per Azure Information Protection
+# <a name="configure-usage-rights-for-azure-information-protection"></a>Configurare i diritti di utilizzo per Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
@@ -31,10 +31,15 @@ ms.locfileid: "98809635"
 > 
 > Per motivi di completezza, questo articolo include valori derivanti dal portale di Azure classico che è stato ritirato l'8 gennaio 2018.
 
-Quando si configurano le etichette di riservatezza o i modelli di protezione per la crittografia, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando l'etichetta o il modello viene selezionato da utenti, amministratori o servizi configurati. Nel portale di Azure è ad esempio possibile selezionare i ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure configurare i singoli diritti. In alternativa, gli utenti potrebbero selezionare e applicare i diritti di utilizzo.
+Questo articolo descrive i diritti di utilizzo che è possibile configurare per l'applicazione automatica quando si seleziona un'etichetta o un modello da utenti, amministratori o servizi configurati.
 
-Usare questo articolo per configurare i diritti di utilizzo desiderati per l'applicazione in uso e comprendere come questi diritti sono progettati per essere interpretati dalle applicazioni. Tuttavia, le applicazioni possono variare in base alla modalità di implementazione dei diritti, in modo da consultare sempre la documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima della distribuzione nell'ambiente di produzione.
+I diritti di utilizzo vengono selezionati quando si configurano etichette di riservatezza o modelli di protezione per la crittografia. È ad esempio possibile selezionare ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure configurare separatamente i singoli diritti. In alternativa, gli utenti potrebbero selezionare e applicare i diritti di utilizzo.
 
+> [!IMPORTANT]
+> Usare questo articolo per comprendere come i diritti di utilizzo sono *progettati* per essere interpretati dalle applicazioni. 
+>
+> Le applicazioni possono variare nel modo in cui implementano i diritti di utilizzo ed è consigliabile consultare la documentazione dell'applicazione ed eseguire i test personalizzati per verificare il comportamento dell'applicazione prima della distribuzione nell'ambiente di produzione.
+> 
 
 ## <a name="usage-rights-and-descriptions"></a>Diritti di utilizzo e descrizioni
 La tabella seguente elenca e descrive i diritti di utilizzo supportati da Rights Management e illustra come vengono usati e interpretati. Sono elencati in base al **nome comune**, ovvero al nome con cui viene usato o si fa riferimento al diritto di utilizzo nella sua versione descrittiva, e non alla parola singola usata nel codice (valore in **Codifica nei criteri**). 
@@ -64,6 +69,7 @@ In questa tabella:
 |Nome comune: **Visualizza diritti** <br /><br />Codifica nei criteri: **VIEWRIGHTSDATA**|Consente all'utente di visualizzare i criteri applicati al documento. <br /><br /> Non supportato dalle app di Office o dai client di Azure Information Protection.|Diritti personalizzati di Office: non implementato.<br /><br />Nome nel portale di Azure classico: **Visualizza diritti assegnati**<br /><br />Nome nell'interfaccia di amministrazione di assegnazione delle etichette e portale di Azure: **Visualizza diritti (VIEWRIGHTSDATA)**.<br /><br />Nome nei modelli di AD RMS: **Visualizza diritti** <br /><br />Valore o costante API: `IPC_READ_RIGHTS L"VIEWRIGHTSDATA"`|
 |Nome comune: **Modifica diritti** <br /><br />Codifica nei criteri: **EDITRIGHTSDATA**|Consente all'utente di modificare i criteri applicati al documento. Consente di rimuovere la rimozione. <br /><br /> Non supportato dalle app di Office o dai client di Azure Information Protection.|Diritti personalizzati di Office: non implementato.<br /><br />Nome nel portale di Azure classico: **Modifica diritti**<br /><br />Nome nell'interfaccia di amministrazione di assegnazione delle etichette e portale di Azure: **Modifica diritti (EDITRIGHTSDATA)**.<br /><br />Nome nei modelli di AD RMS: **Modifica diritti** <br /><br />Valore o costante API: `PC_WRITE_RIGHTS L"EDITRIGHTSDATA"`|
 |Nome comune: **Consenti macro** <br /><br />Codifica nei criteri: **OBJMODEL**|Abilita l'opzione per eseguire macro o accedere a livello di codice o in modalità remota al contenuto in un documento.|Diritti personalizzati di Office: come l'opzione dei criteri personalizzati **Consenti l'accesso a livello di programmazione**. Non è un'impostazione per destinatario.<br /><br />Nome nel portale di Azure classico: **Consenti macro**<br /><br />Nome nell'interfaccia di amministrazione di assegnazione delle etichette e portale di Azure: **Allow Macros (OBJMODEL)**<br /><br />Nome nei modelli di AD RMS: **Consenti macro** <br /><br />Valore o costante API: non implementato.|
+| | | |
 
 ## <a name="rights-included-in-permissions-levels"></a>Diritti inclusi nei livelli di autorizzazione
 
@@ -73,12 +79,11 @@ Usare la tabella seguente per un elenco dei livelli di autorizzazione e per un e
 
 |Livello di autorizzazioni|Applicazioni|Diritti di utilizzo inclusi|
 |---------------------|----------------|---------------------------------|
-|Visualizzatore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Visualizza diritti; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Consenti macro [[2]](#footnote-2)<br /><br />Nota: per i messaggi di posta elettronica, usare il diritto Revisore anziché questo livello di autorizzazione per assicurarsi che la risposta venga ricevuta come messaggio di posta e non come allegato. Il diritto Revisore è necessario anche quando si invia un messaggio di posta elettronica a un'altra organizzazione che usa il client di Outlook o Outlook Web App. Oppure, per gli utenti dell'organizzazione che sono esentati dall'uso del servizio Azure Rights Management perché sono stati implementati [controlli di onboarding](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy).|
-|Revisore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Rispondi; Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Consenti macro [[2]](#footnote-2)|
-|Coautore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta [[4]](#footnote-4); Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3)|
-|Comproprietario|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Modifica diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Controllo completo|
-
-----
+|**Visualizzatore**|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Visualizza diritti; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Consenti macro [[2]](#footnote-2)<br /><br />Nota: per i messaggi di posta elettronica, usare il diritto Revisore anziché questo livello di autorizzazione per assicurarsi che la risposta venga ricevuta come messaggio di posta e non come allegato. Il diritto Revisore è necessario anche quando si invia un messaggio di posta elettronica a un'altra organizzazione che usa il client di Outlook o Outlook Web App. Oppure, per gli utenti dell'organizzazione che sono esentati dall'uso del servizio Azure Rights Management perché sono stati implementati [controlli di onboarding](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy).|
+|**Reviewer**|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Rispondi; Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Consenti macro [[2]](#footnote-2)|
+|**Coautore**|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta [[4]](#footnote-4); Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3)|
+|**Comproprietario**|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Modifica diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Controllo completo|
+| | | |
 
 ###### <a name="footnote-1"></a>Nota 1
 
@@ -138,8 +143,9 @@ In alternativa, è possibile modificare l'ereditarietà della protezione dei doc
 
 Se è necessario che un documento allegato mantenga la protezione originale, vedere [Proteggere la collaborazione ai documenti tramite Azure Information Protection](secure-collaboration-documents.md).
 
-Nota: se vengono visualizzati riferimenti a **DecryptAttachmentFromPortal**, questo parametro è ora deprecato per [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). A meno che non sia stato impostato in precedenza, questo parametro non è disponibile.
-
+> [!NOTE]
+> Se vengono visualizzati riferimenti a **DecryptAttachmentFromPortal**, questo parametro è ora deprecato per [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). A meno che non sia stato impostato in precedenza, questo parametro non è disponibile.
+> 
 ## <a name="automatically-encrypt-pdf-documents-with-exchange-online"></a>Crittografa automaticamente i documenti PDF con Exchange Online
 
 Quando Exchange Online USA le nuove funzionalità per la crittografia dei messaggi di Office 365, è possibile crittografare automaticamente i documenti PDF non protetti quando sono allegati a un messaggio di posta elettronica crittografato. Il documento eredita le stesse autorizzazioni di quelle per il messaggio di posta elettronica. Per abilitare questa configurazione, impostare **EnablePdfEncryption $true** con [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration).
@@ -172,8 +178,9 @@ Ad esempio, l'utente che ha creato il documento può stamparlo anche se ora risu
 
 Il proprietario di Rights Management per un documento o un messaggio di posta elettronica è registrato come il campo **owner-email** nei [log di utilizzo](log-analyze-usage.md#how-to-interpret-your-usage-logs).
 
-Si noti che il proprietario di Rights Management è indipendente dal proprietario del file system di Windows. Spesso coincidono, ma possono essere diversi, anche se non si usano gli SDK o PowerShell.
-
+> [!NOTE]
+> Il proprietario Rights Management è indipendente dal proprietario di Windows file system. Spesso coincidono, ma possono essere diversi, anche se non si usano gli SDK o PowerShell.
+> 
 ## <a name="rights-management-use-license"></a>Licenza d'uso di Rights Management
 
 Quando un utente apre un documento o un messaggio di posta elettronica protetto tramite Azure Rights Management, gli viene concessa una licenza d'uso di Rights Management per il contenuto. Questa licenza d'uso è un certificato che contiene i diritti di utilizzo dell'utente per il documento o il messaggio di posta elettronica e la chiave di crittografia usata per crittografare il documento. La licenza d'uso include anche una data di scadenza, se è stata impostata, e indica la durata di validità di tale licenza.
@@ -204,10 +211,11 @@ Questi modelli predefiniti vengono creati al momento dell'acquisto della sottosc
 
 |Nome visualizzato del modello|Diritti di utilizzo, dal 6 ottobre 2017 alla data corrente|Diritti di utilizzo prima del 6 ottobre 2017|
 |----------------|--------------------|----------|
-|\<*organization name> -Solo visualizzazione riservata * <br /><br />oppure<br /><br /> *Riservatezza elevata \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Copia, Visualizza diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica|Visualizza, Apri, Leggi|
-|\<*organization name>Riservate <br /><br />oppure <br /><br />*Riservato \ Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva con nome, Esporta, Copia; Visualizza diritti; Modifica diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica; Controllo completo|Visualizza, Apri, Leggi; Salva con nome, Esporta; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
+|**\<*organization name> -Solo visualizzazione riservata*** <br /><br />oppure<br /><br /> **_Riservatezza elevata \ tutti i dipendenti_**|Visualizza, Apri, Leggi; Copia, Visualizza diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica|Visualizza, Apri, Leggi|
+|**\<*organization name>-Riservato*** <br /><br />oppure <br /><br />**_Riservato \ tutti i dipendenti_**|Visualizza, Apri, Leggi; Salva con nome, Esporta, Copia; Visualizza diritti; Modifica diritti; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica; Controllo completo|Visualizza, Apri, Leggi; Salva con nome, Esporta; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
+| | | |
 
 ## <a name="see-also"></a>Vedere anche
-[Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md)
 
-[Configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](configure-super-users.md)
+- [Limitare l'accesso al contenuto usando le etichette di riservatezza per applicare la crittografia](/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](configure-super-users.md)

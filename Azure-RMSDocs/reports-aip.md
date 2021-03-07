@@ -1,6 +1,6 @@
 ---
-title: Reporting centralizzato per Azure Information Protection
-description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
+title: Analisi e report centrali per Azure Information Protection (AIP)
+description: Informazioni su come usare l'analisi del Azure Information Protection (AIP) e la creazione di report centrali per tenere traccia dell'utilizzo delle etichette e per identificare i file che contengono informazioni riservate.
 author: batamig
 ms.author: bagol
 ms.date: 03/01/2021
@@ -13,14 +13,14 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4c42dccc21235fe403f3c491491e0a03e015c890
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 5665a071bd99f8ed1118adffcd1ce65f20ff9aa4
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844337"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415467"
 ---
-# <a name="central-reporting-for-azure-information-protection-public-preview"></a>Reporting centrale per Azure Information Protection (anteprima pubblica)
+# <a name="analytics-and-central-reporting-for-azure-information-protection-public-preview"></a>Analisi e report centrali per Azure Information Protection (anteprima pubblica)
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -29,7 +29,9 @@ ms.locfileid: "101844337"
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Usare Azure Information Protection Analytics per la creazione di report centrali che consentono di tenere traccia dell'adozione delle etichette che classificano e proteggono i dati dell'organizzazione. Inoltre:
+Questo articolo descrive come usare l'analisi del Azure Information Protection (AIP) per la creazione di report centrali, che consentono di tenere traccia dell'adozione delle etichette che classificano e proteggono i dati dell'organizzazione. 
+
+AIP Analytics consente inoltre di eseguire i passaggi seguenti:
 
 - Monitorare documenti e messaggi di posta elettronica etichettati e protetti nell'organizzazione.
 
@@ -235,7 +237,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
 A questo punto si è pronti per visualizzare i report.
 
-## <a name="how-to-view-the-reports"></a>Come visualizzare i report
+## <a name="view-the-aip-analytics-reports"></a>Visualizzare i report di AIP Analytics
 
 Dal riquadro Azure Information Protection individuare le opzioni del menu **Dashboard** e selezionare una delle opzioni seguenti:
 
@@ -248,7 +250,7 @@ Dal riquadro Azure Information Protection individuare le opzioni del menu **Dash
 |     |         |
 
 
-## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Come modificare i report e creare query personalizzate
+## <a name="modify-the-aip-analytics-reports-and-create-custom-queries"></a>Modificare i report di AIP Analytics e creare query personalizzate
 
 Selezionare l'icona della query nel dashboard per aprire un riquadro **Ricerca log** : 
 

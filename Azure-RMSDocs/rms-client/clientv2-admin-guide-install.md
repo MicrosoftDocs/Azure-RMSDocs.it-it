@@ -1,6 +1,6 @@
 ---
-title: Installare il client di etichettatura unificata Azure Information Protection per gli utenti
-description: Istruzioni e informazioni per gli amministratori per la distribuzione del client di Azure Information Protection Unified Labeling per Windows nelle reti aziendali.
+title: Installare il client di etichettatura unificata di Azure Information Protection (AIP) per gli utenti
+description: Informazioni su come gli amministratori possono distribuire il client di assegnazione unificata di Azure Information Protection (AIP) per gli utenti in una rete aziendale.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f818a94e954b245d329a2cdb2dc1ce419e83c4ce
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: b2ffca45a0295b2264a7cfe92d7a1fe350c0f0a8
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560102"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415244"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: installare il client di etichettatura unificata Azure Information Protection per gli utenti
 
@@ -25,6 +25,8 @@ ms.locfileid: "98560102"
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Pertinente per**: [Azure Information Protection client di etichetta unificato per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [Guida dell'amministratore del client classico](client-admin-guide-install.md). *
+
+Questo articolo descrive in che modo gli amministratori possono distribuire il client di assegnazione unificata di Azure Information Protection (AIP) per gli utenti in una rete aziendale.
 
 Prima di installare il client Azure Information Protection Unified Labeling nella rete aziendale, verificare che i computer dispongano delle versioni e delle applicazioni del sistema operativo necessarie per Azure Information Protection: [requisiti per Azure Information Protection](../requirements.md) e [requisiti aggiuntivi per l'installazione del client Unified Labeling nelle reti aziendali](reqs-ul-client.md).
 
@@ -46,7 +48,7 @@ Di conseguenza, le etichette che applicano la protezione non vengono visualizzat
 Per informazioni sulle edizioni di Office che supportano il servizio di protezione, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](../requirements-applications.md).
 
 > [!IMPORTANT]
-> Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Supporto "Extended" per Office 2010 terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## <a name="unified-labeling-client-installation-options"></a>Opzioni di installazione client per l'assegnazione di etichette unificate
 
@@ -118,7 +120,7 @@ Usare le istruzioni seguenti per installare il client di quando *non* si usa il 
 Quando si installa il client per gli utenti che hanno [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) e non hanno autorizzazioni amministrative locali, specificare il parametro **SERVICELOCATION** e l'URL per il servizio Rights Management di Azure. 
     
 > [!IMPORTANT]
-> Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Supporto "Extended" per Office 2010 terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 >
 
 Questo parametro e il relativo valore consentono di creare e impostare le chiavi del Registro di sistema seguenti:
@@ -182,7 +184,7 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     | | | | |
 
     > [!IMPORTANT]
-    > Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Supporto "Extended" per Office 2010 terminato il 13 ottobre 2020. Per altre informazioni, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 1. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection_UL.msi /quiet`.

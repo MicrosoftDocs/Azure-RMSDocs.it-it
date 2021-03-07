@@ -1,6 +1,6 @@
 ---
 title: Installare e configurare lo scanner di etichettatura unificata di Azure Information Protection (AIP)
-description: Istruzioni per l'installazione e la configurazione del Azure Information Protection scanner unificato di etichette per individuare, classificare e proteggere i file negli archivi dati.
+description: Informazioni su come installare e configurare lo scanner di etichetta unificata di Azure Information Protection (AIP) per individuare, classificare e proteggere i file negli archivi dati.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,20 +12,24 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 98cadb555919ecd6e95e3328ad489b29e3f5c0ef
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: ed21f867dfbd3cf6fb0e453367f9e657ba463e99
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844388"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415399"
 ---
-# <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di Azure Information Protection Unified Labeling
+# <a name="configuring-and-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Configurazione e installazione dello scanner di etichetta unificata di Azure Information Protection (AIP)
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
 >***Pertinente per**: [AIP Unified Labeling client only](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per lo scanner classico, vedere [configurazione e installazione dello scanner classico Azure Information Protection](deploy-aip-scanner-configure-install-classic.md). *
 
-Prima di iniziare la configurazione e l'installazione del Azure Information Protection scanner, verificare che il sistema sia conforme ai [prerequisiti richiesti](deploy-aip-scanner-prereqs.md). 
+Questo articolo descrive come configurare e installare lo scanner locale Azure Information Protection Unified labeling. 
+
+## <a name="overview"></a>Panoramica
+
+Prima di iniziare, verificare che il sistema sia conforme ai [prerequisiti richiesti](deploy-aip-scanner-prereqs.md). 
 
 Quando si è pronti, continuare con i passaggi seguenti:
 
@@ -37,18 +41,18 @@ Quando si è pronti, continuare con i passaggi seguenti:
 
 1. [Configurare lo scanner per applicare la classificazione e la protezione](#configure-the-scanner-to-apply-classification-and-protection)
  
-Eseguire le seguenti procedure di configurazione aggiuntive secondo le necessità del sistema:
+Quindi, eseguire le procedure di configurazione seguenti in base alle esigenze del sistema:
 
 |Procedura  |Descrizione  |
 |---------|---------|
 |[Modificare i tipi di file da proteggere](#change-which-file-types-to-protect) |Potrebbe essere necessario analizzare, classificare o proteggere tipi di file diversi da quelli predefiniti. Per altre informazioni, vedere [processo di analisi AIP](deploy-aip-scanner.md#aip-scanning-process). |
-|[Aggiornamento dello scanner](#upgrading-your-scanner) | Aggiornare lo scanner per sfruttare le funzionalità e i miglioramenti più recenti.|
-|[Modifica delle impostazioni del repository di dati in blocco](#editing-data-repository-settings-in-bulk)| Usare le opzioni di importazione ed esportazione per apportare modifiche in blocco per più repository di dati.|
-|[Usare lo scanner con configurazioni alternative](#using-the-scanner-with-alternative-configurations)| Usare lo scanner senza configurare le etichette con le condizioni |
-|[Ottimizzare le prestazioni](#optimizing-scanner-performance)| Linee guida per ottimizzare le prestazioni dello scanner|
+|[Aggiornamento dello scanner](#upgrade-your-scanner) | Aggiornare lo scanner per sfruttare le funzionalità e i miglioramenti più recenti.|
+|[Modifica delle impostazioni del repository di dati in blocco](#edit-data-repository-settings-in-bulk)| Usare le opzioni di importazione ed esportazione per apportare modifiche in blocco per più repository di dati.|
+|[Usare lo scanner con configurazioni alternative](#use-the-scanner-with-alternative-configurations)| Usare lo scanner senza configurare le etichette con le condizioni |
+|[Ottimizzare le prestazioni](#optimize-scanner-performance)| Linee guida per ottimizzare le prestazioni dello scanner|
 | | |
 
-Per ulteriori informazioni, vedere anche [l'elenco dei cmdlet per lo scanner](#list-of-cmdlets-for-the-scanner).
+Per ulteriori informazioni, vedere anche [cmdlet di PowerShell supportati](#supported-powershell-cmdlets).
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Configurare lo scanner nel portale di Azure
 
@@ -93,14 +97,11 @@ Per configurare lo scanner:
 
 A partire dalla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850), è possibile analizzare la rete per i repository rischiosi. Aggiungere uno o più repository trovati a un processo di analisi del contenuto per analizzarli per verificare la presenza di contenuto sensibile.
 
-- [Prerequisiti per l'individuazione della rete](#network-discovery-prerequisites)
-- [Creazione di un processo di analisi di rete](#creating-a-network-scan-job)
-
 > [!NOTE]
 > La funzionalità di individuazione della rete Azure Information Protection è attualmente disponibile in anteprima. Le [condizioni aggiuntive per l'anteprima di Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) includono termini legali aggiuntivi che si applicano a funzionalità di Azure in versione beta, anteprima o diversamente non ancora disponibili a livello generale. 
 > 
 
-#### <a name="network-discovery-prerequisites"></a>Prerequisiti per l'individuazione della rete
+Nella tabella seguente vengono descritti i prerequisiti necessari per il servizio di individuazione della rete:
 
 |Prerequisito  |Descrizione  |
 |---------|---------|
@@ -108,7 +109,7 @@ A partire dalla versione [2.8.85.0](rms-client/unifiedlabelingclient-version-rel
 |**Analisi Azure Information Protection**     | Assicurarsi di aver abilitato Azure Information Protection Analytics. <br /><br />Nella portale di Azure passare a **Azure Information Protection > gestisci > Configura analisi (anteprima)**. <br /><br />Per ulteriori informazioni, vedere [la pagina relativa alla creazione di report centrali per Azure Information Protection (anteprima pubblica)](reports-aip.md).|
 | | |
 
-#### <a name="creating-a-network-scan-job"></a>Creazione di un processo di analisi di rete
+**Per creare un processo di analisi di rete**
 
 1. Accedere al portale di Azure e passare a **Azure Information Protection**. Nel menu **scanner** a sinistra selezionare l'icona processi di **analisi di rete (anteprima)** ![processi di analisi di rete](media/i-network-scan-jobs.png "icona dei processi di analisi di rete").
     
@@ -162,7 +163,6 @@ Se è stato [definito un processo di analisi di rete](#create-a-network-scan-job
     |![Icona Log Analytics](media/i-log-analytics.png "Icona Log Analytics") |Nell'angolo in alto a destra del grafico repository non gestiti fare clic sull'icona **log Analytics** per passare a log Analytics dati per questi repository. |
     | | |
 
-#### <a name="repositories-with-public-access"></a>Repository con accesso pubblico
 
 I repository in cui si trova **l'accesso pubblico** hanno funzionalità di **lettura** o di **lettura/scrittura** possono includere contenuti sensibili che devono essere protetti. Se l' **accesso pubblico** è false, il repository non è accessibile dal pubblico.
 
@@ -204,11 +204,11 @@ Questa operazione può essere eseguita solo dopo l'esecuzione di un processo di 
     >     
     Per aggiungere il primo archivio dati, nel riquadro **Aggiungi un nuovo processo di analisi del contenuto** selezionare **Configura repository** per aprire il riquadro **repository** :
     
-    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Configurare i repository di dati per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Configurare i repository di dati per lo scanner Azure Information Protection.":::
 
     1. Nel riquadro **Repository** selezionare **Aggiungi**:
     
-        :::image type="content" source="media/scanner-repository-add.png" alt-text="Aggiungere il repository di dati per lo scanner di Azure Information Protection":::
+        :::image type="content" source="media/scanner-repository-add.png" alt-text="Aggiungere un repository di dati per lo scanner Azure Information Protection.":::
 
     1. Nel riquadro **repository** specificare il percorso per il repository dei dati e quindi selezionare **Salva**.
     
@@ -347,7 +347,7 @@ Per modificare queste impostazioni, modificare il processo di analisi del conten
 
 3. Prendere nota dell'ora corrente e avviare di nuovo lo scanner dal riquadro **processi di analisi del Azure Information Protection-contenuto** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Avviare l'analisi per lo scanner di Azure Information Protection":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Avviare l'analisi per lo scanner Azure Information Protection.":::
     
     In alternativa, eseguire il comando seguente nella sessione di PowerShell:
     
@@ -369,7 +369,7 @@ L'uso di Microsoft 365 un criterio di prevenzione della perdita dei dati (DLP, D
 > L'analisi dei file, anche quando si esegue solo il test del criterio DLP, crea anche report sulle autorizzazioni per i file. Eseguire una query su questi report per analizzare le esposizioni specifiche dei file o per esplorare l'esposizione di un utente specifico ai file analizzati.
 > 
 
-I criteri DLP sono configurati nell'interfaccia di amministrazione dell'etichetta, ad esempio il centro di conformità Microsoft 365 e sono supportati in Azure Information Protection a partire dalla versione [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview). 
+I criteri DLP sono configurati nell'interfaccia di amministrazione dell'etichetta, ad esempio il centro di conformità Microsoft 365 e sono supportati in Azure Information Protection a partire dalla versione [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-dlp-policies-public-preview). 
 
 Per altre informazioni sulla gestione delle licenze DLP, vedere [Introduzione allo scanner locale per la prevenzione della perdita dei dati](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
 
@@ -419,13 +419,13 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 Per ulteriori informazioni, vedere [modificare i tipi di file da proteggere](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
-## <a name="upgrading-your-scanner"></a>Aggiornamento dello scanner
+## <a name="upgrade-your-scanner"></a>Aggiornare lo scanner
  
 Se in precedenza è stato installato lo scanner e si vuole eseguire l'aggiornamento, usare le istruzioni descritte in [aggiornamento dello scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
 Quindi, [configurare](deploy-aip-scanner-configure-install.md) e [usare lo scanner](deploy-aip-scanner-manage.md) come di consueto, ignorando i passaggi per installare lo scanner.
 
-## <a name="editing-data-repository-settings-in-bulk"></a>Modifica delle impostazioni del repository di dati in blocco
+## <a name="edit-data-repository-settings-in-bulk"></a>Modificare in blocco le impostazioni del repository di dati
 
 Usare i pulsanti **Esporta** e **Importa** per apportare modifiche per lo scanner in diversi repository. 
 
@@ -437,13 +437,13 @@ Per apportare modifiche in blocco tra i repository:
 
 1. Nella portale di Azure nel riquadro **repository** selezionare l'opzione **Esporta** . Ad esempio:
 
-    :::image type="content" source="media/export-scanner-repositories.png" alt-text="Esportazione delle impostazioni del repository di dati per lo scanner Azure Information Protection":::
+    :::image type="content" source="media/export-scanner-repositories.png" alt-text="Esportazione delle impostazioni del repository di dati per lo scanner Azure Information Protection.":::
 
 1. Modificare manualmente il file esportato per apportare la modifica. 
 
 1. Usare l'opzione di **importazione** nella stessa pagina per importare nuovamente gli aggiornamenti nei repository.
 
-## <a name="using-the-scanner-with-alternative-configurations"></a>Uso dello scanner con configurazioni alternative
+## <a name="use-the-scanner-with-alternative-configurations"></a>Usare lo scanner con configurazioni alternative
 
 Lo scanner Azure Information Protection in genere cerca le condizioni specificate per le etichette per classificare e proteggere il contenuto in base alle esigenze.
 
@@ -487,7 +487,7 @@ Impostare i **tipi di informazioni da** individuare su **tutti**.
 
 Per identificare le condizioni e i tipi di informazioni per l'assegnazione di etichette, lo scanner utilizza tutti i tipi di informazioni riservate personalizzate specificati e l'elenco dei tipi di informazioni riservate predefinite che è possibile selezionare, come definito nel centro di gestione delle etichette.
 
-## <a name="optimizing-scanner-performance"></a>Ottimizzazione delle prestazioni dello scanner
+## <a name="optimize-scanner-performance"></a>Ottimizzare le prestazioni dello scanner
 
 > [!NOTE]
 > Se si desidera migliorare la velocità di risposta del computer dello scanner anziché le prestazioni dello scanner, utilizzare un'impostazione client avanzata per [limitare il numero di thread utilizzati dallo scanner](./rms-client/clientv2-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner).
@@ -500,7 +500,7 @@ Usare le opzioni e le linee guida seguenti per ottimizzare le prestazioni dello 
 |**Disporre di una connessione di rete ad alta velocità e affidabile tra il computer dello scanner e l'archivio dei dati analizzati**     |  Ad esempio, posizionare il computer dello scanner nella stessa LAN o preferibilmente nello stesso segmento di rete dell'archivio dati scansionato. <br /><br />La qualità della connessione di rete influiscono sulle prestazioni dello scanner perché, per esaminare i file, lo scanner trasferisce il contenuto dei file nel computer in cui è in esecuzione il servizio scanner. <br /><br />Riducendo o eliminando gli hop di rete necessari per i dati da spostare, viene ridotto anche il carico sulla rete.      |
 |**Verificare che il computer dello scanner abbia risorse del processore disponibili**     | Esaminare il contenuto del file e crittografare e decrittografare i file sono azioni che richiedono un utilizzo intensivo del processore. <br /><br />Monitorare i cicli di analisi tipici degli archivi dati specificati per identificare se le risorse del processore influiscono negativamente sulle prestazioni dello scanner.        |
 |**Installare più istanze dello scanner** | Lo scanner Azure Information Protection supporta più database di configurazione nella stessa istanza di SQL Server quando si specifica un nome di cluster personalizzato per lo scanner. <br /><br />Più scanner possono inoltre condividere lo stesso cluster, ottenendo tempi di analisi più rapidi.|
-|**Controllare l'utilizzo della configurazione alternativa** |L'esecuzione dello scanner è più rapida quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per applicare un'etichetta predefinita a tutti i file in quanto lo scanner non esamina i contenuti del file. <br/><br />L'esecuzione dello scanner è più lenta quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per identificare tutte le condizioni personalizzate e i tipi di informazioni riservate noti.|
+|**Controllare l'utilizzo della configurazione alternativa** |L'esecuzione dello scanner è più rapida quando si usa la [configurazione alternativa](#use-the-scanner-with-alternative-configurations) per applicare un'etichetta predefinita a tutti i file in quanto lo scanner non esamina i contenuti del file. <br/><br />L'esecuzione dello scanner è più lenta quando si usa la [configurazione alternativa](#use-the-scanner-with-alternative-configurations) per identificare tutte le condizioni personalizzate e i tipi di informazioni riservate noti.|
 | | |
 
 
@@ -518,7 +518,7 @@ Ulteriori fattori che influiscono sulle prestazioni dello scanner includono:
 |**File sottoposti a scansione**     |-Ad eccezione dei file di Excel, i file di Office vengono analizzati più rapidamente rispetto ai file PDF. <br /><br />-I file non protetti sono più veloci da analizzare rispetto ai file protetti. <br /><br />-I file di grandi dimensioni hanno ovviamente più tempo per l'analisi di file di piccole dimensioni.         |
 | | |
 
-## <a name="list-of-cmdlets-for-the-scanner"></a>Elenco dei cmdlet per lo scanner
+## <a name="supported-powershell-cmdlets"></a>Cmdlet di PowerShell supportati
 
 Questa sezione elenca i cmdlet di PowerShell supportati per lo scanner Azure Information Protection.
 

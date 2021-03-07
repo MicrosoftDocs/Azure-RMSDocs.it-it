@@ -12,21 +12,21 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3de605c8427745e51df2ea1ffbee110c9106138
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 708d39a5f69182225a1eea23c625b4a53a7172cd
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383888"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414753"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection supporta altri servizi e si basa anche su altri servizi. Per informazioni correlate ad Azure Information Protection, ma non riferite alla modalità d'uso del servizio Azure Information Protection, esaminare le risorse seguenti:
 
@@ -58,7 +58,7 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 ## <a name="security-compliance-and-auditing"></a>Sicurezza, conformità e controllo
 
-Vedere la sezione [Requisiti di sicurezza, conformità e normativi](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) dell'articolo [Problemi risolti da Azure RMS](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) per informazioni sulle certificazioni specifiche per il servizio di Azure Rights Management. Inoltre:
+Per informazioni sulle certificazioni specifiche per il servizio Azure Rights Management, vedere la sezione [requisiti di sicurezza, conformità e normativi](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) nell'articolo informazioni su [Azure RMS?](./what-is-azure-rms.md) . Inoltre:
 
 - Per le certificazioni esterne per Azure Information Protection: [Centro protezione di Microsoft Azure](https://azure.microsoft.com/support/trust-center/)
 

@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c81df0928261ea50795837e8e0fe2b542d7b8af
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: c918c03616affeea1972518e5af1e439def22243
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382157"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414974"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guide procedurali per gli scenari comuni che usano Azure Information Protection
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> ***Pertinente per**: [Azure Information Protection Unified Labeling client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Rilevante per**: [Client di etichettatura unificata di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Esistono diversi modi in cui è possibile usare Azure Information Protection per classificare ed eventualmente proteggere documenti e messaggi di posta elettronica dell'organizzazione. 
 
@@ -57,5 +57,3 @@ Per ulteriori informazioni e istruzioni dettagliate, vedere:
 ## <a name="next-steps"></a>Passaggi successivi
 
 Se il proprio scenario non è presente nell'elenco, Per un elenco completo dei passaggi di pianificazione e distribuzione, vedere la Guida di orientamento per la [distribuzione](deployment-roadmap.md) .
-
-Se non si ha familiarità con Azure Information Protection, prima di iniziare la distribuzione consultare l'articolo [Che cos'è Azure Information Protection?](what-is-information-protection.md) per una rapida introduzione al servizio.

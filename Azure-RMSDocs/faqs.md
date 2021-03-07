@@ -1,6 +1,6 @@
 ---
-title: Domande frequenti su Azure Information Protection
-description: Alcune domande frequenti su Azure Information Protection e il relativo servizio di protezione, Azure Rights Management (Azure RMS).
+title: Domande frequenti per Azure Information Protection (AIP)
+description: Risposte alle domande frequenti su Azure Information Protection (AIP) e il relativo servizio di protezione, Azure Rights Management (Azure RMS).
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,23 +12,25 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c42f2459861b7b7167469ddadd7c3ff399d47f48
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 9f19b02045ea98fe7c7dc54299ea60abaa6d3312
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381962"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415008"
 ---
-# <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
+# <a name="frequently-asked-questions-for-azure-information-protection-aip"></a>Domande frequenti per Azure Information Protection (AIP)
 
 >***Si applica a**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Pertinente per**: [AIP Unified Labeling client e client classico](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Rilevante per**: [Client di etichettatura unificata e client classico di AIP](#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection** la gestione classica di client e **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client classico di Azure Information Protection** e **Gestione etichette** nel portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Di seguito sono riportate alcune possibili domande su Azure Information Protection o sul servizio Azure Rights Management (Azure RMS) vedere se la risposta è disponibile qui.
+Domande su Azure Information Protection (AIP) o sul servizio Azure Rights Management (Azure RMS)? 
+
+Vedere se la risposta è riportata di seguito o nelle [pagine frequenti successive, più specifiche](#what-do-i-do-if-my-question-isnt-here).
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-microsoft-information-protection"></a>Qual è la differenza tra Azure Information Protection e Microsoft Information Protection?
 
@@ -95,7 +97,7 @@ Se si è un amministratore, per altre informazioni, vedere [scegliere la soluzio
 
 ### <a name="classic-client-deprecation"></a>Deprecazione client classica
 
-Per offrire un'esperienza unificata e semplificata, la Azure Information Protection la gestione **classica del client** e delle **etichette** nel portale di Azure verrà **deprecata** a partire dal **31 marzo 2021**. 
+Per offrire un'esperienza unificata e semplificata, i Azure Information Protection la gestione **classica dei client** e delle **etichette** nell'portale di Azure saranno **deprecati** a partire dal **31 marzo 2021**. 
 
 Dopo la deprecazione, il client continuerà a funzionare come previsto. Tuttavia, gli amministratori non saranno in grado di aggiornare i criteri nel portale e non verranno fornite altre correzioni o modifiche per il client classico.
 
@@ -120,13 +122,13 @@ Se si è un utente che desidera comprendere se è installato il client di etiche
 
     :::image type="content" source="media/client-about.png" alt-text="Verificare la versione del client di Azure Information Protection":::
 
-## <a name="when-is-the-right-time-to-migrate-my-labels"></a>Quando è il momento giusto per eseguire la migrazione delle etichette?
+## <a name="when-is-the-right-time-to-migrate-my-labels-to-unified-labeling"></a>Quando è il momento giusto per eseguire la migrazione delle etichette all'etichetta unificata?
 
 Si consiglia di eseguire la migrazione delle etichette di Azure Information Protection alla piattaforma di etichettatura unificata in modo da poterle usare come etichette di riservatezza con altri [client e servizi che supportano l'etichettatura unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 Per ulteriori informazioni e istruzioni, vedere [How to migrate Azure Information Protection labels to Unified Sensitivity labels](configure-policy-migrate-labels.md).
 
-## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Dopo aver eseguito la migrazione delle etichette, qual è il portale di gestione da usare?
+## <a name="after-ive-migrated-my-labels-to-unified-labeling-which-management-portal-do-i-use"></a>Dopo aver eseguito la migrazione delle etichette all'etichetta unificata, il portale di gestione da usare?
 
 Dopo aver eseguito la migrazione delle etichette nella portale di Azure, continuare a gestirle in una delle posizioni seguenti, a seconda dei client installati:
 
@@ -182,7 +184,7 @@ Tuttavia, se si desidera assegnare autorizzazioni amministrative ad altri utenti
 
 Inoltre, tenere presente quanto segue quando si gestiscono ruoli e attività amministrative:
 
-|Argomento  |Dettagli  |
+|Problema  |Dettagli  |
 |---------|---------|
 |**Tipi di account supportati**     | Gli account Microsoft non sono supportati per l'amministrazione delegata di Azure Information Protection, anche se questi account sono assegnati a uno dei ruoli amministrativi elencati.         |
 |**Controlli di onboarding**     |Se i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) sono stati configurati, ciò non influisce sulla possibilità di amministrare Azure Information Protection, fatta eccezione per il connettore RMS. <br /><br />Ad esempio, se sono stati configurati controlli di onboarding in modo che la capacità di proteggere il contenuto sia limitata al gruppo *reparto it* , l'account usato per installare e configurare il connettore RMS deve essere un membro di tale gruppo.          |
@@ -235,7 +237,7 @@ Poiché questa funzionalità USA monitoraggio di Azure, è necessario disporre a
 
 ### <a name="security-administrator"></a>Amministratore della sicurezza
 
-Questo ruolo Azure Active Directory amministratore consente agli amministratori di configurare Azure Information Protection nel portale di Azure, oltre ad alcuni aspetti di altri servizi di Azure. 
+Questo ruolo amministratore Azure Active Directory consente agli amministratori di configurare Azure Information Protection nel portale di Azure e alcuni aspetti di altri servizi di Azure. 
 
 Gli amministratori con questo ruolo non possono eseguire alcun [cmdlet di PowerShell dal modulo AIPService](administer-powershell.md)oppure rilevare e revocare i documenti per gli utenti.
     
@@ -283,7 +285,7 @@ Per ulteriori informazioni, vedere l'elenco completo dei [tipi di file supportat
 
 Sì, come offerta di anteprima, è possibile configurare l'accesso condizionale Azure AD per Azure Information Protection.
 
-Quando un utente apre un documento protetto da Azure Information Protection, gli amministratori possono ora bloccare o concedere l'accesso agli utenti nel tenant, in base ai controlli di accesso condizionale standard. La richiesta di autenticazione a più fattori (MFA) è una delle condizioni più comunemente richieste. Un'altra è che i dispositivi siano [conformi ai criteri di Intune](/intune/protect/conditional-access-intune-common-ways-use) in modo che, ad esempio, i dispositivi mobili soddisfino i requisiti relativi alle password e possiedano una versione minima del sistema operativo e i computer siano appartenenti a un dominio.
+Quando un utente apre un documento protetto da Azure Information Protection, gli amministratori possono ora bloccare o concedere l'accesso agli utenti nel tenant, in base ai controlli di accesso condizionale standard. La richiesta di autenticazione a più fattori (MFA) è una delle condizioni più comunemente richieste. Un altro è che i dispositivi devono essere [conformi ai criteri di Intune in](/intune/protect/conditional-access-intune-common-ways-use) modo che, ad esempio, i dispositivi mobili soddisfino i requisiti delle password e una versione minima del sistema operativo e che i computer siano aggiunti a un dominio.
 
 Per altre informazioni ed esempi di procedura dettagliata, vedere il post del blog [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/) (Criteri di accesso condizionale per Azure Information Protection).
 

@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection le etichette unificate client-cronologia delle versioni & criteri di supporto
+title: Novità di Azure Information Protection (AIP)-cronologia delle versioni & i criteri di supporto
 description: Scopri le novità per il client Unified Labeling Azure Information Protection (AIP) per Windows.
 author: batamig
 ms.author: bagol
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6f77220e6321f8a601c936fec9a5ea4812539f01
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 73d64904f3bea44e7432709773f9400ccd40da3e
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844371"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415297"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -26,6 +26,8 @@ ms.locfileid: "101844371"
 >*Se si dispone di Windows 7 o Office 2010, vedere [AIP e versioni legacy di Windows e Office](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Pertinente per**: [AIP Unified Labeling client only](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Per il client classico, vedere la [cronologia delle versioni del client classico AIP e i criteri di supporto](client-version-release-history.md). *
+
+Questo articolo descrive le nuove funzionalità disponibili per il client di etichettatura unificata, nonché le informazioni di manutenzione e le sequenze temporali per ogni versione del client unificato AIP.
 
 È possibile scaricare il Azure Information Protection Unified Labeling client dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).
 
@@ -234,9 +236,9 @@ Nella versione 2.9.111.0 di [Azure Information Protection scanner Unified Labeli
 
 - Aggiunta del supporto per i trattini ( **-** ) nei nomi di [database dello scanner](../deploy-aip-scanner-prereqs.md)
 - Aggiornamenti nei report per quando l'opzione **[file etichetta basata su contenuto](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** è impostata su **off**
-- [Miglioramento dell'utilizzo della memoria](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) per un numero elevato di corrispondenze di tipo informazioni
+- [Miglioramento dell'utilizzo della memoria](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) per un numero elevato di corrispondenze di tipo informazioni
 - Supporto per percorsi [locali di SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) che terminano con una barra ( **/** )
-- Maggiore [velocità](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) di analisi di SharePoint
+- Maggiore [velocità](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) di analisi di SharePoint
 - Supporto per [evitare un timeout](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) durante l'analisi di un server SharePoint.
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-client"></a>Correzioni e miglioramenti per il client Unified Labeling
@@ -259,7 +261,7 @@ Nella versione 2.9.111.0 di [Azure Information Protection scanner Unified Labeli
 
     In questi casi, le impostazioni avanzate del primo criterio vengono sempre applicate in base all'ordine dei criteri nell'interfaccia di amministrazione. L'eccezione per *OutlookDefaultLabel* è stata rimossa.
 
-- In uno scenario in cui **% AppData% (AppData\Roaming)** punta a una struttura di cartelle di Windows non predefinita, i file nelle cartelle di cui è stato eseguito il mapping alle directory utente sono ora [esclusi dall'assegnazione di etichette e dalla protezione](clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) come previsto, in base alla configurazione.
+- In uno scenario in cui **% AppData% (AppData\Roaming)** punta a una struttura di cartelle di Windows non predefinita, i file nelle cartelle di cui è stato eseguito il mapping alle directory utente sono ora [esclusi dall'assegnazione di etichette e dalla protezione](clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection) come previsto, in base alla configurazione.
 
 - [Nuova impostazione client avanzata](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (**PowerPointRemoveAllShapesByShapeName**), aggiunta per rimuovere forme da intestazioni o piè di pagina di PowerPoint, usando il nome della forma anziché il testo all'interno di una forma.
 
@@ -326,7 +328,7 @@ Il servizio di **individuazione della rete** aggiorna i report del **repository*
 **Per utilizzare il servizio di individuazione della rete**
 
 1. Aggiornare la versione dello scanner e verificare che il cluster dello scanner sia configurato correttamente. Per altre informazioni, vedere:
-    - [Aggiornamento dello scanner](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
+    - [Aggiornamento dello scanner](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
     - [Creare un cluster di scanner](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
 1. Assicurarsi di aver abilitato Azure Information Protection Analytics.
@@ -346,7 +348,7 @@ Il servizio di **individuazione della rete** aggiorna i report del **repository*
 
 1. Usare i report generati nel nuovo riquadro [**repository**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) per trovare altre condivisioni file di rete che potrebbero essere a rischio. Aggiungere qualsiasi condivisione file rischiosa ai [processi di analisi del contenuto](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) per analizzare i repository aggiunti per il contenuto sensibile.
 
-#### <a name="network-discovery-cmdlets-public-preview"></a>Cmdlet di individuazione della rete (anteprima pubblica)
+### <a name="network-discovery-cmdlets-public-preview"></a>Cmdlet di individuazione della rete (anteprima pubblica)
 
 I cmdlet di PowerShell aggiunti per l'individuazione della rete includono:
 

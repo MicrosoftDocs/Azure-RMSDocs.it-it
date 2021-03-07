@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f674cd162131b0a45dbefbe70e617296695d6126
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 24429f7727800650e5ce8f5f814597dfd83de0b2
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524745"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414991"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Informazioni sullo scanner di etichettatura unificata di Azure Information Protection
 
@@ -80,7 +80,7 @@ Per ulteriori informazioni, vedere [file non etichettati dallo scanner](#files-n
 
 ### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. determinare se i file sono inclusi o esclusi per l'analisi 
 
-Lo scanner ignora automaticamente i file esclusi dalla classificazione e dalla protezione, ad esempio file eseguibili e file di sistema. Per ulteriori informazioni, vedere [tipi di file esclusi dalla classificazione e dalla protezione](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection).
+Lo scanner ignora automaticamente i file esclusi dalla classificazione e dalla protezione, ad esempio file eseguibili e file di sistema. Per ulteriori informazioni, vedere [tipi di file esclusi dalla classificazione e dalla protezione](rms-client/clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection).
 
 Lo scanner considera anche eventuali elenchi di file definiti in modo esplicito per l'analisi o l'esclusione dall'analisi. Per impostazione predefinita, gli elenchi di file si applicano a tutti i repository di dati e possono anche essere definiti solo per repository specifici.
 
@@ -94,9 +94,9 @@ Per ulteriori informazioni, vedere [Deploying the Azure Information Protection s
 
 Dopo aver identificato i file esclusi, lo scanner filtra di nuovo per identificare i file supportati per l'ispezione.
 
-Questi filtri aggiuntivi sono quelli usati dal sistema operativo per la ricerca e l'indicizzazione di Windows e non richiedono alcuna configurazione aggiuntiva. IFilter di Windows viene usato anche per analizzare i tipi di file usati da Word, Excel e PowerPoint e per i documenti PDF e i file di testo.
+Questi filtri sono gli stessi usati dal sistema operativo per la ricerca e l'indicizzazione di Windows e non richiedono alcuna configurazione aggiuntiva. IFilter di Windows viene usato anche per analizzare i tipi di file usati da Word, Excel e PowerPoint e per i documenti PDF e i file di testo.
 
-Per un elenco completo dei tipi di file supportati per l'ispezione e istruzioni aggiuntive per la configurazione dei filtri per includere i file con estensione zip e TIFF, vedere [tipi di file supportati per l'ispezione](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
+Per un elenco completo dei tipi di file supportati per l'ispezione e altre istruzioni per la configurazione dei filtri per includere i file con estensione zip e TIFF, vedere [tipi di file supportati per l'ispezione](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
 
 Dopo l'ispezione, i tipi di file supportati vengono contrassegnati con le condizioni specificate per le etichette. Se si usa la modalità di individuazione, è possibile che i file vengano segnalati per contenere le condizioni specificate per le etichette o che siano presenti tipi di informazioni riservate note.
 
@@ -106,7 +106,7 @@ Se lo scanner si arresta e non completa un'analisi per un numero elevato di file
 
 Ad esempio, la protezione avanzata dei server per SharePoint è uno dei motivi per cui lo scanner supera il numero di connessioni di rete consentite e pertanto si arresta.
 
-Per verificare se questa è la conseguenza dell'arresto dello scanner, verificare la presenza del seguente messaggio di errore nei log dello scanner in **%LocalAppData%\Microsoft\MSIP\Logs\MSIPScanner.Iplog** (più log vengono compressi in un file zip):
+Per verificare se la protezione avanzata dei server per SharePoint è la conseguenza dell'arresto dello scanner, verificare la presenza del seguente messaggio di errore nei registri dello scanner in **%LocalAppData%\Microsoft\MSIP\Logs\MSIPScanner.Iplog** (più log vengono compressi in un file zip):
 
 `Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port`
 

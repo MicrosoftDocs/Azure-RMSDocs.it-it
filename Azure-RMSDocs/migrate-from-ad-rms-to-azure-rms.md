@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 04534d6bce6c0db554a30b3690957c8aeeae433d
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 8f4c8547a57d63bf0ae01f40b9b9e8bc49316c26
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809437"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415450"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -29,12 +29,6 @@ ms.locfileid: "98809437"
 Usare il set di istruzioni seguente per la migrazione della distribuzione di Active Directory Rights Management Services (AD RMS) ad Azure Information Protection. 
 
 Dopo la migrazione, i server AD RMS non sono più in uso, ma gli utenti hanno ancora accesso ai documenti e ai messaggi di posta elettronica che l'organizzazione ha protetto con AD RMS. Il contenuto appena protetto userà il sevizio Azure Rights Management (Azure RMS) da Azure Information Protection.
-
-Se non si è certi che questa migrazione di AD RMS sia adatta alla propria organizzazione
-
-- Per un'introduzione ad Azure Information Protection, vedere [Che cos'è Azure Information Protection?](./what-is-information-protection.md)
-
-- Per un confronto tra Azure Information Protection e AD RMS, vedere [Confronto tra Azure Information Protection e AD RMS](./compare-on-premise.md).
 
 ## <a name="recommended-reading-before-you-migrate-to-azure-information-protection"></a>Letture consigliate prima di eseguire la migrazione ad Azure Information Protection
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 767438db1703c60a545f0b38234f4d7c57b9b569
-ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.openlocfilehash: 4e8c4444aad6185b54a6f5b5178fa225857b71d2
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99473005"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414957"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Requisiti per l'installazione e la distribuzione del Azure Information Protection scanner per l'assegnazione di etichette unificata
 
@@ -112,7 +112,7 @@ Per archiviare i dati di configurazione dello scanner, usare un'applicazione SQL
 
 La quantità di spazio su disco necessaria per il database di configurazione dello scanner e la specifica del computer che esegue SQL Server possono variare per ogni ambiente, quindi si consiglia di eseguire i test personalizzati. Usare le linee guida seguenti come punto di partenza.
 
-Per ulteriori informazioni, vedere [ottimizzazione delle prestazioni dello scanner](deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
+Per ulteriori informazioni, vedere [ottimizzazione delle prestazioni dello scanner](deploy-aip-scanner-configure-install.md#optimize-scanner-performance).
 
 Le dimensioni del disco per il database di configurazione dello scanner variano a seconda della distribuzione. Usare l'equazione seguente come linee guida:
 
@@ -269,7 +269,7 @@ Per supportare un computer disconnesso dalla portale di Azure, seguire questa pr
 
     1. Impostare il servizio di individuazione della rete (anteprima pubblica) per il funzionamento in modalità offline usando il cmdlet [set-MIPNetworkDiscoveryConfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) .
 
-    1. Configurare il processo di analisi di rete nel portale di Azure. Per ulteriori informazioni, vedere [creazione di un processo di analisi di rete](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    1. Configurare il processo di analisi di rete nel portale di Azure. Per ulteriori informazioni, vedere [creazione di un processo di analisi di rete](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview).
     
     1. Esportare il processo di analisi della rete dal riquadro processi di analisi di **rete Azure Information Protection (anteprima)** con l'opzione di **esportazione** . 
     

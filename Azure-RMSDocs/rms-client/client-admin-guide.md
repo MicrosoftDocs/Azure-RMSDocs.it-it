@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49f80d17e62bbe7e520696460ec39df396e439e4
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 1c208a4dbea10159d2f0f8c505349d2c2acfe6c7
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560357"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415433"
 ---
 # <a name="azure-information-protection-classic-client-administrator-guide"></a>Guida dell'amministratore client classico Azure Information Protection
 
@@ -64,7 +64,7 @@ Il client Azure Information Protection include gli elementi seguenti:
 
 - Un modulo di PowerShell per applicare e rimuovere etichette di classificazione e la protezione dei file. 
     
-    Questo modulo include [i cmdlet per installare e configurare il Azure Information Protection scanner](../deploy-aip-scanner-configure-install.md#list-of-cmdlets-for-the-scanner), che viene eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file in archivi dati come le condivisioni di rete e le raccolte di SharePoint Server.
+    Questo modulo include [i cmdlet per installare e configurare il Azure Information Protection scanner](../deploy-aip-scanner-configure-install-classic.md#list-of-cmdlets-for-the-scanner), che viene eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file in archivi dati come le condivisioni di rete e le raccolte di SharePoint Server.
 
 - Il client Rights Management che comunica con Azure Rights Management (Azure RMS) o Active Directory Rights Management Services (AD RMS).
 
@@ -223,7 +223,7 @@ Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabi
 
 3. Aggiornare il client di Azure Information Protection installando la versione di disponibilità generale corrente (GA). 
 
-4. In una sessione di PowerShell eseguire il comando **Update-AIPScanner** con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
+4. In una sessione di PowerShell eseguire il comando **Update-AIPScanner** con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
 
 5. Solo se lo scanner è in esecuzione in un computer disconnesso: ora eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
 
