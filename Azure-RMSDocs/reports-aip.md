@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5665a071bd99f8ed1118adffcd1ce65f20ff9aa4
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: 7d86ee43b7ccc60922dea88c76e9e0aa68474d26
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102415467"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446950"
 ---
 # <a name="analytics-and-central-reporting-for-azure-information-protection-public-preview"></a>Analisi e report centrali per Azure Information Protection (anteprima pubblica)
 
@@ -137,14 +137,16 @@ Per impostazione predefinita, i client di Azure Information Protection non invia
 ## <a name="prerequisites"></a>Prerequisiti
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
 
-|Requisito|Altre informazioni|
-|---------------|--------------------|
-|Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare il client di etichettatura unificata dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018). Per distribuire il client classico AIP, aprire un ticket di supporto per ottenere l'accesso al download.|
-|Per informazioni sulla creazione di report da archivi dati basati sul cloud: <br /><br />-Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](/cloud-app-security/azip-integration).|
-|Per informazioni sulla creazione di report da archivi dati locali: <br /><br />-Azure Information Protection scanner |Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). |
-|Per informazioni sulla creazione di report da computer Windows 10:  <br /><br />-Compilazione minima di 1809 con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|È necessario abilitare la funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center. Per altre informazioni, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
-| | |
+|Requisito  |Dettagli  |
+|---------|---------|
+|**Una sottoscrizione di Azure**     |   La sottoscrizione di Azure deve includere Log Analytics nello stesso tenant di Azure Information Protection. <br><br> Per altre informazioni, vedere la pagina dei [prezzi di monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics) . <br><br>Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.   |
+| **Controllo della connettività di rete URL di registrazione** | AIP deve essere in grado di accedere agli URL seguenti per supportare i log di controllo AIP:<br>- `https://*.events.data.microsoft.com` <br>- `https://*.aria.microsoft.com` (Solo dati del dispositivo Android)
+|**Client Azure Information Protection**    |Per la creazione di report dal client. <br><br>Se non è già installato un client, è possibile scaricare e installare il client di assegnazione di etichette unificato dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53018).      <br><br>**Nota**: sono supportati sia il client di etichettatura unificato che il client classico. Per distribuire il client classico AIP, aprire un ticket di supporto per ottenere l'accesso al download.     |
+|**Azure Information Protection scanner locale**    | Per la creazione di report da archivi dati locali. <br><br>      Per ulteriori informazioni, vedere [Deploying the Azure Information Protection scanner to classificare e proteggere automaticamente i file](deploy-aip-scanner.md).   |
+|**Microsoft Cloud App Security (MCAS)**     | Per la creazione di report da archivi dati basati sul cloud. <br><br>Per ulteriori informazioni, vedere [integrazione di Azure Information Protection](/cloud-app-security/azip-integration) nella documentazione di MCAS.        |
+|**Compilazione minima di 1809 con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)**     | Per la creazione di report da computer Windows 10. <br>  <br>   È necessario abilitare la funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center. <br><br>Per altre informazioni, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).   |
+|     |         |
+
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection
 

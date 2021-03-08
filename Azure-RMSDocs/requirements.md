@@ -4,7 +4,7 @@ description: Identificare i prerequisiti necessari per distribuire Azure Informa
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/04/2021
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c5eade80b9e3f46e5288b4604f64063cf097a170
-ms.sourcegitcommit: 95f3b19e1034025e7de0ca523b837843d9c15d86
+ms.openlocfilehash: 66ce835eea1bb9d8213a78a211295dea7b93d5e4
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102094848"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446848"
 ---
 # <a name="azure-information-protection-requirements"></a>Requisiti per Azure Information Protection
 
@@ -209,6 +209,14 @@ Azure Information Protection ha i requisiti aggiuntivi seguenti:
     La limitazione dell'URL di **config.Edge.Skype.com** può influire sulla capacità di Microsoft di attenuare gli errori e può influire sulla capacità di testare le funzionalità di anteprima.
  
     Per ulteriori informazioni, vedere la pagina relativa ai [servizi essenziali per Office-Deploy Office](/deployoffice/privacy/essential-services).
+
+- **Controllo della connettività di rete URL di registrazione**. AIP deve essere in grado di accedere agli URL seguenti per supportare i log di controllo AIP:
+
+    - `https://*.events.data.microsoft.com`
+    - `https://*.aria.microsoft.com` (Solo dati del dispositivo Android)
+    
+    Per ulteriori informazioni, vedere [Prerequisites for AIP Reporting](reports-aip.md#prerequisites).
+
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Coesistenza di AD RMS con Azure RMS
 
 L'uso di AD RMS e Azure RMS nella stessa organizzazione per proteggere il contenuto dello stesso utente nella stessa organizzazione, è supportato **solo** in AD RMS per la [protezione HYOK (Hold your own key)](configure-adrms-restrictions.md) con Azure Information Protection.

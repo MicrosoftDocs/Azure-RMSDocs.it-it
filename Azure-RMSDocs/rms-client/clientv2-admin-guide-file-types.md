@@ -4,19 +4,19 @@ description: Informazioni sui tipi di file e le dimensioni supportati per il cli
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/08/2020
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bfc773c32a7667a54abdc75985934794414d575a
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: 22a30abf5ea3bf63e5a352bb8b68ceb852036794
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102415263"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446916"
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-aip-unified-labeling-client"></a>Tipi di file supportati dal Azure Information Protection (AIP) Unified Labeling client
 
@@ -113,35 +113,104 @@ Sono disponibili dimensioni massime per i file che la Azure Information Protecti
 
 La tabella seguente elenca un subset di tipi di file che supportano la protezione nativa dal client Azure Information Protection Unified Labeling e che possono anche essere classificati.
 
-Questi tipi di file vengono identificati separatamente perché quando sono protetti in modo nativo l'estensione del nome file originale viene modificata e i file diventano di sola lettura. Quando i file sono protetti in modo generico, l'estensione del nome file originale viene sempre modificata in. Pfile.
+Questi tipi di file vengono identificati separatamente perché quando sono protetti in modo nativo l'estensione del nome file originale viene modificata e i file diventano di sola lettura. Quando i file sono protetti in modo generico, l'estensione del nome file originale viene sempre modificata in `.p<file-type>` .
 
 > [!WARNING]
 > Se si dispone di firewall, proxy Web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario riconfigurare tali software e dispositivi di rete per supportare queste nuove estensioni.
 
 |Estensione del file originale|Estensione dei file protetti|
 |--------------------------------|-------------------------------------|
-|.txt|ptxt|
-|xml|pxml|
-|jpg|pjpg|
+|bmp|pbmp|
+|gif|pgif|
+|jfif|pjfif|
+|jpe|pjpe|
 |jpeg|pjpeg|
+|jpg|pjpg|
+|jt|pjt|
 |png|ppng|
 |tif|.ptif|
 |tiff|ptiff|
-|bmp|pbmp|
-|gif|pgif|
-|jpe|pjpe|
-|jfif|pjfif|
-|jt|pjt|
+|.txt|ptxt|
+|xla |.pxla | 
+|xlam |.pxlam |
+|xml|pxml|
 | | |
 
-Nella tabella seguente sono elencati i tipi di file rimanenti che supportano la protezione nativa dal client Azure Information Protection Unified Labeling e che possono anche essere classificati. Questi sono riconoscibili come tipi di file delle app di Microsoft Office. I formati di file supportati per questi tipi di file sono i formati 97-2003 e Office Open XML per i programmi di Office seguenti: Word, Excel e PowerPoint.
+**Tipi di file supportati da Office**
 
-Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
+L'elenco seguente include i tipi di file rimanenti che supportano la protezione nativa da parte del client Azure Information Protection Unified Labeling e che possono anche essere classificati. Questi sono riconoscibili come tipi di file delle app di Microsoft Office. I formati di file supportati per questi tipi di file sono i formati 97-2003 e Office Open XML per i programmi di Office seguenti: Word, Excel e PowerPoint.
 
-|Tipi di file supportati da Office|Tipi di file supportati da Office|
-|----------------------------------|----------------------------------|
-|doc<br /><br />docm<br /><br />docx<br /><br />dot<br /><br />dotm<br /><br />dotx<br /><br />potm<br /><br />potx<br /><br />pps<br /><br />ppsm<br /><br />ppsx<br /><br />ppt<br /><br />pptm<br /><br />pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />xla<br /><br />xlam<br /><br />xls<br /><br />xlsb<br /><br />xlt<br /><br />xlsm<br /><br />xlsx<br /><br />xltm<br /><br />xltx<br /><br />xps|
-| | |
+Per questi file, l'estensione del nome file *rimane invariata* dopo che il file è protetto da un servizio Rights Management.
+
+:::row:::
+   :::column span="4":::
+doc
+
+docm
+
+docx
+
+dot
+
+dotm
+
+dotx
+
+potm
+
+   :::column-end:::
+   :::column span="":::
+
+potx
+
+pps
+
+ppsm
+
+ppsx
+
+ppt
+
+pptm
+
+pptx
+
+
+   :::column-end:::
+   :::column span="":::
+.vsdm
+
+.vsdx
+
+.vssm
+
+.vssx
+
+.vstm
+
+.vstx
+
+xls
+
+   :::column-end:::
+   :::column span="":::
+
+xlsb
+
+xlt
+
+xlsm
+
+xlsx
+
+xltm
+
+xltx
+
+xps
+   :::column-end:::
+:::row-end:::
+
 ## <a name="file-types-excluded-from-classification-and-protection"></a>Tipi di file esclusi dalla classificazione e dalla protezione
 
 Per impedire agli utenti di modificare file critici per il funzionamento del computer, alcuni tipi di file e cartelle vengono automaticamente esclusi dalla classificazione e dalla protezione. Se gli utenti provano a classificare o proteggere questi file usando il client Azure Information Protection Unified Labeling, visualizzano un messaggio che ne è escluso.

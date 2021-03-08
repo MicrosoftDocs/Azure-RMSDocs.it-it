@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4e8c4444aad6185b54a6f5b5178fa225857b71d2
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: b81f72e0bd53e6dc518fad4c7d1bd1700044a8d5
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102414957"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446933"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Requisiti per l'installazione e la distribuzione del Azure Information Protection scanner per l'assegnazione di etichette unificata
 
@@ -400,7 +400,11 @@ Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non 
 
 - **Per l'account del servizio scanner**, utilizzare un account di Windows locale o un account Active Directory.
 
-- **Per l'account Azure Active Directory**, specificare l'account locale per il parametro *OnBehalfOf* con set-AIPAuthentication. Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+- **Per l'account Azure Active Directory**, specificare l'utente di AAD nel cmdlet [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) nel parametro *DelegatedUser* . 
+
+    Se si esegue l'analisi con un utente diverso dall'account dello scanner, assicurarsi di specificare anche l'account scanner nel parametro *OnBehalfOf* . 
+
+    Per altre informazioni, vedere [Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 ### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Restrizione: le etichette non hanno condizioni di etichetta automatica
 

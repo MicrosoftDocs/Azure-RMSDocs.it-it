@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c6fc0880904658b76ff774de33030ce0ca8e3048
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 77016efd46f045f324c9dea540d3b7ce75415d1d
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844354"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446967"
 ---
 # <a name="known-issues---azure-information-protection"></a>Problemi noti - Azure Information Protection
 
@@ -190,18 +190,18 @@ Per ulteriori informazioni, vedere la [Guida dell'amministratore](rms-client/tra
 I documenti protetti da password non sono supportati dalle funzionalità di rilevamento e revoca.
 #### <a name="multiple-attachments-in-a-protected-email"></a>Più allegati in un messaggio di posta elettronica protetto
 
-Se si collegano più documenti a un messaggio di posta elettronica e quindi si proteggono i messaggi di posta elettronica e li si invia, ogni allegato otterrà lo stesso valore ContentID. 
+Se si collegano più documenti a un messaggio di posta elettronica e quindi si proteggono i messaggi di posta elettronica e li si invia, ogni allegato otterrà lo stesso valore ContentID.
 
-Il valore di ContentID verrà restituito solo con il primo file aperto. Se si cerca gli altri allegati, il valore ContentID richiesto per ottenere i dati di rilevamento non viene restituito.      
+Il valore di ContentID verrà restituito solo con il primo file aperto. Se si cerca gli altri allegati, il valore ContentID richiesto per ottenere i dati di rilevamento non viene restituito.
 
 Inoltre, la revoca dell'accesso per uno degli allegati revoca anche l'accesso per gli altri allegati nello stesso indirizzo di posta elettronica protetto.
 
 #### <a name="documents-accessed-via-sharepoint-or-onedrive"></a>Documenti a cui si accede tramite SharePoint o OneDrive
-    
+
 - I documenti protetti caricati in SharePoint o OneDrive perdono il valore **ContentID** e non è possibile rilevare o revocare l'accesso.
 
-- Se un utente Scarica il file da SharePoint o OneDrive e lo accede dal computer locale, al documento viene applicato un nuovo **ContentID** quando viene aperto localmente. 
-    
+- Se un utente Scarica il file da SharePoint o OneDrive e lo accede dal computer locale, al documento viene applicato un nuovo **ContentID** quando viene aperto localmente.
+
     Se si usa il valore **ContentID** originale per tenere traccia dei dati, non sarà incluso alcun accesso eseguito per il file scaricato dall'utente. Inoltre, la revoca dell'accesso in base al valore **ContentID** originale non revoca l'accesso per nessuno dei file scaricati.
 
     In questi casi, gli amministratori potrebbero essere in grado di individuare i file scaricati usando PowerShell per trovare i nuovi valori **ContentID** per rilevare o revocare l'accesso.
@@ -213,20 +213,20 @@ Se sono presenti documenti archiviati in OneDrive con un'etichetta di riservatez
 In questi casi, rietichettare manualmente il documento per applicare la protezione in base alle esigenze.
 ## <a name="aip-and-legacy-windows-and-office-versions"></a>AIP e versioni legacy di Windows e Office
 
-- [**Windows 7 Extended supported è terminato il 14 gennaio 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+- [**Windows 7 Extended supported è terminato il 14 gennaio 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Windows 10. 
+    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Windows 10.
 
     Tuttavia, se sono presenti aggiornamenti della sicurezza estesi e un contratto di supporto, è disponibile il supporto per AIP per continuare a mantenere i sistemi Windows 7 protetti.
 
     Per ulteriori informazioni, consultare il contatto del supporto tecnico.
 
-- [**Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Il supporto esteso per Office 2010 è terminato il 13 ottobre 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010).
 
-    Questo supporto non verrà esteso e l'unità di servizio non verrà offerta per Office 2010. 
+    Questo supporto non verrà esteso e l'unità di servizio non verrà offerta per Office 2010.
 
-    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Office 365. 
-    
+    Si consiglia vivamente di eseguire l'aggiornamento a una versione più recente di Office 365.
+
     Per ulteriori informazioni, consultare il contatto del supporto tecnico.
 
 ## <a name="aip-based-conditional-access-policies"></a>Criteri di accesso condizionale basati su AIP
@@ -239,11 +239,11 @@ Sebbene sia possibile invitare gli utenti esterni ad attivare un account utente 
 
 **Abilitare i criteri di accesso condizionale per AIP solo per gli utenti interni**:
 
-1.  Nel portale di Azure passare al pannello **accesso condizionale** e selezionare i criteri di accesso condizionale che si desidera modificare. 
+1.  Nel portale di Azure passare al pannello **accesso condizionale** e selezionare i criteri di accesso condizionale che si desidera modificare.
 2.  In **assegnazioni** selezionare **utenti e gruppi** e quindi selezionare **tutti gli utenti**. Assicurarsi che l'opzione **tutti gli utenti guest ed External** *non* sia selezionata.
-3.  Salvare le modifiche. 
- 
-È anche possibile disabilitare completamente la CA entro Azure Information Protection se la funzionalità non è necessaria per l'organizzazione, al fine di evitare questo potenziale problema. 
+3.  Salvare le modifiche.
+
+È anche possibile disabilitare completamente la CA entro Azure Information Protection se la funzionalità non è necessaria per l'organizzazione, al fine di evitare questo potenziale problema.
 
 Per ulteriori informazioni, vedere la [documentazione sull'accesso condizionale](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
